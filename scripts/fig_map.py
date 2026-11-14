@@ -7,8 +7,15 @@ Layout, all in one coordinate system (HTML boxes placed over one SVG layer):
   left        the tie network: Anthropic, its people and vehicles, institutions, with a line into each actor's row
   beside rows arcs for ties between two actors who both have rows
 A tie ends at a person or body, never at an act: the figure shows records side by side and claims no motive.
-Tie colours were checked with the dataviz palette script (orange, blue, aqua pass together; purple beside blue fails)."""
-import csv, datetime, math, re
+Tie colours were checked with the dataviz palette script (orange, blue, aqua pass together; purple beside blue fails).
+
+fig_web(..., panels=N) cuts that sheet into N slices set side by side, at the same scale and type sizes. The groups of rows
+keep their order and are shared out so that the slices come out as equal in height as whole groups allow. Each slice has its
+own day axis and its own copy of the network, holding only the boxes with a line into its rows, so no line runs from one
+slice to another. The dots sit over the last slice's calendar (top right of the page, as the subtitle says) with the boxed
+note beside them; the three numbers and the tie legend move up beside the title; the footnote is set in N columns.
+panels=1 draws the one tall sheet exactly as before."""
+import csv, datetime, itertools, math, re
 from collections import Counter, OrderedDict, defaultdict
 
 from PIL import ImageFont
@@ -97,9 +104,74 @@ def box(x, y, w, h, inner, style='', fit=True, attrs=''):
 
 
 PARTIAL = False          # set by generate.py for trial renders made before both FEC pulls are finished
+# With more than one panel: True lets a panel break fall between two rows joined by an arc (a tie between two actors who both
+# have rows); the arc is then drawn at each end to a small dashed box naming the row at the other end. False keeps every such
+# pair of rows in one panel, at the cost of less equal panels.
+SPLIT_ARCS = True
+GUTTER = 100             # between two panels
 
 
-def fig_web(KICKER, DRAFT):
+def pack(items, lo, hi):
+    """Centres for the boxes of one column. items: [(wanted centre, height, least gap to the box above)], top to bottom.
+    Each box goes as near its wanted centre as the others allow (boxes that would touch move as one block, by least squares),
+    inside lo..hi."""
+    def span(i, j):
+        return sum(items[k][1] for k in range(i, j + 1)) + sum(items[k][2] for k in range(i + 1, j + 1))
+
+    def top(i, j):
+        off = 0.0; s = 0.0
+        for k in range(i, j + 1):
+            if k > i:
+                off += items[k - 1][1] + items[k][2]
+            s += items[k][0] - items[k][1] / 2 - off
+        return min(max(s / (j - i + 1), lo), hi - span(i, j))
+
+    blocks = []                    # [first, last, top]
+    for i in range(len(items)):
+        blocks.append([i, i, top(i, i)])
+        while len(blocks) > 1 and blocks[-2][2] + span(blocks[-2][0], blocks[-2][1]) + items[blocks[-1][0]][2] > blocks[-1][2]:
+            b = blocks.pop(); blocks[-1][1] = b[1]; blocks[-1][2] = top(blocks[-1][0], b[1])
+    out = []
+    for i, j, y in blocks:
+        assert y >= lo - 0.01, ('a column of the network is too full for its panel', lo, hi, [round(c) for c, _, _ in items])
+        for k in range(i, j + 1):
+            out.append(y + items[k][1] / 2); y += items[k][1] + (items[k + 1][2] if k < j else 0)
+    return out
+
+
+def curve(p0, c1, c2, p3, n=40):
+    """Points along the curve the figure draws from p0 to p3 with the control points c1 and c2."""
+    out = []
+    for i in range(1, n):
+        t = i / n; a, b, c, d = (1 - t) ** 3, 3 * t * (1 - t) ** 2, 3 * t * t * (1 - t), t ** 3
+        out.append((a * p0[0] + b * c1[0] + c * c2[0] + d * p3[0], a * p0[1] + b * c1[1] + c * c2[1] + d * p3[1]))
+    return out
+
+
+def hidden(points, boxes):
+    """How many of the points lie behind one of the boxes (x, top, width, height), or within 12 px of one."""
+    return sum(any(x0 - 12 <= x <= x0 + w + 12 and y0 - 12 <= y <= y0 + h + 12 for x0, y0, w, h in boxes) for x, y in points)
+
+
+def route(p0, p3, boxes, f=0.5, dips=True):
+    """(how much of it lies behind the boxes, c1, c2) for a line from a box's right edge at p0 into a row at p3. The plain line
+    has its control points at the fraction f of the way across, level with each end (c1 and c2 are then None). Where a box
+    hides part of a line that runs nearly level, a line that passes just under or just over a box is taken instead if less
+    of it is hidden (a steep line keeps its plain shape: bent round a box it would hug the rows' edge)."""
+    mx = p0[0] + (p3[0] - p0[0]) * f
+    best = (hidden(curve(p0, (mx, p0[1]), (mx, p3[1]), p3), boxes), None, None)
+    for x0, y0, w, h in (boxes if best[0] and dips and abs(p3[1] - p0[1]) <= 220 else ()):
+        for dip in (y0 + h + 26, y0 - 26):
+            if min(p0[1], p3[1]) - 160 <= dip <= max(p0[1], p3[1]) + 160:
+                c1, c2 = (p0[0] + 110, dip), (p3[0] - 110, dip)
+                n = hidden(curve(p0, c1, c2, p3), boxes) + 0.5
+                if n < best[0]:
+                    best = (n, c1, c2)
+    return best
+
+
+def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
+    assert isinstance(panels, int) and panels >= 1, panels
     # ------------------------------------------------------------------ data
     actors = OrderedDict((a[0], {'key': a[0], 'group': a[1], 'name': a[2], 'tag': a[3], 'fec': a[4]}) for a in rows_map.ACTORS)
     by_name = {a['name']: a for a in actors.values()}
@@ -190,8 +262,9 @@ def fig_web(KICKER, DRAFT):
     per_row = int((DAY_W - 12) // PITCH)
     max_rows = max(math.ceil(len(v) / per_row) for v in cov.values())
     COV_H = max_rows * PITCH + 34
-    Y_AX = COV_H + 6                 # day labels
-    Y0 = COV_H + 84                  # first group header
+    dots_p = panels - 1              # the panel whose calendar carries the dots: the last one, top right of the page
+    CH = [COV_H if p == dots_p else 10.0 for p in range(panels)]     # per panel: the height above its day axis
+    # in each panel the day labels start 6 below that height and the first group header 84 below it
 
     # ------------------------------------------------------------------ rows: plan the chips, then size each row to its text
     by_actor = defaultdict(list)
@@ -214,10 +287,9 @@ def fig_web(KICKER, DRAFT):
             w = max(DAY_W - 8, min(span * DAY_W - 8, one))
             plan.append((di, w, text_lines(t['what'], CH_FONT, w - CH_ACROSS - 3), t))
         chips[a['key']] = plan
-    y = Y0; geo = {}; hdr = {}
+    rowh = {}; grp_h = OrderedDict()
     for g in rows_map.GROUPS:
-        gkey = g[0]
-        hdr[gkey] = y; y += HDR_H
+        gkey = g[0]; grp_h[gkey] = HDR_H + GAP
         for a in actors.values():
             if a['group'] != gkey:
                 continue
@@ -226,15 +298,47 @@ def fig_web(KICKER, DRAFT):
             tie_l = sum(text_lines(t, 12.5, NAME_IN - 17 - 3) for _, t in lines[a['name']])
             cell = 18 + name_l * 19.4 + tie_l * 15.5 + 3
             chip = max([n * CH_LH for _, _, n, _ in chips[a['key']]] or [0]) + 12 + 4
-            h = max(row_min, math.ceil(cell), math.ceil(chip))
-            geo[a['key']] = (y, h); y += h
-        y += GAP
-    H = y
-    yc = {k: t + h / 2 for k, (t, h) in geo.items()}
+            rowh[a['key']] = max(row_min, math.ceil(cell), math.ceil(chip)); grp_h[gkey] += rowh[a['key']]
     key_of = {a['name']: a['key'] for a in actors.values()}
+    grp_of = {a['key']: a['group'] for a in actors.values()}
+
+    # ------------------------------------------------------------------ panels: whole groups, in order, heights as equal as they allow
+    gkeys = list(grp_h)
+
+    def shares(cuts):
+        b = (0,) + tuple(cuts) + (len(gkeys),)
+        return [gkeys[b[p]:b[p + 1]] for p in range(panels)]
+
+    def heights(cuts):
+        return [CH[p] + 84 + sum(grp_h[g] for g in gs) for p, gs in enumerate(shares(cuts))]
+
+    def whole(cuts):                 # no arc has its two rows in different panels
+        where = {g: p for p, gs in enumerate(shares(cuts)) for g in gs}
+        return all(where[grp_of[key_of[t['a']]]] == where[grp_of[key_of[t['b']]]] for t in arcs)
+
+    options = [c for c in itertools.combinations(range(1, len(gkeys)), panels - 1) if SPLIT_ARCS or whole(c)]
+    assert options, ('no way to share the groups out over the panels', panels)
+    cuts = min(options, key=lambda c: (max(heights(c)), sum(v * v for v in heights(c))))
+    gpan = {g: p for p, gs in enumerate(shares(cuts)) for g in gs}
+    geo = {}; hdr = {}; pan = {}; Y0S = []; HP = []
+    for p in range(panels):
+        y = CH[p] + 84; Y0S.append(y)
+        for gkey in shares(cuts)[p]:
+            hdr[gkey] = y; y += HDR_H
+            for a in actors.values():
+                if a['group'] != gkey:
+                    continue
+                geo[a['key']] = (y, rowh[a['key']]); pan[a['key']] = p; y += rowh[a['key']]
+            y += GAP
+        HP.append(y)
+    assert [round(v, 3) for v in HP] == [round(v, 3) for v in heights(cuts)]
+    HT = max(HP)
+    yc = {k: t + h / 2 for k, (t, h) in geo.items()}
 
     # ------------------------------------------------------------------ left nodes: x, centre y, w, h, subtitle
-    r0 = Y0
+    # The centres written here are the one-sheet layout's, placed by hand; with more than one panel each panel's copy is
+    # placed by rule further down, and only the widths, heights and captions of this list are used.
+    r0 = Y0S[0]
     grant = {(g[0], g[1]): g[2] for g in rows_map.GRANTS + rows_map.GRANTS_V3}
     ra = gift_rate['anthropic']; n_emp = sum(1 for t in mties if t['type'] == 'employee_gifts' and t['side'] == 'anthropic' and t['usd'])
     n_ari = sum(1 for t in mties if t['type'] == 'ari_pac')
@@ -267,18 +371,6 @@ def fig_web(KICKER, DRAFT):
     drawn = {t['a'] for t in ties} | {t['b'] for t in ties}
     assert all(n in drawn for n in NODES), [n for n in NODES if n not in drawn]
     assert all(n in NODES or n in by_name for n in drawn), [n for n in drawn if n not in NODES and n not in by_name]
-    # no two boxes in one column may touch
-    for X in (X_MID, X_INST):
-        colv = sorted((c - h / 2, c + h / 2, n) for n, (x, c, w, h, _) in NODES.items() if x == X)
-        for (t0, b0, n0), (t1, b1, n1) in zip(colv, colv[1:]):
-            assert t1 - b0 >= 4, ('boxes overlap', n0, n1, round(b0), round(t1))
-
-    def right(n, dy=0):
-        x, c, w, h, _ = NODES[n]; return (x + w, c + dy)
-
-    def left(n, dy=0):
-        x, c, w, h, _ = NODES[n]; return (x, c + dy)
-
     # ports on each row's name cell, one per incoming line or arc
     incoming = defaultdict(list)
     for t in ties:
@@ -291,42 +383,6 @@ def fig_web(KICKER, DRAFT):
         ks = incoming[key]; i = [id(x[1]) for x in ks].index(id(item)); n = len(ks)
         return (X_NAME, yc[key] + (i - (n - 1) / 2) * 10)
 
-    svg = []
-    # ------------------------------------------------------------------ SVG: grid, weekend bands, coverage dots
-    for i, d in enumerate(DAYS):
-        x = X_T0 + i * DAY_W
-        wd = datetime.date.fromisoformat(d).weekday()
-        if wd >= 5:
-            svg.append(f'<rect x="{x:.1f}" y="{Y0}" width="{DAY_W:.1f}" height="{H - Y0 - GAP:.1f}" fill="#f0ece2"/>')
-        svg.append(f'<line x1="{x:.1f}" y1="{Y0}" x2="{x:.1f}" y2="{H - GAP:.1f}" stroke="{GRID}" stroke-width="1"/>')
-    svg.append(f'<line x1="{W:.1f}" y1="{Y0}" x2="{W:.1f}" y2="{H - GAP:.1f}" stroke="{GRID}" stroke-width="1"/>')
-    svg.append(f'<line x1="{X_T0}" y1="{COV_H}" x2="{W}" y2="{COV_H}" stroke="{AXIS}" stroke-width="1.5"/>')
-    order = list(COV)
-    for i, d in enumerate(DAYS):
-        items = sorted(cov[d], key=lambda t: (order.index(t[0]), t[1]))
-        x0 = X_T0 + i * DAY_W + 6 + PITCH / 2
-        for j, (c, dom, head) in enumerate(items):
-            cx = x0 + (j % per_row) * PITCH; cy = COV_H - 4 - (j // per_row) * PITCH
-            tip = LINT.sub('…', f'{dom} · {head}')
-            svg.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{DOT_R}" fill="{COV[c][0]}"><title>{esc(tip)}</title></circle>')
-        if items:
-            top = COV_H - 4 - math.ceil(len(items) / per_row) * PITCH
-            svg.append(f'<text x="{X_T0 + (i + 0.5) * DAY_W:.1f}" y="{top - 5:.1f}" font-size="15" font-weight="bold" text-anchor="middle" fill="{INK}">{len(items):,}</text>')
-    # midterms marker, through the rows
-    xm = X_T0 + (DAYS.index('2026-11-03') + 0.5) * DAY_W
-    svg.append(f'<line x1="{xm:.1f}" y1="{Y0}" x2="{xm:.1f}" y2="{H - GAP:.1f}" stroke="{INK}" stroke-width="1.4" stroke-dasharray="3 5" opacity="0.55"/>')
-
-    # ------------------------------------------------------------------ SVG: ties
-    def path(p0, p3, kind, key='', c1=None, c2=None, width=3.0, f=0.5):
-        col, dash, _ = KIND[kind]
-        mx = p0[0] + (p3[0] - p0[0]) * f
-        c1 = c1 or (mx, p0[1]); c2 = c2 or (mx, p3[1])
-        d = f' stroke-dasharray="{dash}"' if dash else ''
-        cap = ' stroke-linecap="round"' if kind == 'meet' else ''
-        return (f'<path class="e" data-a="{key}" d="M{p0[0]:.1f},{p0[1]:.1f} C{c1[0]:.1f},{c1[1]:.1f} {c2[0]:.1f},{c2[1]:.1f} {p3[0]:.1f},{p3[1]:.1f}" '
-                f'fill="none" stroke="{col}" stroke-width="{width}" opacity="0.9"{d}{cap}/>')
-
-    tie = {(t['a'], t['b']): t for t in ties}
     # everything downstream of a node, so hovering a row lights its whole chain
     feeds = defaultdict(set)
     for t in ties:
@@ -338,148 +394,315 @@ def fig_web(KICKER, DRAFT):
         for t in ties:
             if t['b'] in NODES and feeds[t['b']] - feeds[t['a']]:
                 feeds[t['a']] |= feeds[t['b']]; changed = True
-    def keys(n):
-        return ' '.join(sorted(feeds[n]))
 
-    def colof(n):
-        return 0 if n == 'Anthropic' else (1 if NODES[n][0] == X_MID else 2)
-
-    def target_y(t):
-        return yc[key_of[t['b']]] if t['b'] in by_name else NODES[t['b']][1]
-
-    side = [t for t in ties if t['b'] in NODES and colof(t['a']) == colof(t['b'])]          # both ends in one column
-    outs, ins = defaultdict(list), defaultdict(list)
-    for t in ties:
-        if t in side:
-            continue
-        outs[t['a']].append(t)
-        if t['b'] in NODES:
-            ins[t['b']].append(t)
-    for n in outs:
-        outs[n].sort(key=target_y)
-    for n in ins:
-        ins[n].sort(key=lambda t: NODES[t['a']][1])
-
-    def spread(lst, t, h, step):
-        n = len(lst); i = [id(x) for x in lst].index(id(t))
-        step = min(step, (h - 16) / (n - 1)) if n > 1 else 0
-        return (i - (n - 1) / 2) * step
-
-    for t in ties:
-        k = KMAP[t['kind']]; a_, b_ = t['a'], t['b']
-        key = key_of[b_] if b_ in by_name else keys(b_)
-        if t in side:
-            xa, ca, wa, ha, _ = NODES[a_]; xb, cb, wb, hb, _ = NODES[b_]
-            lo, hi = (a_, b_) if ca < cb else (b_, a_)
-            gap0 = NODES[lo][1] + NODES[lo][3] / 2; gap1 = NODES[hi][1] - NODES[hi][3] / 2
-            between = [n for n in NODES if NODES[n][0] == xa and gap0 < NODES[n][1] < gap1]
-            if not between:                                   # neighbours: a short line down the column
-                gx = xa + wa / 2; col_, dash, _ = KIND[k]
-                d = f' stroke-dasharray="{dash}"' if dash else ''
-                svg.append(f'<line class="e" data-a="{key}" x1="{gx}" y1="{gap0:.1f}" x2="{gx}" y2="{gap1:.1f}" stroke="{col_}" stroke-width="3.2" opacity="0.9"{d}/>')
-            else:                                             # others in between: an arc round the left of the column
-                p0 = left(a_, 12); p3 = left(b_, -20)
-                svg.append(path(p0, p3, k, key, c1=(p0[0] - 56, p0[1] + 40), c2=(p3[0] - 56, p3[1] - 40)))
-            continue
-        p0 = right(a_, spread(outs[a_], t, NODES[a_][3], 14 if a_ == 'Anthropic' else 12))
-        if b_ in by_name:
-            p3 = port(key_of[b_], t)
-            if a_ == 'Tarun Chhabra':                         # the shared panel: under the boxes between them
-                dip = NODES['NSC technology office'][1] + NODES['NSC technology office'][3] / 2 + 26
-                svg.append(path(p0, p3, k, key, c1=(p0[0] + 110, dip), c2=(p3[0] - 110, dip), width=2.6))
-            else:
-                svg.append(path(p0, p3, k, key, width=2.2 if k == 'own' else (2.6 if a_ == 'Anthropic' else 3.0), f=0.62 if a_ == 'Anthropic' else 0.5))
-        else:
-            p3 = left(b_, spread(ins[b_], t, NODES[b_][3], 10))
-            svg.append(path(p0, p3, k, key, width=3.4 if a_ == 'Anthropic' else 3.0))
-    # arcs between rows, beside the names
-    for t in sorted(arcs, key=lambda t: -abs(yc[key_of[t['a']]] - yc[key_of[t['b']]])):
+    # ------------------------------------------------------------------ each panel's copy of the network
+    # A panel holds the boxes with a line into its rows, directly or through other boxes. A box with no line into any row
+    # (it only hangs off other boxes) is drawn once, in the first panel, where the one-sheet layout has it.
+    CAT = NODES; cat_col = {n: (0 if n == 'Anthropic' else (1 if CAT[n][0] == X_MID else 2)) for n in CAT}
+    rows_of = [{k for k in geo if pan[k] == p} for p in range(panels)]
+    IN = []; TP = []
+    for p in range(panels):
+        names = {n for n in CAT if feeds[n] & rows_of[p]} | ({n for n in CAT if not feeds[n]} if p == 0 else set())
+        changed = True
+        while changed:               # and whatever feeds those boxes
+            changed = False
+            for t in ties:
+                if t['b'] in names and t['b'] not in by_name and t['a'] not in names:
+                    names.add(t['a']); changed = True
+        IN.append(names)
+        TP.append([t for t in ties if (key_of[t['b']] in rows_of[p] if t['b'] in by_name else t['b'] in names)])
+        assert all(t['a'] in names for t in TP[p]), [t['row_id'] for t in TP[p] if t['a'] not in names]
+    assert all(any(n in s for s in IN) for n in CAT) and all(sum(t in tp for tp in TP) >= 1 for t in ties)
+    assert all(sum(t in tp for tp in TP) == 1 for t in ties if t['b'] in by_name), 'a line into a row is drawn once'
+    # an arc whose two rows fell into different panels: at each end, a small box naming the row at the other end
+    SI = [[] for _ in range(panels)]
+    for t in arcs:
         ka, kb = key_of[t['a']], key_of[t['b']]
-        pa, pb = port(ka, t), port(kb, t)
-        bulge = min(250, 34 + 0.36 * abs(pa[1] - pb[1]))
-        svg.append(path(pa, pb, KMAP[t['kind']], f'{ka} {kb}', c1=(pa[0] - bulge, pa[1]), c2=(pb[0] - bulge, pb[1]), width=2.8))
+        if pan[ka] != pan[kb]:
+            for k, other in ((ka, t['b']), (kb, t['a'])):
+                w = min(W_INST, math.ceil(tw(other, 15.5, True)) + 28)
+                SI[pan[k]].append({'row': k, 'name': other, 't': t, 'w': w, 'x': X_NAME - 206 - w, 'h': math.ceil(13 + 19.4 * text_lines(other, 15.5, w - 23 - 3, bold=True) + 2)})
+    assert panels > 1 or not any(SI)
+    # a panel with no network keeps no room for one: it starts a little left of its names, where its arcs and the note fit
+    X_LO = [0 if (IN[p] or panels == 1) else min([X_NAME - 416] + [s['x'] - 20 for s in SI[p]]) for p in range(panels)]
+    OX = []; x = 0
+    for p in range(panels):
+        OX.append(x - X_LO[p]); x += W - X_LO[p] + GUTTER
+    WT = x - GUTTER                  # the plot's width; each panel is drawn in its own coordinates and moved right by OX[p]
 
-    # ------------------------------------------------------------------ HTML boxes
-    h = []
-    # day axis
-    for i, d in enumerate(DAYS):
-        dt = datetime.date.fromisoformat(d)
-        note = f'<div style="font-size:12.5px;line-height:14px;color:{INK};margin-top:4px">{esc(DAYNOTE[d])}</div>' if d in DAYNOTE else ''
-        h.append(box(X_T0 + i * DAY_W + 3, Y_AX, DAY_W - 6, 70, f'<b>{MONTHS[dt.month - 1]} {dt.day}</b> <span style="color:{MUTED};font-size:13px">{WD[dt.weekday()]}</span>{note}',
-                     'text-align:center;font-size:17px;line-height:1.1'))
-    # coverage title, legend and the quiet-days note, in the empty early columns
-    cx0 = X_T0 + 1 * DAY_W + 10
-    h.append(box(cx0, 0, 6 * DAY_W - 20, COV_H - 52,
-                 f'<div style="font-size:21px;font-weight:bold;line-height:1.2">{n_dated:,} pieces on the story, by the day first listed</div>'
-                 f'<div style="font-size:14.5px;color:{MUTED};line-height:1.35;margin-top:6px">One dot is one piece. Techmeme and Memeorandum pages were saved five times a day; '
-                 f'{len(sites_dated):,} sites appear among the dots ({len(sites):,} with the pieces that have no day). The six days after the first report brought {n_quiet} more.</div>'
-                 + ''.join(f'<div style="display:flex;align-items:center;gap:9px;font-size:14.5px;margin-top:7px"><i style="width:12px;height:12px;border-radius:50%;background:{c};flex:none"></i>{esc(t)}</div>' for c, t in COV.values())))
-    # top-left: the three numbers, the tie legend
-    n_m = len(members)
-    stats = [(f'{n_story:,}', f'pieces on the story listed by two aggregators, from {len(sites):,} sites'),
-             (f'{len(actors)}', f'actors drawn, with {len(acts)} dated acts between Oct 29 and Nov 12'),
-             (f'{n_emp} of {n_m}', f'members drawn got a gift from an Anthropic employee; {len(paid)} got one from AnthroPAC')]
-    sx = 0
-    for big, small in stats:
-        h.append(box(sx, 0, 372, 112, f'<div style="font-size:54px;font-weight:bold;letter-spacing:-1.5px;line-height:1">{big}</div>'
-                                      f'<div style="font-size:15px;color:{MUTED};line-height:1.3;margin-top:6px">{esc(small)}</div>'))
-        sx += 396
-    leg = f'<div style="font-size:13px;letter-spacing:1.6px;font-weight:bold;color:{MUTED};margin-bottom:6px">LINES AT LEFT: DOCUMENTED TIES</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px 26px">'
-    for k, (col, dash, label) in KIND.items():
-        d = f' stroke-dasharray="{dash}"' if dash else ''
-        cap = ' stroke-linecap="round"' if k == 'meet' else ''
-        leg += (f'<div style="display:flex;align-items:center;gap:10px;font-size:14.5px"><svg width="46" height="10" style="flex:none"><line x1="1" y1="5" x2="45" y2="5" stroke="{col}" stroke-width="3.2"{d}{cap}/></svg>{esc(label)}</div>')
-    leg += '</div>'
-    h.append(box(0, 128, 1150, COV_H + 40 - 128, leg))
-    # column heads for the network
-    for x, t in [(X_ROOT, 'The company'), (X_MID, 'Its people and vehicles'), (X_INST, 'Institutions'), (X_NAME, 'Who acted')]:
-        h.append(box(x, Y0 - 26, 300, 20, t.upper(), f'font-size:13px;letter-spacing:1.6px;font-weight:bold;color:{MUTED}', fit=False))
-    # group headers: the group's background sentence (a stakes row, word for word), then what no document shows
-    stakes = {r['row_id']: r for r in rows_context.rows() if r['row_id'].startswith('ST')}
-    for gkey, gtitle, gap, st, lead in rows_map.GROUPS:
-        y = hdr[gkey]
-        before = stakes[st]['before'] if st else ''
-        if lead:
-            before = f'{lead} {before[0].lower()}{before[1:]}'
-        bg = f'<div><b style="color:{INK}">Background:</b> {esc(before)}</div>' if before else ''
-        h.append(box(X_NAME, y + 3, W - X_NAME, HDR_H - 6,
-                     f'<div style="display:flex"><div style="width:{X_T0 - X_NAME - 12}px;flex:none;font-weight:bold;letter-spacing:1.4px;font-size:13.5px">{esc(gtitle.upper())}</div>'
-                     f'<div style="font-size:13.5px;color:{MUTED}">{bg}'
-                     f'<div><b style="color:{INK}">No document here shows</b> {esc(gap)}</div></div></div>',
-                     'background:#e6e2d7;border-radius:5px;padding:4px 12px;white-space:nowrap;line-height:19px'))
-    # rows: name cells and chips
-    for a in actors.values():
-        top, rh = geo[a['key']]
-        tag = f' <span style="color:{MUTED};font-weight:normal;font-size:13px">{esc(a["tag"])}</span>' if a['tag'] else ''
-        inner = f'<div style="font-size:15.5px;font-weight:bold;line-height:1.25">{esc(a["name"])}{tag}</div>'
-        for k, txt in lines[a['name']]:
-            if k == 'count':
-                inner += f'<div style="font-size:11.5px;line-height:15.5px;color:{MUTED};padding-left:17px">{esc(txt)}</div>'
+    def place(p):
+        """One panel's boxes, placed by rule: an institution beside the rows it has lines to; a person or vehicle beside the
+        institutions and rows it has lines to (one whose only line runs down its own column sits just above the box that
+        line reaches); the company halfway down its column. A line from a box into a row is drawn over the columns between
+        them and under their boxes, so a person, a vehicle and the company are each moved, as little as will do, to where
+        the least of their lines into rows lies behind a box. Boxes of a column that would touch are then moved apart."""
+        names = IN[p]; tp = TP[p]; lo, hi = Y0S[p] + 8, HP[p] - GAP - 6; c = {}; solid = []
+
+        def behind(n, cy, step, f):  # of n's lines into rows, the part behind the boxes placed so far, were n centred at cy
+            out = sorted((t for t in tp if t['a'] == n and (t['b'] in by_name or cat_col[t['b']] != cat_col[n])),
+                         key=lambda t: yc[key_of[t['b']]] if t['b'] in by_name else c[t['b']])        # as the drawing spreads them
+            k = len(out); step = min(step, (CAT[n][3] - 16) / (k - 1)) if k > 1 else 0
+            return sum(route((CAT[n][0] + CAT[n][2], cy + (i - (k - 1) / 2) * step), port(key_of[t['b']], t), solid, f, dips=n != 'Anthropic')[0]
+                       for i, t in enumerate(out) if t['b'] in by_name)
+
+        for col in (2, 1):
+            mine = [n for n in CAT if n in names and cat_col[n] == col]
+            want = {}; above = {}
+            for n in mine:
+                ys = [yc[key_of[t['b']]] if t['b'] in by_name else c[t['b']] for t in tp if t['a'] == n and (t['b'] in by_name or cat_col[t['b']] != col)]
+                if ys:
+                    want[n] = sum(ys) / len(ys)
+                    if col == 1:
+                        want[n] += min(range(-400, 401, 20), key=lambda d: (behind(n, want[n] + d, 12, 0.5) + 0.005 * abs(d), abs(d), d))
+            for n in mine:
+                down = [t['b'] for t in tp if t['a'] == n and t['b'] in want]
+                if n not in want and down:
+                    above[n] = down[0]
+            for n in mine:
+                if n not in want and n not in above:      # no line to place it by: the top of its column
+                    want[n] = lo + CAT[n][3] / 2
+            items = [(want[n], 1, i, n, CAT[n][3]) for i, n in enumerate(mine) if n in want]
+            items += [(want[above[n]], 0, i, n, CAT[n][3]) for i, n in enumerate(mine) if n in above]
+            if col == 2:
+                items += [(yc[s['row']], 1, 100 + i, s, s['h']) for i, s in enumerate(SI[p])]
+            items.sort(key=lambda it: it[:3])
+            boxes = []
+            for j, (wc, kind, _, n, hh) in enumerate(items):
+                if kind == 0:                             # just above the box its line reaches, with room for the line
+                    assert items[j + 1][3] == above[n], ('two boxes want the place above', above[n])
+                    boxes.append((wc - CAT[above[n]][3] / 2 - 29 - hh / 2, hh, 14))
+                else:
+                    boxes.append((wc, hh, 29 if j and items[j - 1][1] == 0 else 14))
+            for (_, _, _, n, hh), cy in zip(items, pack(boxes, lo, hi)):
+                if isinstance(n, dict):
+                    n['c'] = cy; solid.append((n['x'], cy - hh / 2, n['w'], hh))
+                else:
+                    c[n] = cy; solid.append((CAT[n][0], cy - hh / 2, CAT[n][2], hh))
+        if 'Anthropic' in names:
+            ms = [c[t['b']] for t in tp if t['a'] == 'Anthropic' and t['b'] in c]; mid = (min(ms) + max(ms)) / 2; half = CAT['Anthropic'][3] / 2
+            c['Anthropic'] = min(range(math.ceil(lo + half), int(hi - half) + 1, 10), key=lambda y: (behind('Anthropic', y, 14, 0.62) + 0.004 * abs(y - mid), abs(y - mid)))
+        SOLID[p] = [b for b in solid if b[0] >= X_INST - 200]          # the institutions' boxes and the dashed ones
+        return OrderedDict((n, (CAT[n][0], c[n], CAT[n][2], CAT[n][3], CAT[n][4])) for n in CAT if n in names)
+
+    SOLID = {}
+    PN = [CAT] if panels == 1 else [place(p) for p in range(panels)]
+
+    def right(n, dy=0):
+        x, c, w, h, _ = NODES[n]; return (x + w, c + dy)
+
+    def left(n, dy=0):
+        x, c, w, h, _ = NODES[n]; return (x, c + dy)
+
+    panes = []
+    for p in range(panels):
+        # this panel's share: its boxes, the lines among them and into its rows, its top and bottom
+        NODES = PN[p]; tiesp = TP[p]; Y0 = Y0S[p]; Y_AX = CH[p] + 6; H = HP[p]
+        # no two boxes in one column may touch
+        for X in (X_MID, X_INST):
+            colv = sorted((c - h / 2, c + h / 2, n) for n, (x, c, w, h, _) in NODES.items() if x == X)
+            colv += sorted((s['c'] - s['h'] / 2, s['c'] + s['h'] / 2, s['name']) for s in SI[p] if X == X_INST)
+            for (t0, b0, n0), (t1, b1, n1) in zip(sorted(colv), sorted(colv)[1:]):
+                assert t1 - b0 >= 4, ('boxes overlap', n0, n1, round(b0), round(t1))
+
+        svg = []
+        # ------------------------------------------------------------------ SVG: grid, weekend bands, coverage dots
+        for i, d in enumerate(DAYS):
+            x = X_T0 + i * DAY_W
+            wd = datetime.date.fromisoformat(d).weekday()
+            if wd >= 5:
+                svg.append(f'<rect x="{x:.1f}" y="{Y0}" width="{DAY_W:.1f}" height="{H - Y0 - GAP:.1f}" fill="#f0ece2"/>')
+            svg.append(f'<line x1="{x:.1f}" y1="{Y0}" x2="{x:.1f}" y2="{H - GAP:.1f}" stroke="{GRID}" stroke-width="1"/>')
+        svg.append(f'<line x1="{W:.1f}" y1="{Y0}" x2="{W:.1f}" y2="{H - GAP:.1f}" stroke="{GRID}" stroke-width="1"/>')
+        svg.append(f'<line x1="{X_T0}" y1="{CH[p]}" x2="{W}" y2="{CH[p]}" stroke="{AXIS}" stroke-width="1.5"/>')
+        order = list(COV)
+        for i, d in (enumerate(DAYS) if p == dots_p else ()):
+            items = sorted(cov[d], key=lambda t: (order.index(t[0]), t[1]))
+            x0 = X_T0 + i * DAY_W + 6 + PITCH / 2
+            for j, (c, dom, head) in enumerate(items):
+                cx = x0 + (j % per_row) * PITCH; cy = COV_H - 4 - (j // per_row) * PITCH
+                tip = LINT.sub('…', f'{dom} · {head}')
+                svg.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{DOT_R}" fill="{COV[c][0]}"><title>{esc(tip)}</title></circle>')
+            if items:
+                top = COV_H - 4 - math.ceil(len(items) / per_row) * PITCH
+                svg.append(f'<text x="{X_T0 + (i + 0.5) * DAY_W:.1f}" y="{top - 5:.1f}" font-size="15" font-weight="bold" text-anchor="middle" fill="{INK}">{len(items):,}</text>')
+        # midterms marker, through the rows
+        xm = X_T0 + (DAYS.index('2026-11-03') + 0.5) * DAY_W
+        svg.append(f'<line x1="{xm:.1f}" y1="{Y0}" x2="{xm:.1f}" y2="{H - GAP:.1f}" stroke="{INK}" stroke-width="1.4" stroke-dasharray="3 5" opacity="0.55"/>')
+
+        # ------------------------------------------------------------------ SVG: ties
+        def path(p0, p3, kind, key='', c1=None, c2=None, width=3.0, f=0.5):
+            col, dash, _ = KIND[kind]
+            mx = p0[0] + (p3[0] - p0[0]) * f
+            c1 = c1 or (mx, p0[1]); c2 = c2 or (mx, p3[1])
+            d = f' stroke-dasharray="{dash}"' if dash else ''
+            cap = ' stroke-linecap="round"' if kind == 'meet' else ''
+            return (f'<path class="e" data-a="{key}" d="M{p0[0]:.1f},{p0[1]:.1f} C{c1[0]:.1f},{c1[1]:.1f} {c2[0]:.1f},{c2[1]:.1f} {p3[0]:.1f},{p3[1]:.1f}" '
+                    f'fill="none" stroke="{col}" stroke-width="{width}" opacity="0.9"{d}{cap}/>')
+
+        def keys(n):                 # the rows of this panel that a box leads to
+            return ' '.join(sorted(feeds[n] & rows_of[p]))
+
+        def colof(n):
+            return 0 if n == 'Anthropic' else (1 if NODES[n][0] == X_MID else 2)
+
+        def target_y(t):
+            return yc[key_of[t['b']]] if t['b'] in by_name else NODES[t['b']][1]
+
+        side = [t for t in tiesp if t['b'] in NODES and colof(t['a']) == colof(t['b'])]          # both ends in one column
+        outs, ins = defaultdict(list), defaultdict(list)
+        for t in tiesp:
+            if t in side:
                 continue
-            if k == 'none':
-                sw = f'<i style="width:9px;height:9px;border:1.5px solid {GRAY};border-radius:2px;flex:none;margin-top:3px"></i>'; colr = MUTED
+            outs[t['a']].append(t)
+            if t['b'] in NODES:
+                ins[t['b']].append(t)
+        for n in outs:
+            outs[n].sort(key=target_y)
+        for n in ins:
+            ins[n].sort(key=lambda t: NODES[t['a']][1])
+
+        def spread(lst, t, h, step):
+            n = len(lst); i = [id(x) for x in lst].index(id(t))
+            step = min(step, (h - 16) / (n - 1)) if n > 1 else 0
+            return (i - (n - 1) / 2) * step
+
+        for t in tiesp:
+            k = KMAP[t['kind']]; a_, b_ = t['a'], t['b']
+            key = key_of[b_] if b_ in by_name else keys(b_)
+            if t in side:
+                xa, ca, wa, ha, _ = NODES[a_]; xb, cb, wb, hb, _ = NODES[b_]
+                lo, hi = (a_, b_) if ca < cb else (b_, a_)
+                gap0 = NODES[lo][1] + NODES[lo][3] / 2; gap1 = NODES[hi][1] - NODES[hi][3] / 2
+                between = [n for n in NODES if NODES[n][0] == xa and gap0 < NODES[n][1] < gap1]
+                if not between:                                   # neighbours: a short line down the column
+                    gx = xa + wa / 2; col_, dash, _ = KIND[k]
+                    d = f' stroke-dasharray="{dash}"' if dash else ''
+                    svg.append(f'<line class="e" data-a="{key}" x1="{gx}" y1="{gap0:.1f}" x2="{gx}" y2="{gap1:.1f}" stroke="{col_}" stroke-width="3.2" opacity="0.9"{d}/>')
+                else:                                             # others in between: an arc round the left of the column
+                    s = 1 if ca < cb else -1                      # down the column, or up it
+                    p0 = left(a_, 12 * s); p3 = left(b_, -20 * s)
+                    svg.append(path(p0, p3, k, key, c1=(p0[0] - 56, p0[1] + 40 * s), c2=(p3[0] - 56, p3[1] - 40 * s)))
+                continue
+            p0 = right(a_, spread(outs[a_], t, NODES[a_][3], 14 if a_ == 'Anthropic' else 12))
+            if b_ in by_name:
+                p3 = port(key_of[b_], t)
+                if a_ == 'Tarun Chhabra' and panels == 1:         # the shared panel: under the boxes between them (a panel's copy is placed so that the plain line is clear)
+                    dip = NODES['NSC technology office'][1] + NODES['NSC technology office'][3] / 2 + 26
+                    svg.append(path(p0, p3, k, key, c1=(p0[0] + 110, dip), c2=(p3[0] - 110, dip), width=2.6))
+                else:
+                    c1, c2 = route(p0, p3, SOLID[p])[1:] if panels > 1 and colof(a_) == 1 else (None, None)       # a person's or vehicle's line: round a box in its way
+                    svg.append(path(p0, p3, k, key, c1=c1, c2=c2, width=2.2 if k == 'own' else (2.6 if a_ == 'Anthropic' else 3.0), f=0.62 if a_ == 'Anthropic' else 0.5))
             else:
-                sw = f'<i style="width:10px;height:10px;background:{KIND[k][0]};border-radius:2px;flex:none;margin-top:3px"></i>'; colr = INK
-            inner += f'<div style="display:flex;gap:7px;font-size:12.5px;line-height:15.5px;color:{colr}">{sw}<span>{esc(txt)}</span></div>'
-        h.append(box(X_NAME, top + 3, W_NAME, rh - 6, inner, f'background:{CARD};border-radius:7px;padding:6px 10px', attrs=f'data-a="{a["key"]}" class="row"'))
-        svg.append(f'<line x1="{X_T0}" y1="{top + rh:.1f}" x2="{W}" y2="{top + rh:.1f}" stroke="{GRID}" stroke-width="1"/>')
-        for di, w, _, t in chips[a['key']]:
-            h.append(box(X_T0 + di * DAY_W + 4, top + 5, w, rh - 10,
-                         f'<div style="display:flex;height:100%;align-items:center"><span style="font-size:{CH_FONT}px;line-height:{CH_LH}px">{esc(t["what"])}</span></div>',
-                         f'background:#fffdf8;border:1px solid {LGRAY};border-left:4px {"dashed" if t.get("reported") else "solid"} {INK};border-radius:5px;padding:0 7px', attrs=f'data-a="{a["key"]}" class="chip"'))
-    # left nodes
-    for name, (x, c, w, nh, sub) in NODES.items():
-        if name == 'Anthropic':
-            inner = (f'<div style="font-size:26px;font-weight:bold;letter-spacing:-.4px">Anthropic</div>'
-                     f'<div style="font-size:13.5px;line-height:1.3;opacity:.82;margin-top:4px">{esc(sub)}; set its IPO price range on Nov 10</div>')
-            st = f'background:{INK};color:#fff;border-radius:10px;padding:16px 14px'
-        else:
-            inner = (f'<div style="font-size:15.5px;font-weight:bold;line-height:1.2">{esc(name)}</div>'
-                     f'<div style="font-size:12.5px;line-height:15px;color:{MUTED};margin-top:2px">{esc(sub)}</div>')
-            st = f'background:#fffdf8;border:1.5px solid {AXIS};border-radius:8px;padding:6px 10px'
-        h.append(box(x, c - nh / 2, w, nh, inner, st))
-    # the note in the empty lower left
-    ny = hdr['admin']
+                p3 = left(b_, spread(ins[b_], t, NODES[b_][3], 10))
+                svg.append(path(p0, p3, k, key, width=3.4 if a_ == 'Anthropic' else 3.0))
+        # arcs between rows, beside the names
+        for t in sorted(arcs, key=lambda t: -abs(yc[key_of[t['a']]] - yc[key_of[t['b']]])):
+            ka, kb = key_of[t['a']], key_of[t['b']]
+            if not pan[ka] == pan[kb] == p:
+                continue
+            pa, pb = port(ka, t), port(kb, t)
+            bulge = min(250, 34 + 0.36 * abs(pa[1] - pb[1]))
+            svg.append(path(pa, pb, KMAP[t['kind']], f'{ka} {kb}', c1=(pa[0] - bulge, pa[1]), c2=(pb[0] - bulge, pb[1]), width=2.8))
+        for s in SI[p]:              # the near end of an arc whose other row is in another panel
+            t = s['t']
+            svg.append(path((s['x'] + s['w'], s['c']), port(s['row'], t), KMAP[t['kind']], f'{key_of[t["a"]]} {key_of[t["b"]]}', width=2.8))
+
+        # ------------------------------------------------------------------ HTML boxes
+        h = []
+        # day axis
+        for i, d in enumerate(DAYS):
+            dt = datetime.date.fromisoformat(d)
+            note = f'<div style="font-size:12.5px;line-height:14px;color:{INK};margin-top:4px">{esc(DAYNOTE[d])}</div>' if d in DAYNOTE else ''
+            h.append(box(X_T0 + i * DAY_W + 3, Y_AX, DAY_W - 6, 70, f'<b>{MONTHS[dt.month - 1]} {dt.day}</b> <span style="color:{MUTED};font-size:13px">{WD[dt.weekday()]}</span>{note}',
+                         'text-align:center;font-size:17px;line-height:1.1'))
+        # coverage title, legend and the quiet-days note, in the empty early columns
+        cx0 = X_T0 + 1 * DAY_W + 10
+        (h if p == dots_p else []).append(box(cx0, 0, 6 * DAY_W - 20, COV_H - 52,
+                     f'<div style="font-size:21px;font-weight:bold;line-height:1.2">{n_dated:,} pieces on the story, by the day first listed</div>'
+                     f'<div style="font-size:14.5px;color:{MUTED};line-height:1.35;margin-top:6px">One dot is one piece. Techmeme and Memeorandum pages were saved five times a day; '
+                     f'{len(sites_dated):,} sites appear among the dots ({len(sites):,} with the pieces that have no day). The six days after the first report brought {n_quiet} more.</div>'
+                     + ''.join(f'<div style="display:flex;align-items:center;gap:9px;font-size:14.5px;margin-top:7px"><i style="width:12px;height:12px;border-radius:50%;background:{c};flex:none"></i>{esc(t)}</div>' for c, t in COV.values())))
+        # top-left: the three numbers, the tie legend (with more than one panel they go up beside the title: placed further down)
+        n_m = len(members)
+        stats = [(f'{n_story:,}', f'pieces on the story listed by two aggregators, from {len(sites):,} sites'),
+                 (f'{len(actors)}', f'actors drawn, with {len(acts)} dated acts between Oct 29 and Nov 12'),
+                 (f'{n_emp} of {n_m}', f'members drawn got a gift from an Anthropic employee; {len(paid)} got one from AnthroPAC')]
+        sx = 0; head = []
+        for big, small in stats:
+            head.append((sx, 0, 372, 112, f'<div style="font-size:54px;font-weight:bold;letter-spacing:-1.5px;line-height:1">{big}</div>'
+                                          f'<div style="font-size:15px;color:{MUTED};line-height:1.3;margin-top:6px">{esc(small)}</div>'))
+            sx += 396
+        leg = f'<div style="font-size:13px;letter-spacing:1.6px;font-weight:bold;color:{MUTED};margin-bottom:6px">LINES AT LEFT: DOCUMENTED TIES</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px 26px">'
+        for k, (col, dash, label) in KIND.items():
+            d = f' stroke-dasharray="{dash}"' if dash else ''
+            cap = ' stroke-linecap="round"' if k == 'meet' else ''
+            leg += (f'<div style="display:flex;align-items:center;gap:10px;font-size:14.5px"><svg width="46" height="10" style="flex:none"><line x1="1" y1="5" x2="45" y2="5" stroke="{col}" stroke-width="3.2"{d}{cap}/></svg>{esc(label)}</div>')
+        leg += '</div>'
+        head.append((0, 128, 1150, COV_H + 40 - 128, leg))
+        if panels == 1:
+            h += [box(*b) for b in head]
+        elif p == 0:
+            band = head
+        # column heads for the network (a panel's copy shows a head only over a column it has boxes in)
+        for x, t in [(X_ROOT, 'The company'), (X_MID, 'Its people and vehicles'), (X_INST, 'Institutions'), (X_NAME, 'Who acted')]:
+            if panels == 1 or x == X_NAME or any(v[0] == x for v in NODES.values()):
+                h.append(box(x, Y0 - 26, 300, 20, t.upper(), f'font-size:13px;letter-spacing:1.6px;font-weight:bold;color:{MUTED}', fit=False))
+        # group headers: the group's background sentence (a stakes row, word for word), then what no document shows
+        stakes = {r['row_id']: r for r in rows_context.rows() if r['row_id'].startswith('ST')}
+        for gkey, gtitle, gap, st, lead in rows_map.GROUPS:
+            if gpan[gkey] != p:
+                continue
+            y = hdr[gkey]
+            before = stakes[st]['before'] if st else ''
+            if lead:
+                before = f'{lead} {before[0].lower()}{before[1:]}'
+            bg = f'<div><b style="color:{INK}">Background:</b> {esc(before)}</div>' if before else ''
+            h.append(box(X_NAME, y + 3, W - X_NAME, HDR_H - 6,
+                         f'<div style="display:flex"><div style="width:{X_T0 - X_NAME - 12}px;flex:none;font-weight:bold;letter-spacing:1.4px;font-size:13.5px">{esc(gtitle.upper())}</div>'
+                         f'<div style="font-size:13.5px;color:{MUTED}">{bg}'
+                         f'<div><b style="color:{INK}">No document here shows</b> {esc(gap)}</div></div></div>',
+                         'background:#e6e2d7;border-radius:5px;padding:4px 12px;white-space:nowrap;line-height:19px'))
+        # rows: name cells and chips
+        for a in actors.values():
+            if pan[a['key']] != p:
+                continue
+            top, rh = geo[a['key']]
+            tag = f' <span style="color:{MUTED};font-weight:normal;font-size:13px">{esc(a["tag"])}</span>' if a['tag'] else ''
+            inner = f'<div style="font-size:15.5px;font-weight:bold;line-height:1.25">{esc(a["name"])}{tag}</div>'
+            for k, txt in lines[a['name']]:
+                if k == 'count':
+                    inner += f'<div style="font-size:11.5px;line-height:15.5px;color:{MUTED};padding-left:17px">{esc(txt)}</div>'
+                    continue
+                if k == 'none':
+                    sw = f'<i style="width:9px;height:9px;border:1.5px solid {GRAY};border-radius:2px;flex:none;margin-top:3px"></i>'; colr = MUTED
+                else:
+                    sw = f'<i style="width:10px;height:10px;background:{KIND[k][0]};border-radius:2px;flex:none;margin-top:3px"></i>'; colr = INK
+                inner += f'<div style="display:flex;gap:7px;font-size:12.5px;line-height:15.5px;color:{colr}">{sw}<span>{esc(txt)}</span></div>'
+            h.append(box(X_NAME, top + 3, W_NAME, rh - 6, inner, f'background:{CARD};border-radius:7px;padding:6px 10px', attrs=f'data-a="{a["key"]}" class="row"'))
+            svg.append(f'<line x1="{X_T0}" y1="{top + rh:.1f}" x2="{W}" y2="{top + rh:.1f}" stroke="{GRID}" stroke-width="1"/>')
+            for di, w, _, t in chips[a['key']]:
+                h.append(box(X_T0 + di * DAY_W + 4, top + 5, w, rh - 10,
+                             f'<div style="display:flex;height:100%;align-items:center"><span style="font-size:{CH_FONT}px;line-height:{CH_LH}px">{esc(t["what"])}</span></div>',
+                             f'background:#fffdf8;border:1px solid {LGRAY};border-left:4px {"dashed" if t.get("reported") else "solid"} {INK};border-radius:5px;padding:0 7px', attrs=f'data-a="{a["key"]}" class="chip"'))
+        # left nodes
+        for name, (x, c, w, nh, sub) in NODES.items():
+            if name == 'Anthropic':
+                inner = (f'<div style="font-size:26px;font-weight:bold;letter-spacing:-.4px">Anthropic</div>'
+                         f'<div style="font-size:13.5px;line-height:1.3;opacity:.82;margin-top:4px">{esc(sub)}; set its IPO price range on Nov 10</div>')
+                st = f'background:{INK};color:#fff;border-radius:10px;padding:16px 14px'
+            else:
+                inner = (f'<div style="font-size:15.5px;font-weight:bold;line-height:1.2">{esc(name)}</div>'
+                         f'<div style="font-size:12.5px;line-height:15px;color:{MUTED};margin-top:2px">{esc(sub)}</div>')
+                st = f'background:#fffdf8;border:1.5px solid {AXIS};border-radius:8px;padding:6px 10px'
+            h.append(box(x, c - nh / 2, w, nh, inner, st))
+        for s in SI[p]:              # the row at the far end of an arc that leaves this panel: its name, in a dashed box
+            h.append(box(s['x'], s['c'] - s['h'] / 2, s['w'], s['h'], f'<div style="font-size:15.5px;font-weight:bold;line-height:1.25">{esc(s["name"])}</div>',
+                         f'background:{CARD};border:1.5px dashed {GRAY};border-radius:7px;padding:5px 10px'))
+        panes.append((svg, h))
+    # the note: on the one sheet in the empty lower left; with panels, at the top of the last one, left of the dots
+    ny = hdr['admin'] if panels == 1 else 0
+    nx = X_LO[dots_p]
+    assert panels == 1 or (nx + 640 <= X_T0 - 60 and 350 <= Y0S[dots_p] - 34), 'the note does not fit beside the dots'
     note = (f'<div style="font-size:30px;font-weight:bold;letter-spacing:-.6px;line-height:1.12">A tie is a dated record, not a motive.</div>'
             f'<div style="font-size:17px;line-height:1.42;color:{INK};margin-top:12px">No document here shows that any tie prompted a report, a post or a statement. '
             f'Each line ends at a person or a body, never at an act; the acts sit on the calendar at right.</div>'
@@ -489,11 +712,10 @@ def fig_web(KICKER, DRAFT):
             f'Employees\' gifts are their own money: {ra["members_with_a_gift"]} of the 535 sitting members received one from someone who gave Anthropic as employer, {n_emp} of the {n_m} drawn here. '
             f'The same count for Nvidia\'s employees is worded in each member\'s row. '
             f'Ties the source article asserts but no document here supports are not drawn.</div>')
-    h.append(box(0, ny, 640, 350, note, f'border-left:6px solid {INK};padding:4px 0 4px 20px'))
+    panes[dots_p][1].append(box(nx, ny, 640, 350, note, f'border-left:6px solid {INK};padding:4px 0 4px 20px'))
 
     hover = ''.join(f'.plot:has([data-a="{k}"].row:hover) .e:not([data-a~="{k}"]),.plot:has([data-a="{k}"].row:hover) .chip:not([data-a="{k}"]){{opacity:.13}}' for k in actors)
-    css = f'.plot{{position:relative;width:{W}px;height:{H:.0f}px}}.plot>svg{{position:absolute;left:0;top:0}}.e,.chip{{transition:opacity .12s}}.row{{cursor:default}}' + hover
-    body = f'<div class="plot"><svg width="{W}" height="{H:.0f}" viewBox="0 0 {W} {H:.0f}">{"".join(svg)}</svg>{"".join(h)}</div>'
+    css = f'.plot{{position:relative;width:{WT}px;height:{HT:.0f}px}}.plot>svg{{position:absolute;left:0;top:0}}.e,.chip{{transition:opacity .12s}}.row{{cursor:default}}' + hover
 
     foot = ('<b>Reading it:</b> the dots count pieces, not readers; a piece is placed on the first day a saved Techmeme or Memeorandum page lists it '
             f'(pages for 9 am, noon, 4 pm, 8 pm and 11 pm Eastern each day), and {undated} more pieces seen only on undated pages are left out. '
@@ -538,5 +760,26 @@ def fig_web(KICKER, DRAFT):
     assert len(caption_rows) == 2, caption_rows
     ids = ([r['row_id'] for r in mrows] + [r['row_id'] for r in people if r['row_id'].startswith('TI')] + ['EV05', 'NT02', 'NT03'] + [r['row_id'] for r in rows_context.rows() if r['row_id'].startswith('NT') and int(r['row_id'][2:]) >= 5] + caption_rows
            + [g[3] for g in rows_map.GROUPS if g[3]] + [r['row_id'] for r in rows_coverage.rows() if r['drawn']] + ty_used + [r['row_id'] for r in rows_ties.rows() if r['row_id'].startswith('TR')])
-    doc = cite(ids) + shell(title, KICKER, sub, body, foot, PAGE, extra_css=css)
-    render('nv8-fifteen-days-mapped', doc, PAGE)
+    if panels == 1:
+        svg, h = panes[0]
+        body = f'<div class="plot"><svg width="{W}" height="{HT:.0f}" viewBox="0 0 {W} {HT:.0f}">{"".join(svg)}</svg>{"".join(h)}</div>'
+        doc = cite(ids) + shell(title, KICKER, sub, body, foot, PAGE, extra_css=css)
+        render(stem, doc, PAGE)
+        return
+    page = WT + 120
+    # the three numbers and the tie legend, in the band the title leaves empty at its right. The band's height is the shell's:
+    # the kicker's line, then the title and the subtitle with their margins (the subtitle is at most 1900 wide).
+    sub_w = min(page - 220, 1900)
+    band_h = 19.5 + 12 + 49.2 * text_lines(title, 46, page - 160, bold=True) + 10 + 29.7 * text_lines(sub, 22, sub_w) + 16
+    bx = max(sub_w, math.ceil(tw(title, 46, True))) + 80; by = -band_h + (band_h - 16 - 112) / 2
+    top = [box(bx + x, by, w, hh, inner) for x, _, w, hh, inner in band[:3]] + [box(bx + 3 * 396 + 60, by + 4, band[3][2], 116, band[3][4])]
+    assert bx + 3 * 396 + 60 + band[3][2] <= WT and by >= -band_h, 'the numbers and the legend do not fit beside the title'
+    # one drawing layer and one hover scope for the page; each panel's lines and boxes sit in a group moved right by OX[p]
+    rules = ''.join(f'<line x1="{OX[p] + X_LO[p] - GUTTER / 2:.1f}" y1="0" x2="{OX[p] + X_LO[p] - GUTTER / 2:.1f}" y2="{HT:.0f}" stroke="{AXIS}" stroke-width="1"/>' for p in range(1, panels))
+    body = (f'<div class="plot"><svg width="{WT}" height="{HT:.0f}" viewBox="0 0 {WT} {HT:.0f}">{rules}'
+            + ''.join(f'<g transform="translate({OX[p]},0)">{"".join(svg)}</g>' for p, (svg, h) in enumerate(panes)) + '</svg>'
+            + ''.join(f'<div class="pan" style="position:absolute;left:{OX[p]}px;top:0">{"".join(h)}</div>' for p, (svg, h) in enumerate(panes))
+            + ''.join(top) + '</div>')
+    css += f'.footnote{{column-count:{panels};column-gap:{GUTTER}px}}'
+    doc = cite(ids) + shell(title, KICKER, sub, body, foot, page, extra_css=css)
+    render(stem, doc, page)

@@ -7,7 +7,7 @@ here says why anyone acted.
 ![The figure](figures/nv8-fifteen-days-mapped.png)
 
 Also as [HTML](figures/nv8-fifteen-days-mapped.html) (point at a dot to read the headline it stands for) and
-[JPG](figures/nv8-fifteen-days-mapped.jpg). The image is tall: open it and zoom in.
+[JPG](figures/nv8-fifteen-days-mapped.jpg). The image is large (three panels side by side, each with its own day axis): open it and zoom in.
 
 ## What this is
 
@@ -111,6 +111,7 @@ audit round read an earlier version of this figure together with seven others; i
 - Wording was changed as `audit/DISPOSITIONS.csv` lists: 45 lines in members' rows (28 on employees' gifts, 17 on lobbyists' gifts), three other members' lines, nine chips, arcs and section notes, the dots' caption and the footnote.
 - Eighteen actors who are quoted or named as acting on three or more saved pages and had no row were added on Nov 14, with 22 chips: the secretaries of State, Commerce and the Treasury, the trade representative, White House spokespeople and the Justice Department; Nvidia's interim chief, its new chair and the shareholders suing it; Megaspeed, the Chinese embassy, Taiwan's interior minister and a Chinese newspaper; four executives and investors and a broadcaster; and a chip for an Anthropic spokesperson who declined to comment. They were found by listing every attributed remark in the saved pages (`scripts/nv8_gaps.py`); the first pass of that list was made with the help of a program, and a full reading is still running.
 - Remarks of members already drawn that two or more saved pages carry and no chip did were added on Nov 14: five new chips (Moolenaar, Jeffries, Schumer, Warren, Coons) and two chips widened (Mast and Johnson, Nov 12). Remarks of the president, Nvidia, its board and others are still being compared with their chips.
+- The layout changed on Nov 14 from one tall column to three panels side by side, each with its own day axis and its own copy of the network at left; the dots and the boxed note sit over the third panel. Rows, words and sizes of type are unchanged, and the one-column version still comes out byte for byte from the same script (`fig_web(..., panels=1)`). The image had also shown a blank band in the middle, because it was taken as one oversized screenshot; it is now taken in tiles.
 - Three tables were added so that a reader can recompute what the figure states: `research/coverage_day_pages.tsv`, `research/coverage_scope.tsv` and `research/member_selection.tsv`.
 
 ## What is in this repository
