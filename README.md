@@ -19,7 +19,7 @@ committees had called him to answer questions. This figure puts three things on 
   on the story, on the first day a saved page lists it (2,234 pieces from 481 sites in all; 9 seen only on undated pages are
   not drawn).
 - **Who acted.** One row for each actor (newspapers, reporters, analysts, 23 members of Congress, the administration,
-  Nvidia, others) and one chip for each dated act: 95 acts, each worded from a saved report.
+  Nvidia, others) and one chip for each dated act: 100 acts, each worded from a saved report.
 - **The documented ties.** At the left, the records that tie those actors to a party with something at stake in the
   matter: the AI company Anthropic, its people and its PAC; groups that Anthropic or the foundation Open Philanthropy
   has funded; and Nvidia itself. There are 92 lines for the 23 members of Congress (gifts by each company's
@@ -74,8 +74,8 @@ python3 scripts/verify_nv8.py
 recounts the pieces, the sites and the pieces per day from `research/coverage_rows.tsv` and `research/harvest.tsv`, checks
 that each piece's day is the day of the capture named for it in `research/coverage_day_pages.tsv`,
 recomputes every member's line on employees' gifts from the FEC lines in `research/employee_gifts.csv`, checks that each of
-the 2,495 rows the figure rests on has a source a reader can open, and looks up the 189 passages whose source is copied
-here. It needs only Python. The other 2,578 passages are a link and the words to find there (`research/evidence.tsv`).
+the 2,500 rows the figure rests on has a source a reader can open, and looks up the 189 passages whose source is copied
+here. It needs only Python. The other 2,589 passages are a link and the words to find there (`research/evidence.tsv`).
 
 ```
 pip install playwright pillow && playwright install chromium
@@ -110,6 +110,7 @@ audit round read an earlier version of this figure together with seven others; i
 - Six records that the audit found in cited sources and missing from the figure were added as lines in the actors' rows (rows MT27 to MT32), and twelve notes behind new footnote sentences were bound to their passages (NT05 to NT16).
 - Wording was changed as `audit/DISPOSITIONS.csv` lists: 45 lines in members' rows (28 on employees' gifts, 17 on lobbyists' gifts), three other members' lines, nine chips, arcs and section notes, the dots' caption and the footnote.
 - Eighteen actors who are quoted or named as acting on three or more saved pages and had no row were added on Nov 14, with 22 chips: the secretaries of State, Commerce and the Treasury, the trade representative, White House spokespeople and the Justice Department; Nvidia's interim chief, its new chair and the shareholders suing it; Megaspeed, the Chinese embassy, Taiwan's interior minister and a Chinese newspaper; four executives and investors and a broadcaster; and a chip for an Anthropic spokesperson who declined to comment. They were found by listing every attributed remark in the saved pages (`scripts/nv8_gaps.py`); the first pass of that list was made with the help of a program, and a full reading is still running.
+- Remarks of members already drawn that two or more saved pages carry and no chip did were added on Nov 14: five new chips (Moolenaar, Jeffries, Schumer, Warren, Coons) and two chips widened (Mast and Johnson, Nov 12). Remarks of the president, Nvidia, its board and others are still being compared with their chips.
 - Three tables were added so that a reader can recompute what the figure states: `research/coverage_day_pages.tsv`, `research/coverage_scope.tsv` and `research/member_selection.tsv`.
 
 ## What is in this repository
@@ -117,7 +118,7 @@ audit round read an earlier version of this figure together with seven others; i
 | Path | What |
 |---|---|
 | `figures/` | the figure as .png, .jpg, .html |
-| `research/nv8_rows.tsv` | every row the figure rests on (2,495): the words drawn, the sources cited and the passage found in each |
+| `research/nv8_rows.tsv` | every row the figure rests on (2,500): the words drawn, the sources cited and the passage found in each |
 | `research/evidence.tsv` | one line per cited source of every row: what it is, its link, the passage, when it was saved, and where a copy sits in this repository if one does |
 | `research/coverage_rows.tsv`, `harvest.tsv` | the pieces on the story with the headline as listed and the saved aggregator page each was first seen on; every link harvested from those pages |
 | `research/coverage_day_pages.tsv` | for each piece, the timed capture of an aggregator's front page that dates it: the earliest one that lists its address |

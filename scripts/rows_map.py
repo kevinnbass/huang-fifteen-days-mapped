@@ -169,8 +169,8 @@ ACTS = [
  ('huizenga', '2026-11-12', 'Says the Commerce secretary should testify in public',
   ['sw-cnbccom-09'], ['said it would be "helpful" if Commerce Department Secretary Howard Lutnick testified to Congress in public']),
  ('johnson', '2026-11-09', 'Says "they\'re still gathering information"', ['sw-semaforcom-04'], ['House Speaker Mike Johnson told Semafor']),
- ('johnson', '2026-11-12', 'Calls the choice of successor "critically important"',
-  ['globe-1112-resigns'], ['critically important for right successor to be chosen to replace Huang']),
+ ('johnson', '2026-11-12', 'Calls the resignation a "big and shocking development" and the choice of successor "critically important"',
+  ['globe-1112-resigns', 'cnn-1111-live'], ['critically important for right successor to be chosen to replace Huang', 'big and shocking development']),
  ('mccaul', '2026-11-09', 'Post, as quoted in Hot Air: pause advanced AI chip shipments to China',
   ['sw-hotaircom-02'], ['The U.S. should immediately pause the shipment of advanced AI chips to China']),
  ('moolenaar', 'EV06', 'Co-signed the letter dated Nov 4, released Nov 5'),
@@ -206,7 +206,8 @@ ACTS = [
  ('singapore', '2026-11-12', 'As NBC reports its statement: interviewed her and held her passport in 2025; "insufficient evidence" of offences; a "stern warning" for giving police inaccurate information; barred from re-entering; not investigated for espionage',
   ['sw-nbcnewscom-09'] * 5, ['authorities had interviewed Huang and impounded her passport in 2025', 'insufficient evidence to establish that Huang had committed any offences',
                              'issued her with a stern warning after finding that she had knowingly provided police with inaccurate information', 'had been barred from re-entering the country', 'was not investigated for espionage']),
- ('mast', '2026-11-12', 'Says Huang "has agreed to come" and testify; the day is being negotiated', ['sw-cnbccom-09'], ['He has agreed to come']),
+ ('mast', '2026-11-12', 'Says Huang "has agreed to come" and testify; the day is being negotiated. "Jensen and I have been very at odds ... on export controls," but "he has some very serious questions to answer"',
+  ['sw-cnbccom-09', 'sw-engadgetcom-0b81faf0', 'sw-engadgetcom-0b81faf0'], ['He has agreed to come', 'Jensen and I have been very at odds as some of you already know on export controls', 'but he has some very serious questions to answer']),
  # ---- S1 of the gaps spec (Nov 14): acts of speakers who had no row; appended so that earlier row ids do not move
  ('rubio', '2026-11-08', 'Says he "can\'t comment on an internal corporate matter that\'s going on with Nvidia"', ['nbc-1108-investigation'], ['comment on an internal corporate matter']),
  ('bessent', '2026-11-05', 'Axios, as the Daily Caller relays it: in a Situation Room meeting he asks Lutnick "How come Megaspeed isn\'t on the entities list?"',
@@ -231,6 +232,16 @@ ACTS = [
  ('megaspeed', '2026-11-12', 'Says it takes U.S. export-control compliance "extremely seriously" and has cooperated with inspections', ['huffpost-live'], ['Megaspeed said on Thursday that it takes compliance obligations under U.S. export control laws']),
  ('taiwan', '2026-11-11', 'Says security agencies are "actively investigating" the case', ['sw-taiwannewscomtw-04'], ['said outside the legislature that security agencies were']),
  ('globaltimes', '2026-11-09', 'Writes: "Whenever China-US relations begin to improve, there are often those firing shots from the shadows"', ['sw-inquirercom-01'], ['there are often those firing shots from the shadows']),
+ # ---- S2 of the gaps spec (Nov 14): remarks of members already drawn that the saved pages carry and no chip did
+ ('moolenaar', '2026-11-12', 'Says talks are under way "on a date to come and meet with us"; the resignation "does change the dynamic"',
+  ['sw-cbsnewscom-e684eb4c', 'cnn-1111-live'], ['We are in discussions with him right now on a date to come and meet with us', 'does change the dynamic']),
+ ('jeffries', '2026-11-12', 'Calls the resignation the "right thing to do"; "Now we have to get to the bottom of whether America\'s national security has been compromised"',
+  ['cnn-1111-live', 'cnn-1111-live'], ['resignation Thursday was the "right thing to do,"', 'Now we have to get to the bottom of whether America']),
+ ('schumer', '2026-11-12', 'Statement: "Despite Jensen Huang\'s resignation, Congress must demand answers"', ['sw-cbsnewscom-e684eb4c'], ['resignation, Congress must demand answers from Mr. Huang and others at Nvidia']),
+ ('warren', '2026-11-12', 'Statement: Huang, executives and the board "still owe Congress answers"; Lutnick "must explain why they have not closed export control loopholes"',
+  ['sw-cbsnewscom-09', 'sw-cnbccom-09'], ['board of directors still owe Congress answers', 'must explain why they have not closed export control loopholes']),
+ ('coons', '2026-11-09', 'A post, as Australia\'s ABC reports it: "I\'m pushing to investigate Jensen Huang and Nvidia to determine whether our national security was compromised"',
+  ['sw-abcnetau-03'], ['pushing to investigate Jensen Huang and Nvidia to determine whether our national security was compromised']),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
@@ -239,7 +250,7 @@ REPORT_DAY = {('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire'
               ('cornyn', '2026-11-08'), ('cornyn', '2026-11-09'), ('thune', '2026-11-12'), ('himes', '2026-11-12'), ('johnson', '2026-11-12'),
               ('mccaul', '2026-11-09'), ('magaziner', '2026-11-08'), ('openai', '2026-11-04'),
               ('commerce', '2026-11-11'), ('justice', '2026-11-09'), ('suit', '2026-11-10'), ('nvidia', '2026-11-10'), ('maguire', '2026-11-09'), ('ackman', '2026-11-09'),
-              ('taiwan', '2026-11-11'), ('globaltimes', '2026-11-09'), ('anthropic', '2026-11-12')}
+              ('taiwan', '2026-11-11'), ('globaltimes', '2026-11-09'), ('anthropic', '2026-11-12'), ('coons', '2026-11-09')}
 
 # Ties into a row that rows_people.TIES does not hold. kind: money | act (an official act) | meet (scheduled for the same session) |
 # context (a third party's statement that is worded in the row and drawn as no line: audit1b, on the newsletter about Senate Banking members)
