@@ -141,6 +141,8 @@ NOTES = [
  ('fli_2015', 'pack:lineage/research/flows_annual.csv#FA084', '1186000'), ('fli_2016', 'pack:lineage/research/flows_annual.csv#FA085', '100000'),
  ('fli_2017', 'pack:lineage/research/flows_annual.csv#FA086', '100000'), ('fli_2018', 'pack:lineage/research/flows_annual.csv#FA087', '250000'),
  ('fli_2019', 'pack:lineage/research/flows_annual.csv#FA088', '100000'), ('fli_2020', 'pack:lineage/research/flows_annual.csv#FA089', '176000'),
+ # the FEC's own calendar: the post-general report closes its books on Nov 23 and is due Dec 3, 2026 (bound for the footnote's sentence on gifts after Oct 14)
+ ('fec_post_general_due', 'fec-reporting-dates-2026-20261114', '12/03/2026'),
 ]
 
 

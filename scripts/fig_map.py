@@ -16,6 +16,19 @@ slice to another. The dots sit over the last slice's calendar (top right of the 
 note beside them; the three numbers and the tie legend move up beside the title; the footnote is set in N columns.
 panels=1 draws the one tall sheet exactly as before."""
 import csv, datetime, itertools, math, re
+def CONDUIT(gr):
+    """The footnote's sentence on gifts given through ActBlue or WinRed after the last candidate-committee line on file."""
+    a, n = gr['anthropic'], gr['nvidia']
+    who = []
+    for side, label in (('anthropic', 'Anthropic'), ('nvidia', 'Nvidia')):
+        for x in gr[side]['conduit_after_drawn'].split():
+            k, c, v = x.split(':'); who.append(f"{int(c)} {label} line{'s' if int(c) != 1 else ''} (${float(v):,.0f}) for the committee of {next(a_[2] for a_ in rows_map.ACTORS if a_[0] == k)}")
+    return (f"No line of a sitting member's campaign committee dated after {MON(a['last_candidate_committee_line'])} is on file yet from either company's employees. Gifts made through the conduits ActBlue and WinRed after that day are on file only as the conduits' own lines "
+            f"({int(a['conduit_lines_after'])} from people who gave Anthropic as employer, ${float(a['conduit_usd_after']):,.0f}; {int(n['conduit_lines_after'])} for Nvidia, ${float(n['conduit_usd_after']):,.0f}) and are not counted until the recipient's own report shows them; "
+            + ('among the members drawn they name only ' + ' and '.join(who) + '. ' if who else 'none of them names a committee of a member drawn. '))
+
+
+MON = lambda d: (lambda p: f"{['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][int(p[1]) - 1]} {int(p[2])}, {p[0]}")(d.split('-'))      # 2026-10-14 -> Oct 14, 2026
 from collections import Counter, OrderedDict, defaultdict
 
 from PIL import ImageFont
@@ -730,15 +743,19 @@ def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
             'An act is placed on the day its source gives or, failing that, the day the source was published: those chips have a dashed left edge, and the act itself may be earlier. '
             'Where a chip rests on one outlet\'s account of another\'s report, it says so. Grant figures are awards, not payments traced to a bank. An announced ad is not proof that it ran. '
             'Nvidia\'s board said on Nov 8 it had "no reason to believe" national security or company secrets were compromised, and NBC reported on Nov 12 that Alice Huang\'s "precise role" remained unclear. '
-            f'Members of Congress drawn are every current member named on three or more of the {n_pages:,} saved pages for something said or done about the matter in these days; '
-            'each one\'s count is in their row. Seven others named that often are not drawn, because the pages name them for other things: a leadership vote, a lost election, an impeachment bid, '
-            'other inquiries and, for one senator, a letter of Oct 2025 asking the Commerce Department to investigate Megaspeed, a year before these days. '
+            f'Members of Congress drawn are every current member named on three or more of the {n_pages:,} saved pages for something said or done about the matter in these days, '
+            'and one senator (Cotton) whom the pages name that often for a letter on Megaspeed a year earlier; each one\'s count is in their row. '
+            'Six others named that often are not drawn, because the pages name them for other things: a leadership vote, a lost election, an impeachment bid and other inquiries. '
             'The count for every name searched is published with the figure\'s tables. '
             'The saved pages quote 269 names of analysts, experts and research groups, and each was looked up in the funding records held. The 7 drawn are those with a documented tie to Anthropic, Open Philanthropy or a group they fund and a remark of these days. '
             'For 9 more the records hold only a grant to the person\'s institution or a remark made before these days, and they are not drawn; for the rest no record was found, and no funding tie is implied for anyone not drawn. '
             'Each of the 729 bylines on the saved pages (72 are agencies or not a person\'s name) was looked up in the fellowship and staff records held: Perlo and Hashim are found there, and Kubinec is drawn from his own bio at The Dispatch; pages that could not be saved were not checked. One more byline is on record as a 2021 congressional fellow of a programme that Open Philanthropy funded in 2025, after his term; no tie is drawn. '
             '"No AnthroPAC contribution on file" means none in the PAC\'s filings with the Federal Election Commission for Jun 29 to Sep 30, 2026. '
-            'A line that says no gift from a company\'s employees means that no FEC line for Jan 2025 to Sep 2026 gives that company as the donor\'s employer to a committee tied to the member; it is not proof that no employee gave. '
+            f'A line that says no gift from a company\'s employees means that no FEC line for Jan 2025 to {MON(gift_rate["anthropic"]["read_through"])} gives that company as the donor\'s employer to a committee tied to the member; it is not proof that no employee gave. '
+            f'Lines dated after {MON(gift_rate["anthropic"]["read_through"])} are not on file yet: the reports covering the fifteen days themselves are due at the Federal Election Commission on Dec 3, 2026. '
+            + CONDUIT(gift_rate) +
+            'A committee is tied to a member when it is the member\'s campaign committee, a leadership PAC the member sponsors, or a joint fundraising committee whose statement of organisation lists that member\'s committee and no other sitting member\'s; '
+            'money given to a joint committee is shared with its other participants (a party committee, a PAC), and the FEC lines do not show how much reached the member\'s own campaign. Joint committees of several members are listed with the figure\'s tables and attributed to no one. '
             'An employee\'s gift is counted from an FEC line on which the donor gave the company as employer, to a committee tied to the member; donors are counted, not named, and the two companies are counted by one rule, though not from equally deep records, as the next sentences say. ' + esc(rows_ties.basis_words()) + ' '
             'A lobbying report names a bill; it does not say which office was visited or what was asked. Fellows, advisers and former staff are as the programme\'s, the group\'s or Congress\'s own pages list them. '
             'A lobbyists\' line names the clients that the lobbying reports held here list for the givers\' firms. The reports give each gift as the lobbyist\'s own money; '
@@ -752,7 +769,8 @@ def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
             '"do not ask Nvidia to press the U.S. government to change its policies on chip sales to China." '
             'The ties at left start from Anthropic, its people and Open Philanthropy; Nvidia\'s own political giving, business ties and former staff were not mapped to the same breadth, '
             'so the number of lines says nothing about either company\'s influence. The Times\'s reports are cited from its own articles, saved by hand, except its Nov 9 report on the Commerce inquiry, which is cited as CNBC relays it; the Journal\'s and the FT\'s pages were not read (their sites turn away automated readers), so what they reported is taken from other outlets. '
-            'No search was made of Anthropic\'s, Nvidia\'s or the rival chip makers\' own channels. '
+            'Each actor\'s own channel (official site, newsroom, own account) was searched once on Nov 14 by a reader from another model family, for these fifteen days. Of 111 chips, the original was found for 31, could not be opened for 72 (posts on X and Truth Social, broadcasters\' video, papers behind a paywall) and was not found for 8; '
+            'the originals found are now cited beside the reports that relay them. Of 63 actors, 30 had items on the matter on their own channels, 12 had none that could be found and 21 could not be read; a channel with nothing found is not proof of silence. '
             f'<b>Source:</b> {n_story:,} links from saved aggregator pages; saved reports, posts and releases; committee filings; rows held in the congress, lineage, toner and evaluators packs. Fetched Nov 12–13, 2026. {DRAFT}')
     title = 'Fifteen days, mapped: the coverage, who acted, and the documented ties'
     sub = ('Top right, each dot is one piece on the story. Below it, each row is one actor and each chip one dated act. At left, each line is a documented tie '

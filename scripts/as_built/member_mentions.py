@@ -26,7 +26,8 @@ FIRST = {'Warren': ['Elizabeth'], 'Coons': ['Chris', 'Christopher'], 'Cramer': [
          'Cornyn': ['John'], 'Kennedy': ['John'], 'Thune': ['John'], 'Mast': ['Brian'], 'Crawford': ['Rick'], 'Meeks': ['Gregory', 'Greg'],
          'Himes': ['Jim'], 'Huizenga': ['Bill'], 'Moolenaar': ['John'], 'Jeffries': ['Hakeem'], 'Magaziner': ['Seth'],
          'Subramanyam': ['Suhas'], 'Bacon': ['Don'],
-         'Johnson': ['Mike'], 'Blumenthal': ['Richard', 'Dick'], 'Wyden': ['Ron'], 'Ricketts': ['Pete'], 'McCaul': ['Michael', 'Mike'], 'Warner': ['Mark']}
+         'Johnson': ['Mike'], 'Blumenthal': ['Richard', 'Dick'], 'Wyden': ['Ron'], 'Ricketts': ['Pete'], 'McCaul': ['Michael', 'Mike'], 'Warner': ['Mark'],
+         'Cotton': ['Tom']}                 # drawn in the map since Nov 14, 2026: named for his letter of Oct 2025 on Megaspeed (an act on the matter before these days)
 # Surnames shared with another current member: only the full name counts ("Speaker Johnson" is taken as him, "Sen. Johnson" is not).
 FULL_ONLY = {'Johnson': r"(?:Speaker\s+(?:Mike\s+)?|Mike\s+)Johnson"}
 # Surnames met after a title that are not members of Congress, or are members named only in passing lists; read by hand.
@@ -37,7 +38,6 @@ NOT_MEMBER = set()
 # (no other member shares it); what the pages name them for (read on Nov 14, 2026).
 NOT_DRAWN = {'Jordan': (['Jim'], False, 'his election as House minority leader'), 'Stevens': (['Haley'], False, 'an endorsement and an absence from a vote'),
              'Massie': (['Thomas'], True, 'his bid to impeach the defense secretary'), 'Garcia': (['Robert'], False, 'other inquiries he plans as incoming oversight chair'),
-             'Cotton': (['Tom'], True, 'his letter of Oct 2025 asking the Commerce Department to investigate Megaspeed, a year before these days'),
              'Hyde-Smith': (['Cindy'], True, 'losing her Senate race'), 'Sanders': (['Bernie', 'Bernard'], True, 'the Senate leadership contest and his own AI bill')}
 # other words met after a congressional title on three or more pages that are not a searched name: what each is
 NOT_A_MEMBER = {'Jamieson': 'the U.S. trade representative', 'Greer': 'the U.S. trade representative', 'Eric': 'a former member (Swalwell)', 'Swalwell': 'a former member',

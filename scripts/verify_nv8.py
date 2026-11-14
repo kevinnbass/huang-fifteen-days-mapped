@@ -78,6 +78,12 @@ def main():
         if t['type'] == 'employee_gifts' and not t['usd'] and agg[(t['member'], t['side'])][0] > 0:
             ok = False; bad.append(t['row_id'])
     check(ok, f'each member\'s line on employees\' gifts equals the sum, the number of people and the dates of the FEC lines in research/employee_gifts.csv ({sum(1 for t in ties if t["type"] == "employee_gifts")} lines)', str(bad[:6]))
+    jc = {j['committee_id']: j for j in table('joint_committees.csv')}
+    jg = [g for g in gifts if g['committee_kind'] == 'joint fundraising committee' and g['committee_id'] in jc]
+    check(all(jc[g['committee_id']]['member_bioguide'] == g['bioguide'] and jc[g['committee_id']]['outcome'].startswith('tied to the one') for g in jg)
+          and all(not j['member_bioguide'] for j in jc.values() if j['outcome'].startswith(('not attributed', 'no sitting', 'sponsor'))),
+          f'a gift to a joint fundraising committee is counted for a member only where research/joint_committees.csv shows that member as the one sitting member among its participants '
+          f'({len({g["committee_id"] for g in jg})} such committees hold a counted line; {sum(1 for j in jc.values() if j["outcome"].startswith("not attributed"))} shared by several members or not settled are attributed to no one)')
     with_emp = sum(1 for m in members if agg[(m, 'anthropic')][0] > 0)
     check(f'{with_emp} of the {len(members)} drawn' in flat or f'{with_emp} of {len(members)}' in flat, f'{with_emp} of the {len(members)} members drawn received a gift from someone who gave Anthropic as employer')
     pac = [t for t in table('member_ties.csv') if t['type'] == 'company_pac' and t['side'] == 'anthropic' and t['member'] in members and t['usd']]
@@ -95,8 +101,8 @@ def main():
           str([m for m in members if m not in slug or hit[slug[m]] < 3][:5]))
     sel = table('member_selection.tsv'); searched = [s for s in sel if s['drawn'] in ('yes', 'no')]
     check(all(int(s['pages']) == hit[s['name']] for s in searched) and {s['name'].lower().replace(' ', '').replace('-', '') for s in sel if s['drawn'] == 'yes'} == set(members)
-          and all(s['why_not'] for s in sel if s['drawn'] != 'yes') and sum(1 for s in sel if s['why_not'].startswith('a current member')) == 7,
-          f'research/member_selection.tsv gives every name searched with its page count: {len(members)} drawn, {sum(1 for s in searched if s["drawn"] == "no")} not drawn, each with the reason (seven named for other things)')
+          and all(s['why_not'] for s in sel if s['drawn'] != 'yes') and sum(1 for s in sel if s['why_not'].startswith('a current member')) == 6,
+          f'research/member_selection.tsv gives every name searched with its page count: {len(members)} drawn, {sum(1 for s in searched if s["drawn"] == "no")} not drawn, each with the reason (six named for other things)')
     # ---------------------------------------------------------------- nothing internal is visible
     visible = re.sub(r'<title>.*?</title>', ' ', body, flags=re.S); visible = norm(re.sub(r'<[^>]+>', ' ', visible))
     leak = re.search(r'\b(?:EV|TI|RU|ST|MA|MT|TY|TR|CV|NT)\d{2,4}\b|[\w/-]+\.(?:csv|json|jsonl|py|tsv)\b|research/|scripts/', visible)
