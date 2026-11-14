@@ -1,0 +1,231 @@
+finding_id,row_id,grade,passage_found,problem,suggested_wording
+A-MA01,MA01,ok,pushed back on a New York Times report that detailed American intelligence agencies surveilling a person close to Nvidia CEO Jensen Huang,,
+A-MA02,MA02,ok,Policymakers in the Trump administration received a memo last spring with intelligence identifying Alice Huang as having been recruited by China's Ministry of State Security,,
+A-MA03,MA03,ok,"the Trump administration approved a Chinese firm, New Matrix, to assemble chips for Nvidia in Beijing",,
+A-MA04,MA04,ok,"Secretary of State Marco Rubio oversaw the memo's creation, the Times reported Sunday",,
+A-MA05,MA05,ok,The New York Times reported that Huang also had an extramarital relationship with an Nvidia vice president who reports to him,,
+A-MA06,MA06,ok,The WSJ article cites sources that Singapore officials were concerned with Alice Huang’s close ties to Nvidia Chief Executive Jensen Huang,,
+A-MA07,MA07,ok,The Wall Street Journal reports that Nvidia's board of directors plans to oust CEO Jensen Huang,,
+A-MA08,MA08,ok,CEO Jensen Huang had romantic relationship with alleged Chinese spy,,
+A-MA09,MA09,ok,Jensen Huang's Affair Could Reshape the Chip War,,
+A-MA10,MA10,ok,AUTHOR: Jared Perlo,,
+A-MA11,MA11,ok,"said Sam Bresnick, a research fellow at the Center for Security and Emerging Technology",,
+A-MA12,MA12,ok,Ryan Fedasiuk: Jensen Huang Must Resign,,
+A-MA13,MA13,ok,"says Ryan Fedasiuk, senior fellow at the Foundation for American Innovation",,
+A-MA14,MA14,ok,"was sleeping with Alice Huang, a Chinese spy and an executive at Megaspeed",,
+A-MA15,MA15,ok,still actively opposed any policies to tighten export controls on Nvidia chips,,
+A-MA16,MA16,ok,"The FT quotes Chris McGuire, a former senior U.S. government export controls official",,
+A-MA17,MA17,ok,"add momentum to bills already being discussed in Congress, like the Chip Security Act",,
+A-MA18,MA18,ok,"said Alec Stapp, the co-CEO of the Institute for Progress",,
+A-MA19,MA19,ok,NVIDIA's Jensen Huang and NVIDIA's board owe Congress answers,,
+A-MA20,MA20,ok,issued a joint statement calling for answers from Nvidia and tighter restrictions on advanced AI chip exports to China,,
+A-MA21,MA21,ok,announced they had written to Commerce Secretary Howard Lutnick with a request to preserve records on the subject,,
+A-MA22,MA22,ok,Congress will investigate and get answers.,,
+A-MA23,MA23,ok,"Sens. Elizabeth Warren, D-Mass., and Chris Coons, D-Del., announced they had written to Commerce Secretary Howard Lutnick",,
+A-MA24,MA24,ok,I just think he's got to go,,
+A-MA25,MA25,ok,"As a matter of his own conscience, he should resign",,
+A-MA26,MA26,ok,"the AI Overwatch Act, the Match Act, and the Chip Security Act",,
+A-MA27,MA27,ok,"Sen. Jim Banks (R., Ind.) issued a joint statement",,
+A-MA28,MA28,ok,we need a Senate investigation,,
+A-MA29,MA29,ok,I want to get more facts before I weigh in,,
+A-MA30,MA30,ok,We don't know where it went,,
+A-MA31,MA31,ok,Their letter to Commerce Secretary Howard Lutnick announcing the probe was sent by Sen. Ron Wyden,,
+A-MA32,MA32,ok,"Cornyn called the report ""outrageous"" in his post on X",,
+A-MA33,MA33,ok,"John Cornyn posted ""Congressional oversight investigation needed.""",,
+A-MA34,MA34,ok,"""I lost my breath,"" Sen. John Kennedy (R-LA) told the Washington Examiner",,
+A-MA35,MA35,ok,Secretary Lutnick needs to answer that in front of God and country,,
+A-MA36,MA36,ok,"I would expect there would be some follow-up, yeah",,
+A-MA37,MA37,qualification,called for Huang to appear in a Nov. 4 letter,Placed on Nov 5 as a dated act although the cited report dates the letter Nov 4; Nov 5 is its public release. The solid chip does not explain the distinction.,"Letter dated Nov 4, released Nov 5, requests a joint closed-door briefing."
+A-MA38,MA38,ok,"Asked whether the committees were considering subpoenaing Huang if he doesn't agree to appear, Mast said ""yes.""",,
+A-MA39,MA39,qualification,called for Huang to appear in a Nov. 4 letter,"The signature belongs to the letter dated Nov 4. Nov 5 dates the release, not evidence of when he signed.","Co-signed the Nov 4 letter, released Nov 5."
+A-MA40,MA40,ok,said he would subpoena Jeff Kessler,,
+A-MA41,MA41,ok,"""We've asked Huang to appear,"" Rep. Jim Himes",,
+A-MA42,MA42,ok,told NPR that Alice Huang's role still needed to be clarified,,
+A-MA43,MA43,ok,"said it would be ""helpful"" if Commerce Department Secretary Howard Lutnick testified to Congress in public",,
+A-MA44,MA44,ok,House Speaker Mike Johnson told Semafor,,
+A-MA45,MA45,ok,critically important for right successor to be chosen to replace Huang,,
+A-MA46,MA46,ok,The U.S. should immediately pause the shipment of advanced AI chips to China,,
+A-MA47,MA47,qualification,called for Huang to appear in a Nov. 4 letter,"The signature belongs to the letter dated Nov 4. Nov 5 dates the release, not evidence of when he signed.","Co-signed the Nov 4 letter, released Nov 5."
+A-MA48,MA48,ok,"If it becomes less of an investigation, more of damage control, that's not going to work",,
+A-MA49,MA49,ok,"Asked whether the committees were considering subpoenaing Huang if he doesn't agree to appear, Mast said ""yes.""",,
+A-MA50,MA50,ok,we're going to need a full briefing specifically as it relates to the Nvidia issue,,
+A-MA51,MA51,ok,called on Commerce Secretary Howard Lutnick to testify before Congress along with Huang,,
+A-MA52,MA52,ok,"As a matter of his own conscience, he should resign",,
+A-MA53,MA53,ok,"As a matter of his own conscience, he should resign",,
+A-MA54,MA54,ok,I think he’s an honorable guy,,
+A-MA55,MA55,qualification,"I know the FBI is looking into it in terms of something else, and I think that he'll be in good shape.","Drops the same sentence's limit, ""in terms of something else""; the shortened quote can imply a defined FBI investigation of the affair or a proven compromise.","Trump says the FBI is looking into it ""in terms of something else""; he does not specify the scope."
+A-MA56,MA56,ok,The diversion allegations against this regional cloud were thoroughly investigated and debunked last year,,
+A-MA57,MA57,qualification,Our regional cloud customers receive ordinary business information — not sensitive NVIDIA trade secrets—and zero information relevant to national security,"The quoted defence is accurate, but omits Nvidia's specific denial in the same statement that customers received sensitive trade secrets or national-security information. The board's later statement is a different claim.",Says customer meetings are routine and customers receive no sensitive trade secrets or national-security information.
+A-MA58,MA58,ok,I was unfaithful to my wife. My actions hurt her and our children. There is no excuse for what I did,,
+A-MA59,MA59,ok,the board has tapped Chief Financial Officer [name omitted] as interim CEO,,
+A-MA60,MA60,ok,"A committee of independent directors, assisted by outside independent counsel, will oversee the investigation.",,
+A-MA61,MA61,ok,"independent directors retained former acting U.S. Attorney Joon H. Kim and the law firm Wachtell, Lipton, Rosen & Katz",,
+A-MA62,MA62,ok,Nvidia’s board met on Wednesday night to discuss ousting Huang,,
+A-MA63,MA63,ok,the board has tapped Chief Financial Officer [name omitted] as interim CEO,,
+A-MA64,MA64,ok,"AMD gained 13% on Monday, while Broadcom added just over 10%",,
+A-MA65,MA65,ok,Nvidia shares sank 5.47% on Tuesday,,
+A-MA66,MA66,ok,The stock slid roughly 10 percent in early trading as US markets opened on Thursday,,
+A-MA67,MA67,ok,"AMD gained 13% on Monday, while Broadcom added just over 10%",,
+A-MA68,MA68,ok,to purchase $26 billion of the company's Class N common stock in a private placement,,
+A-MA69,MA69,ok,OpenAI continues to support the strengthening of export controls,,
+A-MA70,MA70,ok,neither the Singapore Government nor its officials said this. And there were no such investigations conducted in respect of Alice Huang,,
+A-MA71,MA71,ok,the so-called Chinese spy allegation is unsubstantiated,,
+A-MA72,MA72,qualification,The government also issued her with a stern warning after finding that she had knowingly provided police with inaccurate information to downplay her role in the company.,Selects the insufficient-evidence result but leaves out the same statement's adverse findings: a warning for inaccurate information and a re-entry ban. It also omits Singapore's complaint about limited U.S. assistance.,NBC relays Singapore: 2025 interview and passport held; insufficient evidence of offences; warning over inaccurate information and re-entry ban; no espionage inquiry.
+A-MA73,MA73,ok,He has agreed to come,,
+A-NT02,NT02,ok,While the Board has no reason to believe that either national security or NVIDIA secrets were compromised,,
+A-NT03,NT03,ok,precise role and relationship with China's spy service remain unclear,,
+A-MT01,MT01,ok,2500.00,,
+A-MT02,MT02,ok,2500.00,,
+A-MT03,MT03,ok,2000.00,,
+A-MT04,MT04,ok,3500.00,,
+A-MT05,MT05,ok,2500.00,,
+A-MT06,MT06,ok,3500.00,,
+A-MT07,MT07,qualification,Warren’s announcement came after Anthropic CEO,The newsletter reports a meeting with unnamed committee members; it does not document a personal meeting with Warren. A line ending at Warren can imply that additional fact.,Newsletter: Anthropic's chief met unnamed Senate Banking members before Warren's announcement; it does not identify her as an attendee.
+A-MT08,MT08,ok,2024: 3839944; 2025: 11510081; 2026: 18857446,,
+A-MT09,MT09,ok,2021: 1615000; 2023: 9341660; 2026: 1000000,,
+A-MT10,MT10,ok,2017: 260000; 2018: 400352; 2020: 141094; 2021: 351187; 2022: 5149398; 2025: 8324325,,
+A-MT11,MT11,ok,2024: 816000; 2025: 4475930,,
+A-MT12,MT12,ok,"Erich Grunewald, a senior researcher at the Institute for AI Policy and Strategy",,
+A-MT13,MT13,ok,"Alec Stapp, the co-CEO of the Institute for Progress",,
+A-MT14,MT14,ok,"Sam Bresnick, a research fellow at the Center for Security and Emerging Technology",,
+A-MT15,MT15,ok,He is currently supported by the Tarbell Center for AI Journalism,,
+A-MT16,MT16,ok,tarbell_fellow,,
+A-MT17,MT17,qualification,There will be a Six Month phase out period for Agencies like the Department of War,The same order allowed a six-month phase-out for existing agency users. The short label can be read as an immediate end to all use.,"Trump ordered agencies to stop using Anthropic in Feb 2026, allowing a six-month phase-out for existing users."
+A-MT18,MT18,ok,"In October, Trump awarded Huang the National Medal of Science",,
+A-MT19,MT19,ok,whose company donated $25 million to Trump's ballroom project,,
+A-MT20,MT20,ok,Nvidia and Taiwan Semiconductor Manufacturing Co. to purchase $26 billion,,
+A-MT21,MT21,ok,"in-house [private name omitted]s include alumni of congressional offices from key Republicans and Democrats, including Rep. Michael McCaul",,
+A-MT22,MT22,ok,Advanced Micro Devices,,
+A-MT23,MT23,ok,2024: 3000000; 2025: 446500,,
+A-MT24,MT24,ok,anthropic,,
+A-MT25,MT25,ok,"Co-Founder & President, Americans for Responsible Innovation",,
+A-MT26,MT26,ok,OPEN PHILANTHROPY ACTION FUND,,
+A-TI01,TI01,ok,naming Anthropic PBC as the connected organization,,
+A-TI02,TI02,ok,"{""committee_id"":""C00946111"",""sub_id"":""4090120261595551499"",""contributor_name"":""[private name omitted]"",""contributor_occupation"":""CO-FOUNDER"",""contributor_employer"":""ANTHROPIC"",""contribution_receipt_amount"":5000.0,""contribution_receipt_date"":""2026-07-31"",""contributor_city"":""SAN FRANCISCO"",""contributo",,
+A-TI03,TI03,ok,3500.00,,
+A-TI04,TI04,ok,2500.00,,
+A-TI05,TI05,ok,1000.00,,
+A-TI06,TI06,ok,2500.00,,
+A-TI07,TI07,ok,1000.00,,
+A-TI08,TI08,ok,bringing our total support to $40 million,,
+A-TI09,TI09,ok,Rep. Brian Mast,,
+A-TI10,TI10,ok,Rep. John Moolenaar,,
+A-TI11,TI11,ok,[private name omitted] co-founded Anthropic,,
+A-TI12,TI12,ok,[private name omitted] is head of national security policy at Anthropic,,
+A-TI13,TI13,ok,joined Anthropic last month,,
+A-TI14,TI14,ok,"appointment of [private name omitted], CEO of the Center for a New American Security, as a new member of the Trust",,
+A-TI15,TI15,ok,"[private name omitted], CEO of the Center for a New American Security",,
+A-TI16,TI16,ok,He served as Open Philanthropy’s CEO and then co-CEO until 2023,,
+A-TI17,TI17,ok,$55M (2019-01-25),,
+A-TI18,TI18,ok,Research Fellow (non-resident),,
+A-TI19,TI19,ok,[private name omitted] is listed as Senior Fellow,,
+A-TI20,TI20,ok,Ryan Fedasiuk is listed as Research Analyst,,
+A-TI21,TI21,ok,"From 2021 to 2025, Chhabra coordinated US strategies for technology competition",,
+A-TI22,TI22,ok,"deputy senior director for technology and national security at the National Security Council (NSC), where he served from 2022 to 2024",,
+A-TI23,TI23,ok,"Head of National Security Policy, Anthropic",,
+A-RU05,RU05,ok,Countering AI Chip Smuggling Has Become a National Security Priority,,
+A-RU20,RU20,ok,"Public First Action today announced the Conservative Consensus Project, a $15 million effort",,
+A-ST01,ST01,ok,would allow Congress to block advanced AI chip exports to U.S. foreign adversaries,,
+A-ST02,ST02,ok,the party will have the ability to launch investigations into Nvidia and Huang,,
+A-ST03,ST03,ok,Supporting smart export controls on AI chips,,
+A-ST04,ST04,ok,including all semiconductor and dual-use technology export controls,,
+A-ST05,ST05,ok,"AMD gained 13% on Monday, while Broadcom added just over 10%",,
+A-ST06,ST06,ok,Earlier this year the U.S. government cleared Nvidia's H200 chip to be shipped to China,,
+A-ST07,ST07,qualification,This account is based on interviews with people briefed on the surveillance,"The confidential intelligence sources are unnamed, but the articles also name other sources and spokespeople. ""Their sources"" is broader than what the saved articles lack.",The identities of the newspapers' confidential intelligence sources are not disclosed in the saved articles.
+A-ST08,ST08,qualification,"On Sunday, Huang acknowledged being unfaithful to his wife, and Nvidia announced an investigation","Its cited sources support outside counsel but do not date the hiring Nov 10. That date is in the separate source for MA61, which this row does not cite.","The board opened an inquiry on Nov 8, later hired outside counsel, and met on Nov 11; the saved accounts do not give its findings."
+A-ST09,ST09,qualification,The government also issued her with a stern warning after finding that she had knowingly provided police with inaccurate information,"Broadens Singapore's Oct 31 denial of the Journal's espionage/relationship account into a denial of any investigation. The Nov 12 source also reports an adverse warning and re-entry ban, omitted here.","Singapore denied an espionage/relationship inquiry on Oct 31; NBC on Nov 12 reported the 2025 police interview and passport hold, insufficient offence evidence, a warning and a re-entry ban."
+A-EV05,EV05,ok,Democrats won enough Senate and House races nationwide to take majority control of both chambers of Congress in January,,
+A-TY001,TY001,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 51 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Anthropic employer extract, through Sep 30, 2026."
+A-TY002,TY002,ok,"2026-04-27,4.00,C00500843; SUB_ID 4080320261540896968",,
+A-TY004,TY004,ok,"2025-11-18,5000.00,C00493700; SUB_ID 4022520261359097156",,
+A-TY005,TY005,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY006,TY006,qualification,"LC0373: 2024-06-05, 1500.00; LC1589: 2024-03-22, 1000.00; LC1687: 2025-09-29, 1000.00; LC9830: 2024-04-08, 2500.00","The amount and personal-money classification are supported, but ""the network"" includes the Center for AI Safety Action Fund, whose link to the displayed funding chain is not supplied. The reader cannot follow the full institutional chain from the figure.","[private name omitted]s' own gifts to linked committees: $6,000.00, 2024-03-22 to 2025-09-29; identify each firm's client and its documented link separately."
+A-TY008,TY008,ok,"2025-06-27,7000.00,C00504704; SUB_ID 4103020251293135412",,
+A-TY009,TY009,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY010,TY010,ok,"LC1252: 2025-12-18, 1000.00",,
+A-TY012,TY012,ok,formerly National Security Advisor to Senate Majority Leader Chuck Schumer,,
+A-TY013,TY013,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 51 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Anthropic employer extract, through Sep 30, 2026."
+A-TY014,TY014,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY015,TY015,ok,"LC16418: 2021-10-21, 2000.00; LC16424: 2021-10-21, 1000.00",,
+A-TY017,TY017,ok,"2025-09-04,3500.00,C00577999; SUB_ID 4010520261299954635",,
+A-TY018,TY018,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY019,TY019,ok,Sen. Jim Banks (R-IN),,
+A-TY020,TY020,ok,Sen. Jim Banks (R-IN),,
+A-TY021,TY021,ok,1,,
+A-TY022,TY022,ok,2,,
+A-TY023,TY023,qualification,"LC0666: 2023-03-31, 500.00; LC0674: 2023-06-30, 500.00; LC0762: 2026-03-05, 2500.00; LC1289: 2025-11-05, 1000.00; LC1405: 2026-03-24, 5000.00; LC1438: 2026-01-14, 2500.00; LC2246: 2026-06-26, 500.00","The amount and personal-money classification are supported, but ""the network"" includes ENCODE AI, whose funding chain is not displayed. The reader cannot follow the full institutional chain from the figure.","[private name omitted]s' own gifts to linked committees: $12,500.00, 2023-03-31 to 2026-06-26; identify each firm's client and its documented link separately."
+A-TY025,TY025,ok,"2025-10-25,5000.00,C00492983; SUB_ID 4022020261309562068",,
+A-TY026,TY026,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY027,TY027,ok,Sen. Blumenthal (D-CT),,
+A-TY028,TY028,ok,"LC2664: 2021-06-21, 1000.00; LC2686: 2021-02-23, 500.00",,
+A-TY029,TY029,ok,"[private name omitted], chief executive officer, Anthropic",,
+A-TY030,TY030,qualification,"HM8501: 2500; HM8505: 1000; HM8506: 1500; HM9784: 2500.00; June 23, 2025.","Adds FEC Schedule B entries to a same-payer/payee/date LD-203 amount without reconciling the two disclosure systems. The FEC entries total $5,000; the additional $2,500 may report the June 23 gifts already counted. Duplicate identity is not proven, so retain both records separately.","ARI PAC: $5,000 in FEC Schedule B entries, Apr–Jun 2025; LD-203 separately reports $2,500 on Jun 23, with overlap unresolved."
+A-TY032,TY032,ok,"2025-10-18,3500.00,C00438713; SUB_ID 4051820261510631322",,
+A-TY033,TY033,ok,"2025-09-19,500.00,C00438713; SUB_ID 4121620251298843057",,
+A-TY034,TY034,qualification,"LC0926: 2026-04-13, 1000.00; LC1675: 2025-06-29, 1000.00; LC1677: 2025-06-29, 2500.00; LC1700: 2025-11-24, 5000.00; LC1779: 2025-06-26, 2500.00; LC1799: 2025-12-12, 500.00; LC2714: 2022-01-14, 1450.00; LC17745: 2024-02-22, 1650.00","The amount and personal-money classification are supported, but ""the network"" includes the Future of Life Institute and IFP Action, whose distinct institutional links are not displayed. The reader cannot follow the full institutional chain from the figure.","[private name omitted]s' own gifts to linked committees: $15,600.00, 2022-01-14 to 2026-04-13; identify each firm's client and its documented link separately."
+A-TY035,TY035,ok,"2026-02-12,3500.00,C00369033; SUB_ID 4051220261510107982",,
+A-TY036,TY036,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY037,TY037,qualification,"LC0612: 2026-03-31, 1000.00; LC0698: 2024-04-25, 1000.00; LC1008: 2026-02-27, 1000.00; LC1339: 2025-12-10, 1000.00; LC1343: 2026-01-27, 2500.00; LC1412: 2026-05-25, 500.00; LC2353: 2026-03-31, 1000.00; LC2445: 2021-12-16, 1000.00","The amount and personal-money classification are supported, but ""the network"" includes ENCODE AI, whose funding chain is not displayed. The reader cannot follow the full institutional chain from the figure.","[private name omitted]s' own gifts to linked committees: $9,000.00, 2021-12-16 to 2026-05-25; identify each firm's client and its documented link separately."
+A-TY038,TY038,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 51 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Anthropic employer extract, through Sep 30, 2026."
+A-TY039,TY039,ok,"2025-05-08,50.00,C00608398; SUB_ID 4071720251209101147",,
+A-TY040,TY040,ok,"LC1419: 2024-06-28, 500.00; LC1437: 2026-01-14, 2500.00",,
+A-TY041,TY041,ok,HEARTLAND VALUES PAC,,
+A-TY042,TY042,ok,"2026-03-01,5000.00,C00409003; SUB_ID 4050520261508300581",,
+A-TY043,TY043,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY044,TY044,qualification,"LC1411: 2026-05-15, 5000.00; LC1435: 2026-02-03, 2500.00; LC1471: 2026-04-23, 1000.00; LC2044: 2025-07-15, 1000.00","The amount and personal-money classification are supported, but ""the network"" includes ENCODE AI, whose funding chain is not displayed. The reader cannot follow the full institutional chain from the figure.","[private name omitted]s' own gifts to linked committees: $9,500.00, 2025-07-15 to 2026-05-15; identify each firm's client and its documented link separately."
+A-TY045,TY045,ok,"2026-07-16,3500.00,C00308676; SUB_ID 4110120261616123566",,
+A-TY046,TY046,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY047,TY047,ok,"LC2652: 2021-03-10, 5600.00; LC9829: 2024-06-29, 1000.00",,
+A-TY048,TY048,ok,Ad_ID=CR08230337604738875393,,
+A-TY049,TY049,ok,"Legislative Assistant, Rep. Brian Mast",,
+A-TY050,TY050,ok,MAST FOR CONGRESS,,
+A-TY052,TY052,ok,"2025-10-06,5000.00,C00632257; SUB_ID 4012320261303383685",,
+A-TY053,TY053,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY054,TY054,qualification,"Nuclear Fellow, Congressional Track",Omits that this was a nuclear fellowship. In a figure about chip policy the unspecific label can suggest an AI fellowship.,"Horizon lists a Nuclear Fellow placed with the House Foreign Affairs Committee, 2025–26."
+A-TY055,TY055,ok,8,,
+A-TY056,TY056,ok,"LC1954: 2024-09-25, 1000.00",,
+A-TY057,TY057,ok,House Foreign Affairs East Asia and Pacific Subcommittee,,
+A-TY058,TY058,ok,CRAWFORD FOR CONGRESS,,
+A-TY060,TY060,ok,"2025-09-11,3500.00,C00462374; SUB_ID 4120820251297390035",,
+A-TY061,TY061,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY062,TY062,ok,FRIENDS FOR GREGORY MEEKS,,
+A-TY064,TY064,ok,"2025-10-10,3500.00,C00430991; SUB_ID 4031120261420715718",,
+A-TY065,TY065,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY066,TY066,ok,HIMES FOR CONGRESS,,
+A-TY068,TY068,ok,"2025-08-28,7000.00,C00434191; SUB_ID 4122320251299609071",,
+A-TY069,TY069,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY070,TY070,ok,Rep. Himes (D-CT),,
+A-TY071,TY071,ok,HUIZENGA FOR CONGRESS,,
+A-TY073,TY073,ok,"2026-05-20,3500.00,C00459297; SUB_ID 4082420261584564807",,
+A-TY074,TY074,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY075,TY075,ok,3,,
+A-TY076,TY076,ok,"LC0580: 2024-03-04, 1000.00; LC2154: 2024-06-07, 500.00; LC2239: 2026-06-30, 500.00; LC2371: 2024-06-19, 250.00; LC11974: 2024-06-27, 500.00",,
+A-TY077,TY077,ok,formerly the National Security Advisor to Speaker of the House Mike Johnson,,
+A-TY078,TY078,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 51 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Anthropic employer extract, through Sep 30, 2026."
+A-TY079,TY079,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY080,TY080,qualification,"LC0278: 2024-02-07, 2500.00; LC0283: 2024-09-27, 2500.00; LC0956: 2026-03-19, 1000.00; LC1434: 2026-03-17, 1000.00; LC1454: 2024-03-29, 5000.00; LC1461: 2025-03-31, 5000.00; LC1470: 2026-03-31, 5000.00; LC3231: 2024-03-31, 1041.20; LC3233: 2025-03-31, 1000.00; LC15527: 2025-07-15, 2500.00","The amount and personal-money classification are supported, but ""the network"" includes the Center for AI Safety Action Fund, whose link to the displayed funding chain is not supplied. The reader cannot follow the full institutional chain from the figure.","[private name omitted]s' own gifts to linked committees: $26,541.20, 2024-02-07 to 2026-03-31; identify each firm's client and its documented link separately."
+A-TY081,TY081,ok,Ad_ID=CR04292619503667249153,,
+A-TY082,TY082,ok,a Senior Advisor to the U.S. House Select Committee on the CCP,,
+A-TY083,TY083,ok,"2025-09-29,4000.00,C00561530; SUB_ID 4010820261300483823",,
+A-TY084,TY084,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY085,TY085,ok,House Select Committee on the CCP,,
+A-TY086,TY086,ok,House Select Committee on the Chinese Communist Party,,
+A-TY087,TY087,ok,Senior Professional Staff Member of the House Select Committee on the Chinese Communist Party,,
+A-TY088,TY088,ok,1,,
+A-TY089,TY089,ok,"LC2156: 2024-06-28, 500.00",,
+A-TY090,TY090,qualification,"""meetingStatus"": ""Scheduled""; ""position"": ""Co-Founder and Head of Policy""","The saved Congress API record is a witness roster, with document/video links and status Scheduled. It does not itself establish that the listed person appeared. The linked transcript was not among the cited originals read for this row.","Anthropic's co-founder is listed as a witness for the committee's Jun 25, 2025 hearing."
+A-TY091,TY091,ok,"2025-12-12,3500.00,C00503052; SUB_ID 4030320261385858493",,
+A-TY092,TY092,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY093,TY093,qualification,"LC2906: 2026-03-28, 3500.00","The amount and personal-money classification are supported, but ""the network"" the cited firm's client is ENCODE AI; that organisation is absent from the displayed network. The reader cannot follow the full institutional chain from the figure.","[private name omitted]s' own gifts to linked committees: $3,500.00, 2026-03-28 to 2026-03-28; identify each firm's client and its documented link separately."
+A-TY094,TY094,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 51 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Anthropic employer extract, through Sep 30, 2026."
+A-TY095,TY095,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY096,TY096,ok,"LC2975: 2023-11-15, 500.00",,
+A-TY097,TY097,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 51 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Anthropic employer extract, through Sep 30, 2026."
+A-TY098,TY098,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY099,TY099,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 51 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Anthropic employer extract, through Sep 30, 2026."
+A-TY100,TY100,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY101,TY101,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 51 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Anthropic employer extract, through Sep 30, 2026."
+A-TY102,TY102,qualification,"FEC lines from the commission's bulk file of itemised individual contributions for the 2026 cycle (the file as downloaded on 2026-11-13), 21 lines added from its API that the file does not hold","The zero is reproduced in the frozen employer extract. ""On file"" needs that corpus and end date: the figure's general definition instead describes the PAC's Jun–Sep 2026 filing window. This is not a search of every gift or proof of employment.","No matching gifts in the saved 2026-cycle Nvidia employer extract, through Sep 30, 2026."
+A-TY103,TY103,ok,"LC0685: 2023-09-30, 1000.00",,
+A-TR01,TR01,ok,134,,
+A-TR02,TR02,ok,63,,

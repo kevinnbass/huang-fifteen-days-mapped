@@ -1,0 +1,274 @@
+"""Assemble the public copy of the map figure (nv8, "Fifteen days, mapped") in a folder outside the project.
+Run: PYTHONDONTWRITEBYTECODE=1 <python with playwright> scripts/release_nv8.py <target folder>
+The copy holds the figure, the tables and row files it is drawn from, a link and a passage for every source, copies of the
+official records it cites, the audit, and scripts that rebuild and check it. It holds no article text (a news page is a link
+and a sentence), no donor's or lobbyist's name, no local path. The script stops if any of those is found, if the figure
+rebuilt inside the copy differs from the project's, or if the copy's own checks fail."""
+import csv, json, re, shutil, subprocess, sys
+from collections import Counter
+from pathlib import Path
+ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; PRIMARY = R / 'primary'
+sys.path.insert(0, str(ROOT / 'scripts'))
+import release_nv13 as R13, nv13_public as P, nv8_public as N, member_mentions, rows_map
+csv.field_size_limit(10**9)
+LANE = Path('lanes/audit_nv8')
+RUN = ('fig_map.py', 'fig_common.py', 'rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_coverage.py', 'rows_ties.py', 'rows_events.py', 'story_scope.py', 'nv8_status.py', 'build_nv8.py', 'verify_nv8.py')
+AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py')
+TABLES = ('harvest.tsv', 'coverage_rows.tsv', 'coverage_day_pages.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'member_ties.csv', 'employee_gift_rates.csv', 'committee_keys.csv',
+          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv')
+SHIM = '''"""Which saved news pages name each member of Congress: the counts the figure prints ("named on N of the saved pages").
+In the builder's project this module reads the saved pages themselves; they are not in this copy (no article text is), so here
+the same answer is read from research/story_pages.tsv, which lists every counted page by address and the members it names."""
+import csv
+from collections import defaultdict
+from pathlib import Path
+R = Path(__file__).resolve().parents[1] / 'research'
+
+
+def count():
+    """(pages counted, {surname: [page ids]}, {})"""
+    hit = defaultdict(list); n = 0
+    for r in csv.DictReader(open(R / 'story_pages.tsv', newline=''), delimiter='\\t'):
+        n += 1
+        for s in (r['names'] or '').split(';'):
+            if s:
+                hit[s].append(r['id'])
+    return n, hit, {}
+'''
+scrub = R13.scrub; put = R13.put; table = R13.table
+# the same pattern as the three-chairmen release, except that '/kevin-' inside a news site's address (a writer's page) is not a local path
+# (a line of the pattern for local paths; left out of this copy)
+# (a line of the pattern for local paths; left out of this copy)
+# (a line of the pattern for local paths; left out of this copy)
+
+
+def main(target):
+    Tg = Path(target).resolve(); Tg.mkdir(parents=True, exist_ok=True)
+    assert not str(Tg).startswith(str(ROOT)), 'the public copy must not sit inside the project folder'
+    # ---------------------------------------------------------------- scripts that run on the copy
+    for name in RUN:
+        t = (ROOT / 'scripts' / name).read_text()
+        if name == 'fig_common.py':
+            a = t.index('"""'); b = t.index('"""', a + 3) + 3
+            t = ('"""Shared render and tokens for the figure: warm paper background, spaced-caps kicker, bold title, grey subtitle,\n'
+                 'legend chips, footnote under a rule. Row ids ride only in an HTML comment.\n'
+                 'The page grows to fit its content; the PNG is cut at the measured height."""') + t[b:]
+        t = scrub(t); m = PRIVATE.search(t); assert not m, (name, t[max(0, m.start() - 60):m.end() + 40]); put(Tg, f'scripts/{name}', t)
+    put(Tg, 'scripts/member_mentions.py', SHIM)
+    for name in AS_BUILT:
+        if not (ROOT / 'scripts' / name).exists():
+            continue
+        t = scrub((ROOT / 'scripts' / name).read_text())
+        t = re.sub(r"(?m)^.*# local-pattern\n", "# (a line of the pattern for local paths; left out of this copy)\n", t)
+        t = re.sub(r"PRIVATE = re\.compile\(.*\n", "PRIVATE = re.compile(r'(a pattern for local paths, a session id and addresses; left out of this copy)')
+        t = re.sub(r"(?m)^\s*t = t\.replace\('/mnt.*\n|^\s*t = re\.sub\(r'/home.*\n|^\s*t = re\.sub\(r'Owner: nvidia.*\n", "    # (replacements of local paths; left out of this copy)\n", t)
+        m = PRIVATE.search(t); assert not m, (name, t[max(0, m.start() - 60):m.end() + 40])
+        put(Tg, f'scripts/as_built/{name}', t)
+    # ---------------------------------------------------------------- tables
+    for name in TABLES:
+        t = (R / name).read_text(); m = PRIVATE.search(t); assert not m, (name, t[max(0, m.start() - 60):m.end() + 40]); put(Tg, f'research/{name}', t)
+    # the yearly award rows the figure's grant totals are sums of (rows_map.sums_ok() recomputes each total from them)
+    import rows_map as RM
+    used = {i for g in RM.GRANTS + RM.GRANTS_V3 + RM.GRANTS_NOTE for i in g[3]}
+    ls = open('EVIDENCE_SETS/lineage/research/flows_annual.csv', newline='', errors='replace').read().splitlines(keepends=True)
+    while ls[0].startswith('#'):
+        ls = ls[1:]
+    gr = [r for r in csv.DictReader(ls) if r['row_id'] in used]; assert {r['row_id'] for r in gr} == used and not any(r['person'] for r in gr)
+    table(Tg, 'research/grant_rows.csv', gr, ['row_id', 'from_name', 'to_name', 'year', 'amount_usd', 'measure', 'channel', 'url', 'checked_utc'])
+    gifts = P.public_gifts()
+    for g in gifts:
+        g['fec_page_url'] = 'https://docquery.fec.gov/cgi-bin/fecimg/?' + g['image_num']; g['amended_fec_page_url'] = ('https://docquery.fec.gov/cgi-bin/fecimg/?' + g['amended_image_num']) if g['amended_image_num'] else ''
+    ck = {r['committee_id']: r for r in csv.DictReader(open(R / 'committee_keys.csv', newline=''))}
+    for g in gifts:
+        g['member_name'] = ck[g['committee_id']]['member_name']; g['party'] = ck[g['committee_id']]['party']
+    table(Tg, 'research/employee_gifts.csv', gifts, P.GIFT_COLS[:3] + ['member_name', 'party'] + P.GIFT_COLS[3:] + ['fec_page_url', 'amended_fec_page_url'])
+    rows = N.figure_rows()
+    flat = [{k: (' || '.join(v) if isinstance(v, list) else v) for k, v in r.items()} for r in rows]
+    cols = ['row_id', 'table', 'drawn_text'] + sorted({k for r in flat for k in r} - {'row_id', 'table', 'drawn_text', 'src', 'q'}) + ['src', 'q']
+    table(Tg, 'research/nv8_rows.tsv', flat, cols, '\t')
+    # the saved news pages behind "named on N of the saved pages": addresses, and the members each names; no page text
+    n_pages, hit, _ = member_mentions.count(); by_page = {}
+    for s, pids in hit.items():
+        for pid in pids:
+            by_page.setdefault(pid, []).append(s)
+    pages = []; nd = {s: member_mentions.not_drawn_re(s) for s in member_mentions.NOT_DRAWN}; nd_n = Counter()
+    for pid, text in member_mentions.pages():
+        m = json.loads((PRIMARY / pid / 'meta.json').read_text())
+        also = [s for s, rx in nd.items() if rx.search(text)]; nd_n.update(also)
+        pages.append({'id': pid, 'url': m['url'], 'saved_utc': m.get('fetched_utc') or m.get('saved_utc') or '', 'names': ';'.join(sorted(by_page.get(pid, []) + also))})
+    assert len(pages) == n_pages
+    table(Tg, 'research/story_pages.tsv', pages, list(pages[0].keys()), '\t')
+    # how the members drawn were chosen: every name searched, its count, and whether it is drawn; then every other word met after a title
+    sel = [{'name': s, 'first_names_searched': ' / '.join(f), 'pages': len(hit[s]), 'drawn': 'yes' if len(hit[s]) >= 3 else 'no', 'why_not': '' if len(hit[s]) >= 3 else 'named on fewer than three pages'}
+           for s, f in member_mentions.FIRST.items()]
+    sel += [{'name': s, 'first_names_searched': ' / '.join(v[0]), 'pages': nd_n[s], 'drawn': 'no', 'why_not': 'a current member the pages name for other things: ' + v[2]} for s, v in member_mentions.NOT_DRAWN.items()]
+    assert all(r['pages'] >= 3 for r in sel if r['why_not'].startswith('a current member'))
+    known = set(member_mentions.FIRST) | {f for v in member_mentions.FIRST.values() for f in v} | set(member_mentions.NOT_DRAWN) | {f for v in member_mentions.NOT_DRAWN.values() for f in v[0]}
+    for w_, ids_ in sorted(member_mentions.count()[2].items(), key=lambda kv: (-len(kv[1]), kv[0])):
+        if len(ids_) >= 3:
+            assert w_ in known or w_ in member_mentions.NOT_A_MEMBER, ('a word after a congressional title on three or more pages is not classified', w_)
+            sel.append({'name': w_, 'first_names_searched': '', 'pages': len(ids_), 'drawn': 'not a name searched',
+                        'why_not': 'a word found after a congressional title: ' + ('part of a name searched above' if w_ in known else 'not a current member: ' + member_mentions.NOT_A_MEMBER[w_])})
+    table(Tg, 'research/member_selection.tsv', sel, list(sel[0].keys()), '\t')
+    # every harvested link with the class the word rule gives it: the figure counts and draws only 'story'
+    import story_scope
+    sc = [{'url': r['url'], 'domain': r['domain'], 'headline_as_listed': r['anchor_text'], 'class': story_scope.scope(r['url'], r['anchor_text']) or 'other', 'first_listed': r['first_listed']}
+          for r in csv.DictReader(open(R / 'harvest.tsv', newline=''), delimiter='\t')]
+    table(Tg, 'research/coverage_scope.tsv', sc, list(sc[0].keys()), '\t')
+    # ---------------------------------------------------------------- sources that can be copied: official records and the builder's own captures
+    cited = {s for r in rows for s in r['src'] if not s.startswith(('pack:', 'table:'))}
+    copies = {pid: rel for pid, rel in R13.COPIES.items() if pid in cited}
+    for pid, rel in copies.items():
+        d = PRIMARY / pid; (Tg / rel).parent.mkdir(parents=True, exist_ok=True)
+        if pid.startswith('google-political-ads'):
+            shutil.copyfile(d / 'creative-stats.csv', Tg / rel)
+        elif pid.startswith('census'):
+            ls = (d / 'tab20_cd11920_zcta520_natl.txt').read_text(encoding='utf-8-sig').splitlines()
+            z = {l.split('|')[8] for l in ls[1:] if l.split('|')[1] == '1221' and l.split('|')[8]}
+            put(Tg, rel, 'SOURCE: U.S. Census Bureau, relationship file of 2020 zip-code tabulation areas by 119th Congress district\n'
+                         'URL: https://www2.census.gov/geo/docs/maps-data/data/rel2020/cd-sld/tab20_cd11920_zcta520_natl.txt\n'
+                         'ROWS KEPT: every row whose zip-code area has a row in Congressional District 21 of Florida (GEOID 1221)\n\n'
+                         + ls[0] + '\n' + '\n'.join(l for l in ls[1:] if l.split('|')[8] in z) + '\n')
+        else:
+            txt = '\n\n'.join(f.read_text(errors='replace') for f in sorted(d.glob('text*.txt'), key=lambda f: f.name != 'text.reextract.txt'))
+            put(Tg, rel, scrub(re.sub(r'ip=[\d.]+', '', txt)))
+        if pid.startswith('google-ads-creative'):
+            for n_ in ('frames.png', 'page.png'):
+                if (d / n_).exists():
+                    shutil.copyfile(d / n_, (Tg / rel).with_name(Path(rel).stem + '-' + n_))
+    # ---------------------------------------------------------------- evidence: one line per cited source
+    ev = N.evidence()
+    for e in ev:
+        raw = e['source_ref']
+        if raw in copies:
+            e['copy_in_repo'] = copies[raw]
+        elif raw in R13.FEC_REFS:
+            e['copy_in_repo'] = 'research/employee_gifts.csv'; e['what'] += ' (the line is in research/employee_gifts.csv by its sub_id, with a link to its FEC page image; the donor is not named)'
+        if raw.startswith('evidence-set:congress/hard_money#') and e['kind'] == 'evidence-set row' and e['passage'] == 'BANKS FOR SENATE':
+            e['copy_in_repo'] = 'research/employee_gifts.csv'
+        if raw.startswith(('techmeme-', 'memeorandum-')):
+            e['what'] = 'A saved page of the news aggregator (the piece is listed there under this headline)'
+        e['url'] = re.sub(r'([?&])api_key=[^&]+&?', r'\1', e['url'])
+        if e['url'].startswith('file:'):   # an evidence-set row whose source is the builder's saved download of a public index
+            assert 'openphil-grants-raw' in e['url'], e['row_id']
+            e['url'] = 'https://coefficientgiving.org/grants/'; e['what'] += ' (read from a download of the funder\'s public grants index saved on Sep 11, 2026; the link is the index)'
+    table(Tg, 'research/evidence.tsv', ev, list(ev[0].keys()), '\t')
+    # ---------------------------------------------------------------- the figure
+    for e in ('html', 'png', 'jpg'):
+        (Tg / 'figures').mkdir(exist_ok=True); shutil.copyfile(ROOT / 'figures' / f'{N.STEM}.{e}', Tg / 'figures' / f'{N.STEM}.{e}')
+    # ---------------------------------------------------------------- the audit
+    audit_note = 'not finished when this copy was assembled'
+    if (LANE / 'done' / 'DONE').exists() and (LANE / 'out' / 'REPORT.md').exists():
+        put(Tg, 'audit/BRIEF.md', scrub((LANE / 'PROMPT.md').read_text()).replace('lanes/audit_nv8', 'audit'))
+        for name in ('REPORT.md', 'findings.csv', 'figure_findings.csv', 'census.md', 'members.md', 'gaps.csv', 'errata.csv'):
+            if (LANE / 'out' / name).exists():
+                put(Tg, f'audit/{name}', scrub((LANE / 'out' / name).read_text()).replace('lanes/audit_nv8', 'audit'))
+        audit_note = (LANE / 'out' / 'REPORT.md').read_text().strip().splitlines()[-1]
+    disp = R / 'audits' / 'DISPOSITIONS-audit_nv8.csv'
+    if disp.exists():
+        put(Tg, 'audit/DISPOSITIONS.csv', disp.read_text())
+    put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')
+    import nv8_readme
+    put(Tg, 'README.md', nv8_readme.readme(Tg, rows, ev, audit_note))
+    # ---------------------------------------------------------------- checks on the copy
+    bad = []
+    for f in sorted(Tg.rglob('*')):
+        if f.is_file() and '.git' not in f.parts and '__pycache__' not in f.parts and f.suffix not in ('.png', '.jpg'):
+            m = PRIVATE.search(f.read_text(encoding='utf-8', errors='replace'))
+            if m:
+                bad.append((str(f.relative_to(Tg)), m.group(0)))
+    assert not bad, ('local paths, ids or addresses in the copy', bad[:8])
+    pairs, n_head = name_scan(Tg, rows)
+    env = {**__import__('os').environ, 'PYTHONDONTWRITEBYTECODE': '1'}
+    same = 'NOT REBUILT (trial run without the render; not a release)'
+    if not env.get('NV8_TRIAL_NO_REBUILD'):
+        r = subprocess.run([sys.executable, str(Tg / 'scripts' / 'build_nv8.py')], capture_output=True, text=True, env=env); assert r.returncode == 0, r.stderr[-1200:]
+        same = (Tg / 'figures' / f'{N.STEM}.html').read_bytes() == (ROOT / 'figures' / f'{N.STEM}.html').read_bytes()
+        assert same, 'the figure rebuilt inside the copy differs from the project\'s'
+    v = subprocess.run(['python3', '-I', '-B', str(Tg / 'scripts' / 'verify_nv8.py')], capture_output=True, text=True)
+    print(v.stdout[-2500:]); assert v.returncode == 0, 'the copy\'s own verifier fails'
+    files = sorted(str(f.relative_to(Tg)) for f in Tg.rglob('*') if f.is_file() and '.git' not in f.parts and '__pycache__' not in f.parts)
+    assert not list(Tg.rglob('__pycache__')), 'bytecode folders in the copy'
+    print(f'wrote {len(files)} files to {Tg}; names scanned for: {len(pairs):,}; hits 0 ({n_head} of them are named by listed headlines in a public role, and appear nowhere else); figure rebuilt in the copy equals the project\'s: {same}; audit: {audit_note}')
+
+
+def private_names(rows):
+    """Donors' and lobbyists' names, as (SURNAME, FIRST) pairs, less the people this figure names on purpose: every member of
+    Congress, reporter, analyst, official and executive who is an actor or a node in it (scripts/rows_map.py, rows_people.py,
+    rows_context.py), or whom its dated events name in a public role (rows_events.py)."""
+    pairs = R13.private_names()
+    named = set()
+    words = ' '.join(r['drawn_text'] for r in rows if r['table'] != 'piece listed by an aggregator') + ' ' + ' '.join(str(v) for r in rows for k, v in r.items() if k in ('a', 'b', 'actor'))
+    for n_ in ('rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_events.py'):
+        words += ' ' + (ROOT / 'scripts' / n_).read_text()
+    up = words.upper()
+    for last, first in pairs:
+        if re.search(rf"\b{re.escape(first)}\b[\s.A-Z]{{0,12}}\b{re.escape(last)}\b", up):
+            named.add((last, first))
+    private_names.named = sorted(named)
+    return pairs - named
+
+
+def _found(text, by_last):
+    """The (SURNAME, FIRST) pairs of `by_last` that `text` holds as a name: first name then surname within a few words, or surname, first."""
+    t = text.upper(); words = set(re.findall(r"[A-Z'-]{2,}", t)); out = set()
+    for last in words & set(by_last):
+        for first in by_last[last] & words:
+            if re.search(rf"\b{re.escape(first)}\b[\s.A-Z]{{0,12}}\b{re.escape(last)}\b|\b{re.escape(last)}\b,?\s+{re.escape(first)}\b", t):
+                out.add((last, first))
+    return out
+
+
+def _hits(text, by_last):
+    return [f'{first[0]}. {last[0]}.' for last, first in sorted(_found(text, by_last))]
+
+
+def _index(pairs):
+    by_last = {}
+    for last, first in pairs:
+        by_last.setdefault(last, set()).add(first)
+    return by_last
+
+
+def name_scan(Tg, rows):
+    """Three scans, each of which must find nothing.
+    1. The tables of gifts, PACs, lobbying and committees, and the copied sources: no name from the donors' and lobbyists'
+       lists at all (sitting members and the few public figures the three-chairmen figure names are not in those lists).
+    2. Every file, with the listed headlines taken out (the headline columns of the coverage tables, the rows and evidence
+       lines of listed pieces, the dots' captions in the figure): no such name except the people the figure names on purpose.
+    3. Every file as it stands: no such name except those and the people a listed headline names. A headline is quoted as the
+       aggregator listed it; the people it names (Nvidia's executives and directors, in those roles) are named nowhere else,
+       and nothing here says who gave what."""
+    every = R13.private_names(); pairs = private_names(rows)
+    files = [f for f in sorted(Tg.rglob('*')) if f.is_file() and '.git' not in f.parts and '__pycache__' not in f.parts and f.suffix not in ('.png', '.jpg')]
+    rel = lambda f: str(f.relative_to(Tg))
+    HEADLINE_FILES = ('research/coverage_rows.tsv', 'research/harvest.tsv', 'research/coverage_scope.tsv', 'research/nv8_rows.tsv', 'research/evidence.tsv', f'figures/{N.STEM}.html')
+    NAMING = HEADLINE_FILES + ('research/member_ties.csv', 'research/member_selection.tsv', 'README.md') + tuple(rel(f) for f in files if rel(f).startswith(('scripts/', 'audit/')))
+    # 1
+    ix = _index(every); bad = [(rel(f), h) for f in files if rel(f) not in NAMING for h in _hits(f.read_text(encoding='utf-8', errors='replace'), ix)]
+    assert not bad, ('a name from the donors\' and lobbyists\' lists is in a table of gifts or a copied source (file, initials)', Counter(bad).most_common(12))
+    # 2
+    def without_headlines(f):
+        r = rel(f); t = f.read_text(encoding='utf-8', errors='replace')
+        if r in ('research/coverage_rows.tsv', 'research/harvest.tsv', 'research/coverage_scope.tsv'):
+            rd = list(csv.DictReader(t.splitlines(), delimiter='\t')); drop = {'headline', 'passage', 'anchor_text', 'text', 'headline_as_listed'} & set(rd[0]); assert drop, r
+            return '\n'.join('\t'.join(v for k, v in x.items() if k not in drop) for x in rd)
+        if r in ('research/nv8_rows.tsv', 'research/evidence.tsv'):
+            ls = t.splitlines(); return '\n'.join(l for l in ls if not l.startswith('CV'))
+        if r == f'figures/{N.STEM}.html':
+            return re.sub(r'<title>.*?</title>', ' ', t, flags=re.S)
+        return t
+    ix = _index(pairs); bad = [(rel(f), h) for f in files for h in _hits(without_headlines(f), ix)]
+    assert not bad, ('a donor\'s or lobbyist\'s name is in the copy outside a listed headline (file, initials)', Counter(bad).most_common(12))
+    # 3
+    heads = ' '.join((r.get('headline') or '') + ' ' + (r.get('passage') or '') for r in csv.DictReader(open(Tg / 'research' / 'coverage_rows.tsv', newline=''), delimiter='\t'))
+    heads += ' ' + ' '.join(' '.join(v or '' for v in r.values()) for r in csv.DictReader(open(Tg / 'research' / 'harvest.tsv', newline=''), delimiter='\t'))
+    in_head = _found(heads, _index(pairs))
+    ix = _index(pairs - in_head); bad = [(rel(f), h) for f in files for h in _hits(f.read_text(encoding='utf-8', errors='replace'), ix)]
+    assert not bad, ('a donor\'s or lobbyist\'s name is in the copy (file, initials)', Counter(bad).most_common(12))
+    name_scan.in_headlines = len(in_head)
+    return pairs, len(in_head)
+
+
+if __name__ == '__main__':
+    main(sys.argv[1])
