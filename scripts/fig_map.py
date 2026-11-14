@@ -749,7 +749,7 @@ def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
             'and that Huang "has not received a defensive briefing"; Nvidia said its customers get "zero information relevant to national security" and '
             '"do not ask Nvidia to press the U.S. government to change its policies on chip sales to China." '
             'The ties at left start from Anthropic, its people and Open Philanthropy; Nvidia\'s own political giving, business ties and former staff were not mapped to the same breadth, '
-            'so the number of lines says nothing about either company\'s influence. The Times\'s reports are cited from its own articles, saved by hand; the Journal\'s and the FT\'s pages were not read (their sites turn away automated readers), so what they reported is taken from other outlets. '
+            'so the number of lines says nothing about either company\'s influence. The Times\'s reports are cited from its own articles, saved by hand, except its Nov 9 report on the Commerce inquiry, which is cited as CNBC relays it; the Journal\'s and the FT\'s pages were not read (their sites turn away automated readers), so what they reported is taken from other outlets. '
             'No search was made of Anthropic\'s, Nvidia\'s or the rival chip makers\' own channels. '
             f'<b>Source:</b> {n_story:,} links from saved aggregator pages; saved reports, posts and releases; committee filings; rows held in the congress, lineage, toner and evaluators packs. Fetched Nov 12–13, 2026. {DRAFT}')
     title = 'Fifteen days, mapped: the coverage, who acted, and the documented ties'
