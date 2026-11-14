@@ -411,7 +411,7 @@ def fig_web(KICKER, DRAFT):
     cx0 = X_T0 + 1 * DAY_W + 10
     h.append(box(cx0, 0, 6 * DAY_W - 20, COV_H - 52,
                  f'<div style="font-size:21px;font-weight:bold;line-height:1.2">{n_dated:,} pieces on the story, by the day first listed</div>'
-                 f'<div style="font-size:14.5px;color:{MUTED};line-height:1.35;margin-top:6px">One dot is one piece. Techmeme and Memeorandum pages were saved twice a day; '
+                 f'<div style="font-size:14.5px;color:{MUTED};line-height:1.35;margin-top:6px">One dot is one piece. Techmeme and Memeorandum pages were saved five times a day; '
                  f'{len(sites_dated):,} sites appear among the dots ({len(sites):,} with the pieces that have no day). The six days after the first report brought {n_quiet} more.</div>'
                  + ''.join(f'<div style="display:flex;align-items:center;gap:9px;font-size:14.5px;margin-top:7px"><i style="width:12px;height:12px;border-radius:50%;background:{c};flex:none"></i>{esc(t)}</div>' for c, t in COV.values())))
     # top-left: the three numbers, the tie legend
@@ -496,7 +496,7 @@ def fig_web(KICKER, DRAFT):
     body = f'<div class="plot"><svg width="{W}" height="{H:.0f}" viewBox="0 0 {W} {H:.0f}">{"".join(svg)}</svg>{"".join(h)}</div>'
 
     foot = ('<b>Reading it:</b> the dots count pieces, not readers; a piece is placed on the first day a saved Techmeme or Memeorandum page lists it '
-            f'(pages for 9 am and 8 pm Eastern each day; Nov 12 through 2 pm), and {undated} more pieces seen only on undated pages are left out. '
+            f'(pages for 9 am, noon, 4 pm, 8 pm and 11 pm Eastern each day), and {undated} more pieces seen only on undated pages are left out. '
             'A piece counts as on the story when its address or listed headline names Huang, Megaspeed or Alice Huang, tells of the spy affair without naming them, '
             'or names Nvidia with a word of the affair (resign, board, inquiry, chief, successor and the like). '
             f'That rule was applied by script, not by reading each piece, to the {sum(n_scope.values()):,} links on those pages that name Huang, Nvidia, Megaspeed or the spy story. '

@@ -71,7 +71,11 @@ def harvest():
                 seen[k] = (dom, cur[1] if cur else d.name, h, t[:220], first)
             else:
                 seen[k] = cur[:4] + (first,)
-    return sorted(seen.values())
+    # a piece keeps the spelling of its address first recorded for it (the row-id register), so a later page that lists
+    # it with a tracking field does not change the address the tables and the audit hold
+    reg = R / 'coverage_row_ids.csv'
+    keep = {key(r['url']): r['url'] for r in csv.DictReader(open(reg, newline=''))} if reg.exists() else {}
+    return sorted((v[0], v[1], keep.get(k, v[2]), v[3], v[4]) for k, v in seen.items())
 
 
 def main(out=None):

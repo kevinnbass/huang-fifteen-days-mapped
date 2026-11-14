@@ -9,7 +9,7 @@ import csv, re, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'
 sys.path.insert(0, str(ROOT / 'scripts'))
-import check_rows as cr, story_scope
+import check_rows as cr, story_scope, harvest_links as H
 FIRST, LAST = '2026-10-29', '2026-11-12'
 REG = R / 'coverage_row_ids.csv'
 
@@ -34,7 +34,10 @@ def main():
         with open(REG, 'w', newline='') as f:
             w = csv.writer(f, lineterminator='\n'); w.writerow(['url', 'row_id'])
             w.writerows([r['url'], r['row_id']] for r in csv.DictReader(open(R / 'coverage_rows.tsv', newline=''), delimiter='\t'))
-    ids = {r['url']: r['row_id'] for r in csv.DictReader(open(REG, newline=''))}; new_ids = []
+    # keyed by what makes two links the same piece (harvest_links.key), so that a later page listing the same piece under
+    # another spelling of its address (a tracking field, a longer headline's link) keeps the id and the address first recorded
+    reg = list(csv.DictReader(open(REG, newline=''))); ids = {H.key(r['url']): (r['row_id'], r['url']) for r in reg}; new_ids = []
+    assert len(ids) == len(reg), 'two registered addresses are the same piece'
     for r in csv.DictReader(open(R / 'harvest.tsv', newline=''), delimiter='\t'):
         if story_scope.scope(r['url'], r['anchor_text']) != 'story':
             continue
@@ -45,14 +48,15 @@ def main():
             if q:
                 cite = s; break
         how['first' if cite == r['first_snapshot'] else ('other' if cite else 'unbound')] += 1
-        if r['url'] not in ids:                      # a new address takes the next id; an id once given is never reused or moved
-            ids[r['url']] = f'CV{max(int(v[2:]) for v in ids.values()) + 1:04d}'; new_ids.append(r['url'])
-        out.append([ids[r['url']], r['url'], r['domain'], r['anchor_text'], r['first_listed'], r['first_snapshot'], cite, q,
+        k = H.key(r['url'])
+        if k not in ids:                             # a new piece takes the next id; an id once given is never reused or moved
+            ids[k] = (f'CV{max(int(v[0][2:]) for v in ids.values()) + 1:04d}', r['url']); new_ids.append(k)
+        out.append([ids[k][0], ids[k][1], r['domain'], r['anchor_text'], r['first_listed'], r['first_snapshot'], cite, q,
                     'yes' if FIRST <= r['first_listed'] <= LAST else 'no'])
     assert len({o[0] for o in out}) == len(out)
     with open(REG, 'a', newline='') as f:
-        csv.writer(f, lineterminator='\n').writerows([u, ids[u]] for u in new_ids)
-    print('row ids: kept', len(out) - len(new_ids), '| new', len(new_ids), [ids[u] for u in new_ids][:8])
+        csv.writer(f, lineterminator='\n').writerows([ids[k][1], ids[k][0]] for k in new_ids)
+    print('row ids: kept', len(out) - len(new_ids), '| new', len(new_ids), [ids[k][0] for k in new_ids][:4])
     with open(R / 'coverage_rows.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t'); w.writerow(['row_id', 'url', 'domain', 'headline', 'first_listed', 'first_snapshot', 'cited_snapshot', 'passage', 'drawn'])
         w.writerows(out)
