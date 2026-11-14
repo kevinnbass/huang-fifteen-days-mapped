@@ -29,6 +29,7 @@ GROUPS = [
  ('shares', 'Share prices', 'any role for a rival chip maker: no document here connects one to the reports.', 'ST05', ''),
  ('anthropic', 'Anthropic', 'any statement by Anthropic on Huang (its own channels were not searched), or any instruction, payment or message tied to the coverage.', 'ST03', ''),
  ('labs', 'Another AI company', 'any part for OpenAI in the reports.', '', ''),
+ ('voices', 'Other public voices', 'any part for them in the reports. Their own business with Nvidia is not mapped here.', '', ''),
  ('abroad', 'China and Singapore', 'whether the intelligence assessment is correct. It has not been tested in public.', 'ST09', ''),
 ]
 
@@ -68,15 +69,33 @@ ACTORS = [
  ('bacon', 'house', 'Rep. Don Bacon', 'R-Neb.', ''),
  ('mccaul', 'house', 'Rep. Michael McCaul', 'R-Texas', ''),
  ('trump', 'admin', 'President Trump', '', None),
+ ('rubio', 'admin', 'Secretary of State Rubio', '', None),
+ ('commerce', 'admin', 'Commerce Secretary Lutnick and his department', '', None),
+ ('bessent', 'admin', 'Treasury Secretary Bessent', '', None),
+ ('greer', 'admin', 'Trade Representative Greer', '', None),
+ ('whitehouse', 'admin', 'White House spokespeople', '', None),
+ ('justice', 'admin', 'Justice Department', '', None),
  ('nvidia', 'nvidia', 'Nvidia', 'company statements', None),
  ('huang', 'nvidia', 'Jensen Huang', 'founder and chief executive', None),
  ('board', 'nvidia', 'Nvidia board of directors', '', None),
+ ('kress', 'nvidia', 'Colette Kress', 'chief financial officer; interim chief from Nov 12', None),
+ ('jones', 'nvidia', 'Harvey Jones', 'director; board chair from Nov 12', None),
+ ('suit', 'nvidia', 'Shareholders suing Nvidia', 'a class action', None),
  ('nvda', 'shares', 'Nvidia shares', '', None),
  ('rivals', 'shares', 'AMD and Broadcom', 'shares of two rival chip makers', None),
  ('anthropic', 'anthropic', 'Anthropic', 'the company at far left', None),
  ('openai', 'labs', 'OpenAI', '', None),
+ ('musk', 'voices', 'Elon Musk', 'chief executive of Tesla', None),
+ ('maguire', 'voices', 'Shaun Maguire', 'partner at Sequoia Capital', None),
+ ('ackman', 'voices', 'Bill Ackman', 'founder of Pershing Square Capital Management', None),
+ ('sweeney', 'voices', 'Tim Sweeney', 'chief executive of Epic Games', None),
+ ('jcramer', 'voices', 'Jim Cramer', 'host of Mad Money on CNBC', None),
  ('singapore', 'abroad', 'Singapore Ministry of Home Affairs', '', None),
  ('china', 'abroad', 'China\'s Foreign Ministry', '', None),
+ ('embassy', 'abroad', 'Chinese Embassy in Washington', '', None),
+ ('megaspeed', 'abroad', 'Megaspeed', 'the Singapore firm in the reports', None),
+ ('taiwan', 'abroad', 'Taiwan\'s Interior Minister', '', None),
+ ('globaltimes', 'abroad', 'Global Times', 'newspaper in China', None),
 ]
 
 # An act either points at a row of rows_events (its date, source and passage are taken from there) or carries its own.
@@ -188,13 +207,39 @@ ACTS = [
   ['sw-nbcnewscom-09'] * 5, ['authorities had interviewed Huang and impounded her passport in 2025', 'insufficient evidence to establish that Huang had committed any offences',
                              'issued her with a stern warning after finding that she had knowingly provided police with inaccurate information', 'had been barred from re-entering the country', 'was not investigated for espionage']),
  ('mast', '2026-11-12', 'Says Huang "has agreed to come" and testify; the day is being negotiated', ['sw-cnbccom-09'], ['He has agreed to come']),
+ # ---- S1 of the gaps spec (Nov 14): acts of speakers who had no row; appended so that earlier row ids do not move
+ ('rubio', '2026-11-08', 'Says he "can\'t comment on an internal corporate matter that\'s going on with Nvidia"', ['nbc-1108-investigation'], ['comment on an internal corporate matter']),
+ ('bessent', '2026-11-05', 'Axios, as the Daily Caller relays it: in a Situation Room meeting he asks Lutnick "How come Megaspeed isn\'t on the entities list?"',
+  ['sw-dailycallercom-03', 'sw-dailycallercom-03'], ['pressed Commerce Secretary Howard Lutnick in a Thursday White House Situation Room meeting', 'on the entities list?']),
+ ('commerce', '2026-11-11', 'Axios, as Gizmodo relays it: Lutnick told the president "I\'ll develop some options and come back"', ['sw-gizmodocom-08'], ['develop some options and come back']),
+ ('commerce', '2026-11-12', 'A spokeswoman tells CNBC Bessent and Lutnick had "no such conversation"', ['sw-cnbccom-22'], ['Commerce Department spokeswoman Kristen Eichamer told CNBC that Bessent and Lutnick had "no such conversation"']),
+ ('greer', '2026-11-12', 'Tells CNBC "Nvidia is a structurally important company"', ['sw-cnbccom-09'], ['Nvidia is a structurally important company']),
+ ('whitehouse', '2026-11-09', 'Asked how the administration handled the information: "These sources have no idea what they\'re talking about"', ['msnow-resigns'], ['a White House spokesperson referred MS NOW to Trump']),
+ ('whitehouse', '2026-11-12', 'Statement calls Lutnick "a champion of President Trump\'s America First trade and tariff policies"', ['sw-cnbccom-09'], ['Secretary Lutnick is a champion of President Trump']),
+ ('justice', '2026-11-09', 'CBS, as Breitbart relays it: its National Security Division is investigating Megaspeed', ['sw-breitbartcom-04'], ['National Security Division is investigating Megaspeed']),
+ ('kress', 'EV31', 'Statement: "committed to building on the extraordinary foundation Jensen created"', ['fortune-1111-resigns'], ['I am committed to building on the extraordinary foundation Jensen created']),
+ ('jones', 'EV31', 'Statement: "Colette has helped lead NVIDIA through a period of extraordinary growth"', ['fortune-1111-resigns'], ['Colette has helped lead NVIDIA through a period of extraordi']),
+ ('suit', '2026-11-10', 'Complaint, as Courthouse News reports it: a company statement on Megaspeed "was materially false and misleading"', ['sw-courthousenewscom-02'], ['was materially false and misleading at the time it was made']),
+ ('nvidia', '2026-11-10', 'Bloomberg, as TechCrunch relays it: Nvidia\'s head lawyer "intervened in a 2025 U.S. government probe" of Megaspeed', ['sw-techcrunchcom-08'], ['Tim Teter, intervened in a 2025 U.S. government probe']),
+ ('anthropic', '2026-11-12', 'A spokesperson "declined to comment" to Quartz for a report on Huang\'s exit and Anthropic\'s share sale', ['sw-qzcom-efc3c07a'], ['An Anthropic spokesperson declined to comment']),
+ ('musk', '2026-11-11', 'Posts that hiring Huang "would be an honor"', ['mj-misogyny'], ['Elon Musk wrote on Wednesday']),
+ ('maguire', '2026-11-09', 'Posts: "I believe Jensen is irreplaceable for America\'s AI leadership"', ['sw-calcalistechcom-02'], ['I believe Jensen is irreplaceable for America']),
+ ('ackman', '2026-11-09', 'Posts: "I am hoping for a simple affair, not a risk to our national security"', ['sw-gulftimescom-01'], ['I am hoping for a simple affair, not a risk to our national security']),
+ ('sweeney', '2026-11-12', 'Posts: "A sad day for NVIDIA, developers, America, and all humanity"', ['sw-80lv-02'], ['A sad day for NVIDIA, developers, America, and all humanity']),
+ ('jcramer', '2026-11-11', 'On his show: "A Jensen-less Nvidia is an Nvidia many will not want to own"', ['sw-financeyahoocom-b1ac141d'], ['on the November 11 episode of Mad Money']),
+ ('embassy', '2026-10-29', 'Its spokesman, in the Times: a campaign of "groundless smears and slanders"', ['man-nyt-1029-01'], ['groundless smears and slanders']),
+ ('megaspeed', '2026-11-12', 'Says it takes U.S. export-control compliance "extremely seriously" and has cooperated with inspections', ['huffpost-live'], ['Megaspeed said on Thursday that it takes compliance obligations under U.S. export control laws']),
+ ('taiwan', '2026-11-11', 'Says security agencies are "actively investigating" the case', ['sw-taiwannewscomtw-04'], ['said outside the legislature that security agencies were']),
+ ('globaltimes', '2026-11-09', 'Writes: "Whenever China-US relations begin to improve, there are often those firing shots from the shadows"', ['sw-inquirercom-01'], ['there are often those firing shots from the shadows']),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
 REPORT_DAY = {('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire', '2026-11-10'), ('grunewald', '2026-11-10'), ('stapp', '2026-11-10'),
               ('warren', '2026-11-08'), ('blumenthal', '2026-11-09'), ('warner', '2026-11-09'), ('wyden', '2026-11-09'), ('wyden', '2026-11-12'),
               ('cornyn', '2026-11-08'), ('cornyn', '2026-11-09'), ('thune', '2026-11-12'), ('himes', '2026-11-12'), ('johnson', '2026-11-12'),
-              ('mccaul', '2026-11-09'), ('magaziner', '2026-11-08'), ('openai', '2026-11-04')}
+              ('mccaul', '2026-11-09'), ('magaziner', '2026-11-08'), ('openai', '2026-11-04'),
+              ('commerce', '2026-11-11'), ('justice', '2026-11-09'), ('suit', '2026-11-10'), ('nvidia', '2026-11-10'), ('maguire', '2026-11-09'), ('ackman', '2026-11-09'),
+              ('taiwan', '2026-11-11'), ('globaltimes', '2026-11-09'), ('anthropic', '2026-11-12')}
 
 # Ties into a row that rows_people.TIES does not hold. kind: money | act (an official act) | meet (scheduled for the same session) |
 # context (a third party's statement that is worded in the row and drawn as no line: audit1b, on the newsletter about Senate Banking members)
