@@ -73,6 +73,7 @@ WHAT = {  # what each kind of evidence-set table is, in a reader's words
     'congress/research/member_statements.csv': 'Search of the member\'s official X account (a bounded search; see the row\'s words)', 'congress/research/timeline.csv': 'FEC filing',
     'congress/research/entities.csv': 'FEC line giving the person\'s employer and title as filed', 'congress/research/interlocks.csv': 'IRS Form 990 (officers and directors; related organisations), as published by ProPublica',
     'lineage/research/flows_annual.csv': 'Grant awards by year, summed from the funder\'s published grant records or a foundation\'s tax filing', 'lineage/research/tenures.csv': 'Published statement of a post held (the organisation\'s page, the person\'s own post, or a news report)',
+    'lineage/research/people.csv': 'An organisation\'s published team page naming a person and post',
     'lineage/research/equity.csv': 'Anthropic\'s own announcement of its funding round', 'toner/research/people_graph.csv': 'Organisation page describing a person\'s posts',
     'evaluators-deep/research/people_edges.csv': 'Organisation release naming a person\'s former post',
     'lineage/research/flows_named.csv': 'One grant award, or one grant line of a foundation\'s tax filing',

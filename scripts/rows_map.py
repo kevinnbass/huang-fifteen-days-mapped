@@ -20,8 +20,8 @@ PK = 'pack:'
 GROUPS = [
  # key, title, what no document here shows, the row of rows_context whose `before` text the header carries, words put before it
  ('papers', 'Three newspapers', 'who their confidential intelligence sources are. Singapore\'s ministry denied the Journal\'s Oct 30 account the next day.', 'ST07', ''),
- ('bylines', 'Bylines with a fellowship', 'whether the fellowship shaped either piece. Bylines at outlets not read here (Bloomberg, the Guardian and the Verge among them) were not checked.', '', ''),
- ('analysts', 'Analysts quoted or posting', 'who, if anyone, prompted the posts or quotes. Only analysts found in the funding records are drawn: a selected set, not everyone quoted.', 'ST04', ''),
+ ('bylines', 'Bylines tied to the Tarbell Center', 'whether the tie shaped any of the three pieces. All 729 bylines on the saved pages were looked up; three have a tie on record.', '', ''),
+ ('analysts', 'Analysts quoted or posting', 'who, if anyone, prompted the posts or quotes. Drawn: 7 of the 269 analysts and experts quoted, those with a documented tie.', 'ST04', ''),
  ('senate', 'Senate', 'any contact between a senator and the reporters or their sources.', 'ST02', 'Democrats'),
  ('house', 'House', 'whether anyone outside Congress had a hand in the Nov 4 letter.', 'ST01', ''),
  ('admin', 'The administration', 'who gave the intelligence to reporters. The reports cite "people briefed on intelligence surveillance."', 'ST06', ''),
@@ -40,11 +40,14 @@ ACTORS = [
  ('ft', 'papers', 'Financial Times', 'its reporter\'s post', None),
  ('kubinec', 'bylines', 'Jack Kubinec', 'reporter, The Dispatch', None),
  ('perlo', 'bylines', 'Jared Perlo', 'reporter, NBC News', None),
+ ('hashim', 'bylines', 'Shakeel Hashim', 'editor, Transformer', None),
  ('bresnick', 'analysts', 'Sam Bresnick', 'CSET at Georgetown', None),
  ('fedasiuk', 'analysts', 'Ryan Fedasiuk', 'Foundation for American Innovation', None),
  ('mcguire', 'analysts', 'Chris McGuire', 'Council on Foreign Relations', None),
  ('grunewald', 'analysts', 'Erich Grunewald', 'Institute for AI Policy and Strategy', None),
  ('stapp', 'analysts', 'Alec Stapp', 'Institute for Progress', None),
+ ('king', 'analysts', 'Cassia King', 'Institute for AI Policy and Strategy', None),
+ ('nie', 'analysts', 'Michelle Nie', 'Center for a New American Security', None),
  ('warren', 'senate', 'Sen. Elizabeth Warren', 'D-Mass.', ''),
  ('coons', 'senate', 'Sen. Chris Coons', 'D-Del.', 'CHRIS COONS FOR DELAWARE'),
  ('cramer', 'senate', 'Sen. Kevin Cramer', 'R-N.D.', 'CRAMER FOR SENATE'),
@@ -268,10 +271,16 @@ ACTS = [
   ['man-e1161e38dc19'], ["I don't think you should be talking to me directly"]),
  ('commerce', '2026-11-05', 'Axios, as ZeroHedge relays it: asked by Bessent why Megaspeed is not on the entity list, Lutnick answers "I don\'t know. I\'ll look into it"',
   ['sw-zerohedgecom-10', 'sw-dailycallercom-03'], ["I don't know. I'll look into it", 'pressed Commerce Secretary Howard Lutnick in a Thursday White House Situation Room meeting']),
+ # every analyst and byline on the saved pages was looked up in the funding records (2026-11-14): two more analysts and one more byline have a record and a remark of these days
+ ('king', '2026-11-12', 'Tells Quartz that export controls cover the physical transfer of chips but not remote access to them',
+  ['sw-qzcom-13'], ['U.S. export controls cover the physical transfer of chips but not remote access to them, said Cassia King']),
+ ('nie', '2026-11-12', 'Tells Quartz that the remote-access bill alone would fall short of closing the loophole',
+  ['sw-qzcom-13'], ['RASA alone would fall short of closing the loophole, said Michelle Nie']),
+ ('hashim', '2026-11-09', 'Publishes "Jensen Huang should resign"', ['sw-transformernewsai-01', 'sw-transformernewsai-01'], ['AUTHOR: Shakeel Hashim', 'Jensen Huang should resign']),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
-REPORT_DAY = {('commerce', '2026-11-09'), ('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire', '2026-11-10'), ('grunewald', '2026-11-10'), ('stapp', '2026-11-10'),
+REPORT_DAY = {('commerce', '2026-11-09'), ('king', '2026-11-12'), ('nie', '2026-11-12'), ('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire', '2026-11-10'), ('grunewald', '2026-11-10'), ('stapp', '2026-11-10'),
               ('warren', '2026-11-08'), ('blumenthal', '2026-11-09'), ('warner', '2026-11-09'), ('wyden', '2026-11-09'), ('wyden', '2026-11-12'),
               ('cornyn', '2026-11-08'), ('cornyn', '2026-11-09'), ('thune', '2026-11-12'), ('himes', '2026-11-12'), ('johnson', '2026-11-12'),
               ('mccaul', '2026-11-09'), ('magaziner', '2026-11-08'), ('openai', '2026-11-04'),
@@ -335,6 +344,14 @@ TIES_V4 = [
  ('Nvidia', 'President Trump', 'context', 'HuffPost: Rahm Emanuel "noted on social media that Trump has personally purchased more than $6 million worth of Nvidia stock this year"',
   ['huffpost-trump-china'], ['noted on social media that Trump has personally purchased more than $6 million worth of Nvidia stock this year']),
  ('CNAS', 'Erich Grunewald', 'context', 'co-author of the 2025 CNAS report on AI chip smuggling', ['art-cnas-smuggling', 'art-cnas-smuggling'], ['By: Erich Grunewald and Tim Fist', 'Countering AI Chip Smuggling Has Become a National Security Priority']),
+]
+# ---- added on Nov 14, 2026 with the look-up of every analyst and byline; numbered after TIES_V4 so that earlier row ids do not move. Drawn as lines.
+TIES_V5 = [
+ (IAPS, 'Cassia King', 'role', 'senior researcher', ['sw-qzcom-13'], ['Cassia King, a senior researcher in the Compute Policy group at the Institute for AI Policy and Strategy']),
+ ('CNAS', 'Michelle Nie', 'role', 'visiting fellow', ['sw-qzcom-13'], ['Michelle Nie, a visiting fellow in technology and national security at the Center for a New American Security']),
+ (TARBELL, 'Shakeel Hashim', 'role', 'listed on its team page as editor of Transformer', [LIN + 'people.csv#P124', LIN + 'people.csv#P124'], ['Editor, Transformer', 'https://www.tarbellcenter.org/team/shakeel-hashim']),
+ (HORIZON, 'Michelle Nie', 'role', 'AI fellow on its think-tank track, 2025–26, placed at CNAS',
+  [PK + 'congress/research/revolving_door.csv#RD1262'] * 3, ['AI Fellow, Think Tank Track', 'Horizon Institute for Public Service', 'placement=Center for a New American Security']),
 ]
 
 
@@ -422,5 +439,8 @@ def rows():
         out.append({'row_id': f'MT{i:02d}', 'a': a, 'b': b, 'kind': kind, 'label': label, 'src': src, 'q': q})
     for i, (a, b, kind, label, src, q) in enumerate(TIES_V4, len(TIES_MORE) + len(ARCS) + len(TIES_V3) + 1):
         assert b in names and kind == 'context' and len(src) == len(q), (a, b)
+        out.append({'row_id': f'MT{i:02d}', 'a': a, 'b': b, 'kind': kind, 'label': label, 'src': src, 'q': q})
+    for i, (a, b, kind, label, src, q) in enumerate(TIES_V5, len(TIES_MORE) + len(ARCS) + len(TIES_V3) + len(TIES_V4) + 1):
+        assert b in names and a in left and kind in ('role', 'money', 'past') and len(src) == len(q), (a, b)
         out.append({'row_id': f'MT{i:02d}', 'a': a, 'b': b, 'kind': kind, 'label': label, 'src': src, 'q': q})
     return out
