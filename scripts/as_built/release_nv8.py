@@ -15,7 +15,7 @@ LANE = Path('lanes/audit_nv8')
 RUN = ('fig_map.py', 'fig_common.py', 'rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_coverage.py', 'rows_ties.py', 'rows_events.py', 'story_scope.py', 'nv8_status.py', 'build_nv8.py', 'verify_nv8.py')
 AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'fec_lpac_keyed_check.py')
 TABLES = ('harvest.tsv', 'coverage_rows.tsv', 'coverage_day_pages.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'member_ties.csv', 'employee_gift_rates.csv', 'committee_keys.csv', 'joint_committees.csv',
-          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv')
+          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv')
 SHIM = '''"""Which saved news pages name each member of Congress: the counts the figure prints ("named on N of the saved pages").
 In the builder's project this module reads the saved pages themselves; they are not in this copy (no article text is), so here
 the same answer is read from research/story_pages.tsv, which lists every counted page by address and the members it names."""
@@ -295,7 +295,8 @@ def name_scan(Tg, rows):
     files = [f for f in sorted(Tg.rglob('*')) if f.is_file() and '.git' not in f.parts and '__pycache__' not in f.parts and f.suffix not in ('.png', '.jpg')]
     rel = lambda f: str(f.relative_to(Tg))
     HEADLINE_FILES = ('research/coverage_rows.tsv', 'research/harvest.tsv', 'research/coverage_scope.tsv', 'research/nv8_rows.tsv', 'research/evidence.tsv', f'figures/{N.STEM}.html')
-    NAMING = HEADLINE_FILES + ('research/member_ties.csv', 'research/member_selection.tsv', 'README.md') + tuple(rel(f) for f in files if rel(f).startswith(('scripts/', 'audit/', 'audit2/')))
+    # the items table names the actors drawn, as the figure does; checks 2 and 3 still read it
+    NAMING = HEADLINE_FILES + ('research/member_ties.csv', 'research/member_selection.tsv', 'research/nv8_s6_items.tsv', 'README.md') + tuple(rel(f) for f in files if rel(f).startswith(('scripts/', 'audit/', 'audit2/')))
     assert PUBLIC_IN_AUDIT2 <= every, 'a name excused for the second audit\'s files is no longer in the lists: take it off PUBLIC_IN_AUDIT2'
     # 1
     ix = _index(every); bad = [(rel(f), h) for f in files if rel(f) not in NAMING for h in _hits(f.read_text(encoding='utf-8', errors='replace'), ix)]

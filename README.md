@@ -188,6 +188,7 @@ Each of its findings has one written disposition (51 in all: 41 applied, 7 state
 | `research/lobbyist_gifts_map.csv`, `lobbyist_gifts_map_summary.tsv` | lobbyists' own gifts to the 24 members while the firm was registered for Nvidia, for Anthropic or for a group Open Philanthropy funds: one rule for all three sides, each gift with the address of its official report; no lobbyist is named (each has a number) |
 | `research/nv8_lookup_counts.tsv` | the counts behind the figure's sentences on analysts, bylines, banks and remarks (no names) |
 | `research/nv8_name_search_counts.tsv`, `nv8_s6_counts.tsv` | the counts behind the sentences on the whole-name search of the look-ups and on the search of the actors' own channels (no names) |
+| `research/nv8_s6_items.tsv` | the search of the actors' own channels, line by line: for each chip searched, whether its original was read, could not be opened or was not found, and why; for each actor, each channel and item found and what was done with it (`scripts/as_built/nv8_s6_counts.py` counts it) |
 | `research/nv8_remark_verdicts.tsv` | the second audit's verdict on each remark of a drawn actor found on two or more pages: carried by a chip, in part, or not (keys only, no text) |
 | `research/anthropac_by_recipient.csv`, `anthropac_party.csv`, `pacs_by_member.csv` | AnthroPAC's contributions by recipient and by party; company PAC money by member |
 | `research/chip_bills.csv`, `lobbying_bill_reports.csv` | the chip-export bills and the lobbying reports that name them |
