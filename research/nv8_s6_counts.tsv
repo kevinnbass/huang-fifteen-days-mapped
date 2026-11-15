@@ -1,10 +1,11 @@
 what	count
 actors whose own channels were searched	77
-actors: an item on the matter was read	32
-actors: links located, none could be read	0
-actors: nothing on the matter on a channel that could be read	29
-actors: of those, the only item found does not mention the matter	4
-actors: no channel could be read	16
+actors: an item about the affair is held and was read	32
+actors: the reader matched an item about the affair to a chip, and the project holds no copy	0
+actors: links located, none could be read	2
+actors: only items that are not about the affair or not their own	4
+actors: nothing found on a channel that could be read	25
+actors: no channel could be read	14
 chips whose original was searched for	127
 chips: original read and cited on the chip	35
 chips: original carries the first of the chip's two remarks	1

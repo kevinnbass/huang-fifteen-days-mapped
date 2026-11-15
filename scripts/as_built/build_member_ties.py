@@ -52,6 +52,7 @@ def span(ds):
 
 
 # Clients of lobbying firms, as the lobbyists' gift lines name them (audit of Nov 14, 2026: "the network" named no one)
+NARROW_LOBBY_LINE = False       # the line from the congress set's narrower table of lobbyists' gifts; replaced by step 5b for all three sides (Nov 15, 2026)
 LOBBY_CLIENT = [('ANTHROPIC', 'Anthropic'), ('OPEN PHILANTHROPY ACTION FUND', "Open Philanthropy's action fund"), ('AMERICANS FOR RESPONSIBLE INNOVATION', 'Americans for Responsible Innovation'),
                 ('CENTER FOR AI SAFETY ACTION FUND', "the Center for AI Safety's action fund"), ('ENCODE AI', 'Encode AI (no Open Philanthropy award on record)'), ('FATHOM', 'Fathom (no grant on record here)'), ('FUTURE OF LIFE INSTITUTE', 'the Future of Life Institute'), ('IFP ACTION', 'IFP Action')]
 
@@ -80,7 +81,9 @@ def main():
     sitting = {b for b, r in MB.items() if r['cohort'] == 'sitting'}; assert len(sitting) == 535
     HM = {r['row_id']: r for r in pack('congress/research/hard_money.csv')}
     LCON = {r['row_id']: r for r in pack('congress/research/lobbyist_contributions.csv')}
-    LMAP = list(csv.DictReader(open(R / 'lobbyist_gifts_map.csv', newline=''))) if (R / 'lobbyist_gifts_map.csv').exists() else []      # written by scripts/build_lobbyist_gifts_map.py
+    LMAP = list(csv.DictReader(open(R / 'lobbyist_gifts_map.csv', newline='')))
+    REGISTERED_KEYS = {r['key'] for r in csv.DictReader(open(R / 'member_tie_ids.csv', newline=''))} if (R / 'member_tie_ids.csv').exists() else set()
+    LYEARS = {r['what']: r['value'] for r in csv.DictReader(open(R / 'lobbyist_gifts_map_summary.tsv', newline=''), delimiter='\t')}['years of reports read'] if (R / 'lobbyist_gifts_map.csv').exists() else []      # written by scripts/build_lobbyist_gifts_map.py
     RD = {r['row_id']: r for r in pack('congress/research/revolving_door.csv')}
     LOB = pack('congress/research/lobbying.csv')
     # ------------------------------------------------------------ committees -> members
@@ -540,7 +543,7 @@ def main():
                 f'A report names a bill; it does not say which office was contacted or what was asked.', src, q, n=f'{na}/{nn}', draw='line' if na else 'words')
         # 5. lobbyists' own gifts (second-hand: the client did not direct them)
         lc = [LCON[i] for i in m['t4b_ids'].split() if i in LCON]
-        if lc:
+        if lc and NARROW_LOBBY_LINE:
             usd = sum(float(r['amount_usd']) for r in lc); ds = [r['date'] for r in lc]
             yrs = min(ds)[:4] if min(ds)[:4] == max(ds)[:4] else f'{min(ds)[:4]}–{max(ds)[:4]}'
             lsrc = ['pack:congress/research/lobbyist_contributions.csv#' + r['row_id'] for r in lc]; lq = [r['amount_usd'] for r in lc]
@@ -568,17 +571,34 @@ def main():
                     lsrc, lq = lsrc0, lq0
             tie(key, 'lobbyist_gifts', 'network', '', 'none', lobby_words(lc, LOB, usd, yrs),
                 ptxt, lsrc, lq, usd=f'{usd:.2f}', n=str(len(lc)), first=min(ds), last=max(ds), draw='words')
-        # 5b. the same record for Nvidia (slice F1): lobbyists' own gifts made while their firm was registered to lobby for Nvidia, from the
-        # reports pulled firm by firm (research/lobbyist_gifts_map.csv); both measures are said, since the line above counts lobbyists once listed for a client
-        nvm = [r for r in LMAP if r['member'] == key and r['side'] == 'nvidia' and r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
-        if nvm:
-            usd = sum(float(r['amount_usd']) for r in nvm); ds = [r['date'] for r in nvm]; nm_ = [r for r in nvm if r['measure'] == 'named']; nusd = sum(float(r['amount_usd']) for r in nm_)
+        # 5b. lobbyists' own gifts, one record and one rule for the three sides (research/lobbyist_gifts_map.csv, reports of 2020 to 2026):
+        # gifts made while the lobbyist's firm was registered for the client; both measures are said. A firm registered for two clients
+        # puts one gift on two sides, so the sides are never added up. Until the last reading of Nov 15, 2026 the row showed Nvidia's
+        # firms from this table beside an earlier and narrower line for Anthropic's and the groups' (step 5, now off).
+        for side in ('anthropic', 'network', 'nvidia'):
+            sm = [r for r in LMAP if r['member'] == key and r['side'] == side and r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
+            if not sm:
+                # a line an audit has read is never dropped: where the earlier, narrower line has no gift under the common rule, the row says so
+                if f'{key}:lobbyist_gifts:{side}' in REGISTERED_KEYS:
+                    what = {'network': 'one of the groups', 'anthropic': 'Anthropic', 'nvidia': 'Nvidia'}[side]
+                    moved = [r for r in LMAP if r['member'] == key and r['side'] != side and r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
+                    assert moved, (key, side, 'a registered lobbyist line has no gift on any side of the shared table')
+                    tie(key, 'lobbyist_gifts', side, '', 'none', f'No gift on file from a lobbyist at a firm registered for {what}, 2020–2026',
+                        f'The lobbyists\' contribution reports of 2020 to 2026 show no gift to this member from a lobbyist at a firm then registered for {what}. A gift shown on this line before is counted on the line of the client the firm was registered for.',
+                        ['table:lobbyist_gifts_map.csv#' + r['item'] for r in moved], [r['amount_usd'] for r in moved], draw='words')
+                continue
+            if side == 'network':
+                cl = sorted({nice_ for r in sm for k_, nice_ in LOBBY_CLIENT if k_ in r['client'].upper()}); assert cl, (key, {r['client'] for r in sm})
+                who = cl[0] if len(cl) == 1 else ', '.join(cl[:-1]) + ' and ' + cl[-1]; short = 'those clients' if len(cl) > 1 else 'that client'
+            else:
+                who = short = side.capitalize()
+            usd = sum(float(r['amount_usd']) for r in sm); ds = [r['date'] for r in sm]; nm_ = [r for r in sm if r['measure'] == 'named']; nusd = sum(float(r['amount_usd']) for r in nm_)
             yrs = min(ds)[:4] if min(ds)[:4] == max(ds)[:4] else f'{min(ds)[:4]}–{max(ds)[:4]}'
-            one = len(nvm) == 1
-            listed = (f'{money(nusd)} of it from lobbyists listed for Nvidia then' if nm_ and len(nm_) < len(nvm) else 'all of it from lobbyists listed for Nvidia then' if nm_ else 'none of it from a lobbyist listed for Nvidia then')
-            tie(key, 'lobbyist_gifts', 'nvidia', '', 'none', f'{"A lobbyist at a firm" if one else "Lobbyists at firms"} registered for Nvidia: {money(usd)} of their own money, {yrs}; {listed}',
-                f'{money(usd)} in {len(nvm)} gift{"" if one else "s"} from lobbyists\' own pockets, {yrs}, made while their firms were registered to lobby for Nvidia; {listed}. Second-hand: no client directed them.',
-                ['table:lobbyist_gifts_map.csv#' + r['item'] for r in nvm], [r['amount_usd'] for r in nvm], usd=f'{usd:.2f}', n=str(len(nvm)), first=min(ds), last=max(ds), draw='words')
+            one = len(sm) == 1
+            listed = (f'{money(nusd)} of it from lobbyists listed for {short} then' if nm_ and len(nm_) < len(sm) else f'all of it from lobbyists listed for {short} then' if nm_ else f'none of it from a lobbyist listed for {short} then')
+            tie(key, 'lobbyist_gifts', side, '', 'none', f'{"A lobbyist at a firm" if one else "Lobbyists at firms"} registered for {who}: {money(usd)} of their own money, {yrs}; {listed}',
+                f'{money(usd)} in {len(sm)} gift{"" if one else "s"} from lobbyists\' own pockets, {yrs}, made while their firms were registered to lobby for {who}; {listed}. Second-hand: no client directed them.',
+                ['table:lobbyist_gifts_map.csv#' + r['item'] for r in sm], [r['amount_usd'] for r in sm], usd=f'{usd:.2f}', n=str(len(sm)), first=min(ds), last=max(ds), draw='words')
     # 6. ties that rest on one named record each
     RDP = 'pack:congress/research/revolving_door.csv#'
     for member, kind, rid, passage, when in L.STAFF:

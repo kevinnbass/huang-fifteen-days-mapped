@@ -94,19 +94,20 @@ def main():
           and f'quote {n_an} analysts' in flat and f'{look[("bylines", "different names")]} different names' in flat and f'carry {look[("bylines", "pairs of outlet and name")]} bylines' in flat,
           f'the counts of analysts and bylines the figure prints are those of research/nv8_lookup_counts.tsv ({n_an} analysts, experts and research groups; {look[("bylines", "different names")]} byline names)')
     nb = look[('banks', 'of those, with an analyst, a note or an executive quoted on the saved pages')]
-    check(f"nalysts or executives of {nb} of those banks are quoted" in flat and f"and named {look[('banks', 'named by Quartz on Sep 4, 2026 as lenders to Anthropic')]} banks in it" in flat
+    check(f"nalysts, or executives in office, of {nb} of those banks are quoted" in flat and f"and named {look[('banks', 'named by Quartz on Sep 4, 2026 as lenders to Anthropic')]} banks in it" in flat
           and f"{look[('analysts', 'not drawn: at a bank, not drawn')]} entries that are one of the banks below or its analysts" in flat
           and f"and the other {look[('analysts', 'not drawn: none found')]}, for whom no record was found" in flat
           and look[('bylines', 'different names drawn')] == 5 and 'five have a tie on record' in flat,
           f'the counts of banks ({nb} of the lenders reported have someone quoted) and of bylines drawn the figure prints are those of research/nv8_lookup_counts.tsv')
     ns = {r['what']: int(r['count']) for r in table('nv8_name_search_counts.tsv')}; oc = {r['what']: int(r['count']) for r in table('nv8_s6_counts.tsv')}
-    check(f"{ns['people: different names searched']:,} people's names of two to four words" in flat and f"and {ns['others: different names searched']} firm names and one-word names" in flat
+    check(f"{ns['people: different names searched']:,} names of two to four words" in flat and f"and {ns['others: different names searched']} other firm names and one-word names" in flat
           and f"each of the {oc['actors whose own channels were searched']} actors who had spoken" in flat
-          and f"read on the channels of {oc['actors: an item on the matter was read']}; {oc['actors: nothing on the matter on a channel that could be read']} had a channel that could be read" in flat
+          and f"is held and was read for {oc['actors: an item about the affair is held and was read']} (" in flat
+          and f"{oc['actors: nothing found on a channel that could be read']} had a channel that could be read with nothing on it" in flat
           and f"for {oc['actors: no channel could be read']} no channel could be read" in flat
           and f"Of the {oc['chips whose original was searched for']} chips drawn before those searches, the original was read and is now cited for {oc['chips: original read and cited on the chip']}" in flat
-          and oc['actors: an item on the matter was read'] + oc['actors: links located, none could be read'] + oc['actors: nothing on the matter on a channel that could be read'] + oc['actors: no channel could be read'] == oc['actors whose own channels were searched'],
-          f"the counts the figure prints for the whole-name search ({ns['people: different names searched']} names) and for the search of own channels ({oc['actors whose own channels were searched']} actors) are those of research/nv8_name_search_counts.tsv and nv8_s6_counts.tsv")
+          and sum(v for k, v in oc.items() if k.startswith('actors: ')) == oc['actors whose own channels were searched'],
+          f"the counts the figure prints for the whole-name search ({ns['people: different names searched']} names) and for the search of own channels ({oc['actors whose own channels were searched']} actors, in six classes that add up) are those of research/nv8_name_search_counts.tsv and nv8_s6_counts.tsv")
     read = table('coverage_scope_read.tsv'); on = {r['url'] for r in read if r['finding'] == 'on the story'}
     check(on <= {c['url'] for c in cov} and f'{len(on)} are plainly on the story' in flat and f'{sum(r["finding"] == "not settled" for r in read)} could not be settled' in flat,
           f'the {len(on)} links a reading put on the story are among the pieces counted, and the figure prints that number (research/coverage_scope_read.tsv)')

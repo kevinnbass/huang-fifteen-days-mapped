@@ -1,0 +1,57 @@
+what,figure_says,you_find,agree,note
+analysts: quoted on the saved pages (a person or firm written two ways counted once),240,240,yes,225 analyst entries plus 15 drawn expert entries; the podcast host is kind other in the register and is explicitly included with experts in the figure.
+analysts: drawn,15,15,yes,
+"analysts: not drawn: at a bank, not drawn",13,13,yes,
+analysts: not drawn: cannot tell,1,1,yes,
+analysts: not drawn: none found,201,201,yes,
+analysts: not drawn: none found for the person,3,3,yes,
+analysts: not drawn: not drawn,7,7,yes,
+bylines: pairs of outlet and name,729,729,yes,
+bylines: different names,677,677,yes,
+bylines: pairs that are an agency or not a person's name,72,72,yes,
+bylines: names that are an agency or not a person's name,67,67,yes,
+bylines: pairs: cannot tell,72,72,yes,
+bylines: pairs: drawn,5,5,yes,
+"bylines: pairs: name match, not settled",2,2,yes,
+bylines: pairs: none found,647,647,yes,
+"bylines: pairs: record of another kind, not drawn",3,3,yes,
+bylines: different names drawn,5,5,yes,
+"banks: named by Quartz on Sep 4, 2026 as lenders to Anthropic",17,17,yes,"Read the enumerated banks in WEQ733; facility is proposed, not a completed loan. The count table’s lenders label is stronger than the qualified figure sentence."
+"banks: of those, with an analyst, a note or an executive quoted on the saved pages",10,10,yes,Nine current bank affiliations cover all 13 bank-status entries; the tenth bank is represented by a former chief executive of Goldman Sachs. Say former as well as current. No current analyst of the 17 was left in none found in the register’s names/roles check.
+investors: quoted and described on the pages as holding or shorting Nvidia shares,2,2,yes,"The shareholder is the speaker’s firm, not a proved personal holding. The short-seller description occurs in a reader comment relaying MarketWatch, not the article’s own reporting. Two census cases reproduce with those source limits."
+"remarks: of drawn actors, on two or more pages",484,484,yes,
+"remarks: carried in other words, by the audit",54,54,yes,
+remarks: not his remark,3,3,yes,
+remarks: not of these days,23,23,yes,
+remarks: not printed,3,3,yes,
+remarks: partly on a chip,24,24,yes,
+remarks: partly on chip,38,38,yes,
+remarks: printed on a chip,124,124,yes,
+"remarks: same statement as a chip, not printed",215,215,yes,
+whole-name search: register lines of analysts and bylines,954,954,yes,
+whole-name search: tables searched,85,not re-run,not independently recounted,The saved script declares an 85-file input corpus; the query list does not enumerate the files. No new evidence-set search was run.
+whole-name search: people: register lines searched,851,851,yes,"Arithmetic counts classifier strings, not necessarily people: at least 19 lines/18 different strings are non-person labels/firms under the register or the named bank/group identities."
+whole-name search: people: different names searched,797,797,yes,"Arithmetic counts classifier strings, not necessarily people: at least 19 lines/18 different strings are non-person labels/firms under the register or the named bank/group identities."
+whole-name search: people: register lines whose name occurs in a table,32,32,yes,"Arithmetic counts classifier strings, not necessarily people: at least 19 lines/18 different strings are non-person labels/firms under the register or the named bank/group identities."
+"whole-name search: others (firms, one-word names, longer labels among the analysts): register lines searched",34,34,yes,
+whole-name search: others: different names searched,34,34,yes,
+whole-name search: others: register lines whose name occurs in a table,13,13,yes,
+"whole-name search: not searched as a whole name (bylines that are an agency, a label or an address; analyst labels under four letters)",69,69,yes,Includes the three-letter RBC analyst label as well as byline agencies/labels/addresses; the footnote omits that short-analyst-label exception.
+"whole-name search: controls found, of 7",7,6 exported control identities; seventh result not exported,not independently recounted,Six of the seven controls have lines in the supplied hit table. The drawn Oxford researcher is added as a control outside the analyst/byline query population; the saved export carries no per-control result for him.
+own channels: actors whose own channels were searched,77,77,yes,"Arithmetic under the saved script; this is a record-status recount, not proof of the status."
+own channels: actors: an item on the matter was read,32,32,yes,"32 mechanically. Anthropic’s source is also refused/not saved, the Times is excluded despite full own originals, and general IPO/policy items are admitted when other off-topic items are excluded. A defensible content total needs those decisions; B-CHANNEL-READ/B-CHANNEL-TOPIC."
+"own channels: actors: links located, none could be read",0,0,yes,"Arithmetic under the saved script; this is a record-status recount, not proof of the status."
+own channels: actors: nothing on the matter on a channel that could be read,29,29,yes,"Arithmetic under the saved script; this is a record-status recount, not proof of the status."
+"own channels: actors: of those, the only item found does not mention the matter",4,4,yes,The 4 comprise three off-matter items and one on-matter article by another author. The footnote says not theirs or does not mention it; this count-table label is narrower and should be corrected.
+own channels: actors: no channel could be read,16,16,yes,"16 mechanically includes The New York Times, whose hand-saved own articles are now read and cited; FT’s comparable later save is treated as read. Not a consistent current-content count."
+own channels: chips whose original was searched for,127,127,yes,"Arithmetic under the saved script; this is a record-status recount, not proof of the status."
+own channels: chips: original read and cited on the chip,35,35,yes,"Arithmetic under the saved script; this is a record-status recount, not proof of the status."
+own channels: chips: original carries the first of the chip's two remarks,1,1,yes,"Arithmetic under the saved script; this is a record-status recount, not proof of the status."
+own channels: chips: original could not be opened,81,81,yes,"Arithmetic under the saved script; this is a record-status recount, not proof of the status."
+own channels: chips: original found by the reader and refused to the project (not saved),2,2,yes,"Arithmetic under the saved script; this is a record-status recount, not proof of the status."
+own channels: chips: original not found,8,8,yes,"Arithmetic under the saved script; this is a record-status recount, not proof of the status."
+three-slice to two-slice: unique texts missing,0,1,no,The sole missing string is the subtitle with three slices; its replacement says Both slices. No substantive evidence text is missing; the change also removes repeated copies of nodes/calendar labels.
+three-slice to two-slice: substantive texts missing,0,0,yes,"Compared parsed visible text sets, excluding comments, script, style and document/hover titles. This does not certify visual clipping or overlap in a browser."
+visible row identifiers,0,0,yes,Positive control: hidden CV0001 is detected in the HTML source.
+visible file names,0,0,yes,Parsed visible body text; the real figure file name exists as a control path but is not visible content.
+dated acts in interval,148,148,yes,MA147 uses the published-relay day with an explicit unknown-act-day statement and dashed edge; publication-day proxies are included under the stated rule.

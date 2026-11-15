@@ -72,6 +72,7 @@ def main():
                     for r in rs:
                         n_hit[tag] += 1
                         w.writerow([tag, r['register'], r['key'], n, r['status'], '; '.join(f'{k}:{v}' for k, v in hits[n].most_common()), '; '.join(f'{k}:{v}' for k, v in tied[n].most_common())])
+        w.writerows(['control', '', '', c, 'a name known to be in the sets', '; '.join(f'{k}:{v}' for k, v in hits[c].most_common()), '; '.join(f'{k}:{v}' for k, v in tied[c].most_common())] for c in CONTROLS)
     low = lambda d: len({n.lower() for n in d})
     counts = [('register lines of analysts and bylines', len(rows)), ('tables searched', len(files)),
               ('people: register lines searched', sum(map(len, people.values()))), ('people: different names searched', low(people)),

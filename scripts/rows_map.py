@@ -35,7 +35,7 @@ GROUPS = [
  ('admin', 'The administration', 'who gave the intelligence to reporters. The reports cite "people briefed on intelligence surveillance."', 'ST06', ''),
  ('nvidia', 'Nvidia', 'what the board\'s inquiry found; the saved accounts do not give its findings.', 'ST08', ''),
  ('shares', 'Share prices', 'any role for a rival chip maker: no document here connects one to the reports.', 'ST05', ''),
- ('anthropic', 'Anthropic', 'any statement by Anthropic on Huang beyond "declined to comment" (its newsroom and share-sale site, searched once on Nov 14, showed none; three SEC offering documents could not be saved), or any instruction, payment or message tied to the coverage.', 'ST03', ''),
+ ('anthropic', 'Anthropic', 'any statement by Anthropic on Huang beyond "declined to comment" (its newsroom and share-sale site, searched once on Nov 14, showed none; its share-sale filing and three more SEC documents could not be saved), or any instruction, payment or message tied to the coverage.', 'ST03', ''),
  ('labs', 'Another AI company', 'any part for OpenAI in the reports.', '', ''),
  ('voices', 'Other public voices', 'any part for them in the reports. Drawn: people outside politics and research who are quoted on three or more saved pages. Business with Nvidia is worded where a saved page states it; it was not looked up otherwise.', '', ''),
  ('abroad', 'China and Singapore', 'whether the intelligence assessment is correct. It has not been tested in public.', 'ST09', ''),
@@ -44,7 +44,7 @@ GROUPS = [
 ACTORS = [
  # key, group, name (as in the ties), tag, committee name in the FEC table ('' = none on file, None = not a candidate)
  ('nyt', 'papers', 'The New York Times', 'what it reported, from its own pages unless a chip says otherwise', None),
- ('wsj', 'papers', 'The Wall Street Journal', 'what it reported, from copies its licensed partners carry', None),
+ ('wsj', 'papers', 'The Wall Street Journal', 'what it reported, from its own page saved by hand and from copies its licensed partners carry', None),
  ('ft', 'papers', 'Financial Times', 'what it reported, from its own page', None),
  ('kubinec', 'bylines', 'Jack Kubinec', 'reporter, The Dispatch', None),
  ('perlo', 'bylines', 'Jared Perlo', 'reporter, NBC News', None),
@@ -256,9 +256,10 @@ ACTS = [
    'but NVIDIA is a very important company to the United States of America', "I don't want to see anything hurt in NVIDIA", 'Congress must immediately pass the AI OVERWATCH Act, Chip Security Act, MATCH Act, and Remote Access Security Act in the NDAA']),
  # ---- S1 of the gaps spec (Nov 14): acts of speakers who had no row; appended so that earlier row ids do not move
  ('rubio', '2026-11-08', 'Says he "can\'t comment on an internal corporate matter that\'s going on with Nvidia"', ['nbc-1108-investigation'], ['comment on an internal corporate matter']),
- ('bessent', '2026-11-05', 'Axios, as the Daily Caller relays it: in a Situation Room meeting he asks Lutnick "How come Megaspeed isn\'t on the entities list?" The Times reports the exchange too, as "described by people briefed on it"',
-  ['sw-dailycallercom-03', 'sw-dailycallercom-03', 'man-nyt-1111-02', 'man-nyt-1111-02'],
-  ['pressed Commerce Secretary Howard Lutnick in a Thursday White House Situation Room meeting', 'on the entities list?', 'Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick last week', 'took place at the White House on Thursday and was described by people briefed on it']),
+ ('bessent', '2026-11-05', 'Axios, as the Daily Caller relays it: in a Situation Room meeting he asks Lutnick "How come Megaspeed isn\'t on the entities list?" The Times reports the exchange too, as "described by people briefed on it", and prints a Commerce spokeswoman\'s denial that the conversation took place',
+  ['sw-dailycallercom-03', 'sw-dailycallercom-03', 'man-nyt-1111-02', 'man-nyt-1111-02', 'man-nyt-1111-02'],
+  ['pressed Commerce Secretary Howard Lutnick in a Thursday White House Situation Room meeting', 'on the entities list?', 'Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick last week', 'took place at the White House on Thursday and was described by people briefed on it',
+   'A spokeswoman for the Commerce Department denied that the conversation between Mr. Bessent and Mr. Lutnick had taken place']),
  ('commerce', '2026-11-11', 'Axios, as Gizmodo relays it: the president told Lutnick "let\'s get it done"; Lutnick replied "I\'ll develop some options and come back". Gizmodo adds that the administration denied to Axios and the Times that the confrontation took place',
   ['sw-gizmodocom-08', 'sw-gizmodocom-08', 'sw-gizmodocom-08'], ['develop some options and come back', 'at some point Trump told Lutnick', 'denied to both Axios and the Times that any such confrontation between Bessent and Lutnick had ever taken place']),
  ('commerce', '2026-11-12', 'A spokeswoman tells CNBC Bessent and Lutnick had "no such conversation"', ['sw-cnbccom-22'], ['Commerce Department spokeswoman Kristen Eichamer told CNBC that Bessent and Lutnick had "no such conversation"']),
@@ -301,10 +302,12 @@ ACTS = [
  ('coons', '2026-11-09', 'A post, as Australia\'s ABC reports it: "I\'m pushing to investigate Jensen Huang and Nvidia to determine whether our national security was compromised"',
   ['sw-abcnetau-03'], ['pushing to investigate Jensen Huang and Nvidia to determine whether our national security was compromised']),
  # the full reading of the saved pages (2026-11-14): a Times report of Nov 9 and the department's answer; one more public voice
- ('nyt', '2026-11-09', 'Reports that a Commerce Department investigation of Megaspeed "came to a sudden halt late last year" and was "transferred to the Justice Department", after Nvidia\'s general counsel emailed the investigators in August 2025',
-  ['sw-cnbccom-02', 'man-nyt-1109-03', 'man-nyt-1109-03', 'man-nyt-1109-03', 'man-nyt-1109-03'],
+ ('nyt', '2026-11-09', 'Reports that a Commerce Department investigation of Megaspeed "came to a sudden halt late last year" and was "transferred to the Justice Department", after Nvidia\'s general counsel emailed the investigators in August 2025. It says the transfer was "to avoid any potential compromise" of the investigation, that Justice "is conducting a criminal inquiry into Megaspeed", and that "it is not clear if other factors contributed"',
+  ['sw-cnbccom-02', 'man-nyt-1109-03', 'man-nyt-1109-03', 'man-nyt-1109-03', 'man-nyt-1109-03', 'man-nyt-1109-03', 'man-nyt-1109-03', 'man-nyt-1109-03'],
   ['the Times reported that the Commerce Department was investigating Megaspeed until August 2025, when the probe was abruptly transferred to the Department of Justice following outreach from Nvidia\'s general counsel about the matter',
-   'their work came to a sudden halt late last year', 'the case was abruptly transferred to the Justice Department last year', 'In August 2025, officials at the Commerce Department', 'received an email from Mr. Teter, the general counsel of Nvidia']),
+   'their work came to a sudden halt late last year', 'the case was abruptly transferred to the Justice Department last year', 'In August 2025, officials at the Commerce Department', 'received an email from Mr. Teter, the general counsel of Nvidia',
+   "in an effort to avoid any potential compromise of the government's investigation of Megaspeed", 'The Justice Department is conducting a criminal inquiry into Megaspeed',
+   "It is not clear if other factors contributed to the decision to suspend the Commerce Department's work"]),
  ('commerce', '2026-11-09', 'A spokesman for its export-control bureau tells CNBC: "BIS conducts all enforcement strictly by the book"',
   ['sw-cnbccom-02'], ['BIS conducts all enforcement strictly by the book']),
  ('kudlow', '2026-11-10', 'On his show: "Step down, Mr. Huang. Right now"', ['sw-mediaitecom-06'], ['Step down, Mr. Huang. Right now']),
@@ -313,15 +316,15 @@ ACTS = [
   ['fox-trump-successor'], ['there is only one man to take his place - TIM COOK of Apple. A Legend replaces a Legend!']),
  ('nvidia', '2026-11-08', 'Tells CNBC: "Today\'s news will not slow NVIDIA. Jensen is committed to continuing to lead NVIDIA as CEO without interruption". Tells CBS: "We trust that if we were the target of a genuine threat, the U.S. government would have notified us"',
   ['cnbc-1108-bipartisan', 'sw-cbsnewscom-01', 'sw-cbsnewscom-01'], ['Jensen is committed to continuing to lead NVIDIA as CEO without interruption', 'We trust that if we were the target of a genuine threat, the U.S. government would have notified us', 'told CBS News on Sunday']),
- ('huang', '2026-10-29', 'Tells Bloomberg: "Our relationship, our interactions, have been related to Megaspeed, and it was all completely normal and not unusual"; as Data Center Knowledge relays it, "We\'ve studied all their deployments of our GPUs and counted every one". Data Center Dynamics has him calling the story "groundless speculation"',
+ ('huang', '2026-10-29', 'Tells Bloomberg, as Taiwan News relays the interview (Bloomberg\'s saved page shows its opening only): "Our relationship, our interactions, have been related to Megaspeed, and it was all completely normal and not unusual"; as Data Center Knowledge relays it, "We\'ve studied all their deployments of our GPUs and counted every one". Data Center Dynamics has him calling the story "groundless speculation"',
   ['man-bbg-1029-01', 'sw-taiwannewscomtw-01', 'sw-datacenterknowledgecom-01', 'sw-datacenterknowledgecom-01', 'sw-datacenterdynamicscom-03', 'sw-datacenterdynamicscom-03'],
   ['Nvidia CEO Says Ties to Company in Spy Probe Were', 'Our relationship, our interactions, have been related to Megaspeed, and it was all completely normal and not unusual',
    'studied all their deployments of our GPUs and counted every one', 'in an October 29 Bloomberg interview', 'Huang called the story', 'groundless speculation']),
  ('huang', '2026-11-11', 'Reached by phone by the Times and asked about a second relationship: "I don\'t think you should be talking to me directly"',
   ['man-e1161e38dc19'], ["I don't think you should be talking to me directly"]),
- ('commerce', '2026-11-05', 'Axios, as ZeroHedge relays it: asked by Bessent why Megaspeed is not on the entity list, Lutnick answers "I don\'t know. I\'ll look into it" and warns that the controls "will start a trade war with China". In the Times\'s account he answers that Commerce "could now move quickly to put restrictions on Megaspeed in place". A Commerce spokeswoman: "This is false. Secretary Bessent and Secretary Lutnick had no such conversation"',
-  ['sw-zerohedgecom-10', 'sw-dailycallercom-03', 'sw-zerohedgecom-10', 'sw-zerohedgecom-10', 'sw-zerohedgecom-10', 'man-nyt-1111-02', 'man-nyt-1111-02'],
-  ["I don't know. I'll look into it", 'pressed Commerce Secretary Howard Lutnick in a Thursday White House Situation Room meeting', 'This is false. Secretary Bessent and Secretary Lutnick had no such conversation', 'while Lutnick warned that the controls', 'will start a trade war with China',
+ ('commerce', '2026-11-05', 'Axios, as ZeroHedge relays it: asked by Bessent why Megaspeed is not on the entity list, Lutnick answers "I don\'t know. I\'ll look into it". In a second report of Axios, of an Oval Office meeting with the president that day, he warns that the controls "will start a trade war with China". In the Times\'s account of the first exchange he answers that Commerce "could now move quickly to put restrictions on Megaspeed in place". A Commerce spokeswoman: "This is false. Secretary Bessent and Secretary Lutnick had no such conversation"',
+  ['sw-zerohedgecom-10', 'sw-zerohedgecom-10', 'sw-dailycallercom-03', 'sw-zerohedgecom-10', 'sw-zerohedgecom-10', 'sw-zerohedgecom-10', 'man-nyt-1111-02', 'man-nyt-1111-02'],
+  ['again in the Oval Office on Nov. 5', "I don't know. I'll look into it", 'pressed Commerce Secretary Howard Lutnick in a Thursday White House Situation Room meeting', 'This is false. Secretary Bessent and Secretary Lutnick had no such conversation', 'while Lutnick warned that the controls', 'will start a trade war with China',
    'Commerce Department could now move quickly to put restrictions on Megaspeed in place', 'A spokeswoman for the Commerce Department denied that the conversation between Mr. Bessent and Mr. Lutnick had taken place']),
  # every analyst and byline on the saved pages was looked up in the funding records (2026-11-14): two more analysts and one more byline have a record and a remark of these days
  ('king', '2026-11-12', 'Quartz reports her saying that export controls cover the physical transfer of chips but not remote access to them',
@@ -402,7 +405,7 @@ ACTS = [
   ['man-nyt-1111-02'] * 4, ['Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick last week', 'took place at the White House on Thursday and was described by people briefed on it',
                             'A spokeswoman for the Commerce Department denied that the conversation between Mr. Bessent and Mr. Lutnick had taken place', 'PUBLISHED: 2026-11-11']),
  # items on the actors' own channels found by the second own-channel search (lane s6_channels_3, Nov 15), each saved and read first
- ('moorhead', '2026-11-08', 'On BBC News. His firm\'s own summary of the broadcast: the short-term impact on Nvidia "will be negligible", but "any findings implicating U.S. national security could force Huang\'s departure"',
+ ('moorhead', '2026-11-08', 'On BBC News. His firm\'s own summary of the broadcast: the short-term operational impact on Nvidia "will be negligible", but "any findings implicating U.S. national security could force Huang\'s departure"',
   ['art-own-moorinsights-1109-bbc-1108'] * 5, ['Yesterday (U.S. Central time) I appeared on BBC News Business Today', 'the short-term operational impact on Nvidia will be negligible',
                                                "any findings implicating U.S. national security could force Huang's departure", 'an AI-generated, human-edited overview and summary', 'PUBLISHED: 2026-11-09']),
  ('moorhead', '2026-11-09', 'On ABC7 Bay Area. His firm\'s summary: "even if Huang stepped down, qualified internal candidates exist among dozens of direct reports". His weekly note that day: "I\'ve given about 20 press interviews in the span of a day since the news broke"',
@@ -415,7 +418,7 @@ ACTS = [
  ('newman', '2026-11-10', 'Hosts his firm\'s show with Shay Boloor on "what Nvidia\'s board investigation means for the AI trade"; the firm\'s page says "both hosts call it key-man risk". The recording was not heard',
   ['art-own-futurumequities-daily-shay'] * 4, ['Jensen Huang under review. What it means for Nvidia and the AI trade | Ep 64.', 'Futurum Equities November 10, 2026 8:05 am',
                                                "to break down what Nvidia's board investigation means for the AI trade", 'why both hosts call it key-man risk']),
- ('boloor', '2026-11-10', 'On his firm\'s show with Daniel Newman, as the firm\'s own post quotes him: "Nothing about the technology or roadmap has changed on NVIDIA. This is just purely a key man risk issue"',
+ ('boloor', '2026-11-10', 'Hosts his firm\'s show with Daniel Newman on Nvidia\'s board investigation. A later post of the firm about that show quotes him: "Nothing about the technology or roadmap has changed on NVIDIA. This is just purely a key man risk issue". The recording was not heard',
   ['art-own-futurumequities-daily-shay'] * 3, ['Nothing about the technology or roadmap has changed on NVIDIA. This is just purely a key man risk issue.', '-@StockSavvyShay', 'Futurum Equities November 10, 2026 8:05 am']),
  ('mowshowitz', '2026-10-29', 'In his weekly newsletter, on the Times report: "you should be entirely unshocked that such a spy is out there"; "this is me not updating"',
   ['art-own-thezvi-1029-ai-192'] * 5, ['We all know that Jensen Huang is at minimum the target of Chinese spy plots', 'you should be entirely unshocked that such a spy is out there', 'Yeah, this is me not updating',
@@ -678,6 +681,9 @@ ORIGINALS = {
  'MA123': (['art-own-whitehouse-1031-gaggle-halloween-party'], ['President Trump Gaggles with Press at a Halloween Party at Mar-a-Lago, Oct. 31, 2026']),
  'MA133': (['art-own-applepodcasts-chinatalk-emergency-pod'], ['November 9 EMERGENCY POD: Jensen and His Spy']),
 }
+# the Journal's own page of Oct 30, saved by hand on Nov 15 (two passages, on either side of a stock ticker that the PDF's text layer wove into the sentence)
+ORIGINALS['MA06'] = (ORIGINALS['MA06'][0] + ['man-923fe8754943'] * 2, ORIGINALS['MA06'][1] + ['have grown concerned that a data-center industry executive with close ties to Nvidia', 'Chief Executive Jensen Huang is a Chinese intelligence source, according to people familiar with the matter'])
+
 
 
 def rows():

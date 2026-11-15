@@ -80,7 +80,7 @@ STAKES = [
  ('Anthropic',
   'Backs "smart export controls on AI chips"; gave $40 million to Public First Action, for policy and education work, it says, not candidate elections; its PAC gave to candidates of both parties; has hired former administration officials.',
   'Set its IPO price range on Nov 10. Nvidia is one of seven companies that agreed to buy $26 billion of its stock alongside the offering.',
-  'Any statement by Anthropic on Huang beyond a spokesperson\'s "declined to comment" to Quartz (none in what could be read on Nov 14: its newsroom and share-sale site; three SEC offering documents could not be saved). Any instruction, payment or message tied to the coverage.',
+  'Any statement by Anthropic on Huang beyond a spokesperson\'s "declined to comment" to Quartz (none in what could be read on Nov 14: its newsroom and share-sale site; its share-sale filing and three more SEC documents could not be saved). Any instruction, payment or message tied to the coverage.',
   ['anthropic-pfa-1', 'anthropic-pfa-2', 'cnbc-1110-anthropic-ipo', 'anthropic-pfa-2', 'cnbc-1009-poach', FEC + 'FRIENDS OF SCHUMER', FEC + 'MAST FOR CONGRESS'],
   ['Supporting smart export controls on AI chips', 'bringing our total support to $40 million', 'Nvidia and Taiwan Semiconductor Manufacturing Co. to purchase $26 billion',
    'cannot be used to influence the election of any candidate', 'Sihao Huang joined Amodei\'s AI lab in September as head of frontier compute strategy', '3500.00', '2500.00']),
