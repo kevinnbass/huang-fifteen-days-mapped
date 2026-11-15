@@ -139,7 +139,10 @@ ACTORS = [
 # An actor who is no longer drawn. The entry stays in ACTORS_ALL and its acts keep their place in ACTS (a row id is never reused);
 # the figure, the gauge and the counts read ACTORS and skip those acts. Slice S8, Nov 15, 2026 (Kevin: "count them for everyone. don't
 # use duplicates. deduplicate."): the three saved pages that quote him are three copies of one article.
-WITHDRAWN = {'rao': 'quoted in one article, of which three copies had been saved and counted as three pages; under the three-article line once each article is counted once'}
+# The seventh reading (Nov 15, 2026): the three counted articles that name Sen. Scott are two reports, since the Times's live page of
+# Nov 12 repeats, in its own entry, the report of the Times's stand-alone article (the same opening sentence); the third is the Journal's.
+WITHDRAWN = {'rao': 'quoted in one article, of which three copies had been saved and counted as three pages; under the three-article line once each article is counted once',
+             'scott': 'named in three counted articles that are two reports: the live page of the New York Times for Nov 12 repeats the report of its stand-alone article, and the Wall Street Journal has the other; under the line of three separate reports'}
 ACTORS_ALL = ACTORS
 ACTORS = [a for a in ACTORS_ALL if a[0] not in WITHDRAWN]
 
@@ -161,7 +164,10 @@ ACTS = [
   ['sw-nbcnewscom-08', 'sw-nbcnewscom-08'], ['AUTHOR: Jared Perlo', 'Jensen Huang agrees to brief Congress on interactions with alleged spy']),
  ('bresnick', '2026-11-09', 'Tells CNBC what Democrats are likely to probe',
   ['sw-cnbccom-11'], ['said Sam Bresnick, a research fellow at the Center for Security and Emerging Technology']),
- ('fedasiuk', '', 'A podcast summary with no date is titled "Jensen Huang Must Resign"', ['biggo-fedasiuk'], ['Ryan Fedasiuk: Jensen Huang Must Resign']),
+ # dated on Nov 15, 2026: the summary page prints no date, and the episode's record inside the saved page carries its release time
+ # (a Unix time: Nov 10, 17:00 UTC). The row keeps its place and id (MA12).
+ ('fedasiuk', '2026-11-10', 'A podcast episode titled "Jensen Huang Must Resign" is released. The day is the release time in the data of a summary page that prints no date; the recording was not heard',
+  ['biggo-fedasiuk', 'biggo-fedasiuk'], ['Ryan Fedasiuk: Jensen Huang Must Resign', 'published_at: 1794330018']),
  ('fedasiuk', '2026-11-12', 'Tells Scientific American Huang is in "almost every aspect of the company"; writes at his institute\'s site that it is "a sad day for Nvidia", that "there is reason to be optimistic" about the company and that stepping down "was dignified, and ultimately the right decision"',
   ['sw-scientificamericancom-01', 'art-own-thefai-1112-nvidia-is-bigger-than-jensen-huang', 'art-own-thefai-1112-nvidia-is-bigger-than-jensen-huang', 'art-own-thefai-1112-nvidia-is-bigger-than-jensen-huang'],
   ['says Ryan Fedasiuk, senior fellow at the Foundation for American Innovation', 'decision to step down was dignified, and ultimately the right decision', 'It is a sad day for Nvidia', 'there is reason to be optimistic about the company']),
@@ -494,10 +500,11 @@ ACTS = [
   ['art-own-ricketts-statement-1109'] * 3, ['We need to know if Chinese spies received sensitive information and if Nvidia chips were illegally smuggled through Megaspeed', 'To start we must pass my MATCH Act and the Safe Chips Act', 'PUBLISHED: 2026-11-09T23:17:00+00:00']),
  ('hodges', '2026-11-12', 'Tells CNN: "we\'ve seen repeatedly the Chinese are incredibly adept at using people both wittingly and unwittingly"',
   ['art-fc-cnn-1112'] * 3, ["Joshua Hodges, a commissioner on the US-China Economic and Security Review Commission", "we've seen repeatedly the Chinese are incredibly adept at using people both wittingly and unwittingly", 'PUBLISHED: 2026-11-12']),
- ('conway', '2026-11-11', 'Calls for patience while the investigations conclude, in a post the San Francisco Standard times at 1:42 pm Pacific. The Post quotes a post of his: "As the swirl continues (which I believe should be taken seriously), let\'s pause for a moment and remember what Jensen has contributed to our industry"',
-  ['sw-sfstandardcom-09', 'sw-sfstandardcom-04', 'man-wapo-1112-02', 'man-wapo-1112-02'],
-  ['At 1:42 pm on Wednesday, just minutes before the Times broke its story, venture capitalist Ron Conway called for patience while investigations concluded', "Venture capitalist Ron Conway was among those rushing to Huang's defense, calling for patience and grace",
-   "As the swirl continues (which I believe should be taken seriously), let's pause for a moment and remember what Jensen has contributed to our industry", 'wrote venture capitalist Ron Conway, adding that the public should wait for various investigations by the government and the company to conclude']),
+ ('conway', '2026-11-11', 'Posts: "As the swirl continues (which I believe should be taken seriously), let\'s pause for a moment and remember what Jensen has contributed to our industry ... Now we should be patient and wait for investigations by the board of directors and any government authorities to conclude"',
+  ['art-own-x-2120633328441479589'] * 3 + ['sw-sfstandardcom-09', 'man-wapo-1112-02'],
+  ["As the swirl continues (which I believe should be taken seriously), let's pause for a moment and remember what Jensen has contributed to our industry", 'Now we should be patient and wait for investigations by the board of directors and any government authorities to conclude',
+   'Wed Nov 11 21:42:39 +0000 2026', 'At 1:42 pm on Wednesday, just minutes before the Times broke its story, venture capitalist Ron Conway called for patience while investigations concluded',
+   'wrote venture capitalist Ron Conway, adding that the public should wait for various investigations by the government and the company to conclude']),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
@@ -666,7 +673,7 @@ TIES_V7 = [
   ['He was a Winter Fellow with the Centre for the Governance of AI (GovAI)', '2500000', '600000', '400000']),
  # Kevin, 2026-11-15: an earlier exclusive from Anthropic counts as a tie ("yes include it as a tie"), for Anthropic only ("we are not including nvidia
  # exclusives. we are only doing anthropic"). The record is the relay held here; the FT's own article of that day and its byline are not held.
- ('Anthropic', 'Financial Times', 'context', 'its report of Sep 4, 2025 that Anthropic would stop selling AI services to Chinese-owned groups cited "an Anthropic executive familiar with the matter", as Bloomberg Law relays it. No record here shows who the sources of its Nov 6 report were',
+ ('Anthropic', 'Financial Times', 'context', 'its report of Sep 4, 2025 that Anthropic would stop selling AI services to groups majority-owned by Chinese entities cited "an Anthropic executive familiar with the matter", as Bloomberg Law relays it. No record here shows who the sources of its Nov 6 report were',
   ['art-lead-bloomberglaw-20250904-anthropic-china-ft'] * 3, ['the Financial Times reports', 'citing an Anthropic executive familiar with the matter', 'PUBLISHED: 2025-09-04']),
 ]
 # ---- slice S8 (Nov 15, 2026): ties of the members drawn since that day; numbered after TIES_V7
@@ -674,7 +681,7 @@ TIES_V8 = [
  ('AnthroPAC', 'Sen. Pete Ricketts', 'money', '$2,000 · Sep 25', [FEC + 'PETE RICKETTS FOR SENATE'], ['2000.00']),
  # the look-up of the names the pages saved since added (lane analysts_nv8_e, Nov 15). Identity: the commission's own page and Anthropic's
  # announcement both give his earlier post as national security adviser to the Speaker.
- ('Anthropic', 'Joshua Hodges', 'role', 'named by Anthropic on Aug 27, 2025 as a member of its National Security and Public Sector Advisory Council',
+ ('Anthropic', 'Joshua Hodges', 'role', 'named by Anthropic on Aug 27, 2025 as a member of its National Security and Public Sector Advisory Council; whether he sits on it now was not checked',
   [PK + 'congress/research/revolving_door.csv#RD038', 'art-tie-anthropic-advisory-council-20250827', 'art-tie-anthropic-advisory-council-20250827', 'art-tie-uscc-commission-members'],
   ['Anthropic National Security and Public Sector Advisory Council', 'Mr. Hodges was formerly the National Security Advisor to Speaker of the House Mike Johnson', 'National Security and Public Sector Advisory Council', 'Previously he was National Security Advisor to Speaker']),
 ]

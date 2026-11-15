@@ -15,7 +15,7 @@ LANE = Path('lanes/audit_nv8')
 RUN = ('fig_map.py', 'fig_common.py', 'rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_coverage.py', 'rows_ties.py', 'rows_events.py', 'story_scope.py', 'nv8_status.py', 'build_nv8.py', 'verify_nv8.py')
 AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'nv8_articles.py', 'nv8_page_dates.py', 'fec_lpac_keyed_check.py')
 TABLES = ('harvest.tsv', 'coverage_rows.tsv', 'coverage_day_pages.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'member_ties.csv', 'employee_gift_rates.csv', 'committee_keys.csv', 'joint_committees.csv',
-          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv', 'nv8_articles.tsv')
+          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv', 'nv8_articles.tsv', 'nv8_page_days_read.tsv', 'nv8_at_the_line.tsv')
 SHIM = '''"""Which saved articles name each member of Congress: the counts the figure prints ("named in N of the articles counted").
 In the builder's project this module reads the saved pages themselves; they are not in this copy (no article text is), so here
 the same answer is read from research/story_pages.tsv, which lists every saved page by address with the article it is a copy of,
@@ -96,6 +96,15 @@ def main(target):
         if r_.get('withdrawn'):
             rows.append({'row_id': r_['row_id'], 'table': 'dated act of an actor', 'actor': r_['actor'], 'date': r_['date'], 'reported_by_others': r_['reported'], 'withdrawn': r_['withdrawn'],
                          'drawn_text': r_['what'], 'src': list(r_['src']), 'q': [str(x) for x in r_['q']]})
+    # the same for the lines of record of a member no longer drawn (the lines are still true of him; they are kept and not drawn)
+    import rows_ties
+    ty_ = {r['row_id']: r for r in csv.DictReader(open(R / 'member_ties.csv', newline=''))}
+    for r_ in rows_ties.rows():
+        t_ = ty_.get(r_['row_id'])
+        if t_ and t_['member'] in rows_map.WITHDRAWN and t_['draw'] in ('line', 'words'):
+            rows.append({'row_id': r_['row_id'], 'table': 'tie of a member of Congress', 'member': t_['member'], 'type': t_['type'], 'side': t_['side'], 'usd': t_['usd'], 'first': t_['first'], 'last': t_['last'],
+                         'withdrawn': rows_map.WITHDRAWN[t_['member']], 'drawn_text': t_['words'], 'src': list(r_['src']) if isinstance(r_['src'], (list, tuple)) else [r_['src']],
+                         'q': [str(x) for x in (r_['q'] if isinstance(r_['q'], (list, tuple)) else [r_['q']])]})
     # row ids are frozen once published: every id of the last pushed table must still be here, as the same kind of row and, for an act
     # or a tie, about the same actor or the same two ends (a chip added in the middle of a list once shifted three published ids: Nov 15, 2026)
     pushed = ROOT.parent / 'code' / 'huang-fifteen-days-mapped' / 'research' / 'nv8_rows.tsv'      # the builder's clone of the public repository
@@ -129,8 +138,25 @@ def main(target):
     nd_n = {s: len(v) for s, v in nd_art.items()}
     assert len({p['article'] for p in pages if p['counted'] == 'yes'}) == n_pages and all(len(chk[s]) == len(hit[s]) for s in res), 'the page lines do not give the counts the figure prints'
     table(Tg, 'research/story_pages.tsv', pages, list(pages[0].keys()), '\t')
+    # the pairs of pages a reader opened, with the verdict and the kind of relation; the readers' sentences are left out because they name
+    # reporters, who are not drawn (the seventh reading's sentences are in audit2/h-counts_check.csv, which names none)
+    RELATIONS = ('same article at two addresses', 'syndicated copy', 'licensed copy', 'later version', 'live snapshots', 'same official statement', 'site furniture only', 'shared background',
+                 'live page carries the stand-alone report', 'different reports of one event', 'quotes the same document', 'one quotes the other', 'rewrite by another outlet', 'truncated address collision', 'no readable text')
+    prs = []
+    for r in csv.DictReader(open(R / 'nv8_article_pairs.tsv', newline='', encoding='utf-8'), delimiter='\t'):
+        rel = r['note'].split(': ', 1)[0] if r['note'].split(': ', 1)[0] in RELATIONS else ''
+        assert rel or 'seventh independent reading' in r['read_by'], ('a pair without a relation', r['page_a'], r['page_b'])
+        prs.append({'page_a': r['page_a'], 'page_b': r['page_b'], 'verdict': r['verdict'], 'relation': rel, 'used_for_joining': 'yes' if r['scope'] == 'all' else 'no', 'read_by': r['read_by']})
+    table(Tg, 'research/nv8_article_pairs.tsv', prs, list(prs[0].keys()), '\t')
     # how the members drawn were chosen: every name searched, its count, and whether it is drawn; then every other word met after a title
-    sel = [{'name': s, 'first_names_searched': ' / '.join(f), 'articles': len(hit[s]), 'drawn': 'yes' if len(hit[s]) >= 3 else 'no', 'why_not': '' if len(hit[s]) >= 3 else 'named in fewer than three articles'}
+    # everyone at three or four articles was read for separate reports on the matter (research/nv8_at_the_line.tsv, Nov 15, 2026)
+    line = {r['name']: r for r in csv.DictReader(open(R / 'nv8_at_the_line.tsv', newline=''), delimiter='\t')}
+    for s in member_mentions.FIRST:
+        assert len(hit[s]) not in (3, 4) or (s in line and line[s]['article_ids'].split() == sorted(hit[s])), ('a member at three or four articles has no reading, or the articles changed since it', s)
+    out_ = {s for s in member_mentions.FIRST if line.get(s, {}).get('drawn') == 'no'}
+    assert out_ == {a[2].split()[-1] for a in rows_map.ACTORS_ALL if a[0] in rows_map.WITHDRAWN and a[1] in ('senate', 'house')}, ('the readings at the line and the withdrawn members differ', out_)
+    sel = [{'name': s, 'first_names_searched': ' / '.join(f), 'articles': len(hit[s]), 'drawn': 'yes' if len(hit[s]) >= 3 and s not in out_ else 'no',
+            'why_not': line[s]['reading'] if s in out_ else '' if len(hit[s]) >= 3 else 'named in fewer than three articles'}
            for s, f in member_mentions.FIRST.items()]
     sel += [{'name': s, 'first_names_searched': ' / '.join(v[0]), 'articles': nd_n[s], 'drawn': 'no', 'why_not': 'a current member the articles name for other things: ' + v[2]} for s, v in member_mentions.NOT_DRAWN.items()]
     print('members named for other things, articles:', {r['name']: r['articles'] for r in sel if r['why_not'].startswith('a current member')})
@@ -208,12 +234,15 @@ def main(target):
           'd': ('findings.csv', 'figure_findings.csv', 'dispositions_check.csv', 'joint_committees_check.csv', 'money.md', 'remarks_check.csv', 'gaps.csv', 'controls.csv'),
           'e': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           'f': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
-          'g': ('findings.csv',)}
+          'g': ('findings.csv',),
+          # the seventh reading (slice S8: the pages saved since the first census, counts on articles); its look-up check, which names people who are not drawn, is held back
+          'h': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a'}
     audit2_notes = {}
     for t, names in A2.items():
-        L2 = LANE.parent / f'audit_nv8_s7{t}'
+        L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
         if (L2 / 'done' / 'DONE').exists() and (L2 / 'out' / 'REPORT.md').exists():
-            fix = lambda x: scrub(x).replace(f'lanes/audit_nv8_s7{t}', 'audit2')
+            fix = lambda x, n_=L2.name: scrub(x).replace(f'lanes/{n_}', 'audit2')
             put(Tg, f'audit2/BRIEF-{t}.md', fix((L2 / 'PROMPT.md').read_text()))
             put(Tg, f'audit2/REPORT-{t}.md', fix((L2 / 'out' / 'REPORT.md').read_text()))
             for name in names:
@@ -235,6 +264,9 @@ def main(target):
     disp6 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s7g.csv'
     if disp6.exists():
         put(Tg, 'audit2/DISPOSITIONS-g.csv', disp6.read_text())
+    disp7 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8a.csv'
+    if disp7.exists():
+        put(Tg, 'audit2/DISPOSITIONS-h.csv', disp7.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')

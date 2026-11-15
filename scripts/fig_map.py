@@ -83,11 +83,10 @@ def OWN_CHANNEL_WORDS():
     n_chips = sum(1 for r in rows_map.rows() if r['row_id'].startswith('MA')); searched = C['chips whose original was searched for']       # every chip ever drawn, one since withdrawn among them
     W = lambda n: rows_map.NUMBER.get(n, {7: 'seven', 8: 'eight', 9: 'nine'}.get(n, n))
     held, loc, cx = C['actors: an item about the affair is held and was read'], C['actors: links located, none could be read'], C['actors: only items that are not about the affair or not their own']
-    n_act = C['actors whose own channels were searched']; unsearched = [a[2] for a in rows_map.ACTORS if a[0] in ('hodges', 'conway')]
-    assert n_act == 80 and len(unsearched) == 2 and len(rows_map.WITHDRAWN) == 1 and C['actors: the reader matched an item about the affair to a chip, and the project holds no copy'] == 0 and loc == 2
+    n_act = C['actors whose own channels were searched']
+    assert n_act == 82 and len(rows_map.WITHDRAWN) == 2 and C['actors: the reader matched an item about the affair to a chip, and the project holds no copy'] == 0 and loc == 2
     return (f"The own channel (official site, newsroom, own feed or account) of each of the {C['actors whose own channels were searched']} actors who had spoken was searched once for these fifteen days by a reader from another model family: "
-            "on Nov 14 for the 63 then drawn, on Nov 15 for the 14 added since and then for the three members drawn later that day (the two share-price rows have none; one voice among the 80 is no longer drawn). "
-            "The two people drawn last, an adviser and an investor, have not had their own channels searched. "
+            "on Nov 14 for the 63 then drawn, on Nov 15 for the 14 added since and then for the three members and the two others drawn later that day (the two share-price rows have none; one voice and one member among the 82 are no longer drawn). "
             f"An item about the affair is held and was read for {held} (the three papers among them, through articles saved by hand); for {rows_map.NUMBER.get(loc, 'two')} links were located and none could be saved (Anthropic's SEC filings, a page of OpenAI's); "
             f"{rows_map.NUMBER.get(cx, cx)} had only items that do not mention the affair or are not their own; for {C['actors: nothing found on a channel that could be read']} a channel that could be read showed no item about the affair in these fifteen days; "
             f"for {C['actors: no channel could be read']} no channel could be read. An item is counted only where the project holds the page, and a share-sale filing or policy paper that a chip draws as context is not counted as an item about the affair. "
@@ -101,18 +100,34 @@ def OWN_CHANNEL_WORDS():
 
 
 def ARTICLE_WORDS():
-    """How the saved pages become the articles counted, with every number from research/nv8_articles.tsv (scripts/nv8_articles.py)."""
+    """How the saved pages become the articles counted, with every number from research/nv8_articles.tsv (scripts/nv8_articles.py),
+    research/nv8_article_pairs.tsv (the pairs a reader opened) and research/nv8_at_the_line.tsv (the people at three or four articles)."""
     rows = list(csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t'))
     n1 = sum(r['set'] == 'first census' for r in rows); n2 = len(rows) - n1
     arts = {r['article_id'] for r in rows}; cnt = {r['article_id'] for r in rows if r['counted'] == 'yes'}
-    why = Counter('after' if 'after the fifteen days' in r['why_not'] else 'before' if 'before the fifteen days' in r['why_not'] else 'no text' if 'no article text' in r['why_not'] else 'not news'
+    why = Counter('after' if 'after the fifteen days' in r['why_not'] else 'before' if 'before the fifteen days' in r['why_not'] else 'not the piece' if 'block or error page' in r['why_not'] else 'not news'
                   for r in rows if r['counted'] == 'no')
     assert sum(why.values()) == sum(r['counted'] == 'no' for r in rows) and why['not news'] == sum('not a news piece' in r['why_not'] for r in rows)
-    undated = sum(1 for r in rows if r['counted'] == 'yes' and not r['day'])
+    undated = sum(1 for r in rows if r['counted'] == 'yes' and not r['day']); part = sum(r['saved_in_part'] == 'yes' for r in rows)
+    in_copy = sum(r['day_basis'] == 'read in the saved copy' for r in rows)
+    pairs = list(csv.DictReader(open(R / 'nv8_article_pairs.tsv', newline=''), delimiter='\t'))
+    used = lambda p: p.get('scope') == 'all' or p.get('used_for_joining') == 'yes'        # the project's table, or the published one (which leaves out the readers' sentences)
+    read = sum(used(p) for p in pairs); unread = len(pairs) - read; same = sum(used(p) and p['verdict'] == 'same' for p in pairs)
+    assert all(p['verdict'] == 'cannot tell' for p in pairs if not used(p))
+    line = list(csv.DictReader(open(R / 'nv8_at_the_line.tsv', newline=''), delimiter='\t')); out = [x for x in line if x['drawn'] == 'no']
+    W_ = lambda n: {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve'}.get(n, n)
+    mem = sum(x['group'] == 'member' for x in line)
+    assert len(out) == 1 and out[0]['name'] == 'Scott' and 'scott' in rows_map.WITHDRAWN, 'the sentence below names one senator'
     return (f"Counts of who is named or quoted are counts of articles, each counted once: the {n1:,} pages saved by the first search and the {n2} saved since (the papers' own articles, saved by hand or in a licensed copy, and a few transcripts) "
-            f"are {len(arts):,} articles once copies of one article are joined (the same address, or four fifths of the shorter text inside the longer), and {len(cnt):,} of them are counted. "
-            f"A page is not counted when its own date, read as a U.S. Eastern day, is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when no text could be read ({why['no text']}) or when it is not a news piece ({why['not news']}); "
-            f"{undated} pages carry no date and are counted. A republished copy dated later than its original is counted only through a counted copy of the same article. ")
+            f"are {len(arts):,} articles once copies of one article are joined, and {len(cnt):,} of them are counted. Two pages are one article when they have the same address or when a reader judged them so: "
+            f"every pair that an address or the texts made alike was opened by a reader from another model family ({read} pairs: {same} the same article, as a syndicated or licensed copy, a later version or two snapshots of a live page; "
+            f"{read - same} different, such as a statement and the articles quoting it; {W_(unread)} more could not be read, being block pages that are not counted). "
+            "A page's day is the day of its first publication where the page shows one, and otherwise the day of the version saved, read as a U.S. Eastern day from the page's own stamp "
+            f"({in_copy} pages whose metadata and text carry none were read in their saved copy). "
+            f"A page is not counted when that day is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when the saved copy is a block or error page or another page in its place ({why['not the piece']}), "
+            f"or when it is a reference page, a company's home page or an image ({why['not news']}); {W_(undated)} pages carry no date and are counted, and {part} counted pages were saved only in part (a headline and description, a teaser, an excerpt, readers' comments under a story). "
+            f"The {W_(len(line))} people at three or four articles ({W_(mem)} members and {W_(len(line) - mem)} public voices) were each read for whether those articles are separate reports: "
+            "one senator, named in three articles that are two reports (a paper's live page repeats its own article), is not drawn; another stays at three through a reader's comment under a blog post, which quotes a report that is not among the saved pages. ")
 
 
 def LOBBY_WORDS():
@@ -300,7 +315,8 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
     # draw=words: words only (Nvidia's side of the same record, second-hand ties); draw=held: already a tie above (AnthroPAC)
     key2name = {a['key']: a['name'] for a in actors.values()}
     ty = {(r['member'], r['type'], r['side']): r['row_id'] for r in rows_ties.rows() if r['row_id'].startswith('TY')}
-    mties = rows_ties.ties(); gift_rate = rows_ties.rates(); worded = []; ty_used = []
+    mties = [t for t in rows_ties.ties() if t['member'] not in rows_map.WITHDRAWN]      # a member no longer drawn: the lines stay in the tables, with the reason, and are neither drawn nor counted here
+    gift_rate = rows_ties.rates(); worded = []; ty_used = []
     assert all(gift_rate[s]['basis'].startswith('FEC lines') for s in ('anthropic', 'nvidia')) or PARTIAL, 'both companies\' employee gifts must come from the same FEC pull'
     pac_drawn = {r['b'] for r in ties if r['a'] == 'AnthroPAC'}
     for t in mties:
@@ -859,7 +875,7 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             'Where a chip rests on one outlet\'s account of another\'s report, it says so. Grant figures are awards, not payments traced to a bank. An announced ad is not proof that it ran. '
             'Nvidia\'s board said on Nov 8 it had "no reason to believe" national security or company secrets were compromised, and NBC reported on Nov 12 that Alice Huang\'s "precise role" remained unclear. '
             + esc(ARTICLE_WORDS()) +
-            f'Members of Congress drawn are every current member named in three or more of those {n_pages:,} articles for something said or done about the matter in these days, '
+            f'Members of Congress drawn are every current member named in three or more of those {n_pages:,} articles, as separate reports, for something said or done about the matter in these days, '
             'and one senator (Cotton) whom they name that often for a letter on Megaspeed a year earlier; each one\'s count is in their row. '
             'Six others named that often are not drawn, because the pages name them for other things: a leadership vote, a lost election, an impeachment bid and other inquiries. '
             'The count for every name searched is published with the figure\'s tables. '
@@ -890,7 +906,7 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             'Its support of institutions whose people are drawn is worded in their rows (CSET, CNAS, the Council on Foreign Relations); the donor lists of Brookings and 80,000 Hours do not name it, and a reader from another model family found it on none of the lists that IAPS, the Foundation for American Innovation, the Institute for Progress and the Tarbell Center publish, most of which are partial. '
             'Quoted people with a past post at Nvidia or paid work for it are drawn (Moorhead, Newman, Boloor, Yoo; both companies support Barez\'s research), and business with Nvidia that a saved page states is worded for two public voices (Musk, Delangue). '
             'Looked for and not established: a witness from Nvidia before these members\' committees, advertising aimed at their districts, a seat on their advisory bodies. Those searches have gaps: the ad libraries could not be read, the search of the records held ended with 3,839 hits unread, and the web search left 491 targets unopened. '
-            'The map still starts from Anthropic and Open Philanthropy at the left of each slice, so the number of lines says nothing about either company\'s influence. The Times\'s and the FT\'s reports are cited from their own articles, saved by hand; the Journal\'s own site turns away automated readers: its report of Oct 30 is cited from its own page, saved by hand, and from the copy a licensed partner carries (Tiger Brokers), its report of Nov 11 from a partner\'s copy (the Greek paper To Vima). An earlier exclusive that a paper drew from an Anthropic executive is drawn as a tie in that paper\'s row: one is on record, the FT\'s of Sep 2025, known here through another outlet\'s account of it. The papers\' earlier reporting was not searched for others, and exclusives from Nvidia were not looked up. '
+            'The map still starts from Anthropic and Open Philanthropy at the left of each slice, so the number of lines says nothing about either company\'s influence. The Times\'s and the FT\'s reports are cited from their own articles, saved by hand; the Journal\'s own site turns away automated readers: its report of Oct 30 is cited from its own page, saved by hand, and from the copy a licensed partner carries (Tiger Brokers), its report of Nov 11 from a partner\'s copy (the Greek paper To Vima). An earlier report that a paper attributed to an Anthropic executive is drawn as a tie in that paper\'s row: one is on record, the FT\'s of Sep 2025, known here through another outlet\'s account of it, which does not say whether the FT alone had it. The papers\' earlier reporting was not searched for others, and reports attributed to Nvidia executives were not looked up. '
             + OWN_CHANNEL_WORDS() +
             f'<b>Source:</b> {n_story:,} links from saved aggregator pages; saved reports, posts and releases; committee filings; rows held in the congress, lineage, toner and evaluators packs. Aggregator pages for Oct 29 to Nov 12 were retrieved on Nov 12 and Nov 14, 2026; other sources were saved Nov 12 to 15, 2026; rows of the packs carry their own earlier dates. {DRAFT}')
     title = 'Fifteen days, mapped: the coverage, who acted, and the documented ties'

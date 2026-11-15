@@ -1,0 +1,4 @@
+row_id_or_key,source,what_failed
+TY148 TY149 TY150,public/scripts/as_built/build_lobbyist_gifts_map.py,File absent from the frozen copy; accepted versus refused honoree spelling cannot be independently read.
+TY148 TY149 TY150,public/research/lobbyist_gifts_map.csv,"honoree_as_written column promised by the brief is absent. Item keys and amounts are available, but shared-surname attribution is unresolved."
+B3 extra attempted pair,art-fc-ft-1107-romantic; art-fc-ft-1112-singapore,"Saved automatic fetches contain only 403 Security Verification pages. Recorded as unread, never as evidence that the articles are the same or different. A readable replacement pair was selected."

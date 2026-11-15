@@ -2,15 +2,21 @@
 
 Used by scripts/nv8_articles.py so that a piece dated after Nov 12, 2026 is not counted (Kevin, 2026-11-15: "don't add the pieces
 dates 13 and 14"). Rules, in order; the first that applies gives the day, and the basis names it:
-  header stamp the publication stamp the page's own metadata carries, as a U.S. Eastern day where it has a time and an offset;
   read by hand a day read in the page and entered below with the words it was read from;
-  address      the page's address carries its day (/2026/11/13/, /20250227_);
+  read in the saved copy
+               a page whose metadata and text carry no stamp: the day read in its saved HTML or PDF (the date under the headline, the
+               publication time in the page's data), listed with the exact words in research/nv8_page_days_read.tsv;
   post         a post on X: the stamp in its saved record, as a U.S. Eastern day;
   yesterday, hours ago
                a hand-saved FT page prints "Published YESTERDAY" or "Published 17 HOURS AGO" beside the browser's print time
                (this computer's clock, U.S. Central): the day that works out to, U.S. Eastern;
-  stamp line   a hand-saved page (a PDF printed from the publisher's site) carries a stamp near its top: "Published NOV 12 2026",
-               "Updated Nov. 13, 2026 11 01 am ET", "Nov. 12, 2026". Where a page gives "Updated", that is the day of the version saved;
+  stamp line   what the page itself prints. A hand-saved page (a PDF printed from the publisher's site) is read from the stamps near its
+               top, before its header: "Published NOV 12 2026", "Nov. 12, 2026", "Updated Nov. 13, 2026 11 01 am ET". A fetched page
+               with no stamp in its metadata is read from a stamp that follows Published, Updated or Posted in its text.
+               ONE POLICY FOR ALL PAGES: the day of first publication where the page shows one; where it shows only "Updated", the day
+               of the version saved (so an article shown only as updated after Nov 12 is not counted, whenever it first ran);
+  header stamp the publication stamp the page's own metadata carries, as a U.S. Eastern day where it has a time and an offset;
+  address      the page's address carries its day (/2026/11/13/, /20250227_);
   page time    a licensed partner's copy carries one time of its own (its zone is not stated; the day is taken as given);
   title        an official transcript whose title carries its day;
   none         no day could be read: the page stays undated (and is counted).
@@ -84,51 +90,97 @@ CENTRAL = ZoneInfo('America/Chicago')
 HAND = {
  'art-fc-spf-1030': ('2026-10-30', 'MINISTRY OF HOME AFFAIRS 30 October 2026 @ 11:13 PM'),
  'art-fc-rec-miti-1113': ('2026-11-13', '13 November 2026'),
+ 'mha-clarification-a': ('2026-10-31', 'Clarification Statement on Wall Street Journal’s Article 31 October 2026'),      # the page's own label; the statement's timing is on the chip
 }
+# read on 2026-11-15 in the saved copy of each first-census page whose metadata and text carry no stamp (the seventh reading found readable
+# dates on pages listed as undated): research/nv8_page_days_read.tsv gives the day, the exact words and where they stand
+HAND_READ = {}
+_hr = P.parent / 'nv8_page_days_read.tsv'
+if _hr.exists():
+    import csv as _csv
+    for _r in _csv.DictReader(open(_hr, newline='', encoding='utf-8'), delimiter='\t'):
+        assert _r['page_id'] not in HAND, _r['page_id']
+        HAND_READ[_r['page_id']] = (_r['day'], _r['words_read'])
 flat = lambda s: re.sub(r'\s+', ' ', s)
 
 
+STAMPS = re.compile(rf"(?:\b(Published On|Published|Updated|Posted)\b:?\s+)?\b((?:{MONTHS})\.?\s+\d{{1,2}}(?:st|nd|rd|th)?,?\s+20\d\d|\d{{1,2}}\s+(?:{MONTHS})\.?,?\s+20\d\d)((?:[ ,]+(?:at\s+)?\d{{1,2}}[: ]\d\d\s*(?:[ap]\.?m\.?)?)?(?:\s*(?:E[SD]?T|IST|UTC|GMT))?)", re.I)
+ZONES = {'ist': timedelta(hours=5, minutes=30), 'utc': timedelta(0), 'gmt': timedelta(0)}
+
+
+def stamp_day(m):
+    """The U.S. Eastern day of one stamp: converted where it carries a time and a zone this table knows (IST, UTC); as given otherwise
+    (a stamp in Eastern time, or with no time or zone)."""
+    d = eastern_day(m.group(2))
+    tz = re.search(r'(\d{1,2})[: ](\d\d)\s*([ap])?\.?m?\.?\s*(IST|UTC|GMT)\b', m.group(3) or '', re.I)
+    if d in ('', '?') or not tz:
+        return d
+    h = int(tz.group(1)) % 12 + (12 if (tz.group(3) or '').lower() == 'p' else 0) if tz.group(3) else int(tz.group(1))
+    y, mo, da = map(int, d.split('-'))
+    return datetime(y, mo, da, h, int(tz.group(2)), tzinfo=timezone(ZONES[tz.group(4).lower()])).astimezone(ET).date().isoformat()
+
+
+def printed_day(head, keyword_only):
+    """(day, words) from the stamps a page prints near its top. The day of first publication where the page shows one ("Published ...", or a
+    plain date line that comes before any "Updated"); the day of the version saved where it shows only "Updated ...". With keyword_only
+    (a fetched web page, where a bare date is often a banner or a teaser) only a stamp that follows Published, Updated or Posted counts."""
+    ms = [m for m in STAMPS.finditer(head) if stamp_day(m) not in ('', '?') and (m.group(1) or not keyword_only)]
+    if not ms:
+        return '', '', False
+    pub = [m for m in ms if (m.group(1) or '').lower().startswith(('published', 'posted'))]
+    first = ms[0]
+    pick = pub[0] if pub else first
+    return stamp_day(pick), flat(pick.group(0)), bool(pick.group(1))
+
+
 def day_of(pid, url, title, given):
-    """(day, basis, the words it was read from)"""
-    if given.strip():
-        d = eastern_day(given)
-        return ('', 'stamp not read', given) if d == '?' else (d, 'header stamp', given)
+    """(day, basis, the words it was read from). One rule for every page (reading of Nov 15, 2026, lane audit_nv8_s8a): the day of first
+    publication where the page shows one, else the day of the version saved. A hand-saved page is read from what it prints, before its
+    header (the header of a hand-saved page was typed from a list and was a day off for nine pages)."""
     f = P / pid / 'text.txt'
+    if not f.exists():
+        f = P / pid / 'text.reextract.txt'
     whole = f.read_text(errors='replace') if f.exists() else ''
     body = whole.split('\n\n', 1)[1] if '\n\n' in whole[:1500] else whole
     if pid in HAND:
-        assert flat(HAND[pid][1]) in flat(whole), pid
+        b = P / pid / 'body.html'
+        assert flat(HAND[pid][1]) in flat(whole) or (b.exists() and flat(HAND[pid][1]) in flat(re.sub(r'<[^>]+>', ' ', b.read_text(errors='replace')))), pid
         return HAND[pid][0], 'read by hand', HAND[pid][1]
-    m = re.search(r'/(20\d\d)/(\d\d)/(\d\d)/|/(20\d\d)(\d\d)(\d\d)_', url or '')
-    if m:
-        g = [x for x in m.groups() if x]
-        return '-'.join(g), 'address', m.group(0)
+    if pid in HAND_READ:
+        b = P / pid / 'body.html'
+        assert flat(HAND_READ[pid][1]) in flat(whole) or (b.exists() and flat(HAND_READ[pid][1]) in flat(b.read_text(encoding='utf-8', errors='replace'))), pid
+        return HAND_READ[pid][0], 'read in the saved copy', HAND_READ[pid][1]
     if 'x.com/' in (url or ''):
         m = re.search(r'"created_at":\s*"([^"]+)"', whole)
         if m:
             return datetime.strptime(m.group(1), '%a %b %d %H:%M:%S %z %Y').astimezone(ET).date().isoformat(), 'post', m.group(1)
+    addr = re.search(r'/(20\d\d)/(\d\d)/(\d\d)/|/(20\d\d)(\d\d)(\d\d)_', url or '')
     if pid.startswith('man-'):
-        head = flat(body[:3000]); pr = PRINTED.search(head)
+        head = flat(body[:3500]); pr = PRINTED.search(head)
         m = re.search(r'Published (YESTERDAY|(\d{1,2}) HOURS? AGO)', head)
         if m and pr:
             when = datetime(2000 + int(pr.group(3)), int(pr.group(1)), int(pr.group(2)), int(pr.group(4)), int(pr.group(5)), tzinfo=CENTRAL)
             if m.group(2):
                 return (when - timedelta(hours=int(m.group(2)))).astimezone(ET).date().isoformat(), 'hours ago', f'{m.group(0)}; printed {pr.group(0)}'
             return (when.date() - timedelta(days=1)).isoformat(), 'yesterday', f'{m.group(0)}; printed {pr.group(0)}'
-        ms = list(STAMP.finditer(head))
-        if ms:
-            upd = [x for x in ms if (x.group(1) or '').lower() == 'updated']
-            x = upd[0] if upd else ms[0]
-            d = eastern_day(x.group(2))
-            if d not in ('', '?'):
-                return d, 'stamp line', x.group(0)
+        d, words, keyed = printed_day(head, keyword_only=False)
+        known = eastern_day(given) if given.strip() else ('-'.join(x for x in addr.groups() if x) if addr else '')
+        near = known in ('', '?') or abs((date.fromisoformat(d) - date.fromisoformat(known)).days) <= 2 if d else False
+        if d and (keyed or near):        # a bare date far from the page's header or address is something else (a photo caption gave Oct 21 for one page)
+            return d, 'stamp line', words
+    if given.strip():
+        d = eastern_day(given)
+        if d != '?':
+            return d, 'header stamp', given
+    if addr:
+        return '-'.join(x for x in addr.groups() if x), 'address', addr.group(0)
     b = P / pid / 'body.html'
     if b.exists() and re.search(r'itiger\.com|webull\.com', url or ''):
-        t = b.read_text(errors='replace')
-        ms = sorted(set(re.findall(r'20\d\d-\d\d-\d\d \d\d:\d\d', t)))
+        tt = b.read_text(errors='replace')
+        ms = sorted(set(re.findall(r'20\d\d-\d\d-\d\d \d\d:\d\d', tt)))
         if len(ms) == 1:
             return ms[0][:10], 'page time', ms[0]
-        ms = sorted(set(re.findall(r'"newsTime":(\d{13})', t)))
+        ms = sorted(set(re.findall(r'"newsTime":(\d{13})', tt)))
         if len(ms) == 1:
             return datetime.fromtimestamp(int(ms[0]) / 1000, timezone.utc).astimezone(ET).date().isoformat(), 'page time', f'newsTime {ms[0]}'
     m = re.search(rf"\b((?:{MONTHS})\s+\d{{1,2}},\s+20\d\d)\s*$|\b(\d{{1,2}}\s+(?:{MONTHS}))\s*$", title or '', re.I)
@@ -136,4 +188,12 @@ def day_of(pid, url, title, given):
         d = eastern_day(m.group(1) or (m.group(2) + ' 2026'))
         if d not in ('', '?'):
             return d, 'title', title[-60:]
-    return '', 'none', ''
+    if not pid.startswith('man-'):                       # a fetched page with no stamp in its metadata: a stamp after Published, Updated or Posted in its text
+        texts = [flat(body[:8000])]
+        if b.exists():
+            texts.append(flat(re.sub(r'<[^>]+>', ' ', re.sub(r'(?s)<(script|style)[^>]*>.*?</\1>', ' ', b.read_text(errors='replace'))))[:60000])
+        for tx in texts:
+            d, words, _ = printed_day(tx, keyword_only=True)
+            if d:
+                return d, 'stamp line', words
+    return ('', 'stamp not read', given) if given.strip() else ('', 'none', '')

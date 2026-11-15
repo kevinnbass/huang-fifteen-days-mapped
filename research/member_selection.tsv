@@ -1,19 +1,19 @@
 name	first_names_searched	articles	drawn	why_not
-Warren	Elizabeth	67	yes	
-Coons	Chris / Christopher	44	yes	
+Warren	Elizabeth	65	yes	
+Coons	Chris / Christopher	43	yes	
 Cramer	Kevin	22	yes	
 Schumer	Chuck / Charles	21	yes	
 Banks	Jim	18	yes	
 Cornyn	John	8	yes	
 Kennedy	John	6	yes	
 Thune	John	10	yes	
-Mast	Brian	90	yes	
-Crawford	Rick	65	yes	
+Mast	Brian	89	yes	
+Crawford	Rick	64	yes	
 Meeks	Gregory / Greg	9	yes	
 Himes	Jim	8	yes	
 Huizenga	Bill	4	yes	
-Moolenaar	John	77	yes	
-Jeffries	Hakeem	26	yes	
+Moolenaar	John	76	yes	
+Jeffries	Hakeem	25	yes	
 Magaziner	Seth	4	yes	
 Subramanyam	Suhas	3	yes	
 Bacon	Don	3	yes	
@@ -24,7 +24,7 @@ Ricketts	Pete	4	yes
 McCaul	Michael / Mike	5	yes	
 Warner	Mark	3	yes	
 Cotton	Tom	5	yes	
-Scott	Tim	3	yes	
+Scott	Tim	3	no	The stand-alone article of the New York Times on his letters and the entry in its live page of the same day are one report (the same opening sentence); the Wall Street Journal has the other. Two separate reports: not drawn. His rows stay in the tables with this reason.
 Neal	Richard	3	yes	
 Jordan	Jim	12	no	a current member the articles name for other things: his election as House minority leader
 Stevens	Haley	7	no	a current member the articles name for other things: an endorsement and an absence from a vote
@@ -32,9 +32,9 @@ Massie	Thomas	9	no	a current member the articles name for other things: his bid 
 Garcia	Robert	5	no	a current member the articles name for other things: other inquiries he plans as incoming oversight chair
 Hyde-Smith	Cindy	5	no	a current member the articles name for other things: losing her Senate race
 Sanders	Bernie / Bernard	3	no	a current member the articles name for other things: the Senate leadership contest and his own AI bill
-Brian		64	not a name searched	a word found after a congressional title: part of a name searched above
-John		60	not a name searched	a word found after a congressional title: part of a name searched above
-Elizabeth		56	not a name searched	a word found after a congressional title: part of a name searched above
+Brian		63	not a name searched	a word found after a congressional title: part of a name searched above
+John		59	not a name searched	a word found after a congressional title: part of a name searched above
+Elizabeth		54	not a name searched	a word found after a congressional title: part of a name searched above
 Rick		26	not a name searched	a word found after a congressional title: part of a name searched above
 Chris		23	not a name searched	a word found after a congressional title: part of a name searched above
 Kevin		23	not a name searched	a word found after a congressional title: part of a name searched above
@@ -72,7 +72,6 @@ Baumgartner		2	not a name searched	a word found after a congressional title in t
 Before		2	not a name searched	a word found after a congressional title in two articles, under the three-article line
 Bernie		2	not a name searched	a word found after a congressional title in two articles, under the three-article line: part of a name searched above
 Chey		2	not a name searched	a word found after a congressional title in two articles, under the three-article line
-Democratic		2	not a name searched	a word found after a congressional title in two articles, under the three-article line
 Don		2	not a name searched	a word found after a congressional title in two articles, under the three-article line: part of a name searched above
 Foster		2	not a name searched	a word found after a congressional title in two articles, under the three-article line
 Gallego		2	not a name searched	a word found after a congressional title in two articles, under the three-article line
