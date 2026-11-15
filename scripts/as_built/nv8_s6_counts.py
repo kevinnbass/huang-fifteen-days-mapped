@@ -25,6 +25,8 @@ ORDER = ['held', 'reader', 'located', 'context', 'none', 'unread']
 
 def chip_kind(r):
     d = r['what_was_done']
+    if d.startswith('now cited (post): '):      # the reader could not open the post; the project saved it afterwards by its id
+        return 'post later'
     if d.startswith('now cited: '):             # the search did not yield the original; a saved copy of the publisher's page is cited now
         return 'cited later'
     if 'first remark' in d:
@@ -50,7 +52,7 @@ def main():
         if d.startswith('already on chip'):
             if key in CONTEXT_CHIPS:
                 return 'context'
-            if 'hand-saved' in d or ck.get(key, 'cited') in ('cited', 'cited later', 'part'):      # a chip outside the searches was drawn from its original
+            if 'hand-saved' in d or ck.get(key, 'cited') in ('cited', 'cited later', 'post later', 'part'):      # a chip outside the searches was drawn from its original
                 return 'held'
             return 'reader'
         if 'policy-blueprint' in d or 'does not mention the matter' in d or 'is about another report' in d or 'by another author' in d:
@@ -80,9 +82,11 @@ def main():
            ('actors: no channel could be read', c['unread']),
            ('chips whose original was searched for', len(chips)), ('chips: original read and cited on the chip', cc['cited']),
            ('chips: the search did not yield the original; a saved copy of the publisher\'s page is now cited', cc['cited later']),
+           ('chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited', cc['post later']),
            ('chips: original carries the first of the chip\'s two remarks', cc['part']), ('chips: original could not be opened', cc['blocked']),
            ('chips: original found by the reader and refused to the project (not saved)', cc['found, not saved']),
-           ('chips: original not found', cc['not found'])]
+           ('chips: original not found', cc['not found']),
+           ('chips still without their original that now also cite a paper\'s own report of the act', sum(1 for r in chips if r['what_was_done'].startswith('gap: ') and "a paper's own report of it" in r['what_was_done']))]
     with open(R / 'nv8_s6_counts.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t', lineterminator='\n'); w.writerow(['what', 'count']); w.writerows(out)
     for k, v in out:

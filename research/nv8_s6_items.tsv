@@ -27,9 +27,9 @@ original of a chip	MA08				blocked	now cited: the FT's own article saved by hand
 original of a chip	MA11				blocked	gap: blocked
 original of a chip	MA12				blocked	gap: blocked
 original of a chip	MA13				blocked	gap: blocked
-original of a chip	MA16		https://www.ft.com/content/afb6c960-a910-4d67-9588-73ba3bea5b06?syn-25a6b1a6=1		blocked	gap: blocked
+original of a chip	MA16		https://www.ft.com/content/afb6c960-a910-4d67-9588-73ba3bea5b06?syn-25a6b1a6=1		blocked	now cited: the FT's own article saved by hand on Nov 15 (man-ft-1110-02) is cited on the chip; at the search the reader could not open it
 original of a chip	MA18				blocked	gap: blocked
-original of a chip	MA22				blocked	gap: blocked
+original of a chip	MA22				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the FT's own article (man-ft-1107-01)
 original of a chip	MA24				blocked	gap: blocked
 original of a chip	MA25				blocked	gap: blocked
 original of a chip	MA28				blocked	gap: blocked
@@ -37,7 +37,7 @@ original of a chip	MA29				blocked	gap: blocked
 original of a chip	MA30				blocked	gap: blocked
 original of a chip	MA44				blocked	gap: blocked
 original of a chip	MA32				blocked	gap: blocked
-original of a chip	MA33				blocked	gap: blocked
+original of a chip	MA33				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Journal's article, in a licensed copy (art-fc-tovima-wsj-1108-board)
 original of a chip	MA35				blocked	gap: blocked
 original of a chip	MA36				blocked	gap: blocked
 original of a chip	MA38				blocked	gap: blocked
@@ -49,21 +49,21 @@ original of a chip	MA41				blocked	gap: blocked
 original of a chip	MA42		https://www.waer.org/2026-11-10/rep-jim-himes-d-conn-on-the-national-security-implications-of-the-nvidia-scandal	2026-11-10	found	saved and cited; the chip now says he spoke on Nov 10
 original of a chip	MA43				blocked	gap: blocked
 original of a chip	MA45				blocked	gap: blocked
-original of a chip	MA46				blocked	gap: blocked
+original of a chip	MA46				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Times's and Politico's own articles (man-nyt-1108-01, man-politico-1109-01)
 original of a chip	MA48				blocked	gap: blocked
 original of a chip	MA50		https://abcnews.com/Politics/house-republicans-issuing-subpoena-nvidia-ceo-jensen-huang/story?id=138022782	2026-11-10	found	the page the chip already cites is the original (abc-subpoena)
 original of a chip	MA51				blocked	gap: blocked
-original of a chip	MA54		https://www.euronews.com/video/2026/11/09/trump-calls-nvidia-chief-jensen-huang-an-honorable-guy-amid-spy-allegations	2026-11-09	blocked	gap: blocked
-original of a chip	MA55				blocked	gap: blocked
+original of a chip	MA54		https://www.euronews.com/video/2026/11/09/trump-calls-nvidia-chief-jensen-huang-an-honorable-guy-amid-spy-allegations	2026-11-09	blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Times's own report of the remarks (man-nyt-1108-02)
+original of a chip	MA55				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Times's own report of the remarks (man-nyt-1109-01)
 original of a chip	MA73				blocked	gap: blocked
-original of a chip	MA74				blocked	gap: blocked
+original of a chip	MA74				blocked	now cited: a republished copy of the State Department's transcript, saved on Nov 15 (art-fc-rec-mirage-rubio-1109), is cited on the chip; at the search the reader could not open the original
 original of a chip	MA96		https://newsroom.ap.org/detail/CongressseeksanswersfromHuangonNvidiascandal/d6ba97b2212d4da7ac55298b31001898/video?currentItemNo=10&sourceLocation=Topic&startingItemNo=0&vs=false		blocked	gap: blocked
 original of a chip	MA97				blocked	gap: blocked
-original of a chip	MA98				blocked	gap: blocked
-original of a chip	MA99				blocked	gap: blocked
-original of a chip	MA100				blocked	gap: blocked
+original of a chip	MA98				blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120921049097187618) and is cited on the chip; at the search the reader could not open it
+original of a chip	MA99				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Times's live page (man-nyt-1112-09)
+original of a chip	MA100				blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2119855894318252137) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA101				blocked	now cited: the Times's own article was saved by hand (man-nyt-1109-03) is cited on the chip; at the search the reader could not open it
-original of a chip	MA104		https://truthsocial.com/@realDonaldTrump/posts/117604177898784579		blocked	gap: blocked
+original of a chip	MA104		https://truthsocial.com/@realDonaldTrump/posts/117604177898784579		blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the FT's live page (man-ft-1112-05)
 original of a chip	MA109				not found	gap: not found
 original of a chip	MA110				blocked	gap: blocked
 original of a chip	MA58		https://nvidianews.nvidia.com/news/a-message-to-our-company	2026-11-08	found	already held as sw-nvidianewsnvidiacom-03; now cited on the chip
@@ -76,7 +76,7 @@ original of a chip	MA83		https://nvidianews.nvidia.com/news/nvidia-announces-ceo
 original of a chip	MA86		https://qz.com/nvidia-huang-resigns-anthropic-ipo-pledge-111226	2026-11-12	found	the page the chip already cites is the original (sw-qzcom-efc3c07a)
 original of a chip	MA56				blocked	gap: blocked
 original of a chip	MA57				blocked	gap: blocked
-original of a chip	MA105				blocked	gap: blocked
+original of a chip	MA105				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Journal's article, in a licensed copy (art-fc-tovima-wsj-1108-board)
 original of a chip	MA68		https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm	2026-11-10	found	the SEC's site returned 403 to an automated reader; not saved (a gap)
 original of a chip	MA70		https://www.mha.gov.sg/media-room/newsroom/clarification-statement-on-wall-street-journals-article/	2026-10-31	found	already held as mha-clarification-a; now cited on the chip
 original of a chip	MA71		https://www.fmprc.gov.cn/eng/xw/fyrbt/202611/t20261109_12056171.html	2026-11-09	found	saved as art-own-fmprc-1109 and cited on the chip
@@ -88,28 +88,28 @@ original of a chip	MA77				blocked	gap: blocked
 original of a chip	MA78				blocked	gap: blocked
 original of a chip	MA79				blocked	gap: blocked
 original of a chip	MA80				blocked	gap: blocked
-original of a chip	MA102				blocked	gap: blocked
+original of a chip	MA102				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Journal's article, in a licensed copy (art-fc-tovima-wsj-1110)
 original of a chip	MA106				blocked	gap: blocked
 original of a chip	MA107				blocked	gap: blocked
-original of a chip	MA87		https://x.com/elonmusk/status/2120688743111971293		blocked	gap: blocked
-original of a chip	MA89		https://x.com/BillAckman/status/2119560712855183434		blocked	gap: blocked
-original of a chip	MA90		https://x.com/TimSweeneyEpic/status/2120887322312921465		blocked	gap: blocked
+original of a chip	MA87		https://x.com/elonmusk/status/2120688743111971293		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120688743111971293) and is cited on the chip; at the search the reader could not open it
+original of a chip	MA89		https://x.com/BillAckman/status/2119560712855183434		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2119560712855183434) and is cited on the chip; at the search the reader could not open it
+original of a chip	MA90		https://x.com/TimSweeneyEpic/status/2120887322312921465		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120887322312921465) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA91				blocked	gap: blocked
 original of a chip	MA103		https://www.foxbusiness.com/video/6408204801112		blocked	gap: blocked
 original of a chip	MA92				blocked	gap: blocked
 original of a chip	MA69				blocked	now cited: OpenAI's policy paper was saved (art-own-openai-compute-campus-policy-blueprint) is cited on the chip; at the search the reader could not open it
-original of a chip	MA62				not found	gap: not found
+original of a chip	MA62				not found	gap: not found; a paper's own report of it, saved since, is now cited on the chip: the Times's own report of the meeting (man-nyt-1112-07)
 original of a chip	MA75				not found	gap: not found
 original of a chip	MA76				not found	gap: not found
 original of a chip	MA81				not found	gap: not found
 original of a chip	MA85				not found	now cited: the search did not find the original; Bloomberg's own page, saved by hand on Nov 12 (man-efbf718d0a5a), is cited on the chip; it shows the opening of the piece only
-original of a chip	MA94				not found	gap: not found
+original of a chip	MA94				not found	gap: not found; a paper's own report of it, saved since, is now cited on the chip: the Journal's own report, in a licensed copy (art-fc-mint-wsj-taiwan)
 original of a chip	MA108				not found	gap: not found
-original of a chip	MA64				blocked	gap: blocked
+original of a chip	MA64				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the FT's market report (man-ft-1109-05)
 original of a chip	MA65				blocked	gap: blocked
-original of a chip	MA66				blocked	gap: blocked
+original of a chip	MA66				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the FT's live page (man-ft-1112-05)
 original of a chip	MA67				blocked	gap: blocked
-original of a chip	MA88				blocked	gap: blocked
+original of a chip	MA88				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Post's own article (man-wapo-1112-02)
 actor's own channel		The New York Times	https://www.nytimes.com/section/technology		blocked	nothing to draw
 actor's own channel		The Wall Street Journal	https://www.wsj.com/tech		blocked	nothing to draw
 actor's own channel		Financial Times	https://www.ft.com/content/190e5eea-7461-4b26-8b69-17a3288e31d4?syn-25a6b1a6=1	2026-11-12	item not in the chips	not read: the paper's pages need a subscription (a gap, for hand-saved copies)
@@ -156,10 +156,10 @@ actor's own channel	MA99	Sen. Elizabeth Warren	https://www.banking.senate.gov/ne
 actor's own channel		Sen. Elizabeth Warren	https://www.banking.senate.gov/newsroom/minority		blocked	nothing to draw
 actor's own channel	MA23	Sen. Chris Coons	https://www.banking.senate.gov/imo/media/doc/20261111_warren_coons_letter_to_wh_commerce_state_re_nvidia_record_retentionpdf.pdf	2026-11-11	item	already on chip MA23
 actor's own channel		Sen. Chris Coons	https://www.coons.senate.gov/news/press-releases/		nothing on the matter found, Oct 29 to Nov 12	nothing to draw
-actor's own channel		Sen. Chris Coons	https://x.com/ChrisCoons/status/2119855894318252137		blocked	nothing to draw
+actor's own channel		Sen. Chris Coons	https://x.com/ChrisCoons/status/2119855894318252137		blocked	saved and cited: the post was saved by its id on Nov 15 and is on chip MA100
 actor's own channel		Sen. Kevin Cramer	https://www.cramer.senate.gov/news/press-releases		nothing on the matter found, Oct 29 to Nov 12	nothing to draw
 actor's own channel	MA26	Sen. Chuck Schumer	https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-floor-remarks-on-trumps-troubling-defense-of-nvidia-ceo-jensen-huang-at-the-cost-of-american-national-security	2026-11-10	item	already on chip MA26
-actor's own channel		Sen. Chuck Schumer	https://x.com/SenSchumer/status/2120921049097187618		blocked	nothing to draw
+actor's own channel		Sen. Chuck Schumer	https://x.com/SenSchumer/status/2120921049097187618		blocked	saved and cited: the post was saved by its id on Nov 15 and is on chip MA98
 actor's own channel	MA27	Sen. Jim Banks	https://www.banks.senate.gov/news/press-releases/sens-banks-warren-statement-on-national-security-concerns-surrounding-nvidia/	2026-11-09	item	already on chip MA27
 actor's own channel	MA27	Sen. Jim Banks	https://www.banks.senate.gov/news/in-the-news/ai-tech-brief-nvidias-capitol-hill-fallout/	2026-11-11	item	already on chip MA27
 actor's own channel		Sen. Jim Banks	https://www.banks.senate.gov/news/press-releases/icymi-sen-banks-joins-america-reports-on-fox-news-channel-4/		blocked	nothing to draw
@@ -247,7 +247,7 @@ original of a chip	MA123		https://www.whitehouse.gov/videos/president-trump-gagg
 original of a chip	MA124		https://abcnews.com/Politics/house-republicans-issuing-subpoena-nvidia-ceo-jensen-huang/story?id=138022782	2026-11-10	found	the page the chip already cites is the original (abc-subpoena)
 original of a chip	MA125		https://www.cnbc.com/2026/11/12/nvidia-trump-jensen-chip-export-controls-china-xi-.html		blocked	gap: blocked (the reader could not open the outlet's page; the chip cites the project's saved copy of it, sw-cnbccom-08)
 original of a chip	MA126		https://www.newsweek.com/trump-jensen-huang-spy-claim-nvidia-25m-ballroom-donation-12696326		blocked	gap: blocked (the reader could not open the outlet's page; the chip cites the project's saved copy of it, sw-newsweekcom-01)
-original of a chip	MA127		https://x.com/robertwiblin/status/2119543114222522593		blocked	gap: blocked (a post on X; the chip cites the newsletter that carries it)
+original of a chip	MA127		https://x.com/robertwiblin/status/2119543114222522593		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2119543114222522593) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA128		https://www.cnbc.com/2026/11/10/jensen-huang-nvidia-china-ties.html		blocked	gap: blocked (the reader could not open the outlet's page; the chip cites the project's saved copy of it, sw-cnbccom-04)
 original of a chip	MA129		https://www.cbsnews.com/news/nvidia-jensen-huang-stock-board-investigation-spy/	2026-11-09	found	the page the chip already cites is the original (sw-cbsnewscom-03; a statement by email to that outlet only)
 original of a chip	MA130		https://fortune.com/2026/11/12/nvidia-exit-jensen-huang-affair-trump-preserve-documents-spying-chip-smuggling/		found, words differ	the first remark is on the page the chip cites (sw-fortunecom-11); the second is carried by RTE (sw-rteie-05), which the reader could not open
@@ -255,8 +255,8 @@ original of a chip	MA131		https://www.koreajoongangdaily.com/business/without-hu
 original of a chip	MA132		https://thezvi.substack.com/p/nvidia-ceo-jensen-huang-had-an-affair	2026-11-10	found	the page the chip already cites is the original (sw-thezvisubstackcom-01)
 original of a chip	MA133		https://www.chinatalk.media/p/the-spy-who-leased-me	2026-11-10	found	the page the chip already cites is the original (sw-chinatalkmedia-01); the podcast's own feed dates the episode a day earlier: saved as art-own-applepodcasts-chinatalk-emergency-pod, cited on the chip, and a chip for Nov 9 added (MA148)
 original of a chip	MA134		https://www.npr.org/2026/11/12/nx-s1-6037833/jensen-huang-nvidia-board-fired		blocked	gap: blocked (the reader could not open the outlet's page; the chip cites the project's saved copy of it, sw-nprorg-01)
-original of a chip	MA135		https://x.com/ClementDelangue/status/2120883918119592037		blocked	gap: blocked (a post on X; the chip cites two outlets that carry it)
-original of a chip	MA136		https://x.com/cz_binance/status/2120888881717612576		blocked	gap: blocked (a post on X; the chip cites two outlets that carry it)
+original of a chip	MA135		https://x.com/ClementDelangue/status/2120883918119592037		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120883918119592037) and is cited on the chip; at the search the reader could not open it
+original of a chip	MA136		https://x.com/cz_binance/status/2120888881717612576		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120888881717612576) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA137		https://finance.yahoo.com/video/nvidias-ceo-search-has-a-3--to-4-month-clock-its-pretty-urgent-175552767.html		blocked	gap: blocked (the outlet's own video clip; the chip cites its page about the interview, sw-financeyahoocom-23)
 actor's own channel		Sen. Tom Cotton	https://www.cotton.senate.gov/news/press-releases/cotton-to-lutnick-ban-communist-chinese-memory-chipmaker-cxmt-from-american-market/	2026-11-12	item not in the chips	not drawn: saved and read (art-own-cotton-1112-cxmt-letter); a letter on a Chinese memory chipmaker that does not mention the matter
 actor's own channel		Sen. Tom Cotton	https://x.com/SenTomCotton		blocked	nothing to draw
@@ -302,3 +302,9 @@ actor's own channel	MA101	The New York Times	https://www.nytimes.com/ (its artic
 actor's own channel	MA138	The New York Times	https://www.nytimes.com/ (its article of Nov 10, saved by hand as man-nyt-1110-02)	2026-11-10	item	already on chip MA138 (hand-saved by the owner and read)
 actor's own channel	MA139	The New York Times	https://www.nytimes.com/ (its article of Nov 11, saved by hand as man-nyt-1111-02)	2026-11-11	item	already on chip MA139 (hand-saved by the owner and read)
 actor's own channel	MA06	The Wall Street Journal	https://www.wsj.com/ (its article of Oct 30, saved by hand as man-923fe8754943)	2026-10-30	item	already on chip MA06 (hand-saved by the owner and read; cited beside a licensed partner's copy)
+actor's own channel	MA89	Bill Ackman	https://x.com/i/status/2119560712855183434	2026-11-08	saved by post id on Nov 15, after the searches	already on chip MA89
+actor's own channel	MA87	Elon Musk	https://x.com/i/status/2120688743111971293	2026-11-11	saved by post id on Nov 15, after the searches	already on chip MA87
+actor's own channel	MA127	Rob Wiblin	https://x.com/i/status/2119543114222522593	2026-11-08	saved by post id on Nov 15, after the searches	already on chip MA127
+actor's own channel	MA90	Tim Sweeney	https://x.com/i/status/2120887322312921465	2026-11-12	saved by post id on Nov 15, after the searches	already on chip MA90
+actor's own channel	MA136	Changpeng Zhao	https://x.com/i/status/2120888881717612576	2026-11-12	saved by post id on Nov 15, after the searches	already on chip MA136
+actor's own channel	MA135	Clément Delangue	https://x.com/i/status/2120883918119592037	2026-11-12	saved by post id on Nov 15, after the searches	already on chip MA135

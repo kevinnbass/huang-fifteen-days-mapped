@@ -1,15 +1,17 @@
 what	count
 actors whose own channels were searched	77
-actors: an item about the affair is held and was read	32
+actors: an item about the affair is held and was read	38
 actors: the reader matched an item about the affair to a chip, and the project holds no copy	0
 actors: links located, none could be read	2
 actors: only items that are not about the affair or not their own	4
-actors: nothing found on a channel that could be read	25
-actors: no channel could be read	14
+actors: nothing found on a channel that could be read	23
+actors: no channel could be read	10
 chips whose original was searched for	127
 chips: original read and cited on the chip	35
-chips: the search did not yield the original; a saved copy of the publisher's page is now cited	5
+chips: the search did not yield the original; a saved copy of the publisher's page is now cited	7
+chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited	8
 chips: original carries the first of the chip's two remarks	1
-chips: original could not be opened	77
+chips: original could not be opened	67
 chips: original found by the reader and refused to the project (not saved)	2
 chips: original not found	7
+chips still without their original that now also cite a paper's own report of the act	14

@@ -79,6 +79,7 @@ def OWN_CHANNEL_WORDS():
     (scripts/nv8_s6_counts.py, which reads research/nv8_s6_items.tsv)."""
     C = {r['what']: int(r['count']) for r in csv.DictReader(open(R / 'nv8_s6_counts.tsv', newline=''), delimiter='\t')}
     n_chips = sum(1 for r in rows_map.rows() if r['row_id'].startswith('MA')); searched = C['chips whose original was searched for']
+    W = lambda n: rows_map.NUMBER.get(n, {7: 'seven', 8: 'eight', 9: 'nine'}.get(n, n))
     held, loc, cx = C['actors: an item about the affair is held and was read'], C['actors: links located, none could be read'], C['actors: only items that are not about the affair or not their own']
     assert C['actors whose own channels were searched'] == 77 and n_chips - searched == 23 and C['actors: the reader matched an item about the affair to a chip, and the project holds no copy'] == 0 and loc == 2
     return (f"The own channel (official site, newsroom, own feed or account) of each of the {C['actors whose own channels were searched']} actors who had spoken was searched once for these fifteen days by a reader from another model family: "
@@ -87,9 +88,11 @@ def OWN_CHANNEL_WORDS():
             f"{rows_map.NUMBER.get(cx, cx)} had only items that do not mention the affair or are not their own; for {C['actors: nothing found on a channel that could be read']} a channel that could be read showed no item about the affair in these fifteen days; "
             f"for {C['actors: no channel could be read']} no channel could be read. An item is counted only where the project holds the page, and a share-sale filing or policy paper that a chip draws as context is not counted as an item about the affair. "
             "The reader could open no account on X in either round, and a channel with nothing found is not proof of silence. "
-            f"Of the {searched} chips drawn before those searches, the original was read and is now cited for {C['chips: original read and cited on the chip']}; for {rows_map.NUMBER.get(C["chips: the search did not yield the original; a saved copy of the publisher's page is now cited"], 'five')} more the search did not yield the original, but a saved copy of the publisher's page is now cited (one of them shows only the opening); for one it carries the first of the chip's two remarks; "
+            f"Of the {searched} chips drawn before those searches, the original was read and is now cited for {C['chips: original read and cited on the chip']}; for {W(C["chips: the search did not yield the original; a saved copy of the publisher's page is now cited"])} more the search did not yield the original, but a saved copy of the publisher's page is now cited (one of them shows only the opening); "
+            f"for {W(C['chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited'])} more the reader could not open a post on X, and the post itself, saved afterwards by its id, is now cited; for one it carries the first of the chip's two remarks; "
             f"for {C['chips: original could not be opened']} it still could not be opened (posts on X and Truth Social, broadcasters' video, papers behind a paywall); "
             f"for {rows_map.NUMBER.get(C['chips: original found by the reader and refused to the project (not saved)'], 'two')} the reader found it and the site refused the project's own copy (the Journal's page, an SEC filing); and for {C['chips: original not found']} it was not found. "
+            f"Of the chips still without their original, {C["chips still without their original that now also cite a paper's own report of the act"]} now also cite a paper's own report of the act, from the papers' pages saved since the first census. "
             f"The {n_chips - searched} chips added afterwards cite the actor's own page or the paper's own article, except three that cite a report: a senator's letter of 2025, a senator's post that a newsletter carries, and a magazine's report of the FBI's inquiry. ")
 
 
@@ -128,7 +131,7 @@ ROW_MIN_GROUP = {'analysts': 80, 'bylines': 62}      # room for the institution 
 DAYS = [(datetime.date(2026, 10, 29) + datetime.timedelta(d)).isoformat() for d in range(15)]
 WD = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 # one line per day for the axis: a pointer to chips drawn below, nothing that is not in a row
-DAYNOTE = {'2026-10-29': 'First report, in the Times', '2026-10-30': 'Journal report on Singapore', '2026-10-31': 'Singapore denies it',
+DAYNOTE = {'2026-10-29': 'First report, in the Times', '2026-10-30': 'Journal report; Singapore denies it', '2026-10-31': 'Trump: "I would like to say yes"',
            '2026-11-03': 'Midterms: Democrats win both chambers', '2026-11-05': 'House chairs\' letter released', '2026-11-06': 'Memo reported; two posts on X',
            '2026-11-07': 'Coons: "Congress will investigate"', '2026-11-08': 'Huang\'s memo; board inquiry', '2026-11-09': 'Nvidia shares fall; rivals rise',
            '2026-11-10': 'Schumer speech; Anthropic IPO range', '2026-11-11': 'Second report; calls to resign', '2026-11-12': 'Huang resigns'}
@@ -830,7 +833,7 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             'They are sorted into the three kinds by site and by the section named in the page address, not by reading them. '
             'A chip is one dated act, worded from a saved report; it starts on its day, and a long one may run on over empty days to its right. '
             'View counts are those shown when the posts were saved on Nov 12. '
-            'An act is placed on the day its source gives or, failing that, the day the source was published: those chips have a dashed left edge, and the act itself may be earlier. '
+            'An act is placed on the day its source gives or, failing that, the day the source was published: those chips have a dashed left edge, and the act itself may be earlier. Where one chip holds two acts of a day and only one is dated by its report, the edge is solid and the words say which. '
             'Where a chip rests on one outlet\'s account of another\'s report, it says so. Grant figures are awards, not payments traced to a bank. An announced ad is not proof that it ran. '
             'Nvidia\'s board said on Nov 8 it had "no reason to believe" national security or company secrets were compromised, and NBC reported on Nov 12 that Alice Huang\'s "precise role" remained unclear. '
             f'Members of Congress drawn are every current member named on three or more of the {n_pages:,} saved pages for something said or done about the matter in these days, '
@@ -864,7 +867,7 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             'Its support of institutions whose people are drawn is worded in their rows (CSET, CNAS, the Council on Foreign Relations); the donor lists of Brookings and 80,000 Hours do not name it, and a reader from another model family found it on none of the lists that IAPS, the Foundation for American Innovation, the Institute for Progress and the Tarbell Center publish, most of which are partial. '
             'Quoted people with a past post at Nvidia or paid work for it are drawn (Moorhead, Newman, Boloor, Yoo; both companies support Barez\'s research), and business with Nvidia that a saved page states is worded for two public voices (Musk, Delangue). '
             'Looked for and not established: a witness from Nvidia before these members\' committees, advertising aimed at their districts, a seat on their advisory bodies. Those searches have gaps: the ad libraries could not be read, the search of the records held ended with 3,839 hits unread, and the web search left 491 targets unopened. '
-            'The map still starts from Anthropic and Open Philanthropy at the left of each slice, so the number of lines says nothing about either company\'s influence. The Times\'s and the FT\'s reports are cited from their own articles, saved by hand; the Journal\'s own site turns away automated readers: its report of Oct 30 is cited from its own page, saved by hand, and from the copy a licensed partner carries (Tiger Brokers), its report of Nov 11 from a partner\'s copy (the Greek paper To Vima). '
+            'The map still starts from Anthropic and Open Philanthropy at the left of each slice, so the number of lines says nothing about either company\'s influence. The Times\'s and the FT\'s reports are cited from their own articles, saved by hand; the Journal\'s own site turns away automated readers: its report of Oct 30 is cited from its own page, saved by hand, and from the copy a licensed partner carries (Tiger Brokers), its report of Nov 11 from a partner\'s copy (the Greek paper To Vima). An earlier exclusive that a paper drew from an Anthropic executive is drawn as a tie in that paper\'s row: one is on record, the FT\'s of Sep 2025, known here through another outlet\'s account of it. The papers\' earlier reporting was not searched for others, and exclusives from Nvidia were not looked up. '
             + OWN_CHANNEL_WORDS() +
             f'<b>Source:</b> {n_story:,} links from saved aggregator pages; saved reports, posts and releases; committee filings; rows held in the congress, lineage, toner and evaluators packs. Aggregator pages for Oct 29 to Nov 12 were retrieved on Nov 12 and Nov 14, 2026; other sources were saved Nov 12 to 15, 2026; rows of the packs carry their own earlier dates. {DRAFT}')
     title = 'Fifteen days, mapped: the coverage, who acted, and the documented ties'

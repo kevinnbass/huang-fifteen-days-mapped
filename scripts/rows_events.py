@@ -16,9 +16,11 @@ EVENTS = [
  ('Oct 29–31', '2026-10-30', 'press', 'The Wall Street Journal', 'as described by Singapore\'s ministry',
   'Reports, citing sources, that Singapore officials were concerned about Alice Huang and had investigated her ties to China.',
   'mha-clarification-a', 'The WSJ article cites sources that Singapore officials were concerned with Alice Huang’s close ties to Nvidia Chief Executive Jensen Huang'),
- ('Oct 29–31', '2026-10-31', 'gov', 'Singapore Ministry of Home Affairs', 'mha.gov.sg',
-  '"Neither the Singapore Government nor its officials said this. And there were no such investigations conducted in respect of Alice Huang." It adds that investigations into Megaspeed are ongoing.',
-  'mha-clarification-a', 'neither the Singapore Government nor its officials said this. And there were no such investigations conducted in respect of Alice Huang'),
+ # day corrected 2026-11-15 (slice S8): the statement is timed Oct 30, 11:13 PM on the police force's copy of it; the ministry's newsroom page carries Oct 31
+ ('Oct 29–31', '2026-10-30', 'gov', 'Singapore Ministry of Home Affairs', 'mha.gov.sg; police.gov.sg',
+  '"Neither the Singapore Government nor its officials said this. And there were no such investigations conducted in respect of Alice Huang." It adds that investigations into Megaspeed are ongoing. The statement is timed Oct 30, 11:13 PM in Singapore on the police force\'s copy of it; the ministry\'s newsroom page is dated Oct 31.',
+  ['mha-clarification-a', 'art-fc-spf-1030', 'mha-clarification-a'],
+  ['neither the Singapore Government nor its officials said this. And there were no such investigations conducted in respect of Alice Huang', 'MINISTRY OF HOME AFFAIRS 30 October 2026 @ 11:13 PM', '31 October 2026']),
 
  ('Nov 3–5', '2026-11-03', 'event', 'Midterm elections', 'as described by CNBC',
   'Democrats win enough seats to take control of both chambers of Congress in January.',
@@ -117,7 +119,7 @@ EVENTS = [
  ('Nov 12', '2026-11-12', 'market', 'Nvidia shares', 'Al Jazeera',
   'Slide roughly 10% in early trading; market value falls below $4 trillion.',
   'aljazeera-1112-resigns', 'The stock slid roughly 10 percent in early trading as US markets opened on Thursday'),
- # added after audit1b: the later, dated qualification of the Oct 31 denial; kept last so earlier row ids do not move
+ # added after audit1b: the later, dated qualification of the Oct 30 denial; kept last so earlier row ids do not move
  ('Nov 12', '2026-11-12', 'gov', 'Singapore Ministry of Home Affairs', 'statement, per NBC News',
   'Says police interviewed Alice Huang and held her passport in 2025 and found "insufficient evidence" of any offence; she was not investigated for espionage, and the Megaspeed inquiry continues.',
   ['sw-nbcnewscom-09', 'sw-nbcnewscom-09', 'sw-nbcnewscom-09'],
