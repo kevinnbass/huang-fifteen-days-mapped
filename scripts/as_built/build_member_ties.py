@@ -690,7 +690,7 @@ def main():
         w = csv.DictWriter(f, fieldnames=list(T[0].keys()), lineterminator='\n'); w.writeheader(); w.writerows(T)
     # the header facts of the three-chairmen figure, as a table (so the figure builds from tables alone)
     import member_mentions, rows_ties
-    n_pages, hit, _ = member_mentions.count(); actors = {a[0]: a for a in rows_map.ACTORS}
+    n_pages, hit = member_mentions.count_pages(); actors = {a[0]: a for a in rows_map.ACTORS}      # nv13 keeps its count of pages of the first census; the map counts articles
     with open(R / 'nv13_members.csv', 'w', newline='') as f:
         w = csv.writer(f, lineterminator='\n'); w.writerow(['key', 'bioguide', 'name', 'role', 'pages_naming', 'pages_total'])
         for k in rows_ties.THREE:

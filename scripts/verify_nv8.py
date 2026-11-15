@@ -40,7 +40,9 @@ def main():
     by = defaultdict(list)
     for e in ev:
         by[e['row_id']].append(e)
-    check({r['row_id'] for r in rows} == ids, f'the figure names {len(ids):,} rows and research/nv8_rows.tsv holds exactly those')
+    gone = [r for r in rows if r.get('withdrawn')]
+    check({r['row_id'] for r in rows if not r.get('withdrawn')} == ids and not {r['row_id'] for r in gone} & ids,
+          f'the figure names {len(ids):,} rows and research/nv8_rows.tsv holds exactly those, and {len(gone)} more that was published and is no longer drawn, kept with its reason')
     check(all(by[i] for i in ids), f'each of the {len(ids):,} rows has at least one evidence line', str([i for i in ids if not by[i]][:5]))
     check(all(e['url'] or e['copy_in_repo'] for e in ev), f'all {len(ev):,} evidence lines give a link or a copy', str([e['row_id'] for e in ev if not (e['url'] or e['copy_in_repo'])][:5]))
     # ---------------------------------------------------------------- the coverage: pieces, sites, days
@@ -121,15 +123,28 @@ def main():
         if g['side'] == 'anthropic':
             tot[g['bioguide']] += float(g['usd'])
     check(len(tot) == int(rates['anthropic']['members_with_a_gift']) and f'{len(tot)} of the 535 sitting members' in flat, f'{len(tot)} of the 535 sitting members received a gift from someone who gave Anthropic as employer')
-    pages = table('story_pages.tsv'); hit = Counter(s for p in pages for s in (p['names'] or '').split(';') if s)
+    pages = table('story_pages.tsv'); arts = {p['article'] for p in pages if p['counted'] == 'yes'}
+    named = defaultdict(set)
+    for p in pages:
+        if p['counted'] == 'yes':
+            for s in (p['names'] or '').split(';'):
+                if s:
+                    named[s].add(p['article'])
+    hit = Counter({s: len(v) for s, v in named.items()})
     slug = {s.lower().replace(' ', '').replace('-', ''): s for s in hit}
-    check(len(pages) > 1000 and all(m in slug and hit[slug[m]] >= 3 and f'Named on {hit[slug[m]]} of the {len(pages):,} saved pages' in flat for m in members),
-          f'{len(pages):,} saved news pages were searched for members\' names (research/story_pages.tsv); each of the {len(members)} members drawn is named on at least 3, and the figure prints each one\'s count',
+    check(len(arts) > 1000 and all(m in slug and hit[slug[m]] >= 3 and f'Named in {hit[slug[m]]} of the {len(arts):,} articles counted' in flat for m in members),
+          f'{len(pages):,} saved pages are {len({p["article"] for p in pages}):,} articles, {len(arts):,} of them counted (research/story_pages.tsv); each of the {len(members)} members drawn is named in at least 3, and the figure prints each one\'s count',
           str([m for m in members if m not in slug or hit[slug[m]] < 3][:5]))
+    art = table('nv8_articles.tsv'); n1 = sum(r['set'] == 'first census' for r in art)
+    why = Counter('after' if 'after the fifteen days' in r['why_not'] else 'before' if 'before the fifteen days' in r['why_not'] else 'no text' if 'no article text' in r['why_not'] else 'not news' for r in art if r['counted'] == 'no')
+    check({(r['page_id'], r['article_id'], r['counted']) for r in art} == {(p['id'], p['article'], p['counted']) for p in pages}
+          and f'the {n1:,} pages saved by the first search and the {len(art) - n1} saved since' in flat and f"are {len({r['article_id'] for r in art}):,} articles once copies of one article are joined" in flat
+          and f'and {len(arts):,} of them are counted' in flat and f"is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when no text could be read ({why['no text']}) or when it is not a news piece ({why['not news']})" in flat,
+          f"the figure's sentence on the articles counted gives the numbers of research/nv8_articles.tsv: {len(art):,} pages, {len({r['article_id'] for r in art}):,} articles, {len(arts):,} counted; not counted: {why['after']} dated after Nov 12, {why['before']} before Oct 29, {why['no text']} without text, {why['not news']} not news")
     sel = table('member_selection.tsv'); searched = [s for s in sel if s['drawn'] in ('yes', 'no')]
-    check(all(int(s['pages']) == hit[s['name']] for s in searched) and {s['name'].lower().replace(' ', '').replace('-', '') for s in sel if s['drawn'] == 'yes'} == set(members)
+    check(all(int(s['articles']) == hit[s['name']] for s in searched) and {s['name'].lower().replace(' ', '').replace('-', '') for s in sel if s['drawn'] == 'yes'} == set(members)
           and all(s['why_not'] for s in sel if s['drawn'] != 'yes') and sum(1 for s in sel if s['why_not'].startswith('a current member')) == 6,
-          f'research/member_selection.tsv gives every name searched with its page count: {len(members)} drawn, {sum(1 for s in searched if s["drawn"] == "no")} not drawn, each with the reason (six named for other things)')
+          f'research/member_selection.tsv gives every name searched with its count of articles: {len(members)} drawn, {sum(1 for s in searched if s["drawn"] == "no")} not drawn, each with the reason (six named for other things)')
     # ---------------------------------------------------------------- nothing internal is visible
     visible = re.sub(r'<title>.*?</title>', ' ', body, flags=re.S); visible = norm(re.sub(r'<[^>]+>', ' ', visible))
     leak = re.search(r'\b(?:EV|TI|RU|ST|MA|MT|TY|TR|CV|NT)\d{2,4}\b|[\w/-]+\.(?:csv|json|jsonl|py|tsv)\b|research/|scripts/', visible)

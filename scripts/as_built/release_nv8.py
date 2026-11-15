@@ -13,12 +13,13 @@ import release_nv13 as R13, nv13_public as P, nv8_public as N, member_mentions, 
 csv.field_size_limit(10**9)
 LANE = Path('lanes/audit_nv8')
 RUN = ('fig_map.py', 'fig_common.py', 'rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_coverage.py', 'rows_ties.py', 'rows_events.py', 'story_scope.py', 'nv8_status.py', 'build_nv8.py', 'verify_nv8.py')
-AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'fec_lpac_keyed_check.py')
+AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'nv8_articles.py', 'nv8_page_dates.py', 'fec_lpac_keyed_check.py')
 TABLES = ('harvest.tsv', 'coverage_rows.tsv', 'coverage_day_pages.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'member_ties.csv', 'employee_gift_rates.csv', 'committee_keys.csv', 'joint_committees.csv',
-          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv')
-SHIM = '''"""Which saved news pages name each member of Congress: the counts the figure prints ("named on N of the saved pages").
+          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv', 'nv8_articles.tsv')
+SHIM = '''"""Which saved articles name each member of Congress: the counts the figure prints ("named in N of the articles counted").
 In the builder's project this module reads the saved pages themselves; they are not in this copy (no article text is), so here
-the same answer is read from research/story_pages.tsv, which lists every counted page by address and the members it names."""
+the same answer is read from research/story_pages.tsv, which lists every saved page by address with the article it is a copy of,
+whether it is counted, and the members its text names. An article is counted once, whatever the number of its copies."""
 import csv
 from collections import defaultdict
 from pathlib import Path
@@ -26,14 +27,16 @@ R = Path(__file__).resolve().parents[1] / 'research'
 
 
 def count():
-    """(pages counted, {surname: [page ids]}, {})"""
-    hit = defaultdict(list); n = 0
+    """(articles counted, {surname: [article ids]}, {})"""
+    hit = defaultdict(set); arts = set()
     for r in csv.DictReader(open(R / 'story_pages.tsv', newline=''), delimiter='\\t'):
-        n += 1
+        if r['counted'] != 'yes':
+            continue
+        arts.add(r['article'])
         for s in (r['names'] or '').split(';'):
             if s:
-                hit[s].append(r['id'])
-    return n, hit, {}
+                hit[s].add(r['article'])
+    return len(arts), defaultdict(list, {s: sorted(v) for s, v in hit.items()}), {}
 '''
 scrub = R13.scrub; put = R13.put; table = R13.table
 # the same pattern as the three-chairmen release, except that '/kevin-' inside a news site's address (a writer's page) is not a local path
@@ -88,6 +91,11 @@ def main(target):
         g['member_name'] = ck[g['committee_id']]['member_name']; g['party'] = ck[g['committee_id']]['party']
     table(Tg, 'research/employee_gifts.csv', gifts, P.GIFT_COLS[:3] + ['member_name', 'party'] + P.GIFT_COLS[3:] + ['fec_page_url', 'amended_fec_page_url'])
     rows = N.figure_rows()
+    # a row that was published and is no longer drawn stays in the table, with the reason in `withdrawn` (a row id is never reused or dropped)
+    for r_ in rows_map.rows():
+        if r_.get('withdrawn'):
+            rows.append({'row_id': r_['row_id'], 'table': 'dated act of an actor', 'actor': r_['actor'], 'date': r_['date'], 'reported_by_others': r_['reported'], 'withdrawn': r_['withdrawn'],
+                         'drawn_text': r_['what'], 'src': list(r_['src']), 'q': [str(x) for x in r_['q']]})
     # row ids are frozen once published: every id of the last pushed table must still be here, as the same kind of row and, for an act
     # or a tie, about the same actor or the same two ends (a chip added in the middle of a list once shifted three published ids: Nov 15, 2026)
     pushed = ROOT.parent / 'code' / 'huang-fifteen-days-mapped' / 'research' / 'nv8_rows.tsv'      # the builder's clone of the public repository
@@ -104,31 +112,38 @@ def main(target):
     cols = ['row_id', 'table', 'drawn_text'] + sorted({k for r in flat for k in r} - {'row_id', 'table', 'drawn_text', 'src', 'q'}) + ['src', 'q']
     table(Tg, 'research/nv8_rows.tsv', flat, cols, '\t')
     # the saved news pages behind "named on N of the saved pages": addresses, and the members each names; no page text
-    n_pages, hit, _ = member_mentions.count(); by_page = {}
-    for s, pids in hit.items():
-        for pid in pids:
-            by_page.setdefault(pid, []).append(s)
-    pages = []; nd = {s: member_mentions.not_drawn_re(s) for s in member_mentions.NOT_DRAWN}; nd_n = Counter()
-    for pid, text in member_mentions.pages():
-        m = json.loads((PRIMARY / pid / 'meta.json').read_text())
-        also = [s for s, rx in nd.items() if rx.search(text)]; nd_n.update(also)
-        pages.append({'id': pid, 'url': m['url'], 'saved_utc': m.get('fetched_utc') or m.get('saved_utc') or '', 'names': ';'.join(sorted(by_page.get(pid, []) + also))})
-    assert len(pages) == n_pages
+    n_pages, hit, _ = member_mentions.count()                    # since Nov 15, 2026: articles, each counted once
+    text_of = {pid: text for copies in member_mentions.articles().values() for pid, text in copies}
+    res = {s: member_mentions.member_re(s) for s in member_mentions.FIRST}; nd = {s: member_mentions.not_drawn_re(s) for s in member_mentions.NOT_DRAWN}
+    pages = []; nd_art = {s: set() for s in nd}; chk = {s: set() for s in res}
+    for r in csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t'):
+        pid = r['page_id']; m = json.loads((PRIMARY / pid / 'meta.json').read_text()); names = []
+        if r['counted'] == 'yes':
+            for s, rx in res.items():
+                if rx.search(text_of[pid]):
+                    names.append(s); chk[s].add(r['article_id'])
+            for s, rx in nd.items():
+                if rx.search(text_of[pid]):
+                    names.append(s); nd_art[s].add(r['article_id'])
+        pages.append({'id': pid, 'url': m.get('url') or '', 'saved_utc': m.get('fetched_utc') or m.get('saved_utc') or '', 'article': r['article_id'], 'counted': r['counted'], 'why_not': r['why_not'], 'names': ';'.join(sorted(names))})
+    nd_n = {s: len(v) for s, v in nd_art.items()}
+    assert len({p['article'] for p in pages if p['counted'] == 'yes'}) == n_pages and all(len(chk[s]) == len(hit[s]) for s in res), 'the page lines do not give the counts the figure prints'
     table(Tg, 'research/story_pages.tsv', pages, list(pages[0].keys()), '\t')
     # how the members drawn were chosen: every name searched, its count, and whether it is drawn; then every other word met after a title
-    sel = [{'name': s, 'first_names_searched': ' / '.join(f), 'pages': len(hit[s]), 'drawn': 'yes' if len(hit[s]) >= 3 else 'no', 'why_not': '' if len(hit[s]) >= 3 else 'named on fewer than three pages'}
+    sel = [{'name': s, 'first_names_searched': ' / '.join(f), 'articles': len(hit[s]), 'drawn': 'yes' if len(hit[s]) >= 3 else 'no', 'why_not': '' if len(hit[s]) >= 3 else 'named in fewer than three articles'}
            for s, f in member_mentions.FIRST.items()]
-    sel += [{'name': s, 'first_names_searched': ' / '.join(v[0]), 'pages': nd_n[s], 'drawn': 'no', 'why_not': 'a current member the pages name for other things: ' + v[2]} for s, v in member_mentions.NOT_DRAWN.items()]
-    assert all(r['pages'] >= 3 for r in sel if r['why_not'].startswith('a current member'))
+    sel += [{'name': s, 'first_names_searched': ' / '.join(v[0]), 'articles': nd_n[s], 'drawn': 'no', 'why_not': 'a current member the articles name for other things: ' + v[2]} for s, v in member_mentions.NOT_DRAWN.items()]
+    print('members named for other things, articles:', {r['name']: r['articles'] for r in sel if r['why_not'].startswith('a current member')})
+    assert all(r['articles'] >= 3 for r in sel if r['why_not'].startswith('a current member'))
     known = set(member_mentions.FIRST) | {f for v in member_mentions.FIRST.values() for f in v} | set(member_mentions.NOT_DRAWN) | {f for v in member_mentions.NOT_DRAWN.values() for f in v[0]}
     for w_, ids_ in sorted(member_mentions.count()[2].items(), key=lambda kv: (-len(kv[1]), kv[0])):
         if len(ids_) >= 3:
-            assert w_ in known or w_ in member_mentions.NOT_A_MEMBER, ('a word after a congressional title on three or more pages is not classified', w_)
-            sel.append({'name': w_, 'first_names_searched': '', 'pages': len(ids_), 'drawn': 'not a name searched',
+            assert w_ in known or w_ in member_mentions.NOT_A_MEMBER, ('a word after a congressional title in three or more articles is not classified', w_)
+            sel.append({'name': w_, 'first_names_searched': '', 'articles': len(ids_), 'drawn': 'not a name searched',
                         'why_not': 'a word found after a congressional title: ' + ('part of a name searched above' if w_ in known else 'not a current member: ' + member_mentions.NOT_A_MEMBER[w_])})
         elif len(ids_) == 2:                 # under the line: listed with its count so the line itself can be checked (second audit, Nov 15, 2026)
-            sel.append({'name': w_, 'first_names_searched': '', 'pages': 2, 'drawn': 'not a name searched',
-                        'why_not': 'a word found after a congressional title on two pages, under the three-page line' + ('' if w_ not in known else ': part of a name searched above')})
+            sel.append({'name': w_, 'first_names_searched': '', 'articles': 2, 'drawn': 'not a name searched',
+                        'why_not': 'a word found after a congressional title in two articles, under the three-article line' + ('' if w_ not in known else ': part of a name searched above')})
     table(Tg, 'research/member_selection.tsv', sel, list(sel[0].keys()), '\t')
     # every harvested link with the class the word rule gives it: the figure counts and draws only 'story'
     import story_scope

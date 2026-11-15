@@ -1,11 +1,11 @@
 what	count
-register lines of analysts and bylines	954
+register lines of analysts and bylines	1101
 tables searched	85
-people: register lines searched	851
-people: different names searched	797
-people: register lines whose name occurs in a table	32
-others (firms, one-word names, longer labels among the analysts): register lines searched	34
-others: different names searched	34
+people: register lines searched	991
+people: different names searched	923
+people: register lines whose name occurs in a table	37
+others (firms, one-word names, longer labels among the analysts): register lines searched	35
+others: different names searched	35
 others: register lines whose name occurs in a table	13
-not searched as a whole name (bylines that are an agency, a label or an address; analyst labels under four letters)	69
+not searched as a whole name (bylines that are an agency, a label or an address; analyst labels under four letters)	75
 controls found, of 7	7

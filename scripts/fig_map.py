@@ -49,28 +49,30 @@ def LOOKUP_WORDS(n_pages):
     S = {r['what']: int(r['count']) for r in csv.DictReader(open(R / 'nv8_name_search_counts.tsv', newline=''), delimiter='\t')}
     left = S['not searched as a whole name (bylines that are an agency, a label or an address; analyst labels under four letters)']
     assert S['controls found, of 7'] == 7
-    same = a('not drawn: cannot tell')
+    same = a('not drawn: cannot tell') + a('not drawn: name match, not settled')
     same_words = '1 the look-up could not tell apart from another person of the same name' if same == 1 else f'{same} the look-up could not tell apart from others of the same name'
-    return (f"The saved pages quote {rows_map.N_ANALYSTS} analysts, experts and research groups (a person or firm written two ways is counted once). Each was looked up in the records held. "
+    W = lambda n: {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six'}.get(n, str(n))
+    other = b('pairs: record of another kind, not drawn'); assert other == 2, other        # the two the next sentence describes
+    return (f"The articles counted quote {rows_map.N_ANALYSTS} analysts, experts and research groups (a person or firm written two ways is counted once). Each was looked up in the records held. "
             f"On Nov 15 the names not drawn were searched again as whole names in the {S['tables searched']} tables of the four evidence sets: {S['people: different names searched']:,} names of two to four words among the analysts and the bylines (people's names, and a few firms and labels of the same form), "
             f"and {S['others: different names searched']} other firm names and one-word names among the analysts; {left} entries (bylines that are an agency, a label or an address, and analyst labels under four letters) were left out of that pass. "
-            f"The {rows_map.N_ANALYSTS_DRAWN} drawn each have a remark of these days and a tie on record to Anthropic, Open Philanthropy or Nvidia: their own (a fellowship, research support, a past post) "
+            f"The {rows_map.N_ANALYSTS_DRAWN} drawn each have a remark of these days and a tie on record to Anthropic, Open Philanthropy or Nvidia: their own (a fellowship, research support, a past post, a seat on an advisory council) "
             "or that of the organisation where they hold a post (an award to it, a paid business relationship, a paper it was commissioned to write); each row says which, and an award to an organisation is not a payment to the person. "
             "At a university an award counts for a person only where the record names that person's own unit. "
             f"Not drawn: {a('not drawn: none found for the person')} people at universities whose only award on record names the university as a whole, or another researcher there; "
-            f"{a('not drawn: not drawn')} for whom the record is a remark or report not shown to be of these days, a past post at a group funded only later, a grant from another company, or an invitation to speak with no post or payment on record; "
+            f"{a('not drawn: not drawn')} for whom the record is a remark or report not shown to be of these days, a past post at a group funded only later, a grant from another company, a grant to their group from an investor in Anthropic, or an invitation to speak with no post or payment on record; "
             f"{same_words}; {a('not drawn: at a bank, not drawn')} entries that are one of the banks below or its analysts; and the other {a('not drawn: none found')}, for whom no record was found. No tie is implied for anyone not drawn. "
-            "Bank analysts, and investors quoted for their view of the shares, are not drawn, whatever their ties; two investors, Ackman and Maguire, are drawn among the public voices, under that row's rule of three pages. "
+            "Bank analysts, and investors quoted for their view of the shares, are not drawn, whatever their ties; three investors, Ackman, Maguire and Conway, are drawn among the public voices, under that row's rule of three articles. "
             f"Quartz reported on Sep 4, 2026, citing unnamed sources of Bloomberg's, that Anthropic was nearing a credit facility before its share sale, and named {k('banks', 'named by Quartz on Sep 4, 2026 as lenders to Anthropic')} banks in it, four of them also leading the sale; the report says the details could still change. "
             f"Analysts, or executives in office, of {k('banks', 'of those, with an analyst, a note or an executive quoted on the saved pages')} of those banks are quoted on the saved pages. The banks' business with Nvidia was not looked up. "
-            f"{dict([(2, 'Two')])[k('investors', 'quoted and described on the pages as holding or shorting Nvidia shares')]} quoted investors are described on the pages as a shareholder and a short seller of Nvidia. "
-            f"The pages searched carry {b('pairs of outlet and name')} bylines, counting a name once for each outlet it appears at: {b('different names')} different names, {b('names that are an agency or not a person' + chr(39) + 's name')} of them agencies or not a person's name. "
-            f"These are the bylines of the {n_pages:,} pages searched; a page saved later as an actor's own original is cited on that actor's chip and its byline is not counted here. "
+            + {2: "Two quoted investors are described on the pages as a shareholder and a short seller of Nvidia. ", 1: "One quoted investor is described on the pages as holding or shorting Nvidia shares. "}[k('investors', 'quoted and described on the pages as holding or shorting Nvidia shares')] +
+            f"The pages counted carry {b('pairs of outlet and name')} bylines, counting a name once for each outlet it appears at: {b('different names')} different names, {b('names that are an agency or not a person' + chr(39) + 's name')} of them agencies or not a person's name. "
+            "These are the bylines of the pages counted, those of the first search and those saved since; a page saved as an actor's own original is cited on that actor's chip and its byline is not counted here. "
             f"Each was looked up in the fellowship and staff records held and, on Nov 15, in the whole-name search. {rows_map.NUMBER[rows_map.N_BYLINES_DRAWN].capitalize()} have a tie on record and are drawn: "
             "Perlo and Hashim from the records held, Kubinec from his own bio at The Dispatch, Mowshowitz and Schneider from pages saved on Nov 15 (the first look-up had missed both). "
-            f"{dict([(3, 'Three')])[b('pairs: record of another kind, not drawn')]} more have a record of another kind and no tie is drawn: a congressional fellow of the 2021 cohort of a programme that Open Philanthropy funded in 2025 (the record shows no overlap); "
-            "a reporter named on the page of a CSET event; and a CSET staff member whose counted byline is on a CSET release of 2025 (he also wrote CSET's two releases of Nov 10 and 11, which are drawn in CSET's row). "
-            f"For {dict([(2, 'two')])[b('pairs: name match, not settled')]} the tables hold the name and nothing ties it to the reporter. Pages that could not be saved were not checked. "
+            f"{W(other).capitalize()} more have a record of another kind and no tie is drawn: a congressional fellow of the 2021 cohort of a programme that Open Philanthropy funded in 2025 (the record shows no overlap), "
+            "and a reporter named on the page of a CSET event. A CSET staff member's byline on a CSET release of 2025 is no longer counted, because that page is dated before these days (he also wrote CSET's two releases of Nov 10 and 11, which are drawn in CSET's row). "
+            f"For {W(b('pairs: name match, not settled'))} the tables hold the name and nothing ties it to the reporter. Pages that could not be saved were not checked. "
             "The lists of the names looked up are not published, because most name people for whom nothing was found; the counts and the rules are. ")
 
 
@@ -78,12 +80,14 @@ def OWN_CHANNEL_WORDS():
     """The footnote's sentences on the search of the actors' own channels, with every number from research/nv8_s6_counts.tsv
     (scripts/nv8_s6_counts.py, which reads research/nv8_s6_items.tsv)."""
     C = {r['what']: int(r['count']) for r in csv.DictReader(open(R / 'nv8_s6_counts.tsv', newline=''), delimiter='\t')}
-    n_chips = sum(1 for r in rows_map.rows() if r['row_id'].startswith('MA')); searched = C['chips whose original was searched for']
+    n_chips = sum(1 for r in rows_map.rows() if r['row_id'].startswith('MA')); searched = C['chips whose original was searched for']       # every chip ever drawn, one since withdrawn among them
     W = lambda n: rows_map.NUMBER.get(n, {7: 'seven', 8: 'eight', 9: 'nine'}.get(n, n))
     held, loc, cx = C['actors: an item about the affair is held and was read'], C['actors: links located, none could be read'], C['actors: only items that are not about the affair or not their own']
-    assert C['actors whose own channels were searched'] == 77 and n_chips - searched == 23 and C['actors: the reader matched an item about the affair to a chip, and the project holds no copy'] == 0 and loc == 2
+    n_act = C['actors whose own channels were searched']; unsearched = [a[2] for a in rows_map.ACTORS if a[0] in ('hodges', 'conway')]
+    assert n_act == 80 and len(unsearched) == 2 and len(rows_map.WITHDRAWN) == 1 and C['actors: the reader matched an item about the affair to a chip, and the project holds no copy'] == 0 and loc == 2
     return (f"The own channel (official site, newsroom, own feed or account) of each of the {C['actors whose own channels were searched']} actors who had spoken was searched once for these fifteen days by a reader from another model family: "
-            "on Nov 14 for the 63 then drawn, on Nov 15 for the 14 added since (the two share-price rows have none). "
+            "on Nov 14 for the 63 then drawn, on Nov 15 for the 14 added since and then for the three members drawn later that day (the two share-price rows have none; one voice among the 80 is no longer drawn). "
+            "The two people drawn last, an adviser and an investor, have not had their own channels searched. "
             f"An item about the affair is held and was read for {held} (the three papers among them, through articles saved by hand); for {rows_map.NUMBER.get(loc, 'two')} links were located and none could be saved (Anthropic's SEC filings, a page of OpenAI's); "
             f"{rows_map.NUMBER.get(cx, cx)} had only items that do not mention the affair or are not their own; for {C['actors: nothing found on a channel that could be read']} a channel that could be read showed no item about the affair in these fifteen days; "
             f"for {C['actors: no channel could be read']} no channel could be read. An item is counted only where the project holds the page, and a share-sale filing or policy paper that a chip draws as context is not counted as an item about the affair. "
@@ -93,7 +97,22 @@ def OWN_CHANNEL_WORDS():
             f"for {C['chips: original could not be opened']} it still could not be opened (posts on X and Truth Social, broadcasters' video, papers behind a paywall); "
             f"for {rows_map.NUMBER.get(C['chips: original found by the reader and refused to the project (not saved)'], 'two')} the reader found it and the site refused the project's own copy (the Journal's page, an SEC filing); and for {C['chips: original not found']} it was not found. "
             f"Of the chips still without their original, {C["chips still without their original that now also cite a paper's own report of the act"]} now also cite a paper's own report of the act, from the papers' pages saved since the first census. "
-            f"The {n_chips - searched} chips added afterwards cite the actor's own page or the paper's own article, except three that cite a report: a senator's letter of 2025, a senator's post that a newsletter carries, and a magazine's report of the FBI's inquiry. ")
+            f"The {n_chips - searched} chips added without such a search each cite the actor's own page, the paper's own article (some in a licensed copy) or, where neither is held, a report that the chip names. ")
+
+
+def ARTICLE_WORDS():
+    """How the saved pages become the articles counted, with every number from research/nv8_articles.tsv (scripts/nv8_articles.py)."""
+    rows = list(csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t'))
+    n1 = sum(r['set'] == 'first census' for r in rows); n2 = len(rows) - n1
+    arts = {r['article_id'] for r in rows}; cnt = {r['article_id'] for r in rows if r['counted'] == 'yes'}
+    why = Counter('after' if 'after the fifteen days' in r['why_not'] else 'before' if 'before the fifteen days' in r['why_not'] else 'no text' if 'no article text' in r['why_not'] else 'not news'
+                  for r in rows if r['counted'] == 'no')
+    assert sum(why.values()) == sum(r['counted'] == 'no' for r in rows) and why['not news'] == sum('not a news piece' in r['why_not'] for r in rows)
+    undated = sum(1 for r in rows if r['counted'] == 'yes' and not r['day'])
+    return (f"Counts of who is named or quoted are counts of articles, each counted once: the {n1:,} pages saved by the first search and the {n2} saved since (the papers' own articles, saved by hand or in a licensed copy, and a few transcripts) "
+            f"are {len(arts):,} articles once copies of one article are joined (the same address, or four fifths of the shorter text inside the longer), and {len(cnt):,} of them are counted. "
+            f"A page is not counted when its own date, read as a U.S. Eastern day, is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when no text could be read ({why['no text']}) or when it is not a news piece ({why['not news']}); "
+            f"{undated} pages carry no date and are counted. A republished copy dated later than its original is counted only through a counted copy of the same article. ")
 
 
 def LOBBY_WORDS():
@@ -270,8 +289,8 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
     # ------------------------------------------------------------------ data
     actors = OrderedDict((a[0], {'key': a[0], 'group': a[1], 'name': a[2], 'tag': a[3], 'fec': a[4]}) for a in rows_map.ACTORS)
     by_name = {a['name']: a for a in actors.values()}
-    acts = rows_map.acts()
-    mrows = rows_map.rows()
+    acts = [a for a in rows_map.acts() if not a['withdrawn']]
+    mrows = [r for r in rows_map.rows() if not r.get('withdrawn')]
     people = rows_people.rows()
     ties = [r for r in people if r['row_id'].startswith('TI')] + [r for r in mrows if r['row_id'].startswith('MT') and not r.get('arc') and r['kind'] != 'context']
     # third version: the announcement's own words for the ads ("highlighting the strong records"); the audited row and its source are unchanged
@@ -305,11 +324,14 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
     n_cand = sum(party.values())
     assert n_cand == 81 and party['D'] == 38 and party['R'] == 43, party
     members = [a for a in actors.values() if a['fec'] is not None]
+    # recipients in the PAC's filings that carry a drawn member's surname and are someone else's committee (read on Nov 15, 2026: the senator from
+    # Florida's committee, and a representative whose given name is Scott)
+    OTHERS_OF_THE_NAME = {'Sen. Tim Scott': ('RICK SCOTT FOR FLORIDA', 'SCOTT FRANKLIN FOR CONGRESS')}
     paid = [a for a in members if a['fec']]
     # negative with a control: a member drawn without PAC money must be absent from the filings by surname, a paid one present
     for a in members:
         sur = a['name'].split()[-1].upper()
-        found = [k for k in pac if sur in k.replace(',', ' ').split()]
+        found = [k for k in pac if sur in k.replace(',', ' ').split() and k not in OTHERS_OF_THE_NAME.get(a['name'], ())]
         assert bool(found) == bool(a['fec']), (a['name'], found)
         assert not a['fec'] or a['fec'] in pac, a['fec']
     assert paid and len(paid) < len(members)
@@ -343,7 +365,7 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
     for a in members:
         if not a['fec']:
             lines[a['name']].append(('none', 'No AnthroPAC contribution on file'))
-        lines[a['name']].append(('count', f'Named on {named[a["key"]]} of the {n_pages:,} saved pages'))
+        lines[a['name']].append(('count', f'Named in {named[a["key"]]} of the {n_pages:,} articles counted'))
     for a in actors.values():
         if a['group'] == 'papers':
             lines[a['name']].append(('none', 'Sources not public. Its reporters\' names, where a saved page carries them, were looked up in the fellowship and staff records held: no record. Nothing else about them was examined'))
@@ -836,8 +858,9 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             'An act is placed on the day its source gives or, failing that, the day the source was published: those chips have a dashed left edge, and the act itself may be earlier. Where one chip holds two acts of a day and only one is dated by its report, the edge is solid and the words say which. '
             'Where a chip rests on one outlet\'s account of another\'s report, it says so. Grant figures are awards, not payments traced to a bank. An announced ad is not proof that it ran. '
             'Nvidia\'s board said on Nov 8 it had "no reason to believe" national security or company secrets were compromised, and NBC reported on Nov 12 that Alice Huang\'s "precise role" remained unclear. '
-            f'Members of Congress drawn are every current member named on three or more of the {n_pages:,} saved pages for something said or done about the matter in these days, '
-            'and one senator (Cotton) whom the pages name that often for a letter on Megaspeed a year earlier; each one\'s count is in their row. '
+            + esc(ARTICLE_WORDS()) +
+            f'Members of Congress drawn are every current member named in three or more of those {n_pages:,} articles for something said or done about the matter in these days, '
+            'and one senator (Cotton) whom they name that often for a letter on Megaspeed a year earlier; each one\'s count is in their row. '
             'Six others named that often are not drawn, because the pages name them for other things: a leadership vote, a lost election, an impeachment bid and other inquiries. '
             'The count for every name searched is published with the figure\'s tables. '
             + LOOKUP_WORDS(n_pages) +

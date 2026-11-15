@@ -37,7 +37,7 @@ GROUPS = [
  ('shares', 'Share prices', 'any role for a rival chip maker: no document here connects one to the reports.', 'ST05', ''),
  ('anthropic', 'Anthropic', 'any statement by Anthropic on Huang beyond "declined to comment" (its newsroom and share-sale site, searched once on Nov 14, showed none; its share-sale filing and three more SEC documents could not be saved), or any instruction, payment or message tied to the coverage.', 'ST03', ''),
  ('labs', 'Another AI company', 'any part for OpenAI in the reports.', '', ''),
- ('voices', 'Other public voices', 'any part for them in the reports. Drawn: people outside politics and research who are quoted on three or more saved pages. Business with Nvidia is worded where a saved page states it; it was not looked up otherwise.', '', ''),
+ ('voices', 'Other public voices', 'any part for them in the reports. Drawn: people outside politics and research who are quoted in three or more of the articles counted. Business with Nvidia is worded where a saved page states it; it was not looked up otherwise.', '', ''),
  ('abroad', 'China and Singapore', 'whether the intelligence assessment is correct. It has not been tested in public.', 'ST09', ''),
 ]
 
@@ -69,6 +69,8 @@ ACTORS = [
  ('newman', 'analysts', 'Daniel Newman', 'The Futurum Group', None),
  ('boloor', 'analysts', 'Shay Boloor', 'Futurum Equities', None),
  ('yoo', 'analysts', 'Yoo Eung-joon', 'JOON AI Consulting', None),
+ # an expert quoted in the pages saved since the first reading, with a tie of his own on record (look-up of Nov 15, lane analysts_nv8_e, backed by the whole-name search)
+ ('hodges', 'analysts', 'Joshua Hodges', 'U.S.-China Economic and Security Review Commission', None),
  ('warren', 'senate', 'Sen. Elizabeth Warren', 'D-Mass.', ''),
  ('coons', 'senate', 'Sen. Chris Coons', 'D-Del.', 'CHRIS COONS FOR DELAWARE'),
  ('cramer', 'senate', 'Sen. Kevin Cramer', 'R-N.D.', 'CRAMER FOR SENATE'),
@@ -81,6 +83,9 @@ ACTORS = [
  ('thune', 'senate', 'Sen. John Thune', 'R-S.D., majority leader', ''),
  ('wyden', 'senate', 'Sen. Ron Wyden', 'D-Ore.', ''),
  ('cotton', 'senate', 'Sen. Tom Cotton', 'R-Ark., chairs Intelligence', 'COTTON FOR SENATE, INC.'),
+ # three members who reach three counted articles once the pages saved since the first census are counted, each article once (slice S8, Nov 15)
+ ('scott', 'senate', 'Sen. Tim Scott', 'R-S.C., chairs Banking', ''),
+ ('ricketts', 'senate', 'Sen. Pete Ricketts', 'R-Neb.', 'PETE RICKETTS FOR SENATE'),
  ('mast', 'house', 'Rep. Brian Mast', 'R-Fla., chairs Foreign Affairs', 'MAST FOR CONGRESS'),
  ('crawford', 'house', 'Rep. Rick Crawford', 'R-Ark., chairs Intelligence', 'CRAWFORD FOR CONGRESS'),
  ('meeks', 'house', 'Rep. Gregory Meeks', 'D-N.Y.', 'FRIENDS FOR GREGORY MEEKS'),
@@ -93,6 +98,7 @@ ACTORS = [
  ('subramanyam', 'house', 'Rep. Suhas Subramanyam', 'D-Va.', ''),
  ('bacon', 'house', 'Rep. Don Bacon', 'R-Neb.', ''),
  ('mccaul', 'house', 'Rep. Michael McCaul', 'R-Texas', ''),
+ ('neal', 'house', 'Rep. Richard Neal', 'D-Mass., top Democrat on Ways and Means', ''),
  ('trump', 'admin', 'President Trump', '', None),
  ('rubio', 'admin', 'Secretary of State Rubio', '', None),
  ('commerce', 'admin', 'Commerce Secretary Lutnick and his department', '', None),
@@ -120,6 +126,8 @@ ACTORS = [
  ('delangue', 'voices', 'Clément Delangue', 'chief executive of Hugging Face', None),
  ('zhao', 'voices', 'Changpeng Zhao', 'co-founder of Binance', None),
  ('rao', 'voices', 'Naveen Rao', 'founder of Unconventional AI', None),
+ # quoted in three counted articles once the pages saved since the first reading are counted (slice S8)
+ ('conway', 'voices', 'Ron Conway', 'venture capitalist', None),
  ('singapore', 'abroad', 'Singapore Ministry of Home Affairs', '', None),
  ('china', 'abroad', 'China\'s Foreign Ministry', '', None),
  ('embassy', 'abroad', 'Chinese Embassy in Washington', '', None),
@@ -127,6 +135,13 @@ ACTORS = [
  ('taiwan', 'abroad', 'Taiwan\'s Interior Minister', '', None),
  ('globaltimes', 'abroad', 'Global Times', 'newspaper in China', None),
 ]
+
+# An actor who is no longer drawn. The entry stays in ACTORS_ALL and its acts keep their place in ACTS (a row id is never reused);
+# the figure, the gauge and the counts read ACTORS and skip those acts. Slice S8, Nov 15, 2026 (Kevin: "count them for everyone. don't
+# use duplicates. deduplicate."): the three saved pages that quote him are three copies of one article.
+WITHDRAWN = {'rao': 'quoted in one article, of which three copies had been saved and counted as three pages; under the three-article line once each article is counted once'}
+ACTORS_ALL = ACTORS
+ACTORS = [a for a in ACTORS_ALL if a[0] not in WITHDRAWN]
 
 # An act either points at a row of rows_events (its date, source and passage are taken from there) or carries its own.
 ACTS = [
@@ -165,7 +180,7 @@ ACTS = [
   ['sw-fortunecom-08', 'sw-nbcnewscom-02'], ['issued a joint statement calling for answers from Nvidia and tighter restrictions on advanced AI chip exports to China', 'makes these national security concerns even more urgent and raises important questions NVIDIA must answer']),
  ('warren', '2026-11-11', 'Letter with Coons asks the administration to "preserve all records"',
   ['sw-nbcnewscom-09', 'sw-financeyahoocom-23'], ['announced they had written to Commerce Secretary Howard Lutnick with a request to preserve records on the subject', 'have formally asked the Trump administration to "preserve all records"']),
- ('coons', 'EV11', '"Congress will investigate and get answers"'),
+ ('coons', 'EV11', 'Posts of "the insane relationship between the Trump Administration, Chinese spies, and AI billionaires": "Congress will investigate and get answers"'),
  ('coons', '2026-11-11', 'Letter with Warren asks the administration to "preserve all records"',
   ['sw-nbcnewscom-09', 'sw-financeyahoocom-23'], ['Sens. Elizabeth Warren, D-Mass., and Chris Coons, D-Del., announced they had written to Commerce Secretary Howard Lutnick', 'have formally asked the Trump administration to "preserve all records"']),
  ('cramer', 'EV21', '"I just think he\'s got to go"'),
@@ -187,7 +202,7 @@ ACTS = [
   ['sw-washingtonexaminercom-05'], ['"I lost my breath," Sen. John Kennedy (R-LA) told the Washington Examiner']),
  ('kennedy', '2026-11-11', 'Tells Politico, as the New Republic relays it, the Commerce secretary "needs to answer"',
   ['tnr-lutnick'], ['Secretary Lutnick needs to answer that in front of God and country']),
- ('thune', '2026-11-12', 'Expects "some follow-up" by Congress',
+ ('thune', '2026-11-12', 'Expects "some follow-up" by Congress, in CNBC\'s report of that day',
   ['sw-cnbccom-09'], ['I would expect there would be some follow-up, yeah']),
  ('mast', 'EV06', 'Letter dated Nov 4, released Nov 5, asks Huang to brief three committees: "Recent reports raise significant national security concerns"',
   ['house-hfac-letter-pr'], ['Recent reports raise significant national security concerns']),
@@ -225,7 +240,7 @@ ACTS = [
   ['cnbc-1029-nvidia-responds'], ['interactions with its officials are not unusual, because he speaks with thousands of customers every year']),
  ('nvidia', 'EV07', 'Says customer meetings are "part of a CEO\'s job" and that customers get "zero information relevant to national security"; a spokesman tells the Times Huang "has an outstanding security team that accompanies him where needed"',
   ['cnbc-1105-asked-to-brief', 'man-nyt-1105-01', 'cnbc-1108-bipartisan'], ['zero information relevant to national security', 'Our chief executive has an outstanding security team that accompanies', 'Our chief executive has an outstanding security team that accompanies him where needed']),
- ('huang', 'EV14', 'Memo to staff: "I was unfaithful to my wife"; on the board\'s inquiry: "I support the investigation and will cooperate fully"',
+ ('huang', 'EV14', 'Memo to staff: "I owe my family and all of you an apology. I was unfaithful to my wife"; on the board\'s inquiry: "I support the investigation and will cooperate fully"',
   ['npr-1108-investigation'], ['I support the investigation and will cooperate fully']),
  ('huang', 'EV31', 'Resigns after 33 years as chief executive'),
  ('board', 'EV15', 'Opens an independent investigation; says it has "no reason to believe" secrets were compromised and "has confidence in Jensen and his leadership team"',
@@ -442,18 +457,61 @@ ACTS = [
  ('justice', '2026-11-10', 'Mother Jones reports that the FBI, "along with the Justice Department\'s national security division", is investigating Megaspeed over chip shipments to China and "looking into whether China recruited Alice Huang to spy"',
   ['mj-trump-corner'] * 4, ['I know the FBI is looking into it', "The agency, along with the Justice Department's national security division",
                             'is investigating Megaspeed for allegedly shipping Nvidia AI chips to customers in China and looking into whether China recruited Alice Huang to spy', 'PUBLISHED: 2026-11-10']),
+ # ---- slice S8 (Nov 15, 2026): three members named in three or more counted articles once the pages saved since are counted
+ ('scott', '2026-11-12', 'Letters to Huang and to Lutnick ask each to testify before the Senate Banking Committee; he asks Huang to appear on Dec. 3. In a post: "Recent reports raise serious concerns about our national security and the protection of sensitive U.S. technology"',
+  ['man-5db1c88adc15'] * 3 + ['man-9de9f2a5db75'] * 2 + ['man-nyt-1112-09'],
+  ['on Thursday evening sent letters to Mr. Huang and Mr. Lutnick requesting their testimony in front of the Senate Banking Committee', 'Recent reports raise serious concerns about our national security and the protection of sensitive U.S. technology',
+   'Mr. Scott asked Mr. Huang to appear on Dec. 3', 'sent letters late Thursday requesting that Jensen Huang and Lutnick testify before his panel early next month', 'Scott said he will hold the hearing Dec. 3',
+   'on Thursday evening sent letters to Mr. Huang and Mr. Lutnick requesting their testimony in front of the Senate Banking Committee']),
+ ('neal', '2026-11-12', 'Letter with Sen. Wyden opens a probe of chip-export approvals; it says the administration "did not appear to acknowledge this evident national security threat"',
+  ['sw-cnbccom-09', 'art-own-wyden-neal-letter-1112', 'art-own-wyden-neal-letter-1112', 'man-a45550a35921'],
+  ['Their letter to Commerce Secretary Howard Lutnick announcing the probe was sent by Sen. Ron Wyden, D-Ore., and Rep. Richard Neal, D-Mass.', 'the Administration did not appear to acknowledge this evident national security threat',
+   'November 12, 2026 The Honorable Howard Lutnick', 'In a letter addressed to Lutnick on Thursday, Senator Ron Wyden and Congressman Richard Neal requested']),
+ ('ricketts', '2026-11-10', 'Says of the allegations: "this needs to be investigated to find out if indeed the allegations are true"; "We cannot allow our chief adversary in the world [to] have access to our high-end technology"',
+  ['sw-washingtonsuncom-02'] * 3, ['this needs to be investigated to find out if indeed the allegations are true', 'We cannot allow our chief adversary in the world [to] have access to our high-end technology', 'PUBLISHED: 2026-11-10']),
+ ('ricketts', '2026-11-12', 'Says, in the FT\'s account, that Congress needs to hear from Commerce officials on why actions on Megaspeed were "delayed". A Fox Business caption has him on "Varney & Co." on the resignation and "the need for an investigations"; the recording was not heard',
+  ['man-a45550a35921', 'fox-trump-successor', 'fox-trump-successor'],
+  ['said Congress needed to hear from commerce department officials over why actions on Megaspeed were "delayed"', "discusses the resignation of Jensen Huang as CEO of Nvidia, the need for an investigations and the national security implications", 'PUBLISHED: 2026-11-12']),
+ # ---- slice S8: remarks of actors already drawn that two or more counted articles carry and no chip did (the reading of the pages saved since)
+ ('nvidia', '2026-11-09', 'A spokesman tells the Times the company consults with officials "to answer their questions, provide information we have gathered from the field, request their guidance and instructions", and works "to help government and our partners halt any would-be smugglers"',
+  ['man-nyt-1109-03'] * 2, ['to answer their questions, provide information we have gathered from the field, request their guidance and instructions and ask whether they have any follow-ups', 'to help government and our partners halt any would-be smugglers while serving the critical market of lawful customers']),
+ ('cornyn', '2026-11-12', 'Tells the FT: "There needs to be a thorough investigation and accountability for the outrageous circumvention of national security export controls ... Heads should roll"',
+  ['man-a45550a35921'] * 2, ['There needs to be a thorough investigation and accountability for the outrageous circumvention of national security export controls', 'Republican senator John Cornyn told the FT. "Heads should roll."']),
+ ('megaspeed', '2026-11-09', 'Posts a statement on LinkedIn, in a Dow Jones report of that day: investigations by U.S. authorities and others found "no evidence of any violations concerning the illicit transfer of chips or any illegal activities"; it maintains "the highest standards of legal and ethical conduct". The words are those of its statement dated Dec 23, 2025, which another page of that day says it is standing by',
+  ['art-fc-itiger-2682389645'] * 4 + ['sw-chinamoneynetworkcom-01'] * 2,
+  ['In a statement posted on LinkedIn on Monday, Megaspeed said', 'no evidence of any violations concerning the illicit transfer of chips or any illegal activities', 'Dow Jones Nov 09', 'the highest standards of legal and ethical conduct',
+   'The company is standing by a statement dated December 23, 2025', 'there has been no evidence of any violations concerning the illicit transfer of chips or any illegal activities']),
+ ('moorhead', '2026-11-11', 'Quoted in a Times article of Nov 11: "Jensen is very much the command and control ... nobody can replace Jensen. There has to be a different operating system"',
+  ['sw-bostonglobecom-01'] * 4 + ['man-nyt-1112-07'], ['Jensen is very much the command and control', 'nobody can replace Jensen. There has to be a different operating system', 'This article originally appeared in The New York Times',
+   'bostonglobe.com/2026/11/11/business/nvidia-board-meeting-jensen-huang-future', 'Jensen is very much the command and control']),
+ ('thune', '2026-11-12', 'Tells reporters "it would make sense" for Huang to testify "because of the nature of the association and the governments and the national security interests"',
+  ['man-ft-1112-05', 'man-575551038d4a'], ['told reporters on Capitol Hill on Thursday that "it would make sense [for Huang to testify] because of the nature of the association and the governments and the national security interests"',
+   'on Thursday said "it would make sense [for Huang to testify] because of the nature of the association and the governments and the national security interests"']),
+ ('himes', '2026-11-11', 'Tells Politico after a classified briefing: "What\'s the relationship with Alice Huang and the Chinese, and what do we know about what influence or information was traded? Because today, at least, I don\'t know"; and: "I would hope that the FBI would launch a major counterintelligence investigation. I haven\'t heard that they did"',
+  ['art-fc-yahoo-politico-himes'] * 3, ["what do we know about what influence or information was traded? Because today, at least, I don't know", "I would hope that the FBI would launch a major counterintelligence investigation. I haven't heard that they did", 'PUBLISHED: 2026-11-11T23:30:07Z']),
+ # ---- slice S8: an item found on a new member's own channel (lane s6_channels_4), and the people drawn from the pages saved since
+ ('ricketts', '2026-11-09', 'Statement: "We need to know if Chinese spies received sensitive information and if Nvidia chips were illegally smuggled through Megaspeed ... To start we must pass my MATCH Act and the Safe Chips Act"',
+  ['art-own-ricketts-statement-1109'] * 3, ['We need to know if Chinese spies received sensitive information and if Nvidia chips were illegally smuggled through Megaspeed', 'To start we must pass my MATCH Act and the Safe Chips Act', 'PUBLISHED: 2026-11-09T23:17:00+00:00']),
+ ('hodges', '2026-11-12', 'Tells CNN: "we\'ve seen repeatedly the Chinese are incredibly adept at using people both wittingly and unwittingly"',
+  ['art-fc-cnn-1112'] * 3, ["Joshua Hodges, a commissioner on the US-China Economic and Security Review Commission", "we've seen repeatedly the Chinese are incredibly adept at using people both wittingly and unwittingly", 'PUBLISHED: 2026-11-12']),
+ ('conway', '2026-11-11', 'Calls for patience while the investigations conclude, in a post the San Francisco Standard times at 1:42 pm Pacific. The Post quotes a post of his: "As the swirl continues (which I believe should be taken seriously), let\'s pause for a moment and remember what Jensen has contributed to our industry"',
+  ['sw-sfstandardcom-09', 'sw-sfstandardcom-04', 'man-wapo-1112-02', 'man-wapo-1112-02'],
+  ['At 1:42 pm on Wednesday, just minutes before the Times broke its story, venture capitalist Ron Conway called for patience while investigations concluded', "Venture capitalist Ron Conway was among those rushing to Huang's defense, calling for patience and grace",
+   "As the swirl continues (which I believe should be taken seriously), let's pause for a moment and remember what Jensen has contributed to our industry", 'wrote venture capitalist Ron Conway, adding that the public should wait for various investigations by the government and the company to conclude']),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
 REPORT_DAY = {('justice', '2026-11-10'), ('cornyn', '2026-11-12'), ('chan', '2026-11-12'), ('ohanlon', '2026-11-10'), ('moorhead', '2026-11-10'), ('newman', '2026-11-09'), ('newman', '2026-11-12'), ('boloor', '2026-11-12'), ('yoo', '2026-11-12'), ('commerce', '2026-11-09'), ('bresnick', '2026-11-10'), ('bresnick', '2026-11-11'), ('king', '2026-11-12'), ('nie', '2026-11-12'), ('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire', '2026-11-10'), ('grunewald', '2026-11-10'), ('stapp', '2026-11-10'),
-              ('blumenthal', '2026-11-09'), ('warner', '2026-11-09'), ('wyden', '2026-11-09'), ('wyden', '2026-11-12'),
+              ('blumenthal', '2026-11-09'), ('warner', '2026-11-09'), ('wyden', '2026-11-09'), ('ricketts', '2026-11-10'), ('ricketts', '2026-11-12'), ('moorhead', '2026-11-11'), ('himes', '2026-11-11'), ('hodges', '2026-11-12'),
               ('cornyn', '2026-11-08'), ('thune', '2026-11-12'), ('johnson', '2026-11-12'),
               ('mccaul', '2026-11-08'), ('magaziner', '2026-11-08'), ('openai', '2026-11-04'),
               ('commerce', '2026-11-11'), ('justice', '2026-11-09'), ('nvidia', '2026-11-09'),
               ('anthropic', '2026-11-12')}
 # Row ids whose source gives the act's own day although another act of the same actor on that day is known only by its report's day
 # (slice S8, 2026-11-15: the Journal has Cornyn's post "on X Sunday"; his remark on the Times report that day is dated by CNBC's page).
-OWN_DAY = {'MA33'}
+OWN_DAY = {'MA33',
+           'MA142',        # Moorhead's broadcast of Nov 11 is dated by his firm's own summary; the Times article that quotes him that day gives no day for the remark (MA158)
+           'MA159'}        # Thune "told reporters on Capitol Hill on Thursday" (the FT); his "some follow-up" (MA36) is dated by CNBC's report
 
 # Ties into a row that rows_people.TIES does not hold. kind: money | act (an official act) | meet (scheduled for the same session) |
 # context (a third party's statement that is worded in the row and drawn as no line: audit1b, on the newsletter about Senate Banking members)
@@ -611,6 +669,15 @@ TIES_V7 = [
  ('Anthropic', 'Financial Times', 'context', 'its report of Sep 4, 2025 that Anthropic would stop selling AI services to Chinese-owned groups cited "an Anthropic executive familiar with the matter", as Bloomberg Law relays it. No record here shows who the sources of its Nov 6 report were',
   ['art-lead-bloomberglaw-20250904-anthropic-china-ft'] * 3, ['the Financial Times reports', 'citing an Anthropic executive familiar with the matter', 'PUBLISHED: 2025-09-04']),
 ]
+# ---- slice S8 (Nov 15, 2026): ties of the members drawn since that day; numbered after TIES_V7
+TIES_V8 = [
+ ('AnthroPAC', 'Sen. Pete Ricketts', 'money', '$2,000 · Sep 25', [FEC + 'PETE RICKETTS FOR SENATE'], ['2000.00']),
+ # the look-up of the names the pages saved since added (lane analysts_nv8_e, Nov 15). Identity: the commission's own page and Anthropic's
+ # announcement both give his earlier post as national security adviser to the Speaker.
+ ('Anthropic', 'Joshua Hodges', 'role', 'named by Anthropic on Aug 27, 2025 as a member of its National Security and Public Sector Advisory Council',
+  [PK + 'congress/research/revolving_door.csv#RD038', 'art-tie-anthropic-advisory-council-20250827', 'art-tie-anthropic-advisory-council-20250827', 'art-tie-uscc-commission-members'],
+  ['Anthropic National Security and Public Sector Advisory Council', 'Mr. Hodges was formerly the National Security Advisor to Speaker of the House Mike Johnson', 'National Security and Public Sector Advisory Council', 'Previously he was National Security Advisor to Speaker']),
+]
 
 ARCS = [
  # a, b, kind, wording, at, [src], [q]
@@ -645,7 +712,7 @@ TIES_V3 = [(a, b, 'grant', label, [LIN + 'flows_annual.csv#' + i for i in ids], 
 def acts():
     """ACTS with date, src and q filled in from rows_events where an act points at one of its rows."""
     ev = {r['row_id']: r for r in rows_events.rows()}
-    keys = {a[0] for a in ACTORS}
+    keys = {a[0] for a in ACTORS_ALL}
     out = []
     for i, a in enumerate(ACTS, 1):
         assert a[0] in keys, a[0]
@@ -655,10 +722,10 @@ def acts():
             src, q = (e['src'], e['q']) if isinstance(e['src'], list) else ([e['src']], [e['q']])
             more = (a[3], a[4]) if len(a) == 5 else ([], [])          # sources the act adds to its event row's (audit of Nov 14)
             assert len(more[0]) == len(more[1])
-            out.append({'actor': a[0], 'date': e['date'], 'what': a[2], 'src': list(src) + more[0], 'q': list(q) + more[1], 'from': a[1], 'reported': (a[0], e['date']) in REPORT_DAY and not own})
+            out.append({'actor': a[0], 'date': e['date'], 'what': a[2], 'src': list(src) + more[0], 'q': list(q) + more[1], 'from': a[1], 'reported': (a[0], e['date']) in REPORT_DAY and not own, 'withdrawn': WITHDRAWN.get(a[0], '')})
         else:
             assert len(a[3]) == len(a[4])
-            out.append({'actor': a[0], 'date': a[1], 'what': a[2], 'src': a[3], 'q': a[4], 'from': '', 'reported': (a[0], a[1]) in REPORT_DAY and not own})
+            out.append({'actor': a[0], 'date': a[1], 'what': a[2], 'src': a[3], 'q': a[4], 'from': '', 'reported': (a[0], a[1]) in REPORT_DAY and not own, 'withdrawn': WITHDRAWN.get(a[0], '')})
     return out
 
 
@@ -708,7 +775,8 @@ def _also(rid, src, q):
 
 _X = 'art-own-x-'
 _also('MA16', ['man-ft-1110-02'], ['It is mind-boggling that commerce knew months ago that Megaspeed is being run by a Chinese spy but did nothing to stop them from buying $4.8bn worth of Nvidia chips'])
-_also('MA22', ['man-ft-1107-01'], ['"Congress will investigate and get answers," Coons wrote on X.'])
+_also('MA22', ['man-ft-1107-01'] * 2, ['"Congress will investigate and get answers," Coons wrote on X.', 'insane relationship between the Trump Administration, Chinese spies, and AI billionaires'])
+_also('MA58', ['art-fc-tovima-ft-1109-admits'], ['"I owe my family and all of you an apology," Huang said in the message. "I was unfaithful to my wife.'])
 _also('MA33', ['art-fc-tovima-wsj-1108-board'], ['Sen. John Cornyn (R., Texas) said on X Sunday, "Congressional oversight investigation needed."'])
 _also('MA46', ['man-nyt-1108-01'] * 2 + ['man-politico-1109-01'],
       ['Representative Michael McCaul, a Republican of Texas who is the vice chair of the House Committee on Homeland Security, wrote on social media', 'PUBLISHED: 2026-11-08',
@@ -734,6 +802,9 @@ _also('MA105', ['art-fc-tovima-wsj-1108-board'], ["Today's news will not slow NV
 _also('MA127', [_X + '2119543114222522593'] * 2, ['Meanwhile pushing to sell maximum of cutting edge AI chips to China against advice of ~entire natsec community', 'Sun Nov 08 21:30:32 +0000 2026'])
 _also('MA135', [_X + '2120883918119592037'] * 3, ['This whole thing sucks, and I wish none of it had happened', "we'll keep fighting for open-source AI, harder than ever", 'Thu Nov 12 14:18:24 +0000 2026'])
 _also('MA136', [_X + '2120888881717612576'] * 2, ["It's a mistake for Nvidia to let Jensen resign", 'Thu Nov 12 14:38:08 +0000 2026'])
+# the letter carries its own day, and the FT gives it too: Wyden's chip no longer sits on a report's day
+_also('MA152', ['art-own-waysandmeans-wyden-neal-letter-1112'] * 2, ['November 12, 2026 The Honorable Howard Lutnick', 'the Administration did not appear to acknowledge this evident national security threat'])
+_also('MA31', ['art-own-wyden-neal-letter-1112', 'man-a45550a35921'], ['November 12, 2026 The Honorable Howard Lutnick', 'In a letter addressed to Lutnick on Thursday, Senator Ron Wyden and Congressman Richard Neal requested'])
 
 
 
@@ -771,5 +842,8 @@ def rows():
         out.append({'row_id': f'MT{i:02d}', 'a': a, 'b': b, 'kind': kind, 'label': label, 'at': at, 'arc': True, 'src': src, 'q': q})
     for i, (a, b, kind, label, src, q) in enumerate(TIES_V7, len(TIES_MORE) + len(ARCS) + len(TIES_V3) + len(TIES_V4) + len(TIES_V5) + len(TIES_V6) + len(ARCS_V6) + 1):
         assert b in names and kind == 'context' and len(src) == len(q), (a, b)
+        out.append({'row_id': f'MT{i:02d}', 'a': a, 'b': b, 'kind': kind, 'label': label, 'src': src, 'q': q})
+    for i, (a, b, kind, label, src, q) in enumerate(TIES_V8, len(TIES_MORE) + len(ARCS) + len(TIES_V3) + len(TIES_V4) + len(TIES_V5) + len(TIES_V6) + len(ARCS_V6) + len(TIES_V7) + 1):
+        assert b in names and (kind == 'context' or (a in left and kind in ('role', 'money', 'past'))) and len(src) == len(q), (a, b)
         out.append({'row_id': f'MT{i:02d}', 'a': a, 'b': b, 'kind': kind, 'label': label, 'src': src, 'q': q})
     return out
