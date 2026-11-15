@@ -58,7 +58,7 @@ def main():
     dsites = {c['domain'] for c in drawn}
     check(f'{len(dsites):,} sites appear among the dots' in flat, f'{len(dsites)} sites appear among the dots ({len({c["domain"] for c in cov})} with the pieces that have no day)')
     scope = Counter(s['class'] for s in table('coverage_scope.tsv'))
-    check(scope['story'] == len(cov) and len(table('coverage_scope.tsv')) == len(harvest) and f'leaves out {scope["fallout"]:,} links' in flat and f'and {scope["other"]:,} others' in flat,
+    check(scope['story'] == len(cov) and len(table('coverage_scope.tsv')) == len(harvest) and f'Left out are {scope["fallout"]:,} links' in flat and f'and {scope["other"]:,} others' in flat,
           f'of {len(harvest):,} harvested links the word rule classes {scope["story"]:,} as on the story, {scope["fallout"]} as wider fallout and {scope["other"]} as other, as the figure says (research/coverage_scope.tsv)')
     per = Counter(c['first_listed'] for c in drawn)
     check(all(re.search(rf'\b{n:,}\b', flat) for n in per.values()), f'the count over each day\'s column is printed: {", ".join(f"{d[5:]}: {n}" for d, n in sorted(per.items()))}')
@@ -84,6 +84,22 @@ def main():
           and all(not j['member_bioguide'] for j in jc.values() if j['outcome'].startswith(('not attributed', 'no sitting', 'sponsor'))),
           f'a gift to a joint fundraising committee is counted for a member only where research/joint_committees.csv shows that member as the one sitting member among its participants '
           f'({len({g["committee_id"] for g in jg})} such committees hold a counted line; {sum(1 for j in jc.values() if j["outcome"].startswith("not attributed"))} shared by several members or not settled are attributed to no one)')
+    neg = table('employee_gift_negatives.csv'); rates = {r['side']: r for r in table('employee_gift_rates.csv')}
+    check(all(int(rates[s_]['negative_lines_not_netted']) == sum(1 for n in neg if n['side'] == s_) and abs(float(rates[s_]['negative_usd_not_netted']) - sum(float(n['usd']) for n in neg if n['side'] == s_)) < 0.5
+              and f"{rates[s_]['negative_lines_not_netted']} for {s_.capitalize()}, {money(-float(rates[s_]['negative_usd_not_netted']))}" in flat for s_ in ('anthropic', 'nvidia')),
+          'the negative receipt lines the figure says it does not take off are those of research/employee_gift_negatives.csv, counted and summed for each company')
+    look = {(r['register'], r['what']): int(r['count']) for r in table('nv8_lookup_counts.tsv')}
+    n_an = look[('analysts', 'quoted on the saved pages (a person or firm written two ways counted once)')]
+    check(n_an == look[('analysts', 'drawn')] + sum(v for (reg, w), v in look.items() if reg == 'analysts' and w.startswith('not drawn')) and f'{look[("analysts", "drawn")]} of the {n_an} analysts' in flat
+          and f'quote {n_an} analysts' in flat and f'{look[("bylines", "different names")]} different names' in flat and f'carry {look[("bylines", "pairs of outlet and name")]} bylines' in flat,
+          f'the counts of analysts and bylines the figure prints are those of research/nv8_lookup_counts.tsv ({n_an} analysts, experts and research groups; {look[("bylines", "different names")]} byline names)')
+    nb = look[('banks', 'of those, with an analyst, a note or an executive quoted on the saved pages')]
+    check(f"analysts or executives of {nb} of them are quoted" in flat and f"{look[('banks', 'named by Quartz on Sep 4, 2026 as lenders to Anthropic')]} banks would lend to Anthropic" in flat
+          and look[('bylines', 'different names drawn')] == 5 and 'five have a tie on record' in flat,
+          f'the counts of banks ({nb} of the lenders reported have someone quoted) and of bylines drawn the figure prints are those of research/nv8_lookup_counts.tsv')
+    read = table('coverage_scope_read.tsv'); on = {r['url'] for r in read if r['finding'] == 'on the story'}
+    check(on <= {c['url'] for c in cov} and f'{len(on)} are plainly on the story' in flat and f'{sum(r["finding"] == "not settled" for r in read)} could not be settled' in flat,
+          f'the {len(on)} links a reading put on the story are among the pieces counted, and the figure prints that number (research/coverage_scope_read.tsv)')
     with_emp = sum(1 for m in members if agg[(m, 'anthropic')][0] > 0)
     check(f'{with_emp} of the {len(members)} drawn' in flat or f'{with_emp} of {len(members)}' in flat, f'{with_emp} of the {len(members)} members drawn received a gift from someone who gave Anthropic as employer')
     pac = [t for t in table('member_ties.csv') if t['type'] == 'company_pac' and t['side'] == 'anthropic' and t['member'] in members and t['usd']]

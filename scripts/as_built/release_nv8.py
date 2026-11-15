@@ -15,7 +15,7 @@ LANE = Path('lanes/audit_nv8')
 RUN = ('fig_map.py', 'fig_common.py', 'rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_coverage.py', 'rows_ties.py', 'rows_events.py', 'story_scope.py', 'nv8_status.py', 'build_nv8.py', 'verify_nv8.py')
 AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py')
 TABLES = ('harvest.tsv', 'coverage_rows.tsv', 'coverage_day_pages.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'member_ties.csv', 'employee_gift_rates.csv', 'committee_keys.csv', 'joint_committees.csv',
-          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv')
+          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv')
 SHIM = '''"""Which saved news pages name each member of Congress: the counts the figure prints ("named on N of the saved pages").
 In the builder's project this module reads the saved pages themselves; they are not in this copy (no article text is), so here
 the same answer is read from research/story_pages.tsv, which lists every counted page by address and the members it names."""
@@ -67,6 +67,11 @@ def main(target):
     # ---------------------------------------------------------------- tables
     for name in TABLES:
         t = (R / name).read_text(); m = PRIVATE.search(t); assert not m, (name, t[max(0, m.start() - 60):m.end() + 40]); put(Tg, f'research/{name}', t)
+    # lobbyists' own gifts to the 24 members, all three sides by one rule (slice F1): without the payee and the honoree as written (free text
+    # that can name a private person), the pack's row id and the saved page; each gift keeps the address of its official report
+    lg = list(csv.DictReader(open(R / 'lobbyist_gifts_map.csv', newline='')))
+    lg_cols = [c for c in lg[0] if c not in ('payee', 'honoree_as_written', 'pack_row', 'source')]
+    table(Tg, 'research/lobbyist_gifts_map.csv', [{c: r[c] for c in lg_cols} for r in lg], lg_cols, ',')
     # the yearly award rows the figure's grant totals are sums of (rows_map.sums_ok() recomputes each total from them)
     import rows_map as RM
     used = {i for g in RM.GRANTS + RM.GRANTS_V3 + RM.GRANTS_NOTE for i in g[3]}
@@ -109,6 +114,9 @@ def main(target):
             assert w_ in known or w_ in member_mentions.NOT_A_MEMBER, ('a word after a congressional title on three or more pages is not classified', w_)
             sel.append({'name': w_, 'first_names_searched': '', 'pages': len(ids_), 'drawn': 'not a name searched',
                         'why_not': 'a word found after a congressional title: ' + ('part of a name searched above' if w_ in known else 'not a current member: ' + member_mentions.NOT_A_MEMBER[w_])})
+        elif len(ids_) == 2:                 # under the line: listed with its count so the line itself can be checked (second audit, Nov 15, 2026)
+            sel.append({'name': w_, 'first_names_searched': '', 'pages': 2, 'drawn': 'not a name searched',
+                        'why_not': 'a word found after a congressional title on two pages, under the three-page line' + ('' if w_ not in known else ': part of a name searched above')})
     table(Tg, 'research/member_selection.tsv', sel, list(sel[0].keys()), '\t')
     # every harvested link with the class the word rule gives it: the figure counts and draws only 'story'
     import story_scope
@@ -167,6 +175,22 @@ def main(target):
     disp = R / 'audits' / 'DISPOSITIONS-audit_nv8.csv'
     if disp.exists():
         put(Tg, 'audit/DISPOSITIONS.csv', disp.read_text())
+    # ---------------------------------------------------------------- the second audit (Nov 15, 2026): three lanes, each read only after its done marker
+    A2 = {'a': ('findings.csv', 'figure_findings.csv', 'earlier_dispositions.csv'), 'b': ('money_findings.csv', 'coverage_findings.csv', 'money.md', 'census.md'), 'c': ('selection_findings_final.csv',)}
+    audit2_notes = {}
+    for t, names in A2.items():
+        L2 = LANE.parent / f'audit_nv8_s7{t}'
+        if (L2 / 'done' / 'DONE').exists() and (L2 / 'out' / 'REPORT.md').exists():
+            fix = lambda x: scrub(x).replace(f'lanes/audit_nv8_s7{t}', 'audit2')
+            put(Tg, f'audit2/BRIEF-{t}.md', fix((L2 / 'PROMPT.md').read_text()))
+            put(Tg, f'audit2/REPORT-{t}.md', fix((L2 / 'out' / 'REPORT.md').read_text()))
+            for name in names:
+                if (L2 / 'out' / name).exists():
+                    put(Tg, f'audit2/{t}-{name}', fix((L2 / 'out' / name).read_text()))
+            audit2_notes[t] = (L2 / 'out' / 'REPORT.md').read_text().strip().splitlines()[-1]
+    disp2 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s7.csv'
+    if disp2.exists():
+        put(Tg, 'audit2/DISPOSITIONS.csv', disp2.read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')
     import nv8_readme
     put(Tg, 'README.md', nv8_readme.readme(Tg, rows, ev, audit_note))
@@ -230,6 +254,14 @@ def _index(pairs):
     return by_last
 
 
+# People the second audit's files name in a public role and the figure does not draw, whose names are also in the lists the scan reads
+# (those lists hold everyone in two tables of the evidence sets, not donors and lobbyists only). Each was checked on Nov 15, 2026:
+PUBLIC_IN_AUDIT2 = {('MILLER', 'CHRIS'),      # a historian of the chip industry quoted on the saved pages; the audit says the tables hold his name only as a cited author
+                    ('BAIR', 'SHEILA'),       # a former chair of the FDIC quoted on the saved pages; the audit states her past trusteeship of RAND
+                    ('DELANGUE', 'CLMENT'),   # the reading's spelling of Clément Delangue, who is drawn
+                    ('LIU', 'CHANG')}         # the audit names the Chinese embassy's spokesperson, whose surname and given name are this pair's two words the other way round; the lists hold someone else
+
+
 def name_scan(Tg, rows):
     """Three scans, each of which must find nothing.
     1. The tables of gifts, PACs, lobbying and committees, and the copied sources: no name from the donors' and lobbyists'
@@ -243,7 +275,8 @@ def name_scan(Tg, rows):
     files = [f for f in sorted(Tg.rglob('*')) if f.is_file() and '.git' not in f.parts and '__pycache__' not in f.parts and f.suffix not in ('.png', '.jpg')]
     rel = lambda f: str(f.relative_to(Tg))
     HEADLINE_FILES = ('research/coverage_rows.tsv', 'research/harvest.tsv', 'research/coverage_scope.tsv', 'research/nv8_rows.tsv', 'research/evidence.tsv', f'figures/{N.STEM}.html')
-    NAMING = HEADLINE_FILES + ('research/member_ties.csv', 'research/member_selection.tsv', 'README.md') + tuple(rel(f) for f in files if rel(f).startswith(('scripts/', 'audit/')))
+    NAMING = HEADLINE_FILES + ('research/member_ties.csv', 'research/member_selection.tsv', 'README.md') + tuple(rel(f) for f in files if rel(f).startswith(('scripts/', 'audit/', 'audit2/')))
+    assert PUBLIC_IN_AUDIT2 <= every, 'a name excused for the second audit\'s files is no longer in the lists: take it off PUBLIC_IN_AUDIT2'
     # 1
     ix = _index(every); bad = [(rel(f), h) for f in files if rel(f) not in NAMING for h in _hits(f.read_text(encoding='utf-8', errors='replace'), ix)]
     assert not bad, ('a name from the donors\' and lobbyists\' lists is in a table of gifts or a copied source (file, initials)', Counter(bad).most_common(12))
@@ -258,13 +291,15 @@ def name_scan(Tg, rows):
         if r == f'figures/{N.STEM}.html':
             return re.sub(r'<title>.*?</title>', ' ', t, flags=re.S)
         return t
-    ix = _index(pairs); bad = [(rel(f), h) for f in files for h in _hits(without_headlines(f), ix)]
+    ix = _index(pairs); ix2 = _index(pairs - PUBLIC_IN_AUDIT2)
+    bad = [(rel(f), h) for f in files for h in _hits(without_headlines(f), ix2 if rel(f).startswith('audit2/') else ix)]
     assert not bad, ('a donor\'s or lobbyist\'s name is in the copy outside a listed headline (file, initials)', Counter(bad).most_common(12))
     # 3
     heads = ' '.join((r.get('headline') or '') + ' ' + (r.get('passage') or '') for r in csv.DictReader(open(Tg / 'research' / 'coverage_rows.tsv', newline=''), delimiter='\t'))
     heads += ' ' + ' '.join(' '.join(v or '' for v in r.values()) for r in csv.DictReader(open(Tg / 'research' / 'harvest.tsv', newline=''), delimiter='\t'))
     in_head = _found(heads, _index(pairs))
-    ix = _index(pairs - in_head); bad = [(rel(f), h) for f in files for h in _hits(f.read_text(encoding='utf-8', errors='replace'), ix)]
+    ix = _index(pairs - in_head); ix2 = _index(pairs - in_head - PUBLIC_IN_AUDIT2)
+    bad = [(rel(f), h) for f in files for h in _hits(f.read_text(encoding='utf-8', errors='replace'), ix2 if rel(f).startswith('audit2/') else ix)]
     assert not bad, ('a donor\'s or lobbyist\'s name is in the copy (file, initials)', Counter(bad).most_common(12))
     name_scan.in_headlines = len(in_head)
     return pairs, len(in_head)

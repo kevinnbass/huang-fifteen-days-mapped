@@ -42,7 +42,10 @@ def main():
         if story_scope.scope(r['url'], r['anchor_text']) != 'story':
             continue
         cite, q = '', ''
-        for s in [r['first_snapshot']] + [x for x in snaps if x != r['first_snapshot']]:
+        # a page saved for a day before the piece was first listed cannot be its citing page: such a page can still carry the headline in
+        # a live sidebar of the other aggregator (second audit, Nov 15, 2026: two pieces of Nov 12 were cited from an Oct 29 page)
+        day_of = lambda x: (lambda m: f'2026-{m.group(1)}-{m.group(2)}' if m else '9999')(re.search(r'-(\d{2})(\d{2})-', x))
+        for s in [r['first_snapshot']] + [x for x in snaps if x != r['first_snapshot'] and day_of(x) >= (r['first_listed'] or '0000')]:
             h = cr.haystack(s)
             q = find(h, r['anchor_text']) if h else ''
             if q:

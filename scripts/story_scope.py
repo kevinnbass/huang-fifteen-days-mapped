@@ -19,7 +19,24 @@ SPECIFIC = re.compile(r'spy|spies|spying|espionage|honey|affair|scandal|oust|res
 OTHER = re.compile(r'hugging[- ]?face|antitrust|ai[- ]competition|chip[- ]competition|tariff|bank[- ]of[- ]nvidia', re.I)
 
 
+_READ = None
+
+
+def read_in():
+    """Addresses that a reading put on the story although the word rule leaves them out (research/coverage_scope_read.tsv:
+    the links left out were read after the second audit found ten of 150 plainly on the story)."""
+    global _READ
+    if _READ is None:
+        import csv
+        from pathlib import Path
+        p = Path(__file__).resolve().parents[1] / 'research' / 'coverage_scope_read.tsv'
+        _READ = {r['url'] for r in csv.DictReader(open(p, newline='', encoding='utf-8'), delimiter='\t') if r['finding'] == 'on the story'} if p.exists() else set()
+    return _READ
+
+
 def scope(url, text):
+    if url in read_in():
+        return 'story'
     t = f'{url} {text}'
     if WHO.search(t) or UNNAMED.search(t):
         return 'story'

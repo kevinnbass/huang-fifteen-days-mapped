@@ -28,6 +28,53 @@ def CONDUIT(gr):
             + ('among the members drawn they name only ' + ' and '.join(who) + '. ' if who else 'none of them names a committee of a member drawn. '))
 
 
+
+def NEGATIVES(gift_rate, key2name):
+    """The footnote's sentence on what the sums are: positive receipt lines, with the negative lines listed and not netted."""
+    neg = list(csv.DictReader(open(R / 'employee_gift_negatives.csv', newline='')))
+    drawn = [n for n in neg if n['member']]
+    words = '; among the members drawn, ' + ' and '.join(f"${-float(n['usd']):,.0f} returned by a committee of {key2name[n['member']]}" for n in drawn) if drawn else ''
+    a, n = gift_rate['anthropic'], gift_rate['nvidia']
+    return (f"Sums are of positive receipt lines, in whole dollars as the FEC's bulk file gives them. Negative lines on the same committees (refunds and chargebacks: "
+            f"{a['negative_lines_not_netted']} for Anthropic, ${-float(a['negative_usd_not_netted']):,.0f}; {n['negative_lines_not_netted']} for Nvidia, ${-float(n['negative_usd_not_netted']):,.0f}) "
+            f"are listed with the tables and not taken off{words}. A person is counted by surname and first given name. ")
+
+
+def LOOKUP_WORDS():
+    """The footnote's sentences on the look-ups of analysts and bylines, with every number from research/nv8_lookup_counts.tsv."""
+    L = rows_map.LOOKUPS; a = lambda w: L.get(('analysts', w), 0); b = lambda w: L.get(('bylines', w), 0)
+    k = lambda reg, w: L.get((reg, w), 0)
+    return (f"The saved pages quote {rows_map.N_ANALYSTS} analysts, experts and research groups (a person or firm written two ways is counted once). Each was looked up in the records held, "
+            "and on Nov 15 every name not drawn was searched again as a whole name in the 85 tables of the four evidence sets. "
+            f"The {rows_map.N_ANALYSTS_DRAWN} drawn each have a remark of these days and a tie on record to Anthropic, Open Philanthropy or Nvidia: their own (a fellowship, research support, a past post) "
+            "or that of the organisation where they hold a post (an award to it, a paid business relationship, a paper it was commissioned to write); each row says which, and an award to an organisation is not a payment to the person. "
+            f"Not drawn: {a('not drawn: none found for the person')} people at universities where the award on record went to another part of the university; "
+            f"{a('not drawn: not drawn')} for whom the record is a remark or report from before these days, a past post at a group funded only later, or a grant from another company; "
+            f"{a('not drawn: cannot tell')} the look-up could not tell apart from others of the same name; and the other {a('not drawn: none found')}, for whom no record was found. No tie is implied for anyone not drawn. "
+            f"Banks and investors are not drawn, whatever their ties. Quartz reported on Sep 4, 2026 that {k('banks', 'named by Quartz on Sep 4, 2026 as lenders to Anthropic')} banks would lend to Anthropic before its share sale, four of them leading the sale; "
+            f"analysts or executives of {k('banks', 'of those, with an analyst, a note or an executive quoted on the saved pages')} of them are quoted on the saved pages. The banks' business with Nvidia was not looked up. "
+            f"{dict([(2, 'Two')])[k('investors', 'quoted and described on the pages as holding or shorting Nvidia shares')]} quoted investors are described on the pages as a shareholder and a short seller of Nvidia. "
+            f"The saved pages carry {b('pairs of outlet and name')} bylines, counting a name once for each outlet it appears at: {b('different names')} different names, {b('names that are an agency or not a person' + chr(39) + 's name')} of them agencies or not a person's name. "
+            f"Each was looked up in the fellowship and staff records held and, on Nov 15, as a whole name in the 85 tables. {rows_map.NUMBER[rows_map.N_BYLINES_DRAWN].capitalize()} have a tie on record and are drawn: "
+            "Perlo and Hashim from the records held, Kubinec from his own bio at The Dispatch, Mowshowitz and Schneider from pages saved on Nov 15 (the first look-up had missed both). "
+            f"{dict([(3, 'Three')])[b('pairs: record of another kind, not drawn')]} more have a record of another kind and no tie is drawn: a 2021 congressional fellow of a programme that Open Philanthropy funded in 2025, after his term; "
+            "a reporter named on the page of a CSET event; and a CSET staff member whose byline is on CSET's own release of 2025. "
+            f"For {dict([(2, 'two')])[b('pairs: name match, not settled')]} the tables hold the name and nothing ties it to the reporter. Pages that could not be saved were not checked. ")
+
+
+def LOBBY_WORDS():
+    """The footnote's sentences on lobbyists' gifts on all three sides, from research/lobbyist_gifts_map.csv (scripts/build_lobbyist_gifts_map.py)."""
+    g = list(csv.DictReader(open(R / 'lobbyist_gifts_map.csv', newline='')))
+    own = [r for r in g if r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
+    tot = lambda side, named: sum(float(r['amount_usd']) for r in own if r['side'] == side and (r['measure'] == 'named' or not named))
+    M = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; mo = lambda d: f"{M[int(d[5:7]) - 1]} {d[:4]}"
+    S_ = {r['what']: r['value'] for r in csv.DictReader(open(R / 'lobbyist_gifts_map_summary.tsv', newline=''), delimiter='\t')}
+    a, b = S_['first gift counted'], S_['last gift counted']
+    return (f"The same record was then pulled for both companies: the lobbyists' contribution reports for {S_['years of reports read']} of all {S_['firms whose reports were read (registered for Nvidia, for Anthropic or for a group Open Philanthropy funds)']} firms registered for Nvidia, for Anthropic or for one of the groups above. "
+            f"To the {S_['members drawn']} members drawn, in gifts of {mo(a)} to {mo(b)} made while the firm was registered for the client, lobbyists listed for the client gave ${tot('nvidia', True):,.0f} on Nvidia's side, ${tot('anthropic', True):,.0f} on Anthropic's and ${tot('network', True):,.0f} on the groups' side; "
+            f"counting every lobbyist at those firms, ${tot('nvidia', False):,.0f}, ${tot('anthropic', False):,.0f} and ${tot('network', False):,.0f}. A firm registered for two clients puts one gift on two sides, so the sides are not added up. "
+            "The lines in the members' rows give only Anthropic's side and the groups', from an earlier and narrower table (lobbyists who were at some time listed for the client); the table for all three sides is published with the figure. ")
+
 MON = lambda d: (lambda p: f"{['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][int(p[1]) - 1]} {int(p[2])}, {p[0]}")(d.split('-'))      # 2026-10-14 -> Oct 14, 2026
 from collections import Counter, OrderedDict, defaultdict
 
@@ -201,14 +248,22 @@ def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
     ty = {(r['member'], r['type'], r['side']): r['row_id'] for r in rows_ties.rows() if r['row_id'].startswith('TY')}
     mties = rows_ties.ties(); gift_rate = rows_ties.rates(); worded = []; ty_used = []
     assert all(gift_rate[s]['basis'].startswith('FEC lines') for s in ('anthropic', 'nvidia')) or PARTIAL, 'both companies\' employee gifts must come from the same FEC pull'
+    pac_drawn = {r['b'] for r in ties if r['a'] == 'AnthroPAC'}
     for t in mties:
         rid = ty[(t['member'], t['type'], t['side'])]
+        assert t['draw'] != 'held' or key2name[t['member']] in pac_drawn or PARTIAL, ('a PAC line is held back as drawn above, and no AnthroPAC tie is drawn for', t['member'])
         if t['draw'] == 'line' and t['node']:
             ties.append({'row_id': rid, 'a': t['node'], 'b': key2name[t['member']], 'kind': t['kind'], 'label': t['words'], 'words': t['words'], 'src': t['src'], 'q': t['q']}); ty_used.append(rid)
         elif t['draw'] == 'words':
             worded.append((key2name[t['member']], t['words'])); ty_used.append(rid)
     undated_acts = [t for t in acts if not t['date']]
     acts = [t for t in acts if t['date']]
+    n_acts = len(acts); day_chip = {}
+    for t in acts:                          # two acts of one actor on one day share a chip; each keeps its own row and sources
+        k = (t['actor'], t['date'])
+        day_chip[k] = dict(day_chip[k], what=day_chip[k]['what'].rstrip('.') + '. ' + t['what'], reported=day_chip[k]['reported'] and t['reported'],
+                           src=list(day_chip[k]['src']) + list(t['src']), q=list(day_chip[k]['q']) + list(t['q'])) if k in day_chip else t
+    acts = list(day_chip.values())
     arcs = [r for r in mrows if r.get('arc')]
     pac = {r['recipient']: r for r in csv.DictReader(open(R / 'anthropac_by_recipient.csv'))}
     party = Counter(r['party'] for r in csv.DictReader(open(R / 'anthropac_party.csv')))
@@ -256,10 +311,12 @@ def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
         lines[a['name']].append(('count', f'Named on {named[a["key"]]} of the {n_pages:,} saved pages'))
     for a in actors.values():
         if a['group'] == 'papers':
-            lines[a['name']].append(('none', 'Sources not public; its reporters\' ties were not examined here'))
+            lines[a['name']].append(('none', 'Sources not public. Its reporters\' names, where a saved page carries them, were looked up in the fellowship and staff records held: no record. Nothing else about them was examined'))
 
     # coverage
     cov = defaultdict(list); undated = 0; sites = set(); sites_dated = set(); n_story = 0; n_scope = Counter()
+    read_rows = list(csv.DictReader(open(R / 'coverage_scope_read.tsv', newline='', encoding='utf-8'), delimiter='\t'))
+    n_read = sum(r['finding'] == 'on the story' for r in read_rows); n_unsettled = sum(r['finding'] == 'not settled' for r in read_rows)
     for r in csv.DictReader(open(R / 'harvest.tsv'), delimiter='\t'):
         n_scope[story_scope.scope(r['url'], r['anchor_text']) or 'other'] += 1
         if story_scope.scope(r['url'], r['anchor_text']) != 'story':
@@ -638,7 +695,7 @@ def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
         # top-left: the three numbers, the tie legend (with more than one panel they go up beside the title: placed further down)
         n_m = len(members)
         stats = [(f'{n_story:,}', f'pieces on the story listed by two aggregators, from {len(sites):,} sites'),
-                 (f'{len(actors)}', f'actors drawn, with {len(acts)} dated acts between Oct 29 and Nov 12'),
+                 (f'{len(actors)}', f'actors drawn, with {n_acts} dated acts between Oct 29 and Nov 12'),
                  (f'{n_emp} of {n_m}', f'members drawn got a gift from an Anthropic employee; {len(paid)} got one from AnthroPAC')]
         sx = 0; head = []
         for big, small in stats:
@@ -735,8 +792,9 @@ def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
             'A piece counts as on the story when its address or listed headline names Huang, Megaspeed or Alice Huang, tells of the spy affair without naming them, '
             'or names Nvidia with a word of the affair (resign, board, inquiry, chief, successor and the like). '
             f'That rule was applied by script, not by reading each piece, to the {sum(n_scope.values()):,} links on those pages that name Huang, Nvidia, Megaspeed or the spy story. '
-            f'It leaves out {n_scope["fallout"]:,} links on the wider fallout (export controls, the Commerce secretary, the share price, Anthropic\'s stock offering) and {n_scope["other"]:,} others; '
-            'some of those bear on the matter, and a counted piece may name Huang for another reason. Every link and its class is published with the figure\'s tables. '
+            f'The {n_scope["fallout"] + n_scope["other"] + n_read:,} links the rule left out were then read, 150 of them by an independent auditor and the rest by the builder: {n_read} are plainly on the story and are counted with it, and {n_unsettled} could not be settled from their headlines. '
+            f'Left out are {n_scope["fallout"]:,} links on the wider fallout (export controls, the Commerce secretary, the share price, Anthropic\'s stock offering) and {n_scope["other"]:,} others; '
+            'a counted piece may name Huang for another reason. Every link, its class and each reading is published with the figure\'s tables. '
             'They are sorted into the three kinds by site and by the section named in the page address, not by reading them. '
             'A chip is one dated act, worded from a saved report; it starts on its day, and a long one may run on over empty days to its right. '
             'View counts are those shown when the posts were saved on Nov 12. '
@@ -747,34 +805,43 @@ def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
             'and one senator (Cotton) whom the pages name that often for a letter on Megaspeed a year earlier; each one\'s count is in their row. '
             'Six others named that often are not drawn, because the pages name them for other things: a leadership vote, a lost election, an impeachment bid and other inquiries. '
             'The count for every name searched is published with the figure\'s tables. '
-            'The saved pages quote 269 names of analysts, experts and research groups, and each was looked up in the funding records held. The 7 drawn are those with a documented tie to Anthropic, Open Philanthropy or a group they fund and a remark of these days. '
-            'For 9 more the records hold only a grant to the person\'s institution or a remark made before these days, and they are not drawn; for the rest no record was found, and no funding tie is implied for anyone not drawn. '
-            'Each of the 729 bylines on the saved pages (72 are agencies or not a person\'s name) was looked up in the fellowship and staff records held: Perlo and Hashim are found there, and Kubinec is drawn from his own bio at The Dispatch; pages that could not be saved were not checked. One more byline is on record as a 2021 congressional fellow of a programme that Open Philanthropy funded in 2025, after his term; no tie is drawn. '
+            + LOOKUP_WORDS() +
             '"No AnthroPAC contribution on file" means none in the PAC\'s filings with the Federal Election Commission for Jun 29 to Sep 30, 2026. '
             f'A line that says no gift from a company\'s employees means that no FEC line for Jan 2025 to {MON(gift_rate["anthropic"]["read_through"])} gives that company as the donor\'s employer to a committee tied to the member; it is not proof that no employee gave. '
-            f'Lines dated after {MON(gift_rate["anthropic"]["read_through"])} are not on file yet: the reports covering the fifteen days themselves are due at the Federal Election Commission on Dec 3, 2026. '
+            f'Lines dated after {MON(gift_rate["anthropic"]["read_through"])} are not in the FEC records read here: where a committee must file a post-general report (its books close Nov 23), that report is due on Dec 3, 2026; other committees follow their own schedules. '
             + CONDUIT(gift_rate) +
             'A committee is tied to a member when it is the member\'s campaign committee, a leadership PAC the member sponsors, or a joint fundraising committee whose statement of organisation lists that member\'s committee and no other sitting member\'s; '
             'money given to a joint committee is shared with its other participants (a party committee, a PAC), and the FEC lines do not show how much reached the member\'s own campaign. Joint committees of several members are listed with the figure\'s tables and attributed to no one. '
             'An employee\'s gift is counted from an FEC line on which the donor gave the company as employer, to a committee tied to the member; donors are counted, not named, and the two companies are counted by one rule, though not from equally deep records, as the next sentences say. ' + esc(rows_ties.basis_words()) + ' '
+            + NEGATIVES(gift_rate, key2name) +
             'A lobbying report names a bill; it does not say which office was visited or what was asked. Fellows, advisers and former staff are as the programme\'s, the group\'s or Congress\'s own pages list them. '
             'A lobbyists\' line names the clients that the lobbying reports held here list for the givers\' firms. The reports give each gift as the lobbyist\'s own money; '
             'they do not show whether a client asked for it, or whether the firm had that client when the gift was made. '
-            'Of those clients, Open Philanthropy\'s awards include $12.5M to the Center for AI Safety (2022–23) and $1.9M to the Future of Life Institute (2015–20); '
-            'the grant records held here show none to Encode AI or Fathom, and IFP Action\'s funding was not looked up. '
-            '<b>What the record does not show:</b> who gave the intelligence assessment to reporters; whether it is correct; any contact between Anthropic, or anyone tied to it, and the reporters or their sources; '
+            'Why each client is on this map: Open Philanthropy\'s awards on record include $3.4M to Americans for Responsible Innovation (2024–25), $12.5M to the Center for AI Safety (2022–23) and $1.9M to the Future of Life Institute (2015–20), '
+            'and its action fund gave IFP Action $2.0M (2022–23). The grants on record to the Center for AI Safety\'s action fund and to Encode AI are from Jaan Tallinn, and the Future of Life Institute gave Encode $250,000 in 2024; no Open Philanthropy award to either is on record, and none of any kind to Fathom. '
+            'Nvidia registered its own political committee on Aug 27, 2026; its one report on file, through Sep 30, shows no contribution to any candidate. '
+            + LOBBY_WORDS() +
+            '<b>What the record does not show:</b> who gave the intelligence assessment to reporters; whether it is correct; any contact about these reports between Anthropic, or anyone tied to it, and the reporters or their sources; '
             'any contact with a member of Congress about these reports or about what the member then said or did (earlier public contacts, such as testimony at a hearing, are drawn at left). '
             'The saved reports state limits of their own: the Times\'s first report says officials "did not believe" Huang knew the woman was gathering information when the president was first briefed, '
-            'and that Huang "has not received a defensive briefing"; Nvidia said its customers get "zero information relevant to national security" and '
-            '"do not ask Nvidia to press the U.S. government to change its policies on chip sales to China." '
-            'The ties at left start from Anthropic, its people and Open Philanthropy; Nvidia\'s own political giving, business ties and former staff were not mapped to the same breadth, '
-            'so the number of lines says nothing about either company\'s influence. The Times\'s reports are cited from its own articles, saved by hand, except its Nov 9 report on the Commerce inquiry, which is cited as CNBC relays it; the Journal\'s and the FT\'s pages were not read (their sites turn away automated readers), so what they reported is taken from other outlets. '
-            'Each actor\'s own channel (official site, newsroom, own account) was searched once on Nov 14 by a reader from another model family, for these fifteen days. Of 111 chips, the original was found for 31, could not be opened for 72 (posts on X and Truth Social, broadcasters\' video, papers behind a paywall) and was not found for 8; '
-            'the originals found are now cited beside the reports that relay them. Of 63 actors, 30 had items on the matter on their own channels, 12 had none that could be found and 21 could not be read; a channel with nothing found is not proof of silence. '
-            f'<b>Source:</b> {n_story:,} links from saved aggregator pages; saved reports, posts and releases; committee filings; rows held in the congress, lineage, toner and evaluators packs. Fetched Nov 12–13, 2026. {DRAFT}')
+            'and that Huang "has not received a defensive briefing"; Nvidia said its customers get "zero information relevant to national security", and the Times reports its spokesman saying that customers do not ask Nvidia to press the U.S. government to change its policies on chip sales to China. '
+            'That first report also says it "could not be determined which intelligence agency or agencies" monitored her, and that it is not clear what information she passed along or what it was worth to China. '
+            'NBC reports that the president, asked whether he was briefed before he took Huang to China in May, said "I didn\'t hear about it then" and later "They could have been mentioned." '
+            '<b>Nvidia\'s side, by the same rules:</b> its employees\' gifts are drawn beside Anthropic\'s; its political committee is new and has given to no candidate; its lobbyists\' gifts are counted above with Anthropic\'s and the groups\'; '
+            'bills named in its lobbying reports are drawn; past posts with a drawn member that its lobbyists declare are drawn (Banks, Kennedy, McCaul), as is the one found for a lobbyist of Anthropic (Thune). '
+            'Its support of institutions whose people are drawn is worded in their rows (CSET, CNAS, the Council on Foreign Relations); the donor lists of Brookings and 80,000 Hours do not name it, and a reader from another model family found it on none of the lists that IAPS, the Foundation for American Innovation, the Institute for Progress and the Tarbell Center publish, most of which are partial. '
+            'Quoted people with a past post at Nvidia or paid work for it are drawn (Moorhead, Newman, Boloor, Yoo; both companies support Barez\'s research), and business with Nvidia that a saved page states is worded for two public voices (Musk, Delangue). '
+            'Looked for and not established: a witness from Nvidia before these members\' committees, advertising aimed at their districts, a seat on their advisory bodies. Those searches have gaps: the ad libraries could not be read, the search of the records held ended with 3,839 hits unread, and the web search left 491 targets unopened. '
+            'The map still starts from Anthropic and Open Philanthropy at the left of each slice, so the number of lines says nothing about either company\'s influence. The Times\'s reports are cited from its own articles, saved by hand, except its Nov 9 report on the Commerce inquiry, which is cited as CNBC relays it; the Journal\'s and the FT\'s pages were not read (their sites turn away automated readers), so what they reported is taken from other outlets. '
+            'The own channel (official site, newsroom, own account) of each of the 63 actors then drawn who had spoken was searched once on Nov 14 by a reader from another model family, for these fifteen days; Sen. Cotton and the two share-price rows were not part of that search. Of the 111 chips then drawn, the original was found and read for 30, could not be opened for 73 (posts on X and Truth Social, broadcasters\' video, papers behind a paywall, the Journal\'s own page) and was not found for 8; '
+            'the originals read are now cited beside the reports that relay them. Of the 63 actors, 28 had items on the matter on their own channels, 14 had none that could be found (for two of them the search found only a policy paper of Nov 2 that does not mention it) and 21 could not be read; a channel with nothing found is not proof of silence. '
+            'Actors added since then were not part of that search. '
+            f'<b>Source:</b> {n_story:,} links from saved aggregator pages; saved reports, posts and releases; committee filings; rows held in the congress, lineage, toner and evaluators packs. Aggregator pages for Oct 29 to Nov 12 were retrieved on Nov 12 and Nov 14, 2026; other sources were saved Nov 12 to 15, 2026; rows of the packs carry their own earlier dates. {DRAFT}')
     title = 'Fifteen days, mapped: the coverage, who acted, and the documented ties'
     sub = ('Top right, each dot is one piece on the story. Below it, each row is one actor and each chip one dated act. At left, each line is a documented tie '
-           'between an actor and a party with something at stake: a contribution, a post held, a grant, an official act. The figure sets these records side by side; it does not say one caused another.')
+           'between an actor and a company, a funder or a group: a contribution, a post held, a grant, an official act. The three slices repeat the same companies, funders and people at their left; a dashed box names an actor whose own row is in another slice. '
+           'The ties are mapped outward from Anthropic and Open Philanthropy; Nvidia\'s are added where the same kind of record was searched (the note at the foot lists them), and each group\'s heading gives the rule for who is drawn. '
+           'The figure sets these records side by side; it does not say one caused another.')
     # also behind drawn words: the midterms note (an events row), two node captions (run-up rows), the header backgrounds (stakes rows)
     caption_rows = [r['row_id'] for r in rows_context.rows() if r['row_id'].startswith('RU') and ('Chip Smuggling' in r['text'] or '$15 million' in r['text'])]
     assert len(caption_rows) == 2, caption_rows

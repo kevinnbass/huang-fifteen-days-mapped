@@ -80,7 +80,7 @@ STAKES = [
  ('Anthropic',
   'Backs "smart export controls on AI chips"; gave $40 million to Public First Action, for policy and education work, it says, not candidate elections; its PAC gave to candidates of both parties; has hired former administration officials.',
   'Set its IPO price range on Nov 10. Nvidia is one of seven companies that agreed to buy $26 billion of its stock alongside the offering.',
-  'Any statement by Anthropic on Huang (none is in the documents saved here; its own channels were not searched). Any instruction, payment or message tied to the coverage.',
+  'Any statement by Anthropic on Huang beyond a spokesperson\'s "declined to comment" to Quartz (none is in the documents saved here; its newsroom, share-sale site and SEC filings were searched once on Nov 14). Any instruction, payment or message tied to the coverage.',
   ['anthropic-pfa-1', 'anthropic-pfa-2', 'cnbc-1110-anthropic-ipo', 'anthropic-pfa-2', 'cnbc-1009-poach', FEC + 'FRIENDS OF SCHUMER', FEC + 'MAST FOR CONGRESS'],
   ['Supporting smart export controls on AI chips', 'bringing our total support to $40 million', 'Nvidia and Taiwan Semiconductor Manufacturing Co. to purchase $26 billion',
    'cannot be used to influence the election of any candidate', 'Sihao Huang joined Amodei\'s AI lab in September as head of frontier compute strategy', '3500.00', '2500.00']),
@@ -117,12 +117,13 @@ STAKES = [
    'While the Board has no reason to believe that either national security or NVIDIA secrets were compromised', 'On November 10, independent directors retained former acting U.S. Attorney Joon H. Kim']),
  ('China and Singapore',
   'Megaspeed, the Singapore firm Alice Huang is linked to, bought Nvidia chips and was under investigation there.',
-  'China\'s foreign ministry called the spy allegation unsubstantiated. Singapore\'s ministry on Oct 31 said of the Journal\'s account that there were "no such investigations" of Alice Huang; on Nov 12 NBC reported its statement that police interviewed her and held her passport in 2025, found "insufficient evidence" of offences, gave her a "stern warning" for inaccurate information and barred her from re-entering.',
+  'China\'s foreign ministry called the spy allegation unsubstantiated. Singapore\'s ministry on Oct 31 said of the Journal\'s account that there were "no such investigations" of Alice Huang; on Nov 12 NBC reported its statement that police interviewed her and held her passport in 2025, found in Feb 2026 "insufficient evidence" of offences relating to the declarations under investigation, gave her a "stern warning" for inaccurate information and barred her from re-entering; the statement adds that repeated requests to U.S. authorities brought "limited information or assistance".',
   'Whether the intelligence assessment is correct. It has not been tested in public, and NBC reported on Nov 12 that her "precise role and relationship with China\'s spy service remain unclear."',
-  ['mha-clarification-a', 'nbc-1108-investigation', 'mha-clarification-a', 'sw-nbcnewscom-09', 'sw-nbcnewscom-09', 'sw-nbcnewscom-09', 'sw-nbcnewscom-09', 'sw-nbcnewscom-09'],
+  ['mha-clarification-a', 'nbc-1108-investigation', 'mha-clarification-a', 'sw-nbcnewscom-09', 'sw-nbcnewscom-09', 'sw-nbcnewscom-09', 'sw-nbcnewscom-09', 'sw-nbcnewscom-09', 'art-own-mha-1112', 'art-own-mha-1112', 'sw-nbcnewscom-09'],
   ['Investigations into Megaspeed are ongoing', 'the so-called Chinese spy allegation is unsubstantiated', 'there were no such investigations conducted in respect of Alice Huang',
    'authorities had interviewed Huang and impounded her passport in 2025', 'insufficient evidence to establish that Huang had committed any offences', 'precise role and relationship with China\'s spy service remain unclear',
-   'issued her with a stern warning after finding that she had knowingly provided police with inaccurate information', 'had been barred from re-entering the country']),
+   'issued her with a stern warning after finding that she had knowingly provided police with inaccurate information', 'had been barred from re-entering the country',
+   'offences relating to the possible inaccurate declarations for which Megaspeed was being investigated', 'In February 2026', 'Singapore has to date received limited information or assistance in respect of the company']),
 ]
 
 
@@ -143,6 +144,23 @@ NOTES = [
  ('fli_2019', 'pack:lineage/research/flows_annual.csv#FA088', '100000'), ('fli_2020', 'pack:lineage/research/flows_annual.csv#FA089', '176000'),
  # the FEC's own calendar: the post-general report closes its books on Nov 23 and is due Dec 3, 2026 (bound for the footnote's sentence on gifts after Oct 14)
  ('fec_post_general_due', 'fec-reporting-dates-2026-20261114', '12/03/2026'),
+ # limits the saved reports state that the footnote still lacked (second audit, Nov 15, 2026)
+ ('agencies_unknown', 'man-nyt-1029-01', 'It could not be determined which intelligence agency or agencies have been involved in monitoring Ms. Huang'),
+ ('information_unknown', 'man-nyt-1029-01', 'what information she passed along or its value to China'),
+ ('trump_when_told', 'nbc-exprosecutor', 'They could have been mentioned'),
+ ('trump_not_then', 'nbc-exprosecutor', 'hear about it then'),
+ ('nvpac_registered', 'fec-committee-c00960070-20261114', '2026-08-27'),
+ ('nvpac_one_report', 'fec-filings-c00960070-20261114', 'OCTOBER QUARTERLY'),
+ # why each lobbying client is on the map: the grant rows behind the footnote's sentence (second audit: the chain was left to the reader)
+ ('ifp_action_2022', 'pack:congress/research/grants.csv#GR195', '500000'), ('ifp_action_2023', 'pack:congress/research/grants.csv#GR155', '1200000'),
+ ('ifp_action_2023_ai', 'pack:congress/research/grants.csv#GR156', '341660'), ('encode_no_op_award', 'pack:congress/research/grants.csv#GR071', 'exact_n=0'),
+ ('encode_fli_2024', 'pack:congress/research/grants.csv#GR250', '250000'), ('encode_tallinn_2025', 'pack:congress/research/grants.csv#GR207', 'Jaan Tallinn'),
+ ('cais_af_tallinn', 'pack:congress/research/grants.csv#GR206', 'Jaan Tallinn'),
+ ('nvpac_disbursements', 'fec-schedule_b-c00960070-20261114', 'CREDIT CARD PROCESSING'),
+ # second audit, lane c (Nov 15, 2026): the records behind the footnote's sentences on banks, on the donor lists read for Nvidia, and on the own-channel recount
+ ('banks_lenders', 'pack:evaluators-deep/research/equity_edges.csv#WEQ733', '17 named banks'), ('banks_lead_sale', 'pack:evaluators-deep/research/equity_edges.csv#WEQ733', 'the four also lead the IPO'),
+ ('brookings_list_period', 'art-f1-brookings-honor-roll-2026', 'July 1, 2025 – June 30, 2026'), ('brookings_list_control', 'art-f1-brookings-honor-roll-2026', 'Microsoft Corporation'),
+ ('eighty_k_largest_donor', 'art-f1-80k-donors', 'Our largest donor is Coefficient Giving'),
 ]
 
 
