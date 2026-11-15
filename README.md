@@ -7,7 +7,7 @@ here says why anyone acted.
 ![The figure](figures/nv8-fifteen-days-mapped.png)
 
 Also as [HTML](figures/nv8-fifteen-days-mapped.html) (point at a dot to read the headline it stands for) and
-[JPG](figures/nv8-fifteen-days-mapped.jpg). The image is large (three panels side by side, each with its own day axis): open it and zoom in.
+[JPG](figures/nv8-fifteen-days-mapped.jpg). The image is large (two slices side by side, each with its own day axis): open it and zoom in.
 
 ## What this is
 
@@ -168,6 +168,7 @@ Each of its findings has one written disposition (51 in all: 41 applied, 7 state
 - One listed piece had been cited from a saved page that carries its headline and not its link. The builder now requires both (`scripts/build_coverage.py`); all 2,254 pieces were tested and only that one changed its citing page. No day and no count changed.
 - The Anthropic panel now says that three SEC offering documents could not be saved, beside its statement that no further comment was found. The money note adds that in six counts a name occurs with a second spelling or ZIP code. The heading on Nvidia now reads "the same classes of record".
 - Leadership PACs: 51 committees are tied to a member on the evidence set's own key. Each one's FEC record, which names its sponsor, is being compared with that key (`scripts/fec_lpac_keyed_check.py`); the result is published as `research/lpac_keyed_check.csv` when the pull ends.
+- The layout changed on Nov 15 from three slices to two, at the owner's choice: the same rows, words and sizes of type. The image is now 13,240 by 18,090 pixels (it was 18,680 by 15,330), so at the same display width the type is about 41% larger. `fig_web(..., panels=3)` still draws the three-slice version.
 - Two of the third reading's tables list, one by one, people who are not drawn; they are held back with the look-up lists. Its brief, report and other tables are in `audit2/` as files `d-...`.
 
 ## What is in this repository

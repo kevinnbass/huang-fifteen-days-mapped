@@ -261,7 +261,7 @@ def route(p0, p3, boxes, f=0.5, dips=True):
     return best
 
 
-def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
+def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two slices since Nov 15, 2026 (three from Nov 14; panels=3 still draws those)
     assert isinstance(panels, int) and panels >= 1, panels
     # ------------------------------------------------------------------ data
     actors = OrderedDict((a[0], {'key': a[0], 'group': a[1], 'name': a[2], 'tag': a[3], 'fec': a[4]}) for a in rows_map.ACTORS)
@@ -868,7 +868,7 @@ def fig_web(KICKER, DRAFT, panels=3, stem='nv8-fifteen-days-mapped'):
             f'<b>Source:</b> {n_story:,} links from saved aggregator pages; saved reports, posts and releases; committee filings; rows held in the congress, lineage, toner and evaluators packs. Aggregator pages for Oct 29 to Nov 12 were retrieved on Nov 12 and Nov 14, 2026; other sources were saved Nov 12 to 15, 2026; rows of the packs carry their own earlier dates. {DRAFT}')
     title = 'Fifteen days, mapped: the coverage, who acted, and the documented ties'
     sub = ('Top right, each dot is one piece on the story. Below it, each row is one actor and each chip one dated act. At left, each line is a documented tie '
-           'between an actor and a company, a funder or a group: a contribution, a post held, a grant, an official act. The three slices repeat the same companies, funders and people at their left; a dashed box names an actor whose own row is in another slice. '
+           'between an actor and a company, a funder or a group: a contribution, a post held, a grant, an official act. ' + {2: 'Both', 3: 'The three', 4: 'The four'}[panels] + ' slices repeat the same companies, funders and people at their left; a dashed box names an actor whose own row is in another slice. '
            'The ties are mapped outward from Anthropic and Open Philanthropy; Nvidia\'s are added where the same kind of record was searched (the note at the foot lists them), and each group\'s heading gives the rule for who is drawn. '
            'The figure sets these records side by side; it does not say one caused another.')
     # also behind drawn words: the midterms note (an events row), two node captions (run-up rows), the header backgrounds (stakes rows)
