@@ -25,7 +25,7 @@ ORDER = ['held', 'reader', 'located', 'context', 'none', 'unread']
 
 def chip_kind(r):
     d = r['what_was_done']
-    if d.startswith('later: '):                 # could not be opened at the search; saved afterwards and now cited
+    if d.startswith('now cited: '):             # the search did not yield the original; a saved copy of the publisher's page is cited now
         return 'cited later'
     if 'first remark' in d:
         return 'part'
@@ -79,7 +79,7 @@ def main():
            ('actors: nothing found on a channel that could be read', c['none']),
            ('actors: no channel could be read', c['unread']),
            ('chips whose original was searched for', len(chips)), ('chips: original read and cited on the chip', cc['cited']),
-           ('chips: original could not be opened at the search, saved afterwards and now cited', cc['cited later']),
+           ('chips: the search did not yield the original; a saved copy of the publisher\'s page is now cited', cc['cited later']),
            ('chips: original carries the first of the chip\'s two remarks', cc['part']), ('chips: original could not be opened', cc['blocked']),
            ('chips: original found by the reader and refused to the project (not saved)', cc['found, not saved']),
            ('chips: original not found', cc['not found'])]
