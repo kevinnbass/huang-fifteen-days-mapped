@@ -13,9 +13,9 @@ import release_nv13 as R13, nv13_public as P, nv8_public as N, member_mentions, 
 csv.field_size_limit(10**9)
 LANE = Path('lanes/audit_nv8')
 RUN = ('fig_map.py', 'fig_common.py', 'rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_coverage.py', 'rows_ties.py', 'rows_events.py', 'story_scope.py', 'nv8_status.py', 'build_nv8.py', 'verify_nv8.py')
-AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py')
+AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'fec_lpac_keyed_check.py')
 TABLES = ('harvest.tsv', 'coverage_rows.tsv', 'coverage_day_pages.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'member_ties.csv', 'employee_gift_rates.csv', 'committee_keys.csv', 'joint_committees.csv',
-          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv')
+          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv')
 SHIM = '''"""Which saved news pages name each member of Congress: the counts the figure prints ("named on N of the saved pages").
 In the builder's project this module reads the saved pages themselves; they are not in this copy (no article text is), so here
 the same answer is read from research/story_pages.tsv, which lists every counted page by address and the members it names."""
@@ -88,6 +88,18 @@ def main(target):
         g['member_name'] = ck[g['committee_id']]['member_name']; g['party'] = ck[g['committee_id']]['party']
     table(Tg, 'research/employee_gifts.csv', gifts, P.GIFT_COLS[:3] + ['member_name', 'party'] + P.GIFT_COLS[3:] + ['fec_page_url', 'amended_fec_page_url'])
     rows = N.figure_rows()
+    # row ids are frozen once published: every id of the last pushed table must still be here, as the same kind of row and, for an act
+    # or a tie, about the same actor or the same two ends (a chip added in the middle of a list once shifted three published ids: Nov 15, 2026)
+    pushed = ROOT.parent / 'code' / 'huang-fifteen-days-mapped' / 'research' / 'nv8_rows.tsv'      # the builder's clone of the public repository
+    if pushed.exists():
+        now_ = {r['row_id']: r for r in rows}; moved = []
+        for o in csv.DictReader(open(pushed, newline='', encoding='utf-8'), delimiter='\t'):
+            if o['table'] == 'piece listed by an aggregator':
+                continue
+            n_ = now_.get(o['row_id'])
+            if n_ is None or n_['table'] != o['table'] or any(str(n_.get(k) or '') != (o.get(k) or '') for k in ('actor', 'a', 'b', 'member', 'type', 'side')):
+                moved.append(o['row_id'])
+        assert not moved, ('a published row id is gone or now names another actor or tie', moved[:12])
     flat = [{k: (' || '.join(v) if isinstance(v, list) else v) for k, v in r.items()} for r in rows]
     cols = ['row_id', 'table', 'drawn_text'] + sorted({k for r in flat for k in r} - {'row_id', 'table', 'drawn_text', 'src', 'q'}) + ['src', 'q']
     table(Tg, 'research/nv8_rows.tsv', flat, cols, '\t')
@@ -176,7 +188,9 @@ def main(target):
     if disp.exists():
         put(Tg, 'audit/DISPOSITIONS.csv', disp.read_text())
     # ---------------------------------------------------------------- the second audit (Nov 15, 2026): three lanes, each read only after its done marker
-    A2 = {'a': ('findings.csv', 'figure_findings.csv', 'earlier_dispositions.csv'), 'b': ('money_findings.csv', 'coverage_findings.csv', 'money.md', 'census.md'), 'c': ('selection_findings_final.csv',)}
+    A2 = {'a': ('findings.csv', 'figure_findings.csv', 'earlier_dispositions.csv'), 'b': ('money_findings.csv', 'coverage_findings.csv', 'money.md', 'census.md'), 'c': ('selection_findings_final.csv',),
+          # the third reading (of the corrections); its two tables that list not-drawn people one by one are held back with the look-up lists
+          'd': ('findings.csv', 'figure_findings.csv', 'dispositions_check.csv', 'joint_committees_check.csv', 'money.md', 'remarks_check.csv', 'gaps.csv', 'controls.csv')}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / f'audit_nv8_s7{t}'
@@ -191,7 +205,13 @@ def main(target):
     disp2 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s7.csv'
     if disp2.exists():
         put(Tg, 'audit2/DISPOSITIONS.csv', disp2.read_text())
+    disp3 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s7d.csv'
+    if disp3.exists():
+        put(Tg, 'audit2/DISPOSITIONS-d.csv', disp3.read_text())
+    if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
+        put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')
+    put(Tg, 'LICENSE.md', P.LICENSE_MD)
     import nv8_readme
     put(Tg, 'README.md', nv8_readme.readme(Tg, rows, ev, audit_note))
     # ---------------------------------------------------------------- checks on the copy

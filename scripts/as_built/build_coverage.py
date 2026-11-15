@@ -26,6 +26,17 @@ def find(hay, headline):
     return m.group(0) if m else ''
 
 
+_LK = {}
+
+
+def link_keys(snap):
+    """The keys (harvest_links.key) of every link on one saved aggregator page, read once."""
+    if snap not in _LK:
+        d = R / 'primary' / snap
+        _LK[snap] = {x[0] for x in H.links(d)} if (d / 'body.html').exists() else set()
+    return _LK[snap]
+
+
 def main():
     snaps = sorted(d.name for d in (R / 'primary').iterdir() if d.name.startswith(('techmeme-', 'memeorandum-', 'mediagazer-')))
     out, how = [], {'first': 0, 'other': 0, 'unbound': 0}
@@ -45,13 +56,20 @@ def main():
         # a page saved for a day before the piece was first listed cannot be its citing page: such a page can still carry the headline in
         # a live sidebar of the other aggregator (second audit, Nov 15, 2026: two pieces of Nov 12 were cited from an Oct 29 page)
         day_of = lambda x: (lambda m: f'2026-{m.group(1)}-{m.group(2)}' if m else '9999')(re.search(r'-(\d{2})(\d{2})-', x))
+        # the citing page must also hold the piece's link: a page can carry the headline in the other aggregator's sidebar without it
+        # (reading of the corrections, Nov 15, 2026: one piece was cited from such a page). A page with the headline and not the link is
+        # used only when no saved page has both, and is counted below.
+        k = H.key(r['url']); weak = ('', '')
         for s in [r['first_snapshot']] + [x for x in snaps if x != r['first_snapshot'] and day_of(x) >= (r['first_listed'] or '0000')]:
             h = cr.haystack(s)
             q = find(h, r['anchor_text']) if h else ''
-            if q:
+            if q and k in link_keys(s):
                 cite = s; break
+            if q and not weak[0]:
+                weak = (s, q)
+        if not cite and weak[0]:
+            cite, q = weak; how['headline only'] = how.get('headline only', 0) + 1
         how['first' if cite == r['first_snapshot'] else ('other' if cite else 'unbound')] += 1
-        k = H.key(r['url'])
         if k not in ids:                             # a new piece takes the next id; an id once given is never reused or moved
             ids[k] = (f'CV{max(int(v[0][2:]) for v in ids.values()) + 1:04d}', r['url']); new_ids.append(k)
         out.append([ids[k][0], ids[k][1], r['domain'], r['anchor_text'], r['first_listed'], r['first_snapshot'], cite, q,

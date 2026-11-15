@@ -1,10 +1,11 @@
 register	what	count
 analysts	quoted on the saved pages (a person or firm written two ways counted once)	240
 analysts	drawn	15
-analysts	not drawn: cannot tell	2
-analysts	not drawn: none found	214
+analysts	not drawn: at a bank, not drawn	13
+analysts	not drawn: cannot tell	1
+analysts	not drawn: none found	201
 analysts	not drawn: none found for the person	3
-analysts	not drawn: not drawn	6
+analysts	not drawn: not drawn	7
 bylines	pairs of outlet and name	729
 bylines	different names	677
 bylines	pairs that are an agency or not a person's name	72

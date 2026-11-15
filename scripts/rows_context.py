@@ -80,7 +80,7 @@ STAKES = [
  ('Anthropic',
   'Backs "smart export controls on AI chips"; gave $40 million to Public First Action, for policy and education work, it says, not candidate elections; its PAC gave to candidates of both parties; has hired former administration officials.',
   'Set its IPO price range on Nov 10. Nvidia is one of seven companies that agreed to buy $26 billion of its stock alongside the offering.',
-  'Any statement by Anthropic on Huang beyond a spokesperson\'s "declined to comment" to Quartz (none is in the documents saved here; its newsroom, share-sale site and SEC filings were searched once on Nov 14). Any instruction, payment or message tied to the coverage.',
+  'Any statement by Anthropic on Huang beyond a spokesperson\'s "declined to comment" to Quartz (none in what could be read on Nov 14: its newsroom and share-sale site; three SEC offering documents could not be saved). Any instruction, payment or message tied to the coverage.',
   ['anthropic-pfa-1', 'anthropic-pfa-2', 'cnbc-1110-anthropic-ipo', 'anthropic-pfa-2', 'cnbc-1009-poach', FEC + 'FRIENDS OF SCHUMER', FEC + 'MAST FOR CONGRESS'],
   ['Supporting smart export controls on AI chips', 'bringing our total support to $40 million', 'Nvidia and Taiwan Semiconductor Manufacturing Co. to purchase $26 billion',
    'cannot be used to influence the election of any candidate', 'Sihao Huang joined Amodei\'s AI lab in September as head of frontier compute strategy', '3500.00', '2500.00']),
@@ -161,6 +161,9 @@ NOTES = [
  ('banks_lenders', 'pack:evaluators-deep/research/equity_edges.csv#WEQ733', '17 named banks'), ('banks_lead_sale', 'pack:evaluators-deep/research/equity_edges.csv#WEQ733', 'the four also lead the IPO'),
  ('brookings_list_period', 'art-f1-brookings-honor-roll-2026', 'July 1, 2025 – June 30, 2026'), ('brookings_list_control', 'art-f1-brookings-honor-roll-2026', 'Microsoft Corporation'),
  ('eighty_k_largest_donor', 'art-f1-80k-donors', 'Our largest donor is Coefficient Giving'),
+ # reading of the corrections (Nov 15, 2026): the report of the banks' facility is provisional, and the FBI's reported inquiry
+ ('banks_facility_nearing', 'pack:evaluators-deep/research/equity_edges.csv#WEQ733', 'is nearing a $15 billion revolving credit facility'),
+ ('banks_details_could_change', 'pack:evaluators-deep/research/equity_edges.csv#WEQ733', 'Details of the loan could still change'),
 ]
 
 

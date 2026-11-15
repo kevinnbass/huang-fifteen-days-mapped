@@ -1,0 +1,9 @@
+row_id_or_key,source,what_failed
+C00823930,public/research/joint_committees.csv source cell; private/jfc_participants_keyed_gaps.csv,No saved statement named; private record reports unreadable paper filing. Participants not independently judged.
+MA106-Bloomberg,man-bbg-1029-01,"Saved original is a teaser; the Taiwan News HTML and other relays support the chip, but the full original was not read."
+FT-own-channel,private/nv8_s6_items.tsv Financial Times own-channel lines 115–130,All 16 located item links have a not-read/subscription-gap disposition. No new fetch attempted.
+Anthropic-SEC-offering-site,private/nv8_s6_items.tsv line 216,SEC document was not saved: ledger reports 403. No negative judgment from unread content.
+Anthropic-SEC-UK-materials,private/nv8_s6_items.tsv line 217,SEC document was not saved: ledger reports 403. No negative judgment from unread content.
+Anthropic-SEC-EEA-materials,private/nv8_s6_items.tsv line 218,SEC document was not saved: ledger reports 403. No negative judgment from unread content.
+historical-807-query-list,private/DISPOSITIONS-audit_nv8_s7.csv GAPS-c; current private register,The historical 807-name query list is not supplied as a frozen artifact. Current two-to-four-word non-drawn non-agency entries yield 847 register lines and 795 whitespace/case-normalized names. All those current names were searched; no missing historical names invented.
+all-originals,audit contract,No original re-fetched; all primary checks use saved copies or explicitly permitted pack rows.

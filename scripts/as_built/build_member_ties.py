@@ -80,6 +80,7 @@ def main():
     sitting = {b for b, r in MB.items() if r['cohort'] == 'sitting'}; assert len(sitting) == 535
     HM = {r['row_id']: r for r in pack('congress/research/hard_money.csv')}
     LCON = {r['row_id']: r for r in pack('congress/research/lobbyist_contributions.csv')}
+    LMAP = list(csv.DictReader(open(R / 'lobbyist_gifts_map.csv', newline=''))) if (R / 'lobbyist_gifts_map.csv').exists() else []      # written by scripts/build_lobbyist_gifts_map.py
     RD = {r['row_id']: r for r in pack('congress/research/revolving_door.csv')}
     LOB = pack('congress/research/lobbying.csv')
     # ------------------------------------------------------------ committees -> members
@@ -567,6 +568,17 @@ def main():
                     lsrc, lq = lsrc0, lq0
             tie(key, 'lobbyist_gifts', 'network', '', 'none', lobby_words(lc, LOB, usd, yrs),
                 ptxt, lsrc, lq, usd=f'{usd:.2f}', n=str(len(lc)), first=min(ds), last=max(ds), draw='words')
+        # 5b. the same record for Nvidia (slice F1): lobbyists' own gifts made while their firm was registered to lobby for Nvidia, from the
+        # reports pulled firm by firm (research/lobbyist_gifts_map.csv); both measures are said, since the line above counts lobbyists once listed for a client
+        nvm = [r for r in LMAP if r['member'] == key and r['side'] == 'nvidia' and r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
+        if nvm:
+            usd = sum(float(r['amount_usd']) for r in nvm); ds = [r['date'] for r in nvm]; nm_ = [r for r in nvm if r['measure'] == 'named']; nusd = sum(float(r['amount_usd']) for r in nm_)
+            yrs = min(ds)[:4] if min(ds)[:4] == max(ds)[:4] else f'{min(ds)[:4]}–{max(ds)[:4]}'
+            one = len(nvm) == 1
+            listed = (f'{money(nusd)} of it from lobbyists listed for Nvidia then' if nm_ and len(nm_) < len(nvm) else 'all of it from lobbyists listed for Nvidia then' if nm_ else 'none of it from a lobbyist listed for Nvidia then')
+            tie(key, 'lobbyist_gifts', 'nvidia', '', 'none', f'{"A lobbyist at a firm" if one else "Lobbyists at firms"} registered for Nvidia: {money(usd)} of their own money, {yrs}; {listed}',
+                f'{money(usd)} in {len(nvm)} gift{"" if one else "s"} from lobbyists\' own pockets, {yrs}, made while their firms were registered to lobby for Nvidia; {listed}. Second-hand: no client directed them.',
+                ['table:lobbyist_gifts_map.csv#' + r['item'] for r in nvm], [r['amount_usd'] for r in nvm], usd=f'{usd:.2f}', n=str(len(nvm)), first=min(ds), last=max(ds), draw='words')
     # 6. ties that rest on one named record each
     RDP = 'pack:congress/research/revolving_door.csv#'
     for member, kind, rid, passage, when in L.STAFF:

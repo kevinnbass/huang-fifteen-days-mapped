@@ -1,0 +1,13 @@
+control_id,target,result
+INPUT-HASHES,INPUTS.sha256.json,115 frozen paths checked; all hashes matched.
+NAME-HASHIM,85 top-level tables,13 matching rows; required control found.
+NAME-PERLO,85 top-level tables,4 matching rows; required control found.
+NAME-LY,85 top-level tables,7 matching rows; required control found.
+BROOKINGS-POSITIVE,art-f1-brookings-honor-roll-2026,Coefficient Giving and Microsoft found in the actual July 2025–June 2026 list; Nvidia string absent.
+80K-POSITIVE,art-f1-80k-donors body.html,"Coefficient Giving present in largest-donor statement and donation table; Nvidia absent. Table explicitly omits donations at or below £25,000."
+NVPAC-VENDOR,fec-schedule_b-c00960070-20261114 page-001.json,"15 administrative/vendor items present, including PayPal processing and bank fee; all line 21B. No candidate recipient among those saved items."
+CANDIDATE-PAYMENT,anthropac_by_recipient.csv AP100,"Cotton for Senate positive $2,500 candidate payment found, rather than an empty recipient table."
+JFC-POSITIVE,Meeks Victory and CORY BOOKER FOR SENATE,Meeks Victory joins current receipts to public attribution; C00540500 resolves Booker in committee_keys.csv while C00695510 does not.
+COVERAGE-ADDRESS,memeorandum-1112-h1400 body.html,CV1086 article URL occurs twice as an href; 37 current cited URLs resolve. CV0011 article URL occurs zero times. Case-insensitive HTML attribute parsing required.
+VISIBLE-ID-CONTROL,current figure HTML,"CV0001 is present in the hidden row comment; the same row-ID expression sees no identifier in visible body text. Visible nodes exclude style, title and comments."
+INVESTOR-POSITIONS,aljazeera-1112-board text.txt; sw-emptywheelnet-01 body.html,"Two census investor-position cases read: Minotaur cofounder described as holding Nvidia shares through the firm; separately named short seller appears in a saved reader comment relaying MarketWatch. This supports the literal saved-pages count, not two independently checked holdings."
