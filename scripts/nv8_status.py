@@ -2,13 +2,13 @@
 generator and the public build (build_nv8.py) print the same words."""
 KICKER = 'Huang resignation · dated public records, Nov 2026 · draft'
 STATUS = ('<b>Status:</b> draft of Nov 15, 2026. Each passage behind a drawn item was matched by script to a saved copy of its source. '
-          'Three independent readings by another company\'s model stand behind the figure. The first (Nov 14) read the 230 rows then drawn that are not listed pieces, recounted the pieces and recomputed the members\' lines. '
+          'Five independent readings by another company\'s model stand behind the figure. The first (Nov 14) read the 230 rows then drawn that are not listed pieces, recounted the pieces and recomputed the members\' lines. '
           'The second (Nov 15), in three parts, read the 168 rows new or changed since then, the figure element by element, the pieces and the money recounted from the FEC\'s saved records, and who is drawn and what the chips carry; '
           'it graded 11 points as errors and 145 as needing a qualification. The third (Nov 15) read the corrections made in answer: it found no error in the 90 changed rows, two errors and eight qualifications in the changed text, '
           'and held 2 of the 181 answers insufficient and 19 only in part. A fourth (Nov 15) read the answers to it and the 45 rows added or changed since: no error in a row, 24 qualifications (18 of them one point, that lobbyists\' gifts were shown by unequal measures), '
-          'two errors and nine qualifications in the changed text, and 13 of 51 answers held only in part. The most serious points across the four: a PAC gift that was recorded and not drawn; joint committees tied to a member before their statements were read; '
+          'two errors and nine qualifications in the changed text, and 13 of 51 answers held only in part. A fifth (Nov 15) read the answers to that: no problem in the 44 rows it read, four points on the wording of the notes, and 48 of 49 answers held. The most serious points across the five: a PAC gift that was recorded and not drawn; joint committees tied to a member before their statements were read; '
           'look-ups that had missed records the tables hold, three banks among them; chips that left out a clause qualifying what was said; and people left out by a rule that was not applied alike to both companies. '
-          'Each finding has a written disposition, published with the tables. No reading fetched the originals again, and what changed in answer to the fourth reading was checked by script only.')
+          'Each finding has a written disposition, published with the tables. No reading fetched the originals again, and what changed in answer to the fifth reading (four sentences of the notes and one clause on a chip) was checked by script only.')
 # what changed after the audit read the figure (the README of the public copy lists these under the audit)
 AFTER_AUDIT = [
     'Five pieces were added and one moved from Nov 8 to Nov 12 (1,726 pieces became 1,731; 1,662 drawn became 1,667): six articles of one site share an address apart from the query string and had been counted as one. No row id was renumbered.',
@@ -67,4 +67,10 @@ AFTER_READING4 = [
     'Six chips were reworded from their sources: the Commerce denial is now on the Treasury secretary\'s chip too; the Times\'s limits on its Commerce-inquiry report are printed (Justice continues a criminal inquiry; other factors unclear); the trade-war warning is placed in the separate Oval Office meeting its source reports; Huang\'s first Bloomberg quotation is marked as relayed; an analyst\'s "negligible" is "operational impact"; and a strategist\'s quotation is attributed to his firm\'s later post about the show, not to the show.',
     'The Journal\'s own page of Oct 30, saved by hand, is now cited on its chip beside the licensed copy. The Anthropic panel names its share-sale filing among the SEC documents that could not be saved. The whole-name search\'s first group is no longer called "people\'s names": a few firms and labels have the same form.',
     'The check of the 51 leadership PACs is published (`research/lpac_keyed_check.csv`): 49 name the member\'s own candidate id as sponsor and 2 an id of the member\'s earlier office; none differs.',
+]
+
+# what changed in answer to the fifth reading (lane audit_nv8_s7f, Nov 15, 2026); the README lists these
+AFTER_READING5 = [
+    'Four sentences of the notes: originals that were saved after the search are now counted apart from those read at the search (35 then, 5 since, 77 still not opened); the note on lobbyists\' reports no longer says they leave open whether the firm had the client, since the table gives the registration dates; "nothing on it" became "no item about the affair in these fifteen days"; and the status sentence counts five readings.',
+    'One clause: the chip for two podcast releases of Nov 9 now says the recordings were not heard.',
 ]

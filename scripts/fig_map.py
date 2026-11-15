@@ -84,11 +84,11 @@ def OWN_CHANNEL_WORDS():
     return (f"The own channel (official site, newsroom, own feed or account) of each of the {C['actors whose own channels were searched']} actors who had spoken was searched once for these fifteen days by a reader from another model family: "
             "on Nov 14 for the 63 then drawn, on Nov 15 for the 14 added since (the two share-price rows have none). "
             f"An item about the affair is held and was read for {held} (the three papers among them, through articles saved by hand); for {rows_map.NUMBER.get(loc, 'two')} links were located and none could be saved (Anthropic's SEC filings, a page of OpenAI's); "
-            f"{rows_map.NUMBER.get(cx, cx)} had only items that do not mention the affair or are not their own; {C['actors: nothing found on a channel that could be read']} had a channel that could be read with nothing on it; "
+            f"{rows_map.NUMBER.get(cx, cx)} had only items that do not mention the affair or are not their own; for {C['actors: nothing found on a channel that could be read']} a channel that could be read showed no item about the affair in these fifteen days; "
             f"for {C['actors: no channel could be read']} no channel could be read. An item is counted only where the project holds the page, and a share-sale filing or policy paper that a chip draws as context is not counted as an item about the affair. "
             "The reader could open no account on X in either round, and a channel with nothing found is not proof of silence. "
-            f"Of the {searched} chips drawn before those searches, the original was read and is now cited for {C['chips: original read and cited on the chip']}; for one more it carries the first of the chip's two remarks; "
-            f"for {C['chips: original could not be opened']} it could not be opened (posts on X and Truth Social, broadcasters' video, papers behind a paywall); "
+            f"Of the {searched} chips drawn before those searches, the original was read and is now cited for {C['chips: original read and cited on the chip']}; for {rows_map.NUMBER.get(C['chips: original could not be opened at the search, saved afterwards and now cited'], 'five')} more it could not be opened then and was saved afterwards, by hand or from the publisher, and is cited now; for one it carries the first of the chip's two remarks; "
+            f"for {C['chips: original could not be opened']} it still could not be opened (posts on X and Truth Social, broadcasters' video, papers behind a paywall); "
             f"for {rows_map.NUMBER.get(C['chips: original found by the reader and refused to the project (not saved)'], 'two')} the reader found it and the site refused the project's own copy (the Journal's page, an SEC filing); and for {C['chips: original not found']} it was not found. "
             f"The {n_chips - searched} chips added afterwards cite the actor's own page or the paper's own article, except three that cite a report: a senator's letter of 2025, a senator's post that a newsletter carries, and a magazine's report of the FBI's inquiry. ")
 
@@ -848,7 +848,7 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             + NEGATIVES(gift_rate, key2name) +
             'A lobbying report names a bill; it does not say which office was visited or what was asked. Fellows, advisers and former staff are as the programme\'s, the group\'s or Congress\'s own pages list them. '
             'A lobbyists\' line names the clients that the lobbying reports held here list for the givers\' firms. The reports give each gift as the lobbyist\'s own money; '
-            'they do not show whether a client asked for it, or whether the firm had that client when the gift was made. '
+            'they do not show whether a client asked for it. Whether the firm had the client when the gift was made is taken from the firm\'s registration dates, which the published table gives beside each gift. '
             'Why each client is on this map: Open Philanthropy\'s awards on record include $3.4M to Americans for Responsible Innovation (2024–25), $12.5M to the Center for AI Safety (2022–23) and $1.9M to the Future of Life Institute (2015–20), '
             'and its action fund gave IFP Action $2.0M (2022–23). The grants on record to the Center for AI Safety\'s action fund and to Encode AI are from Jaan Tallinn, and the Future of Life Institute gave Encode $250,000 in 2024; no Open Philanthropy award to either is on record, and none of any kind to Fathom. '
             'Nvidia registered its own political committee on Aug 27, 2026; its one report on file, through Sep 30, shows no contribution to any candidate. '

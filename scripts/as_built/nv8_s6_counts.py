@@ -25,6 +25,8 @@ ORDER = ['held', 'reader', 'located', 'context', 'none', 'unread']
 
 def chip_kind(r):
     d = r['what_was_done']
+    if d.startswith('later: '):                 # could not be opened at the search; saved afterwards and now cited
+        return 'cited later'
     if 'first remark' in d:
         return 'part'
     if 'not saved' in d:
@@ -48,7 +50,7 @@ def main():
         if d.startswith('already on chip'):
             if key in CONTEXT_CHIPS:
                 return 'context'
-            if 'hand-saved' in d or ck.get(key, 'cited') in ('cited', 'part'):      # a chip outside the searches was drawn from its original
+            if 'hand-saved' in d or ck.get(key, 'cited') in ('cited', 'cited later', 'part'):      # a chip outside the searches was drawn from its original
                 return 'held'
             return 'reader'
         if 'policy-blueprint' in d or 'does not mention the matter' in d or 'is about another report' in d or 'by another author' in d:
@@ -77,6 +79,7 @@ def main():
            ('actors: nothing found on a channel that could be read', c['none']),
            ('actors: no channel could be read', c['unread']),
            ('chips whose original was searched for', len(chips)), ('chips: original read and cited on the chip', cc['cited']),
+           ('chips: original could not be opened at the search, saved afterwards and now cited', cc['cited later']),
            ('chips: original carries the first of the chip\'s two remarks', cc['part']), ('chips: original could not be opened', cc['blocked']),
            ('chips: original found by the reader and refused to the project (not saved)', cc['found, not saved']),
            ('chips: original not found', cc['not found'])]

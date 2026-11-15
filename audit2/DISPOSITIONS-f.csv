@@ -1,0 +1,7 @@
+part,finding_id,grade,disposition,what_was_done
+B,B-ORIGINAL-SNAPSHOT,qualification,applied,"The items table now records on each chip's line an original that could not be opened at the search and was saved afterwards (five chips: the Journal's, the FT's and the Times's own articles, OpenAI's paper and Bloomberg's page). The footnote counts them apart: 35 read and cited at the search, 5 saved afterwards and cited now, 1 in part, 77 still not opened, 2 refused to the project, 7 not found."
+B,B-GIFT-REGISTRATION,qualification,applied,"The sentence now reads: the reports 'do not show whether a client asked for it. Whether the firm had the client when the gift was made is taken from the firm's registration dates, which the published table gives beside each gift.'"
+B,B-CHANNEL-NONE,qualification,applied,The sentence now reads: 'for 25 a channel that could be read showed no item about the affair in these fifteen days'.
+B,B-STATUS-COUNT,qualification,applied,The status sentence now counts five readings and says what the fifth found.
+C,gaps: the reading's 15 gaps,earlier answer held partly,applied,"The chip for the two podcast releases of Nov 9 now says 'The recordings were not heard', as the three other chips drawn from a feed or an archive page already did."
+gaps,the reading's 14 gaps,gap,stated as a limit,As for the fourth reading: originals that could not be opened and recordings that were not heard are said on the chips and counted in the footnote; no reading fetched an original again.

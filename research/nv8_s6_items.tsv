@@ -21,9 +21,9 @@ original of a chip	MA20		https://www.banking.senate.gov/newsroom/minority/warren
 original of a chip	MA27		https://www.banking.senate.gov/newsroom/minority/warren-banks-statement-on-nvidias-continued-export-of-advanced-ai-chips-following-reports-of-foreign-intelligence-operation	2026-11-09	found	saved as art-own-warren-banks-1109 and cited on the chip
 original of a chip	MA34		https://www.washingtonexaminer.com/news/justice/4799564/republicans-nvidia-ceo-china-spy-investigation/	2026-11-10	found	the page the chip already cites is the original (sw-washingtonexaminercom-05)
 original of a chip	MA05				blocked	gap: blocked
-original of a chip	MA06				blocked	gap: blocked
+original of a chip	MA06				blocked	later: the Journal's own page was saved by hand on Nov 15 (man-923fe8754943) and is cited on the chip, beside a licensed partner's copy; at the search the reader could not open it
 original of a chip	MA07		https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad?mod=hp_onevizplusstories_pos_1		found, words differ	the Journal's page refused an automated reader; not saved (a gap, for a hand-saved copy)
-original of a chip	MA08				blocked	gap: blocked
+original of a chip	MA08				blocked	later: the FT's own article was saved by hand on Nov 15 (man-ft-1107-01) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA11				blocked	gap: blocked
 original of a chip	MA12				blocked	gap: blocked
 original of a chip	MA13				blocked	gap: blocked
@@ -62,7 +62,7 @@ original of a chip	MA97				blocked	gap: blocked
 original of a chip	MA98				blocked	gap: blocked
 original of a chip	MA99				blocked	gap: blocked
 original of a chip	MA100				blocked	gap: blocked
-original of a chip	MA101				blocked	gap: blocked
+original of a chip	MA101				blocked	later: the Times's own article was saved by hand (man-nyt-1109-03) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA104		https://truthsocial.com/@realDonaldTrump/posts/117604177898784579		blocked	gap: blocked
 original of a chip	MA109				not found	gap: not found
 original of a chip	MA110				blocked	gap: blocked
@@ -97,12 +97,12 @@ original of a chip	MA90		https://x.com/TimSweeneyEpic/status/2120887322312921465
 original of a chip	MA91				blocked	gap: blocked
 original of a chip	MA103		https://www.foxbusiness.com/video/6408204801112		blocked	gap: blocked
 original of a chip	MA92				blocked	gap: blocked
-original of a chip	MA69				blocked	gap: blocked
+original of a chip	MA69				blocked	later: OpenAI's policy paper was saved (art-own-openai-compute-campus-policy-blueprint) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA62				not found	gap: not found
 original of a chip	MA75				not found	gap: not found
 original of a chip	MA76				not found	gap: not found
 original of a chip	MA81				not found	gap: not found
-original of a chip	MA85				not found	gap: not found
+original of a chip	MA85				not found	later: Bloomberg's own page was saved by hand (man-efbf718d0a5a) and is cited on the chip; it shows the opening of the piece only; at the search the original was not found
 original of a chip	MA94				not found	gap: not found
 original of a chip	MA108				not found	gap: not found
 original of a chip	MA64				blocked	gap: blocked

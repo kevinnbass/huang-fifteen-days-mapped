@@ -191,7 +191,8 @@ def main(target):
     A2 = {'a': ('findings.csv', 'figure_findings.csv', 'earlier_dispositions.csv'), 'b': ('money_findings.csv', 'coverage_findings.csv', 'money.md', 'census.md'), 'c': ('selection_findings_final.csv',),
           # the third reading (of the corrections); its two tables that list not-drawn people one by one are held back with the look-up lists
           'd': ('findings.csv', 'figure_findings.csv', 'dispositions_check.csv', 'joint_committees_check.csv', 'money.md', 'remarks_check.csv', 'gaps.csv', 'controls.csv'),
-          'e': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+          'e': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
+          'f': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / f'audit_nv8_s7{t}'
@@ -212,6 +213,9 @@ def main(target):
     disp4 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s7e.csv'
     if disp4.exists():
         put(Tg, 'audit2/DISPOSITIONS-e.csv', disp4.read_text())
+    disp5 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s7f.csv'
+    if disp5.exists():
+        put(Tg, 'audit2/DISPOSITIONS-f.csv', disp5.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')

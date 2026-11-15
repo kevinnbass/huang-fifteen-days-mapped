@@ -428,7 +428,7 @@ ACTS = [
                                        'This will be tricky because Jensen Huang deliberately tried to make himself unfireable, with over 50 direct reports and no succession plan', 'TITLE: AI #194: Spy Versus Guy', 'PUBLISHED: 2026-11-12']),
  ('cornyn', '2026-11-12', 'A post of his, as Zvi Mowshowitz\'s newsletter of Nov 12 carries it, gives the title of Mowshowitz\'s piece of Nov 10 and its author\'s handle. The post itself could not be opened, so its day is not known',
   ['art-own-thezvi-1112-ai-194'] * 3, ['Senator John Cornyn (R-Texas): Nvidia CEO Jensen Huang Had an Affair With a Chinese Spy', 'You never know who is listening, Senatorial edition', 'PUBLISHED: 2026-11-12']),
- ('schneider', '2026-11-09', 'His podcast releases two episodes: an "emergency pod", "Jensen and His Spy", with Chris McGuire, and one recorded, it says, "Friday afternoon, before the FT reported", with a part on "the alleged spy in Jensen Huang\'s orbit"',
+ ('schneider', '2026-11-09', 'His podcast releases two episodes: an "emergency pod", "Jensen and His Spy", with Chris McGuire, and one recorded, it says, "Friday afternoon, before the FT reported", with a part on "the alleged spy in Jensen Huang\'s orbit". The recordings were not heard',
   ['art-own-applepodcasts-chinatalk-emergency-pod'] * 2 + ['art-own-applepodcasts-chinatalk-are-we-cooking'] * 3,
   ['November 9 EMERGENCY POD: Jensen and His Spy', 'To make sense of it we have Chris McGuire',
    "November 9 Are We Cooking!? What Should Dems Do Next + Jensen's Affair", 'we recorded this Friday afternoon, before the FT reported', "The alleged spy in Jensen Huang's orbit"]),

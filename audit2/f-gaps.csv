@@ -1,0 +1,15 @@
+row_id_or_key,source,what_failed
+MA68-SEC-original,nv8_s6_items.tsv: original MA68; actor Anthropic,Underlying share-sale filing is recorded refused/not saved. No full original to read; the panel now discloses it and the count does not certify it as held.
+Anthropic-SEC-offering-site,nv8_s6_items.tsv: actor Anthropic offering-site URL,Recorded SEC 403; document not saved. No web fetch authorized.
+Anthropic-SEC-UK-materials,nv8_s6_items.tsv: actor Anthropic UK-materials URL,Recorded SEC 403; document not saved. No web fetch authorized.
+Anthropic-SEC-EEA-materials,nv8_s6_items.tsv: actor Anthropic EEA-materials URL,Recorded SEC 403; document not saved. No web fetch authorized.
+OpenAI-unread-infrastructure-page,"nv8_s6_items.tsv: OpenAI, setting-new-standard-responsible-ai-infrastructure URL",Recorded page 403/not saved. Its content is unknown; the saved policy blueprint is context and does not resolve this separate page. No negative inferred.
+FT-sixteen-other-links,nv8_s6_items.tsv: Financial Times,Sixteen links remain unread subscription gaps. A full saved Nov 6 article supports held status for the actor; it does not close these sixteen source gaps.
+MA85-full-Bloomberg,man-efbf718d0a5a,Only the saved opening is readable; the full article and possible later qualifications are unavailable.
+MA106-full-Bloomberg,man-bbg-1029-01,"Only the saved opening is readable. Read the cited relays; they support the quotation and date, and the chip now states that source limit."
+C00823930,public/research/joint_committees.csv,Saved statement of organisation unavailable according to the table; committee remains unattributed. No participant inference from the access failure.
+historical-807-query-list,e-gaps.csv; nv8_name_search_names.tsv; disposition answer 45,The first query list is not supplied. The repeat has 797 normalized strings in its first bucket and is a separate reproducible population.
+MA143-MA144-recordings,art-own-futurumequities-daily-shay,"Read episode description and later embedded firm post, but did not hear the recording. Exact quotation placement in the recording is not established."
+MA148-MA149-recordings,MA148 and MA149 cited podcast pages; e-gaps.csv,Recordings were not heard. MA148 is worded from feed descriptions; unlike MA149 it does not expressly state the unheard-recording limit. No transcript verification claimed.
+newsletter-subscription-remainder,art-own-chinatalk-1105-new-senators-on-china,Only the opening is readable; the remainder is subscription-limited. It is not a negative for the unread content.
+browser-layout,current and prior figures/nv8-fifteen-days-mapped.html,"Parsed changed visible text was read. No independent browser test of clipping, overlap or individual box fitting was performed."

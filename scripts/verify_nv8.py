@@ -103,7 +103,7 @@ def main():
     check(f"{ns['people: different names searched']:,} names of two to four words" in flat and f"and {ns['others: different names searched']} other firm names and one-word names" in flat
           and f"each of the {oc['actors whose own channels were searched']} actors who had spoken" in flat
           and f"is held and was read for {oc['actors: an item about the affair is held and was read']} (" in flat
-          and f"{oc['actors: nothing found on a channel that could be read']} had a channel that could be read with nothing on it" in flat
+          and f"for {oc['actors: nothing found on a channel that could be read']} a channel that could be read showed no item about the affair" in flat
           and f"for {oc['actors: no channel could be read']} no channel could be read" in flat
           and f"Of the {oc['chips whose original was searched for']} chips drawn before those searches, the original was read and is now cited for {oc['chips: original read and cited on the chip']}" in flat
           and sum(v for k, v in oc.items() if k.startswith('actors: ')) == oc['actors whose own channels were searched'],

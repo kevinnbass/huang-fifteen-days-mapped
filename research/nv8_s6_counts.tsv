@@ -8,7 +8,8 @@ actors: nothing found on a channel that could be read	25
 actors: no channel could be read	14
 chips whose original was searched for	127
 chips: original read and cited on the chip	35
+chips: original could not be opened at the search, saved afterwards and now cited	5
 chips: original carries the first of the chip's two remarks	1
-chips: original could not be opened	81
+chips: original could not be opened	77
 chips: original found by the reader and refused to the project (not saved)	2
-chips: original not found	8
+chips: original not found	7
