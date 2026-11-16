@@ -1,0 +1,10 @@
+page_id	site	counted	entries_in_the_saved_html	of_them_in_the_text_read	first_entry	last_entry	control_that_loads_more	saved_in_part
+cnn-1111-live	cnn.com	yes	69	69	2026-11-12T00:15	2026-11-12T17:28	Load more Live Updates	yes
+huffpost-live	huffpost.com	yes	143	143	2026-11-09T09:57	2026-11-12T18:39	See More Updates	
+sw-cnbccom-09	cnbc.com	yes	56	56	2026-11-12T13:57	2026-11-12T18:56		
+sw-financeyahoocom-23	finance.yahoo.com	yes	20	20	2026-11-12T14:33	2026-11-12T18:22	Story Continues	yes
+sw-financeyahoocom-25	finance.yahoo.com	yes	20	20	2026-11-12T14:33	2026-11-12T18:22	Story Continues	yes
+sw-financeyahoocom-32	finance.yahoo.com	yes	20	20	2026-11-12T14:33	2026-11-12T18:22	Story Continues	yes
+sw-protoscom-b7e5971b	protos.com	yes	1	1	2026-11-12T18:45	2026-11-12T18:45	Load more	
+sw-techradarcom-03	techradar.com	yes	15	15	2026-11-12T14:29	2026-11-12T17:05		
+yahoo-live-ousted	finance.yahoo.com	yes	20	20	2026-11-12T12:50	2026-11-12T17:05	Story Continues	yes

@@ -6,7 +6,7 @@ beast-admits	https://www.thedailybeast.com/donald-trumps-favorite-tech-lord-jens
 beast-new-scandal	https://www.thedailybeast.com/honeytrapped-trumpy-nvidia-billionaire-jensen-huangs-new-sex-scandal-is-exposed	2026-11-12T18:48:53Z	A0005	yes		
 biggo-fedasiuk	https://finance.biggo.com/podcast/30ba019c2127d953	2026-11-12T17:42:25Z	A0006	yes		
 bloomberglaw-ft-china	https://news.bloomberglaw.com/artificial-intelligence/anthropic-to-stop-selling-ai-services-to-china-owned-groups-ft	2026-11-12T17:42:23Z	A0007	no	dated 2025-09-04, before the fifteen days (a background page)	
-bulwark-chipghazi	https://www.thebulwark.com/p/trumps-chipghazi-nvidia-huang-china-scandal-spy-coverup	2026-11-12T18:48:57Z	A0008	yes		Jordan;Massie;Sanders;Schumer;Thune
+bulwark-chipghazi	https://www.thebulwark.com/p/trumps-chipghazi-nvidia-huang-china-scandal-spy-coverup	2026-11-12T18:48:57Z	A0008	yes		Jordan;Massie;Sanders;Schumer;Slotkin;Thune
 cfr-mcguire	https://www.cfr.org/expert/chris-mcguire	2026-11-12T17:42:26Z	A0009	no	dated 2025-10-31, before the fifteen days (a background page)	
 cnbc-1009-poach	https://www.cnbc.com/2026/10/09/openai-anthropic-poach-trump-officials.html	2026-11-12T17:42:20Z	A0010	no	dated 2026-10-09, before the fifteen days (a background page)	
 cnbc-1029-nvidia-responds	https://www.cnbc.com/2026/10/29/nvidia-jensen-huang-chinese-intelligence-asset.html	2026-11-12T17:36:55Z	A0011	yes		
@@ -20,7 +20,7 @@ cnbc-1110-schumer	https://www.cnbc.com/2026/11/10/moolenaar-nvidia-jensen-huang-
 cnbc-1110-selloff	https://www.cnbc.com/2026/11/10/nvidia-nvda-jensen-huang-affair-chinese-spy.html	2026-11-12T17:36:59Z	A0019	yes		
 cnbc-1111-congress-resign	https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-congress-resign-ai-chips.html	2026-11-12T17:37:03Z	A0020	yes		Bacon;Banks;Cramer;Crawford;Mast;Moolenaar;Subramanyam;Warren
 cnbc-1112-megaspeed-asia	https://www.cnbc.com/2026/11/12/nvidia-megaspeed-alice-huang-jensen-.html	2026-11-12T17:37:08Z	A0021	yes		
-cnn-1111-live	https://www.cnn.com/2026/11/11/business/live-news/nvidia-jensen-huang-investigation-fallout	2026-11-12T17:37:05Z	A0022	yes		Crawford;Jeffries;Johnson;Mast;Moolenaar;Schumer
+cnn-1111-live	https://www.cnn.com/2026/11/11/business/live-news/nvidia-jensen-huang-investigation-fallout	2026-11-12T17:37:05Z	A0022	yes		Coons;Crawford;Jeffries;Johnson;Mast;Moolenaar;Schumer;Warren
 cnn-1112-who-lied	https://edition.cnn.com/2026/11/12/tech/nvidia-jensen-huang-chinese-spy	2026-11-12T17:37:05Z	A0023	yes		
 concordia-kelly	https://concordia.net/community/elizabeth-kelly/	2026-11-12T17:42:22Z	A0024	no	dated 2026-08-27, before the fifteen days (a background page)	
 cset-advisory-board	https://cset.georgetown.edu/article/cset-advisory-board/	2026-11-12T17:42:21Z	A0025	no	dated 2025-10-09, before the fifteen days (a background page)	
@@ -33,7 +33,7 @@ heck-declaration	https://storage.courtlistener.com/recap/gov.uscourts.cand.46551
 hoover-chhabra	https://www.hoover.org/profiles/tarun-chhabra	2026-11-12T17:42:26Z	A0032	no	not a news piece (a reference page, a company site or an image)	
 house-hfac-letter-pr	https://foreignaffairs.house.gov/news/press-releases/chairmen-mast-moolenaar-and-crawford-request-jensen-huang-brief-congress-on-link-to-chinese-intelligence-asset	2026-11-12T17:36:54Z	A0033	yes		Crawford;Mast;Moolenaar
 house-select-letter-pr	https://chinaselectcommittee.house.gov/media/press-releases/moolenaar-mast-and-crawford-seek-briefing-from-jensen-huang-on-ties-to-chinese-intelligence-asset	2026-11-12T17:36:54Z	A0033	yes		Crawford;Mast;Moolenaar
-huffpost-live	https://www.huffpost.com/entry/live-updates_n_6af1983ce4b043b6d4e35621	2026-11-12T18:48:53Z	A0034	yes		Mast;Meeks;Moolenaar;Sullivan
+huffpost-live	https://www.huffpost.com/entry/live-updates_n_6af1983ce4b043b6d4e35621	2026-11-12T18:48:53Z	A0034	yes		Coons;Cornyn;Garcia;Horsford;Hyde-Smith;Jeffries;Johnson;Jordan;Massie;Mast;Meeks;Moolenaar;Pelosi;Sanders;Schumer;Slotkin;Sullivan;Thune;Warren
 huffpost-trump-china	https://www.huffpost.com/entry/trump-china-nvidia-spy_n_6af1ef39e4b0779b5f3197f7	2026-11-12T18:48:53Z	A0035	yes		Banks;Warren
 mha-clarification-a	https://www.mha.gov.sg/media-room/newsroom/clarification-statement-on-wall-street-journals-article/	2026-11-12T17:36:54Z	A0036	yes		
 mj-ai-problems	https://www.motherjones.com/politics/2026/11/ais-long-list-of-problems-just-got-a-whole-lot-worse/	2026-11-12T18:48:50Z	A0037	yes		
@@ -78,7 +78,7 @@ sw-abcnetau-03	https://www.abc.net.au/news/2026-11-10/nvidia-share-price-falls-c
 sw-acecommentsmunu-2695c925	https://acecomments.mu.nu/?post=422146	2026-11-12T19:56:30Z	A0073	yes		
 sw-adweekcom-01	https://www.adweek.com/media/jensen-huangs-33-year-reign-as-nvidia-ceo-ends-amid-affair-reports/	2026-11-12T19:06:10Z	A0074	yes		
 sw-aipolicydailyorg-01	https://aipolicydaily.org/archive/daily/2026-11-09/	2026-11-12T19:06:10Z	A0075	yes		Wyden
-sw-aipolicydailyorg-02	https://aipolicydaily.org/archive/daily/2026-11-12/	2026-11-12T19:06:10Z	A0076	yes		Coons;Crawford;Mast;Moolenaar;Warren
+sw-aipolicydailyorg-02	https://aipolicydaily.org/archive/daily/2026-11-12/	2026-11-12T19:06:10Z	A0076	yes		Coons;Crawford;Horsford;Mast;Moolenaar;Warren
 sw-aljazeeracom-01	https://www.aljazeera.com/news/2026/11/8/us-chipmaker-nvidia-investigates-ceo-jensen-huang-over-affair	2026-11-12T19:06:11Z	A0077	yes		Crawford;Mast;Moolenaar;Warren
 sw-aljazeeracom-02	https://www.aljazeera.com/video/newsfeed/2026/11/8/nvidia-ceos-affair-sparks-chinese-espionage-probe	2026-11-12T19:06:12Z	A0078	yes		
 sw-aljazeeracom-03	https://www.aljazeera.com/news/2026/11/9/why-is-nvidias-jensen-huang-at-the-centre-of-a-us-china-spy-scandal	2026-11-12T19:06:13Z	A0079	yes		Crawford;Mast;Moolenaar;Warren
@@ -326,7 +326,7 @@ sw-easterneyebiz-01	https://www.easterneye.biz/jensen-huang-admits-affair-as-nvi
 sw-easterneyebiz-02	https://www.easterneye.biz/jensen-huang-leaves-nvidia-ceo/	2026-11-12T19:08:56Z	A0315	yes		Coons;Warren
 sw-eenewseuropecom-01	https://www.eenewseurope.com/en/nvidia-board-investigation-jensen-huang-spying/	2026-11-12T19:08:57Z	A0316	yes		Crawford;Mast;Moolenaar
 sw-electronicsweeklycom-01	https://www.electronicsweekly.com/news/business/jensen-huangs-fate-may-be-decided-today-2026-11/	2026-11-12T19:08:57Z	A0317	yes		
-sw-emptywheelnet-01	https://emptywheel.net/2026/11/09/honey-trap-huang/	2026-11-12T19:08:58Z	A0318	yes		Blumenthal;Coons;Crawford
+sw-emptywheelnet-01	https://emptywheel.net/2026/11/09/honey-trap-huang/	2026-11-12T19:08:58Z	A0318	yes		Blumenthal;Coons;Crawford;Slotkin
 sw-emptywheelnet-02	https://emptywheel.net/2026/11/10/the-investigation-of-nvidia-is-about-something-else/	2026-11-12T19:08:58Z	A0319	yes		Meeks;Warner
 sw-emptywheelnet-03	https://emptywheel.net/2026/11/12/trumps-trade-war-and-jensen-huangs-honey-trap/	2026-11-12T19:08:59Z	A0320	yes		
 sw-enasiatodaycokr-01	https://en.asiatoday.co.kr/view.php?key=20261112001623453	2026-11-12T19:08:59Z	A0321	yes		
@@ -522,7 +522,7 @@ sw-hotaircom-e431917f	https://hotair.com/ed-morrissey/2026/11/12/nvidia-shares-c
 sw-howtogeekcom-01	https://www.howtogeek.com/jensen-huang-leaves-nvidia-after-taking-the-company-to-unprecedented-heights/	2026-11-12T19:11:16Z	A0503	yes		
 sw-hromadskeua-01	https://hromadske.ua/en/world/274044-nvidia-investigates-ceos-affair-amid-allegations-of-chinese-espionage	2026-11-12T19:11:16Z	A0504	yes		
 sw-hromadskeua-02	https://hromadske.ua/en/pivnichna-ameryka/274127-trump-says-fbi-is-investigating-nvidia-ceos-ties-to-suspected-chinese-spy	2026-11-12T19:11:17Z	A0505	yes		
-sw-humaneventscom-01	https://humanevents.com/news/nvidia-ceo-targeted-chinese-honeytrap-plot-report	2026-11-12T19:11:17Z	A0506	yes		
+sw-humaneventscom-01	https://humanevents.com/news/nvidia-ceo-targeted-chinese-honeytrap-plot-report	2026-11-12T19:11:17Z	A0506	yes		Pelosi
 sw-hypebeastcom-01	https://hypebeast.com/2026/11/nvidia-board-preparing-to-oust-ceo-jensen-huang-reports	2026-11-12T19:11:17Z	A0507	yes		
 sw-hypebeastcom-02	https://hypebeast.com/2026/11/jensen-huang-resigns-from-nvidia	2026-11-12T19:11:18Z	A0508	yes		
 sw-iaacsorgau-01	https://ia.acs.org.au/article/2026/nvidia-investigates-alleged-chinese-spy-links-to-ceo.html	2026-11-12T19:11:18Z	A0509	yes		
@@ -665,7 +665,7 @@ sw-newslettersemianalysis-91720106	https://newsletter.semianalysis.com/p/nvidia-
 sw-newsletterstrictlyvcco-01	https://newsletter.strictlyvc.com/p/nvidia-s-board-rumored-to-be-considering-terminating-huang	2026-11-12T19:12:40Z	A0633	yes		
 sw-newsrthkhk-01	https://news.rthk.hk/rthk/en/component/k2/1877131-20261109.htm?spTabChangeable=0	2026-11-12T19:12:38Z	A0634	yes		
 sw-newsweekcom-01	https://www.newsweek.com/trump-jensen-huang-spy-claim-nvidia-25m-ballroom-donation-12696326	2026-11-12T19:12:41Z	A0635	yes		Crawford;Mast;Moolenaar;Schumer
-sw-newsweekcom-02	https://www.newsweek.com/nancy-pelosi-missed-pete-hegseth-impeachment-vote-12698880	2026-11-12T19:12:42Z	A0636	yes		Massie;Stevens
+sw-newsweekcom-02	https://www.newsweek.com/nancy-pelosi-missed-pete-hegseth-impeachment-vote-12698880	2026-11-12T19:12:42Z	A0636	yes		Horsford;Massie;Pelosi;Stevens
 sw-newsweekcom-abaa5732	https://www.newsweek.com/trump-tim-cook-replace-jensen-huang-nvidia-ceo-12706299	2026-11-12T19:56:52Z	A0637	yes		Mast;Schumer;Warren
 sw-nintendolifecom-d6bf199a	https://www.nintendolife.com/news/2026/11/nvidias-ceo-jensen-huang-resigns-following-infidelity-scandal	2026-11-12T19:56:52Z	A0638	yes		
 sw-novinitecom-01	https://www.novinite.com/articles/241580/Jensen+Huang+Resigns+as+Nvidia+CEO+After+Affair+Revelations	2026-11-12T19:12:43Z	A0639	yes		
@@ -724,7 +724,7 @@ sw-prdailycom-01	https://www.prdaily.com/the-scoop-what-jensen-huang-nvidia-boar
 sw-premiumtimesngcom-01	https://www.premiumtimesng.com/business/business-news/924694-nvidias-ceo-jensen-huang-resigns.html	2026-11-12T19:13:10Z	A0689	yes		
 sw-proactiveinvestorscom-01	https://www.proactiveinvestors.com/companies/news/1101440/nvidia-opens-lower-as-huang-investigation-raises-leadership-risks-1101440.html	2026-11-12T19:13:11Z	A0690	yes		
 sw-protoscom-01	https://protos.com/can-nvidia-fire-ceo-jensen-huang-over-his-affair/	2026-11-12T19:13:12Z	A0691	yes		
-sw-protoscom-b7e5971b	https://protos.com/live-jensen-huang-resigns-from-nvidia-after-affairs-with-spy-employee/	2026-11-12T19:56:55Z	A0692	yes		
+sw-protoscom-b7e5971b	https://protos.com/live-jensen-huang-resigns-from-nvidia-after-affairs-with-spy-employee/	2026-11-12T19:56:55Z	A0692	yes		Mast
 sw-pulse2com-01	https://pulse2.com/nvidia-jensen-huang-resigns-as-ceo-colette-kress-named-interim-chief-executive-and-harvey-jones-appointed-board-chair/	2026-11-12T19:13:12Z	A0693	yes		
 sw-pymntscom-01	https://www.pymnts.com/news/artificial-intelligence/2026/nvidia-board-probes-ceo-jensen-huang-relationship-with-accused-spy-alice/	2026-11-12T19:13:13Z	A0694	yes		
 sw-pymntscom-02	https://www.pymnts.com/personnel/2026/nvidia-board-moves-to-oust-ceo-jensen-huang-after-affair-scandal/	2026-11-12T19:13:13Z	A0695	yes		

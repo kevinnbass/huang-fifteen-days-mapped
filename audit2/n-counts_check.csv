@@ -1,0 +1,47 @@
+what,figure_says,you_find,agree,note
+saved pages,1315,1315,yes,
+distinct articles,1236,1236,yes,
+counted articles,1154,1154,yes,
+counted pages,1229,1229,yes,
+pages held in part: existing flags,93,93,yes,"Arithmetic matches existing flags. Six more current selected texts require partial treatment: the later Cautious Optimism newsletter, HuffPost and four Yahoo live copies. That gives 99 pending recovery; this is not a corpus-wide certificate."
+partial sentence split,58 + 34 + 1,58 + 34 + 1,yes,The 58 prior marks remain; 34 are screen-list additions after the Fortune/SpyTalk swap; one is the NYT live page. Additional findings need a further update.
+member articles: Warren,69,69,yes,Matches the current selected text and all counted-copy article joins. Recovering already-saved HuffPost/CNN own entries would give 71; these repairs are required before calling available source text searched.
+member articles: Coons,46,46,yes,Matches the current selected text and all counted-copy article joins. Recovering already-saved HuffPost/CNN own entries would give 48; these repairs are required before calling available source text searched.
+member articles: Cramer,22,22,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Schumer,21,21,yes,Matches the current selected text and all counted-copy article joins. Recovering already-saved HuffPost/CNN own entries would give 22; these repairs are required before calling available source text searched.
+member articles: Banks,19,19,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Cornyn,8,8,yes,Matches the current selected text and all counted-copy article joins. Recovering already-saved HuffPost/CNN own entries would give 9; these repairs are required before calling available source text searched.
+member articles: Kennedy,6,6,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Thune,12,12,yes,Matches the current selected text and all counted-copy article joins. Recovering already-saved HuffPost/CNN own entries would give 13; these repairs are required before calling available source text searched.
+member articles: Mast,91,91,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Crawford,68,68,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Meeks,9,9,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Himes,8,8,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Huizenga,4,4,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Moolenaar,78,78,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Jeffries,29,29,yes,Matches the current selected text and all counted-copy article joins. Recovering already-saved HuffPost/CNN own entries would give 30; these repairs are required before calling available source text searched.
+member articles: Magaziner,4,4,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Subramanyam,3,3,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Bacon,3,3,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Johnson,10,10,yes,Matches the current selected text and all counted-copy article joins. Recovering already-saved HuffPost/CNN own entries would give 11; these repairs are required before calling available source text searched.
+member articles: Blumenthal,3,3,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Wyden,5,5,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Ricketts,5,5,yes,Matches the current selected text and all counted-copy article joins.
+member articles: McCaul,5,5,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Warner,4,4,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Cotton,5,5,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Scott,4,4,yes,Matches the current selected text and all counted-copy article joins.
+member articles: Neal,3,3,yes,Matches the current selected text and all counted-copy article joins.
+PDF lines restored,21,21,yes,
+PDF pages restored,4,4,yes,
+pages with a table or caption added,6,6,yes,
+pages with a collapse mark,42,119 any match; 42 meet the screen threshold,partial,42 is reproduced only for a mark on its own line or at least two matches. 77 pages with one inline match are excluded. Qualify the published description of the screen.
+own-entry collapses within selected-text mark screen,1,1,yes,This counts the mark screen only. HTML-only continuation controls reveal additional partial live feeds.
+lobbyists own money: nvidia,429735,429734.51,yes,"Positive own_money=yes listings, all measures; do not add the three sides together."
+lobbyists own money: anthropic,124500,124500.00,yes,"Positive own_money=yes listings, all measures; do not add the three sides together."
+lobbyists own money: network,295629,295629.35,yes,"Positive own_money=yes listings, all measures; do not add the three sides together."
+companion pages: Mast,90,92,partial,Legacy raw-text loader reproduces the printed figure; current brief loader also reads the two recovered Slashdot posts.
+companion pages: Moolenaar,79,81,partial,Legacy raw-text loader reproduces the printed figure; current brief loader also reads the two recovered Slashdot posts.
+companion pages: Crawford,72,74,partial,Legacy raw-text loader reproduces the printed figure; current brief loader also reads the two recovered Slashdot posts.
+members on sw-easterneyebiz-01,Coons,Coons,yes,The old following-article opening adds none of these names; the retained article is complete.
+members on sw-easterneyebiz-02,Warren;Coons,Warren;Coons,yes,The old following-article opening adds none of these names; the retained article is complete.

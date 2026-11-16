@@ -20,7 +20,7 @@ cnbc-1110-schumer	first census	A0018	cnbc.com	2026-11-10	header stamp	2026-11-10
 cnbc-1110-selloff	first census	A0019	cnbc.com	2026-11-10	header stamp	2026-11-10T09:14:29+0000	3505	yes			
 cnbc-1111-congress-resign	first census	A0020	cnbc.com	2026-11-11	header stamp	2026-11-11T21:59:34+0000	7521	yes			
 cnbc-1112-megaspeed-asia	first census	A0021	cnbc.com	2026-11-11	header stamp	2026-11-12T03:02:03+0000	7792	yes			
-cnn-1111-live	first census	A0022	cnn.com	2026-11-11	header stamp	2026-11-12T00:16:08.302Z	27976	yes			yes
+cnn-1111-live	first census	A0022	cnn.com	2026-11-11	header stamp	2026-11-12T00:16:08.302Z	88801	yes			yes
 cnn-1112-who-lied	first census	A0023	edition.cnn.com	2026-11-12	header stamp	2026-11-12T11:00:15.610Z	8701	yes			
 concordia-kelly	first census	A0024	concordia.net	2026-08-27	header stamp	2026-08-27T15:14:20+00:00	2122	no	dated 2026-08-27, before the fifteen days (a background page)		
 cset-advisory-board	first census	A0025	cset.georgetown.edu	2025-10-09	header stamp	2025-10-09T13:09:54+00:00	1566	no	dated 2025-10-09, before the fifteen days (a background page)		
@@ -33,7 +33,7 @@ heck-declaration	first census	A0031	storage.courtlistener.com	2026-03-20	read in
 hoover-chhabra	first census	A0032	hoover.org		none		5015	no	not a news piece (a reference page, a company site or an image)		
 house-hfac-letter-pr	first census	A0033	foreignaffairs.house.gov	2026-11-05	header stamp	2026-11-05T13:59:00-05:00	2210	yes			
 house-select-letter-pr	first census	A0033	chinaselectcommittee.house.gov	2026-11-05	header stamp	2026-11-05T16:13:01-05:00	2129	yes		read as the same article as house-hfac-letter-pr by a third reader from another model family (lane pairs_nv8_b, Nov 16, 2026)	
-huffpost-live	first census	A0034	huffpost.com	2026-11-09	header stamp	2026-11-09T09:57:47Z	14247	yes			
+huffpost-live	first census	A0034	huffpost.com	2026-11-09	header stamp	2026-11-09T09:57:47Z	120866	yes			
 huffpost-trump-china	first census	A0035	huffpost.com	2026-11-09	header stamp	2026-11-09T22:44:34Z	6182	yes			
 mha-clarification-a	first census	A0036	mha.gov.sg	2026-10-31	read by hand	Clarification Statement on Wall Street Journal’s Article 31 	3195	yes			
 mj-ai-problems	first census	A0037	motherjones.com	2026-11-12	header stamp	2026-11-12T15:00:05Z	2496	yes			
@@ -178,7 +178,7 @@ sw-calcalistechcom-05	first census	A0170	calcalistech.com	2026-11-12	header stam
 sw-capitalbriefcom-01	first census	A0171	capitalbrief.com	2026-11-12	header stamp	2026-11-12T05:46:03.160Z	4109	yes			yes
 sw-capitalbriefcom-57f178e4	first census	A0172	capitalbrief.com	2026-10-29	header stamp	2026-10-29T11:59:00.000Z	2208	yes			
 sw-cautiousoptimismnews-01	first census	A0173	cautiousoptimism.news	2026-11-09	header stamp	2026-11-09T16:24:59.437Z	7658	yes			yes
-sw-cautiousoptimismnews-13925a6b	first census	A0174	cautiousoptimism.news	2026-11-12	header stamp	2026-11-12T16:19:16.005Z	4987	yes			
+sw-cautiousoptimismnews-13925a6b	first census	A0174	cautiousoptimism.news	2026-11-12	header stamp	2026-11-12T16:19:16.005Z	4987	yes			yes
 sw-cbcca-01	first census	A0175	cbc.ca	2026-11-08	header stamp	2026-11-08T21:14:15.239Z	6450	yes			
 sw-cbcca-02	first census	A0176	cbc.ca	2026-11-09	header stamp	2026-11-09T23:47:23.508Z	7632	yes			
 sw-cbcca-03	first census	A0177	cbc.ca	2026-11-12	header stamp	2026-11-12T09:00:00.000Z	8856	yes			
@@ -398,16 +398,16 @@ sw-financeyahoocom-19	first census	A0384	finance.yahoo.com	2026-11-10	header sta
 sw-financeyahoocom-20	first census	A0385	finance.yahoo.com	2026-11-11	header stamp	2026-11-11T22:37:55Z	8028	yes			
 sw-financeyahoocom-21	first census	A0386	finance.yahoo.com	2026-11-11	header stamp	2026-11-11T23:13:15Z	2257	yes			
 sw-financeyahoocom-22	first census	A0386	finance.yahoo.com	2026-11-11	header stamp	2026-11-11T23:13:15Z	2271	yes		text of the shorter is 100% inside the other (sw-financeyahoocom-21), which is under twice its length, and the two share their lead	
-sw-financeyahoocom-23	first census	A0387	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:47:46Z	40880	yes			
+sw-financeyahoocom-23	first census	A0387	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:47:46Z	40880	yes			yes
 sw-financeyahoocom-24	first census	A0388	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T12:17:24Z	6838	yes			
-sw-financeyahoocom-25	first census	A0387	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:47:46Z	40890	yes		text of the shorter is 100% inside the other (sw-financeyahoocom-23), which is under twice its length, and the two share their lead	
+sw-financeyahoocom-25	first census	A0387	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:47:46Z	40890	yes		text of the shorter is 100% inside the other (sw-financeyahoocom-23), which is under twice its length, and the two share their lead	yes
 sw-financeyahoocom-26	first census	A0389	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T14:43:53Z	6534	yes			
 sw-financeyahoocom-27	first census	A0297	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T14:44:39Z	3765	yes		text of the shorter is 89% inside the other (sw-decryptco-16220cef), which is under twice its length, and the two share their lead	
 sw-financeyahoocom-28	first census	A0390	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T15:48:12Z	6639	yes			
 sw-financeyahoocom-29	first census	A0391	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T14:13:10Z	6196	yes			
 sw-financeyahoocom-30	first census	A0392	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T14:45:00Z	6380	yes			
 sw-financeyahoocom-31	first census	A0393	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T14:10:34Z	7975	yes			
-sw-financeyahoocom-32	first census	A0387	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:47:46Z	40864	yes		text of the shorter is 100% inside the other (sw-financeyahoocom-23), which is under twice its length, and the two share their lead	
+sw-financeyahoocom-32	first census	A0387	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:47:46Z	40864	yes		text of the shorter is 100% inside the other (sw-financeyahoocom-23), which is under twice its length, and the two share their lead	yes
 sw-financeyahoocom-511ab07f	first census	A0394	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:14:15Z	4111	yes			
 sw-financeyahoocom-72a2f670	first census	A0395	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:15:14Z	5868	yes			
 sw-financeyahoocom-7a36698c	first census	A0396	finance.yahoo.com	2026-11-06	header stamp	2026-11-06T11:00:05Z	7062	yes			
@@ -609,9 +609,9 @@ sw-legalinsurrectioncom-03	first census	A0584	legalinsurrection.com	2026-11-12	h
 sw-lightwaveonlinecom-e65c0638	first census	A0585	lightwaveonline.com	2026-11-12	header stamp	Nov 12th 2026	5097	yes			
 sw-localnews8com-01	first census	A0235	localnews8.com	2026-11-08	header stamp	2026-11-08T20:36:42+00:00	7606	yes		text of the shorter is 92% inside the other (sw-cnncom-01), which is under twice its length, and the two share their lead	
 sw-localnews8com-02	first census	A0586	localnews8.com	2026-11-09	header stamp	2026-11-09T18:29:01+00:00	8280	yes			
-sw-localnews8com-03	first census	A0587	localnews8.com	2026-11-10	header stamp	2026-11-10T08:29:45+00:00	6261	yes		text of the shorter is 95% inside the other (art-fc-cnn-1110), which is under twice its length, and the two share their lead	
+sw-localnews8com-03	first census	A0587	localnews8.com	2026-11-10	header stamp	2026-11-10T08:29:45+00:00	6261	yes		text of the shorter is 83% inside the other (art-fc-cnn-1110), which is under twice its length, and the two share their lead	
 sw-localnews8com-04	first census	A0579	localnews8.com	2026-11-11	header stamp	2026-11-11T23:27:41+00:00	3786	yes		text of the shorter is 100% inside the other (sw-ktvzcom-02), which is under twice its length, and the two share their lead	
-sw-localnews8com-05	first census	A0238	localnews8.com	2026-11-12	header stamp	2026-11-12T14:09:53+00:00	6083	yes		text of the shorter is 99% inside the other (sw-cnncom-04), which is under twice its length, and the two share their lead	
+sw-localnews8com-05	first census	A0238	localnews8.com	2026-11-12	header stamp	2026-11-12T14:09:53+00:00	6083	yes		text of the shorter is 100% inside the other (sw-cnncom-04), which is under twice its length, and the two share their lead	
 sw-localnews8com-06	first census	A0578	localnews8.com	2026-11-11	header stamp	2026-11-11T19:33:06+00:00	3580	yes		text of the shorter is 100% inside the other (sw-ktvzcom-01), which is under twice its length, and the two share their lead	
 sw-macaubusinesscom-01	first census	A0588	macaubusiness.com	2026-11-09	header stamp	2026-11-09T12:12:48+00:00	5410	yes			
 sw-macrumorscom-01	first census	A0438	macrumors.com	2026-11-12	header stamp	2026-11-12T12:29:41+00:00	2890	yes		read as the same article as sw-forumsmacrumorscom-01 by the builder, on the ninth independent reading's description of the pair (lane audit_nv8_s8c, Nov 16, 2026), which left the verdict to a stated rule	
@@ -724,7 +724,7 @@ sw-prdailycom-01	first census	A0688	prdaily.com	2026-11-09	header stamp	2026-11-
 sw-premiumtimesngcom-01	first census	A0689	premiumtimesng.com	2026-11-12	header stamp	2026-11-12T16:27:26+00:00	3928	yes			
 sw-proactiveinvestorscom-01	first census	A0690	proactiveinvestors.com	2026-11-09	header stamp	2026-11-09T10:09:00-05:00	4682	yes			
 sw-protoscom-01	first census	A0691	protos.com	2026-11-09	header stamp	2026-11-09T18:56:06+00:00	5419	yes			
-sw-protoscom-b7e5971b	first census	A0692	protos.com	2026-11-12	header stamp	2026-11-12T17:16:08+00:00	2123	yes			
+sw-protoscom-b7e5971b	first census	A0692	protos.com	2026-11-12	header stamp	2026-11-12T17:16:08+00:00	2443	yes			
 sw-pulse2com-01	first census	A0693	pulse2.com	2026-11-12	header stamp	2026-11-12T15:46:20+00:00	7705	yes			
 sw-pymntscom-01	first census	A0694	pymnts.com	2026-11-09	header stamp	2026-11-09T15:18:43+00:00	3089	yes			
 sw-pymntscom-02	first census	A0695	pymnts.com	2026-11-12	header stamp	2026-11-12T11:53:30+00:00	3891	yes			
@@ -751,7 +751,7 @@ sw-qzcom-19	first census	A0715	qz.com	2026-11-12	header stamp	2026-11-12T15:13:2
 sw-qzcom-3e59440e	first census	A0716	qz.com	2026-11-12	header stamp	2026-11-12T18:21:57.914Z	2656	yes			
 sw-qzcom-efc3c07a	first census	A0717	qz.com	2026-11-12	header stamp	2026-11-12T18:26:17.254Z	2925	yes			
 sw-rawstorycom-01	first census	A0718	rawstory.com	2026-11-08	header stamp	2026-11-08T21:57:56+00:00	2041	yes			
-sw-rawstorycom-02	first census	A0719	rawstory.com	2026-11-10	header stamp	2026-11-11T03:40:22+00:00	2813	yes			
+sw-rawstorycom-02	first census	A0719	rawstory.com	2026-11-10	header stamp	2026-11-11T03:40:22+00:00	2849	yes			
 sw-rawstorycom-03	first census	A0720	rawstory.com	2026-11-11	header stamp	2026-11-11T23:47:59+00:00	3979	yes			
 sw-rawstorycom-04	first census	A0721	rawstory.com	2026-11-11	header stamp	2026-11-12T02:35:09+00:00	3162	yes			
 sw-realityteacom-01	first census	A0722	realitytea.com	2026-11-09	header stamp	2026-11-09T09:23:27+00:00	3099	yes			
@@ -1084,7 +1084,7 @@ x-mcguire-nov6	first census	A1028	x.com	2026-11-06	post	Sat Nov 07 03:24:39 +000
 x-mcguire-nov8	first census	A1029	x.com	2026-11-08	post	Sun Nov 08 21:13:03 +0000 2026	9365	yes			
 x-tomhoward-timeline	first census	A1030	x.com	2026-11-12	post	Thu Nov 12 05:03:18 +0000 2026	3167	yes			
 yahoo-190bn-fbi	first census	A1031	finance.yahoo.com	2026-11-10	header stamp	2026-11-10T11:26:22Z	2064	yes			
-yahoo-live-ousted	first census	A0387	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T17:05:03Z	39412	yes		read as the same article as sw-financeyahoocom-32 by the seventh independent reading (lane audit_nv8_s8a, Nov 15, 2026)	
+yahoo-live-ousted	first census	A0387	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T17:05:03Z	39412	yes		read as the same article as sw-financeyahoocom-32 by the seventh independent reading (lane audit_nv8_s8a, Nov 15, 2026)	yes
 art-fc-abc-timeline	saved since	A1032	abcnews.com	2026-11-12	header stamp	2026-11-12T20:29:00.000Z	7230	yes			
 art-fc-bs-nyt-1109-grip	saved since	A0152	business-standard.com	2026-11-09	header stamp	2026-11-09T23:46:52+05:30	8002	yes		same address as sw-businessstandardcom-03	
 art-fc-bs-nyt-1110-woman	saved since	A1033	business-standard.com	2026-11-10	header stamp	2026-11-11T08:04:27+05:30	12267	yes			

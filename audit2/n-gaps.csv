@@ -1,0 +1,3 @@
+row_id_or_key,source,what_failed
+man-e8a4f78b0d7e,primary/man-e8a4f78b0d7e/text.txt; meta.json,The available text layer was read. No body.html or local original PDF is supplied to confirm visually that this displaced Read more control belongs to its caption.
+man-ft-1112-05,primary/man-ft-1112-05/text.txt; text.article.txt; meta.json,"Required live-page loading/extent check unresolved: no body.html or locally supplied original PDF. The two available text layers were read, not treated as proof that no other live entries existed."

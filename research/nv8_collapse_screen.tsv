@@ -1,37 +1,115 @@
 page_id	site	marks_on_a_line_of_their_own	marks_in_all	what_the_mark_belongs_to	saved_in_part
-huffpost-live	huffpost.com	0	4	links from a live page's entries to full stories or to other outlets' reports	
+beast-admits	thedailybeast.com	0	1	the site's line inviting readers to follow it	
+beast-new-scandal	thedailybeast.com	0	1	the site's line inviting readers to follow it	
+cnbc-1105-asked-to-brief	cnbc.com	0	1	a list of links to other articles	
+cnbc-1108-bipartisan	cnbc.com	0	1	a list of links to other articles	
+cnbc-1108-board-investigates	cnbc.com	0	1	a list of links to other articles	
+cnbc-1109-megaspeed	cnbc.com	0	1	a list of links to other articles	
+cnbc-1110-anthropic-ipo	cnbc.com	0	1	a list of links to other articles	
+cnbc-1110-schumer	cnbc.com	0	1	a list of links to other articles	
+cnbc-1110-selloff	cnbc.com	0	1	a list of links to other articles	
+cnbc-1111-congress-resign	cnbc.com	0	1	a list of links to other articles	
+cnn-1111-live	cnn.com	0	2	links from a live page's entries to full stories or to other outlets' reports	yes
+huffpost-live	huffpost.com	0	49	links from a live page's entries to full stories or to other outlets' reports	
+sw-80lv-01	80.lv	0	1	the site's line inviting readers to follow it	
+sw-80lv-02	80.lv	0	1	the site's line inviting readers to follow it	
+sw-ambcryptocom-01	ambcrypto.com	0	1	words of the article itself, not a control	
+sw-bostoncom-01	boston.com	0	1	the site's line inviting readers to follow it	
+sw-breitbartcom-03	breitbart.com	0	1	a link to the report the article sums up	
+sw-breitbartcom-04	breitbart.com	0	1	a link to the report the article sums up	
+sw-breitbartcom-06	breitbart.com	0	1	a link to the report the article sums up	
+sw-breitbartcom-08	breitbart.com	0	1	a link to the report the article sums up	
+sw-chinatalkmedia-01	chinatalk.media	0	1	a subscription or sign-in line where the saved copy stops: the page is marked as held in part	yes
+sw-cnbccom-02	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-03	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-04	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-06	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-07	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-08	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-09	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-11	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-18	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-19	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-21	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-9e837e26	cnbc.com	0	1	a list of links to other articles	
+sw-cnbccom-ca82d66d	cnbc.com	0	1	a list of links to other articles	
+sw-coingapecom-01	coingape.com	0	1	the author's or the site's description of itself	
+sw-deadlinecom-01	deadline.com	0	1	a list of links to other articles	
+sw-deadlinecom-02	deadline.com	0	1	a list of links to other articles	
+sw-digitimescom-01	digitimes.com	0	1	a subscription or sign-in line where the saved copy stops: the page is marked as held in part	yes
 sw-euronewscom-01	euronews.com	1	1	a list of links to other articles	
 sw-euronewscom-02	euronews.com	1	1	a list of links to other articles	
 sw-euronewscom-05	euronews.com	1	1	a list of links to other articles	
 sw-euronewscom-06	euronews.com	1	1	a list of links to other articles	
+sw-financeyahoocom-01	finance.yahoo.com	0	1	a promoted link inside the article	
+sw-financeyahoocom-02	finance.yahoo.com	0	1	a promoted link inside the article	
+sw-financeyahoocom-03	finance.yahoo.com	0	1	a promoted link inside the article	
 sw-financeyahoocom-07	finance.yahoo.com	0	2	a sponsor's box inside the article	
+sw-financeyahoocom-12	finance.yahoo.com	0	1	a promoted link inside the article	
+sw-financeyahoocom-14	finance.yahoo.com	0	1	a promoted link inside the article	
 sw-financeyahoocom-17	finance.yahoo.com	0	2	a sponsor's box inside the article	
+sw-financeyahoocom-18	finance.yahoo.com	0	1	a promoted link inside the article	
+sw-financeyahoocom-19	finance.yahoo.com	0	1	a promoted link inside the article	
 sw-financeyahoocom-20	finance.yahoo.com	0	2	a sponsor's box inside the article	
-sw-financeyahoocom-23	finance.yahoo.com	0	10	links from a live page's entries to full stories or to other outlets' reports	
+sw-financeyahoocom-23	finance.yahoo.com	0	10	links from a live page's entries to full stories or to other outlets' reports	yes
 sw-financeyahoocom-24	finance.yahoo.com	0	2	a sponsor's box inside the article	
-sw-financeyahoocom-25	finance.yahoo.com	0	10	links from a live page's entries to full stories or to other outlets' reports	
+sw-financeyahoocom-25	finance.yahoo.com	0	10	links from a live page's entries to full stories or to other outlets' reports	yes
 sw-financeyahoocom-26	finance.yahoo.com	0	2	a sponsor's box inside the article	
 sw-financeyahoocom-28	finance.yahoo.com	0	2	a sponsor's box inside the article	
 sw-financeyahoocom-29	finance.yahoo.com	0	2	a sponsor's box inside the article	
-sw-financeyahoocom-32	finance.yahoo.com	0	10	links from a live page's entries to full stories or to other outlets' reports	
+sw-financeyahoocom-30	finance.yahoo.com	0	1	a promoted link inside the article	
+sw-financeyahoocom-32	finance.yahoo.com	0	10	links from a live page's entries to full stories or to other outlets' reports	yes
+sw-finimizecom-01	finimize.com	0	1	a sign-in line after the complete piece (a reader judged the page whole)	
+sw-finimizecom-02	finimize.com	0	1	a sign-in line after the complete piece (a reader judged the page whole)	
+sw-finimizecom-03	finimize.com	0	1	a sign-in line after the complete piece (a reader judged the page whole)	
 sw-foreignpolicycom-01	foreignpolicy.com	2	2	a link card to another article, and the comment rules	
 sw-fortunecom-07	fortune.com	0	3	links from a newsletter's items to other outlets' reports	
+sw-foxnewscom-01	foxnews.com	0	1	a list of links to other articles	
+sw-indailyqldcomau-01	indailyqld.com.au	0	1	the site's line inviting readers to follow it	
 sw-inquirercom-53b966e2	inquirer.com	0	2	a list of links to other articles	
+sw-insurancejournalcom-01	insurancejournal.com	0	1	a list of links to other articles	
 sw-irishtimescom-01	irishtimes.com	1	1	a list of links to other articles	
 sw-pbsorg-01	pbs.org	0	3	a list of links to other articles	
 sw-pbsorg-02	pbs.org	0	2	a list of links to other articles	
+sw-proactiveinvestorscom-01	proactiveinvestors.com	0	1	the author's or the site's description of itself	
+sw-protoscom-01	protos.com	0	1	a list of links to other articles	
+sw-protoscom-b7e5971b	protos.com	0	1	a list of links to other articles	
+sw-rteie-01	rte.ie	0	1	a list of links to other articles	
+sw-rteie-02	rte.ie	0	1	a list of links to other articles	
+sw-spytalkco-01	spytalk.co	0	1	a subscription or sign-in line where the saved copy stops: the page is marked as held in part	yes
+sw-spytalkco-02	spytalk.co	0	1	a subscription or sign-in line where the saved copy stops: the page is marked as held in part	yes
+sw-thealgorithmicbridgeco-e7377856	thealgorithmicbridge.com	0	1	a subscription or sign-in line where the saved copy stops: the page is marked as held in part	yes
+sw-theconversationcom-01	theconversation.com	0	1	a list of links to other articles	
+sw-thedispatchcom-01	thedispatch.com	0	1	the site's line inviting readers to follow it	yes
+sw-thegatewaypunditcom-01	thegatewaypundit.com	0	1	a list of links to other articles	
+sw-thegatewaypunditcom-02	thegatewaypundit.com	0	1	a list of links to other articles	
 sw-theregistercom-01	theregister.com	1	1	a list of links to other articles	
+sw-throughlinenews-01	throughline.news	0	1	a subscription or sign-in line where the saved copy stops: the page is marked as held in part	yes
 sw-triviumchinacom-01	triviumchina.com	0	3	a list of other posts under the article	
-yahoo-live-ousted	finance.yahoo.com	0	11	links from a live page's entries to full stories or to other outlets' reports	
+sw-windowsreportcom-01	windowsreport.com	0	1	the author's or the site's description of itself	
+sw-windowsreportcom-02	windowsreport.com	0	1	the author's or the site's description of itself	
+yahoo-live-ousted	finance.yahoo.com	0	11	links from a live page's entries to full stories or to other outlets' reports	yes
 man-109ae199a0e7	reuters.com	0	2	lists of other videos under a video page	
+man-1fbc18e5e77d	wsj.com	0	1	a list of links to other articles	
+man-921a60b7ee50	washingtonpost.com	0	1	the site's own summary of readers' comments, under the piece	
 man-923fe8754943	wsj.com	1	1	the summary box under the headline	
 man-9de9f2a5db75	wsj.com	1	1	the summary box under the headline	
 man-bb944902439c	wsj.com	1	1	the summary box under the headline	
 man-ft-1112-05	ft.com	0	4	links from a live page's entries to full stories or to other outlets' reports	
+man-nyt-1106-01	nytimes.com	0	1	the site's line inviting readers to follow it	
+man-nyt-1107-01	nytimes.com	0	1	the site's line inviting readers to follow it	
+man-nyt-1108-02	nytimes.com	0	1	the site's line inviting readers to follow it	
+man-nyt-1109-01	nytimes.com	0	1	the site's line inviting readers to follow it	
+man-nyt-1109-03	nytimes.com	0	1	the site's line inviting readers to follow it	
+man-nyt-1110-01	nytimes.com	0	1	the site's line inviting readers to follow it	
+man-nyt-1110-02	nytimes.com	0	1	the site's line inviting readers to follow it	
+man-nyt-1111-02	nytimes.com	0	1	the site's line inviting readers to follow it	
 man-nyt-1112-09	nytimes.com	7	7	entries of a live page, collapsed in the saved copy: the page is held in part	yes
+man-wapo-1112-02	washingtonpost.com	0	1	the site's own summary of readers' comments, under the piece	
 man-wsj-1109-09	wsj.com	1	1	the summary box under the headline	
 man-wsj-1110-03	wsj.com	1	1	the summary box under the headline	
 man-wsj-1112-05	wsj.com	1	1	the summary box under the headline	
+art-line-straitstimes-bloomberg-1110	straitstimes.com	0	1	the page's description line	
 man-506b033a9fd4	wsj.com	1	1	the summary box under the headline	
 man-05b8d5160f55	wsj.com	1	1	the summary box under the headline	
 man-wsj-1109-06	wsj.com	1	1	the summary box under the headline	

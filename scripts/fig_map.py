@@ -114,8 +114,11 @@ def ARTICLE_WORDS():
     n_screen = sum('lane partial_nv8_a' in p['read_by'] for p in pr)          # the pages the screen listed; the others were found by a later reading among the longer pages
     n_live = sum(p['verdict'] == 'part' and 'lane partial_nv8_a' not in p['read_by'] for p in pr)
     ta = list(csv.DictReader(open(R / 'nv8_text_added.tsv', newline=''), delimiter='\t'))
-    n_pdf = sum('page breaks' in x['what_the_text_read_lacked'] for x in ta); n_tab = len(ta) - n_pdf; n_pdf_lines = sum(int(x['lines_added']) for x in ta if 'page breaks' in x['what_the_text_read_lacked'])
-    assert part2 == sum(p['verdict'] == 'part' for p in pr) and 0 < n_tab <= 12 and 0 < n_pdf <= 12 and n_live == 1 and n_screen + n_live == n_read
+    kind = lambda x: 'pdf' if 'page breaks' in x['what_the_text_read_lacked'] else 'live' if 'live page' in x['what_the_text_read_lacked'] else 'small' if 'short' in x['what_the_text_read_lacked'] else 'tab'
+    n_pdf = sum(kind(x) == 'pdf' for x in ta); n_tab = sum(kind(x) == 'tab' for x in ta); n_pdf_lines = sum(int(x['lines_added']) for x in ta if kind(x) == 'pdf')
+    n_livep = sum(kind(x) == 'live' for x in ta); n_entries = sum(int(x['lines_added']) for x in ta if kind(x) == 'live'); n_small = len({x['page_id'] for x in ta if kind(x) == 'small'})
+    assert part2 == sum(p['verdict'] == 'part' for p in pr) and 0 < n_tab <= 12 and 0 < n_pdf <= 12 and 0 < n_live <= 12 and n_screen + sum('lane partial_nv8_a' not in p['read_by'] for p in pr) == n_read
+    assert 0 < n_livep <= 12 and 0 < n_small <= 6 and all(x['what_the_text_read_lacked'] in ('a table', 'a photo caption') for x in ta if kind(x) == 'tab')
     in_copy = sum(r['day_basis'] == 'read in the saved copy' for r in rows)
     pairs = list(csv.DictReader(open(R / 'nv8_article_pairs.tsv', newline=''), delimiter='\t'))
     used = lambda p: p.get('scope') == 'all' or p.get('used_for_joining') == 'yes'        # the project's table, or the published one (which leaves out the readers' sentences)
@@ -130,19 +133,22 @@ def ARTICLE_WORDS():
     assert all(x['drawn'] == 'yes' for x in line) and undated == 0 and added == 2, 'the sentences below say that everyone at the line is drawn, that no counted page is undated and that two pages were saved for the line'
     return (f"Counts of who is named or quoted are counts of articles, each counted once: the {n1:,} pages saved by the first search and the {n2} saved since (the papers' own articles, saved by hand or in a licensed copy, a few transcripts and a company filing) "
             f"are {len(arts):,} articles once copies of one article are joined, and {len(cnt):,} of them are counted. Two pages are one article when they have the same address or when a reader judged them so: "
-            f"every two pages that share 25 or more seven-word runs making up a fifth of the shorter were opened by a reader from another model family ({read - built} pairs over four readings; {W_(built)} more were decided by the builder under a stated rule, and the table says which. Of the {read}, {same} are the same article, as a syndicated or licensed copy with its lead kept, "
+            f"every two pages that share 25 or more seven-word runs making up a fifth of the shorter were opened by a reader from another model family ({read - built} pairs over six readings; {W_(built)} more were decided by the builder under a stated rule, and the table says which. Of the {read}, {same} are the same article, as a syndicated or licensed copy with its lead kept, "
             f"a later version at one address or two snapshots of a live page, and {read - same} are different, such as a statement and the articles quoting it, or a later dispatch with a new lead; {W_(unread)} more could not be read, being block pages that are not counted). "
             "Copies that share less than that are not listed, so the number of articles can still be a little high. "
             "A page's day is the day of its first publication where the page shows one, and otherwise the day of the version saved, read as a U.S. Eastern day from the page's own stamp "
             f"({in_copy} pages whose metadata and text carry none, or carry one the printed stamp contradicts, were read in their saved copy). "
             f"A page is not counted when that day is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when the saved copy is a block or error page ({why['not the piece']}) or holds nothing at all ({why['empty']}), "
             f"or when it is a reference page or an image ({why['not news']}). For {rec} pages whose first extraction had missed the article, its text was taken again from the saved HTML ({W_(rec2)} of them a second time, after a reading found paragraphs missing or other lines among them); "
-            f"{part} counted pages are still held only in part (a headline and description, a teaser, an excerpt, the opening before a subscription barrier, a live page with entries collapsed): {part - part2} that the readers of the pages had listed, "
-            f"and {part2} more found on Nov 16: {part2 - n_live} among the {n_screen} counted pages that show a sign of a barrier or hold a short text, which readers went through, and {W_(n_live)} live page with collapsed entries, which a later reading found among the longer pages. "
+            f"{part} counted pages are still held only in part (a headline and description, a teaser, an excerpt, the opening before a subscription barrier, a live page whose entries are collapsed or load only on request): {part - part2} that the readers of the pages had listed, "
+            f"and {part2} more found on Nov 16: {part2 - n_live} among the {n_screen} counted pages that show a sign of a barrier or hold a short text, which readers went through, and {W_(n_live)} live pages that later readings found among the longer pages. "
             "A page is whole when all of the listed page's own piece is saved, whatever it quotes or links to. A longer page that shows no sign of a barrier was not read again for this: "
-            "a search of every counted page for collapse marks found no second one, and it cannot see a live page that loads more entries only on request. "
+            "every counted page with a collapse mark in its text was read, and every saved page whose HTML holds a live-blog record was compared with its text; a live page saved by hand as PDF cannot be checked that way. "
+            f"On {W_(n_livep)} live pages the saved HTML held {n_entries} entries that the text read lacked, and they were added to it. One of them is a four-day live page of general news: an article is counted for a member when its text names the member anywhere, "
+            "so there, as in any round-up, the name can stand in an entry about something else. "
             f"On {W_(n_tab)} pages a table or a photo caption of the piece, which the extraction from the saved HTML had left out, was added to the text read, after a search of every page's HTML for a member's name missing from its text "
-            "(a member counts as named when the name stands in the piece's own table or caption); other photo captions are not in the text read, and that search does not find other passages an extraction may have lost. "
+            "(a member counts as named when the name stands in the piece's own table or caption), and on " + W_(n_small) + " pages a short paragraph or passage; other photo captions and some small parts of a piece (a subheading, a credit, a short sentence) are not in the text read, "
+            "and that search does not find other passages an extraction may have lost. "
             f"On {W_(n_pdf)} pages saved by hand as PDF, {n_pdf_lines} lines of prose that the cleaning of the text had dropped at page breaks were put back. "
             f"The {W_(len(line))} people at three or four articles ({W_(mem)} members and {W_(len(line) - mem)} public voices) were each read for whether those articles are separate reports, and all have three. "
             "Two senators reach three only through a report saved on Nov 16 that the record had pointed to and the saved pages lacked: one through a piece the aggregators listed on Nov 12 "
@@ -156,8 +162,8 @@ def SWEEP_WORDS():
     last = lambda n: re.sub(r',? (?:Jr\.?|Sr\.?|II|III|IV)$', '', n.strip()).split()[-1]; drawn = {a[2].split()[-1] for a in rows_map.ACTORS if a[4] is not None}
     other = sum(1 for x in sw if x['among_names_searched'] == 'yes' and last(x['member']) not in drawn and int(x['counted_articles_naming']) >= 3)      # searched, named in three or more, not drawn
     rest = [x for x in sw if x['among_names_searched'] == 'no' and not x['note']]; top = max(int(x['counted_articles_naming']) + int(x['listed_headlines_naming_not_saved']) for x in rest)
-    assert other == 7 and top < 3, (other, top)
-    return ('Seven others named that often are not drawn, because the pages name them for other things: a leadership vote, a lost election, a race still being counted, an impeachment bid and other inquiries. '
+    assert other == 10 and top < 3, (other, top)          # ten since Nov 16, 2026: three more reached three articles once the entries of a four-day live page of general news were read
+    return (str(rows_map.NUMBER.get(other, {10: 'ten'}.get(other, other))).capitalize() + ' others named that often are not drawn, because the pages name them for other things: a leadership vote, a lost election, a race still being counted, an impeachment bid, a missed vote and other inquiries. '
             'The names searched came from the readings of the pages, so on Nov 16 every sitting member\'s name was also searched as a whole name over the counted articles and over the headlines of the listed pieces that could not be saved '
             f'(about half of the pieces listed were saved): {len(rest)} more members are named, none in more than {rows_map.NUMBER.get(top, {1: "one", 2: "two"}.get(top, top))}. ')
 

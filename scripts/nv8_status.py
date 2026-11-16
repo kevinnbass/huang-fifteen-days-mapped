@@ -2,7 +2,7 @@
 generator and the public build (build_nv8.py) print the same words."""
 KICKER = 'Huang resignation · dated public records, Nov 2026 · draft'
 STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn item was matched by script to a saved copy of its source. '
-          'Twelve independent readings by another company\'s model have read the figure or the corrections made to it. The first (Nov 14) read the 230 rows then drawn that are not listed pieces, recounted the pieces and recomputed the members\' lines. '
+          'Thirteen independent readings by another company\'s model have read the figure or the corrections made to it. The first (Nov 14) read the 230 rows then drawn that are not listed pieces, recounted the pieces and recomputed the members\' lines. '
           'The second (Nov 15), in three parts, read the 168 rows new or changed since then, the figure element by element, the pieces and the money recounted from the FEC\'s saved records, and who is drawn and what the chips carry; '
           'it graded 11 points as errors and 145 as needing a qualification. The third (Nov 15) read the corrections made in answer: it found no error in the 90 changed rows, two errors and eight qualifications in the changed text, '
           'and held 2 of the 181 answers insufficient and 19 only in part. A fourth (Nov 15) read the answers to it and the 45 rows added or changed since: no error in a row, 24 qualifications (18 of them one point, that lobbyists\' gifts were shown by unequal measures), '
@@ -30,9 +30,15 @@ STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn ite
           'It found, on the interactive map, members\' lines shown without their sources, searches that found nothing counted as ties, and a label claiming a current post; '
           'and in the tables a complete newsletter marked as held in part while one cut off by its paywall was not, a live page with collapsed entries not marked, lines of prose dropped at the page breaks of a page saved by hand as PDF, '
           'and photo captions missing from the text read. It closed incomplete: four hand-saved PDFs could not be opened where it ran. '
-          'Changed in answer and not yet read independently: the interactive map lists every source, sets the empty searches apart and is relabelled; '
-          '93 pages are marked as held only in part, under the stated rule that a page is whole when all of its own piece is saved; '
-          '21 dropped lines are put back on four pages and two pages are trimmed of a following article\'s opening lines, with no count changing; and the missing captions are stated as a limit.')
+          'In answer the interactive map lists every source, sets the empty searches apart and is relabelled; 93 pages were marked as held only in part, under the stated rule that a page is whole when all of its own piece is saved; '
+          '21 dropped lines were put back on four pages and two pages trimmed of a following article\'s opening lines; and the missing captions were stated as a limit. '
+          'A thirteenth (Nov 16) read those answers and opened the four PDFs: 72 of 83 answers hold and 11 hold in part; every restored line and both trims are right, and the stated limit on captions is enough for the counts. '
+          'It found a second newsletter that stops at its own paywall and was not marked; three things about live pages (one whose saved HTML holds 143 entries, of which the text read held 21; one that holds 69, of which 20 were read; '
+          'and four copies of one live page that hold only its latest entries and were not marked); the three-chairmen figure counting two posts from a text since replaced; and the search for collapse marks described as wider than it was. '
+          'It closed incomplete: two source views were not available to it. '
+          'Changed in answer and not yet read by an independent audit: 172 entries were added to the text read of three live pages, which raises eight members\' counts by one or two '
+          '(Warren 71, Coons 48, Jeffries 30, Schumer 22, Thune 13, Johnson 11, Cornyn 9, Mast 92); 98 pages are marked as held only in part; every counted page with any collapse mark was read, and every saved page with a live-blog record was compared with its text; '
+          'a census reader read the three live pages again for remarks; and the three-chairmen figure now reads the same text as this one (93, 81 and 74 pages).')
 # what changed after the audit read the figure (the README of the public copy lists these under the audit)
 AFTER_AUDIT = [
     'Five pieces were added and one moved from Nov 8 to Nov 12 (1,726 pieces became 1,731; 1,662 drawn became 1,667): six articles of one site share an address apart from the query string and had been counted as one. No row id was renumbered.',
@@ -235,3 +241,36 @@ AFTER_READING12 = [
     'Left as limits, and said in the notes: a longer page that shows no sign of a barrier or of collapsing was not read again for whether it is whole; photo captions and other small parts of a piece (a subheading, a credit) can be missing from the text read; '
     'four hand-saved PDFs that the reading could not open are still to be compared with their text; the live pages among the counted pages have not been checked for entries that load only on request.',
 ]
+# what changed in answer to the thirteenth independent reading (lane audit_nv8_s8g, read after its marker on Nov 16, 2026)
+AFTER_READING13 = [
+    'Live pages. The first extraction of a live page took the entries the page showed before its "more updates" control, and the page\'s own structured data holds the rest. Every saved page with HTML (1,149) was searched for a live-blog record '
+    '(`scripts/as_built/nv8_live_pages.py`, `research/nv8_live_pages.tsv`): nine pages have one. On three the text read lacked entries the HTML holds: a four-day live page of general news (143 entries, 21 read), '
+    'a broadcaster\'s live page on the story (69 entries, 20 read) and an article with one live entry under it, which the reading had not found. The 172 entries are added to the text read '
+    '(`scripts/as_built/recover_bodies_7.py`, `research/nv8_text_added.tsv`; new files beside the pages, nothing replaced). Four copies of one live page hold its 20 latest entries, all read, and load older ones only on request: '
+    'they are now marked as held in part. Two other live pages hold every entry in their text. A live page saved by hand as PDF has no HTML and cannot be checked this way: one is already marked, and one is left unmarked as not told.',
+    'Counts that moved. Eight members are named in one or two more articles: Sen. Warren 71 (was 69), Sen. Coons 48 (46), Rep. Jeffries 30 (29), Sen. Schumer 22 (21), Sen. Thune 13 (12), the Speaker 11 (10), Sen. Cornyn 9 (8) and Rep. Mast 92 (91). '
+    'No one is added or dropped, and the pages and articles are as before: 1,315 pages, 1,236 articles, 1,154 counted. The live page of general news is counted like any other article: a member is counted when its text names the member anywhere. '
+    'On that page Sens. Schumer, Thune and Cornyn and the Speaker are named only in entries that do not mention Nvidia, Huang or Megaspeed, so one of the articles now counted for each of them names him for other news; the figure\'s note states the rule and this consequence. '
+    'Through the same page three more sitting members reach three articles (Sen. Slotkin, Rep. Pelosi, Rep. Horsford); their articles were read, all name them for other things, and they are not drawn, with the reason in `research/member_selection.tsv`, '
+    'as for the seven such members before.',
+    'Pages held only in part: 98 (93). A second newsletter is marked: its item on Nvidia is complete, and the newsletter then opens another section and stops at its own paywall, the same case as the one corrected after the twelfth reading, which I had not applied to it. '
+    'The four copies of the live page are marked.',
+    'Collapse marks. The search had listed a page only when a mark stood on a line of its own or twice, and the note called that every page with a mark. Every counted page with any mark is now listed and read: 120 pages (42 before). '
+    'None of the others has collapsed entries of its own; six stop at a subscription or sign-in line and were already marked as held in part.',
+    'Pairs of pages. With its longer text the broadcaster\'s live page became alike with four stand-alone reports of the same broadcaster that local stations carry. A pair reader from another model family read the four pairs, with two pairs of known verdict mixed in (both came back as known): '
+    'all four are different pages, a live page that carries the stand-alone report in one entry. A fifth pair, with a market report that quotes the same analyst\'s note, appeared once that note was restored; it was read the same way and is different too. '
+    '510 pairs now have a verdict, over six readings.',
+    'Remarks, bylines and analysts on the three live pages. A census reader from another model family read the three pages again from first line to last (226 lines of remarks and acts, 67 author credits); its lines replace the earlier reading of those pages. '
+    'Against the figure\'s rows this opened 39 items, each answered in the gap register: 30 bylines and two analysts were looked up as whole names in the 85 tables of the evidence sets and are in none; four credits are an organisation\'s name or a staff credit; '
+    'and three remarks of drawn actors are carried by a chip already or are not of these days (one is from an interview of Oct 14). No chip is added or changed. '
+    'The reader also found an analyst\'s quoted note, a pull quotation and a letter\'s salutation missing inside the broadcaster\'s entries. They are added (`scripts/as_built/recover_bodies_8.py`), after every block of that page\'s 70 visible entries was compared with the text read: '
+    'what is still missing there is 18 photo credits. The page stays marked as held in part until a reader has judged it whole.',
+    'One short paragraph of one article ("did not comment"), which the extraction had dropped and the reading named, is added to its text. The table of pages held in part and this README now say that "whole" is about the saved copy: the text read from it can still lack small parts '
+    '(a photo caption, a subheading, a credit, a short sentence).',
+    'The interactive map: the view of a source said every dated act, tie or background shows the passage it rests on. It now says a record shows a passage where its source gives one, and that a count or a sum taken from a table shows none.',
+    'The three-chairmen figure counted each page from its first extraction even where this figure had taken the article\'s text again. It now reads the same text as this figure: Mast is named on 93 of the 1,086 pages of the first search (90 before), Moolenaar on 81 (79), Crawford on 74 (72). '
+    'Two posts account for two pages each (the reading\'s 92, 81 and 74), and the live entry found afterwards for Mast\'s third. The correction is in that figure\'s repository, in the commit that follows this one.',
+    'Left as limits, and said in the notes: the four copies of one live page hold only its latest entries; a live page saved by hand as PDF cannot be checked for entries that load on request; one displaced "Read more" control on a hand-saved report was read as part of a photo caption from the text layer alone; '
+    'photo captions and other small parts of a piece can be missing from the text read; on a round-up or a live page of general news a member can be named in an item about something else.',
+]
+
