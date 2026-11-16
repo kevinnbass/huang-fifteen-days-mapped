@@ -2,7 +2,8 @@ member	chamber	party	counted_articles_naming	listed_headlines_naming_not_saved	a
 Marco Rubio	Senate	R	130	4	no	Secretary of State since 2025; drawn in the figure under that office
 Brian J. Mast	House	R	89	1	yes	
 John R. Moolenaar	House	R	77	0	yes	
-Elizabeth Warren	Senate	D	68	1	yes	
+Elizabeth Warren	Senate	D	69	1	yes	
+"Eric A. ""Rick"" Crawford"	House	R	67	0	yes	
 Christopher A. Coons	Senate	D	46	0	yes	
 Hakeem S. Jeffries	House	D	29	0	yes	
 Kevin Cramer	Senate	R	22	0	yes	
@@ -19,7 +20,6 @@ Haley M. Stevens	House	D	7	0	yes
 John Kennedy	Senate	R	6	0	yes	
 Mike Johnson	House	R	6	0	yes	
 Cindy Hyde-Smith	Senate	R	5	0	yes	
-"Eric A. ""Rick"" Crawford"	House	R	5	0	yes	
 Michael T. McCaul	House	R	5	0	yes	
 Pete Ricketts	Senate	R	5	0	yes	
 Robert Garcia	House	D	5	0	yes	
@@ -44,17 +44,13 @@ Gabe Amo	House	D	2	0	no
 Ilhan Omar	House	D	2	0	no	
 Jay Obernolte	House	R	2	0	no	
 Josh Hawley	Senate	R	2	0	no	
-Laurel M. Lee	House	R	2	0	no	
 Michael Baumgartner	House	R	2	0	no	
-Mike Lee	Senate	R	2	0	no	
 Mike Rounds	Senate	R	2	0	no	
 Nancy Pelosi	House	D	2	0	no	
 Ro Khanna	House	D	2	0	no	
 Roger F. Wicker	Senate	R	2	0	no	
 Ruben Gallego	Senate	D	2	0	no	
 Steven Horsford	House	D	2	0	no	
-Summer L. Lee	House	D	2	0	no	
-Susie Lee	House	D	2	0	no	
 Ted Lieu	House	D	2	0	no	
 Zoe Lofgren	House	D	2	0	no	
 Alexandria Ocasio-Cortez	House	D	1	0	no	
@@ -76,7 +72,6 @@ Julia Brownley	House	D	1	0	no
 Kathy Castor	House	D	1	0	no	
 Kevin Kiley	House	I	1	0	no	
 Laura Gillen	House	D	1	0	no	
-Lauren Boebert	House	R	1	0	no	
 Lisa Murkowski	Senate	R	1	0	no	
 Marilyn Strickland	House	D	1	0	no	
 Mark Kelly	Senate	D	1	0	no	

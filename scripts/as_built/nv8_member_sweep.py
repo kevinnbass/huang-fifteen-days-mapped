@@ -24,17 +24,29 @@ for r in csv.DictReader(open(R + 'nv8_articles.tsv'), delimiter='\t'):
     except Exception: pass
 cov = [r for r in csv.DictReader(open(R + 'coverage_rows.tsv'), delimiter='\t') if r['drawn'] == 'yes']
 known = {s.lower() for s in M.FIRST} | {s.lower() for s in M.NOT_DRAWN}
-TITLE = r'(?:Sen(?:ator|\.)?|Rep(?:resentative|\.)?|Congress(?:man|woman)|Speaker|Leader|Chair(?:man|woman)?|Whip)'
+# A title before the surname counts as the member's when the words between them are none or the member's own given name, and a bare
+# "Sen. X" or "Rep. X" only when one sitting member of that chamber has the surname (the ninth reading, Nov 16, 2026: the first sweep
+# searched the roster's legal given name, so it found Rep. Crawford, whom the pages call Rick, in 5 articles where the figure counts 65).
+SEN = r"(?:Sens?\.|Senators?)"; REP = r"(?:Reps?\.|Representatives?|Congress(?:man|woman))"; OTHER = r"(?:(?:Majority|Minority|Democratic|Republican)\s+Leader|Leader|Whip|Speaker|Chair(?:man|woman)?|Ranking\s+Member)"
+clean = lambda n: re.sub(r',?\s+(Jr\.?|Sr\.?|II|III|IV)$', '', re.sub(r'\s*["“][^"”]+["”]\s*', ' ', n.strip())).replace(',', '').split()
+by_last = {}
+for m in mem:
+    by_last.setdefault(clean(m['member_name'])[-1], []).append(m['chamber'])
 out = []
 for m in mem:
-    name = re.sub(r'\s+(Jr\.?|Sr\.?|II|III|IV)$', '', m['member_name'].strip()); parts = name.replace(',', '').split()
+    parts = clean(m['member_name']); quoted = re.findall(r'["“]([^"”]+)["”]', m['member_name'])
     first, last = parts[0], parts[-1]
     nick = {'Richard': 'Rick|Dick|Rich', 'William': 'Bill|Will', 'Robert': 'Bob|Rob', 'James': 'Jim|Jamie', 'Thomas': 'Tom', 'Michael': 'Mike', 'Daniel': 'Dan', 'Joseph': 'Joe', 'Christopher': 'Chris', 'Charles': 'Chuck|Charlie',
             'Edward': 'Ed', 'Timothy': 'Tim', 'Stephen': 'Steve', 'Steven': 'Steve', 'Benjamin': 'Ben', 'Elizabeth': 'Liz', 'Katherine': 'Katie|Kat', 'Andrew': 'Andy', 'Gregory': 'Greg', 'Donald': 'Don', 'Ronald': 'Ron',
             'Samuel': 'Sam', 'Patrick': 'Pat', 'Peter': 'Pete', 'Raphael': 'Ted', 'Rafael': 'Ted', 'Bernard': 'Bernie', 'Nicholas': 'Nick', 'Matthew': 'Matt', 'Anthony': 'Tony', 'Jeffrey': 'Jeff', 'Kenneth': 'Ken', 'Lawrence': 'Larry',
             'Alexander': 'Alex', 'Jonathan': 'Jon', 'Zachary': 'Zach', 'Frederick': 'Fred', 'Douglas': 'Doug', 'Russell': 'Russ', 'Randall': 'Randy', 'Theodore': 'Ted', 'Margaret': 'Maggie', 'Deborah': 'Debbie', 'Suzanne': 'Suzan'}.get(first, '')
-    f = re.escape(first) + ('|' + nick if nick else '')
-    rx = re.compile(rf"(?<![A-Za-z])(?:(?:{f})\s+(?:[A-Z]\.\s+|\"[^\"]+\"\s+|[A-Z][a-z]+\s+)?{re.escape(last)}|{TITLE}\s+{re.escape(last)})(?![A-Za-z])")
+    f = '|'.join([re.escape(first)] + ([nick] if nick else []) + [re.escape(q) for q in quoted])
+    L_ = re.escape(last); same = by_last[last]
+    bare = [OTHER] if len(same) == 1 else []                                    # a bare office title, only for a surname no other sitting member has
+    bare += [SEN] if same.count('Senate') == 1 and m['chamber'] == 'Senate' else []
+    bare += [REP] if same.count('House') == 1 and m['chamber'] == 'House' else []
+    forms = [rf"(?:{f})\s+(?:[A-Z]\.\s+|\"[^\"]+\"\s+|[A-Z][a-z]+\s+)?{L_}", rf"(?:{SEN}|{REP}|{OTHER})\s+(?:{f})\s+(?:[A-Z]\.\s+)?{L_}"] + [rf"{t}\s+{L_}" for t in bare]
+    rx = re.compile(r"(?<![A-Za-z])(?:" + '|'.join(forms) + r")(?![A-Za-z])")
     a = {aid for aid, copies in arts.items() if any(rx.search(t) for _, t in copies)}
     h = [r for r in cov if rx.search(r['headline']) and key(r['url']) not in saved]
     out.append((m['member_name'], m['chamber'], m['party'], len(a), len(h), last.lower() in known, sorted(a)[:6], [x['domain'] for x in h][:4]))

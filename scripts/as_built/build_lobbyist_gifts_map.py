@@ -121,6 +121,20 @@ CASES = [('scott', 'Tina Scott', 'no'), ('scott', 'Sen. Tim Scott', 'yes'),
          ('scott', 'Rep. Scott Peters', 'no'), ('scott', 'Austin Scott', 'no'), ('neal', 'Rep. Neal Dunn', 'no'), ('neal', 'Richard E. Neal', 'yes'), ('ricketts', 'Sen. Pete Ricketts', 'yes'), ('scott', 'Lila Nieves-Lee, Staff Director for Sen. Tim Scott U.S. Senate Committee on Banking', 'no'), ('mast', 'MastForCongress', 'yes'), ('bacon', 'D Bacon, T Balderson', 'yes'), ('wyden', 'Thune John', '')]
 
 
+ORG = re.compile(r'PAC\b|POLITICAL|COMMITTEE|FUND\b|ASSOC|LLC|INC\b|LLP|GROUP|COUNCIL|CHAMBER|UNION|FEDERATION|SOCIETY|LEAGUE', re.I)
+
+
+def own_name(lob, contributor):
+    """True when a lobbyist's report gives the contributor as SELF or as the filer's own name: the lobbyist's own money. A report can also list a
+    contribution of a PAC the lobbyist serves or of the firm's PAC (the ninth reading, Nov 16, 2026, found one counted as a lobbyist's own; 54 were)."""
+    c = contributor.strip()
+    if c.upper() == 'SELF':
+        return True
+    words = lambda t: set(re.sub(r'[^a-z ]', '', (t or '').lower()).split())
+    last = words(str(lob.get('last_name') or ''))
+    return bool(last) and last <= words(c) and not ORG.search(c)
+
+
 def items(members):
     seen, out, dup = set(), [], 0; variants = defaultdict(Counter); folders = Counter()
     for d in sorted(P.glob('lda-gov-contrib-*')):
@@ -147,6 +161,7 @@ def items(members):
                         out.append({'member': m, 'registrant_id': r['registrant']['id'], 'registrant': r['registrant']['name'], 'lobbyist_id': lob,
                                     'filer_type': r['filer_type_display'], 'date': it.get('date'), 'amount_usd': it.get('amount'),
                                     'payee': it.get('payee_name'), 'honoree_as_written': hon.strip(), 'contribution_type': it.get('contribution_type_display'),
+                                    'contributor': (it.get('contributor_name') or '').strip(), 'own_name': own_name(r.get('lobbyist') or {}, it.get('contributor_name') or ''),
                                     'report_url': r['filing_document_url'], 'report_year': r['filing_year'], 'report_period': r['filing_period_display'],
                                     'source': f'{d.name}/{pg.name}'})
         assert got == total, (d.name, got, total)
@@ -206,7 +221,12 @@ def main():
                          'filer': i['filer_type'], 'lobbyist_no': '', '_lob': (co, i['lobbyist_id']) if i['lobbyist_id'] is not None else None, 'payee': i['payee'],
                          'honoree_as_written': i['honoree_as_written'], 'shared_event': 'yes' if B.SEVERAL.search(i['honoree_as_written']) else 'no',
                          'contribution_type': i['contribution_type'], 'report_year': i['report_year'], 'report_period': i['report_period'],
-                         'report_url': i['report_url'], 'pack_row': pack_row, 'source': i['source']})
+                         'report_url': i['report_url'], 'pack_row': pack_row, 'source': i['source'],
+                         # whose money: a lobbyist's own (the report says SELF or gives the filer's own name) or a committee's that the report lists.
+                         # The measure and the line's key are kept as first published, so no audited line changes its number; own_money says what counts.
+                         'own_money': 'yes' if i['lobbyist_id'] is not None and i['own_name'] else 'no',
+                         'contributor': '' if i['lobbyist_id'] is not None and i['own_name'] else ('the registrant itself' if i['contributor'].upper() == 'SELF' else i['contributor']),
+                         'repeat_of': '', '_rid': rid})
     KEY = lambda r: '|'.join(str(r[k]) for k in ('side', 'member', 'date', 'amount_usd', 'measure', 'registrant', 'payee', 'honoree_as_written', 'report_url'))
     keys = [KEY(r) for r in rows]; assert len(set(keys)) == len(keys), 'two lines share a key'
     # ---- control A: the audited three-chairmen table
@@ -252,7 +272,18 @@ def main():
     for k in sorted(mine - in_reach)[:12]:
         print('  here only:', k)
     rows.sort(key=lambda r: r['item'])
-    cols = [c for c in rows[0] if c != '_lob']
+    # a committee's gift that several lobbyists of one firm each list is one gift: later listings point at the first
+    first = {}
+    for r in rows:
+        if r['own_money'] == 'no':
+            assert r['contributor'] == 'the registrant itself' or ORG.search(r['contributor']), ('a contributor that is neither the filer nor a committee', r['item'])
+            k = (r['side'], r['_rid'], r['contributor'].upper(), r['member'], B.norm(r['payee']), r['date'], r['amount_usd'])
+            if k in first:
+                r['repeat_of'] = first[k]
+            else:
+                first[k] = r['item']
+    bad = [r['item'] for r in rows if r['measure'] in ('firm_pac', 'own_pac') and r['own_money'] == 'yes']; assert not bad, bad
+    cols = [c for c in rows[0] if c not in ('_lob', '_rid')]
     with regp.open('w', newline='') as f:
         w = csv.writer(f, lineterminator='\n'); w.writerow(['key', 'item', 'lobbyist_no']); w.writerows([k, v[0], v[1]] for k, v in sorted(reg.items(), key=lambda kv: kv[1][0]))
     with open(R / 'lobbyist_gifts_map.csv', 'w', newline='') as f:
@@ -266,10 +297,12 @@ def main():
     print(f'items inside a registration window: {len(rows)} (shared events: {sum(r["shared_event"] == "yes" for r in rows)})')
     agg = defaultdict(lambda: [0, 0.0, set()])
     for r in rows:
-        own = 'own money' if r['measure'] in ('named', 'firm_only', 'firm_only_not_classified') else 'firm or own PAC'
+        own = 'own money' if r['measure'] in ('named', 'firm_only', 'firm_only_not_classified') and r['own_money'] == 'yes' else "a committee's money"
+        if r['repeat_of']:
+            continue
         a = agg[(r['member'], r['side'], own)]; a[0] += 1; a[1] += float(r['amount_usd']); a[2].add(r['lobbyist_no'])
     for m in members:
-        line = [f"{s} {o}: {agg[(m, s, o)][0]} items ${agg[(m, s, o)][1]:,.0f} ({len(agg[(m, s, o)][2] - {''})} people)" for s in ('nvidia', 'anthropic', 'network') for o in ('own money', 'firm or own PAC') if (m, s, o) in agg]
+        line = [f"{s} {o}: {agg[(m, s, o)][0]} items ${agg[(m, s, o)][1]:,.0f} ({len(agg[(m, s, o)][2] - {''})} people)" for s in ('nvidia', 'anthropic', 'network') for o in ('own money', "a committee's money") if (m, s, o) in agg]
         print(f'  {m:11} ' + ('; '.join(line) or 'no item inside a registration window'))
 
 

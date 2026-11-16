@@ -1,0 +1,5 @@
+page_id	text_found_in	chars	paragraphs	third_extraction_held
+sw-newsercom-01	the headline and the paragraphs marked storyParagraph	1335	2	"one of the two paragraphs, then the site's ""Read These Next"" headlines"
+sw-newsercom-02	the headline and the paragraphs marked storyParagraph	1094	2	one of the two paragraphs
+sw-newsercom-82742fcd	the headline and the paragraphs marked storyParagraph	1085	2	one of the two paragraphs
+sw-englobescoil-01	the paragraphs of the article's own block, without the section of related headlines	3263	12	the article with five related headlines in the middle of it

@@ -576,12 +576,27 @@ def main():
         # puts one gift on two sides, so the sides are never added up. Until the last reading of Nov 15, 2026 the row showed Nvidia's
         # firms from this table beside an earlier and narrower line for Anthropic's and the groups' (step 5, now off).
         for side in ('anthropic', 'network', 'nvidia'):
-            sm = [r for r in LMAP if r['member'] == key and r['side'] == side and r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
+            OWN_ = ('named', 'firm_only', 'firm_only_not_classified')
+            # a lobbyist's own money only: a committee's contribution that a lobbyist's report lists (the firm's PAC, a PAC the lobbyist serves)
+            # is kept in the table and not counted here (the ninth reading, Nov 16, 2026: 54 such lines had been counted, 27 pac_gifts listed up to three times)
+            sm = [r for r in LMAP if r['member'] == key and r['side'] == side and r['measure'] in OWN_ and r['own_money'] == 'yes']
+            pac_rows = [r for r in LMAP if r['member'] == key and r['side'] == side and r['measure'] in OWN_ and r['own_money'] == 'no']
+            pac_note = ''
+            if pac_rows:
+                pac_gifts = [r for r in pac_rows if not r['repeat_of']]; pusd = sum(float(r['amount_usd']) for r in pac_gifts)
+                pac_note = (f' Not counted here: {money(pusd)} in {len(pac_gifts)} contribution{"" if len(pac_gifts) == 1 else "s"} of a political committee that those lobbyists\' reports list '
+                            f'({len(pac_rows)} listing{"" if len(pac_rows) == 1 else "s"}); until Nov 16, 2026 this line counted them as lobbyists\' own money.')
+            if not sm and pac_rows and f'{key}:lobbyist_gifts:{side}' in REGISTERED_KEYS:
+                what = {'network': 'one of the groups', 'anthropic': 'Anthropic', 'nvidia': 'Nvidia'}[side]
+                tie(key, 'lobbyist_gifts', side, '', 'none', f'No gift of a lobbyist\'s own money on file from a firm registered for {what}, 2020–2026',
+                    f'The lobbyists\' contribution reports of 2020 to 2026 show no gift of a lobbyist\'s own money to this member from a firm then registered for {what}.' + pac_note,
+                    ['table:lobbyist_gifts_map.csv#' + r['item'] for r in pac_rows], [r['amount_usd'] for r in pac_rows], draw='words')
+                continue
             if not sm:
                 # a line an audit has read is never dropped: where the earlier, narrower line has no gift under the common rule, the row says so
                 if f'{key}:lobbyist_gifts:{side}' in REGISTERED_KEYS:
                     what = {'network': 'one of the groups', 'anthropic': 'Anthropic', 'nvidia': 'Nvidia'}[side]
-                    moved = [r for r in LMAP if r['member'] == key and r['side'] != side and r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
+                    moved = [r for r in LMAP if r['member'] == key and r['side'] != side and r['measure'] in OWN_ and r['own_money'] == 'yes']
                     assert moved, (key, side, 'a registered lobbyist line has no gift on any side of the shared table')
                     tie(key, 'lobbyist_gifts', side, '', 'none', f'No gift on file from a lobbyist at a firm registered for {what}, 2020–2026',
                         f'The lobbyists\' contribution reports of 2020 to 2026 show no gift to this member from a lobbyist at a firm then registered for {what}. A gift shown on this line before is counted on the line of the client the firm was registered for.',
@@ -597,7 +612,7 @@ def main():
             one = len(sm) == 1
             listed = (f'{money(nusd)} of it from lobbyists listed for {short} then' if nm_ and len(nm_) < len(sm) else f'all of it from lobbyists listed for {short} then' if nm_ else f'none of it from a lobbyist listed for {short} then')
             tie(key, 'lobbyist_gifts', side, '', 'none', f'{"A lobbyist at a firm" if one else "Lobbyists at firms"} registered for {who}: {money(usd)} of their own money, {yrs}; {listed}',
-                f'{money(usd)} in {len(sm)} gift{"" if one else "s"} from lobbyists\' own pockets, {yrs}, made while their firms were registered to lobby for {who}; {listed}. Second-hand: no client directed them.',
+                f'{money(usd)} in {len(sm)} gift{"" if one else "s"} from lobbyists\' own pockets, {yrs}, made while their firms were registered to lobby for {who}; {listed}. Second-hand: no client directed them.' + pac_note,
                 ['table:lobbyist_gifts_map.csv#' + r['item'] for r in sm], [r['amount_usd'] for r in sm], usd=f'{usd:.2f}', n=str(len(sm)), first=min(ds), last=max(ds), draw='words')
     # 6. ties that rest on one named record each
     RDP = 'pack:congress/research/revolving_door.csv#'

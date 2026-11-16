@@ -57,13 +57,24 @@ def not_drawn_re(s):
     return re.compile(rf"\b(?:{'|'.join(firsts)})\s+(?:[A-Z]\.\s+)?{s}\b" + (rf"|{TITLE}\s+(?:[A-Z][\w.'’-]*\s+){{0,2}}{s}\b" if by_title else ''))
 
 
+# The pages of the first census are a closed list (research/nv8_first_census_pages.txt, the 1,086 ids of the released table). Until Nov 16, 2026
+# every folder with a 200 page and an id outside the SKIP prefixes counted as one; that day another session saved five pages under new ids
+# (a broadcast of Nov 15 and two posts) and they entered the count. A page saved later is counted only if research/nv8_pages_added.tsv lists it.
+_fc = R / 'nv8_first_census_pages.txt'
+FIRST_CENSUS = frozenset(_fc.read_text().split()) if _fc.exists() else frozenset()
+
+
+# A page's article taken again from its saved HTML: the fourth extraction (scripts/recover_bodies_2.py) is read before the third
+RECOVERED = ('text.recovered2.txt', 'text.recovered.txt')
+
+
 def pages(recovered=True):
     """(id, text) of each counted page; an address saved under two ids is counted once (the first id). Where a third extraction of
     the piece's own body exists (text.recovered.txt, scripts/recover_bodies.py, Nov 16, 2026) it is the text read; recovered=False gives
     the text as read until then (the three-chairmen figure's count keeps it)."""
     seen = set()
     for d in sorted(P.iterdir()):
-        if d.name.startswith(SKIP) or not (d / 'meta.json').exists():
+        if d.name.startswith(SKIP) or not (d / 'meta.json').exists() or (FIRST_CENSUS and d.name not in FIRST_CENSUS):
             continue
         try:
             m = json.loads((d / 'meta.json').read_text())
@@ -77,7 +88,7 @@ def pages(recovered=True):
         texts = [f.read_text(errors='replace') for f in (d / 'text.txt', d / 'text.reextract.txt') if f.exists()]
         if texts:
             seen.add(key)
-            rec = d / 'text.recovered.txt'
+            rec = next((d / n for n in RECOVERED if (d / n).exists()), d / RECOVERED[-1])
             yield d.name, rec.read_text(errors='replace') if recovered and rec.exists() else max(texts, key=len)
 
 
@@ -85,7 +96,7 @@ def saved_since_text(pid):
     """The text read for a page saved since the first census: the article text its saver cut out (text.article.txt) where there is one;
     otherwise the longer of the first extraction and a second one (a transcript's first extraction held the speaker labels only)."""
     d = P / pid
-    for n in ('text.recovered.txt', 'text.article.txt'):
+    for n in RECOVERED + ('text.article.txt',):
         if (d / n).exists():
             return (d / n).read_text(errors='replace').translate(LIGATURES)
     texts = [f.read_text(errors='replace') for f in (d / 'text.txt', d / 'text.reextract.txt') if f.exists()]

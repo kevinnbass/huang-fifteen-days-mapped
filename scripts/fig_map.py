@@ -116,10 +116,10 @@ def ARTICLE_WORDS():
     assert all(p['verdict'] in ('cannot tell', 'same') for p in pairs if not used(p))
     line = list(csv.DictReader(open(R / 'nv8_at_the_line.tsv', newline=''), delimiter='\t'))
     W_ = lambda n: {0: 'no', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve'}.get(n, n)
-    mem = sum(x['group'] == 'member' for x in line); rec = sum(1 for _ in open(R / 'nv8_recovered_pages.tsv')) - 1
+    mem = sum(x['group'] == 'member' for x in line); rec = sum(1 for _ in open(R / 'nv8_recovered_pages.tsv')) - 1; rec2 = sum(1 for _ in open(R / 'nv8_recovered_pages_2.tsv')) - 1
     added = sum('three-report line' in x['why_saved'] for x in csv.DictReader(open(R / 'nv8_pages_added.tsv', newline=''), delimiter='\t'))      # the pages saved for the line; the table also lists the pages saved by hand on Nov 16
     assert all(x['drawn'] == 'yes' for x in line) and undated == 0 and added == 2, 'the sentences below say that everyone at the line is drawn, that no counted page is undated and that two pages were saved for the line'
-    return (f"Counts of who is named or quoted are counts of articles, each counted once: the {n1:,} pages saved by the first search and the {n2} saved since (the papers' own articles, saved by hand or in a licensed copy, and a few transcripts) "
+    return (f"Counts of who is named or quoted are counts of articles, each counted once: the {n1:,} pages saved by the first search and the {n2} saved since (the papers' own articles, saved by hand or in a licensed copy, a few transcripts and a company filing) "
             f"are {len(arts):,} articles once copies of one article are joined, and {len(cnt):,} of them are counted. Two pages are one article when they have the same address or when a reader judged them so: "
             f"every two pages that share 25 or more seven-word runs making up a fifth of the shorter were opened by a reader from another model family ({read} pairs over four readings: {same} the same article, as a syndicated or licensed copy with its lead kept, "
             f"a later version at one address or two snapshots of a live page; {read - same} different, such as a statement and the articles quoting it, or a later dispatch with a new lead; {W_(unread)} more could not be read, being block pages that are not counted). "
@@ -127,7 +127,7 @@ def ARTICLE_WORDS():
             "A page's day is the day of its first publication where the page shows one, and otherwise the day of the version saved, read as a U.S. Eastern day from the page's own stamp "
             f"({in_copy} pages whose metadata and text carry none, or carry one the printed stamp contradicts, were read in their saved copy). "
             f"A page is not counted when that day is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when the saved copy is a block or error page ({why['not the piece']}) or holds nothing at all ({why['empty']}), "
-            f"or when it is a reference page or an image ({why['not news']}). For {rec} pages whose first extraction had missed the article, its text was taken again from the saved HTML; "
+            f"or when it is a reference page or an image ({why['not news']}). For {rec} pages whose first extraction had missed the article, its text was taken again from the saved HTML ({W_(rec2)} of them a second time, after a reading found paragraphs missing or other lines among them); "
             f"{part} counted pages are still held only in part (a headline and description, a teaser, an excerpt). "
             f"The {W_(len(line))} people at three or four articles ({W_(mem)} members and {W_(len(line) - mem)} public voices) were each read for whether those articles are separate reports, and all have three. "
             "Two senators reach three only through a report saved on Nov 16 that the record had pointed to and the saved pages lacked: one through a piece the aggregators listed on Nov 12 "
@@ -152,7 +152,10 @@ def LOBBY_WORDS():
     g = list(csv.DictReader(open(R / 'lobbyist_gifts_map.csv', newline='')))
     drawn = {a[0] for a in rows_map.ACTORS if a[4] is not None}         # the totals are for the members drawn: a member no longer drawn keeps lines in the table and is left out here
     assert {r['member'] for r in g} <= {a[0] for a in rows_map.ACTORS_ALL} and drawn <= {r['member'] for r in g} | {a[0] for a in rows_map.ACTORS if a[4] is not None}
-    own = [r for r in g if r['member'] in drawn and r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
+    OWN_ = ('named', 'firm_only', 'firm_only_not_classified')
+    own = [r for r in g if r['member'] in drawn and r['measure'] in OWN_ and r['own_money'] == 'yes']           # a lobbyist's own money only
+    pac = [r for r in g if r['member'] in drawn and r['measure'] in OWN_ and r['own_money'] == 'no']            # a committee's contribution that a lobbyist's report lists
+    assert pac and all(r['contributor'] for r in pac)
     tot = lambda side, named: sum(float(r['amount_usd']) for r in own if r['side'] == side and (r['measure'] == 'named' or not named))
     M = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; mo = lambda d: f"{M[int(d[5:7]) - 1]} {d[:4]}"
     S_ = {r['what']: r['value'] for r in csv.DictReader(open(R / 'lobbyist_gifts_map_summary.tsv', newline=''), delimiter='\t')}
@@ -161,6 +164,8 @@ def LOBBY_WORDS():
             f"To the {len(drawn)} members drawn, in gifts of {mo(a)} to {mo(b)} made while the firm was registered for the client, lobbyists listed for the client gave ${tot('nvidia', True):,.0f} on Nvidia's side, ${tot('anthropic', True):,.0f} on Anthropic's and ${tot('network', True):,.0f} on the groups' side; "
             f"counting every lobbyist at those firms, ${tot('nvidia', False):,.0f}, ${tot('anthropic', False):,.0f} and ${tot('network', False):,.0f}. A firm registered for two clients puts one gift on two sides, so the sides are not added up. "
             "Each member's row gives its lines from this table by the same rule for each side: every gift of a lobbyist at a firm then registered for the client, and how much of it came from lobbyists listed for that client. "
+            f"Only a lobbyist's own money is counted. The reports also list contributions of political committees (a firm's PAC, a PAC a lobbyist serves): {len(pac)} such lines, "
+            f"{sum(not r['repeat_of'] for r in pac)} gifts once those listed by several lobbyists of one firm are counted once, are in the table and in no sum here; until Nov 16, 2026 they were counted as lobbyists' own money. "
             "The table is published with the figure. For the Speaker and for Sen. Kennedy, who share a surname with other members, only a gift whose report gives the office is counted; "
             "for Sen. Scott, whose surname several other politicians carry, only one whose report gives his given name or its initial. ")
 

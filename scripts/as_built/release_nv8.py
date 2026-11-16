@@ -13,9 +13,9 @@ import release_nv13 as R13, nv13_public as P, nv8_public as N, member_mentions, 
 csv.field_size_limit(10**9)
 LANE = Path('lanes/audit_nv8')
 RUN = ('fig_map.py', 'fig_common.py', 'rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_coverage.py', 'rows_ties.py', 'rows_events.py', 'story_scope.py', 'nv8_status.py', 'build_nv8.py', 'verify_nv8.py')
-AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'nv8_articles.py', 'nv8_page_dates.py', 'fec_lpac_keyed_check.py', 'recover_bodies.py', 'nv8_dense_text.py', 'nv8_at_the_line.py', 'build_lobbyist_gifts_map.py', 'nv8_member_sweep.py')
+AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'nv8_articles.py', 'nv8_page_dates.py', 'fec_lpac_keyed_check.py', 'recover_bodies.py', 'nv8_dense_text.py', 'nv8_at_the_line.py', 'build_lobbyist_gifts_map.py', 'nv8_member_sweep.py', 'recover_bodies_2.py')
 TABLES = ('harvest.tsv', 'coverage_rows.tsv', 'coverage_day_pages.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'member_ties.csv', 'employee_gift_rates.csv', 'committee_keys.csv', 'joint_committees.csv',
-          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv', 'nv8_articles.tsv', 'nv8_page_days_read.tsv', 'nv8_at_the_line.tsv', 'nv8_recovered_pages.tsv', 'nv8_pages_added.tsv', 'nv8_member_sweep.tsv')
+          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv', 'nv8_articles.tsv', 'nv8_page_days_read.tsv', 'nv8_at_the_line.tsv', 'nv8_recovered_pages.tsv', 'nv8_recovered_pages_2.tsv', 'nv8_pages_added.tsv', 'nv8_member_sweep.tsv')
 SHIM = '''"""Which saved articles name each member of Congress: the counts the figure prints ("named in N of the articles counted").
 In the builder's project this module reads the saved pages themselves; they are not in this copy (no article text is), so here
 the same answer is read from research/story_pages.tsv, which lists every saved page by address with the article it is a copy of,
@@ -243,8 +243,10 @@ def main(target):
           # the seventh reading (slice S8: the pages saved since the first census, counts on articles); its look-up check, which names people who are not drawn, is held back
           'h': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'gaps.csv'),
           # the eighth reading (of the answers to the seventh); its check of three look-up reasons names people who are not drawn and is held back
-          'i': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
-    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b'}
+          'i': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
+          # the ninth reading (of the answers to the eighth and of the 54 pages saved by hand); its look-up check names people who are not drawn and is held back
+          'j': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c'}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
@@ -277,6 +279,9 @@ def main(target):
     disp8 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8b.csv'
     if disp8.exists():
         put(Tg, 'audit2/DISPOSITIONS-i.csv', disp8.read_text())
+    disp9 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8c.csv'
+    if disp9.exists():
+        put(Tg, 'audit2/DISPOSITIONS-j.csv', disp9.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')
@@ -373,6 +378,11 @@ def name_scan(Tg, rows):
        aggregator listed it; the people it names (Nvidia's executives and directors, in those roles) are named nowhere else,
        and nothing here says who gave what."""
     every = R13.private_names(); pairs = private_names(rows)
+    # A political committee's name that the lists hold as if it were a person's, because lobbyists' reports give it in the field for the
+    # contributor: "Road to Freedom PAC". The gifts table names committees in its contributor column since Nov 16, 2026 (never a person).
+    committees = {('FREEDOM', 'ROAD')}
+    assert any(r['contributor'] == 'ROAD TO FREEDOM PAC' for r in csv.DictReader(open(R / 'lobbyist_gifts_map.csv', newline=''))), 'the committee this exception is for is no longer in the table'
+    every = every - committees; pairs = pairs - committees
     files = [f for f in sorted(Tg.rglob('*')) if f.is_file() and '.git' not in f.parts and '__pycache__' not in f.parts and f.suffix not in ('.png', '.jpg')]
     rel = lambda f: str(f.relative_to(Tg))
     HEADLINE_FILES = ('research/coverage_rows.tsv', 'research/harvest.tsv', 'research/coverage_scope.tsv', 'research/nv8_rows.tsv', 'research/evidence.tsv', f'figures/{N.STEM}.html')
