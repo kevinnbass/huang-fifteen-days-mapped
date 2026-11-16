@@ -80,7 +80,9 @@ STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn ite
           'Beside it, three other readers of that model read what the gauges do not see, each with acts held out of its table as controls (ten of eleven were called missing; the eleventh, a report of these days about a call of 2025, was set aside as the brief told the reader): the 294 quoted remarks of drawn actors that one article gives and no chip carried, '
           'and the 2,027 paraphrased lines of Nvidia, its board, its chairman and its interim chief that no chip carried by its words. They proposed 142 additions, by their own coding more of them for Huang or Nvidia than against; '
           'the builder checked each against its saved page and drew 125, the other 17 are listed with the reason. With the eighteenth reading\'s points that makes 41 acts added and 36 chips amended, none of it read independently yet. '
-          'The paraphrased lines of the other actors (about 2,850) have not been read this way. 289 dated acts are drawn now. '
+          'Then six more such readers took the paraphrased lines of every other drawn actor (2,949 lines; twelve acts held out, eleven called missing and one judged carried by another row\'s chip). '
+          'Beyond the controls they proposed 108 additions: 55 are drawn, on 20 new acts and 23 amended chips, and 53 are listed with the reason (most are a paper\'s report that the paper\'s own row carries, a page\'s summary that names no occasion, or a relay). '
+          'Four of the six closed incomplete: 250 lines have no verdict, most of them relays of a denial that could not be tied to one drawn response rather than another. None of this has been read independently either. 309 dated acts are drawn now. '
           'Each of the eighteen readings has found statements or parts of statements that no chip carries; the figure is not complete in that sense, and the tables say what was searched and how.')
 # what changed after the audit read the figure (the README of the public copy lists these under the audit)
 AFTER_AUDIT = [
@@ -453,6 +455,22 @@ AFTER_RELEASE16 = [
 ]
 
 # what changed in answer to the seventeenth independent reading (lane audit_nv8_s8k, read after its marker on Nov 16, 2026)
+AFTER_RELEASE18 = [
+    'Six more reading lanes, for every drawn actor the first two had not covered (`research/nv8_paraphrased_acts.tsv`, lanes `para_nv8_c` to `para_nv8_h`): Huang; the president and the White House; China\'s ministry and embassy, the Global Times, Taiwan and Singapore; '
+    'the three House chairmen; Megaspeed and four departments; and the 62 other actors. 2,949 paraphrased lines that no chip carried by its words, sorted by the readers into 438 acts. This time the brief said that a report of these days about an earlier act is drawn.',
+    'Controls. Two acts were held out of each lane\'s table of chips. Eleven of the twelve were called missing, among them a report about a hiring of the year before. The twelfth, a White House statement on background, the reader judged carried by the chip of the paper that printed it.',
+    'What was drawn: 55 of 108 candidates beyond the controls, on 20 new acts and 23 amended chips. On the papers\' rows: the first Times report\'s finding that the president "was briefed about the intelligence findings" about a year earlier and "chose not to do anything with the information", '
+    'and that the Commerce inquiry into Megaspeed went to the Justice Department; the Times\'s report that Huang acknowledged the relationship to the board; its report that Taiwan began monitoring Alice Huang\'s visits in 2024; the FT\'s reports on the president\'s call before the May trip and on Commerce\'s delay of entity-list additions. '
+    'On the actors\' rows: the president\'s call to Huang on Nov 10 urging him to keep fighting for his job (the Times, from two people briefed), and his "I hope there\'s no problem"; Huang\'s apology to staff on Nov 9 and his tentative agreement on Nov 11 to testify; '
+    'Commerce\'s answers to the Times and to CNBC, Politico\'s report of its bureau\'s warnings and CNN\'s that its secretary was briefed months earlier; CNN\'s report that the FBI raised concerns with lawmakers nearly a year earlier; '
+    'a reply of China\'s embassy to the Journal; and further statements of Rep. Moolenaar, Rep. Mast, Rep. Himes, Rep. Meeks, Speaker Johnson, and Sens. Warren, Kennedy, Banks, Coons and Thune.',
+    'A rule made explicit. Where a paper that has its own row (the Times, the Journal, the FT) reports an earlier act of someone else, the report is drawn on the paper\'s row; a report by an outlet with no row is drawn on the row of the actor it is about, on the report\'s day; '
+    'and an act of these days that a report dates is drawn on the actor\'s row on that day. Many of the readers\' candidates were the first kind, and are answered "carried on the paper\'s row".',
+    'What was not drawn: 53 candidates, each with its reason in the table. The largest groups: later pages\' summaries that Huang "denied" compromising security, which name no occasion (his memo holds no such sentence; his denials that have an occasion are drawn); '
+    'details of Times reports whose chips carry the main findings; background on inquiries and approvals before these days; and relays of statements already drawn. One candidate was the same remarks as a chip of that day in another outlet\'s words, and was added to that chip instead of drawn twice.',
+    'Limits. Four of the six lanes closed "reading: incomplete": 250 lines have no verdict (170 of them relays of the Chinese ministry\'s and Singapore\'s responses that give no day, 64 undated accounts of Megaspeed), because the saved context does not say which occasion they repeat. '
+    'The readers\' verdicts other than "candidate" were not read again by the builder. None of this round has been read independently. The figure now carries 309 dated acts, 104 of them on their report\'s day.',
+]
 AFTER_READING18 = [
     'What the reading read. The answer to the seventeenth reading: 27 new or changed rows, the table of refusals line by line, the 81 added names, the changed gauge readings, a count of the last two rounds\' additions by the direction their words cut, '
     'a third sample of what no gauge sees, twenty chips read against their whole statements, the 60 acts dated by their report, the changed text and the 178 answers. 24 rows are right as drawn; the refusal table\'s counts reproduce; all 27 members\' counts are unchanged.',

@@ -20,7 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; sys.path.insert(0, str(ROOT / 'scripts'))
 import nv8_gaps as G, rows_map
 REF = re.compile(r"declin|no comment|not comment|n't comment|unable to comment|refus\w* to (?:comment|say|answer|discuss)|would not (?:say|discuss|answer|confirm|immediately comment)|wouldn't (?:say|discuss|answer|confirm)|demur|not going to comment|cannot comment", re.I)
-NOT_A_REFUSAL = re.compile(r"declin\w* (?:in|of) (?:the )?(?:market|value|share)|precipitous decline|stock decline|The decline followed", re.I)
+NOT_A_REFUSAL = re.compile(r"declin\w* (?:in|of) (?:the )?(?:market|value|share)|precipitous decline|stock decline|The decline followed|declining to impose", re.I)
 
 
 # The builder's classification of a line that stands outside the cited articles: (actor, words in the line, classification). First match wins.

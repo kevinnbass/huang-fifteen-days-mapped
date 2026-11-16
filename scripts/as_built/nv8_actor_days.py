@@ -22,7 +22,6 @@ READ = {
         ('mast', '2026-11-06'): 'one news service\'s three reports give the chairmen\'s request of Nov 5 as made "on Friday": the same letter as the chip for Nov 5',
         ('cramer', '2026-11-10'): 'his "I just think he\'s got to go", said on Nov 9 and reported over the following days: on his chip for Nov 9',
         ('singapore', '2026-10-31'): 'the ministry\'s statement is timed Oct 30, 11:13 PM in Singapore and its newsroom page dates it Oct 31: the chip for Oct 30 says both',
-        ('trump', '2026-11-10'): 'his words of Nov 9 on what Huang told him, quoted in pieces of the next day: on his chip for Nov 9',
         ('nvidia', '2026-11-03'): 'reports of a rule the company set for its data-centre clients, from a report of Nov 2 that does not mention the affair: answered in the register of remarks (not printed)',
         }
 # The actor-days that only one counted article carries (read on Nov 16, 2026, after the fourteenth reading; twelve of them held an act with no chip and

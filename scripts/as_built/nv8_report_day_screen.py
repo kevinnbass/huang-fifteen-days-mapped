@@ -42,10 +42,12 @@ READ1 = {'MA179': 'not the same act: other statements of the company, of other d
          'MA251': 'the same sentence on what customers receive is in the statement the company gave on Nov 5 (its chip of that day), which CNBC says largely mirrored its first; Tom\'s Guide prints it on Oct 29 as told to it',
          'MA258': 'not the same act: lines of other days that share only the words of a request for comment that went unanswered',
          'MA260': 'not the same act: the lines of Nov 12 are the announcement of the interim chief and of the search (the board\'s chips of that day); this act is the reports of the day before',
-         'MA266': 'not the same act: the lines of Nov 4 and 5 are the chairmen\'s letter and its release (his chip for Nov 5); this is a comment the FT prints on Nov 9'}
+         'MA266': 'not the same act: the lines of Nov 4 and 5 are the chairmen\'s letter and its release (his chip for Nov 5); this is a comment the FT prints on Nov 9',
+         'MA306': 'not the same act: the lines of other days are the chairmen\'s letter and his interviews of Nov 10 and 11 (his chips of those days), which share a few common words with it'}
 READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109', 'MA125', 'MA128', 'MA130', 'MA150', 'MA158',
                                  'MA199', 'MA200', 'MA201', 'MA202', 'MA203', 'MA206', 'MA210', 'MA212', 'MA213', 'MA219', 'MA207', 'MA237', 'MA250',
-                                 'MA251', 'MA256', 'MA257', 'MA261', 'MA266', 'MA268', 'MA270', 'MA274', 'MA275', 'MA280', 'MA283', 'MA284', 'MA286', 'MA288')},
+                                 'MA251', 'MA256', 'MA257', 'MA261', 'MA266', 'MA268', 'MA270', 'MA274', 'MA275', 'MA280', 'MA283', 'MA284', 'MA286', 'MA288',
+                                 'MA301', 'MA302', 'MA307', 'MA308', 'MA309')},
              MA211='the day word ("today", Nov 9) is that of the Wired report as the relaying page gives it; the hiring itself has no day, and another saved page says he hired the firm "as early as last year"',
              MA214='the page says "On Monday" (Nov 9) and another saved page dates the same extension Nov 5; the accounts conflict, so the act sits on the day of the first report and the chip gives both days',
              MA81='the day is the one on which sources told the broadcaster of an inquiry already under way: the report\'s day, and the inquiry may be earlier',

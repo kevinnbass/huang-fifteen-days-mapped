@@ -13,6 +13,7 @@ another saved page gives another day	MA251	nvidia	2026-10-29	2026-11-05 (2); 202
 another saved page gives another day	MA258	nvidia	2026-11-12	2026-11-09 (1); 2026-11-11 (1)	not the same act: lines of other days that share only the words of a request for comment that went unanswered
 another saved page gives another day	MA260	board	2026-11-11	2026-11-12 (14)	not the same act: the lines of Nov 12 are the announcement of the interim chief and of the search (the board's chips of that day); this act is the reports of the day before
 another saved page gives another day	MA266	moolenaar	2026-11-09	2026-11-04 (4); 2026-11-05 (3)	not the same act: the lines of Nov 4 and 5 are the chairmen's letter and its release (his chip for Nov 5); this is a comment the FT prints on Nov 9
+another saved page gives another day	MA306	moolenaar	2026-11-12	2026-11-04 (1); 2026-11-05 (2); 2026-11-10 (1); 2026-11-11 (1)	not the same act: the lines of other days are the chairmen's letter and his interviews of Nov 10 and 11 (his chips of those days), which share a few common words with it
 a day word near a cited passage in its own source	MA13	fedasiuk	2026-11-12	Thursday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA16	mcguire	2026-11-10	Sunday, yesterday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA32	cornyn	2026-11-08	Saturday	the day word belongs to another event told in the same passage; the page gives this act no day
@@ -31,10 +32,10 @@ a day word near a cited passage in its own source	MA195	nvidia	2026-11-11	Tuesda
 a day word near a cited passage in its own source	MA199	nvidia	2026-11-12	Thursday, Wednesday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA200	whitehouse	2026-11-08	Sunday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA201	rubio	2026-11-08	Sunday	the day word belongs to another event told in the same passage; the page gives this act no day
-a day word near a cited passage in its own source	MA202	whitehouse	2026-11-10	Monday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA202	whitehouse	2026-11-10	Monday, Sunday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA203	rubio	2026-11-10	Monday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA206	justice	2026-11-10	on Nov. 9	the day word belongs to another event told in the same passage; the page gives this act no day
-a day word near a cited passage in its own source	MA207	commerce	2026-11-11	on Nov. 11	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA207	commerce	2026-11-11	Thursday, Wednesday, on Nov. 11, on Nov. 5	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA210	mcguire	2026-11-10	on November 9	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA211	huang	2026-11-09	Monday, today	"the day word (""today"", Nov 9) is that of the Wired report as the relaying page gives it; the hiring itself has no day, and another saved page says he hired the firm ""as early as last year"""
 a day word near a cited passage in its own source	MA212	huang	2026-11-12	on November 18, today	the day word belongs to another event told in the same passage; the page gives this act no day
@@ -61,6 +62,11 @@ a day word near a cited passage in its own source	MA283	moorhead	2026-11-12	Thur
 a day word near a cited passage in its own source	MA284	newman	2026-11-12	Thursday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA286	maguire	2026-11-09	Monday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA288	maguire	2026-11-12	Monday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA301	commerce	2026-11-11	Sunday, Thursday, yesterday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA302	justice	2026-11-10	Sunday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA307	banks	2026-11-12	Thursday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA308	coons	2026-11-10	Monday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA309	kennedy	2026-11-12	Thursday	the day word belongs to another event told in the same passage; the page gives this act no day
 its page was changed after the chip's day	MA16	mcguire	2026-11-10	first published 2026-11-11, changed 2026-11-11	"the chip's day is that of the FT report it relays and of the podcast's own page (Nov 10); the later page is a second relay that says ""yesterday"""
 its page was changed after the chip's day	MA46	mccaul	2026-11-08	first published 2026-11-09, changed 2026-11-09	the chip's day is the one the relaying page gives for the Times article that quotes the post (Nov 8); the page itself is of the next day
 its page was changed after the chip's day	MA81	justice	2026-11-09	first published 2026-11-11, changed 2026-11-11	"the chip's day is in the text: sources told the broadcaster ""on Monday""; the relaying page is later"
