@@ -80,7 +80,7 @@ def NEWER_WORDS():
     """The sentence on chips dated by a report whose page was changed after its first day, counted from research/nv8_report_day_screen.tsv
     (scripts/nv8_report_day_screen.py, part 3)."""
     n = sum(1 for r in csv.DictReader(open(R / 'nv8_report_day_screen.tsv', newline=''), delimiter='\t') if r['screen'].startswith('its page') and r['reading'].startswith('may be newer'))
-    return (f"For {rows_map.NUMBER.get(n, n)} of them the page was changed the day after it was first published, and the passage may be newer than the chip's day. " if n else '')
+    return (f"For {rows_map.NUMBER.get(n, n)} of them a cited page was changed after it was first published, and a passage taken from it may be newer than the chip's day. " if n else '')
 
 
 def OWN_CHANNEL_WORDS():
@@ -934,10 +934,12 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             'An act is placed on the day its source gives: a day the source states, or one its context fixes (a remark dated with others like it, an answer to something that happened that day in a report of that day). '
             'Failing that it is placed on the day the source was first published: those chips have a dashed left edge, and the act itself may be earlier. ' + NEWER_WORDS() +
             'Where one chip holds two acts of a day and only one is dated by its report, the edge is solid and the words say which. '
-            'A refusal to comment on the actor\'s own part is drawn when two or more counted articles carry it for one report, or when it is the actor\'s only recorded answer on the matter; a line that no reply had come to a request for comment is not drawn for anyone. '
+            'Every explicit refusal by a drawn actor to comment on its own conduct or part in the matter is drawn, once for each documented response, with any answer the same source prints beside it; refusals of one day to several outlets share an act that names each. '
+            'A report that no reply had come to a request is not a refusal and is drawn for no one. A department\'s statements and refusals are drawn on its secretary\'s row. '
             'An act is drawn when a saved report gives it, it is on the matter and no chip of that actor already carries the same occurrence: a similar remark on another occasion is its own act; a later article repeating a dated remark is not. '
             'What is drawn was tested with three gauges over the readers\' lines from the saved pages (an actor carried on a day with no chip; quoted remarks in two or more articles that no chip holds; the same words on two pages); '
-            'they find candidates and do not prove completeness: an act that one article carries on a day the actor already has a chip may still be missing. '
+            'they find candidates and do not prove completeness: an act reported in paraphrase, one that a single article carries on a day the actor already has a chip, '
+            'or one under a speaker\'s name the gauges do not match to a drawn actor may still be missing. '
             'Where a chip rests on one outlet\'s account of another\'s report, it says so. Grant figures are awards, not payments traced to a bank. An announced ad is not proof that it ran. '
             'Nvidia\'s board said on Nov 8 it had "no reason to believe" national security or company secrets were compromised, and NBC reported on Nov 12 that Alice Huang\'s "precise role" remained unclear. '
             + esc(ARTICLE_WORDS()) +

@@ -10,6 +10,9 @@ that it was not yet determined whether the woman in the reports was a spy. This 
   of the register of remarks (already judged there) shares five words in a row with it.
 Each listed group was read by the builder: it is part of a statement a chip already carries in other words, or not of these days, or not on
 the matter, or it got a chip or was added to one (those are no longer listed). A group with no reading stops the script.
+Three readings of the builder were wrong (found by the sixteenth reading, Nov 16): a chairman's note to employees had been read as part of his
+press statement, and two groups from a think tank's piece as part of a fellow's earlier posts. A similar position is not the same occurrence;
+each is drawn now as its own act and is no longer listed.
 Control: with the chip for the president's answer taken away, the gauge must list it.
 Writes research/nv8_remarks_no_chip.tsv (the first twelve words of the longest line stand for the group; for one group, its other line). Limits: a remark that only one
 counted article quotes is not seen; nor is one the census reader did not mark as a direct quotation, or of fewer than seven words."""
@@ -34,9 +37,6 @@ READ = {
     ('nvidia', 'the prc government is not seeking nvidia products from'): SAME + 'its reply to the first report (its chip for Oct 29, which carries its denial)',
     ('nvidia', 'we sell our data center gpus primarily to well'): 'not of these days: statements of 2025 that later reports quote as made "at the time"',
     ('schumer', 'one of our most important companies thats involved in'): SAME + 'his floor speech of Nov 10 (his chip for that day)',
-    ('jones', 'the strength of this company resides in our employees'): SAME + 'the chairman\'s statement on the appointment (his chip for Nov 12)',
-    ('mcguire', 'a major hub for chip smuggling and export control'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
-    ('mcguire', 'if the department of commerce is not willing to'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
     ('mcguire', 'the biggest problem remains unaddressed the department of commerce'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
     ('mcguire', 'bisgov has done so not only by permitting the'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
     ('mcguire', 'why is commerce protecting jensen and supporting his preferred'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',

@@ -256,8 +256,10 @@ def main(target):
           # the fourteenth reading (of the answers to the thirteenth); its look-up check is held back
           'o': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           # the fifteenth reading (of the answer to the fourteenth); its look-up check holds a header only and is held back with the others
-          'p': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
-    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i'}
+          'p': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
+          # the sixteenth reading (of the answer to the fifteenth); its look-up check holds a header only and is held back with the others
+          'q': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i', 'q': 'audit_nv8_s8j'}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
@@ -311,6 +313,9 @@ def main(target):
     disp15 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8i.csv'
     if disp15.exists():
         put(Tg, 'audit2/DISPOSITIONS-p.csv', disp15.read_text())
+    disp16 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8j.csv'
+    if disp16.exists():
+        put(Tg, 'audit2/DISPOSITIONS-q.csv', disp16.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')

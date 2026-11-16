@@ -12,6 +12,8 @@ A screen of the acts that sit on the day their report was published (a dashed le
    later day of modification, or the page was first published later than the chip's day, the passage may come from a later version. The screen
    lists every such act with the two days; the reading says whether the chip's day rests on something else (a day in the text, another page) or
    whether the passage "may be newer" than the chip's day. The figure's note counts the latter.
+After the sixteenth reading (Nov 16) part 3 also reads the update line a hand-saved article prints ("Published Nov 6 Updated Nov 7"): the reading
+found three acts the screen had missed because it read only the saver's header.
 After the fifteenth reading (Nov 16) the day is read from the source's ordinary context too: a remark dated with others like it ("several senators
 told the paper on Tuesday"), or an answer to something that happened that day in a report of that day, has its day and a solid edge.
 Each listed act was read by the builder and the reading is in the table; a listed act with no reading stops the script.
@@ -28,8 +30,16 @@ MOVED = ('MA76', '2026-11-11')            # part 1's control: the act that was m
 SOLID = 'MA160'                           # part 2's control: the act whose edge became solid
 OTHER = 'the day word belongs to another event told in the same passage; the page gives this act no day'
 READ1 = {'MA179': 'not the same act: other statements of the company, of other days, that share only the words "the U.S. government" with this one',
-         'MA164': 'not the same act: the lines of Nov 12 are the company\'s later statement of that day, which has its own chip; the statement to the Times has no day but its report\'s'}
-READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109', 'MA125', 'MA128', 'MA130', 'MA150', 'MA158')},
+         'MA164': 'not the same act: the lines of Nov 12 are the company\'s later statement of that day, which has its own chip; the statement to the Times has no day but its report\'s',
+         'MA195': 'not the same response: other refusals of the company, on other days, that share only the words of refusal with this one',
+         'MA199': 'not the same response: other refusals of the company, on other days, that share only the words of refusal with this one',
+         'MA196': 'a similar statement of the day before to another outlet (it is on the chip for Nov 9); the sixteenth reading judged this one a separate answer, to the FT',
+         'MA211': 'not the same act: the line of Nov 8 is his acknowledgment to employees, which the cited passage mentions and which has its own chip',
+         'MA210': 'the census gives these lines other days; the sixteenth reading compared them with his saved posts of Nov 6 and Nov 8 and found the quotations only in the piece of Nov 10'}
+READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109', 'MA125', 'MA128', 'MA130', 'MA150', 'MA158',
+                                 'MA199', 'MA200', 'MA201', 'MA202', 'MA203', 'MA206', 'MA210', 'MA212', 'MA213', 'MA219')},
+             MA211='the day word ("today", Nov 9) is that of the Wired report as the relaying page gives it; the hiring itself has no day, and another saved page says he hired the firm "as early as last year"',
+             MA214='the page says "On Monday" (Nov 9) and another saved page dates the same extension Nov 5; the accounts conflict, so the act sits on the day of the first report and the chip gives both days',
              MA81='the day is the one on which sources told the broadcaster of an inquiry already under way: the report\'s day, and the inquiry may be earlier',
              MA169='the day words are those of the resignation and of the report itself (Nov 12): the report\'s day',
              MA179='the day word is that of a senator\'s pledge of the Saturday after, which shows the FT page was changed after its first day; another saved page says the FT reported the refusal "on Friday" (Nov 6, the chip\'s day)',
@@ -39,7 +49,16 @@ READ3 = {'MA16': 'the chip\'s day is that of the FT report it relays and of the 
          'MA46': 'the chip\'s day is the one the relaying page gives for the Times article that quotes the post (Nov 8); the page itself is of the next day',
          'MA81': 'the chip\'s day is in the text: sources told the broadcaster "on Monday"; the relaying page is later',
          'MA85': 'the chip\'s day is that of the reporting agency\'s own page, saved by hand and stamped Nov 9; the later page is a timeline',
-         'MA120': NEWER, 'MA128': NEWER}
+         'MA120': NEWER, 'MA128': NEWER,
+         'MA158': 'the Times page prints an update of Nov 12; the quotation is also in a licensed copy of the article at an address dated Nov 11 (the Boston Globe\'s)',
+         'MA179': 'the FT page prints an update of Nov 7; another saved page says the FT reported the refusal "on Friday" (Nov 6), and the statement to the Times is in a page of Nov 6',
+         'MA194': 'may be newer, for the FT\'s part only: the FT page prints an update of Nov 7 and no other saved page dates the refusal to it; the refusal to the Times is in a page of Nov 6',
+         'MA199': 'may be newer, for Reuters\'s part only: its page prints "Updated November 13"; the Journal\'s and the FT\'s parts are in pages of Nov 12',
+         'MA210': 'may be newer: the think tank\'s page was first published Nov 10 and changed Nov 12, and no other saved page carries the quotations',
+         'MA211': 'the chip\'s day is that of the Wired report as a page of Nov 9 that was not changed afterwards relays it (TechCrunch); the second relaying page was changed the next day, and the other page\'s line is given in the chip with its own date (Nov 11)',
+         'MA217': 'may be newer: the Journal\'s page prints an update of Oct 31, and the sentence stands after one the page says was added after first publication',
+         'MA219': 'the chip\'s day is that of the first report (Asia Economy, Nov 10); the other page cited is a later account, of Nov 11',
+         'MA214': 'the chip\'s day is that of the first report (Yahoo Finance, Nov 10); the other page cited is a later account, of Nov 12, and the chip gives its date too'}
 DAY = re.compile(r"\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|yesterday|today|on (?:Oct|Nov)\w*\.? \d+)\b")
 
 
@@ -94,12 +113,26 @@ def eastern(s):
     return (datetime.datetime.fromisoformat(f'{m.group(1)}T{m.group(2)}:{m.group(3)}') - datetime.timedelta(hours=h, minutes=mi) - datetime.timedelta(hours=5)).date().isoformat()
 
 
+MONTH = {'oct': 10, 'nov': 11}
+
+
+def printed_update(pid):
+    """The day a hand-saved article prints as its update ("Published NOV 6 2026 Updated NOV 7 2026"), or ''. The sixteenth reading found that
+    the screen read only the saver's MODIFIED header and so missed these."""
+    for n in ('text.article.txt', 'text.txt'):
+        f = check_rows.PRIMARY / pid / n
+        if f.exists():
+            m = re.search(r'Updated\s+(?:on\s+)?(Oct|Nov)[a-z]*\.?\s+(\d{1,2}),?\s+2026', f.read_text(errors='replace')[:6000], re.I)
+            return f'2026-{MONTH[m.group(1).lower()]:02d}-{int(m.group(2)):02d}' if m else ''
+    return ''
+
+
 def part3(acts):
     """The day of first publication is the one the figure's own table of pages gives (research/nv8_articles.tsv, where every page is dated by
     one rule); for a page outside that table, the header's; the day of modification is the header's."""
     day = {r['page_id']: r['day'] for r in csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t')}; out = []
     for rid, a in acts:
-        later = [(p, day.get(p) or stamps(p)[0], stamps(p)[1]) for p in sorted(set(a['src']))]; later = [x for x in later if max(x[1], x[2]) > a['date']]
+        later = [(p, day.get(p) or stamps(p)[0], max(stamps(p)[1], printed_update(p))) for p in sorted(set(a['src']))]; later = [x for x in later if max(x[1], x[2]) > a['date']]
         if later: out.append((rid, a['actor'], a['date'], '; '.join(f'first published {x[1] or "?"}, changed {x[2] or "?"}' for x in later)))
     return out
 

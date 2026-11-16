@@ -1,0 +1,57 @@
+what,figure_says,you_find,agree,note
+dated acts,194,194,yes,Current table/rendered recount; unchanged semantic completeness is not inferred from arithmetic.
+active acts including undated,195,195,yes,
+chips,182,182,yes,Current table/rendered recount; unchanged semantic completeness is not inferred from arithmetic.
+dashed chips,32,32,yes,
+acts dated by report,37,37,yes,
+actor days multi,9,9,yes,
+actor days one,19,19,yes,
+remark groups,19,19,yes,
+pages,1315,1315,yes,
+articles,1236,1236,yes,
+counted articles,1154,1154,yes,
+pages held in part,98,98,yes,
+added live entries,172,172,yes,
+live pages receiving entries,3,3,yes,
+acts without own-channel search,63,63,yes,
+screen another saved page gives another day,2,2,yes,"Number actually listed, not the sensitivity of the screen."
+screen a day word near a cited passage in its own source,15,15,yes,"Number actually listed, not the sensitivity of the screen."
+screen its page was changed after the chip's day,6,6,yes,"Number actually listed, not the sensitivity of the screen."
+later-version acts the third screen should list,6,9,no,"Add MA179, MA194 and MA158 from printed update stamps; see D2. This is a coverage correction to the table, not a claim its current six rows were miscounted."
+possible newer passage-version cases,2,at least 3,no,The FT component of MA194 is another unresolved case. MA179 has an independent Friday anchor; MA158 has the earlier licensed quotation.
+prior acts outside the own-channel search,41,41,yes,"Exact searched-id set, not a contiguous range; includes undated MA112 and excludes covered/withdrawn MA137."
+member warren,71,71,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member coons,48,48,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member cramer,22,22,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member schumer,22,22,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member banks,19,19,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member blumenthal,3,3,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member warner,4,4,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member cornyn,9,9,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member kennedy,6,6,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member thune,13,13,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member wyden,5,5,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member cotton,5,5,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member scott,4,4,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member ricketts,5,5,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member mast,92,92,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member crawford,68,68,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member meeks,9,9,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member himes,8,8,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member huizenga,4,4,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member johnson,11,11,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member moolenaar,78,78,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member jeffries,30,30,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member magaziner,4,4,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member subramanyam,3,3,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member bacon,3,3,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member mccaul,5,5,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+member neal,3,3,yes,Distinct counted article ids from story_pages.tsv; the entire table is byte-identical to the specified fifteenth-reading copy.
+actor-day listings total,28,28,yes,
+report-screen listings total,23,23,yes,
+delta rows,39,39,yes,
+new acts in delta,22,22,yes,
+older rows changed,17,17,yes,
+fifteenth disposition lines,44,44,yes,
+fifteenth applied / limit dispositions,42 / 2,42 / 2,yes,Counted independently from the disposition column.
+listed pieces with a day,2245,2245,yes,
