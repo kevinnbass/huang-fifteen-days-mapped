@@ -148,7 +148,11 @@ def day_of(pid, url, title, given):
         return HAND[pid][0], 'read by hand', HAND[pid][1]
     if pid in HAND_READ:
         b = P / pid / 'body.html'
-        assert flat(HAND_READ[pid][1]) in flat(whole) or (b.exists() and flat(HAND_READ[pid][1]) in flat(b.read_text(encoding='utf-8', errors='replace'))), pid
+        raw_ = b.read_bytes() if b.exists() else b''
+        if raw_[:2] == b'\x1f\x8b':                       # a body stored compressed
+            import gzip
+            raw_ = gzip.decompress(raw_)
+        assert flat(HAND_READ[pid][1]) in flat(whole) or flat(HAND_READ[pid][1]) in flat(raw_.decode('utf-8', 'replace')), pid
         return HAND_READ[pid][0], 'read in the saved copy', HAND_READ[pid][1]
     if 'x.com/' in (url or ''):
         m = re.search(r'"created_at":\s*"([^"]+)"', whole)

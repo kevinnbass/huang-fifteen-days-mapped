@@ -84,9 +84,9 @@ def OWN_CHANNEL_WORDS():
     W = lambda n: rows_map.NUMBER.get(n, {7: 'seven', 8: 'eight', 9: 'nine'}.get(n, n))
     held, loc, cx = C['actors: an item about the affair is held and was read'], C['actors: links located, none could be read'], C['actors: only items that are not about the affair or not their own']
     n_act = C['actors whose own channels were searched']
-    assert n_act == 82 and len(rows_map.WITHDRAWN) == 2 and C['actors: the reader matched an item about the affair to a chip, and the project holds no copy'] == 0 and loc == 2
+    assert n_act == 82 and len(rows_map.WITHDRAWN) == 1 and C['actors: the reader matched an item about the affair to a chip, and the project holds no copy'] == 0 and loc == 2
     return (f"The own channel (official site, newsroom, own feed or account) of each of the {C['actors whose own channels were searched']} actors who had spoken was searched once for these fifteen days by a reader from another model family: "
-            "on Nov 14 for the 63 then drawn, on Nov 15 for the 14 added since and then for the three members and the two others drawn later that day (the two share-price rows have none; one voice and one member among the 82 are no longer drawn). "
+            "on Nov 14 for the 63 then drawn, on Nov 15 for the 14 added since and then for the three members and the two others drawn later that day (the two share-price rows have none; one voice among the 82 is no longer drawn). "
             f"An item about the affair is held and was read for {held} (the three papers among them, through articles saved by hand); for {rows_map.NUMBER.get(loc, 'two')} links were located and none could be saved (Anthropic's SEC filings, a page of OpenAI's); "
             f"{rows_map.NUMBER.get(cx, cx)} had only items that do not mention the affair or are not their own; for {C['actors: nothing found on a channel that could be read']} a channel that could be read showed no item about the affair in these fifteen days; "
             f"for {C['actors: no channel could be read']} no channel could be read. An item is counted only where the project holds the page, and a share-sale filing or policy paper that a chip draws as context is not counted as an item about the affair. "
@@ -101,48 +101,67 @@ def OWN_CHANNEL_WORDS():
 
 def ARTICLE_WORDS():
     """How the saved pages become the articles counted, with every number from research/nv8_articles.tsv (scripts/nv8_articles.py),
-    research/nv8_article_pairs.tsv (the pairs a reader opened) and research/nv8_at_the_line.tsv (the people at three or four articles)."""
+    research/nv8_article_pairs.tsv (the pairs a reader opened), research/nv8_recovered_pages.tsv and research/nv8_at_the_line.tsv."""
     rows = list(csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t'))
     n1 = sum(r['set'] == 'first census' for r in rows); n2 = len(rows) - n1
     arts = {r['article_id'] for r in rows}; cnt = {r['article_id'] for r in rows if r['counted'] == 'yes'}
-    why = Counter('after' if 'after the fifteen days' in r['why_not'] else 'before' if 'before the fifteen days' in r['why_not'] else 'not the piece' if 'block or error page' in r['why_not'] else 'not news'
-                  for r in rows if r['counted'] == 'no')
+    why = Counter('after' if 'after the fifteen days' in r['why_not'] else 'before' if 'before the fifteen days' in r['why_not'] else 'not the piece' if 'block or error page' in r['why_not']
+                  else 'empty' if 'empty capture' in r['why_not'] else 'not news' for r in rows if r['counted'] == 'no')
     assert sum(why.values()) == sum(r['counted'] == 'no' for r in rows) and why['not news'] == sum('not a news piece' in r['why_not'] for r in rows)
     undated = sum(1 for r in rows if r['counted'] == 'yes' and not r['day']); part = sum(r['saved_in_part'] == 'yes' for r in rows)
     in_copy = sum(r['day_basis'] == 'read in the saved copy' for r in rows)
     pairs = list(csv.DictReader(open(R / 'nv8_article_pairs.tsv', newline=''), delimiter='\t'))
     used = lambda p: p.get('scope') == 'all' or p.get('used_for_joining') == 'yes'        # the project's table, or the published one (which leaves out the readers' sentences)
-    read = sum(used(p) for p in pairs); unread = len(pairs) - read; same = sum(used(p) and p['verdict'] == 'same' for p in pairs)
-    assert all(p['verdict'] == 'cannot tell' for p in pairs if not used(p))
-    line = list(csv.DictReader(open(R / 'nv8_at_the_line.tsv', newline=''), delimiter='\t')); out = [x for x in line if x['drawn'] == 'no']
-    W_ = lambda n: {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve'}.get(n, n)
-    mem = sum(x['group'] == 'member' for x in line)
-    assert len(out) == 1 and out[0]['name'] == 'Scott' and 'scott' in rows_map.WITHDRAWN, 'the sentence below names one senator'
+    read = sum(used(p) for p in pairs); same = sum(used(p) and p['verdict'] == 'same' for p in pairs); unread = sum(p['verdict'] == 'cannot tell' for p in pairs)
+    assert all(p['verdict'] in ('cannot tell', 'same') for p in pairs if not used(p))
+    line = list(csv.DictReader(open(R / 'nv8_at_the_line.tsv', newline=''), delimiter='\t'))
+    W_ = lambda n: {0: 'no', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve'}.get(n, n)
+    mem = sum(x['group'] == 'member' for x in line); rec = sum(1 for _ in open(R / 'nv8_recovered_pages.tsv')) - 1; added = sum(1 for _ in open(R / 'nv8_pages_added.tsv')) - 1
+    assert all(x['drawn'] == 'yes' for x in line) and undated == 0 and added == 2, 'the sentences below say that everyone at the line is drawn, that no counted page is undated and that two pages were saved for the line'
     return (f"Counts of who is named or quoted are counts of articles, each counted once: the {n1:,} pages saved by the first search and the {n2} saved since (the papers' own articles, saved by hand or in a licensed copy, and a few transcripts) "
             f"are {len(arts):,} articles once copies of one article are joined, and {len(cnt):,} of them are counted. Two pages are one article when they have the same address or when a reader judged them so: "
-            f"every pair that an address or the texts made alike was opened by a reader from another model family ({read} pairs: {same} the same article, as a syndicated or licensed copy, a later version or two snapshots of a live page; "
-            f"{read - same} different, such as a statement and the articles quoting it; {W_(unread)} more could not be read, being block pages that are not counted). "
+            f"every two pages that share 25 or more seven-word runs making up a fifth of the shorter were opened by a reader from another model family ({read} pairs over three readings: {same} the same article, as a syndicated or licensed copy with its lead kept, "
+            f"a later version at one address or two snapshots of a live page; {read - same} different, such as a statement and the articles quoting it, or a later dispatch with a new lead; {W_(unread)} more could not be read, being block pages that are not counted). "
+            "Copies that share less than that are not listed, so the number of articles can still be a little high. "
             "A page's day is the day of its first publication where the page shows one, and otherwise the day of the version saved, read as a U.S. Eastern day from the page's own stamp "
-            f"({in_copy} pages whose metadata and text carry none were read in their saved copy). "
-            f"A page is not counted when that day is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when the saved copy is a block or error page or another page in its place ({why['not the piece']}), "
-            f"or when it is a reference page, a company's home page or an image ({why['not news']}); {W_(undated)} pages carry no date and are counted, and {part} counted pages were saved only in part (a headline and description, a teaser, an excerpt, readers' comments under a story). "
-            f"The {W_(len(line))} people at three or four articles ({W_(mem)} members and {W_(len(line) - mem)} public voices) were each read for whether those articles are separate reports: "
-            "one senator, named in three articles that are two reports (a paper's live page repeats its own article), is not drawn; another stays at three through a reader's comment under a blog post, which quotes a report that is not among the saved pages. ")
+            f"({in_copy} pages whose metadata and text carry none, or carry one the printed stamp contradicts, were read in their saved copy). "
+            f"A page is not counted when that day is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when the saved copy is a block or error page ({why['not the piece']}) or holds nothing at all ({why['empty']}), "
+            f"or when it is a reference page or an image ({why['not news']}). For {rec} pages whose first extraction had missed the article, its text was taken again from the saved HTML; "
+            f"{part} counted pages are still held only in part (a headline and description, a teaser, an excerpt). "
+            f"The {W_(len(line))} people at three or four articles ({W_(mem)} members and {W_(len(line) - mem)} public voices) were each read for whether those articles are separate reports, and all have three. "
+            "Two senators reach three only through a report saved on Nov 16 that the record had pointed to and the saved pages lacked: one through a piece the aggregators listed on Nov 12 "
+            "(a paper's live page had repeated its own article, leaving two reports), one through a report that a reader had quoted under a blog post. "
+            "The saved pages are about half of the pieces listed, so a member whose reports were not saved can be missing from these counts. ")
+
+
+def SWEEP_WORDS():
+    """The members named as often for other things, and the search of every sitting member's name (research/nv8_member_sweep.tsv, scripts/nv8_member_sweep.py)."""
+    sw = list(csv.DictReader(open(R / 'nv8_member_sweep.tsv', newline=''), delimiter='\t'))
+    last = lambda n: re.sub(r',? (?:Jr\.?|Sr\.?|II|III|IV)$', '', n.strip()).split()[-1]; drawn = {a[2].split()[-1] for a in rows_map.ACTORS if a[4] is not None}
+    other = sum(1 for x in sw if x['among_names_searched'] == 'yes' and last(x['member']) not in drawn and int(x['counted_articles_naming']) >= 3)      # searched, named in three or more, not drawn
+    rest = [x for x in sw if x['among_names_searched'] == 'no' and not x['note']]; top = max(int(x['counted_articles_naming']) + int(x['listed_headlines_naming_not_saved']) for x in rest)
+    assert other == 7 and top < 3, (other, top)
+    return ('Seven others named that often are not drawn, because the pages name them for other things: a leadership vote, a lost election, a race still being counted, an impeachment bid and other inquiries. '
+            'The names searched came from the readings of the pages, so on Nov 16 every sitting member\'s name was also searched as a whole name over the counted articles and over the headlines of the listed pieces that could not be saved '
+            f'(about half of the pieces listed were saved): {len(rest)} more members are named, none in more than {rows_map.NUMBER.get(top, {1: "one", 2: "two"}.get(top, top))}. ')
 
 
 def LOBBY_WORDS():
     """The footnote's sentences on lobbyists' gifts on all three sides, from research/lobbyist_gifts_map.csv (scripts/build_lobbyist_gifts_map.py)."""
     g = list(csv.DictReader(open(R / 'lobbyist_gifts_map.csv', newline='')))
-    own = [r for r in g if r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
+    drawn = {a[0] for a in rows_map.ACTORS if a[4] is not None}         # the totals are for the members drawn: a member no longer drawn keeps lines in the table and is left out here
+    assert {r['member'] for r in g} <= {a[0] for a in rows_map.ACTORS_ALL} and drawn <= {r['member'] for r in g} | {a[0] for a in rows_map.ACTORS if a[4] is not None}
+    own = [r for r in g if r['member'] in drawn and r['measure'] in ('named', 'firm_only', 'firm_only_not_classified')]
     tot = lambda side, named: sum(float(r['amount_usd']) for r in own if r['side'] == side and (r['measure'] == 'named' or not named))
     M = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']; mo = lambda d: f"{M[int(d[5:7]) - 1]} {d[:4]}"
     S_ = {r['what']: r['value'] for r in csv.DictReader(open(R / 'lobbyist_gifts_map_summary.tsv', newline=''), delimiter='\t')}
     a, b = S_['first gift counted'], S_['last gift counted']
     return (f"The same record was then pulled for both companies: the lobbyists' contribution reports for {S_['years of reports read']} of all {S_['firms whose reports were read (registered for Nvidia, for Anthropic or for a group Open Philanthropy funds)']} firms registered for Nvidia, for Anthropic or for one of the groups above. "
-            f"To the {S_['members drawn']} members drawn, in gifts of {mo(a)} to {mo(b)} made while the firm was registered for the client, lobbyists listed for the client gave ${tot('nvidia', True):,.0f} on Nvidia's side, ${tot('anthropic', True):,.0f} on Anthropic's and ${tot('network', True):,.0f} on the groups' side; "
+            f"To the {len(drawn)} members drawn, in gifts of {mo(a)} to {mo(b)} made while the firm was registered for the client, lobbyists listed for the client gave ${tot('nvidia', True):,.0f} on Nvidia's side, ${tot('anthropic', True):,.0f} on Anthropic's and ${tot('network', True):,.0f} on the groups' side; "
             f"counting every lobbyist at those firms, ${tot('nvidia', False):,.0f}, ${tot('anthropic', False):,.0f} and ${tot('network', False):,.0f}. A firm registered for two clients puts one gift on two sides, so the sides are not added up. "
             "Each member's row gives its lines from this table by the same rule for each side: every gift of a lobbyist at a firm then registered for the client, and how much of it came from lobbyists listed for that client. "
-            "The table is published with the figure. For the Speaker and for Sen. Kennedy, who share a surname with other members, only a gift whose report gives the office is counted. ")
+            "The table is published with the figure. For the Speaker and for Sen. Kennedy, who share a surname with other members, only a gift whose report gives the office is counted; "
+            "for Sen. Scott, whose surname several other politicians carry, only one whose report gives his given name or its initial. ")
 
 MON = lambda d: (lambda p: f"{['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][int(p[1]) - 1]} {int(p[2])}, {p[0]}")(d.split('-'))      # 2026-10-14 -> Oct 14, 2026
 from collections import Counter, OrderedDict, defaultdict
@@ -176,9 +195,10 @@ KIND = OrderedDict([('money', (ORANGE, '', 'Money: contribution, donation, grant
                     ('lobby', ('#b0499b', '', 'Its lobbying reports name a bill he sponsors')),      # magenta: passes the palette check beside orange, blue and aqua
                     ('post', (BLUE, '', 'Post or seat held now; its own body')),
                     ('past', (BLUE, '10 6', 'Former post')),
+                    ('named', (BLUE, '3 5', 'Named to a body on a stated date; not checked since')),      # the eighth reading, Nov 16, 2026: a dated appointment is neither a seat held now nor a former post
                     ('act', (AQUA, '', 'Official act: an order, an award')),
                     ('meet', ('#8a8c82', '2 6', 'Same session scheduled; testimony to his committee'))])
-KMAP = {'own': 'own', 'lobby': 'lobby', 'post': 'post', 'money': 'money', 'ad': 'ad', 'role': 'post', 'seat': 'post', 'past': 'past', 'grant': 'money', 'panel': 'meet', 'act': 'act', 'meet': 'meet'}
+KMAP = {'own': 'own', 'lobby': 'lobby', 'post': 'post', 'money': 'money', 'ad': 'ad', 'role': 'post', 'seat': 'post', 'past': 'past', 'named': 'named', 'grant': 'money', 'panel': 'meet', 'act': 'act', 'meet': 'meet'}
 # coverage classes
 THREE = {'nytimes.com', 'wsj.com', 'ft.com'}
 OPN = re.compile(r'/opinion|/opinions/|commentisfree|/leaders/|breakingviews|/commentary/|/editorial|/the-lede|/ideas/')
@@ -775,11 +795,11 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             head.append((sx, 0, 372, 112, f'<div style="font-size:54px;font-weight:bold;letter-spacing:-1.5px;line-height:1">{big}</div>'
                                           f'<div style="font-size:15px;color:{MUTED};line-height:1.3;margin-top:6px">{esc(small)}</div>'))
             sx += 396
-        leg = f'<div style="font-size:13px;letter-spacing:1.6px;font-weight:bold;color:{MUTED};margin-bottom:6px">LINES AT LEFT: DOCUMENTED TIES</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px 26px">'
+        leg = f'<div style="font-size:13px;letter-spacing:1.6px;font-weight:bold;color:{MUTED};margin-bottom:4px">LINES AT LEFT: DOCUMENTED TIES</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:2px 26px">'
         for k, (col, dash, label) in KIND.items():
             d = f' stroke-dasharray="{dash}"' if dash else ''
             cap = ' stroke-linecap="round"' if k == 'meet' else ''
-            leg += (f'<div style="display:flex;align-items:center;gap:10px;font-size:14.5px"><svg width="46" height="10" style="flex:none"><line x1="1" y1="5" x2="45" y2="5" stroke="{col}" stroke-width="3.2"{d}{cap}/></svg>{esc(label)}</div>')
+            leg += (f'<div style="display:flex;align-items:center;gap:10px;font-size:14px;line-height:1.2"><svg width="46" height="10" style="flex:none"><line x1="1" y1="5" x2="45" y2="5" stroke="{col}" stroke-width="3.2"{d}{cap}/></svg>{esc(label)}</div>')
         leg += '</div>'
         head.append((0, 128, 1150, COV_H + 40 - 128, leg))
         if panels == 1:
@@ -877,7 +897,7 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             + esc(ARTICLE_WORDS()) +
             f'Members of Congress drawn are every current member named in three or more of those {n_pages:,} articles, as separate reports, for something said or done about the matter in these days, '
             'and one senator (Cotton) whom they name that often for a letter on Megaspeed a year earlier; each one\'s count is in their row. '
-            'Six others named that often are not drawn, because the pages name them for other things: a leadership vote, a lost election, an impeachment bid and other inquiries. '
+            + SWEEP_WORDS() +
             'The count for every name searched is published with the figure\'s tables. '
             + LOOKUP_WORDS(n_pages) +
             '"No AnthroPAC contribution on file" means none in the PAC\'s filings with the Federal Election Commission for Jun 29 to Sep 30, 2026. '

@@ -1,0 +1,26 @@
+page_id	text_found_in	chars	first_extraction_held
+sw-aacomtr-05	the densest text block of the saved HTML	1374	metadata only
+sw-capitalbriefcom-01	structured data (articleBody)	3817	the opening only
+sw-cnbccom-23	the densest text block of the saved HTML	4041	headline and description only
+sw-englobescoil-01	the densest text block of the saved HTML	3608	metadata only
+sw-forbesmiddleeastcom-01	structured data (articleBody)	329	metadata only
+sw-forbesmiddleeastcom-03	structured data (articleBody)	335	metadata only
+sw-globaltimescn-01	the densest text block of the saved HTML	3582	a list of other pieces' headlines
+sw-holyroodcom-01	the densest text block of the saved HTML	2135	metadata only
+sw-japantimescojp-02	structured data (articleBody)	878	metadata only
+sw-newsercom-01	the densest text block of the saved HTML	1002	an ad-blocker wall
+sw-newsercom-02	the densest text block of the saved HTML	601	an ad-blocker wall
+sw-newsercom-82742fcd	the densest text block of the saved HTML	586	an ad-blocker wall
+sw-newsrthkhk-01	the densest text block of the saved HTML	1977	headline and navigation only
+sw-pbsorg-01	the densest text block of the saved HTML	4014	metadata only
+sw-pbsorg-02	the densest text block of the saved HTML	4405	metadata only
+sw-tmzcom-02	structured data (articleBody)	709	another piece's headline
+sw-garymarcussubstackcom-01	the densest text block of the saved HTML	781	a short preview
+sw-hardwareslashdotorg-01	the densest text block of the saved HTML	2035	readers' comments
+sw-slashdotorg-01	the densest text block of the saved HTML	3350	readers' comments
+sw-slashdotorg-02	the densest text block of the saved HTML	3175	readers' comments
+sw-slashdotorg-03	the densest text block of the saved HTML	1617	readers' comments
+sw-slashdotorg-b1958825	the densest text block of the saved HTML	1494	readers' comments
+sw-techslashdotorg-01	the densest text block of the saved HTML	2432	readers' comments
+sw-yroslashdotorg-01	the densest text block of the saved HTML	2328	readers' comments
+sw-yroslashdotorg-02	the densest text block of the saved HTML	1515	readers' comments

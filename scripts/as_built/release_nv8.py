@@ -13,9 +13,9 @@ import release_nv13 as R13, nv13_public as P, nv8_public as N, member_mentions, 
 csv.field_size_limit(10**9)
 LANE = Path('lanes/audit_nv8')
 RUN = ('fig_map.py', 'fig_common.py', 'rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_coverage.py', 'rows_ties.py', 'rows_events.py', 'story_scope.py', 'nv8_status.py', 'build_nv8.py', 'verify_nv8.py')
-AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'nv8_articles.py', 'nv8_page_dates.py', 'fec_lpac_keyed_check.py')
+AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'nv8_articles.py', 'nv8_page_dates.py', 'fec_lpac_keyed_check.py', 'recover_bodies.py', 'nv8_dense_text.py', 'nv8_at_the_line.py', 'build_lobbyist_gifts_map.py', 'nv8_member_sweep.py')
 TABLES = ('harvest.tsv', 'coverage_rows.tsv', 'coverage_day_pages.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'member_ties.csv', 'employee_gift_rates.csv', 'committee_keys.csv', 'joint_committees.csv',
-          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv', 'nv8_articles.tsv', 'nv8_page_days_read.tsv', 'nv8_at_the_line.tsv')
+          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv', 'nv8_articles.tsv', 'nv8_page_days_read.tsv', 'nv8_at_the_line.tsv', 'nv8_recovered_pages.tsv', 'nv8_pages_added.tsv', 'nv8_member_sweep.tsv')
 SHIM = '''"""Which saved articles name each member of Congress: the counts the figure prints ("named in N of the articles counted").
 In the builder's project this module reads the saved pages themselves; they are not in this copy (no article text is), so here
 the same answer is read from research/story_pages.tsv, which lists every saved page by address with the article it is a copy of,
@@ -94,8 +94,11 @@ def main(target):
     # a row that was published and is no longer drawn stays in the table, with the reason in `withdrawn` (a row id is never reused or dropped)
     for r_ in rows_map.rows():
         if r_.get('withdrawn'):
-            rows.append({'row_id': r_['row_id'], 'table': 'dated act of an actor', 'actor': r_['actor'], 'date': r_['date'], 'reported_by_others': r_['reported'], 'withdrawn': r_['withdrawn'],
-                         'drawn_text': r_['what'], 'src': list(r_['src']), 'q': [str(x) for x in r_['q']]})
+            role_, names_ = rows_map.WITHDRAWN_PUBLIC.get(r_['actor'], (r_['actor'], {}))
+            hide = lambda x: '[a passage that names the person; kept with the project]' if any(n_ in str(x) for n_ in names_) else str(x)
+            assert not any(n_ in r_['what'] for n_ in names_)
+            rows.append({'row_id': r_['row_id'], 'table': 'dated act of an actor', 'actor': role_, 'date': r_['date'], 'reported_by_others': r_['reported'], 'withdrawn': r_['withdrawn'],
+                         'drawn_text': r_['what'], 'src': list(r_['src']), 'q': [hide(x) for x in r_['q']]})
     # the same for the lines of record of a member no longer drawn (the lines are still true of him; they are kept and not drawn)
     import rows_ties
     ty_ = {r['row_id']: r for r in csv.DictReader(open(R / 'member_ties.csv', newline=''))}
@@ -114,7 +117,7 @@ def main(target):
             if o['table'] == 'piece listed by an aggregator':
                 continue
             n_ = now_.get(o['row_id'])
-            if n_ is None or n_['table'] != o['table'] or any(str(n_.get(k) or '') != (o.get(k) or '') for k in ('actor', 'a', 'b', 'member', 'type', 'side')):
+            if n_ is None or n_['table'] != o['table'] or any(str(n_.get(k) or '') != (o.get(k) or '') for k in ('actor', 'a', 'b', 'member', 'type', 'side') if not (k == 'actor' and n_.get('withdrawn'))):
                 moved.append(o['row_id'])
         assert not moved, ('a published row id is gone or now names another actor or tie', moved[:12])
     flat = [{k: (' || '.join(v) if isinstance(v, list) else v) for k, v in r.items()} for r in rows]
@@ -141,12 +144,14 @@ def main(target):
     # the pairs of pages a reader opened, with the verdict and the kind of relation; the readers' sentences are left out because they name
     # reporters, who are not drawn (the seventh reading's sentences are in audit2/h-counts_check.csv, which names none)
     RELATIONS = ('same article at two addresses', 'syndicated copy', 'licensed copy', 'later version', 'live snapshots', 'same official statement', 'site furniture only', 'shared background',
-                 'live page carries the stand-alone report', 'different reports of one event', 'quotes the same document', 'one quotes the other', 'rewrite by another outlet', 'truncated address collision', 'no readable text')
+                 'live page carries the stand-alone report', 'different reports of one event', 'quotes the same document', 'one quotes the other', 'rewrite by another outlet', 'truncated address collision', 'no readable text',
+                 'live page carries wire report', 'new lead above an earlier dispatch', 'post promotes the release', 'quotes the same post', 'quotes the same remarks', 'quotes the same report', 'separate daily reports')
     prs = []
     for r in csv.DictReader(open(R / 'nv8_article_pairs.tsv', newline='', encoding='utf-8'), delimiter='\t'):
         rel = r['note'].split(': ', 1)[0] if r['note'].split(': ', 1)[0] in RELATIONS else ''
-        assert rel or 'seventh independent reading' in r['read_by'], ('a pair without a relation', r['page_a'], r['page_b'])
-        prs.append({'page_a': r['page_a'], 'page_b': r['page_b'], 'verdict': r['verdict'], 'relation': rel, 'used_for_joining': 'yes' if r['scope'] == 'all' else 'no', 'read_by': r['read_by']})
+        assert rel or 'independent reading' in r['read_by'], ('a pair without a relation', r['page_a'], r['page_b'])       # the readings' own sentences are in their published tables
+        prs.append({'page_a': r['page_a'], 'page_b': r['page_b'], 'verdict': r['verdict'], 'relation': rel,
+                    'used_for_joining': 'yes' if r['scope'] == 'all' else 'no: superseded by a later line for the same pair' if r['scope'] == 'superseded' else 'no', 'read_by': r['read_by']})
     table(Tg, 'research/nv8_article_pairs.tsv', prs, list(prs[0].keys()), '\t')
     # how the members drawn were chosen: every name searched, its count, and whether it is drawn; then every other word met after a title
     # everyone at three or four articles was read for separate reports on the matter (research/nv8_at_the_line.tsv, Nov 15, 2026)
@@ -236,8 +241,10 @@ def main(target):
           'f': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           'g': ('findings.csv',),
           # the seventh reading (slice S8: the pages saved since the first census, counts on articles); its look-up check, which names people who are not drawn, is held back
-          'h': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'gaps.csv')}
-    A2_LANE = {'h': 'audit_nv8_s8a'}
+          'h': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'gaps.csv'),
+          # the eighth reading (of the answers to the seventh); its check of three look-up reasons names people who are not drawn and is held back
+          'i': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b'}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
@@ -267,12 +274,27 @@ def main(target):
     disp7 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8a.csv'
     if disp7.exists():
         put(Tg, 'audit2/DISPOSITIONS-h.csv', disp7.read_text())
+    disp8 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8b.csv'
+    if disp8.exists():
+        put(Tg, 'audit2/DISPOSITIONS-i.csv', disp8.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')
     put(Tg, 'LICENSE.md', P.LICENSE_MD)
     import nv8_readme
     put(Tg, 'README.md', nv8_readme.readme(Tg, rows, ev, audit_note))
+    # a person no longer drawn who holds no public office is described by role in everything published as the current state: the row files,
+    # the tables and this README. The files of earlier readings (audit/, audit2/) are records of what was written then and are left as they are.
+    for f in sorted(Tg.rglob('*')):
+        if f.is_file() and '.git' not in f.parts and not {'audit', 'audit2', '__pycache__'} & set(f.relative_to(Tg).parts) and f.suffix in ('.py', '.tsv', '.csv', '.md', '.html'):
+            t0 = f.read_text(encoding='utf-8', errors='replace'); t1 = t0
+            for _, (role_, rep_) in rows_map.WITHDRAWN_PUBLIC.items():
+                for k_, v_ in rep_.items():
+                    t1 = t1.replace(k_, v_)
+            if t1 != t0:
+                assert f.name != 'nv8-fifteen-days-mapped.html', 'the figure itself names a person no longer drawn'
+                f.write_text(t1, encoding='utf-8')
+            assert not any(k_ in t1 for _, (_, rep_) in rows_map.WITHDRAWN_PUBLIC.items() for k_ in rep_), f
     # ---------------------------------------------------------------- checks on the copy
     bad = []
     for f in sorted(Tg.rglob('*')):

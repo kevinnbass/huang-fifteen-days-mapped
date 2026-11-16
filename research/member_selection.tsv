@@ -1,53 +1,54 @@
 name	first_names_searched	articles	drawn	why_not
-Warren	Elizabeth	65	yes	
-Coons	Chris / Christopher	43	yes	
+Warren	Elizabeth	66	yes	
+Coons	Chris / Christopher	44	yes	
 Cramer	Kevin	22	yes	
 Schumer	Chuck / Charles	21	yes	
-Banks	Jim	18	yes	
+Banks	Jim	19	yes	
 Cornyn	John	8	yes	
 Kennedy	John	6	yes	
-Thune	John	10	yes	
+Thune	John	12	yes	
 Mast	Brian	89	yes	
-Crawford	Rick	64	yes	
+Crawford	Rick	65	yes	
 Meeks	Gregory / Greg	9	yes	
 Himes	Jim	8	yes	
 Huizenga	Bill	4	yes	
-Moolenaar	John	76	yes	
-Jeffries	Hakeem	25	yes	
+Moolenaar	John	77	yes	
+Jeffries	Hakeem	26	yes	
 Magaziner	Seth	4	yes	
 Subramanyam	Suhas	3	yes	
 Bacon	Don	3	yes	
-Johnson	Mike	7	yes	
+Johnson	Mike	6	yes	
 Blumenthal	Richard / Dick	3	yes	
 Wyden	Ron	5	yes	
 Ricketts	Pete	4	yes	
 McCaul	Michael / Mike	5	yes	
-Warner	Mark	3	yes	
+Warner	Mark	4	yes	
 Cotton	Tom	5	yes	
-Scott	Tim	3	no	The stand-alone article of the New York Times on his letters and the entry in its live page of the same day are one report (the same opening sentence); the Wall Street Journal has the other. Two separate reports: not drawn. His rows stay in the tables with this reason.
+Scott	Tim	4	yes	
 Neal	Richard	3	yes	
 Jordan	Jim	12	no	a current member the articles name for other things: his election as House minority leader
 Stevens	Haley	7	no	a current member the articles name for other things: an endorsement and an absence from a vote
-Massie	Thomas	9	no	a current member the articles name for other things: his bid to impeach the defense secretary
+Massie	Thomas	10	no	a current member the articles name for other things: his bid to impeach the defense secretary
 Garcia	Robert	5	no	a current member the articles name for other things: other inquiries he plans as incoming oversight chair
 Hyde-Smith	Cindy	5	no	a current member the articles name for other things: losing her Senate race
 Sanders	Bernie / Bernard	3	no	a current member the articles name for other things: the Senate leadership contest and his own AI bill
-Brian		63	not a name searched	a word found after a congressional title: part of a name searched above
+Sullivan	Dan / Daniel	3	no	a current member the articles name for other things: his own Senate race, still being counted, and a candidate of the same name
+Brian		61	not a name searched	a word found after a congressional title: part of a name searched above
 John		59	not a name searched	a word found after a congressional title: part of a name searched above
 Elizabeth		54	not a name searched	a word found after a congressional title: part of a name searched above
-Rick		26	not a name searched	a word found after a congressional title: part of a name searched above
+Rick		25	not a name searched	a word found after a congressional title: part of a name searched above
 Chris		23	not a name searched	a word found after a congressional title: part of a name searched above
 Kevin		23	not a name searched	a word found after a congressional title: part of a name searched above
 Jim		20	not a name searched	a word found after a congressional title: part of a name searched above
 Hakeem		19	not a name searched	a word found after a congressional title: part of a name searched above
 Chuck		14	not a name searched	a word found after a congressional title: part of a name searched above
+Thomas		9	not a name searched	a word found after a congressional title: part of a name searched above
 Greer		8	not a name searched	a word found after a congressional title: not a current member: the U.S. trade representative
 Gregory		8	not a name searched	a word found after a congressional title: part of a name searched above
 Jamieson		8	not a name searched	a word found after a congressional title: not a current member: the U.S. trade representative
-Mike		8	not a name searched	a word found after a congressional title: part of a name searched above
-Thomas		8	not a name searched	a word found after a congressional title: part of a name searched above
-Massie		7	not a name searched	a word found after a congressional title: part of a name searched above
+Massie		8	not a name searched	a word found after a congressional title: part of a name searched above
 Michael		7	not a name searched	a word found after a congressional title: part of a name searched above
+Mike		7	not a name searched	a word found after a congressional title: part of a name searched above
 Eric		6	not a name searched	a word found after a congressional title: not a current member: a former member (Swalwell)
 Bill		5	not a name searched	a word found after a congressional title: part of a name searched above
 Garcia		5	not a name searched	a word found after a congressional title: part of a name searched above
@@ -61,12 +62,12 @@ Hyde-Smith		4	not a name searched	a word found after a congressional title: part
 Jensen		4	not a name searched	"a word found after a congressional title: not a current member: Huang (""Nvidia Leader ... Jensen Huang"")"
 Seth		4	not a name searched	a word found after a congressional title: part of a name searched above
 Swalwell		4	not a name searched	a word found after a congressional title: not a current member: a former member
+Tim		4	not a name searched	a word found after a congressional title: part of a name searched above
 Tom		4	not a name searched	a word found after a congressional title: part of a name searched above
 Huang		3	not a name searched	"a word found after a congressional title: not a current member: Nvidia's chief executive (""Nvidia Leader Before Jensen Huang"", ""Board Chair After Jensen Huang"")"
 Mark		3	not a name searched	a word found after a congressional title: part of a name searched above
 Suhas		3	not a name searched	a word found after a congressional title: part of a name searched above
 Tae-won		3	not a name searched	a word found after a congressional title: not a current member: the chairman of a Korean company
-Tim		3	not a name searched	a word found after a congressional title: part of a name searched above
 Anthony		2	not a name searched	a word found after a congressional title in two articles, under the three-article line
 Baumgartner		2	not a name searched	a word found after a congressional title in two articles, under the three-article line
 Before		2	not a name searched	a word found after a congressional title in two articles, under the three-article line

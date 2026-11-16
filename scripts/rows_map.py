@@ -125,7 +125,7 @@ ACTORS = [
  # three more voices quoted on three or more saved pages; the reading had split two of them under spellings of their names (second audit, lane c)
  ('delangue', 'voices', 'Clément Delangue', 'chief executive of Hugging Face', None),
  ('zhao', 'voices', 'Changpeng Zhao', 'co-founder of Binance', None),
- ('rao', 'voices', 'Naveen Rao', 'founder of Unconventional AI', None),
+ ('rao', 'voices', 'a public voice no longer drawn', 'founder of a chip start-up', None),
  # quoted in three counted articles once the pages saved since the first reading are counted (slice S8)
  ('conway', 'voices', 'Ron Conway', 'venture capitalist', None),
  ('singapore', 'abroad', 'Singapore Ministry of Home Affairs', '', None),
@@ -139,10 +139,15 @@ ACTORS = [
 # An actor who is no longer drawn. The entry stays in ACTORS_ALL and its acts keep their place in ACTS (a row id is never reused);
 # the figure, the gauge and the counts read ACTORS and skip those acts. Slice S8, Nov 15, 2026 (Kevin: "count them for everyone. don't
 # use duplicates. deduplicate."): the three saved pages that quote him are three copies of one article.
-# The seventh reading (Nov 15, 2026): the three counted articles that name Sen. Scott are two reports, since the Times's live page of
-# Nov 12 repeats, in its own entry, the report of the Times's stand-alone article (the same opening sentence); the third is the Journal's.
-WITHDRAWN = {'rao': 'quoted in one article, of which three copies had been saved and counted as three pages; under the three-article line once each article is counted once',
-             'scott': 'named in three counted articles that are two reports: the live page of the New York Times for Nov 12 repeats the report of its stand-alone article, and the Wall Street Journal has the other; under the line of three separate reports'}
+# Sen. Scott was withdrawn on Nov 15, 2026 (release db0261e) because the three saved articles naming him were two reports, and is
+# drawn again since Nov 16: the aggregators' own list holds two more pieces of Nov 12 whose headlines name him for the same letters, which
+# were not among the saved pages; one of them (the Washington Examiner's) could be saved and is a third separate report.
+WITHDRAWN = {'rao': 'quoted in one article, of which three copies had been saved and counted as three pages; under the three-article line once each article is counted once'}
+# How a withdrawn row of a person who holds no public office is published: by role, and without the passage that names him (the eighth
+# reading, Nov 16, 2026: keeping a row id does not require publishing the name). The full row stays here.
+WITHDRAWN_PUBLIC = {'rao': ('a public voice no longer drawn (the founder of a chip start-up)',
+                            {'a public voice no longer drawn': 'a public voice no longer drawn', 'a chip start-up': 'a chip start-up',
+                             '[address withheld: it names a person no longer drawn]': '[address withheld: it names a person no longer drawn]', '[address withheld: it names a person no longer drawn]': '[address withheld: it names a person no longer drawn]'})}
 ACTORS_ALL = ACTORS
 ACTORS = [a for a in ACTORS_ALL if a[0] not in WITHDRAWN]
 
@@ -421,7 +426,7 @@ ACTS = [
  ('zhao', '2026-11-12', 'Posts that it is "a mistake for Nvidia to let Jensen resign"',
   ['sw-cnbccom-09', 'cnn-1111-live'], ['a mistake for Nvidia to let Jensen resign', 'departure Thursday morning, Binance co-founder and former CEO Changpeng Zhao']),
  ('rao', '2026-11-12', 'Tells Yahoo Finance the search for a new chief "needs to be closed probably in the next three or four months"',
-  ['sw-financeyahoocom-23'] * 3, ['it needs to be closed probably in the next three or four months', 'Unconventional AI founder and CEO Naveen Rao', 'PUBLISHED: 2026-11-12']),
+  ['sw-financeyahoocom-23'] * 3, ['it needs to be closed probably in the next three or four months', 'a chip start-up founder and CEO a public voice no longer drawn', 'PUBLISHED: 2026-11-12']),
  # ---- added after the release of Nov 15 (commit 2b7a13d), at the END so that no published id moves
  # two reports of the Times that its row lacked (hand-saved on Nov 12 and never drawn; found when the hand-saved pages were listed on Nov 15)
  ('nyt', '2026-11-10', 'Reports that the president was told aboard Air Force One in May, by Rubio, of the intelligence on Huang, which "contradicts the president\'s assertion" that he had not known then; the White House "disputed the reporting", it says, "without elaborating"',
@@ -505,11 +510,18 @@ ACTS = [
   ["As the swirl continues (which I believe should be taken seriously), let's pause for a moment and remember what Jensen has contributed to our industry", 'Now we should be patient and wait for investigations by the board of directors and any government authorities to conclude',
    'Wed Nov 11 21:42:39 +0000 2026', 'At 1:42 pm on Wednesday, just minutes before the Times broke its story, venture capitalist Ron Conway called for patience while investigations concluded',
    'wrote venture capitalist Ron Conway, adding that the public should wait for various investigations by the government and the company to conclude']),
+ # ---- Nov 16, 2026: two remarks that the reading of the recovered pages (lane remarks_nv8_f) found on two counted articles and on no chip
+ ('megaspeed', '2026-10-29', 'In a statement to the Times, in its first report: "outside counsel has been retained to conduct a thorough internal investigation and has notified the U.S. government that we are fully committed to cooperating"',
+  ['man-nyt-1029-01', 'man-nyt-1029-01'],
+  ['In a statement to The New York Times, Megaspeed said that its “current leadership” takes the matter “extremely seriously', 'outside counsel has been retained to conduct a thorough internal investigation and has notified the U.S. government that we are fully committed to cooperating']),
+ ('warner', '2026-11-09', 'In Bloomberg\'s report of the closed briefing of that day, carried by the Straits Times: "We all obviously have questions, but I\'m not going to weigh in on any substance"; "we need to hear from the Federal Bureau of Investigation"',
+  ['art-line-straitstimes-bloomberg-1110'] * 3,
+  ["We all obviously have questions, but I'm not going to weigh in on any substance", 'we need to hear from the Federal Bureau of Investigation', 'met on Nov 9 behind closed doors for a security briefing']),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
 REPORT_DAY = {('justice', '2026-11-10'), ('cornyn', '2026-11-12'), ('chan', '2026-11-12'), ('ohanlon', '2026-11-10'), ('moorhead', '2026-11-10'), ('newman', '2026-11-09'), ('newman', '2026-11-12'), ('boloor', '2026-11-12'), ('yoo', '2026-11-12'), ('commerce', '2026-11-09'), ('bresnick', '2026-11-10'), ('bresnick', '2026-11-11'), ('king', '2026-11-12'), ('nie', '2026-11-12'), ('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire', '2026-11-10'), ('grunewald', '2026-11-10'), ('stapp', '2026-11-10'),
-              ('blumenthal', '2026-11-09'), ('warner', '2026-11-09'), ('wyden', '2026-11-09'), ('ricketts', '2026-11-10'), ('ricketts', '2026-11-12'), ('moorhead', '2026-11-11'), ('himes', '2026-11-11'), ('hodges', '2026-11-12'),
+              ('megaspeed', '2026-10-29'), ('blumenthal', '2026-11-09'), ('warner', '2026-11-09'), ('wyden', '2026-11-09'), ('ricketts', '2026-11-10'), ('ricketts', '2026-11-12'), ('moorhead', '2026-11-11'), ('himes', '2026-11-11'), ('hodges', '2026-11-12'),
               ('cornyn', '2026-11-08'), ('thune', '2026-11-12'), ('johnson', '2026-11-12'),
               ('mccaul', '2026-11-08'), ('magaziner', '2026-11-08'), ('openai', '2026-11-04'),
               ('commerce', '2026-11-11'), ('justice', '2026-11-09'), ('nvidia', '2026-11-09'),
@@ -681,7 +693,7 @@ TIES_V8 = [
  ('AnthroPAC', 'Sen. Pete Ricketts', 'money', '$2,000 · Sep 25', [FEC + 'PETE RICKETTS FOR SENATE'], ['2000.00']),
  # the look-up of the names the pages saved since added (lane analysts_nv8_e, Nov 15). Identity: the commission's own page and Anthropic's
  # announcement both give his earlier post as national security adviser to the Speaker.
- ('Anthropic', 'Joshua Hodges', 'role', 'named by Anthropic on Aug 27, 2025 as a member of its National Security and Public Sector Advisory Council; whether he sits on it now was not checked',
+ ('Anthropic', 'Joshua Hodges', 'named', 'named by Anthropic on Aug 27, 2025 as a member of its National Security and Public Sector Advisory Council; whether he sits on it now was not checked',
   [PK + 'congress/research/revolving_door.csv#RD038', 'art-tie-anthropic-advisory-council-20250827', 'art-tie-anthropic-advisory-council-20250827', 'art-tie-uscc-commission-members'],
   ['Anthropic National Security and Public Sector Advisory Council', 'Mr. Hodges was formerly the National Security Advisor to Speaker of the House Mike Johnson', 'National Security and Public Sector Advisory Council', 'Previously he was National Security Advisor to Speaker']),
 ]
@@ -851,6 +863,6 @@ def rows():
         assert b in names and kind == 'context' and len(src) == len(q), (a, b)
         out.append({'row_id': f'MT{i:02d}', 'a': a, 'b': b, 'kind': kind, 'label': label, 'src': src, 'q': q})
     for i, (a, b, kind, label, src, q) in enumerate(TIES_V8, len(TIES_MORE) + len(ARCS) + len(TIES_V3) + len(TIES_V4) + len(TIES_V5) + len(TIES_V6) + len(ARCS_V6) + len(TIES_V7) + 1):
-        assert b in names and (kind == 'context' or (a in left and kind in ('role', 'money', 'past'))) and len(src) == len(q), (a, b)
+        assert b in names and (kind == 'context' or (a in left and kind in ('role', 'money', 'past', 'named'))) and len(src) == len(q), (a, b)
         out.append({'row_id': f'MT{i:02d}', 'a': a, 'b': b, 'kind': kind, 'label': label, 'src': src, 'q': q})
     return out

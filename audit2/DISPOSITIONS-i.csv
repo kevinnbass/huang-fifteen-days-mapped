@@ -1,0 +1,73 @@
+part,finding_id,grade,disposition,what_was_done
+C,C-01,error,applied,"The three pairs are joined on the reading's verdicts. The screen that lists pairs for a reader was widened to every two pages that share 25 or more seven-word runs making up a fifth of the shorter, with each site's furniture left out, and a third reader from another model family opened every pair it lists (300 pairs, lane pairs_nv8_b, after eight control pairs): 19 the same article, 281 different. In all 499 pairs now carry a reader's verdict (82 the same). The table has 1,187 articles, 1,116 counted. Stated as a limit in the figure: a copy that shares less than a fifth of the shorter page with the other is not listed, so the count of articles can still be slightly high."
+C,C-02,qualification,applied,"One test now decides a later version, and the readers were given it: a copy that keeps the lead and adds, trims or updates is the same article, as is a later version at the publisher's own address; a later dispatch that puts a new lead above an earlier one it retains is a new report. On that test the two AP pairs first read as the same are now different (their first verdicts stay in the table, marked superseded), which agrees with the Reuters pair; and the text rule joins two unread pages only when they also share their opening."
+C,C-03,error,applied,"A third extraction took the article from the saved HTML of 25 pages whose first extraction held a headline, an ad-blocker wall, another piece's headlines or readers' comments (scripts/recover_bodies.py; research/nv8_recovered_pages.tsv); each result was read before it was kept. The five articles are counted, and the two empty captures are not ('an empty capture: the saved copy holds no text and no headline'). The rule no longer rests on the wording of a reader's gap note: a page whose article was recovered is counted, and the mark 'saved in part' now stands only on the 58 counted pages whose body is still not held. The recovered pages were read for remarks and bylines by a census reader (lane remarks_nv8_f)."
+C,C-04,error,applied,"The three Newser pages are dated from the stamp each prints (the time in their metadata is six hours later under the same zone label); one of them moves from Nov 12 to Nov 11. The archived FT teaser is dated Nov 6 from the publication time in its data. Every page dated from a header stamp was then compared by script with any Published, Posted or Updated stamp in its text: five differ, and each was read (three are a local date against the same instant in U.S. Eastern time, two are the stamps of other articles' teasers); none changes."
+C,C-05,error,applied,The README's opening numbers are computed from the rows drawn; they had counted a withdrawn member's rows.
+C,C-06,error,applied,"The totals in the note on lobbyists' gifts are now summed over the members drawn, whoever is withdrawn. The member the reading subtracted is drawn again, on a third separate report saved since (research/nv8_at_the_line.tsv), so the totals for 27 members stand; the three sides are still not added."
+C,C-07,qualification,applied,"Row MT61 is drawn with a line style of its own, and the legend has an entry for it: 'Named to a body on a stated date; not checked since'."
+C,C-08,qualification,applied,"The withdrawn voice is described by role in every file published as the current state: the table of rows (row MA137 gives the actor by role and withholds the one passage that names him), the table of own-channel searches, the row file and the README. The reports and tables of earlier readings, written when he was drawn, are records and are left as they were; the commit history keeps the earlier text."
+C,C-09,qualification,applied,"The label 'The Standard' is now two outlets, by site (the San Francisco Standard and The Standard of Hong Kong). Every outlet label that occurs on more than one site was then read: one more covers two publishers (ABC News of the U.S. and of Australia) and is split; five are one outlet with a licensed or member copy. The count stops if a label on two sites has not been judged."
+C,C-CLOSE,qualification,applied,The count was rebuilt after the corrections above; the status sentence says what has not been read independently.
+B,B3 saved-copy day sw-acecommentsmunu-2695c925,recount: partial,stated as a limit,"The note in research/nv8_page_days_read.tsv says the date is that of the first comment, posted in the same minute as the post."
+B,B3 header boundary sw-newsercom-02,recount: no,applied,"As C-04: dated Nov 11 from the printed stamp, and counted through its recovered article."
+B,B3 undated sw-nzheraldconz-01,recount: no,applied,"As C-03: an empty capture, not counted."
+B,B3 undated sw-nzheraldconz-02,recount: no,applied,"As C-03: an empty capture, not counted."
+B,B3 undated art-fc-wb-ft-1107-romantic,recount: no,applied,As C-04: dated Nov 6.
+B,B2a sw-courthousenewscom-01 / sw-inquirercom-01,recount: partial,applied,The pair carries the verdict 'different' in research/nv8_article_pairs.tsv under the one test for a later version (C-02); the two pages are two articles.
+B,B2a sw-inquirercom-01 / sw-irishnewscom-01,recount: partial,applied,The pair carries the verdict 'different' in research/nv8_article_pairs.tsv under the one test for a later version (C-02); the two pages are two articles.
+B,B2a sw-businessstandardcom-01 / sw-internazionaleit-01,recount: partial,applied,The pair carries the verdict 'different' in research/nv8_article_pairs.tsv; the two pages are two articles.
+B,B2c unlisted sw-aacomtr-02 / sw-trtworldcom-f1b41737,recount: partial,applied,The pair carries the verdict 'different' in research/nv8_article_pairs.tsv (this reading's); the two pages are two articles.
+B,B2c unlisted sw-industryweekcom-01 / sw-kuwaittimescom-01,recount: no,applied,The pair carries the verdict 'same' in research/nv8_article_pairs.tsv (this reading's); the two pages are one article.
+B,B2c unlisted sw-bnnbloombergca-01 / sw-courthousenewscom-01,recount: no,applied,The pair carries the verdict 'same' in research/nv8_article_pairs.tsv (this reading's); the two pages are one article.
+B,B2c unlisted globe-1112-resigns / sw-staradvertisercom-efab8d8f,recount: no,applied,The pair carries the verdict 'same' in research/nv8_article_pairs.tsv (this reading's); the two pages are one article.
+B,B2c unlisted sw-thejournalie-01 / sw-vanguardngrcom-03,recount: partial,applied,The pair carries the verdict 'different' in research/nv8_article_pairs.tsv (this reading's); the two pages are two articles.
+B,B2c unlisted sw-financeyahoocom-22 / sw-thestandardcomhk-04,recount: partial,applied,The pair carries the verdict 'different' in research/nv8_article_pairs.tsv (this reading's); the two pages are two articles.
+B,B2b group A0258,recount: partial,applied,As C-02: the earlier dispatch and its copies are one article; the later dispatch with the new lead is another.
+B,B2c missed joins estimate,recount: no,applied,As C-01.
+B,B5 excluded sw-globaltimescn-01,recount: no,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 excluded sw-newsercom-01,recount: no,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 excluded sw-newsercom-02,recount: no,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 excluded sw-newsercom-82742fcd,recount: no,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 excluded sw-tmzcom-02,recount: no,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 excluded art-fc-rec-megaspeed-home,recount: partial,applied,"The company's home page carries a statement dated Nov 12 and is counted like a company's newsroom page, with that day; the statement is already a chip, cited from the builder's own copy of the page."
+B,B5 partial sw-aacomtr-05,recount: partial,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 partial sw-cnbccom-23,recount: partial,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 partial sw-englobescoil-01,recount: partial,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 partial sw-newsrthkhk-01,recount: partial,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 partial sw-nzheraldconz-01,recount: no,applied,"As C-03: an empty capture, not counted."
+B,B5 partial sw-nzheraldconz-02,recount: no,applied,"As C-03: an empty capture, not counted."
+B,B5 partial sw-slashdotorg-01,recount: partial,applied,As C-03: the article was recovered from the saved HTML; the page is counted and no longer marked as saved in part.
+B,B5 partial art-fc-rec-factbase-trump-1109,recount: partial,applied,"The transcript's spoken words are in a second extraction made when the page was saved; the counts now read it (they had read the first, which held the speaker labels only). The census of remarks read the first extraction, so the page stays marked as saved in part."
+B,A honoree matcher boundary,recount: partial,applied,"For a member who shares the surname with other politicians, a misspelt given name is no longer accepted: only the given name or its initial. Two cases were added to the script's own tests, and the table rebuilt by the tightened rule is byte for byte the same."
+B,B6 reverse outlet collision,recount: partial,applied,As C-09.
+B,C current all active actor-act rows,recount: no,applied,As C-05.
+B,C current member tie rows,recount: no,applied,As C-05.
+B,C lobbyist total current nvidia,recount: no,applied,As C-06.
+B,C lobbyist total current anthropic,recount: no,applied,As C-06.
+B,C lobbyist total current network,recount: no,applied,As C-06.
+B,C named-client lobbyist total current network,recount: no,applied,As C-06.
+B,B1 illustrative tally after demonstrated corrections,recount: partial,applied,"As C-01 and C-03: the table was rebuilt, not adjusted; it gives 1,116 counted articles."
+D,answer to the seventh reading: C-01,held in part,applied,As this reading's C-01 and C-02.
+D,answer to the seventh reading: C-02,held in part,applied,As this reading's C-04.
+D,answer to the seventh reading: C-03,held in part,applied,"As this reading's C-05 and C-06; and the member is drawn again, on a third separate report saved since (research/nv8_at_the_line.tsv)."
+D,answer to the seventh reading: C-05,held in part,applied,As this reading's C-07.
+D,answer to the seventh reading: C-CLOSE,held in part,applied,"As this reading's C-01, C-03, C-05 and C-06."
+D,answer to the seventh reading: B2 undated claim,held in part,applied,As this reading's C-03 and C-04: no counted page is now without a day.
+D,answer to the seventh reading: B2 date sw-globaltimescn-01,held in part,applied,"As this reading's C-03: counted, through its recovered article."
+gaps,sw-nzheraldconz-01,gap,applied,"As C-03: an empty capture, not counted."
+gaps,sw-nzheraldconz-02,gap,applied,"As C-03: an empty capture, not counted."
+gaps,art-fc-ft-1107-romantic,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-ft-1112-singapore,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-gvwire-nyt-1109-powerful,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-rec-axios-1111,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-rec-marketscreener-blanche,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-rec-mha-20250303,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,sw-24sightnews-06717f96,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-cbsnewscom-02,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-cnbccom-14,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-forbesmiddleeastcom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-foxbusinesscom-a3f55fc9,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-postgazettecom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,man-6179b837e55d,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,man-economist-1111-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.

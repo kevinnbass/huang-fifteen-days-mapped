@@ -43,7 +43,9 @@ NOT_MEMBER = set()
 # (no other member shares it); what the pages name them for (read on Nov 14, 2026).
 NOT_DRAWN = {'Jordan': (['Jim'], False, 'his election as House minority leader'), 'Stevens': (['Haley'], False, 'an endorsement and an absence from a vote'),
              'Massie': (['Thomas'], True, 'his bid to impeach the defense secretary'), 'Garcia': (['Robert'], False, 'other inquiries he plans as incoming oversight chair'),
-             'Hyde-Smith': (['Cindy'], True, 'losing her Senate race'), 'Sanders': (['Bernie', 'Bernard'], True, 'the Senate leadership contest and his own AI bill')}
+             'Hyde-Smith': (['Cindy'], True, 'losing her Senate race'), 'Sanders': (['Bernie', 'Bernard'], True, 'the Senate leadership contest and his own AI bill'),
+             # found by the sweep of all sitting members' names (scripts/nv8_member_sweep.py, Nov 16, 2026)
+             'Sullivan': (['Dan', 'Daniel'], False, 'his own Senate race, still being counted, and a candidate of the same name')}
 # other words met after a congressional title on three or more pages that are not a searched name: what each is
 NOT_A_MEMBER = {'Jamieson': 'the U.S. trade representative', 'Greer': 'the U.S. trade representative', 'Eric': 'a former member (Swalwell)', 'Swalwell': 'a former member',
                 'Anthony': 'a former member (Weiner)', 'Weiner': 'a former member', 'Harvey': "Nvidia's board chair", 'Jones': "Nvidia's board chair",
@@ -55,8 +57,10 @@ def not_drawn_re(s):
     return re.compile(rf"\b(?:{'|'.join(firsts)})\s+(?:[A-Z]\.\s+)?{s}\b" + (rf"|{TITLE}\s+(?:[A-Z][\w.'’-]*\s+){{0,2}}{s}\b" if by_title else ''))
 
 
-def pages():
-    """(id, text) of each counted page; an address saved under two ids is counted once (the first id)."""
+def pages(recovered=True):
+    """(id, text) of each counted page; an address saved under two ids is counted once (the first id). Where a third extraction of
+    the piece's own body exists (text.recovered.txt, scripts/recover_bodies.py, Nov 16, 2026) it is the text read; recovered=False gives
+    the text as read until then (the three-chairmen figure's count keeps it)."""
     seen = set()
     for d in sorted(P.iterdir()):
         if d.name.startswith(SKIP) or not (d / 'meta.json').exists():
@@ -73,7 +77,19 @@ def pages():
         texts = [f.read_text(errors='replace') for f in (d / 'text.txt', d / 'text.reextract.txt') if f.exists()]
         if texts:
             seen.add(key)
-            yield d.name, max(texts, key=len)
+            rec = d / 'text.recovered.txt'
+            yield d.name, rec.read_text(errors='replace') if recovered and rec.exists() else max(texts, key=len)
+
+
+def saved_since_text(pid):
+    """The text read for a page saved since the first census: the article text its saver cut out (text.article.txt) where there is one;
+    otherwise the longer of the first extraction and a second one (a transcript's first extraction held the speaker labels only)."""
+    d = P / pid
+    for n in ('text.recovered.txt', 'text.article.txt'):
+        if (d / n).exists():
+            return (d / n).read_text(errors='replace')
+    texts = [f.read_text(errors='replace') for f in (d / 'text.txt', d / 'text.reextract.txt') if f.exists()]
+    return max(texts, key=len) if texts else ''
 
 
 def articles():
@@ -86,8 +102,7 @@ def articles():
             assert pid in first, ('research/nv8_articles.tsv lists a first-census page that is no longer counted; rerun scripts/nv8_articles.py', pid)
             seen_first.add(pid); text = first[pid]
         else:
-            d = P / pid; f = d / 'text.article.txt' if (d / 'text.article.txt').exists() else d / 'text.txt'
-            text = f.read_text(errors='replace') if f.exists() else ''
+            text = saved_since_text(pid)
         if r['counted'] == 'yes':
             art.setdefault(r['article_id'], []).append((pid, text))
     assert seen_first == set(first), ('a page was saved since research/nv8_articles.tsv was built; rerun scripts/nv8_articles.py', sorted(set(first) - seen_first)[:5])
@@ -123,7 +138,7 @@ def count_pages():
     """(pages counted, {surname: [page ids]}) over the pages of the first census alone, as counted until Nov 15, 2026: the three-chairmen
     figure (nv13) prints these ("named on N of the 1,086 saved pages") and keeps them."""
     res = {s: member_re(s) for s in FIRST}; hit, n = defaultdict(list), 0
-    for pid, text in pages():
+    for pid, text in pages(recovered=False):
         n += 1
         for s, rx in res.items():
             if rx.search(text):

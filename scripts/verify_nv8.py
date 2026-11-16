@@ -136,31 +136,33 @@ def main():
           f'{len(pages):,} saved pages are {len({p["article"] for p in pages}):,} articles, {len(arts):,} of them counted (research/story_pages.tsv); each of the {len(members)} members drawn is named in at least 3, and the figure prints each one\'s count',
           str([m for m in members if m not in slug or hit[slug[m]] < 3][:5]))
     art = table('nv8_articles.tsv'); n1 = sum(r['set'] == 'first census' for r in art)
-    why = Counter('after' if 'after the fifteen days' in r['why_not'] else 'before' if 'before the fifteen days' in r['why_not'] else 'not the piece' if 'block or error page' in r['why_not'] else 'not news' for r in art if r['counted'] == 'no')
-    prs = table('nv8_article_pairs.tsv'); used = [p for p in prs if p['used_for_joining'] == 'yes']; same_ = sum(p['verdict'] == 'same' for p in used)
+    why = Counter('after' if 'after the fifteen days' in r['why_not'] else 'before' if 'before the fifteen days' in r['why_not'] else 'not the piece' if 'block or error page' in r['why_not']
+                  else 'empty' if 'empty capture' in r['why_not'] else 'not news' for r in art if r['counted'] == 'no')
+    prs = table('nv8_article_pairs.tsv'); used = [p for p in prs if p['used_for_joining'] == 'yes']; assert len({frozenset((p['page_a'], p['page_b'])) for p in used}) == len(used); same_ = sum(p['verdict'] == 'same' for p in used)
     art_of = {r['page_id']: r['article_id'] for r in art}; line_ = table('nv8_at_the_line.tsv')
     part_ = sum(r['saved_in_part'] == 'yes' for r in art); in_copy = sum(r['day_basis'] == 'read in the saved copy' for r in art); days_read = table('nv8_page_days_read.tsv')
     check(all((art_of[p['page_a']] == art_of[p['page_b']]) == (p['verdict'] == 'same') for p in used),
           f'each of the {len(used)} pairs of pages a reader judged is joined, or kept apart, as the reader judged it ({same_} the same article, {len(used) - same_} different; research/nv8_article_pairs.tsv)',
           str([(p['page_a'], p['page_b']) for p in used if (art_of[p['page_a']] == art_of[p['page_b']]) != (p['verdict'] == 'same')][:5]))
-    check(f'({len(used)} pairs: {same_} the same article' in flat and f'{len(used) - same_} different' in flat and f'{part_} counted pages were saved only in part' in flat
-          and f'({in_copy} pages whose metadata and text carry none were read in their saved copy)' in flat and in_copy == len(days_read)
+    check(f'({len(used)} pairs over three readings: {same_} the same article' in flat and f'{len(used) - same_} different' in flat and f'{part_} counted pages are still held only in part' in flat
+          and f'({in_copy} pages whose metadata and text carry none, or carry one the printed stamp contradicts, were read in their saved copy)' in flat and in_copy == len(days_read)
+          and not any(r['counted'] == 'yes' and not r['day'] for r in art)
           and {r['page_id']: r['day'] for r in days_read}.items() <= {r['page_id']: r['day'] for r in art}.items(),
-          f'the figure prints those counts, the {part_} counted pages saved only in part, and the {in_copy} pages whose day was read in the saved copy (research/nv8_page_days_read.tsv)')
+          f'the figure prints those counts, the {part_} counted pages held only in part, and the {in_copy} pages whose day was read in the saved copy (research/nv8_page_days_read.tsv); no counted page is without a day')
     sel_ = [x for x in table('member_selection.tsv') if x['drawn'] in ('yes', 'no') and not x['why_not'].startswith('a current member')]
     at_line = {x['name']: x for x in sel_ if x['articles'] in ('3', '4')}; lm = {x['name']: x for x in line_ if x['group'] == 'member'}
     check(set(at_line) == set(lm) and all(lm[n]['article_ids'].split() == sorted(named[n]) and lm[n]['drawn'] == at_line[n]['drawn'] for n in lm)
           and all(int(x['separate_reports_on_the_matter']) >= 3 for x in line_ if x['drawn'] == 'yes') and all(int(x['separate_reports_on_the_matter']) < 3 for x in line_ if x['drawn'] == 'no'),
-          f"research/nv8_at_the_line.tsv reads each of the {len(lm)} members named in three or four counted articles, with those articles; {sum(x['drawn'] == 'no' for x in lm.values())} of them, at two separate reports, is not drawn, and research/member_selection.tsv says the same",
+          f"research/nv8_at_the_line.tsv reads each of the {len(lm)} members named in three or four counted articles, with those articles; {sum(x['drawn'] == 'no' for x in lm.values())} of them is under three separate reports and not drawn, and research/member_selection.tsv says the same",
           str(sorted(set(at_line) ^ set(lm))))
     check({(r['page_id'], r['article_id'], r['counted']) for r in art} == {(p['id'], p['article'], p['counted']) for p in pages}
           and f'the {n1:,} pages saved by the first search and the {len(art) - n1} saved since' in flat and f"are {len({r['article_id'] for r in art}):,} articles once copies of one article are joined" in flat
-          and f'and {len(arts):,} of them are counted' in flat and f"is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when the saved copy is a block or error page or another page in its place ({why['not the piece']}), or when it is a reference page, a company's home page or an image ({why['not news']})" in flat,
-          f"the figure's sentence on the articles counted gives the numbers of research/nv8_articles.tsv: {len(art):,} pages, {len({r['article_id'] for r in art}):,} articles, {len(arts):,} counted; not counted: {why['after']} dated after Nov 12, {why['before']} before Oct 29, {why['not the piece']} a block page or another page, {why['not news']} not news")
+          and f'and {len(arts):,} of them are counted' in flat and f"is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when the saved copy is a block or error page ({why['not the piece']}) or holds nothing at all ({why['empty']}), or when it is a reference page or an image ({why['not news']})" in flat,
+          f"the figure's sentence on the articles counted gives the numbers of research/nv8_articles.tsv: {len(art):,} pages, {len({r['article_id'] for r in art}):,} articles, {len(arts):,} counted; not counted: {why['after']} dated after Nov 12, {why['before']} before Oct 29, {why['not the piece']} a block or error page, {why['empty']} empty, {why['not news']} not news")
     sel = table('member_selection.tsv'); searched = [s for s in sel if s['drawn'] in ('yes', 'no')]
     check(all(int(s['articles']) == hit[s['name']] for s in searched) and {s['name'].lower().replace(' ', '').replace('-', '') for s in sel if s['drawn'] == 'yes'} == set(members)
-          and all(s['why_not'] for s in sel if s['drawn'] != 'yes') and sum(1 for s in sel if s['why_not'].startswith('a current member')) == 6,
-          f'research/member_selection.tsv gives every name searched with its count of articles: {len(members)} drawn, {sum(1 for s in searched if s["drawn"] == "no")} not drawn, each with the reason (six named for other things)')
+          and all(s['why_not'] for s in sel if s['drawn'] != 'yes') and sum(1 for s in sel if s['why_not'].startswith('a current member')) == 7 and 'Seven others named that often are not drawn' in flat,
+          f'research/member_selection.tsv gives every name searched with its count of articles: {len(members)} drawn, {sum(1 for s in searched if s["drawn"] == "no")} not drawn, each with the reason (seven named for other things)')
     # ---------------------------------------------------------------- nothing internal is visible
     visible = re.sub(r'<title>.*?</title>', ' ', body, flags=re.S); visible = norm(re.sub(r'<[^>]+>', ' ', visible))
     leak = re.search(r'\b(?:EV|TI|RU|ST|MA|MT|TY|TR|CV|NT)\d{2,4}\b|[\w/-]+\.(?:csv|json|jsonl|py|tsv)\b|research/|scripts/', visible)

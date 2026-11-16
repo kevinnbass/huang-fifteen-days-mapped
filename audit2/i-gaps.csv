@@ -1,0 +1,17 @@
+row_id_or_key,source,what_failed
+sw-nzheraldconz-01,research/primary/sw-nzheraldconz-01,"No publication stamp or article words survive: empty body.html, blank title and description; no alternate extraction held."
+sw-nzheraldconz-02,research/primary/sw-nzheraldconz-02,"No publication stamp or article words survive: empty body.html, blank title and description; no alternate extraction held."
+art-fc-ft-1107-romantic,research/primary/art-fc-ft-1107-romantic,Saved HTML holds only a security/error page or unrelated replacement; requested article cannot be read from this capture.
+art-fc-ft-1112-singapore,research/primary/art-fc-ft-1112-singapore,Saved HTML holds only a security/error page or unrelated replacement; requested article cannot be read from this capture.
+art-fc-gvwire-nyt-1109-powerful,research/primary/art-fc-gvwire-nyt-1109-powerful,Saved HTML holds only a security/error page or unrelated replacement; requested article cannot be read from this capture.
+art-fc-rec-axios-1111,research/primary/art-fc-rec-axios-1111,Saved HTML holds only a security/error page or unrelated replacement; requested article cannot be read from this capture.
+art-fc-rec-marketscreener-blanche,research/primary/art-fc-rec-marketscreener-blanche,Saved HTML holds only a security/error page or unrelated replacement; requested article cannot be read from this capture.
+art-fc-rec-mha-20250303,research/primary/art-fc-rec-mha-20250303,Saved HTML holds only a security/error page or unrelated replacement; requested article cannot be read from this capture.
+sw-24sightnews-06717f96,research/primary/sw-24sightnews-06717f96,Paywall stops after visible preview; remaining article not saved.
+sw-cbsnewscom-02,research/primary/sw-cbsnewscom-02,Video description is saved; spoken segment/transcript not read.
+sw-cnbccom-14,research/primary/sw-cnbccom-14,Video headline and description only; spoken segment/transcript not read.
+sw-forbesmiddleeastcom-01,research/primary/sw-forbesmiddleeastcom-01,Own title/description metadata survive; article body absent from saved HTML.
+sw-foxbusinesscom-a3f55fc9,research/primary/sw-foxbusinesscom-a3f55fc9,Segment description only; spoken video/transcript not read.
+sw-postgazettecom-01,research/primary/sw-postgazettecom-01,"Own title/description metadata survive, but saved HTML contains navigation rather than article body."
+man-6179b837e55d,research/primary/man-6179b837e55d,Cropped newsletter opening and subscription overlay; affair section not saved.
+man-economist-1111-01,research/primary/man-economist-1111-01,Damaged text layer: missing letter pairs and cut-off/interwoven sentences. Article identity supported by same address and clean archived opening; damaged sentences not validated as quotations.

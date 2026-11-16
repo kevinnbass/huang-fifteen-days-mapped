@@ -20,7 +20,7 @@ import nv8_page_dates as D
 ROOT = Path(__file__).resolve().parent.parent; R = ROOT / 'research'; P = R / 'primary'
 LANE = Path('lanes/remarks_nv8_e')
 FIRST, LAST = '2026-10-29', '2026-11-12'
-NOT_NEWS = ('wikipedia.org', 'megaspeed.ai', 'pbs.twimg.com')
+NOT_NEWS = ('wikipedia.org', 'pbs.twimg.com')       # a company's home page that carries a dated statement is counted like its newsroom pages (the eighth reading)
 # first-census pages that are reference pages, read on Nov 15, 2026: a fellow's profile at a think tank, an organisation chart
 REFERENCE = {'hoover-chhabra', 'theorg-heck'}
 # the census reader's note says the saved copy is not the piece: a block, error or ad-blocker page, or other content saved in its place.
@@ -34,6 +34,13 @@ def runs(text):
     return {hash(' '.join(w[i:i + 7])) for i in range(len(w) - 6)}
 
 
+def opening(text, n):
+    """The seven-word runs among the first n words of a page's body: its lead."""
+    body = text.split('\n\n', 1)[1] if '\n\n' in text[:1500] else text
+    w = re.findall(r"[a-z0-9']+", body.lower().replace('’', "'"))[:n]
+    return {hash(' '.join(w[i:i + 7])) for i in range(len(w) - 6)}
+
+
 def main():
     pages = []                                                    # (id, set, text)
     for pid, text in M.pages():
@@ -41,11 +48,16 @@ def main():
     first = len(pages)
     # what the readers of the census could not read, for every page (lanes a to d read the first census, e the pages saved since)
     gaps = {}
-    for t_ in 'abcde':
+    for t_ in 'abcdef':                # f read the recovered pages and two saved since: its gaps are what is still missing of those
         for r in csv.DictReader(open(LANE.parent / f'remarks_nv8_{t_}' / 'out' / 'gaps.csv', newline='')):
             gaps[r['page_id']] = r['what_failed']
+    gaps_f = {r['page_id'] for r in csv.DictReader(open(LANE.parent / 'remarks_nv8_f' / 'out' / 'gaps.csv', newline=''))}
     for r in csv.DictReader(open(LANE / 'pages.tsv', newline=''), delimiter='\t'):
-        t = Path(r['text_path']); pages.append((r['page_id'], 'saved since', t.read_text(errors='replace') if t.exists() else ''))
+        pages.append((r['page_id'], 'saved since', M.saved_since_text(r['page_id'])))
+    # pages saved after that list was closed (research/nv8_pages_added.tsv says why each was saved); counted by the same rules
+    for r in csv.DictReader(open(R / 'nv8_pages_added.tsv', newline=''), delimiter='\t'):
+        pages.append((r['page_id'], 'saved since', M.saved_since_text(r['page_id'])))
+    recovered = {pid for pid, _, _ in pages if (M.P / pid / 'text.recovered.txt').exists()}
     info = {pid: D.meta(pid) for pid, _, _ in pages}
     host = lambda u: re.sub(r'^www\.', '', re.sub(r'^https?://', '', u).split('/')[0].lower())
     def key(u):
@@ -53,6 +65,7 @@ def main():
         return re.sub(r'/amp$', '', u.replace('/amp/', '/'))                 # a site's AMP address is the same article
     is_post = lambda pid: host(info[pid][0]) in ('x.com', 'twitter.com')
     RAW = {pid: runs(text) for pid, _, text in pages}
+    LEAD = {pid: opening(text, 120) for pid, _, text in pages}
     # the headline of a page, as words, without the site's name after a bar or dash
     tw = {pid: frozenset(re.findall(r"[a-z0-9']+", html.unescape(re.split(r'\s[|–—-]\s', info[pid][1])[0]).lower().replace('’', "'"))) for pid, _, _ in pages}
     alike_title = lambda a, b: bool(tw[a]) and bool(tw[b]) and len(tw[a] & tw[b]) / len(tw[a] | tw[b]) >= 0.8
@@ -110,8 +123,11 @@ def main():
             continue
         small, big = sorted((len(S[a]), len(S[b])))
         c = len(S[a] & S[b]) / small
-        if c >= 0.80 and small / big >= 0.5:
-            edges[(a, b)] = f'text of the shorter is {c:.0%} inside the other ({a}), which is under twice its length'
+        # and the two share their lead: a later dispatch that puts a new lead above a retained earlier one is a new report (the eighth
+        # reading, Nov 16, 2026: one test for a later version), so the two must share eight seven-word runs within their opening 120 words
+        same_lead = len(LEAD[a] & LEAD[b]) >= 8
+        if c >= 0.80 and small / big >= 0.5 and same_lead:
+            edges[(a, b)] = f'text of the shorter is {c:.0%} inside the other ({a}), which is under twice its length, and the two share their lead'
     # identity by reading: research/nv8_article_pairs.tsv holds each pair a reader opened and judged; a verdict there overrides the rule
     read = {}
     pr = R / 'nv8_article_pairs.tsv'
@@ -135,15 +151,26 @@ def main():
         why.setdefault(b, reason)
     # no pair read as different may end in one article through other pages
     clash = [sorted(pair) for pair, (v, _) in read.items() if v == 'different' and len(pair) == 2 and all(x in known for x in pair) and len({find(x) for x in pair}) == 1]
+    if clash:                      # say which joins tie them, so the pair can be read
+        for x, y in clash[:3]:
+            grp = [(a_, b_, r_[:70]) for (a_, b_), r_ in edges.items() if find(a_) == find(x)]
+            print('CLASH', x, y, '| joins in their group:', grp)
     assert not clash, ('two pages read as different articles are joined through others', clash[:5])
     # pairs that look alike and are not joined: listed for a reader (held with the project: it carries headlines)
     alike = []; listed = set()
-    for (a, b), n in pairs_sharing(RAW, 150).items():
+    # the screen (widened on Nov 16, 2026, after the eighth reading found three wire copies it had missed: copies with house edits, trims
+    # and added paragraphs share far less than half): any two counted-size pages that share 25 or more seven-word runs making up a fifth
+    # of the shorter, with each site's furniture left out. Most such pairs are different articles that quote one statement; a reader says.
+    tally = Counter()
+    for (a, b), n in pairs_sharing(S, 30).items():
         if find(a) == find(b) or frozenset((a, b)) in read:
             continue
-        c = len(RAW[a] & RAW[b]) / min(len(RAW[a]), len(RAW[b]))
-        if c >= 0.5:
+        c = n / min(len(S[a]), len(S[b]))
+        for lim in (0.5, 0.35, 0.2, 0.1):
+            tally[lim] += n >= 25 and c >= lim
+        if n >= 25 and c >= 0.20:
             alike.append([a, b, f'{c:.2f}', 'text alike']); listed.add(frozenset((a, b)))
+    print('unread pairs sharing 25+ runs, by share of the shorter:', dict(tally))
     for site, ids in by_site.items():
         for i, a in enumerate(ids):
             for b in ids[i + 1:]:
@@ -175,9 +202,12 @@ def main():
             counted, reason = 'no', f'dated {pub} (U.S. Eastern), after the fifteen days'
         elif pub not in ('', '?') and pub < FIRST:
             counted, reason = 'no', f'dated {pub}, before the fifteen days (a background page)'
-        elif pid in gaps and NOT_THE_PIECE.search(gaps[pid]):
+        elif pid in gaps and NOT_THE_PIECE.search(gaps[pid]) and pid not in recovered:
+            # the reader's note describes the first extraction; a page whose article was then found in the saved HTML (scripts/recover_bodies.py) is counted
             counted, reason = 'no', 'the saved copy is a block or error page, or another page in its place (see the census gaps)'
-        part = 'yes' if counted == 'yes' and pid in gaps else ''          # counted, and the census reader listed what of it could not be read
+        elif not RAW[pid] and not (title or '').strip():
+            counted, reason = 'no', 'an empty capture: the saved copy holds no text and no headline'
+        part = 'yes' if counted == 'yes' and pid in gaps and (pid not in recovered or pid in gaps_f) else ''          # counted, and the census reader listed what of it could not be read (for a recovered page: the reader of the recovered text)
         out.append([pid, which, order[root], host(url), pub, basis, read_from[:60], len(text), counted, reason, why.get(pid, ''), title, part])
     with open(R / 'nv8_articles.tsv', 'w', newline='') as f:           # published with the figure: no headline, no text
         w = csv.writer(f, delimiter='\t', lineterminator='\n')
