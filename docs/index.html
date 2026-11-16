@@ -450,8 +450,8 @@ details.src li { display: flex; flex-direction: column; gap: 3px; overflow-wrap:
     });
     a.ties.forEach(function (t) { ties.append(h('div', { class: 'tie' }, h('span', { class: 'kind', text: t.k }), h('p', { text: t.t }), sources(t.s))); });
     if (!a.ties.length && !pos.length) ties.append(h('p', { class: 'muted', text: 'No tie is drawn for this actor.' }));
-    if (none.length) ties.append(h('h4', { text: 'Searched, and none found (' + none.length + ')' }), h('p', { class: 'small', text: 'A search that found nothing is not a tie. It says what was looked for and through which date.' }),
-      none.map(function (l) { return h('div', { class: 'tie' }, h('span', { class: 'kind', text: D.sides[l.side] }), h('p', { text: l.t }), sources(l.s)); }));
+    if (none.length) ties.append(h('div', { class: 'list' }, h('h4', { text: 'Searched, and none found (' + none.length + ')' }), h('p', { class: 'small', text: 'A search that found nothing is not a tie. It says what was looked for and through which date.' }),
+      none.map(function (l) { return h('div', { class: 'tie' }, h('span', { class: 'kind', text: D.sides[l.side] }), h('p', { text: l.t }), sources(l.s)); })));
     panel.append(ties, h('p', { class: 'notshown' }, h('b', { text: g.label + '. No document here shows ' }), g.not_shown));
     panel.scrollTop = 0; if (hit) hit.scrollIntoView({ block: 'nearest' });
   }
