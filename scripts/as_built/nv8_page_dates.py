@@ -158,7 +158,7 @@ def day_of(pid, url, title, given):
         m = re.search(r'"created_at":\s*"([^"]+)"', whole)
         if m:
             return datetime.strptime(m.group(1), '%a %b %d %H:%M:%S %z %Y').astimezone(ET).date().isoformat(), 'post', m.group(1)
-    addr = re.search(r'/(20\d\d)/(\d\d)/(\d\d)/|/(20\d\d)(\d\d)(\d\d)_', url or '')
+    addr = re.search(r'/(20\d\d)/(\d\d)/(\d\d)(?:/|[?#]|$)|/(20\d\d)(\d\d)(\d\d)_', url or '')     # the day may end the address (an Economist page, Nov 16, 2026)
     if pid.startswith('man-'):
         head = flat(body[:3500]); pr = PRINTED.search(head)
         m = re.search(r'Published (YESTERDAY|(\d{1,2}) HOURS? AGO)', head)

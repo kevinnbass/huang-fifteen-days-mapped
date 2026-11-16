@@ -144,7 +144,7 @@ def main():
     check(all((art_of[p['page_a']] == art_of[p['page_b']]) == (p['verdict'] == 'same') for p in used),
           f'each of the {len(used)} pairs of pages a reader judged is joined, or kept apart, as the reader judged it ({same_} the same article, {len(used) - same_} different; research/nv8_article_pairs.tsv)',
           str([(p['page_a'], p['page_b']) for p in used if (art_of[p['page_a']] == art_of[p['page_b']]) != (p['verdict'] == 'same')][:5]))
-    check(f'({len(used)} pairs over three readings: {same_} the same article' in flat and f'{len(used) - same_} different' in flat and f'{part_} counted pages are still held only in part' in flat
+    check(f'({len(used)} pairs over four readings: {same_} the same article' in flat and f'{len(used) - same_} different' in flat and f'{part_} counted pages are still held only in part' in flat
           and f'({in_copy} pages whose metadata and text carry none, or carry one the printed stamp contradicts, were read in their saved copy)' in flat and in_copy == len(days_read)
           and not any(r['counted'] == 'yes' and not r['day'] for r in art)
           and {r['page_id']: r['day'] for r in days_read}.items() <= {r['page_id']: r['day'] for r in art}.items(),

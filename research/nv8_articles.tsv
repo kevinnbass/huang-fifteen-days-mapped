@@ -385,7 +385,7 @@ sw-financeyahoocom-06	first census	A0372	finance.yahoo.com	2026-11-09	header sta
 sw-financeyahoocom-07	first census	A0373	finance.yahoo.com	2026-11-08	header stamp	2026-11-09T01:07:00Z	10221	yes			
 sw-financeyahoocom-08	first census	A0301	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T09:50:21Z	4221	yes		text of the shorter is 93% inside the other (sw-decryptco-d0d0b9f5), which is under twice its length, and the two share their lead	
 sw-financeyahoocom-09	first census	A0374	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T13:52:19Z	1487	yes			
-sw-financeyahoocom-10	first census	A0375	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T19:29:00Z	2444	yes			
+sw-financeyahoocom-10	first census	A0375	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T19:29:00Z	2444	yes		read as the same article as man-644c1225780b by a reader from another model family (lane pairs_nv8_c, Nov 16, 2026)	
 sw-financeyahoocom-11	first census	A0376	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T14:42:35Z	4750	yes			
 sw-financeyahoocom-12	first census	A0377	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T23:00:00Z	5399	yes			
 sw-financeyahoocom-13	first census	A0378	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T17:03:11Z	4418	yes			
@@ -1162,101 +1162,155 @@ art-fc-x-lorenz-img3	saved since	A1097	pbs.twimg.com		none		107	no	not a news pi
 art-fc-yahoo-politico-himes	saved since	A1098	yahoo.com	2026-11-11	header stamp	2026-11-11T23:30:07Z	4272	yes			
 art-fc-zerohedge-rubio-memo	saved since	A1099	zerohedge.com	2026-11-14	header stamp	2026-11-14T18:30:00-0500	10167	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
 art-fc-zerohedge-sacks	saved since	A1100	zerohedge.com	2026-11-14	header stamp	2026-11-14T19:00:00-0500	15004	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
-man-055b5f33923f	saved since	A1101	wsj.com	2026-11-12	stamp line	Updated Nov. 12, 2026 6 29 pm ET	6112	yes			
+man-055b5f33923f	saved since	A1101	wsj.com	2026-11-12	stamp line	Updated Nov. 12, 2026 6 29 pm ET	6124	yes			
 man-087c07dddc19	saved since	A1102	nytimes.com	2026-11-14	stamp line	Nov. 14, 2026	4567	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
-man-109ae199a0e7	saved since	A1103	reuters.com	2026-11-12	stamp line	November 12, 2026	5073	yes			
-man-120df7029b3a	saved since	A1104	ft.com	2026-11-10	stamp line	Published NOV 10 2026	4029	yes			
-man-18c2bce60ee2	saved since	A1105	ft.com	2026-11-14	hours ago	Published 17 HOURS AGO; printed 11/14/26, 22:04	4489	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
-man-1dc383a3501c	saved since	A1106	ft.com	2026-11-13	yesterday	Published YESTERDAY; printed 11/14/26, 22:04	5994	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-1fbc18e5e77d	saved since	A1107	wsj.com	2026-11-12	stamp line	Nov. 12, 2026	1639	yes			
+man-109ae199a0e7	saved since	A1103	reuters.com	2026-11-12	stamp line	November 12, 2026	5084	yes			
+man-120df7029b3a	saved since	A1104	ft.com	2026-11-10	stamp line	Published NOV 10 2026	4042	yes			
+man-18c2bce60ee2	saved since	A1105	ft.com	2026-11-14	hours ago	Published 17 HOURS AGO; printed 11/14/26, 22:04	4502	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
+man-1dc383a3501c	saved since	A1106	ft.com	2026-11-13	yesterday	Published YESTERDAY; printed 11/14/26, 22:04	6011	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-1fbc18e5e77d	saved since	A1107	wsj.com	2026-11-12	stamp line	Nov. 12, 2026	1642	yes			
 man-2756304f6967	saved since	A1108	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	6505	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-399ee485265a	saved since	A1109	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 5 43 pm ET	8426	yes			
-man-39d7d213ec12	saved since	A1110	bloomberg.com	2026-11-06	stamp line	November 6, 2026 at 8:56 AM	1677	yes			yes
-man-441e3f343197	saved since	A1111	nytimes.com	2026-11-11	stamp line	Nov. 11, 2026	8189	yes			
-man-473350ba98d9	saved since	A1112	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	6830	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-477302111f8e	saved since	A1113	ft.com	2026-11-12	stamp line	Published NOV 12 2026	6342	yes			
-man-50c4c8f67531	saved since	A1114	ft.com	2026-11-12	stamp line	Published NOV 12 2026	9563	yes			
-man-575551038d4a	saved since	A1115	ft.com	2026-11-12	stamp line	Published NOV 12 2026	5415	yes			
+man-399ee485265a	saved since	A1109	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 5 43 pm ET	8435	yes			
+man-39d7d213ec12	saved since	A1110	bloomberg.com	2026-11-06	stamp line	November 6, 2026 at 8:56 AM	1679	yes			yes
+man-441e3f343197	saved since	A1111	nytimes.com	2026-11-11	stamp line	Nov. 11, 2026	8191	yes			
+man-473350ba98d9	saved since	A1112	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	6832	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-477302111f8e	saved since	A1113	ft.com	2026-11-12	stamp line	Published NOV 12 2026	6350	yes			
+man-50c4c8f67531	saved since	A1114	ft.com	2026-11-12	stamp line	Published NOV 12 2026	9598	yes			
+man-575551038d4a	saved since	A1115	ft.com	2026-11-12	stamp line	Published NOV 12 2026	5431	yes			
 man-5db1c88adc15	saved since	A1116	nytimes.com	2026-11-12	stamp line	Nov. 12, 2026	3204	yes			
-man-6179b837e55d	saved since	A1117	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 1:00 PM	2138	yes			yes
-man-77de016e8d04	saved since	A1118	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	14346	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-79d9e7d751c3	saved since	A1119	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 9 07 pm ET	11240	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-80f9625ff363	saved since	A1120	ft.com	2026-11-13	yesterday	Published YESTERDAY; printed 11/14/26, 22:04	4830	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-840d9174ebc8	saved since	A1121	wsj.com	2026-11-13	stamp line	Updated Nov. 13, 2026 11 01 am ET	4458	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-8b45e47575ca	saved since	A1122	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	7826	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-6179b837e55d	saved since	A1117	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 1:00 PM	2142	yes			yes
+man-77de016e8d04	saved since	A1118	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	14349	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-79d9e7d751c3	saved since	A1119	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 9 07 pm ET	11287	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-80f9625ff363	saved since	A1120	ft.com	2026-11-13	yesterday	Published YESTERDAY; printed 11/14/26, 22:04	4843	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-840d9174ebc8	saved since	A1121	wsj.com	2026-11-13	stamp line	Updated Nov. 13, 2026 11 01 am ET	4472	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-8b45e47575ca	saved since	A1122	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	7827	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
 man-8d96e071b1d8	saved since	A1123	washingtonpost.com	2026-11-13	address	/2026/11/13/	10435	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-8fe865a2b656	saved since	A1124	nytimes.com	2026-11-14	stamp line	Nov. 14, 2026	20464	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
+man-8fe865a2b656	saved since	A1124	nytimes.com	2026-11-14	stamp line	Nov. 14, 2026	20466	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
 man-90e99613e4b5	saved since	A1125	nytimes.com	2026-11-14	stamp line	Nov. 14, 2026	7804	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
 man-921a60b7ee50	saved since	A1126	washingtonpost.com	2026-11-10	stamp line	November 10, 2026	7952	yes			
-man-923fe8754943	saved since	A1049	wsj.com	2026-10-31	stamp line	Updated Oct. 31, 2026 8 47 am ET	10109	yes		read as the same article as art-fc-itiger-wsj-1030 by the seventh independent reading (lane audit_nv8_s8a, Nov 15, 2026)	
-man-94ff07b3d009	saved since	A1127	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	5617	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-9de9f2a5db75	saved since	A1128	wsj.com	2026-11-12	stamp line	Updated Nov. 12, 2026 7 44 pm ET	10835	yes			
-man-9e4f3db24cad	saved since	A1129	nytimes.com	2026-11-10	stamp line	Nov. 10, 2026	13831	yes			
-man-9fdcdb135f3a	saved since	A1130	ft.com	2026-11-13	stamp line	Published NOV 13 2026	4544	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-a45550a35921	saved since	A1131	ft.com	2026-11-12	stamp line	Published NOV 12 2026	6194	yes			
-man-a7c80d31d08a	saved since	A1132	economist.com	2026-11-14	stamp line	Nov 14th 2026	4202	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
-man-bb944902439c	saved since	A1133	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 9 00 pm ET	7280	yes			
-man-bbg-1029-01	saved since	A1134	bloomberg.com	2026-10-29	stamp line	October 29, 2026 at 1:50 PM	1697	yes			yes
-man-bbg-1109-02	saved since	A1135	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 12:00 PM	1665	yes			yes
-man-bbg-1109-03	saved since	A1136	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 11:05 AM	1699	yes			yes
-man-c11dbdcffe3d	saved since	A1137	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 4 13 pm ET	6237	yes			
-man-c32180d5e8fe	saved since	A1138	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 5 53 pm ET	4896	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-c76939f79a79	saved since	A1139	ft.com	2026-11-13	stamp line	Published NOV 13 2026	3353	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-cc6c29c9f823	saved since	A1140	economist.com	2026-11-12	stamp line	Nov 12th 2026	7153	yes			
-man-d89c11b35532	saved since	A1141	nytimes.com	2025-10-09	stamp line	Oct. 9, 2025	19444	no	dated 2025-10-09, before the fifteen days (a background page)		
-man-df1cbeb67996	saved since	A1142	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 3 15 pm ET	5760	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-e1161e38dc19	saved since	A1036	nytimes.com	2026-11-11	stamp line	Nov. 11, 2026	5626	yes		read as the same article as art-fc-bs-nyt-1111-exec by a reader from another model family (lane pairs_nv8_a, Nov 15, 2026)	
-man-e2596eab15f4	saved since	A1143	ft.com	2026-11-13	stamp line	Published NOV 13 2026	9764	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-economist-1111-01	saved since	A1086	economist.com	2026-11-11	stamp line	Nov 11th 2026	7251	yes		same address as art-fc-wb-econ-1111-leader	yes
-man-efbf718d0a5a	saved since	A0625	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 3:28 PM	1553	yes			yes
-man-f2f8fbf1fc93	saved since	A1144	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 9 00 pm ET	7193	yes			
-man-f338833764e9	saved since	A1145	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 4:02 PM	1569	yes			yes
-man-fb28b97f8473	saved since	A1146	ft.com	2026-11-13	stamp line	Published NOV 13 2026	4495	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-ft-1103-01	saved since	A1147	ft.com	2026-11-02	stamp line	Published NOV 2 2026	4865	yes			
-man-ft-1106-01	saved since	A1148	ft.com	2026-11-05	stamp line	Published NOV 5 2026	4065	yes			
-man-ft-1107-01	saved since	A1041	ft.com	2026-11-06	stamp line	Published NOV 6 2026	4651	yes		same address as art-fc-ft-1107-romantic	
-man-ft-1109-02	saved since	A1149	ft.com	2026-11-09	stamp line	Published NOV 9 2026	4809	yes			
-man-ft-1109-03	saved since	A1150	ft.com	2026-11-09	stamp line	Published NOV 9 2026	6762	yes			yes
-man-ft-1109-04	saved since	A1151	ft.com	2026-11-09	stamp line	Published NOV 9 2026	5109	yes			
-man-ft-1109-05	saved since	A1152	ft.com	2026-11-09	stamp line	Published NOV 9 2026	6672	yes			
-man-ft-1110-01	saved since	A1153	ft.com	2026-11-09	stamp line	Published NOV 9 2026	8879	yes			
-man-ft-1110-02	saved since	A1154	ft.com	2026-11-10	stamp line	Published NOV 10 2026	6118	yes			
-man-ft-1110-03	saved since	A1155	ft.com	2026-11-10	stamp line	Published NOV 10 2026	10392	yes			yes
-man-ft-1111-01	saved since	A1156	ft.com	2026-11-10	stamp line	Published NOV 10 2026	7939	yes			
-man-ft-1112-01	saved since	A1157	ft.com	2026-11-12	stamp line	Published NOV 12 2026	4432	yes			
-man-ft-1112-03	saved since	A1158	ft.com	2026-11-11	stamp line	Published NOV 11 2026	7047	yes			
-man-ft-1112-05	saved since	A1159	ft.com	2026-11-12	header stamp	2026-11-12	38787	yes			
-man-ft-1112-09	saved since	A1042	ft.com	2026-11-12	stamp line	Published NOV 12 2026	4907	yes		same address as art-fc-ft-1112-singapore	
-man-nyt-1029-01	saved since	A1160	nytimes.com	2026-10-29	stamp line	Oct. 29, 2026	17966	yes			
-man-nyt-1105-01	saved since	A1161	nytimes.com	2026-11-05	stamp line	Nov. 5, 2026	6005	yes			
-man-nyt-1106-01	saved since	A0550	nytimes.com	2026-11-06	stamp line	Nov. 6, 2026	11655	yes			
-man-nyt-1107-01	saved since	A1162	nytimes.com	2026-11-07	stamp line	Published Nov. 7, 2026	12385	yes			
-man-nyt-1108-01	saved since	A0136	nytimes.com	2026-11-08	stamp line	Nov. 8, 2026	11617	yes		read as the same article as art-fc-inq-nyt-1108-investigation by a reader from another model family (lane pairs_nv8_a, Nov 15, 2026)	
-man-nyt-1108-02	saved since	A1163	nytimes.com	2026-11-08	stamp line	Nov. 8, 2026	7594	yes			
-man-nyt-1109-01	saved since	A1164	nytimes.com	2026-11-09	stamp line	Nov. 9, 2026	5489	yes			
-man-nyt-1109-02	saved since	A1165	nytimes.com	2026-11-09	stamp line	Nov. 9, 2026	13558	yes			
-man-nyt-1109-03	saved since	A1166	nytimes.com	2026-11-09	stamp line	Nov. 9, 2026	10904	yes			
-man-nyt-1109-04	saved since	A1167	nytimes.com	2026-11-09	stamp line	Nov. 9, 2026	6885	yes			
-man-nyt-1110-01	saved since	A1168	nytimes.com	2026-11-10	stamp line	Nov. 10, 2026	8178	yes			
-man-nyt-1110-02	saved since	A0774	nytimes.com	2026-11-10	stamp line	Nov. 10, 2026	9487	yes		read as the same article as art-fc-inq-nyt-1110-trip by a reader from another model family (lane pairs_nv8_a, Nov 15, 2026)	
+man-923fe8754943	saved since	A1049	wsj.com	2026-10-31	stamp line	Updated Oct. 31, 2026 8 47 am ET	10139	yes		read as the same article as art-fc-itiger-wsj-1030 by the seventh independent reading (lane audit_nv8_s8a, Nov 15, 2026)	
+man-94ff07b3d009	saved since	A1127	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	5619	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-9de9f2a5db75	saved since	A1128	wsj.com	2026-11-12	stamp line	Updated Nov. 12, 2026 7 44 pm ET	10874	yes			
+man-9e4f3db24cad	saved since	A1129	nytimes.com	2026-11-10	stamp line	Nov. 10, 2026	13834	yes			
+man-9fdcdb135f3a	saved since	A1130	ft.com	2026-11-13	stamp line	Published NOV 13 2026	4555	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-a45550a35921	saved since	A1131	ft.com	2026-11-12	stamp line	Published NOV 12 2026	6208	yes			
+man-a7c80d31d08a	saved since	A1132	economist.com	2026-11-14	stamp line	Nov 14th 2026	4208	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
+man-bb944902439c	saved since	A1133	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 9 00 pm ET	7303	yes			
+man-bbg-1029-01	saved since	A1134	bloomberg.com	2026-10-29	stamp line	October 29, 2026 at 1:50 PM	1699	yes			yes
+man-bbg-1109-02	saved since	A1135	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 12:00 PM	1667	yes			yes
+man-bbg-1109-03	saved since	A1136	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 11:05 AM	1703	yes			yes
+man-c11dbdcffe3d	saved since	A1137	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 4 13 pm ET	6245	yes			
+man-c32180d5e8fe	saved since	A1138	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 5 53 pm ET	4906	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-c76939f79a79	saved since	A1139	ft.com	2026-11-13	stamp line	Published NOV 13 2026	3371	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-cc6c29c9f823	saved since	A1140	economist.com	2026-11-12	stamp line	Nov 12th 2026	7170	yes			
+man-d89c11b35532	saved since	A1141	nytimes.com	2025-10-09	stamp line	Oct. 9, 2025	19447	no	dated 2025-10-09, before the fifteen days (a background page)		
+man-df1cbeb67996	saved since	A1142	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 3 15 pm ET	5779	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-e1161e38dc19	saved since	A1036	nytimes.com	2026-11-11	stamp line	Nov. 11, 2026	5628	yes		read as the same article as art-fc-bs-nyt-1111-exec by a reader from another model family (lane pairs_nv8_a, Nov 15, 2026)	
+man-e2596eab15f4	saved since	A1143	ft.com	2026-11-13	stamp line	Published NOV 13 2026	9798	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-economist-1111-01	saved since	A1086	economist.com	2026-11-11	stamp line	Nov 11th 2026	7268	yes		same address as art-fc-wb-econ-1111-leader	yes
+man-efbf718d0a5a	saved since	A0625	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 3:28 PM	1555	yes			yes
+man-f2f8fbf1fc93	saved since	A1144	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 9 00 pm ET	7205	yes			
+man-f338833764e9	saved since	A1145	bloomberg.com	2026-11-09	stamp line	November 9, 2026 at 4:02 PM	1571	yes			yes
+man-fb28b97f8473	saved since	A1146	ft.com	2026-11-13	stamp line	Published NOV 13 2026	4500	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-ft-1103-01	saved since	A1147	ft.com	2026-11-02	stamp line	Published NOV 2 2026	4875	yes			
+man-ft-1106-01	saved since	A1148	ft.com	2026-11-05	stamp line	Published NOV 5 2026	4076	yes			
+man-ft-1107-01	saved since	A1041	ft.com	2026-11-06	stamp line	Published NOV 6 2026	4663	yes		same address as art-fc-ft-1107-romantic	
+man-ft-1109-02	saved since	A1149	ft.com	2026-11-09	stamp line	Published NOV 9 2026	4819	yes			
+man-ft-1109-03	saved since	A1150	ft.com	2026-11-09	stamp line	Published NOV 9 2026	6779	yes			yes
+man-ft-1109-04	saved since	A1151	ft.com	2026-11-09	stamp line	Published NOV 9 2026	5118	yes			
+man-ft-1109-05	saved since	A1152	ft.com	2026-11-09	stamp line	Published NOV 9 2026	6692	yes			
+man-ft-1110-01	saved since	A1153	ft.com	2026-11-09	stamp line	Published NOV 9 2026	8908	yes			
+man-ft-1110-02	saved since	A1154	ft.com	2026-11-10	stamp line	Published NOV 10 2026	6132	yes			
+man-ft-1110-03	saved since	A1155	ft.com	2026-11-10	stamp line	Published NOV 10 2026	10417	yes			yes
+man-ft-1111-01	saved since	A1156	ft.com	2026-11-10	stamp line	Published NOV 10 2026	7957	yes			
+man-ft-1112-01	saved since	A1157	ft.com	2026-11-12	stamp line	Published NOV 12 2026	4441	yes			
+man-ft-1112-03	saved since	A1158	ft.com	2026-11-11	stamp line	Published NOV 11 2026	7060	yes			
+man-ft-1112-05	saved since	A1159	ft.com	2026-11-12	header stamp	2026-11-12	38889	yes			
+man-ft-1112-09	saved since	A1042	ft.com	2026-11-12	stamp line	Published NOV 12 2026	4922	yes		same address as art-fc-ft-1112-singapore	
+man-nyt-1029-01	saved since	A1160	nytimes.com	2026-10-29	stamp line	Oct. 29, 2026	17967	yes			
+man-nyt-1105-01	saved since	A1161	nytimes.com	2026-11-05	stamp line	Nov. 5, 2026	6009	yes			
+man-nyt-1106-01	saved since	A0550	nytimes.com	2026-11-06	stamp line	Nov. 6, 2026	11656	yes			
+man-nyt-1107-01	saved since	A1162	nytimes.com	2026-11-07	stamp line	Published Nov. 7, 2026	12388	yes			
+man-nyt-1108-01	saved since	A0136	nytimes.com	2026-11-08	stamp line	Nov. 8, 2026	11620	yes		read as the same article as art-fc-inq-nyt-1108-investigation by a reader from another model family (lane pairs_nv8_a, Nov 15, 2026)	
+man-nyt-1108-02	saved since	A1163	nytimes.com	2026-11-08	stamp line	Nov. 8, 2026	7599	yes			
+man-nyt-1109-01	saved since	A1164	nytimes.com	2026-11-09	stamp line	Nov. 9, 2026	5490	yes			
+man-nyt-1109-02	saved since	A1165	nytimes.com	2026-11-09	stamp line	Nov. 9, 2026	13561	yes			
+man-nyt-1109-03	saved since	A1166	nytimes.com	2026-11-09	stamp line	Nov. 9, 2026	10905	yes			
+man-nyt-1109-04	saved since	A1167	nytimes.com	2026-11-09	stamp line	Nov. 9, 2026	6886	yes			
+man-nyt-1110-01	saved since	A1168	nytimes.com	2026-11-10	stamp line	Nov. 10, 2026	8179	yes			
+man-nyt-1110-02	saved since	A0774	nytimes.com	2026-11-10	stamp line	Nov. 10, 2026	9488	yes		read as the same article as art-fc-inq-nyt-1110-trip by a reader from another model family (lane pairs_nv8_a, Nov 15, 2026)	
 man-nyt-1110-04	saved since	A1169	nytimes.com	2026-11-10	stamp line	Nov. 10, 2026	3186	yes			
 man-nyt-1110-06	saved since	A1170	nytimes.com	2026-11-10	stamp line	Nov. 10, 2026	8249	yes			
-man-nyt-1111-01	saved since	A1171	nytimes.com	2026-11-11	stamp line	Nov. 11, 2026	13752	yes			
-man-nyt-1111-02	saved since	A1172	nytimes.com	2026-11-11	stamp line	Nov. 11, 2026	5885	yes			
-man-nyt-1112-01	saved since	A1173	nytimes.com	2026-11-12	stamp line	Nov. 12, 2026	14587	yes			
+man-nyt-1111-01	saved since	A1171	nytimes.com	2026-11-11	stamp line	Nov. 11, 2026	13756	yes			
+man-nyt-1111-02	saved since	A1172	nytimes.com	2026-11-11	stamp line	Nov. 11, 2026	5887	yes			
+man-nyt-1112-01	saved since	A1173	nytimes.com	2026-11-12	stamp line	Nov. 12, 2026	14592	yes			
 man-nyt-1112-04	saved since	A1174	nytimes.com	2026-11-12	stamp line	Nov. 12, 2026	3639	yes			
-man-nyt-1112-07	saved since	A0137	nytimes.com	2026-11-11	stamp line	Published Nov. 11, 2026	7598	yes			
-man-nyt-1112-09	saved since	A1175	nytimes.com	2026-11-12	stamp line	Published Nov. 12, 2026	19186	yes			
+man-nyt-1112-07	saved since	A0137	nytimes.com	2026-11-11	stamp line	Published Nov. 11, 2026	7600	yes			
+man-nyt-1112-09	saved since	A1175	nytimes.com	2026-11-12	stamp line	Published Nov. 12, 2026	19189	yes			
 man-politico-1109-01	saved since	A1176	politico.com	2026-11-09	header stamp	2026-11-09	4923	yes			
 man-politico-1110-02	saved since	A1177	politico.com	2026-11-10	header stamp	2026-11-10	7955	yes			
 man-wapo-1111-01	saved since	A1002	washingtonpost.com	2026-11-11	stamp line	November 11, 2026	7723	yes		text of the shorter is 98% inside the other (sw-wtopcom-02), which is under twice its length, and the two share their lead	
 man-wapo-1112-02	saved since	A1178	washingtonpost.com	2026-11-12	stamp line	November 12, 2026	8182	yes			
-man-wsj-1109-02	saved since	A1179	wsj.com	2026-11-09	stamp line	Nov. 9, 2026 5 56 pm ET	6140	yes			
-man-wsj-1109-04	saved since	A1180	wsj.com	2026-11-13	stamp line	Updated Nov. 13, 2026 9 08 am ET	5846	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-wsj-1109-07	saved since	A1181	wsj.com	2026-11-09	stamp line	Nov. 9, 2026 5 30 am ET	6857	yes			
-man-wsj-1109-09	saved since	A1182	wsj.com	2026-11-09	stamp line	Nov. 9, 2026 6 08 pm ET	4901	yes			
-man-wsj-1110-03	saved since	A1183	wsj.com	2026-11-10	stamp line	Updated Nov. 10, 2026 8 57 am ET	8153	yes			
-man-wsj-1112-01	saved since	A1184	wsj.com	2026-11-11	stamp line	Nov. 11, 2026 8 00 pm ET	6770	yes			
-man-wsj-1112-05	saved since	A1185	wsj.com	2026-11-11	stamp line	Nov. 11, 2026 9 00 pm ET	6346	yes			
+man-wsj-1109-02	saved since	A1179	wsj.com	2026-11-09	stamp line	Nov. 9, 2026 5 56 pm ET	6155	yes			
+man-wsj-1109-04	saved since	A1180	wsj.com	2026-11-13	stamp line	Updated Nov. 13, 2026 9 08 am ET	5858	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-wsj-1109-07	saved since	A1181	wsj.com	2026-11-09	stamp line	Nov. 9, 2026 5 30 am ET	6880	yes			
+man-wsj-1109-09	saved since	A1182	wsj.com	2026-11-09	stamp line	Nov. 9, 2026 6 08 pm ET	4913	yes			
+man-wsj-1110-03	saved since	A1183	wsj.com	2026-11-10	stamp line	Updated Nov. 10, 2026 8 57 am ET	8174	yes			
+man-wsj-1112-01	saved since	A1184	wsj.com	2026-11-11	stamp line	Nov. 11, 2026 8 00 pm ET	6790	yes			
+man-wsj-1112-05	saved since	A1185	wsj.com	2026-11-11	stamp line	Nov. 11, 2026 9 00 pm ET	6360	yes			
 art-line-wex-scott-1112	saved since	A1186	washingtonexaminer.com	2026-11-12	header stamp	2026-11-13T03:44:53+00:00	1415	yes			yes
 art-line-straitstimes-bloomberg-1110	saved since	A1187	straitstimes.com	2026-11-09	header stamp	2026-11-09T23:30:00.000Z	5618	yes			
+man-wsj-1110-02	saved since	A1188	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 5 30 am ET	7195	yes			
+man-fb13a9bf51b4	saved since	A1189	ft.com	2026-11-13	stamp line	Published NOV 13 2026	6352	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-b8094f1ead01	saved since	A1190	ft.com	2026-11-12	stamp line	Published NOV 12 2026	4786	yes			
+man-598a830b2580	saved since	A1191	ft.com	2026-11-09	stamp line	Published NOV 9 2026	10847	yes			
+man-d2ff9a1e4f2c	saved since	A1192	ft.com	2026-11-13	stamp line	Published NOV 13 2026	4280	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-506b033a9fd4	saved since	A1193	wsj.com	2026-11-09	stamp line	Nov. 9, 2026 3 17 am ET	4390	yes			
+man-8949e622b66f	saved since	A1083	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 9 00 pm ET	8993	yes		text of the shorter is 89% inside the other (art-fc-tovima-wsj-1113-belittled), which is under twice its length, and the two share their lead	
+man-910cb6ed67c8	saved since	A1194	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 6 55 am ET	11339	yes			
+man-7ff3c607bd9e	saved since	A1195	ft.com	2026-11-12	stamp line	Published NOV 12 2026	3274	yes			
+man-2a2cbfed7a23	saved since	A1196	ft.com	2026-11-13	stamp line	Published NOV 13 2026	4197	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-08b0429539bf	saved since	A1197	reuters.com	2026-11-12	stamp line	November 12, 2026 1:27 PM	9207	yes			
+man-2dfcc1bab289	saved since	A1198	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 6 09 am ET	8405	yes			
+man-6e8e267e6b90	saved since	A1199	ft.com	2026-11-09	stamp line	Published NOV 9 2026	3909	yes			
+man-05b8d5160f55	saved since	A1200	wsj.com	2026-11-09	stamp line	Updated Nov. 9, 2026 6 04 pm ET	5949	yes			
+man-wsj-1109-06	saved since	A1050	wsj.com	2026-11-08	stamp line	Nov. 8, 2026 10 38 pm ET	7764	yes		read as the same article as art-fc-itiger-wsj-1108-kids by a reader from another model family (lane pairs_nv8_c, Nov 16, 2026)	
+man-5dbffa3344fb	saved since	A1201	wsj.com	2026-11-12	stamp line	Updated Nov. 12, 2026 12 57 pm ET	7585	yes			
+man-wsj-1109-08	saved since	A1202	wsj.com	2026-11-09	stamp line	Updated Nov. 9, 2026 2 59 pm ET	8033	yes			
+man-ac79ea8f3db1	saved since	A1203	ft.com	2026-11-12	stamp line	Published NOV 12 2026	10131	yes			
+man-ff8d58262f35	saved since	A1204	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	4250	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-abbd2f24f4aa	saved since	A1205	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 9 23 am ET	9081	yes			
+man-83733609b719	saved since	A1206	wsj.com	2026-11-10	stamp line	Updated Nov. 10, 2026 6 05 pm ET	5573	yes			
+man-ft-1112-02	saved since	A1207	ft.com	2026-11-12	stamp line	Published NOV 12 2026	5142	yes			
+man-wsj-1112-02	saved since	A1208	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 9 37 am ET	8892	yes			
+man-6858b15b28f3	saved since	A1209	wsj.com	2026-11-09	stamp line	Updated Nov. 9, 2026 4 49 pm ET	5671	yes			
+man-bf5ecde76d91	saved since	A1210	wsj.com	2026-11-11	stamp line	Nov. 11, 2026 6 38 pm ET	3476	yes			
+man-25f0d7122b2b	saved since	A1211	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 10 07 am ET	9393	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-b33da908c694	saved since	A1212	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 12 43 pm ET	7478	yes			
+man-644c1225780b	saved since	A0375	wsj.com	2026-11-09	stamp line	Updated Nov. 9, 2026 2 29 pm ET	2464	yes			
+man-e9ba9adacc50	saved since	A1213	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 7 25 am ET	7352	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-bd0467189a09	saved since	A1214	ft.com	2026-11-11	stamp line	Published NOV 11 2026	5431	yes			
+man-1f23ac4d0bdf	saved since	A1215	ft.com	2026-11-12	stamp line	Published NOV 12 2026	4030	yes			
+man-ft-1112-04	saved since	A1216	ft.com	2026-11-11	stamp line	Published NOV 11 2026	4212	yes			
+man-0c5b4e4f24c9	saved since	A1217	reuters.com	2026-11-09	stamp line	November 9, 2026 4:40 PM	5871	yes			
+man-6b5f1d691c37	saved since	A1218	wsj.com	2026-11-12	stamp line	Nov. 12, 2026 3 14 pm ET	4372	yes			
+man-df899f278938	saved since	A1219	ft.com	2026-11-13	stamp line	Published NOV 13 2026	4710	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-3ca524a310c4	saved since	A1220	ft.com	2026-11-12	stamp line	Published NOV 12 2026	7572	yes			
+man-1c60a03ccd8f	saved since	A1221	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 6 04 am ET	8451	yes			
+man-92d21df0deca	saved since	A1222	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 5 57 am ET	6477	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-1787aa77cef1	saved since	A1223	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 7 54 am ET	9295	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-5378bea31457	saved since	A1224	wsj.com	2026-11-09	stamp line	Nov. 9, 2026 7 09 am ET	9404	yes			
+man-d92c3796243d	saved since	A1225	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 6 05 am ET	8761	yes			
+man-30ca7be9d497	saved since	A1226	ft.com	2026-11-10	stamp line	Published NOV 10 2026	4225	yes			
+man-c3d8b5bd71f0	saved since	A1227	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 6 14 am ET	3655	yes			
+man-211030e54eba	saved since	A1228	ft.com	2026-11-10	stamp line	Published NOV 10 2026	6967	yes			
+man-e8a4f78b0d7e	saved since	A1229	reuters.com	2026-11-12	stamp line	November 12, 2026 3:00 PM	7165	yes			
+man-1ad932db84b6	saved since	A1230	ft.com	2026-11-13	stamp line	Published NOV 13 2026	6594	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-wsj-1112-08	saved since	A1231	wsj.com	2026-11-12	stamp line	Updated Nov. 12, 2026 10 19 am ET	6437	yes			
+man-ft-1112-08	saved since	A1232	ft.com	2026-11-12	stamp line	Published NOV 12 2026	7124	yes			
+man-wsj-1110-04	saved since	A1233	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 9 28 am ET	11159	yes			
+man-91f72fc58a47	saved since	A1234	ft.com	2026-11-13	stamp line	Published NOV 13 2026	5992	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-e5c78e711bed	saved since	A1235	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 10 00 pm ET	7533	yes			
+man-67a03aea6b25	saved since	A1236	economist.com	2026-11-13	address	/2026/11/13	4499	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
+man-cd8c08517fc7	saved since	A1237	sec.gov	2026-11-11	stamp line	November 11, 2026	4203	yes			
+man-cf6650e331b3	saved since	A1238	ft.com	2026-11-12	stamp line	Published NOV 12 2026	5780	yes			

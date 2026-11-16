@@ -116,11 +116,12 @@ def ARTICLE_WORDS():
     assert all(p['verdict'] in ('cannot tell', 'same') for p in pairs if not used(p))
     line = list(csv.DictReader(open(R / 'nv8_at_the_line.tsv', newline=''), delimiter='\t'))
     W_ = lambda n: {0: 'no', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve'}.get(n, n)
-    mem = sum(x['group'] == 'member' for x in line); rec = sum(1 for _ in open(R / 'nv8_recovered_pages.tsv')) - 1; added = sum(1 for _ in open(R / 'nv8_pages_added.tsv')) - 1
+    mem = sum(x['group'] == 'member' for x in line); rec = sum(1 for _ in open(R / 'nv8_recovered_pages.tsv')) - 1
+    added = sum('three-report line' in x['why_saved'] for x in csv.DictReader(open(R / 'nv8_pages_added.tsv', newline=''), delimiter='\t'))      # the pages saved for the line; the table also lists the pages saved by hand on Nov 16
     assert all(x['drawn'] == 'yes' for x in line) and undated == 0 and added == 2, 'the sentences below say that everyone at the line is drawn, that no counted page is undated and that two pages were saved for the line'
     return (f"Counts of who is named or quoted are counts of articles, each counted once: the {n1:,} pages saved by the first search and the {n2} saved since (the papers' own articles, saved by hand or in a licensed copy, and a few transcripts) "
             f"are {len(arts):,} articles once copies of one article are joined, and {len(cnt):,} of them are counted. Two pages are one article when they have the same address or when a reader judged them so: "
-            f"every two pages that share 25 or more seven-word runs making up a fifth of the shorter were opened by a reader from another model family ({read} pairs over three readings: {same} the same article, as a syndicated or licensed copy with its lead kept, "
+            f"every two pages that share 25 or more seven-word runs making up a fifth of the shorter were opened by a reader from another model family ({read} pairs over four readings: {same} the same article, as a syndicated or licensed copy with its lead kept, "
             f"a later version at one address or two snapshots of a live page; {read - same} different, such as a statement and the articles quoting it, or a later dispatch with a new lead; {W_(unread)} more could not be read, being block pages that are not counted). "
             "Copies that share less than that are not listed, so the number of articles can still be a little high. "
             "A page's day is the day of its first publication where the page shows one, and otherwise the day of the version saved, read as a U.S. Eastern day from the page's own stamp "

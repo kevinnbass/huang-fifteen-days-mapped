@@ -504,3 +504,7 @@ sw-nvidianewsnvidiacom-02	sw-pulse2com-01	different	one quotes the other	yes	a t
 sw-storyboard18com-03	sw-vanguardngrcom-02	different	quotes the same remarks	yes	a third reader from another model family (lane pairs_nv8_b, Nov 16, 2026)
 sw-globalnewsca-03	sw-jpostcom-02	same	syndicated copy	yes	a third reader from another model family (lane pairs_nv8_b, Nov 16, 2026)
 sw-joemygodcom-01	man-nyt-1108-01	different	one quotes the other	yes	a third reader from another model family (lane pairs_nv8_b, Nov 16, 2026)
+art-fc-itiger-wsj-1108-kids	man-wsj-1109-06	same	licensed copy	yes	a reader from another model family (lane pairs_nv8_c, Nov 16, 2026)
+art-fc-tovima-wsj-1113-belittled	man-8949e622b66f	same	licensed copy	yes	a reader from another model family (lane pairs_nv8_c, Nov 16, 2026)
+sw-financeyahoocom-10	man-644c1225780b	same	licensed copy	yes	a reader from another model family (lane pairs_nv8_c, Nov 16, 2026)
+man-1787aa77cef1	man-5378bea31457	different	different entries of a series	yes	a reader from another model family (lane pairs_nv8_c, Nov 16, 2026)

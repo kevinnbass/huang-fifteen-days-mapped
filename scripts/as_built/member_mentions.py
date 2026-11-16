@@ -87,9 +87,15 @@ def saved_since_text(pid):
     d = P / pid
     for n in ('text.recovered.txt', 'text.article.txt'):
         if (d / n).exists():
-            return (d / n).read_text(errors='replace')
+            return (d / n).read_text(errors='replace').translate(LIGATURES)
     texts = [f.read_text(errors='replace') for f in (d / 'text.txt', d / 'text.reextract.txt') if f.exists()]
-    return max(texts, key=len) if texts else ''
+    return max(texts, key=len).translate(LIGATURES) if texts else ''
+
+
+# A page saved by hand as a PDF gives some letter pairs as one sign (the ff of "Jeffries", the fi of "officials"). They are written out
+# before a page is read, so that a name is found and a copy of an article shares its words with the original (Nov 16, 2026: the minority
+# leader's name on three hand-saved pages had not been counted). No page of the first census holds such a sign.
+LIGATURES = str.maketrans({'ﬀ': 'ff', 'ﬁ': 'fi', 'ﬂ': 'fl', 'ﬃ': 'ffi', 'ﬄ': 'ffl', 'ﬅ': 'st', 'ﬆ': 'st'})
 
 
 def articles():

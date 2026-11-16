@@ -145,7 +145,7 @@ def main(target):
     # reporters, who are not drawn (the seventh reading's sentences are in audit2/h-counts_check.csv, which names none)
     RELATIONS = ('same article at two addresses', 'syndicated copy', 'licensed copy', 'later version', 'live snapshots', 'same official statement', 'site furniture only', 'shared background',
                  'live page carries the stand-alone report', 'different reports of one event', 'quotes the same document', 'one quotes the other', 'rewrite by another outlet', 'truncated address collision', 'no readable text',
-                 'live page carries wire report', 'new lead above an earlier dispatch', 'post promotes the release', 'quotes the same post', 'quotes the same remarks', 'quotes the same report', 'separate daily reports')
+                 'live page carries wire report', 'new lead above an earlier dispatch', 'post promotes the release', 'quotes the same post', 'quotes the same remarks', 'quotes the same report', 'separate daily reports', 'different entries of a series')
     prs = []
     for r in csv.DictReader(open(R / 'nv8_article_pairs.tsv', newline='', encoding='utf-8'), delimiter='\t'):
         rel = r['note'].split(': ', 1)[0] if r['note'].split(': ', 1)[0] in RELATIONS else ''

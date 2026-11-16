@@ -517,10 +517,13 @@ ACTS = [
  ('warner', '2026-11-09', 'In Bloomberg\'s report of the closed briefing of that day, carried by the Straits Times: "We all obviously have questions, but I\'m not going to weigh in on any substance"; "we need to hear from the Federal Bureau of Investigation"',
   ['art-line-straitstimes-bloomberg-1110'] * 3,
   ["We all obviously have questions, but I'm not going to weigh in on any substance", 'we need to hear from the Federal Bureau of Investigation', 'met on Nov 9 behind closed doors for a security briefing']),
+ # ---- the 54 pages saved by hand on Nov 16: a remark of an actor already drawn that two counted articles carry and no chip did
+ ('stapp', '2026-11-11', 'Tells the FT: "People in San Francisco are thinking ... \'we know that he had an affair, and he apologised, now it\'s time to move on\'"; "DC is not going to let it move on"',
+  ['man-ft-1112-03'] * 3, ['said Alec Stapp, co-founder of the Institute for Progress, a Washington tech policy think-tank', 'DC is not going to let it move on', 'Published NOV 11 2026']),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
-REPORT_DAY = {('justice', '2026-11-10'), ('cornyn', '2026-11-12'), ('chan', '2026-11-12'), ('ohanlon', '2026-11-10'), ('moorhead', '2026-11-10'), ('newman', '2026-11-09'), ('newman', '2026-11-12'), ('boloor', '2026-11-12'), ('yoo', '2026-11-12'), ('commerce', '2026-11-09'), ('bresnick', '2026-11-10'), ('bresnick', '2026-11-11'), ('king', '2026-11-12'), ('nie', '2026-11-12'), ('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire', '2026-11-10'), ('grunewald', '2026-11-10'), ('stapp', '2026-11-10'),
+REPORT_DAY = {('justice', '2026-11-10'), ('cornyn', '2026-11-12'), ('chan', '2026-11-12'), ('ohanlon', '2026-11-10'), ('moorhead', '2026-11-10'), ('newman', '2026-11-09'), ('newman', '2026-11-12'), ('boloor', '2026-11-12'), ('yoo', '2026-11-12'), ('commerce', '2026-11-09'), ('bresnick', '2026-11-10'), ('bresnick', '2026-11-11'), ('king', '2026-11-12'), ('nie', '2026-11-12'), ('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire', '2026-11-10'), ('grunewald', '2026-11-10'), ('stapp', '2026-11-10'), ('stapp', '2026-11-11'),
               ('megaspeed', '2026-10-29'), ('blumenthal', '2026-11-09'), ('warner', '2026-11-09'), ('wyden', '2026-11-09'), ('ricketts', '2026-11-10'), ('ricketts', '2026-11-12'), ('moorhead', '2026-11-11'), ('himes', '2026-11-11'), ('hodges', '2026-11-12'),
               ('cornyn', '2026-11-08'), ('thune', '2026-11-12'), ('johnson', '2026-11-12'),
               ('mccaul', '2026-11-08'), ('magaziner', '2026-11-08'), ('openai', '2026-11-04'),

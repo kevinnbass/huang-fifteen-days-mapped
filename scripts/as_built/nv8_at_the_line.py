@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'
 sys.path.insert(0, str(ROOT / 'scripts'))
 import member_mentions as M, rows_map
 # name: (pages read, separate reports on the matter, drawn, the reading). The pages are the copies the reading opened, one per article.
+# Sen. Ricketts was read here at four articles (three separate reports and one that names him for earlier work on chip exports); the pages
+# saved by hand on Nov 16 add a fifth article, a Journal newsletter of Nov 10, so he is no longer at the line and his row left this table.
 MEMBERS = {
  'Huizenga': (('sw-aljazeeracom-06', 'sw-cnbccom-09', 'sw-implicatorai-04', 'tnr-lutnick'), 3, 'yes', "His call for Commerce Secretary Lutnick to testify is on CNBC's live page of Nov 12 and in two other outlets' articles of that day (three separate reports); a fourth article names him only as cosponsor of a chip bill."),
  'Magaziner': (('cnbc-1108-bipartisan', 'sw-implicatorai-02', 'sw-politicalorg-11', 'x-dream1984-article'), 3, 'yes', "His call for Lutnick to testify alongside Huang is in three outlets' articles of Nov 8 and 9 (three separate reports); a fourth, a long post on X, says he quoted another post."),
@@ -16,7 +18,6 @@ MEMBERS = {
  'Blumenthal': (('sw-cnbccom-02', 'sw-emptywheelnet-01', 'sw-semaforcom-04'), 3, 'yes', "His words to Semafor on a Senate investigation (Nov 9); CNBC on his renewed warning to donors to the president's ballroom, Nvidia among them (Nov 9); a blog's commentary on that demand (Nov 9)."),
  'Warner': (('sw-emptywheelnet-02', 'sw-semaforcom-04', 'sw-vinnewscom-03', 'art-line-straitstimes-bloomberg-1110'), 3, 'yes', "His words to Semafor (Nov 9); a report carried by VINnews that he \"said Monday\" he is interested in investigating further (Nov 10); and a Bloomberg report carried by the Straits Times that quotes him after the briefing of Nov 9. That third report was saved on Nov 16, after the eighth reading: until then it was known here only from a reader's comment under a blog post, which is the fourth page; the blog's own article does not name him."),
  'Neal': (('sw-cnbccom-09', 'man-9de9f2a5db75', 'man-a45550a35921'), 3, 'yes', "The letter of Nov 12 with Sen. Wyden, reported by CNBC, the Wall Street Journal and the Financial Times (three separate reports)."),
- 'Ricketts': (('fox-trump-successor', 'sw-washingtonsuncom-02', 'man-a45550a35921', 'man-bb944902439c'), 3, 'yes', "A Fox Business interview (Nov 12), a statement reported by the Washington Sun (Nov 10) and a remark to the Financial Times (Nov 12); a fourth article names him only for earlier work on chip exports."),
  'Scott': (('man-5db1c88adc15', 'man-9de9f2a5db75', 'man-nyt-1112-09', 'art-line-wex-scott-1112'), 3, 'yes', "His letters of Nov 12 are reported by the New York Times, the Wall Street Journal and the Washington Examiner (three separate reports). The Times's stand-alone article and the entry in its live page are one report, so the four articles are three. On Nov 15 he was withdrawn on the first two; the Examiner's article, which the aggregators listed on Nov 12 and which was not among the saved pages, was saved on Nov 16. A fifth piece listed that day, Politico's, names him in its headline and could not be saved."),
 }
 VOICES = {

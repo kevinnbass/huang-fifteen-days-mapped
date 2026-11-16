@@ -48,7 +48,9 @@ def main():
     first = len(pages)
     # what the readers of the census could not read, for every page (lanes a to d read the first census, e the pages saved since)
     gaps = {}
-    for t_ in 'abcdef':                # f read the recovered pages and two saved since: its gaps are what is still missing of those
+    for t_ in 'abcdefg':               # f read the recovered pages and two saved since: its gaps are what is still missing of those; g read the 54 pages saved on Nov 16
+        if not (LANE.parent / f'remarks_nv8_{t_}' / 'done' / 'DONE').exists():
+            continue
         for r in csv.DictReader(open(LANE.parent / f'remarks_nv8_{t_}' / 'out' / 'gaps.csv', newline='')):
             gaps[r['page_id']] = r['what_failed']
     gaps_f = {r['page_id'] for r in csv.DictReader(open(LANE.parent / 'remarks_nv8_f' / 'out' / 'gaps.csv', newline=''))}
@@ -98,9 +100,16 @@ def main():
     for pid, _, _ in pages:
         if info[pid][0]:
             by_key[key(info[pid][0])].append(pid)
+    # a page saved by hand prints its address in the margin, and a long address loses its end there (two different Journal newsletters
+    # printed one address, Nov 16, 2026): two hand-saved pages with one printed address are joined on it only if their headlines are
+    # alike too; else a reader says. A fetched page's address is whole, so a hand-saved page that prints the same one is the same page.
+    cut_address = []
     for ids in by_key.values():
-        for b in ids[1:]:
-            edges[(ids[0], b)] = f'same address as {ids[0]}'
+        for j, b in enumerate(ids[1:], 1):
+            for a in ids[:j]:
+                if a.startswith('man-') and b.startswith('man-') and not alike_title(a, b):
+                    cut_address.append((a, b)); continue
+                edges[(a, b)] = f'same address as {a}'; break
 
     def pairs_sharing(sets, least):
         idx = defaultdict(list)
@@ -176,6 +185,10 @@ def main():
             for b in ids[i + 1:]:
                 if site and alike_title(a, b) and find(a) != find(b) and frozenset((a, b)) not in read and frozenset((a, b)) not in listed:
                     alike.append([a, b, '', 'same site, same headline'])
+    for a, b in cut_address:
+        if find(a) != find(b) and frozenset((a, b)) not in read and frozenset((a, b)) not in listed:
+            alike.append([a, b, '', 'same printed address, different headlines (both saved by hand)']); listed.add(frozenset((a, b)))
+    print('address joins not made (two hand-saved pages, one printed address, different headlines):', len(cut_address), cut_address)
     with open(R / 'nv8_article_pairs_to_read.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t', lineterminator='\n'); w.writerow(['page_a', 'page_b', 'share_of_shorter', 'why_listed', 'state', 'title_a', 'title_b'])
         for (a, b), reason in edges.items():

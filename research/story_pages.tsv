@@ -1195,7 +1195,7 @@ man-9e4f3db24cad		2026-11-15T04:10:51Z	A1129	yes		Massie;Warren
 man-9fdcdb135f3a		2026-11-15T04:10:51Z	A1130	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
 man-a45550a35921		2026-11-15T04:10:51Z	A1131	yes		Cornyn;Mast;Meeks;Neal;Ricketts;Wyden
 man-a7c80d31d08a		2026-11-15T05:23:28Z	A1132	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days	
-man-bb944902439c		2026-11-15T04:10:51Z	A1133	yes		Banks;Johnson;Mast;Moolenaar;Ricketts
+man-bb944902439c		2026-11-15T04:10:51Z	A1133	yes		Banks;Jeffries;Johnson;Mast;Moolenaar;Ricketts
 man-bbg-1029-01	https://www.bloomberg.com/news/articles/2026-10-29/nvidia-ceo-says-ties-to-company-under-spying-probe-were-normal	2026-11-12T19:44:35Z	A1134	yes		
 man-bbg-1109-02	https://www.bloomberg.com/opinion/articles/2026-11-09/everything-jensen-huang-said-about-china-is-out-the-window	2026-11-12T19:45:23Z	A1135	yes		
 man-bbg-1109-03	https://www.bloomberg.com/opinion/articles/2026-11-09/nvidia-ceo-jensen-huang-affair-all-the-questions-congress-needs-to-ask	2026-11-12T19:45:26Z	A1136	yes		
@@ -1217,7 +1217,7 @@ man-ft-1106-01	https://www.ft.com/content/20119746-a285-482e-a0ae-336ce13b26bc	2
 man-ft-1107-01	https://www.ft.com/content/a55a2a22-4479-4f93-a445-6147a5c6d790	2026-11-15T03:45:43Z	A1041	yes		Coons
 man-ft-1109-02	https://www.ft.com/content/1c033a7e-ea9e-4509-8e9b-7a0df283d6ee	2026-11-15T04:10:51Z	A1149	yes		
 man-ft-1109-03	https://www.ft.com/content/5d8c1e1d-6ce0-4eb4-9f5c-722fa5c4841d	2026-11-15T04:10:50Z	A1150	yes		
-man-ft-1109-04	https://www.ft.com/content/cbabf2da-2079-4b69-88e3-0ba84cf8d6fd	2026-11-15T04:10:51Z	A1151	yes		
+man-ft-1109-04	https://www.ft.com/content/cbabf2da-2079-4b69-88e3-0ba84cf8d6fd	2026-11-15T04:10:51Z	A1151	yes		Jeffries
 man-ft-1109-05	https://www.ft.com/content/fa3b0a35-1aa9-4f31-97b4-e4c599e3e654	2026-11-15T04:10:51Z	A1152	yes		Moolenaar
 man-ft-1110-01	https://www.ft.com/content/0b20d24a-580a-41df-a5f3-7f7dba4f552f	2026-11-15T04:10:50Z	A1153	yes		
 man-ft-1110-02	https://www.ft.com/content/afb6c960-a910-4d67-9588-73ba3bea5b06	2026-11-15T04:10:51Z	A1154	yes		
@@ -1260,3 +1260,57 @@ man-wsj-1112-01	https://www.wsj.com/business/earnings/nvidias-disappearing-singa
 man-wsj-1112-05	https://www.wsj.com/politics/policy/top-democrats-target-trump-administrations-nvidia-china-records-0c212746	2026-11-15T04:10:51Z	A1185	yes		Coons;Cramer;Mast;Warren
 art-line-wex-scott-1112	https://www.washingtonexaminer.com/news/senate/4802365/tim-scott-howard-lutnick-jensen-huang-testify/	2026-11-16T01:02:12Z	A1186	yes		Scott
 art-line-straitstimes-bloomberg-1110	https://www.straitstimes.com/world/united-states/us-lawmakers-demand-details-on-nvidia-amid-jensen-huang-scandal	2026-11-16T01:02:12Z	A1187	yes		Banks;Coons;Jeffries;Thune;Warner;Warren
+man-wsj-1110-02	https://www.wsj.com/business/a-reined-in-jensen-huang-is-nvidias-best-option-e79cb305	2026-11-16T01:17:36Z	A1188	yes		
+man-fb13a9bf51b4		2026-11-16T01:16:55Z	A1189	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-b8094f1ead01		2026-11-16T01:16:16Z	A1190	yes		
+man-598a830b2580		2026-11-16T01:13:20Z	A1191	yes		
+man-d2ff9a1e4f2c		2026-11-16T01:17:00Z	A1192	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-506b033a9fd4		2026-11-16T01:17:41Z	A1193	yes		
+man-8949e622b66f		2026-11-16T01:13:58Z	A1083	yes		
+man-910cb6ed67c8		2026-11-16T01:17:48Z	A1194	yes		Coons
+man-7ff3c607bd9e		2026-11-16T01:16:22Z	A1195	yes		
+man-2a2cbfed7a23		2026-11-16T01:17:05Z	A1196	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-08b0429539bf		2026-11-16T01:09:42Z	A1197	yes		
+man-2dfcc1bab289		2026-11-16T01:17:57Z	A1198	yes		
+man-6e8e267e6b90		2026-11-16T01:16:10Z	A1199	yes		
+man-05b8d5160f55		2026-11-16T01:14:03Z	A1200	yes		
+man-wsj-1109-06	https://www.wsj.com/tech/ai/jensen-huang-apologized-to-nvidia-for-his-infidelity-his-kids-are-on-staff-190f3176	2026-11-16T01:14:09Z	A1050	yes		
+man-5dbffa3344fb		2026-11-16T01:18:02Z	A1201	yes		
+man-wsj-1109-08	https://www.wsj.com/tech/jensen-huang-doesnt-believe-in-succession-planning-its-become-a-big-risk-for-nvidia-abd9ea9d	2026-11-16T01:18:07Z	A1202	yes		
+man-ac79ea8f3db1		2026-11-16T01:13:46Z	A1203	yes		
+man-ff8d58262f35		2026-11-16T01:13:50Z	A1204	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-abbd2f24f4aa		2026-11-16T01:18:13Z	A1205	yes		
+man-83733609b719		2026-11-16T01:14:19Z	A1206	yes		
+man-ft-1112-02	https://www.ft.com/content/6f21835f-97a1-4f7a-bbb8-f38609998909	2026-11-16T01:16:40Z	A1207	yes		
+man-wsj-1112-02	https://www.wsj.com/cio-journal/nvidia-board-must-craft-epic-job-description-for-new-ceo-cfdafeeb	2026-11-16T01:18:19Z	A1208	yes		
+man-6858b15b28f3		2026-11-16T01:14:14Z	A1209	yes		
+man-bf5ecde76d91		2026-11-16T01:14:24Z	A1210	yes		
+man-25f0d7122b2b		2026-11-16T01:18:24Z	A1211	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-b33da908c694		2026-11-16T01:18:29Z	A1212	yes		
+man-644c1225780b		2026-11-16T01:18:54Z	A0375	yes		
+man-e9ba9adacc50		2026-11-16T01:18:35Z	A1213	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-bd0467189a09		2026-11-16T01:13:34Z	A1214	yes		Coons;Warren
+man-1f23ac4d0bdf		2026-11-16T01:16:28Z	A1215	yes		
+man-ft-1112-04	https://www.ft.com/content/a93307a7-e2cd-4abd-bd89-c38832d8c40e	2026-11-16T01:16:45Z	A1216	yes		
+man-0c5b4e4f24c9		2026-11-16T01:13:13Z	A1217	yes		
+man-6b5f1d691c37		2026-11-16T01:18:42Z	A1218	yes		
+man-df899f278938		2026-11-16T01:17:10Z	A1219	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-3ca524a310c4		2026-11-16T01:13:41Z	A1220	yes		
+man-1c60a03ccd8f		2026-11-16T01:14:39Z	A1221	yes		
+man-92d21df0deca		2026-11-16T01:14:44Z	A1222	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-1787aa77cef1		2026-11-16T01:18:49Z	A1223	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-5378bea31457		2026-11-16T01:14:50Z	A1224	yes		
+man-d92c3796243d		2026-11-16T01:14:56Z	A1225	yes		Warren
+man-30ca7be9d497		2026-11-16T01:16:33Z	A1226	yes		
+man-c3d8b5bd71f0		2026-11-16T01:15:00Z	A1227	yes		
+man-211030e54eba		2026-11-16T01:13:28Z	A1228	yes		
+man-e8a4f78b0d7e		2026-11-16T01:10:18Z	A1229	yes		
+man-1ad932db84b6		2026-11-16T01:17:21Z	A1230	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-wsj-1112-08	https://www.wsj.com/tech/colette-kress-nvidia-interim-ceo-ff26ef3a	2026-11-16T01:19:01Z	A1231	yes		
+man-ft-1112-08	https://www.ft.com/content/e47f7d4a-88d7-41e4-8c77-8ea8e0769353	2026-11-16T01:16:51Z	A1232	yes		
+man-wsj-1110-04	https://www.wsj.com/cio-journal/why-nvidia-ceo-jensen-huang-is-unique-586439c8	2026-11-16T01:19:08Z	A1233	yes		Jeffries;Ricketts;Warren
+man-91f72fc58a47		2026-11-16T01:17:25Z	A1234	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-e5c78e711bed		2026-11-16T01:14:32Z	A1235	yes		
+man-67a03aea6b25		2026-11-16T01:17:26Z	A1236	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days	
+man-cd8c08517fc7		2026-11-16T01:12:45Z	A1237	yes		
+man-cf6650e331b3		2026-11-16T01:17:15Z	A1238	yes		
