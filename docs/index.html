@@ -42,6 +42,7 @@ body { margin: 0; background: var(--table); color: var(--ink); font: 14px/1.45 v
 .tools { display: flex; flex-wrap: wrap; gap: 6px; margin-left: auto }
 .btn { border: 1px solid var(--rule); background: var(--surface); border-radius: 4px; padding: 5px 10px; cursor: pointer; white-space: nowrap }
 .btn:hover { background: var(--sunk) }
+.app a.btn { color: inherit; text-decoration: none; display: inline-block; line-height: inherit }
 .btn.sq { min-width: 34px; font-weight: 700 }
 
 .stage { flex: 1 1 auto; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 390px }
@@ -228,6 +229,7 @@ details.src li { display: flex; flex-direction: column; gap: 3px; overflow-wrap:
       <button class="btn" id="fit" type="button">Whole map</button>
       <button class="btn wide" id="tonotes" type="button">Notes on the map</button>
       <button class="btn" id="about" type="button">Status</button>
+      <a class="btn" id="repo" hidden target="_blank" rel="noopener noreferrer">Repository</a>
     </div>
   </header>
   <div class="stage">
@@ -560,6 +562,7 @@ details.src li { display: flex; flex-direction: column; gap: 3px; overflow-wrap:
       h('div', { class: 'list' }, h('h4', { text: 'What the record does not show' }), h('p', { class: 'small', text: notShown.charAt(0).toUpperCase() + notShown.slice(1) })),
       h('div', { class: 'list' }, h('h4', { text: 'Groups on the map' }), h('div', { class: 'chips' }, D.groups.filter(function (g) { return region[g.k]; }).map(function (g) { return h('button', { class: 'btn', type: 'button', text: g.label, onclick: function () { showGroup(g.k, region[g.k][0]); } }); }))),
       h('p', { class: 'small', text: D.made }),
+      REPO ? h('p', { class: 'small' }, 'The tables, the saved sources that can be copied, the scripts and the files of every independent reading are in ', h('a', { href: REPO, target: '_blank', rel: 'noopener noreferrer', text: 'the repository' }), '.') : null,
       h('p', { class: 'small', text: 'This interactive layer was checked by script only; no independent reader has read it. The map is the figure as published at commit ' + D.commit + ' (' + D.commit_day + ') of its public repository, and the panel holds nothing its tables do not.' }));
     panel.scrollTop = 0;
   }
@@ -684,6 +687,8 @@ details.src li { display: flex; flex-direction: column; gap: 3px; overflow-wrap:
     return false;
   }
   window.addEventListener('hashchange', route);
+  var REPO = (function () { var m = /^([a-z0-9-]+)\.github\.io$/i.exec(location.hostname), seg = location.pathname.split('/').filter(Boolean)[0]; return m && seg ? 'https://github.com/' + m[1] + '/' + seg : ''; })();
+  if (REPO) { $('repo').href = REPO; $('repo').hidden = false; }
   $('kicker').textContent = D.kicker;
   sizes(); v.k = Math.max(kmin, (view.clientWidth - 24) / W); v.x = 12; v.y = 12; clamp(); apply();
   if (!route()) showAbout();
