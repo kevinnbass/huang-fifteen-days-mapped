@@ -92,7 +92,9 @@ STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn ite
           'so the chip sits on the day of the earliest saved version that does, and says so; that copy does hold the Chinese embassy\'s reply, which moves to Oct 30, and the Taiwan office\'s. '
           'Three of the ten occasions and four of the eleven parts were already drawn from the six lanes; the rest are drawn now. In all, five acts are added and fifteen act rows amended. '
           'The refusal table lists 29 acts. The two numbers are recounted by a published script, with a list of the lines (4,803 and 2,850, as given). '
-          'The 43 rows of the six lanes have not been read independently either. 314 dated acts are drawn now. '
+          'The builder then looked for more cases of that kind: for every act dated by its report, the screen now reads the saved pages for an earlier page that holds a cited passage, for another copy of the article that lacks one, and for a page dated only by an update line. '
+          'It lists twenty such cases, each read; one changed the figure (an analyst\'s remark that another outlet had printed the evening before, now drawn on that day). '
+          'The 43 rows of the six lanes have not been read independently either. 315 dated acts are drawn now. '
           'Several of the nineteen readings, the last three among them, have found statements or parts of statements that no chip carries; the figure is not complete in that sense, and the tables say what was searched and how.')
 # what changed after the audit read the figure (the README of the public copy lists these under the audit)
 AFTER_AUDIT = [
@@ -480,6 +482,20 @@ AFTER_RELEASE18 = [
     'details of Times reports whose chips carry the main findings; background on inquiries and approvals before these days; and relays of statements already drawn. One candidate was the same remarks as a chip of that day in another outlet\'s words, and was added to that chip instead of drawn twice.',
     'Limits. Four of the six lanes closed "reading: incomplete": 250 lines have no verdict (170 of them relays of the Chinese ministry\'s and Singapore\'s responses that give no day, 64 undated accounts of Megaspeed), because the saved context does not say which occasion they repeat. '
     'The readers\' verdicts other than "candidate" were not read again by the builder. None of this round has been read independently. The figure now carries 309 dated acts, 104 of them on their report\'s day.',
+]
+# what the builder did after the release of the answer to the nineteenth reading
+AFTER_RELEASE19 = [
+    'The rule on versions, applied to every act dated by its report. The answer to the nineteenth reading stated that a passage is dated by the earliest saved version that carries it, on the evidence of one article. '
+    'The screen of acts dated by their report (`research/nv8_report_day_screen.tsv`, `scripts/as_built/nv8_report_day_screen.py`) now has three more parts, which read the saved pages themselves: '
+    'every page of the figure\'s table of pages, dated before the chip\'s day, that holds a passage the act cites (10 acts listed); every other copy of the cited article, of the chip\'s day or earlier and long enough to be a version and not a teaser, that lacks the passage (6 acts); '
+    'and every act that sits on a day read from an article\'s "Updated" line (4 acts). Each listed act carries the builder\'s reading. Two controls put back what the earlier copy of the Journal\'s article settled, and must list it.',
+    'What it changed. One act: an analyst\'s sentence that the next "12 to 18 months of revenue" would not disappear, drawn on Nov 12 as told to Fortune, is in a page of the evening of Nov 11 as told to Yahoo Finance. '
+    'It is drawn there too (dashed), and both chips say that the pages do not tell whether he said it twice or sent one comment to both.',
+    'What it did not change. The other listings are: standing lines and stamps of licensed and hand-saved copies; a remark of the president\'s that a report quotes; two pages that their authors went on extending after their first day; '
+    'an embassy\'s reply of an earlier day in similar words; a live page whose entry has its own stamp; a chip that already gives the earlier date in words; copies of one wire dispatch, all of the chip\'s own day; '
+    'and two Journal articles that print only an update line, whose text fixes their first day. The cases the answer to the nineteenth reading had settled (a reply to the Journal, a clause of a report on the board) are listed with their reasons.',
+    'Limits. The search is for a cited passage word for word (honorifics apart): a relay in other words is not seen, and that is what the census readings and the first part of the screen are for. It covers the pages of the figure\'s table of pages, not other saved pages. '
+    'It covers the acts dated by their report, not those whose source states the day. No independent reader has read this. The figure now carries 315 dated acts, 109 of them on their report\'s day.',
 ]
 # what changed in answer to the nineteenth independent reading (lane audit_nv8_s8m, read after its marker on Nov 16, 2026)
 AFTER_READING19 = [

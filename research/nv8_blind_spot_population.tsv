@@ -4072,7 +4072,7 @@ L09179	nvidia	sw-transformernewsai-01	A0940	yes	yes	yes	para_nv8_a
 L09180	board	sw-transformernewsai-01	A0940	yes			para_nv8_b	
 L09182	commerce	sw-transformernewsai-01	A0940	yes	yes	yes	para_nv8_g	
 L09183	nvidia	sw-transformernewsai-01	A0940	yes	yes	yes	para_nv8_a	
-L09195	boloor	sw-trendforcecom-637e84ec	A0941	yes	yes	yes	para_nv8_h	
+L09195	boloor	sw-trendforcecom-637e84ec	A0941	yes	yes		para_nv8_h	
 L09197	board	sw-trendforcecom-637e84ec	A0941	yes			para_nv8_b	
 L09198	boloor	sw-trendforcecom-637e84ec	A0941	yes	yes	yes	para_nv8_h	
 L09199	bessent	sw-triviumchinacom-01	A0942	yes	yes	yes	para_nv8_g	

@@ -455,9 +455,9 @@ ACTS = [
  ('newman', '2026-11-09', 'Tells CBS by email: "There is no known succession plan, and there is no leader in the company who would be the clear next step if he had to step down"; "That does not mean they cannot find a Tim Cook in the future, but it would be a massive changing of the guard"',
   ['sw-cbsnewscom-03', 'sw-cbsnewscom-03', 'sw-cbsnewscom-03', 'sw-cbsnewscom-03', 'sw-cbsnewscom-03'],
   ['There is no known succession plan, and there is no leader in the company who would be the clear next step if he had to step down', 'said Daniel Newman, CEO of tech consulting firm Futurum, in an email', 'PUBLISHED: 2026-11-09', 'That does not mean they cannot find a Tim Cook in the future, but it would be a massive changing of the guard', 'tech analysts said on Monday']),
- ('boloor', '2026-11-12', 'Tells Fortune the selloff is overdone: he does not see "12 to 18 months of revenue suddenly disappearing if Jensen were to leave". Quoted the same day: "My bigger concern is next decade", because Huang "has consistently identified where computing is going"',
-  ['sw-fortunecom-11', 'sw-fortunecom-11', 'sw-fortunecom-11', 'sw-rteie-05', 'sw-rteie-05'], ['12 to 18 months of revenue suddenly disappearing if Jensen were to leave', 'Shay Boloor, chief market strategist at The Futurum Group', 'PUBLISHED: 2026-11-12',
-   'My bigger concern is next decade', 'the person who has consistently identified where computing is going']),
+ ('boloor', '2026-11-12', 'Tells Fortune the selloff is overdone: he does not see "12 to 18 months of revenue suddenly disappearing if Jensen were to leave" (the San Francisco Standard had printed the sentence the evening before as told to Yahoo Finance: his chip of Nov 11). Quoted the same day: "My bigger concern is next decade", because Huang "has consistently identified where computing is going"',
+  ['sw-fortunecom-11', 'sw-fortunecom-11', 'sw-fortunecom-11', 'sw-rteie-05', 'sw-rteie-05'],
+  ['12 to 18 months of revenue suddenly disappearing if Jensen were to leave', 'Shay Boloor, chief market strategist at The Futurum Group', 'PUBLISHED: 2026-11-12', 'My bigger concern is next decade', 'the person who has consistently identified where computing is going']),
  ('yoo', '2026-11-12', 'Tells the Korea JoongAng Daily that Nvidia\'s people "have a high level of expertise and autonomy", so its culture will hold',
   ['sw-koreajoongangdailycom-06'] * 3, ['Because its people have a high level of expertise and autonomy, the culture won', 'Yoo Eung-joon, CEO of JOON AI Consulting and a former head of Nvidia Korea', 'PUBLISHED: 2026-11-12']),
  ('mowshowitz', '2026-11-10', 'Publishes "Nvidia CEO Jensen Huang Had an Affair With a Chinese Spy": "National security has been compromised. He must resign"; "I would be very surprised if Jensen Huang knew he was being compromised by a Chinese agent"; he accepts as "a mitigating factor" that Huang "was up against actual professional spies and an active operation to compromise him"; "If he will not resign, the board must remove him. If the board will not remove him, the United States Government should force him to step down"; and anyone in the government "who knowingly let this go on for a year should be offering their resignation as well". He also writes that the affair "is not necessary to explain" Huang\'s conduct on chip sales to China: "He might or might not have done that anyway, or done that to the same extent"',
@@ -1036,6 +1036,10 @@ ACTS = [
  ('board', '2026-11-12', 'Electronics Weekly, a British trade paper, reports that Thursday that the board "is meeting today to decide if CEO Jensen Huang should be replaced and, if so, by who"; the page does not say whether that is the session of Wednesday night, U.S. time. Semafor\'s report of the night before, in a version changed that morning, adds that the board "has debated whether, as part of its potential replacement of Huang, to introduce a chief operating officer to serve alongside the interim chief executive"',
   ['sw-electronicsweeklycom-01', 'sw-semaforcom-11'],
   ['The Nvidia board is meeting today to decide if CEO Jensen Huang should be replaced and, if so, by who', "Nvidia's board has debated whether, as part of its potential replacement of Huang, to introduce a chief operating officer to serve alongside the interim chief executive"]),
+ # found by the screen of earlier pages and versions (Nov 16): a remark another outlet reported a day earlier
+ ('boloor', '2026-11-11', 'Tells Yahoo Finance, as the San Francisco Standard reports it that evening: "I don\'t see the next 12 to 18 months of revenue suddenly disappearing if Jensen were to leave". Fortune prints the sentence the next morning as told to it; whether he said it twice or sent one comment to both, the pages do not say',
+  ['sw-sfstandardcom-05', 'sw-sfstandardcom-05'],
+  ['Shay Boloor, chief market strategist at The Futurum Group, told Yahoo Finance', "I don't see the next 12 to 18 months of revenue suddenly disappearing if Jensen were to leave"]),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
@@ -1047,16 +1051,16 @@ REPORT_DAY = {('megaspeed', '2026-10-29'), ('nvidia', '2026-10-29'), ('whitehous
               ('mcguire', '2026-11-09'), ('megaspeed', '2026-11-09'), ('moolenaar', '2026-11-09'), ('moorhead', '2026-11-09'), ('nvidia', '2026-11-09'), ('bessent', '2026-11-10'),
               ('boloor', '2026-11-10'), ('bresnick', '2026-11-10'), ('commerce', '2026-11-10'), ('coons', '2026-11-10'), ('grunewald', '2026-11-10'), ('hashim', '2026-11-10'),
               ('justice', '2026-11-10'), ('mcguire', '2026-11-10'), ('megaspeed', '2026-11-10'), ('moorhead', '2026-11-10'), ('nvidia', '2026-11-10'), ('ohanlon', '2026-11-10'),
-              ('rubio', '2026-11-10'), ('stapp', '2026-11-10'), ('taiwan', '2026-11-10'), ('whitehouse', '2026-11-10'), ('board', '2026-11-11'), ('bresnick', '2026-11-11'),
-              ('commerce', '2026-11-11'), ('mast', '2026-11-11'), ('moolenaar', '2026-11-11'), ('moorhead', '2026-11-11'), ('nvidia', '2026-11-11'), ('stapp', '2026-11-11'),
-              ('anthropic', '2026-11-12'), ('banks', '2026-11-12'), ('board', '2026-11-12'), ('boloor', '2026-11-12'), ('chan', '2026-11-12'), ('commerce', '2026-11-12'),
-              ('cornyn', '2026-11-12'), ('fedasiuk', '2026-11-12'), ('hodges', '2026-11-12'), ('huang', '2026-11-12'), ('huizenga', '2026-11-12'), ('jcramer', '2026-11-12'),
-              ('johnson', '2026-11-12'), ('justice', '2026-11-12'), ('kennedy', '2026-11-12'), ('king', '2026-11-12'), ('maguire', '2026-11-12'), ('mcguire', '2026-11-12'),
-              ('meeks', '2026-11-12'), ('moolenaar', '2026-11-12'), ('moorhead', '2026-11-12'), ('musk', '2026-11-12'), ('newman', '2026-11-12'), ('nie', '2026-11-12'),
-              ('nvidia', '2026-11-12'), ('sweeney', '2026-11-12'), ('taiwan', '2026-11-12'), ('yoo', '2026-11-12')}        # added 2026-11-16 with MA179, MA180, MA184, MA186
+              ('rubio', '2026-11-10'), ('stapp', '2026-11-10'), ('taiwan', '2026-11-10'), ('whitehouse', '2026-11-10'), ('board', '2026-11-11'), ('boloor', '2026-11-11'),
+              ('bresnick', '2026-11-11'), ('commerce', '2026-11-11'), ('mast', '2026-11-11'), ('moolenaar', '2026-11-11'), ('moorhead', '2026-11-11'), ('nvidia', '2026-11-11'),
+              ('stapp', '2026-11-11'), ('anthropic', '2026-11-12'), ('banks', '2026-11-12'), ('board', '2026-11-12'), ('boloor', '2026-11-12'), ('chan', '2026-11-12'),
+              ('commerce', '2026-11-12'), ('cornyn', '2026-11-12'), ('fedasiuk', '2026-11-12'), ('hodges', '2026-11-12'), ('huang', '2026-11-12'), ('huizenga', '2026-11-12'),
+              ('jcramer', '2026-11-12'), ('johnson', '2026-11-12'), ('justice', '2026-11-12'), ('kennedy', '2026-11-12'), ('king', '2026-11-12'), ('maguire', '2026-11-12'),
+              ('mcguire', '2026-11-12'), ('meeks', '2026-11-12'), ('moolenaar', '2026-11-12'), ('moorhead', '2026-11-12'), ('musk', '2026-11-12'), ('newman', '2026-11-12'),
+              ('nie', '2026-11-12'), ('nvidia', '2026-11-12'), ('sweeney', '2026-11-12'), ('taiwan', '2026-11-12'), ('yoo', '2026-11-12')}        # added 2026-11-16 with MA179, MA180, MA184, MA186
 # Row ids whose source gives the act's own day although another act of the same actor on that day is known only by its report's day
 # (slice S8, 2026-11-15: the Journal has Cornyn's post "on X Sunday"; his remark on the Times report that day is dated by CNBC's page).
-OWN_DAY = {'MA33', 'MA156', 'MA59', 'MA74', 'MA77', 'MA170', 'MA190', 'MA197', 'MA205', 'MA218', 'MA49', 'MA63', 'MA228', 'MA296', 'MA303', 'MA305', 'MA96', 'MA290', 'MA282', 'MA38', 'MA43', 'MA45', 'MA56', 'MA62', 'MA90', 'MA100', 'MA141', 'MA144', 'MA167', 'MA172', 'MA226', 'MA236', 'MA242', 'MA134', 'MA157', 'MA221',        # the last six: acts with their own day on a day that also holds a refusal or report dated by its report (sixteenth reading)
+OWN_DAY = {'MA33', 'MA156', 'MA59', 'MA74', 'MA77', 'MA170', 'MA190', 'MA197', 'MA205', 'MA218', 'MA49',  'MA63', 'MA228', 'MA296', 'MA303', 'MA305', 'MA96', 'MA290', 'MA282', 'MA38', 'MA43', 'MA45', 'MA56', 'MA62', 'MA90', 'MA100', 'MA141', 'MA144', 'MA167', 'MA172', 'MA226', 'MA236', 'MA242', 'MA134', 'MA157', 'MA221',        # the last six: acts with their own day on a day that also holds a refusal or report dated by its report (sixteenth reading)
                   # MA156: the FT dates the legislators' calls to Thursday; Cornyn's other act of Nov 12 (MA147) is dated by a newsletter
           
            'MA142',        # Moorhead's broadcast of Nov 11 is dated by his firm's own summary; the Times article that quotes him that day gives no day for the remark (MA158)

@@ -16,6 +16,17 @@ After the sixteenth reading (Nov 16) part 3 also reads the update line a hand-sa
 found three acts the screen had missed because it read only the saver's header.
 After the fifteenth reading (Nov 16) the day is read from the source's ordinary context too: a remark dated with others like it ("several senators
 told the paper on Tuesday"), or an answer to something that happened that day in a report of that day, has its day and a solid edge.
+After the nineteenth reading (Nov 16) the screen has a fourth and a fifth part, which read the saved pages themselves and not the census lines.
+One article's earlier saved version had shown that a reply sat on the right day for the wrong reason and two others on the wrong footing.
+ 4 An earlier page holds a cited passage. For every passage of 30 characters or more that an act dated by its report cites, the screen lists
+   each page of the figure's table of pages (research/nv8_articles.tsv), dated from Oct 29 on and before the chip's day, whose text holds
+   the passage: the act may have been reported earlier than the chip says.
+ 5 A copy of the same article lacks a cited passage. It lists each other page of the cited page's article (same article id), of the chip's
+   day or earlier and with at least half the cited page's length of article text (so that a teaser is not taken for a version), whose text does not hold the passage: the passage may have been added in a
+   later version. Honorifics ("Mr.", "Ms.") are dropped on both sides, since licensed copies drop them.
+ 6 The page's day is an update's. A hand-saved article can print only "Updated <day>", and the table of pages then gives it that day. The
+   screen lists each act that sits on such a day: the article may have been first published earlier (the nineteenth reading's point about
+   one reply to the Journal).
 Each listed act was read by the builder and the reading is in the table; a listed act with no reading stops the script.
 Controls: each part is run once more with its corrected act put back as it was, and must list it.
 Writes research/nv8_report_day_screen.tsv. Limits: part 1 does not see an act that quotes no words a census line repeats, or a line whose day
@@ -52,6 +63,7 @@ READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109'
                                  'MA199', 'MA200', 'MA201', 'MA202', 'MA203', 'MA206', 'MA210', 'MA212', 'MA213', 'MA219', 'MA207', 'MA237', 'MA250',
                                  'MA251', 'MA256', 'MA257', 'MA261', 'MA266', 'MA268', 'MA270', 'MA274', 'MA275', 'MA280', 'MA283', 'MA284', 'MA286', 'MA288',
                                  'MA301', 'MA302', 'MA307', 'MA308', 'MA309', 'MA312', 'MA313')},
+             MA317='"Sunday" is the day of Huang\'s admission. The page, published on the evening of Wednesday Nov 11, says analysts were "reacting to the news in real time", which suggests the remark is of that day, but it gives the remark itself no day: the edge stays dashed',
              MA316='"today" is Electronics Weekly\'s own word, in a page stamped 06:13 UTC on Nov 12 (01:13 in the eastern United States): the report\'s day, and the chip says the page does not tell whether it means the session of Wednesday night; "Wednesday" is Semafor\'s day for that session (the board\'s chip of Nov 11)',
              MA211='the day word ("today", Nov 9) is that of the Wired report as the relaying page gives it; the hiring itself has no day, and another saved page says he hired the firm "as early as last year"',
              MA214='the page says "On Monday" (Nov 9) and another saved page dates the same extension Nov 5; the accounts conflict, so the act sits on the day of the first report and the chip gives both days',
@@ -85,6 +97,27 @@ READ3 = {'MA16': 'the chip\'s day is that of the FT report it relays and of the 
          'MA275': 'may be newer: the page was changed the day after it was first published, and no other saved page carries the remark',
          'MA313': 'may be newer: the page was changed the day after it was first published, and no other saved page carries the statement as one made to The National; the words themselves are in its statement to CNBC of Nov 8',
          'MA214': 'the chip\'s day is that of the first report (Yahoo Finance, Nov 10); the other page cited is a later account, of Nov 12, and the chip gives its date too'}
+WIRE = 'copies of one wire dispatch, all of the chip\'s day: the sentence is in the longest copy only, and no day turns on it'
+READ4 = {'MA81': 'the earlier page is one a broadcaster kept updating: it is dated Nov 8 by its first publication and says the sources spoke "on Monday" (Nov 9), the chip\'s day',
+         'MA130': 'two findings. The sentence on revenue is in a page of the evening of Nov 11 as told to another outlet (drawn there, act MA317; this chip says so). '
+                  'The remark on the next decade is paraphrased in a page first published Nov 11 and changed Nov 12; the earliest unchanged page that carries it is of Nov 12, where the chip sits',
+         'MA150': 'not the same act: the passage is the president\'s remark of Nov 9, which the report quotes and earlier pages carry; the act drawn is the magazine\'s own report of Nov 10',
+         'MA155': 'the earlier page is a blog post dated Nov 8 that its author extended until Nov 12 (its header gives both days); it quotes the Times article of Nov 9',
+         'MA158': 'not the same act: the line "This article originally appeared in The New York Times" stands on every licensed copy of a Times article',
+         'MA213': 'the cited page is itself of Nov 10: the chip sits on Nov 12 for its first part and gives Nov 10 in words for this one',
+         'MA252': 'the cited page is the earlier version of the article (Oct 30), cited to show where its paragraph ends without the sentence; the chip sits on the day of the version that carries it',
+         'MA268': 'the cited page is a live report that began on Nov 11; the entry that carries the remark has its own stamp of Nov 12',
+         'MA299': 'not the same act: the page of Oct 29 gives the embassy\'s reply to the Times of that day (its chip of Oct 29) in words that begin alike',
+         'MA316': 'the cited page was first published Nov 11 and changed on the morning of Nov 12; the clause is in the changed version only, and the chip says so'}
+READ5 = {'MA85': 'the passage is the time stamp the hand-saved page prints, cited for the day; the other copy of the report carries its passages',
+         'MA158': 'the passage is an address printed on the licensed copy, cited for its date; the Times\'s own page has no such line',
+         'MA169': WIRE, 'MA212': WIRE,
+         'MA252': 'the earlier version of the article (a licensed copy timed Oct 30) lacks the sentence, which is why the chip sits on Oct 31, the day of the version that carries it',
+         'MA316': 'the earlier version of the article (10:27 pm on Nov 11) lacks the clause, which is why it sits on Nov 12, the day of the version that carries it'}
+READ6 = {'MA252': 'an earlier version of the article, timed Oct 30, is saved and lacks the sentence: the chip sits on the day of the version that carries it, which is the update\'s (see part 5)',
+         'MA273': 'the page prints only an update line (Nov 9, 2:59 pm); its text speaks of "Monday morning trade" (Nov 9) and of the print edition of Nov 10, so the article was first published that day',
+         'MA307': 'the page prints only an update line (Nov 12, 7:44 pm); its text reports what a senator "told reporters Thursday" (Nov 12), so the article was first published that day',
+         'MA309': 'the page prints only an update line (Nov 12, 7:44 pm); its text reports what a senator "told reporters Thursday" (Nov 12), so the article was first published that day'}
 DAY = re.compile(r"\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|yesterday|today|on (?:Oct|Nov)\w*\.? \d+)\b")
 
 
@@ -163,6 +196,36 @@ def part3(acts):
     return out
 
 
+HON = re.compile(r'\b(?:Mr|Ms|Mrs|Dr)\. ')
+
+
+def part45(acts):
+    """Parts 4 and 5 (see the top). The pages searched are those of the figure's table of pages; a page's day is the one that table gives."""
+    tab = {r['page_id']: r for r in csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t')}; byart = defaultdict(list)
+    for pid, r in tab.items(): byart[r['article_id']].append(pid)
+    text = {pid: HON.sub('', check_rows.haystack(pid) or '') for pid in tab}
+    out4, out5 = [], []
+    for rid, a in acts:
+        early, lack = set(), set()
+        for s_, q in zip(a['src'], a['q']):
+            qq = HON.sub('', check_rows.norm(q))
+            if qq.startswith('PUBLISHED') or len(qq) < 30: continue
+            early |= {(tab[p]['day'], p) for p, t in text.items() if '2026-10-29' <= tab[p]['day'] < a['date'] and qq in t}
+            if s_ in tab:
+                n = int(tab[s_]['chars'] or 0); lack |= {(tab[p]['day'], p) for p in byart[tab[s_]['article_id']] if p != s_ and tab[p]['day'] and tab[p]['day'] <= a['date'] and 2 * int(tab[p]['chars'] or 0) >= n and qq not in text[p]}
+        if early: out4.append((rid, a['actor'], a['date'], '; '.join(f'{d} {p}' for d, p in sorted(early))))
+        if lack: out5.append((rid, a['actor'], a['date'], '; '.join(f'{d} {p}' for d, p in sorted(lack))))
+    return out4, out5
+
+
+def part6(acts):
+    tab = {r['page_id']: r for r in csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t')}; out = []
+    for rid, a in acts:
+        up = sorted({p for p in a['src'] if p in tab and tab[p]['day'] == a['date'] and re.match(r'\s*Updated\b', tab[p]['day_read_from'] or '')})
+        if up: out.append((rid, a['actor'], a['date'], '; '.join(f"{p}: {tab[p]['day_read_from']}" for p in up)))
+    return out
+
+
 def main():
     art = G.article_of(); by = defaultdict(list)
     for r in G.lane_rows('remarks'):
@@ -172,8 +235,9 @@ def main():
     acts = [(f'MA{i:02d}', a) for i, a in enumerate(rows_map.acts(), 1)]; byid = dict(acts)
     rep = [(rid, a) for rid, a in acts if a['reported'] and a['date'] and not a.get('withdrawn')]
     rows = []
+    p4, p5 = part45(rep)
     for name, out, READ in (('another saved page gives another day', part1(rep, by), READ1), ('a day word near a cited passage in its own source', part2(rep), READ2),
-                            ('its page was changed after the chip\'s day', part3(rep), READ3)):
+                            ('its page was changed after the chip\'s day', part3(rep), READ3), ('an earlier page holds a cited passage', p4, READ4), ('a copy of the same article lacks a cited passage', p5, READ5), ('the day of its page is an update\'s', part6(rep), READ6)):
         unread = [o[0] for o in out if o[0] not in READ]; assert not unread, (name, 'a listed act with no reading', unread)
         stale = sorted(set(READ) - {o[0] for o in out}); assert not stale, (name, 'a reading for an act no longer listed', stale)
         rows += [[name] + list(o) + [READ[o[0]]] for o in out]
@@ -184,8 +248,12 @@ def main():
         w = csv.writer(f, delimiter='\t', lineterminator='\n'); w.writerow(['screen', 'act', 'actor', 'day_drawn_the_reports_day', 'what_the_screen_saw', 'reading']); w.writerows(rows)
     c3 = part3([('MA128', dict(byid['MA128']))]); assert c3 and 'changed' in c3[0][3], ('control 3: an act whose page is known to have been changed the next day is not listed', c3)
     n3 = sum(1 for r in rows if r[0].startswith('its page')); newer = sum(1 for r in rows if r[0].startswith('its page') and r[5].startswith('may be newer'))
-    n1 = sum(1 for r in rows if r[0].startswith('another')); print('acts dated by their report\'s day', len(rep), '| another saved page gives another day:', n1, '| a day word near a cited passage:', len(rows) - n1 - n3, '| page changed later:', n3, 'of which may be newer:', newer,
-                                                                    '(each read) | controls:', c1[0][3], '|', c2[0][3])
+    n1 = sum(1 for r in rows if r[0].startswith('another')); n4 = sum(1 for r in rows if r[0].startswith('an earlier page')); n5 = sum(1 for r in rows if r[0].startswith('a copy')); n6 = sum(1 for r in rows if r[0].startswith('the day of its page'))
+    b252 = byid['MA252']; c5 = part45([('MA252', dict(b252, src=[x for x in b252['src'] if x == 'man-923fe8754943'], q=[y for x, y in zip(b252['src'], b252['q']) if x == 'man-923fe8754943' and 'photos' in y]))])[1]
+    assert c5 and 'art-fc-itiger-wsj-1030-v1' in c5[0][3], ('control 5: the reply whose sentence an earlier version lacks is not listed', c5)
+    emb = byid['MA299']; c4 = part45([('MA299', dict(emb, date='2026-10-31'))])[0]; assert c4 and 'art-fc-itiger-wsj-1030-v1' in c4[0][3], ('control 4: the reply put back on Oct 31 is not listed with the earlier copy that carries it', c4)
+    print('acts dated by their report\'s day', len(rep), '| another saved page gives another day:', n1, '| a day word near a cited passage:', len(rows) - n1 - n3 - n4 - n5 - n6, '| page changed later:', n3, 'of which may be newer:', newer,
+          '| an earlier page holds a cited passage:', n4, '| a copy of the article lacks one:', n5, '| page dated by an update line:', n6, '(each read) | controls:', c1[0][3], '|', c2[0][3], '| the earlier copy lists the two replies it settled')
 
 
 if __name__ == '__main__':
