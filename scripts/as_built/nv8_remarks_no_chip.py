@@ -24,11 +24,11 @@ import nv8_gaps as G, rows_map
 N = 5
 SAME = 'part of a statement a chip of that day already carries in other words: '
 READ = {
+    ('schumer', 'instead trump invited nvidias ceo to join him on'): SAME + 'his floor speech of Nov 10, whose criticism of the president his chips of that day carry; a further sentence of its reasons',
     ('china', 'the report in question is based on groundless speculation'): SAME + 'the ministry\'s reply to the first report, in another translation (its chip for Oct 30)',
     ('china', 'the narrative about so called chinese spies is entirely'): SAME + 'the ministry\'s reply of Nov 9, in the Journal\'s translation (its chip for that day)',
     ('china', 'we stand ready to work with the us to'): 'not on the matter: the ministry on relations between the two countries',
     ('coons', 'we write to request that the department of commerce'): SAME + 'the letter with Sen. Warren (his chip for Nov 11)',
-    ('huang', 'my family bears no responsibility for my choices i'): SAME + 'his memo to staff (his chip for Nov 8)',
     ('jeffries', 'there are real concerns that need to be addressed'): SAME + 'his remarks of Nov 9 asking for a full briefing (his chip for that day)',
     ('kennedy', 'the obvious question is why did lutnick choose to'): SAME + 'his remarks to Politico that the Commerce secretary "needs to answer" (his chip for Nov 11)',
     ('kennedy', 'and they need to be investigated by the justice'): SAME + 'his remarks of Nov 10; the chip says he wants investigations',
@@ -36,7 +36,6 @@ READ = {
     ('nvidia', 'datacenters and clouds built on american chips are the'): 'not on the matter: a statement on data-centre policy in reports that do not mention the affair',
     ('nvidia', 'the prc government is not seeking nvidia products from'): SAME + 'its reply to the first report (its chip for Oct 29, which carries its denial)',
     ('nvidia', 'we sell our data center gpus primarily to well'): 'not of these days: statements of 2025 that later reports quote as made "at the time"',
-    ('schumer', 'one of our most important companies thats involved in'): SAME + 'his floor speech of Nov 10 (his chip for that day)',
     ('mcguire', 'bisgov has done so not only by permitting the'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
     ('mcguire', 'why is commerce protecting jensen and supporting his preferred'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
 }

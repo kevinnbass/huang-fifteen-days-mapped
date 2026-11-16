@@ -1,0 +1,56 @@
+part,finding_id,holds,note
+A,A-MA189,yes,"MA189 stays; the no-threshold rule now includes the own-role exchange. The accompanying-answer omission is a further finding, B1-RUBIO-9."
+A,A-MA196,yes,MA196 now contains the enforcement answer and attributes the six/17 figures to the department.
+C1,C1-blumenthal-2026-11-05,yes,"MA216 draws the narrow reported re-issued warning, without inventing words or joining the separate Wednesday item."
+C1,C1-mcguire-2026-11-09,yes,The exact Nov 8 post link proves occurrence identity; the changed actor-day reading states the real reason.
+C2,C2-10,yes,"MA209 is the distinct employee note, not the appointment release; old gauge reading removed."
+C2,C2-13,yes,MA210 draws the distinct CFR piece and discloses its later update; old group removed.
+C2,C2-15,yes,"Same CFR act as the preceding finding, counted once; both former gauge listings removed."
+C3,C3-huang-2026-11-09,yes,"MA211 distinguishes the historical hiring from the Nov 9 report and names both relays. TechCrunch was updated within Nov 9 Eastern; not changed afterwards is imprecise, rather than a different day."
+C3,C3-huang-2026-11-12,yes,MA212 is the separately reported legal retainer and retains the uncertainty about its purpose.
+C3,C3-kress-2026-11-12,yes,"MA215 says will gather today and attributes the plan to CNBC, rather than claiming a completed meeting."
+C3,C3-jones-2026-11-12,yes,Correctly points to the same MA209 staff note; no second act required.
+C3,C3-commerce-2026-11-05,yes,MA214 preserves the Nov 9/Nov 5 date conflict and uses first report day without pretending that is the act day.
+C3,C3-commerce-2026-11-09,yes,"Same extension as preceding disposition, once rather than twice."
+C3,C3-commerce-2026-11-12,yes,MA213 names The Information through CNBC and retains the rulemaking as in preparation.
+C3,C3-crawford-2026-11-12,yes,The missing dated census line is disclosed as a census limit; no act is inferred from emptiness.
+D2,D2-missed-MA179,yes,MA179 is listed and the FT printed update plus independent Friday/Times anchors are stated.
+D2,D2-missed-MA194,yes,MA194 is listed; only its FT component may be newer and the Times component is independently held.
+D2,D2-missed-MA158,yes,MA158 is listed with the printed update and the licensed-copy Nov 11 anchor.
+D2,D2-NUMBER,yes,"Third part has 15 listings, six uncertain, including the three missed update lines. Counts and classifications reproduce."
+B1,B1-NV-KOREA,yes,"MA197 has Seoul, the Times Monday request context and the FT, with the event-related reason."
+B1,B1-NV-SALES,yes,MA199 contains the sales-classification refusal and the no-established-connection qualification.
+B1,B1-WH-RUBIO-MEMO,yes,MA200 is a distinct memo-report White House refusal on report day.
+B1,B1-WH-ENTITY,yes,MA202 contains the entity-list FT refusal.
+B1,B1-WH-BACKGROUND,yes,"MA202 also carries the background statement and its dispute of the reporting, without elaborating."
+B1,B1-DOJ-NBC,yes,MA205 names NBC with the other Nov 9 responses.
+B1,B1-DOJ-TIMES,yes,"MA205 carries the Times continuing-investigations answer, separate from MA169."
+B1,B1-FBI-PULSE,yes,MA206 preserves BBC through the Ukrainian report and the unidentified Yahoo requester; does not silently merge them.
+B1,B1-COMMERCE-FT,yes,MA196 carries the FT answer; see disposition A-MA196.
+B1,B1-TREASURY-FT,yes,MA204 and the department-to-secretary note implement the boundary; an unreturned request is not converted into a refusal.
+B1,B1-STATE-MEMO,yes,MA201 draws State separately from the secretary's own oral exchange.
+B1,B1-STATE-TRIP,yes,MA203 draws the later State response separately.
+B1,B1-RUBIO-SECOND,yes,MA189 remains under the replacement rule; its further companion-answer issue is recorded in this audit.
+B1,B1-ANTHROPIC-IPO,yes,MA86 stays under the same rule. The later undated political-gift answer is not assigned an invented period date. Requester precision is separately qualified here.
+B2,B2-anthropic,yes,The special Anthropic leg is gone; the substantive no-threshold selection rule is the same for all parties.
+B2,B2-nvidia,yes,The three new Nvidia acts and extra MA195 outlets are present. This does not certify all other Nvidia answers complete.
+B2,B2-whitehouse,yes,"MA200 and MA202, including the background answer, are present."
+B2,B2-justice,yes,"MA205/206 implement these additions and MA169 exists. A Reuters response still lacks an identity disposition, B2-JUSTICE-REUTERS."
+B2,B2-commerce,yes,MA196 contains the answer and MA207 the other-allegations refusal. The latter still needs the Axios relay/earlier-report qualification.
+B2,B2-bessent,yes,The secretary boundary and Treasury refusal are stated and drawn; the Times unreturned request is excluded.
+B2,B2-rubio,yes,"Both State responses and both oral exchanges are separately carried. The oral companion answers remain incomplete, B1-RUBIO-8/9."
+figure,E-ROW-196,yes,The MA196 answer is present in the changed figure.
+figure,E-VERSIONS,yes,"The note now states later-version uncertainty, six acts, rather than the day-after claim; two uncertainties concern only one component."
+figure,E-REFUSAL-RULE,partial,The uniform rule and new party coverage are real. The blanket statement that all other lines are relays/non-refusals exceeds the saved-source reading; see B2-JUSTICE-REUTERS and incomplete companions.
+figure,E-STATUS-UNIVERSAL,partial,"The universal act-rule claim is withdrawn and wrong merges repaired. The stated not-yet-worked-through status is stale: the current release explicitly says the builder worked through both faults, with limits."
+figure,E-STATUS-THREE,yes,The figure status now names all three fifteenth-reading acts that the earlier summary omitted.
+figure,C-CLOSE,partial,"The complete closing, inherited PDF question and lack of independent reading of the additions are stated. Its every-count summary conflicts with two q recount disagreements."
+G,G-MA189,yes,Interactive MA189 equals the kept row; its rule is replaced. Companion-answer issue is inherited rather than a site transcription error.
+G,G-MA196,yes,Interactive MA196 equals the corrected row including the answer and department attribution.
+G,G-NOTES,partial,The site carries the revised six-act note and status. The inherited every-count summary remains too broad.
+F,B1 B1-coons-2026-11-12,yes,The universal claim is withdrawn; MA209/210 are distinct acts. This answers the earlier unsupported-completeness point.
+F,B2 B2-china-2026-11-10,yes,The same withdrawal and separate-act repairs answer this cross-reference; no claim of comprehensive actor coverage is inferred.
+F,B B-COMPARABLE,partial,The six previously omitted refusals and uniform written rule are present. The all-other-lines relay conclusion is incomplete for the Reuters response and accompanying answers.
+F,C C-SCREEN-LIMITS,yes,"The table and note include 15 later-version acts and six uncertain passages, with per-row anchors; no certification of unseen versions."
+F,figure C-CLOSE,partial,"The closing and inherited limit are carried, but the status still says every prior count reproduced despite two recorded disagreements."
+gaps,inherited FT older-entry extent,yes,The older-entry PDF question remains expressly open; it was not reopened in this audit.

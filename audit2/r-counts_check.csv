@@ -1,0 +1,72 @@
+what,figure_says,you_find,agree,note
+dated acts,233,233,yes,
+active act records including historical undated act,234,234,yes,
+rendered chips,recount,193,yes,One per actor/day; includes the historical undated act as drawn.
+dashed chips,recount,37,yes,
+acts dated by their report,55,55,yes,
+rendered chip row/edge mismatches,0,0,yes,
+actor-days in two or more counted articles,8,8,yes,
+actor-days in one counted article,16,16,yes,
+third-gauge groups,15,15,yes,
+report-day screen: another saved page gives another day,8,8,yes,
+report-day screen: a day word near a cited passage in its own source,27,27,yes,
+report-day screen: its page was changed after the chip's day,15,15,yes,
+screen: may be newer,6,6,yes,
+screen: may be newer only in part,2,2,yes,
+refusal table act records,28,28,yes,
+refusal table actors,11,11,yes,
+matched refusal census lines,131,131,yes,
+refusal lines in articles the final rows cite,52,54,no,The two supplementary Nov 8 transcript lines are cited by the published MA74.
+refusal lines outside final cited articles,79,77,no,"Counts lines, not distinct articles; raw acts() loses two supplemental source citations."
+outside actor-article pairs summed from second table,68,67,no,The published per-actor second part sums to 68; final citations give 67 (Rubio 12 rather than 13).
+labels added,148,148,yes,
+lines brought by added labels,407,407,yes,
+lines marked newly matched in census,407,407,yes,
+set-aside groups as read,102,102,yes,
+acts added from those groups,12,12,yes,
+acts outside the own-channel search,102,102,yes,
+search original-chip keys,133,133,yes,
+saved pages,1315,1315,yes,
+joined articles,1236,1236,yes,
+counted articles,1154,1154,yes,
+counted pages held in part,98,98,yes,
+member articles: warren,71,71,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: coons,48,48,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: cramer,22,22,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: schumer,22,22,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: banks,19,19,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: blumenthal,3,3,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: warner,4,4,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: cornyn,9,9,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: kennedy,6,6,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: thune,13,13,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: wyden,5,5,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: cotton,5,5,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: scott,4,4,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: ricketts,5,5,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: mast,92,92,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: crawford,68,68,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: meeks,9,9,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: himes,8,8,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: huizenga,4,4,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: johnson,11,11,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: moolenaar,78,78,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: jeffries,30,30,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: magaziner,4,4,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: subramanyam,3,3,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: bacon,3,3,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: mccaul,5,5,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member articles: neal,3,3,yes,Distinct counted article ids; member_selection.tsv and story_pages.tsv are byte-identical to prior copy.
+member-count inputs unchanged,yes,true,yes,
+sixteenth main finding lines,211,211,yes,
+sixteenth main errors,15,15,yes,
+sixteenth main qualifications,25,25,yes,
+sixteenth recount agreements,54 of 56,54 of 56,yes,Two version-screen disagreements are expressly in the preceding audit; every count reproduces is overbroad.
+C4 selected distinct actor-days,fixed rule,31,yes,Twelve actors; repeated earliest/middle/latest days collapsed.
+C4 nonempty/empty selections,reported scope,22 / 9,yes,265 lines after confirmed aliases and explicit joint speakers.
+C4 separate missing-occasion rate,recount,1 / 22 = 4.5%,yes,Jeffries CBS Monday appearance; not a population estimate.
+C4 including concrete missing components,recount,3 / 22 = 13.6%,yes,Also Jeffries Thursday demand/inquiry and Schumer Tuesday accounting demand.
+visible figure differences,recount,29 blocks / 44 new fragments,yes,Every changed fragment read against rows and tables; notes/status read in full.
+dispositions checked,55,55,yes,49 yes; 6 partial; 0 no.
+companion files unchanged,94,94,yes,Identical relative paths and hashes; commit 76dbbed.
+set-aside further components under same tests,auditor judgment,12,yes,Components rather than 12 new occasions; repeated quote groups counted once.

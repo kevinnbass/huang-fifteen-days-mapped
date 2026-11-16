@@ -1,11 +1,11 @@
 part	actor	day	placed_on	act	words_or_count
-a refusal drawn	anthropic	2026-11-12	the day of its report	MA86	"A spokesperson ""declined to comment"" to Quartz for a report on Huang's exit and Anthropic's share sale"
+a refusal drawn	anthropic	2026-11-12	the day of its report	MA86	"Quartz reports that an Anthropic spokesperson ""declined to comment"", in its report on Huang's exit and Anthropic's share sale; the page does not say who asked"
 a refusal drawn	bessent	2026-11-10	the day of its report	MA204	The Treasury Department declines to comment to the FT for its report on the entity list
 a refusal drawn	commerce	2026-11-10	the day of its report	MA196	"Tells the FT it does not comment on internal discussions about the entity list; the department says it has ""enforced aggressively across the board, including on smuggling advanced chips"" and cites six investigations with ""criminal charges against 17 defendants"""
-a refusal drawn	commerce	2026-11-12	the day of its report	MA207	"Implicator: beside its denial of the confrontation, the department ""would not immediately comment on the other allegations"""
+a refusal drawn	commerce	2026-11-11	the day of its report	MA207	"Axios, as two outlets relay it: beside her denial of the confrontation, the department's spokeswoman ""would not immediately comment on the other allegations"""
 a refusal drawn	justice	2026-11-09	its own day	MA205	A spokeswoman tells the Times the department does not comment on continuing investigations; it declines to comment to NBC, and the FBI declines to comment to AFP and to Semafor on the president's remark that it is looking into the matter
 a refusal drawn	justice	2026-11-10	the day of its report	MA206	The FBI declines to comment when the BBC asks, as a Ukrainian outlet relays it; Yahoo Finance also reports an FBI refusal, without saying who asked
-a refusal drawn	justice	2026-11-12	the day of its report	MA169	"Bloomberg, as Quartz relays it: the department ""is examining whether entities tied to Alice Huang ... had a hand in attempts to smuggle Super Micro Computer's products into China""; the U.S. attorney's office in Manhattan leads; the department and that office had no comment. Quartz adds that Jensen Huang ""is not a target of U.S. law enforcement probes"", and that it ""remains uncertain"" whether the inquiry connects to any smuggling prosecution and what part Alice Huang or her entities had"
+a refusal drawn	justice	2026-11-12	the day of its report	MA169	"Bloomberg, as Quartz relays it: the department ""is examining whether entities tied to Alice Huang ... had a hand in attempts to smuggle Super Micro Computer's products into China""; the U.S. attorney's office in Manhattan leads; the department and that office had no comment. Quartz adds that Jensen Huang ""is not a target of U.S. law enforcement probes"", and that it ""remains uncertain"" whether the inquiry connects to any smuggling prosecution and what part Alice Huang or her entities had. Reuters, as the Star-Advertiser carries it: a spokesperson for that office ""declined to comment on the Bloomberg report"""
 a refusal drawn	megaspeed	2026-11-10	the day of its report	MA208	Declines to comment to the Times for its profile of Alice Huang
 a refusal drawn	nvidia	2026-11-05	its own day	MA57	"Says customer meetings are ""part of a CEO's job"" and that customers get ""zero information relevant to national security""; a spokesman tells the Times Huang ""has an outstanding security team that accompanies him where needed""; the spokesman declines to comment on whether Huang will appear before the committees"
 a refusal drawn	nvidia	2026-11-06	the day of its report	MA179	"A spokesman tells the Times the company does not share classified information with its customers, and that customers do not ask it to press the government to change its policies on chip sales to China; China has ""consistently promoted its own domestic alternatives in China, including Huawei, and strictly limited imports of our data center products"". To the FT, for its report of that day, the company ""declined to comment on the government memo and the assertions that its chief executive had an intimate relationship with Alice Huang"""
@@ -14,30 +14,92 @@ a refusal drawn	nvidia	2026-11-10	the day of its report	MA198	Declines to commen
 a refusal drawn	nvidia	2026-11-11	the day of its report	MA195	Declines to give the Times a statement for its report of a second relationship; declines to comment for another Times article and for an FT report of that day
 a refusal drawn	nvidia	2026-11-12	the day of its report	MA199	"Has declined to say how Megaspeed's sales were classified after it changed how it reports revenue by country, in the Journal's account; Implicator adds that the filings ""do not establish a connection between the reporting change and the block"". Declines to comment to the FT, the Journal and Reuters for other reports of that day"
 a refusal drawn	rubio	2026-11-08	the day of its report	MA201	A State Department spokesman declines to comment to the Times for its report on his memo
-a refusal drawn	rubio	2026-11-08	its own day	MA74	"Says he ""can't comment on an internal corporate matter that's going on with Nvidia"". NBC has him ""speaking Sunday""; a republished transcript of the exchange is titled 9 November"
-a refusal drawn	rubio	2026-11-09	its own day	MA189	"Asked again about Huang and how important a thorough investigation is: ""I'm not going to comment on an internal corporate matter for them""; asked whether he sees a national security concern: ""I'm just not going to comment on it"". The republished transcript is titled 10 November and stamped the evening of Nov 9, Eastern time"
+a refusal drawn	rubio	2026-11-08	its own day	MA74	"Says he ""can't comment on an internal corporate matter that's going on with Nvidia"", and: ""I don't know anything about that part of it"". NBC has him ""speaking Sunday""; a republished transcript of the exchange is titled 9 November"
+a refusal drawn	rubio	2026-11-09	its own day	MA189	"Asked again about Huang and how important a thorough investigation is: ""I'm not going to comment on an internal corporate matter for them""; asked whether he sees a national security concern: ""I'm just not going to comment on it""; of the travel to China: ""you'll have to ask the White House"", ""I don't handle the - that part of our operation"". The republished transcript is titled 10 November and stamped the evening of Nov 9, Eastern time"
 a refusal drawn	rubio	2026-11-10	the day of its report	MA203	The State Department declines to comment to the Times for its report that the president was told of the concerns on his trip to China
-a refusal drawn	singapore	2026-10-30	its own day	MA70	"Denies the Journal's account of Alice Huang: ""no such investigations""; its police say the Megaspeed inquiry continues, that they are ""unable to comment further at this juncture"", and that they ""act firmly against companies and individuals who violate our laws"". The statement is timed Oct 30, 11:13 PM in Singapore; the ministry's newsroom page dates it Oct 31"
+a refusal drawn	singapore	2026-10-30	its own day	MA70	"Denies the Journal's account of Alice Huang: ""no such investigations""; its police say the Megaspeed inquiry continues, that they are ""unable to comment further at this juncture"", and: ""While we do not enforce unilateral export controls imposed by other countries, we act firmly against companies and individuals who violate our laws"". The statement is timed Oct 30, 11:13 PM in Singapore; the ministry's newsroom page dates it Oct 31"
 a refusal drawn	taiwan	2026-10-30	the day of its report	MA217	"Its representative office in Washington tells the Journal it ""doesn't comment on specific intelligence or security matters"""
 a refusal drawn	taiwan	2026-11-10	its own day	MA218	"At the legislature its interior minister says ""The national security authorities are actively investigating, and the Ministry of the Interior is cooperating"" (Asia Economy, from a Taiwanese daily). Its premier declines to answer a question about Taiwan's part in the U.S. investigation; he says the government has records of her entries and exits and ""would not say how many times she had visited"" (Taiwan News)"
-a refusal drawn	taiwan	2026-11-10	the day of its report	MA219	Its deputy foreign minister says she complied with entry rules and that the government is taking the necessary precautions, in Asia Economy's account of Nov 10; he declines to tell reporters under what status she entered (Taiwan News)
-a refusal drawn	taiwan	2026-11-12	its own day	MA221	"Its China-policy agency, of a U.S. recommendation in 2024 to monitor her visits that the Times reported: ""MAC has indeed never received such information""; ""We are not sure whether other agencies received it"". The cabinet's spokesperson calls the case a cross-border cooperative investigation and declines to give details, citing the confidentiality of ongoing investigations; the immigration agency says it worked with security authorities to monitor her visits (Focus Taiwan)"
+a refusal drawn	taiwan	2026-11-10	the day of its report	MA219	Its deputy foreign minister says she complied with entry rules and that the government is taking the necessary precautions, in Asia Economy's account of Nov 10; he declines to tell reporters under what status she entered, and adds that travellers who comply with the rules and have no criminal record in Taiwan would not face unnecessary restrictions (Taiwan News)
+a refusal drawn	taiwan	2026-11-12	its own day	MA221	"Its China-policy agency's spokesman, of a U.S. recommendation in 2024 to monitor her visits that the Times reported: ""MAC has indeed never received such information""; the agency is not an intelligence agency, and ""We are not sure whether other agencies received it""; without a lead, visitors get routine screening; it can neither confirm nor deny the allegations. The cabinet's spokesperson calls the case a cross-border cooperative investigation and declines to give details, citing the confidentiality of ongoing investigations; the immigration agency says it worked with security authorities to monitor her visits (Focus Taiwan)"
 a refusal drawn	trump	2026-11-09	its own day	MA222	"Asked whether he knew of the concerns when Huang flew with him to China in May: ""No, I didn't hear about it then""; pressed on whether he had been briefed a year earlier: ""I'd certainly check with the intelligence people. They could have been mentioned. Certainly, it didn't make much of an impact on me"" (the Times). The Journal: he ""declined to provide a detailed explanation of when he learned about the federal government's concerns"""
 a refusal drawn	whitehouse	2026-10-29	the day of its report	MA193	With the CIA and the National Security Agency, declines to comment to the Times for its first report
 a refusal drawn	whitehouse	2026-11-06	the day of its report	MA194	With the CIA, declines to comment to the Times and to the FT for their reports of the memo
 a refusal drawn	whitehouse	2026-11-08	the day of its report	MA200	A spokeswoman declines to comment to the Times for its report on the secretary of state's memo
 a refusal drawn	whitehouse	2026-11-10	the day of its report	MA202	"Declines to comment to the FT for its report on the entity list. For the Times's report that the president was told of the concerns on his trip to China, its press office declines to comment on the record and emails a statement on background that points to the president's remarks of Monday and disputes the reporting, ""without elaborating"""
-census lines with words of refusal	anthropic				1 lines; in articles no refusal act of this actor cites: 0 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	banks				1 lines; in articles no refusal act of this actor cites: 1 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	bessent				2 lines; in articles no refusal act of this actor cites: 1 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	commerce				4 lines; in articles no refusal act of this actor cites: 3 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	huang				5 lines; in articles no refusal act of this actor cites: 5 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	justice				14 lines; in articles no refusal act of this actor cites: 5 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	megaspeed				1 lines; in articles no refusal act of this actor cites: 0 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	moolenaar				1 lines; in articles no refusal act of this actor cites: 1 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	nvidia				41 lines; in articles no refusal act of this actor cites: 23 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	rubio				27 lines; in articles no refusal act of this actor cites: 13 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	singapore				6 lines; in articles no refusal act of this actor cites: 3 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	taiwan				6 lines; in articles no refusal act of this actor cites: 0 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	trump				5 lines; in articles no refusal act of this actor cites: 4 articles (read by the builder: relays, or not refusals to comment)
-census lines with words of refusal	whitehouse				17 lines; in articles no refusal act of this actor cites: 9 articles (read by the builder: relays, or not refusals to comment)
+a line outside the cited articles	banks			A1126	not a refusal to comment: his words about a decision not to act
+a line outside the cited articles	bessent			A0008	relay of the refusal to the FT for its report on the entity list (MA204)
+a line outside the cited articles	commerce			A0008	relay of the refusal to the FT for its report on the entity list (MA196)
+a line outside the cited articles	commerce			A0778	not a refusal to comment: a meeting declined in 2025, told in a report
+a line outside the cited articles	commerce			A0792	not a refusal to comment: a meeting declined in 2025, told in a report
+a line outside the cited articles	huang			A0220	not a refusal to comment: an invitation to testify declined before these days, told in a report
+a line outside the cited articles	huang			A0450	not a refusal to comment: an invitation to testify declined before these days, told in a report
+a line outside the cited articles	huang			A0523	not a refusal to comment: an invitation to testify declined before these days, told in a report
+a line outside the cited articles	huang			A0593	relay of the Times report of Nov 11, in which his answer by phone is on his own chip (MA107) and the company's refusal is MA195
+a line outside the cited articles	huang			A0697	not a refusal to comment: an invitation to testify declined before these days, told in a report
+a line outside the cited articles	justice			A0590	relay of the department's answers of Nov 9 (MA205)
+a line outside the cited articles	justice			A0736	relay of the department's answers of Nov 9 (MA205)
+a line outside the cited articles	justice			A0736	relay of the department's answers of Nov 9 (MA205)
+a line outside the cited articles	justice			A0991	relay of the FBI's refusals of Nov 9 and Nov 10 (MA205, MA206)
+a line outside the cited articles	justice			A1010	relay of the department's answers of Nov 9 (MA205)
+a line outside the cited articles	moolenaar	2026-11-11		A0091	not a refusal to comment: his words about Huang declining a request
+a line outside the cited articles	nvidia			A0042	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0075	relay of the refusal at the event in Seoul (MA197)
+a line outside the cited articles	nvidia			A0076	relay of the refusal to say how the customer's sales were classified (MA199)
+a line outside the cited articles	nvidia			A0299	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0301	relay of the refusal to the FT on the memo (MA179)
+a line outside the cited articles	nvidia			A0301	relay of the refusal to the FT on the memo (MA179)
+a line outside the cited articles	nvidia			A0492	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0512	relay of the refusal to say whether Huang would appear before the committees (MA57)
+a line outside the cited articles	nvidia			A0523	relay of the refusal to say whether Huang would appear before the committees (MA57)
+a line outside the cited articles	nvidia			A0528	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0593	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0605	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0621	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia	2026-11-11		A0622	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0659	not a refusal to comment: the page says only that no comment had been made
+a line outside the cited articles	nvidia			A0720	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0732	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0888	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A0899	relay of the refusal to the FT on the memo (MA179)
+a line outside the cited articles	nvidia	2026-11-05		A1004	relay of the refusal to say whether Huang would appear before the committees (MA57)
+a line outside the cited articles	nvidia			A1008	relay of the refusal to the FT on the memo (MA179)
+a line outside the cited articles	nvidia			A1010	not a refusal to comment: a meeting declined in 2025, told in a report
+a line outside the cited articles	nvidia			A1013	relay of one of the company's refusals of Nov 5 to Nov 11 (MA57, MA179, MA195), by the report the page relays
+a line outside the cited articles	nvidia			A1182	relay of the refusal to say how the customer's sales were classified (MA199)
+a line outside the cited articles	rubio			A0062	relay of the State Department's refusals to the Times (MA201, MA203)
+a line outside the cited articles	rubio			A0071	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio			A0071	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio			A0071	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio			A0155	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio	2026-11-08		A0175	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio	2026-11-08		A0175	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio	2026-11-08		A0183	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio			A0239	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio			A0314	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio	2026-11-08		A0485	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio	2026-11-08		A0485	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio	2026-11-08		A0485	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio	2026-11-08		A0485	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio			A0504	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio			A0590	relay of the State Department's refusals to the Times (MA201, MA203)
+a line outside the cited articles	rubio			A0864	relay of his exchanges with reporters of Nov 8 and Nov 9 (MA74, MA189)
+a line outside the cited articles	rubio			A0947	relay of the State Department's refusals to the Times (MA201, MA203)
+a line outside the cited articles	singapore	2026-10-30		A0991	relay of the police's reply of Oct 30 (MA70)
+a line outside the cited articles	singapore			A1047	relay of the police's reply of Oct 30 (MA70)
+a line outside the cited articles	singapore			A1047	relay of the police's reply of Oct 30 (MA70)
+a line outside the cited articles	singapore			A1047	relay of the police's reply of Oct 30 (MA70)
+a line outside the cited articles	singapore			A1075	relay of the police's reply of Oct 30 (MA70)
+a line outside the cited articles	trump			A0049	not a refusal to comment: a decision not to act, told in a report
+a line outside the cited articles	trump			A0062	not a refusal to comment: a decision not to act, told in a report
+a line outside the cited articles	trump			A0063	not a refusal to comment: a decision not to act, told in a report
+a line outside the cited articles	trump			A0948	not a refusal to comment: a decision not to act, told in a report
+a line outside the cited articles	whitehouse			A0008	relay of the refusals to the Times and the FT on the memo (MA194) or, for the entity-list report, to the FT (MA202)
+a line outside the cited articles	whitehouse			A0062	relay of the refusal to the Times for its report on the secretary of state's memo (MA200)
+a line outside the cited articles	whitehouse			A0071	relay of the refusals to the Times and the FT on the memo (MA194) or, for the entity-list report, to the FT (MA202)
+a line outside the cited articles	whitehouse			A0524	relay of the refusals to the Times and the FT on the memo (MA194) or, for the entity-list report, to the FT (MA202)
+a line outside the cited articles	whitehouse			A0737	relay of the refusals to the Times and the FT on the memo (MA194) or, for the entity-list report, to the FT (MA202)
+a line outside the cited articles	whitehouse			A0899	relay of the refusals to the Times and the FT on the memo (MA194) or, for the entity-list report, to the FT (MA202)
+a line outside the cited articles	whitehouse			A0947	relay of the refusal to the Times for its report on the secretary of state's memo (MA200)
+a line outside the cited articles	whitehouse			A1006	relay of the refusal to the Times for its first report (MA193)
+a line outside the cited articles	whitehouse			A1008	relay of the refusals to the Times and the FT on the memo (MA194) or, for the entity-list report, to the FT (MA202)
