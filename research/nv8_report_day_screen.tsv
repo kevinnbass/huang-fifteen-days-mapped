@@ -1,11 +1,12 @@
 screen	act	actor	day_drawn_the_reports_day	what_the_screen_saw	reading
-another saved page gives another day	MA164	megaspeed	2026-10-29	2026-11-12 (4)	not the same act: the lines of Nov 12 are the company's later statement of that day, which has its own chip; the statement to the Times has no day but its report's
+another saved page gives another day	MA164	megaspeed	2026-10-29	2026-11-12 (5)	not the same act: the lines of Nov 12 are the company's later statement of that day, which has its own chip; the statement to the Times has no day but its report's
 another saved page gives another day	MA179	nvidia	2026-11-06	2026-10-29 (3); 2026-11-05 (3); 2026-11-08 (4); 2026-11-09 (1); 2026-11-11 (1)	"not the same act: other statements of the company, of other days, that share only the words ""the U.S. government"" with this one"
 another saved page gives another day	MA195	nvidia	2026-11-11	2026-11-09 (2); 2026-11-12 (1)	not the same response: other refusals of the company, on other days, that share only the words of refusal with this one
 another saved page gives another day	MA196	commerce	2026-11-10	2026-11-09 (1)	a similar statement of the day before to another outlet (it is on the chip for Nov 9); the sixteenth reading judged this one a separate answer, to the FT
 another saved page gives another day	MA199	nvidia	2026-11-12	2026-11-09 (1); 2026-11-11 (1)	not the same response: other refusals of the company, on other days, that share only the words of refusal with this one
 another saved page gives another day	MA210	mcguire	2026-11-10	2026-11-08 (1); 2026-11-09 (1)	the census gives these lines other days; the sixteenth reading compared them with his saved posts of Nov 6 and Nov 8 and found the quotations only in the piece of Nov 10
 another saved page gives another day	MA211	huang	2026-11-09	2026-11-08 (1)	not the same act: the line of Nov 8 is his acknowledgment to employees, which the cited passage mentions and which has its own chip
+another saved page gives another day	MA214	commerce	2026-11-10	2026-11-05 (1); 2026-11-09 (1)	the two accounts of the extension's date, both of which the chip gives (one page: Monday, Nov 9; another: Nov 5)
 a day word near a cited passage in its own source	MA13	fedasiuk	2026-11-12	Thursday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA16	mcguire	2026-11-10	Sunday, yesterday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA32	cornyn	2026-11-08	Saturday	the day word belongs to another event told in the same passage; the page gives this act no day

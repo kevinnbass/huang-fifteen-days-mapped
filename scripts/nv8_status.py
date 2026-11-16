@@ -61,9 +61,11 @@ STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn ite
           'eight more acts are drawn (two reported retainers of Huang\'s, a Commerce rule in preparation and a rule pause, the chairman\'s note, the think tank\'s piece, the interim chief\'s meeting, a senator\'s re-issued warning); '
           'the Commerce chip carries its answer; and the screen reads the update lines that pages print. '
           'The builder then searched every line of the census readings for words of refusal, beyond the eight parties the reading had listed, and drew what it found: Singapore\'s police, five acts of Taiwan\'s government '
-          '(its row, until now its interior minister\'s, is the government\'s) and the president, whose answer of Nov 9 about what he had been told ("it didn\'t make much of an impact on me") eighteen saved pages carry and no chip did. 220 dated acts are drawn now. '
-          'That search showed two faults in the gauges, found and not yet worked through: some 400 lines of the census readings stand under a speaker\'s name the gauges do not match to a drawn actor (an official named in person, "the FBI", "China"), '
-          'and about a hundred quoted remarks that two or more articles carry were set aside because an earlier judgment had called the occasion drawn. Until both are read, the gauges cover less than their tables suggest.')
+          '(its row, until now its interior minister\'s, is the government\'s) and the president, whose answer of Nov 9 about what he had been told ("it didn\'t make much of an impact on me") eighteen saved pages carry and no chip did. '
+          'That search showed two faults in the gauges, which the builder then worked through. The gauges matched a line of the census readings to an actor by a list of names that lacked 148 labels (an official named in person, "the FBI", "China"): '
+          'with them added, 407 more lines are read, and they brought one act with no chip and additions to two chips. And the third gauge had left out quoted remarks that an earlier judgment called part of an occasion already drawn: '
+          'the builder read all 102 such groups against their chips and added twelve acts for parts that no chip carried, among them the president saying on Nov 9 that Huang would not join his trip to China, '
+          'two senators\' charge that officials "did not move to block" the chip sales, and Huang\'s "I am committed to protecting Nvidia and supporting America\'s national security". 233 dated acts are drawn now.')
 # what changed after the audit read the figure (the README of the public copy lists these under the audit)
 AFTER_AUDIT = [
     'Five pieces were added and one moved from Nov 8 to Nov 12 (1,726 pieces became 1,731; 1,662 drawn became 1,667): six articles of one site share an address apart from the query string and had been counted as one. No row id was renumbered.',
@@ -405,7 +407,31 @@ AFTER_READING16 = [
     'and one older chip is corrected: the minister\'s "actively investigating" was said on Nov 10, as one saved page dates it, not Nov 11.',
     'Two faults in the gauges, found and not yet worked through. First, the gauges match a census line to a drawn actor by the speaker\'s name as the reader wrote it. Some 400 lines stand under names that may denote a drawn actor and that the list does not hold '
     '(an official named in person, "the FBI", "China", "Commerce", "the board"); the gauges did not look at them. Second, the third gauge leaves out any quoted remark the register of remarks had judged, and the register\'s earlier judgments call an occasion "on a chip" when the chip carries its main words: '
-    '103 groups of quoted remarks in two or more articles, which no chip\'s words carry, were set aside that way when I looked (100 now that the president\'s answer is drawn). Both are being read next. Until then the three tables cover less than they appear to.',
+    '103 groups of quoted remarks in two or more articles, which no chip\'s words carry, were set aside that way when I looked (100 now that the president\'s answer is drawn). Both were read after that release (the list that follows this one).',
     'Left as limits: Rep. Crawford\'s chip of Nov 12 has no dated line in the census readings (a limit of the census; nothing is drawn from it); the reading\'s fixed samples are not a reading of the rest; whether one live page saved by hand as PDF held older entries stays open. '
-    'The figure draws 220 dated acts (194 before), 54 of them on the day of their report. Nothing in this list has been read independently.',
+    'At that release the figure drew 220 dated acts (194 before), 54 of them on the day of their report. Nothing in this list has been read independently.',
+]
+
+# what the builder did after releasing the answer to the sixteenth reading (Nov 16, 2026): the two faults in the gauges
+AFTER_RELEASE16 = [
+    'The list of names. The gauges match a line of the census readings to a drawn actor by the speaker\'s name as the reader wrote it, through a list kept by hand (`scripts/as_built/nv8_gaps.py`). The list lacked 148 labels that denote a drawn actor: '
+    'an institution under a plain name ("the FBI", "China", "Commerce", "the State Department", "the board"), its spokespeople, and officials named in person. They are added by written rules over the label, and 407 more lines are now read by the register and the gauges. '
+    'What they brought: one act with no chip (OpenAI\'s board chairman on CNBC on Nov 9, as Yahoo Finance quotes him: "AI is not particularly popular right now in this country"; "So I think this just introduces even more risk"); '
+    'the sentence Singapore\'s police gave beside their refusal ("we act firmly against companies and individuals who violate our laws"), added to that chip; and the words in which the committees\' releases describe the three chairmen\'s letter '
+    '(a briefing on his interactions with Alice Huang, "a publicly reported People\'s Republic of China (PRC) intelligence asset"), which two pages quote and the first chairman\'s chip now prints. The other new listings are read in the tables. '
+    'Former officials, analysts and parties that are not drawn are not matched.',
+    'Remarks set aside by earlier judgments. The third gauge leaves out a quoted remark that the register of remarks has judged. The register\'s early judgments were made by a looser test (the chip carries the main words of the occasion), '
+    'and they had set aside 102 groups of quotations that two or more articles carry and no chip\'s words hold. I read all 102 against the chips of their actor. Most are further sentences of a statement that is drawn. '
+    'Twelve held something of substance that no chip carried, and are added as acts of the same day: the president on Nov 8 ("I have not spoken to him about it. I just know he\'s a fine person, but you never know what is going on"; '
+    'of the coming summit in China, "I don\'t know, but I\'d certainly take him") and on Nov 9 (Huang will not accompany him to China; he does not plan to raise the matter with Xi; "I really believe him"; of when he learned, "Not too long ago"); '
+    'Nvidia\'s statement of Oct 29 ("We\'re confident that if the U.S. government believes that any person is a threat to American industry, it would let us know"); Huang\'s memo ("I am committed to protecting Nvidia and supporting America\'s national security"); '
+    'the board\'s release ("The Board and the company thank Jensen for his immeasurable contributions"); Megaspeed\'s statement of Nov 12 that it has retained a U.S. law firm to make a census of its chips; a fellow\'s post of Nov 8 (what it says of Commerce); '
+    'Sen. Schumer\'s post of Nov 12 ("The Trump administration must also answer for what it did once it learned"); Rep. Jeffries on Nov 9, on the chip provisions of the defense bill; a White House official on Nov 12 (the president "maintains complete confidence in the secretary"); '
+    'the Warren and Coons letter\'s charge that officials "were aware of concerns about NVIDIA" and "did not move to block the continued flow of advanced AI chips"; and Rep. Moolenaar\'s three questions to CNBC, as one broadcaster\'s site reports them (on the report\'s day, dashed). '
+    'What I added follows four tests: an answer about the actor\'s own conduct, a hedge or denial, the main message of a statement whose chip quoted a lesser phrase, or a concrete act. A reason given for a position already drawn was not added. Another reader could draw that line elsewhere.',
+    'The instances of the rule for refusals (`research/nv8_refusals.tsv`, `scripts/as_built/nv8_refusals.py`): 28 acts of 11 actors carry a refusal. Of 131 lines of the census readings that hold words of refusal by a drawn actor, 52 stand in an article such an act cites; '
+    'the other 79 are other outlets\' relays of a response that is drawn from its original, or are not refusals to comment. The table counts them by actor and does not list them one by one.',
+    'Two smaller repairs. In the register a word match had relabelled as carried by a chip one line it had judged to be a report\'s words about the president and not his own; that judgment now outranks the match. The interactive map\'s corner picture had a size limit the taller figure exceeded.',
+    'Left as limits: the readers\' lines are searched, not the pages again; the list of names is still kept by hand, and a label it lacks is still not seen; whether one live page saved by hand as PDF held older entries stays open. '
+    'The figure draws 233 dated acts, 55 of them on the day of their report. Nothing in this list has been read independently.',
 ]

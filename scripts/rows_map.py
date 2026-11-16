@@ -220,8 +220,9 @@ ACTS = [
  ('thune', '2026-11-12', 'Expects "some follow-up" by Congress, in CNBC\'s report of that day',
   ['sw-cnbccom-09', 'sw-cnbccom-09'],
   ['I would expect there would be some follow-up, yeah', "said he expects Congress to conduct oversight of the Jensen Huang affair even after the embattled tech CEO's resignation"]),
- ('mast', 'EV06', 'Letter dated Nov 4, released Nov 5, asks Huang to brief three committees: "Recent reports raise significant national security concerns"',
-  ['house-hfac-letter-pr'], ['Recent reports raise significant national security concerns']),
+ ('mast', 'EV06', 'Letter dated Nov 4, released Nov 5, asks Huang to brief three committees on his interactions with Alice Huang, "a publicly reported People\'s Republic of China (PRC) intelligence asset", and on Nvidia\'s security protocols: "Recent reports raise significant national security concerns"',
+  ['house-hfac-letter-pr', 'house-hfac-letter-pr'],
+  ['Recent reports raise significant national security concerns', "Huang's interactions with Megaspeed executive Alice Huang, a publicly reported People's Republic of China (PRC) intelligence asset"]),
  ('mast', 'EV29', 'Says "yes," a subpoena is being considered'),
  ('crawford', 'EV06', 'Co-signed the letter dated Nov 4, released Nov 5'),
  ('meeks', '2026-11-10', 'Says, as MS NOW reports it, he would subpoena a Commerce appointee',
@@ -276,9 +277,9 @@ ACTS = [
  ('anthropic', 'EV26', 'Sets its IPO price range; seven companies agree to buy $26B of its stock'),
  ('openai', '2026-11-04', 'Quoted by The Information, as the Daily Caller relays it: it "continues to support the strengthening of export controls". The sentence is in its policy paper dated November 2026, which gives no day',
   ['sw-dailycallercom-07'], ['OpenAI continues to support the strengthening of export controls']),
- ('singapore', 'EV04', 'Denies the Journal\'s account of Alice Huang: "no such investigations"; its police say the Megaspeed inquiry continues and that they are "unable to comment further at this juncture". The statement is timed Oct 30, 11:13 PM in Singapore; the ministry\'s newsroom page dates it Oct 31',
-  ['mha-clarification-a'],
-  ['We are unable to comment further at this juncture']),
+ ('singapore', 'EV04', 'Denies the Journal\'s account of Alice Huang: "no such investigations"; its police say the Megaspeed inquiry continues, that they are "unable to comment further at this juncture", and that they "act firmly against companies and individuals who violate our laws". The statement is timed Oct 30, 11:13 PM in Singapore; the ministry\'s newsroom page dates it Oct 31',
+  ['mha-clarification-a', 'mha-clarification-a'],
+  ['We are unable to comment further at this juncture', 'we act firmly against companies and individuals who violate our laws']),
  ('china', 'EV18', 'Calls the spy allegation "unsubstantiated"'),
  # added after audit1b (its finding on the Singapore denial); kept last so earlier row ids do not move
  ('singapore', '2026-11-12', 'Its statement: police interviewed her and held her passport in 2025; in Feb 2026 found "insufficient evidence" of offences over the declarations under investigation; a "stern warning" for inaccurate information; barred from re-entering; no espionage investigation. Requests to U.S. authorities over Supermicro brought "limited information or assistance"',
@@ -722,6 +723,47 @@ ACTS = [
  ('trump', '2026-11-09', 'Asked whether he knew of the concerns when Huang flew with him to China in May: "No, I didn\'t hear about it then"; pressed on whether he had been briefed a year earlier: "I\'d certainly check with the intelligence people. They could have been mentioned. Certainly, it didn\'t make much of an impact on me" (the Times). The Journal: he "declined to provide a detailed explanation of when he learned about the federal government\'s concerns"',
   ['man-nyt-1109-01', 'man-nyt-1109-01', 'man-nyt-1109-01', 'man-wsj-1109-09', 'man-wsj-1110-04'],
   ['On Monday, Mr. Trump said that he did not recall receiving the information', "No, I didn't hear about it then", "Certainly, it didn't make much of an impact on me", "declined to provide a detailed explanation of when he learned about the federal government's concerns", "declined to provide a detailed explanation of when he learned about the federal government's concerns"]),
+ # found when the gauges were given the speaker labels their list lacked (Nov 16)
+ ('openai', '2026-11-09', 'Its board chairman, who also runs an AI startup, on CNBC, as Yahoo Finance quotes him: "AI is not particularly popular right now in this country"; "So I think this just introduces even more risk"',
+  ['sw-financeyahoocom-16', 'sw-financeyahoocom-16', 'sw-financeyahoocom-16'],
+  ["Bret Taylor, OpenAI's chairman and CEO of AI startup Sierra, told Bosa on the same show", 'So I think this just introduces even more risk', 'told Deirdre Bosa on Monday']),
+ # from reading the quoted remarks that the register had set aside (Nov 16): parts of statements already drawn that no chip carried
+ ('trump', '2026-11-08', 'Also that Sunday: "I have not spoken to him about it. I just know he\'s a fine person, but you never know what is going on" (FT); asked whether Huang would take part in the coming summit in China: "I don\'t know, but I\'d certainly take him" (Al Jazeera)',
+  ['man-ft-1109-05', 'man-ft-1109-05', 'aljazeera-1112-board', 'aljazeera-1112-board'],
+  ['Asked about Huang on Sunday', "I have not spoken to him about it. I just know he's a fine person, but you never know what is going on", 'Asked on Sunday whether Huang would take part in the summit', "I don't know, but I'd certainly take him"]),
+ ('trump', '2026-11-09', 'Says Huang will not accompany him to China the next week and that he does not plan to raise the matter with Xi (the Times); of Huang\'s denial: "I really believe him" (FT); of when he learned of the concerns: "Not too long ago" (the Journal)',
+  ['man-nyt-1110-02', 'man-nyt-1110-02', 'man-ft-1109-04', 'man-wsj-1109-09'],
+  ['on Monday he said the Nvidia executive will not accompany him on the trip', 'The president said he did not plan to raise the matter with Mr. Xi', 'I really believe him', 'Not too long ago']),
+ ('nvidia', '2026-10-29', 'In its statement to several outlets that day: "We\'re confident that if the U.S. government believes that any person is a threat to American industry, it would let us know"; "We often receive updates from the U.S. government regarding parties and entities of concern and always act accordingly" (Tom\'s Hardware)',
+  ['sw-tomshardwarecom-09', 'sw-tomshardwarecom-09', 'cnbc-1029-nvidia-responds'],
+  ["We're confident that if the U.S. government believes that any person is a threat to American industry, it would let us know", 'We often receive updates from the U.S. government regarding parties and entities of concern and always act accordingly', 'confident that if the U.S. government believes']),
+ ('huang', '2026-11-08', 'In the same memo: "I am committed to protecting Nvidia and supporting America\'s national security"',
+  ['sw-foxbusinesscom-01', 'sw-euronewscom-01'],
+  ["I am committed to protecting Nvidia and supporting America's national security", "I am committed to protecting Nvidia and supporting America's national security"]),
+ ('board', '2026-11-12', 'In the release on the resignation: "Jensen\'s contributions to NVIDIA are profound"; "The Board and the company thank Jensen for his immeasurable contributions to the company and the industry"',
+  ['sw-cnbccom-09', 'sw-deadlinecom-02'],
+  ['The Board and the company thank Jensen for his immeasurable contributions to the company and the industry', 'The Board and the company thank Jensen for his immeasurable contributions to the company and the industry']),
+ ('megaspeed', '2026-11-12', 'In a statement on its site: it "has retained a leading U.S. law firm to lead a comprehensive census of its graphics processing units (GPUs) and independently verify its export control compliance practices", and "welcomes appropriate government scrutiny"',
+  ['art-fc-rec-megaspeed-home', 'art-fc-rec-megaspeed-home', 'sw-qzcom-13'],
+  ['Megaspeed has retained a leading U.S. law firm to lead a comprehensive census of its graphics processing units (GPUs) and independently verify its export control compliance practices', 'Megaspeed welcomes appropriate government scrutiny', 'The company said Thursday that it had assisted inspectors']),
+ ('mcguire', '2026-11-08', 'In the same post: "The biggest problem remains unaddressed"; "it is even more important that the Department of Commerce tighten up export controls to prevent things like this from ever happening again"',
+  ['x-mcguire-nov8', 'x-mcguire-nov8'],
+  ['The biggest problem remains unaddressed', 'it is even more important that the Department of Commerce tighten up export controls to prevent things like this from ever happening again']),
+ ('schumer', '2026-11-12', 'In the same post: "The Trump administration must also answer for what it did once it learned about Mr. Huang\'s relationship with a suspected Chinese intelligence asset"; "What did Trump know when he personally invited Mr. Huang aboard Air Force One?"',
+  ['cnn-1111-live', 'cnn-1111-live'],
+  ["The Trump administration must also answer for what it did once it learned about Mr. Huang's relationship with a suspected Chinese intelligence asset", 'What did Trump know when he personally invited Mr. Huang aboard Air Force One?']),
+ ('jeffries', '2026-11-09', 'To reporters that Monday, in Semafor\'s account: he "strongly supports" the Senate\'s provisions for stricter chip export controls in the defense bill, and "We\'re going to work hard to make sure that those provisions make it into the final version"',
+  ['sw-semaforcom-04', 'sw-semaforcom-04', 'art-line-straitstimes-bloomberg-1110'],
+  ['the stricter chip export control provisions that the Senate has already advanced in its annual defense policy bill', "We're going to work hard to make sure that those provisions make it into the final version", 'make sure that those provisions make it into the final version of the National Defense Authorization Act']),
+ ('whitehouse', '2026-11-12', 'A White House official tells CNN that the president "maintains complete confidence in the secretary and his ability to carry out the position"',
+  ['cnn-1111-live', 'cnn-1111-live'],
+  ['a White House official told CNN on Thursday', 'President Trump maintains complete confidence in the secretary and his ability to carry out the position']),
+ ('warren', '2026-11-11', 'The letter with Coons says reports suggest that officials at the White House, the State Department and Commerce "were aware of concerns about NVIDIA" and "did not move to block the continued flow of advanced AI chips"; it asks that Congress be briefed on the risks',
+  ['cnn-1111-live', 'cnn-1111-live', 'cnn-1111-live'],
+  ['were aware of concerns about NVIDIA, its relationship with', 'yet did not move to block the continued flow of advanced AI chips', 'They also asked the officials to brief Congress on what risks']),
+ ('moolenaar', '2026-11-11', 'Tells CNBC, in a broadcaster\'s report of Nov 11, that he has three main questions (what was shared with the suspected spy, whether Huang was influenced by her, whether Chinese buyers were favoured); the access Huang allowed "could have been leveraged at any point by the CCP"',
+  ['sw-cbsaustincom-04', 'sw-cbsaustincom-04'],
+  ['said he has three main questions', 'could have been leveraged at any point by the CCP']),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
@@ -731,13 +773,13 @@ REPORT_DAY = {('megaspeed', '2026-10-29'), ('whitehouse', '2026-10-29'), ('taiwa
               ('blumenthal', '2026-11-09'), ('bresnick', '2026-11-09'), ('huang', '2026-11-09'), ('justice', '2026-11-09'), ('nvidia', '2026-11-09'), ('bessent', '2026-11-10'),
               ('bresnick', '2026-11-10'), ('commerce', '2026-11-10'), ('grunewald', '2026-11-10'), ('justice', '2026-11-10'), ('mcguire', '2026-11-10'), ('megaspeed', '2026-11-10'),
               ('moorhead', '2026-11-10'), ('nvidia', '2026-11-10'), ('ohanlon', '2026-11-10'), ('rubio', '2026-11-10'), ('stapp', '2026-11-10'), ('taiwan', '2026-11-10'),
-              ('whitehouse', '2026-11-10'), ('bresnick', '2026-11-11'), ('moorhead', '2026-11-11'), ('nvidia', '2026-11-11'), ('stapp', '2026-11-11'), ('anthropic', '2026-11-12'),
-              ('boloor', '2026-11-12'), ('chan', '2026-11-12'), ('commerce', '2026-11-12'), ('cornyn', '2026-11-12'), ('fedasiuk', '2026-11-12'), ('hodges', '2026-11-12'),
-              ('huang', '2026-11-12'), ('justice', '2026-11-12'), ('king', '2026-11-12'), ('musk', '2026-11-12'), ('nie', '2026-11-12'), ('nvidia', '2026-11-12'),
-              ('yoo', '2026-11-12')}        # added 2026-11-16 with MA179, MA180, MA184, MA186
+              ('whitehouse', '2026-11-10'), ('bresnick', '2026-11-11'), ('moolenaar', '2026-11-11'), ('moorhead', '2026-11-11'), ('nvidia', '2026-11-11'), ('stapp', '2026-11-11'),
+              ('anthropic', '2026-11-12'), ('boloor', '2026-11-12'), ('chan', '2026-11-12'), ('commerce', '2026-11-12'), ('cornyn', '2026-11-12'), ('fedasiuk', '2026-11-12'),
+              ('hodges', '2026-11-12'), ('huang', '2026-11-12'), ('justice', '2026-11-12'), ('king', '2026-11-12'), ('musk', '2026-11-12'), ('nie', '2026-11-12'),
+              ('nvidia', '2026-11-12'), ('yoo', '2026-11-12')}        # added 2026-11-16 with MA179, MA180, MA184, MA186
 # Row ids whose source gives the act's own day although another act of the same actor on that day is known only by its report's day
 # (slice S8, 2026-11-15: the Journal has Cornyn's post "on X Sunday"; his remark on the Times report that day is dated by CNBC's page).
-OWN_DAY = {'MA33', 'MA156', 'MA59', 'MA74', 'MA77', 'MA170', 'MA190', 'MA197', 'MA205', 'MA218',        # the last six: acts with their own day on a day that also holds a refusal or report dated by its report (sixteenth reading)
+OWN_DAY = {'MA33', 'MA156', 'MA59', 'MA74', 'MA77', 'MA170', 'MA190', 'MA197', 'MA205', 'MA218', 'MA49',        # the last six: acts with their own day on a day that also holds a refusal or report dated by its report (sixteenth reading)
                   # MA156: the FT dates the legislators' calls to Thursday; Cornyn's other act of Nov 12 (MA147) is dated by a newsletter
           
            'MA142',        # Moorhead's broadcast of Nov 11 is dated by his firm's own summary; the Times article that quotes him that day gives no day for the remark (MA158)

@@ -24,9 +24,9 @@ import nv8_gaps as G, rows_map
 N = 5
 SAME = 'part of a statement a chip of that day already carries in other words: '
 READ = {
-    ('china', 'we have already made our position clear on the'): SAME + 'the ministry\'s replies of Nov 9 and Nov 12, in other translations (its chips for those days)',
+    ('china', 'the report in question is based on groundless speculation'): SAME + 'the ministry\'s reply to the first report, in another translation (its chip for Oct 30)',
+    ('china', 'the narrative about so called chinese spies is entirely'): SAME + 'the ministry\'s reply of Nov 9, in the Journal\'s translation (its chip for that day)',
     ('china', 'we stand ready to work with the us to'): 'not on the matter: the ministry on relations between the two countries',
-    ('china', 'based on groundless speculation and is nothing more than'): SAME + 'the ministry\'s reply to the first report, in another translation (its chip for Oct 30)',
     ('coons', 'we write to request that the department of commerce'): SAME + 'the letter with Sen. Warren (his chip for Nov 11)',
     ('huang', 'my family bears no responsibility for my choices i'): SAME + 'his memo to staff (his chip for Nov 8)',
     ('jeffries', 'there are real concerns that need to be addressed'): SAME + 'his remarks of Nov 9 asking for a full briefing (his chip for that day)',
@@ -37,7 +37,6 @@ READ = {
     ('nvidia', 'the prc government is not seeking nvidia products from'): SAME + 'its reply to the first report (its chip for Oct 29, which carries its denial)',
     ('nvidia', 'we sell our data center gpus primarily to well'): 'not of these days: statements of 2025 that later reports quote as made "at the time"',
     ('schumer', 'one of our most important companies thats involved in'): SAME + 'his floor speech of Nov 10 (his chip for that day)',
-    ('mcguire', 'the biggest problem remains unaddressed the department of commerce'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
     ('mcguire', 'bisgov has done so not only by permitting the'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
     ('mcguire', 'why is commerce protecting jensen and supporting his preferred'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
 }

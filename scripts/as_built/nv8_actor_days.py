@@ -31,6 +31,7 @@ READ = {
 NOC = 'no act: the page says only that no reply to a request for comment had come'
 READ1 = {
          
+         ('bessent', '2026-11-11'): 'not on the matter: a remark of the day before on relations with China in general',
          ('commerce', '2026-11-11'): NOC, ('megaspeed', '2026-11-05'): NOC, ('whitehouse', '2026-11-11'): NOC,
          ('himes', '2026-11-12'): 'his remarks to Politico, which that page dates to Thursday and the article itself to Wednesday: on his chip for Nov 11',
          ('huang', '2026-10-30'): 'one page dates to Oct 30 what he said of Megaspeed\'s deployments; it is the interview on his chip for Oct 29 (the interviewer\'s own page is dated Oct 29)',

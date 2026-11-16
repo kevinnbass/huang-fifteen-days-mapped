@@ -34,6 +34,7 @@ READ1 = {'MA179': 'not the same act: other statements of the company, of other d
          'MA195': 'not the same response: other refusals of the company, on other days, that share only the words of refusal with this one',
          'MA199': 'not the same response: other refusals of the company, on other days, that share only the words of refusal with this one',
          'MA196': 'a similar statement of the day before to another outlet (it is on the chip for Nov 9); the sixteenth reading judged this one a separate answer, to the FT',
+         'MA214': 'the two accounts of the extension\'s date, both of which the chip gives (one page: Monday, Nov 9; another: Nov 5)',
          'MA211': 'not the same act: the line of Nov 8 is his acknowledgment to employees, which the cited passage mentions and which has its own chip',
          'MA210': 'the census gives these lines other days; the sixteenth reading compared them with his saved posts of Nov 6 and Nov 8 and found the quotations only in the piece of Nov 10'}
 READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109', 'MA125', 'MA128', 'MA130', 'MA150', 'MA158',
