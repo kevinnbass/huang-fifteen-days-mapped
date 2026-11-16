@@ -322,8 +322,8 @@ sw-digitin-01	first census	A0310	digit.in	2026-11-09	header stamp	2026-11-09T15:
 sw-digitin-02	first census	A0311	digit.in	2026-11-12	header stamp	2026-11-13T01:12:00+05:30	5621	yes			
 sw-digitin-03	first census	A0312	digit.in	2026-11-12	header stamp	2026-11-13T01:53:00+05:30	4429	yes			
 sw-digitin-de11bddd	first census	A0313	digit.in	2026-11-12	header stamp	2026-11-13T03:27:00+05:30	6166	yes			
-sw-easterneyebiz-01	first census	A0314	easterneye.biz	2026-11-09	header stamp	2026-11-09T10:16:01+00:00	8323	yes			
-sw-easterneyebiz-02	first census	A0315	easterneye.biz	2026-11-12	header stamp	2026-11-12T14:54:43+00:00	6200	yes			
+sw-easterneyebiz-01	first census	A0314	easterneye.biz	2026-11-09	header stamp	2026-11-09T10:16:01+00:00	7682	yes			
+sw-easterneyebiz-02	first census	A0315	easterneye.biz	2026-11-12	header stamp	2026-11-12T14:54:43+00:00	5564	yes			
 sw-eenewseuropecom-01	first census	A0316	eenewseurope.com	2026-11-09	header stamp	2026-11-09T08:54:42+00:00	3337	yes			
 sw-electronicsweeklycom-01	first census	A0317	electronicsweekly.com	2026-11-12	header stamp	2026-11-12T06:13:42+00:00	7136	yes			
 sw-emptywheelnet-01	first census	A0318	emptywheel.net	2026-11-09	header stamp	2026-11-09T11:58:34+00:00	38380	yes			
@@ -446,7 +446,7 @@ sw-fortunecom-08	first census	A0428	fortune.com	2026-11-11	header stamp	2026-11-
 sw-fortunecom-09	first census	A0429	fortune.com	2026-11-11	header stamp	2026-11-11T10:59:21-00:00	12070	yes			
 sw-fortunecom-10	first census	A0430	fortune.com	2026-11-12	header stamp	2026-11-12T12:33:17-00:00	5687	yes			
 sw-fortunecom-11	first census	A0431	fortune.com	2026-11-12	header stamp	2026-11-12T10:48:20-00:00	11831	yes			
-sw-fortunecom-12	first census	A0432	fortune.com	2026-11-12	header stamp	2026-11-12T11:58:26-00:00	3428	yes			yes
+sw-fortunecom-12	first census	A0432	fortune.com	2026-11-12	header stamp	2026-11-12T11:58:26-00:00	3428	yes			
 sw-fortunecom-13	first census	A0433	fortune.com	2026-11-12	header stamp	2026-11-12T15:41:24-00:00	4304	yes			
 sw-fortunecom-14	first census	A0434	fortune.com	2026-11-12	header stamp	2026-11-12T16:36:21-00:00	4546	yes			
 sw-fortunecom-15	first census	A0435	fortune.com	2026-11-12	header stamp	2026-11-12T15:21:51-00:00	6351	yes			
@@ -843,7 +843,7 @@ sw-spectatorcom-01	first census	A0800	spectator.com	2026-11-12	header stamp	2026
 sw-spectatorcom-ba3b4784	first census	A0801	spectator.com	2026-11-09	header stamp	2026-11-09T11:06:36+00:00	5467	yes			
 sw-spyglassorg-01	first census	A0802	spyglass.org	2026-11-09	header stamp	2026-11-09T11:42:10.000Z	1004	yes			yes
 sw-spyglassorg-02	first census	A0803	spyglass.org	2026-11-12	header stamp	2026-11-12T13:01:59.000Z	753	yes			yes
-sw-spytalkco-01	first census	A0804	spytalk.co	2026-11-08	header stamp	2026-11-09T01:40:31+00:00	3038	yes			
+sw-spytalkco-01	first census	A0804	spytalk.co	2026-11-08	header stamp	2026-11-09T01:40:31+00:00	3038	yes			yes
 sw-spytalkco-02	first census	A0805	spytalk.co	2026-11-10	header stamp	2026-11-10T21:36:56+00:00	1506	yes			yes
 sw-stanforddailycom-01	first census	A0806	stanforddaily.com	2026-11-10	header stamp	2026-11-10T04:22:04-08:00	4639	yes			
 sw-staradvertisercom-efab8d8f	first census	A0030	staradvertiser.com	2026-11-12	header stamp	2026-11-12T16:51:00+00:00	7869	yes		read as the same article as globe-1112-resigns by the eighth independent reading (lane audit_nv8_s8b, Nov 16, 2026)	
@@ -1185,7 +1185,7 @@ man-80f9625ff363	saved since	A1118	ft.com	2026-11-13	yesterday	Published YESTERD
 man-840d9174ebc8	saved since	A1119	wsj.com	2026-11-13	stamp line	Updated Nov. 13, 2026 11 01 am ET	4472	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
 man-8b45e47575ca	saved since	A1120	nytimes.com	2026-11-13	stamp line	Nov. 13, 2026	7827	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
 man-8d96e071b1d8	saved since	A1121	washingtonpost.com	2026-11-13	address	/2026/11/13/	10435	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
-man-8fe865a2b656	saved since	A1122	nytimes.com	2026-11-14	stamp line	Nov. 14, 2026	20466	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
+man-8fe865a2b656	saved since	A1122	nytimes.com	2026-11-14	stamp line	Nov. 14, 2026	20795	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
 man-90e99613e4b5	saved since	A1123	nytimes.com	2026-11-14	stamp line	Nov. 14, 2026	7804	no	dated 2026-11-14 (U.S. Eastern), after the fifteen days		
 man-921a60b7ee50	saved since	A1124	washingtonpost.com	2026-11-10	stamp line	November 10, 2026	7952	yes			
 man-923fe8754943	saved since	A1047	wsj.com	2026-10-31	stamp line	Updated Oct. 31, 2026 8 47 am ET	10139	yes		read as the same article as art-fc-itiger-wsj-1030 by the seventh independent reading (lane audit_nv8_s8a, Nov 15, 2026)	
@@ -1203,7 +1203,7 @@ man-c11dbdcffe3d	saved since	A1135	wsj.com	2026-11-10	stamp line	Nov. 10, 2026 4
 man-c32180d5e8fe	saved since	A1136	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 5 53 pm ET	4906	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
 man-c76939f79a79	saved since	A1137	ft.com	2026-11-13	stamp line	Published NOV 13 2026	3371	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
 man-cc6c29c9f823	saved since	A1138	economist.com	2026-11-12	stamp line	Nov 12th 2026	7170	yes			
-man-d89c11b35532	saved since	A1139	nytimes.com	2025-10-09	stamp line	Oct. 9, 2025	19447	no	dated 2025-10-09, before the fifteen days (a background page)		
+man-d89c11b35532	saved since	A1139	nytimes.com	2025-10-09	stamp line	Oct. 9, 2025	19690	no	dated 2025-10-09, before the fifteen days (a background page)		
 man-df1cbeb67996	saved since	A1140	wsj.com	2026-11-13	stamp line	Nov. 13, 2026 3 15 pm ET	5779	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
 man-e1161e38dc19	saved since	A1034	nytimes.com	2026-11-11	stamp line	Nov. 11, 2026	5628	yes		read as the same article as art-fc-bs-nyt-1111-exec by a reader from another model family (lane pairs_nv8_a, Nov 15, 2026)	
 man-e2596eab15f4	saved since	A1141	ft.com	2026-11-13	stamp line	Published NOV 13 2026	9798	no	dated 2026-11-13 (U.S. Eastern), after the fifteen days		
@@ -1227,7 +1227,7 @@ man-ft-1112-01	saved since	A1155	ft.com	2026-11-12	stamp line	Published NOV 12 2
 man-ft-1112-03	saved since	A1156	ft.com	2026-11-11	stamp line	Published NOV 11 2026	7060	yes			
 man-ft-1112-05	saved since	A1157	ft.com	2026-11-12	header stamp	2026-11-12	38889	yes			
 man-ft-1112-09	saved since	A1040	ft.com	2026-11-12	stamp line	Published NOV 12 2026	4922	yes		same address as art-fc-ft-1112-singapore	
-man-nyt-1029-01	saved since	A1158	nytimes.com	2026-10-29	stamp line	Oct. 29, 2026	17967	yes			
+man-nyt-1029-01	saved since	A1158	nytimes.com	2026-10-29	stamp line	Oct. 29, 2026	18004	yes			
 man-nyt-1105-01	saved since	A1159	nytimes.com	2026-11-05	stamp line	Nov. 5, 2026	6009	yes			
 man-nyt-1106-01	saved since	A0550	nytimes.com	2026-11-06	stamp line	Nov. 6, 2026	11656	yes			
 man-nyt-1107-01	saved since	A1160	nytimes.com	2026-11-07	stamp line	Published Nov. 7, 2026	12388	yes			
@@ -1246,7 +1246,7 @@ man-nyt-1111-02	saved since	A1170	nytimes.com	2026-11-11	stamp line	Nov. 11, 202
 man-nyt-1112-01	saved since	A1171	nytimes.com	2026-11-12	stamp line	Nov. 12, 2026	14592	yes			
 man-nyt-1112-04	saved since	A1172	nytimes.com	2026-11-12	stamp line	Nov. 12, 2026	3639	yes			
 man-nyt-1112-07	saved since	A0137	nytimes.com	2026-11-11	stamp line	Published Nov. 11, 2026	7600	yes			
-man-nyt-1112-09	saved since	A1173	nytimes.com	2026-11-12	stamp line	Published Nov. 12, 2026	19189	yes			
+man-nyt-1112-09	saved since	A1173	nytimes.com	2026-11-12	stamp line	Published Nov. 12, 2026	19619	yes			yes
 man-politico-1109-01	saved since	A1174	politico.com	2026-11-09	header stamp	2026-11-09	4923	yes			
 man-politico-1110-02	saved since	A1175	politico.com	2026-11-10	header stamp	2026-11-10	7955	yes			
 man-wapo-1111-01	saved since	A1000	washingtonpost.com	2026-11-11	stamp line	November 11, 2026	7723	yes		text of the shorter is 98% inside the other (sw-wtopcom-02), which is under twice its length, and the two share their lead	

@@ -105,7 +105,7 @@ sw-fortunecom-08	fortune.com	whole	whole	a reader from another model family (lan
 sw-fortunecom-09	fortune.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
 sw-fortunecom-10	fortune.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
 sw-fortunecom-11	fortune.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
-sw-fortunecom-12	fortune.com	part	part	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
+sw-fortunecom-12	fortune.com	part	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	the builder, after the twelfth independent reading (lane audit_nv8_s8f, Nov 16, 2026) called the mark an error: a complete newsletter. The newsletter is the piece that was listed and its own text is all here; the report it sums up and links to is another piece. The same rule as for the aggregator-style posts: a page is whole when all of the listed page's own piece is saved, whatever it quotes or links to
 sw-fortunecom-13	fortune.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
 sw-fortunecom-14	fortune.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
 sw-fortunecom-15	fortune.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
@@ -187,7 +187,7 @@ sw-slashdotorg-03	slashdot.org	part	whole	a reader from another model family (la
 sw-slashdotorg-b1958825	slashdot.org	part	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	the builder: a post of an aggregator-style site that quotes part of another outlet's report and links to it. The post is the piece that was listed and its own text is all here; the reader marked it as part under a brief that called any excerpt of a longer piece elsewhere partial
 sw-spectatorcom-01	spectator.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
 sw-spectatorcom-ba3b4784	spectator.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
-sw-spytalkco-01	spytalk.co	cannot tell	not told	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	left unmarked: the reader could not tell from the saved copy
+sw-spytalkco-01	spytalk.co	cannot tell	part	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	the twelfth independent reading (lane audit_nv8_s8f, Nov 16, 2026): the newsletter begins a second item and then stops at its own subscription barrier. The first reader could not tell whether more about Nvidia followed; under the own-piece rule that does not matter: the listed piece is not all here
 sw-spytalkco-02	spytalk.co	part	part	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
 sw-techradarcom-01	techradar.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
 sw-techradarcom-02	techradar.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
@@ -247,3 +247,4 @@ sw-worldpoliticsreviewcom-01	worldpoliticsreview.com	part	part	a reader from ano
 sw-yroslashdotorg-02	yro.slashdot.org	part	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	the builder: a post of an aggregator-style site that quotes part of another outlet's report and links to it. The post is the piece that was listed and its own text is all here; the reader marked it as part under a brief that called any excerpt of a longer piece elsewhere partial
 toms-summoned	tomshardware.com	whole	whole	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
 tpm-perfect-storm	talkingpointsmemo.com	part	part	a reader from another model family (lane partial_nv8_a, Nov 16, 2026)	
+man-nyt-1112-09	nytimes.com	part	part	a reader from another model family (lane audit_nv8_s8f, Nov 16, 2026)	not on the screen's list (no sign of a barrier, and more than 2,000 characters): a live page saved by hand with several of its entries collapsed. Found in the twelfth reading's sample; a search of every counted page's text for collapse marks, each hit read by the builder, found no other page whose own entries are collapsed (research/nv8_collapse_screen.tsv)

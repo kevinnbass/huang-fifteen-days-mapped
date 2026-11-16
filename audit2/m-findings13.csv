@@ -1,0 +1,5 @@
+finding_id,row_id,grade,passage_found,problem,suggested_wording
+E-mast,mast,ok,"90 of 1,086 story_pages.tsv flags; independent raw/reextract text plus additions also gives 90.",The newly counted table/caption belongs to its own piece and faithfully supplies the chairman name.,Keep the changed count.
+E-moolenaar,moolenaar,ok,"79 of 1,086 story_pages.tsv flags; independent raw/reextract text plus additions also gives 79.",The newly counted table/caption belongs to its own piece and faithfully supplies the chairman name.,Keep the changed count.
+E-crawford,crawford,ok,"72 of 1,086 story_pages.tsv flags; independent raw/reextract text plus additions also gives 72.",The newly counted table/caption belongs to its own piece and faithfully supplies the chairman name.,Keep the changed count.
+E-STATUS,status,ok,Read all four changed visible text nodes and the first CHANGES section.,"The status distinguishes the independently read prior correction from the then-unread table/caption correction. No source, money or act change is implied.",Nothing in the three-chairmen figure should change on this reading.

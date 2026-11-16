@@ -111,8 +111,11 @@ def ARTICLE_WORDS():
     undated = sum(1 for r in rows if r['counted'] == 'yes' and not r['day']); part = sum(r['saved_in_part'] == 'yes' for r in rows)
     pr = list(csv.DictReader(open(R / 'nv8_pages_in_part_read.tsv', newline=''), delimiter='\t')); n_read = len(pr)
     part2 = len({p['page_id'] for p in pr if p['verdict'] == 'part'} & {r['page_id'] for r in rows if r['saved_in_part'] == 'yes'})
-    n_added = sum(1 for _ in open(R / 'nv8_text_added.tsv')) - 1
-    assert part2 == sum(p['verdict'] == 'part' for p in pr) and 0 < n_added <= 12
+    n_screen = sum('lane partial_nv8_a' in p['read_by'] for p in pr)          # the pages the screen listed; the others were found by a later reading among the longer pages
+    n_live = sum(p['verdict'] == 'part' and 'lane partial_nv8_a' not in p['read_by'] for p in pr)
+    ta = list(csv.DictReader(open(R / 'nv8_text_added.tsv', newline=''), delimiter='\t'))
+    n_pdf = sum('page breaks' in x['what_the_text_read_lacked'] for x in ta); n_tab = len(ta) - n_pdf; n_pdf_lines = sum(int(x['lines_added']) for x in ta if 'page breaks' in x['what_the_text_read_lacked'])
+    assert part2 == sum(p['verdict'] == 'part' for p in pr) and 0 < n_tab <= 12 and 0 < n_pdf <= 12 and n_live == 1 and n_screen + n_live == n_read
     in_copy = sum(r['day_basis'] == 'read in the saved copy' for r in rows)
     pairs = list(csv.DictReader(open(R / 'nv8_article_pairs.tsv', newline=''), delimiter='\t'))
     used = lambda p: p.get('scope') == 'all' or p.get('used_for_joining') == 'yes'        # the project's table, or the published one (which leaves out the readers' sentences)
@@ -134,10 +137,13 @@ def ARTICLE_WORDS():
             f"({in_copy} pages whose metadata and text carry none, or carry one the printed stamp contradicts, were read in their saved copy). "
             f"A page is not counted when that day is after Nov 12 ({why['after']} pages) or before Oct 29 ({why['before']}, background pages), when the saved copy is a block or error page ({why['not the piece']}) or holds nothing at all ({why['empty']}), "
             f"or when it is a reference page or an image ({why['not news']}). For {rec} pages whose first extraction had missed the article, its text was taken again from the saved HTML ({W_(rec2)} of them a second time, after a reading found paragraphs missing or other lines among them); "
-            f"{part} counted pages are still held only in part (a headline and description, a teaser, an excerpt, the opening before a subscription barrier): {part - part2} that the readers of the pages had listed, "
-            f"and {part2} more found on Nov 16, when a reader went through the {n_read} counted pages that show a sign of a barrier or hold a short text; a longer page that shows no such sign was not read again for this. "
-            f"On {W_(n_added)} pages a table or a photo caption of the piece, which the extraction from the saved HTML had left out, was added to the text read, after a search of every page's HTML for a member's name missing from its text; "
-            "that search does not find other passages an extraction may have lost. "
+            f"{part} counted pages are still held only in part (a headline and description, a teaser, an excerpt, the opening before a subscription barrier, a live page with entries collapsed): {part - part2} that the readers of the pages had listed, "
+            f"and {part2} more found on Nov 16: {part2 - n_live} among the {n_screen} counted pages that show a sign of a barrier or hold a short text, which readers went through, and {W_(n_live)} live page with collapsed entries, which a later reading found among the longer pages. "
+            "A page is whole when all of the listed page's own piece is saved, whatever it quotes or links to. A longer page that shows no sign of a barrier was not read again for this: "
+            "a search of every counted page for collapse marks found no second one, and it cannot see a live page that loads more entries only on request. "
+            f"On {W_(n_tab)} pages a table or a photo caption of the piece, which the extraction from the saved HTML had left out, was added to the text read, after a search of every page's HTML for a member's name missing from its text "
+            "(a member counts as named when the name stands in the piece's own table or caption); other photo captions are not in the text read, and that search does not find other passages an extraction may have lost. "
+            f"On {W_(n_pdf)} pages saved by hand as PDF, {n_pdf_lines} lines of prose that the cleaning of the text had dropped at page breaks were put back. "
             f"The {W_(len(line))} people at three or four articles ({W_(mem)} members and {W_(len(line) - mem)} public voices) were each read for whether those articles are separate reports, and all have three. "
             "Two senators reach three only through a report saved on Nov 16 that the record had pointed to and the saved pages lacked: one through a piece the aggregators listed on Nov 12 "
             "(a paper's live page had repeated its own article, leaving two reports), one through a report that a reader had quoted under a blog post. "

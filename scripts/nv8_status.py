@@ -2,7 +2,7 @@
 generator and the public build (build_nv8.py) print the same words."""
 KICKER = 'Huang resignation · dated public records, Nov 2026 · draft'
 STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn item was matched by script to a saved copy of its source. '
-          'Eleven independent readings by another company\'s model have read the figure or the corrections made to it. The first (Nov 14) read the 230 rows then drawn that are not listed pieces, recounted the pieces and recomputed the members\' lines. '
+          'Twelve independent readings by another company\'s model have read the figure or the corrections made to it. The first (Nov 14) read the 230 rows then drawn that are not listed pieces, recounted the pieces and recomputed the members\' lines. '
           'The second (Nov 15), in three parts, read the 168 rows new or changed since then, the figure element by element, the pieces and the money recounted from the FEC\'s saved records, and who is drawn and what the chips carry; '
           'it graded 11 points as errors and 145 as needing a qualification. The third (Nov 15) read the corrections made in answer: it found no error in the 90 changed rows, two errors and eight qualifications in the changed text, '
           'and held 2 of the 181 answers insufficient and 19 only in part. A fourth (Nov 15) read the answers to it and the 45 rows added or changed since: no error in a row, 24 qualifications (18 of them one point, that lobbyists\' gifts were shown by unequal measures), '
@@ -20,10 +20,19 @@ STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn ite
           'A tenth (Nov 16) read those answers: the 17 changed rows ok and all 54 answers holding, 12 of them in part; one line of committee money had still been missed (a campaign committee whose name holds the lobbyist\'s surname), '
           'one representative\'s count of articles was two short, and two sentences claimed too much (how many headlines name people who are not drawn; that an independent reader judged every pair of pages). '
           'In answer a contribution counts as a lobbyist\'s own only when the report says SELF or gives the filer\'s name and nothing else, which corrected one more member\'s line (the groups\' side is $295,629; it was $391,629 before the ninth reading), '
-          'and that representative is counted under his legal given name too. An eleventh (Nov 16) read those answers and the same corrections in the three-chairmen figure: all 46 answers hold and no line of money is wrongly classed. '
-          'It found one counted page that is a subscription preview and was not marked as held in part, a sentence in a supporting table saying that no client directed the lobbyists\' gifts, which the reports do not show, and this note\'s count of readings out of date. '
-          'Changed in answer and not yet read independently: a reader went through the 248 counted pages that show a sign of a barrier or hold a short text, and 92 pages, not 58, are now marked as held only in part; '
-          'a table and five photo captions that the extraction had left out were added to the text read, which raises four members\' counts of articles (Mast 91, Moolenaar 78, Crawford 68, the Speaker 10); the supporting table\'s sentence is replaced.')
+          'and that representative is counted under his legal given name too. An eleventh (Nov 16) read those answers and the same corrections in the three-chairmen figure: all 46 answers hold, and it found no misclassified line of money among the 193 of 678 lines it read, the rule run on all 678 agreeing. '
+          'It found one counted page that is a subscription preview and was not marked as held in part, a sentence in a supporting table saying that no client directed the lobbyists\' gifts, which the reports do not show, '
+          'the names searched for some members lacking a form the roster gives, and this note\'s count of readings out of date. '
+          'In answer a reader went through the 248 counted pages that show a sign of a barrier or hold a short text, which raised the pages marked as held only in part from 58 to 92; '
+          'a table and five photo captions that the extraction had left out were added to the text read, which raised four members\' counts of articles (Mast 91, Moolenaar 78, Crawford 68, the Speaker 10); '
+          'the given name or its usual short form was added to the names searched for eleven members, changing no count; and the supporting table\'s sentence was replaced. '
+          'A twelfth (Nov 16) read those answers and the interactive map made from the figure: every member\'s count, the added passages and the money reproduce, and 37 of 40 answers hold, three in part. '
+          'It found, on the interactive map, members\' lines shown without their sources, searches that found nothing counted as ties, and a label claiming a current post; '
+          'and in the tables a complete newsletter marked as held in part while one cut off by its paywall was not, a live page with collapsed entries not marked, lines of prose dropped at the page breaks of a page saved by hand as PDF, '
+          'and photo captions missing from the text read. It closed incomplete: four hand-saved PDFs could not be opened where it ran. '
+          'Changed in answer and not yet read independently: the interactive map lists every source, sets the empty searches apart and is relabelled; '
+          '93 pages are marked as held only in part, under the stated rule that a page is whole when all of its own piece is saved; '
+          '21 dropped lines are put back on four pages and two pages are trimmed of a following article\'s opening lines, with no count changing; and the missing captions are stated as a limit.')
 # what changed after the audit read the figure (the README of the public copy lists these under the audit)
 AFTER_AUDIT = [
     'Five pieces were added and one moved from Nov 8 to Nov 12 (1,726 pieces became 1,731; 1,662 drawn became 1,667): six articles of one site share an address apart from the query string and had been counted as one. No row id was renumbered.',
@@ -195,4 +204,34 @@ AFTER_READING11 = [
     'The three-chairmen figure: the reading found its two corrections right and nothing more to change. The table and the caption added here also raise its counts of pages (Mast 90, Moolenaar 79, Crawford 72), which are corrected in its repository in the commit that follows this one.',
     'Left as limits, and said in the notes: a page of more than 2,000 characters that shows no sign of a barrier was not read again for whether it is whole; the search for lost passages finds only those that name a member whose name is searched, '
     'so a table or a caption without such a name can still be missing from a page\'s text; the six passages added were read by the builder, not by a census reader, and hold no quoted remark.',
+]
+# what changed in answer to the twelfth independent reading (lane audit_nv8_s8f, read after its marker on Nov 16, 2026)
+AFTER_READING12 = [
+    'Pages held only in part: 93 (92 before). A complete newsletter is no longer marked: it is the piece that was listed and its own text is all here, and the report it sums up and links to is another piece. '
+    'A newsletter that stops at its own subscription barrier after beginning a second item is now marked; the first reader could not tell whether more about Nvidia followed, which does not matter. '
+    'A live page saved by hand with several entries collapsed is now marked; the screen for barriers could not see it. The rule, now said in the figure\'s note: a page is whole when all of the listed page\'s own piece is saved, whatever it quotes or links to '
+    '(`research/nv8_pages_in_part_read.tsv` keeps each reader\'s verdict and says where the verdict used differs and why).',
+    'Collapsed entries. Because the screen cannot see them, the text read of every counted page was searched for a collapse mark ("Show more", "Read more" and the like) and each hit was read '
+    '(`scripts/as_built/nv8_collapse_screen.py`, `research/nv8_collapse_screen.tsv`): 42 pages hold such a mark, and on 41 it belongs to a caption, a summary box under the headline, a sponsor\'s box or a list of links. '
+    'The page the reading found is the only one whose own entries are collapsed. A live page that loads further entries only on request leaves no mark in the saved text and is not seen by this search either.',
+    'Lines dropped from hand-saved PDFs. The cleaning that cuts the article out of a PDF\'s text layer had dropped the line of prose next to some page breaks. The reading showed it on one page; '
+    'all 144 hand-saved pages of more than one PDF page were then gone through three times (`scripts/as_built/recover_bodies_4.py`, `recover_bodies_5.py`, `recover_bodies_6.py`). The first pass looked at the lines touching a page break and found 14; '
+    'the reading\'s own count for its page was higher, so a second pass compared every line of the raw text with the cleaned text and found six more; the cleaner\'s owner then found the cause '
+    '(the line standing directly above a page number was taken for a running title, and one paper\'s PDFs print the page number under the last line of the page), and a third pass tested every line above a page number, '
+    'which found one more: a one-word line end whose word also stands elsewhere in the piece, so the first two passes could not see it. '
+    'Twenty-one lines of prose on four pages, all of one paper, are put back as new files beside the pages (`research/nv8_text_added.tsv`); the other lines are menus, running titles, reporters\' biographies and the print edition\'s headline. '
+    'The words are restored for searching, at the end of the page\'s text. No member\'s count changes.',
+    'Two pages of one site still held, after the article, the standfirst and first paragraphs of the next article of the site\'s endless scroll. The text read now ends where the article ends (`research/nv8_text_trimmed.tsv`). No count changes.',
+    'Photo captions. The reading compared 25 pages with their saved HTML and found captions missing from the text read on 11 of them (a descriptive caption on 8), and on seven more pages of another sample; none adds a searched member\'s name or a quoted remark. '
+    'They are not added: the text read is the piece\'s prose, and a table or a caption is added only where the search of every page\'s HTML found a searched member\'s name in it. '
+    'The note now says that other captions are not in the text read, and that a member counts as named when the name stands in the piece\'s own table or caption (a caption can be of an older photograph: named is not a count of acts). '
+    'A reader\'s verdict "whole" is about the piece\'s prose.',
+    'The status sentence says of the eleventh reading what it did: no misclassified line among the 193 of 678 lines it read, with the rule run on all agreeing; and it now mentions the name forms that reading found missing.',
+    'The interactive map (`docs/index.html`), which this reading read for the first time: every source of a member\'s line is listed (100 of the 150 lines had shown none); the 34 searches that found nothing, 24 of them on Nvidia\'s side, '
+    'are no longer counted as ties and sit under their own heading; the labels read "Role or affiliation" and "Seat or post" and none says a post is held now; the key says a chip is one or more acts; '
+    'the view of a source document lists backgrounds and the dated event too; and the sentence on names says what it covers (the tables of gifts count donors and lobbyists without identifying them). '
+    'A test that opens every actor, day and box now runs before each publication of the page: one version was public for a few minutes with a display fault in the new section.',
+    'The three-chairmen figure: the reading found nothing to change, and nothing in this answer changes its counts (pages naming the chairmen: 90, 79 and 72).',
+    'Left as limits, and said in the notes: a longer page that shows no sign of a barrier or of collapsing was not read again for whether it is whole; photo captions and other small parts of a piece (a subheading, a credit) can be missing from the text read; '
+    'four hand-saved PDFs that the reading could not open are still to be compared with their text; the live pages among the counted pages have not been checked for entries that load only on request.',
 ]

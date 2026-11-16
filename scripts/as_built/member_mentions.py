@@ -73,11 +73,15 @@ FIRST_CENSUS = frozenset(_fc.read_text().split()) if _fc.exists() else frozenset
 RECOVERED = ('text.recovered2.txt', 'text.recovered.txt')
 
 
+ADDED = 'text.added*.txt'          # text.added.txt, text.added2.txt, ...: each pass writes a new file, a saved file is never rewritten
+
+
 def added(d):
     """A passage of the page's own piece that the saved HTML holds and the extraction left out (a table, a photo caption): text.added.txt,
-    written by scripts/recover_bodies_3.py after each passage was read (Nov 16, 2026). It is read after the page's text, in every count."""
-    f = d / 'text.added.txt'
-    return '\n' + f.read_text(errors='replace') if f.exists() else ''
+    written by scripts/recover_bodies_3.py after each passage was read (Nov 16, 2026). It is read after the page's text, in every count.
+    Lines of prose that the cleaning of a hand-saved PDF dropped at page breaks are added the same way (scripts/recover_bodies_4.py, and a second
+    and a third pass, scripts/recover_bodies_5.py and recover_bodies_6.py, whose lines are in text.added2.txt and text.added3.txt: a saved file is never rewritten)."""
+    return ''.join('\n' + f.read_text(errors='replace') for f in sorted(d.glob(ADDED)))
 
 
 def pages(recovered=True):
