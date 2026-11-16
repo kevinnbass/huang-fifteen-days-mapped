@@ -22,7 +22,8 @@ from collections import Counter
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; L = R / 'reading_lanes'; sys.path.insert(0, str(ROOT / 'scripts'))
 import rows_map
-OLD = 'not of these days: the page says the spokesperson said it "at the time" of an earlier claim'
+OLD = ('not drawn: the page gives it as background, the company\'s answer "at the time" to a different claim (that a Chinese model was trained on smuggled chips); it answers nothing about this affair. '
+       'That it is earlier is not the reason: a report of these days about an earlier act on the matter is drawn (reason corrected after the nineteenth reading)')
 SUMMARY = 'not an act of these days: the page sums up the company\'s standing position ("says", "has said") and names no occasion'
 D = lambda *ids: 'drawn: ' + ', '.join(ids)
 # single_nv8_a: the reader's candidates, each with the builder's disposition
@@ -32,7 +33,7 @@ ONE = {
  'G025': D('MA243'), 'G029': D('MA275'), 'G033': D('MA63'), 'G035': D('MA278'), 'G047': D('MA262'), 'G130': D('MA262'),
  'G285': 'drawn with the sentence the page prints just before it, that it would not hurt to hear from the Commerce Department (MA262)',
  'G051': D('MA132'), 'G156': D('MA132'), 'G276': D('MA132'), 'G299': D('MA132'),
- 'G107': 'not drawn: a step in the newsletter\'s argument (that his lobbying needs no such explanation), not a hedge on its call; the reader was unsure of its test',
+ 'G107': D('MA132') + ' (first set aside as a step in the argument; the nineteenth reading judged it a hedge on what the affair explains)',
  'G053': D('MA255'), 'G057': D('MA266'), 'G060': D('MA280'), 'G067': D('MA276'), 'G068': D('MA172'), 'G068-b': D('MA172'), 'G069': D('MA277'), 'G141': D('MA277'), 'G070': D('MA282'), 'G071': D('MA284'),
  'G072': D('MA265'), 'G255': D('MA265'), 'G079': D('MA285'), 'G088': D('MA281'), 'G287': D('MA281'), 'G089': D('MA287'), 'G090': D('MA286'), 'G092': D('MA283'), 'G280': D('MA283'), 'G093': D('MA267'), 'G117': D('MA267'),
  'G094': D('MA279'), 'G102': D('MA279'), 'G097': D('MA19'), 'G104': D('MA45'), 'G104-b': D('MA268'), 'G111': D('MA270'), 'G113': D('MA269'), 'G291': D('MA269'),
@@ -40,7 +41,7 @@ ONE = {
  'G157': 'not drawn: a staff meeting about a product keynote; that it answered the scandal is the paper\'s characterisation, which the figure does not draw (the reader called it borderline)',
  'G159': D('MA273'), 'G218': D('MA273'), 'G171': D('MA210'), 'G173': D('MA263'), 'G193': D('MA288'), 'G194': D('MA256'), 'G196': D('MA259'), 'G203': OLD, 'G229': OLD,
  'G214': D('MA52'), 'G223': D('MA52'), 'G275': D('MA52'), 'G215': 'drawn on his chip of Oct 31 (MA123): the pool report of that evening prints the answer, so it is part of that exchange and not of the later page\'s day',
- 'G220': D('MA115'), 'G221': 'not drawn: the ministry on relations between the two countries, in the same answer; read the same way as its sibling sentence in the third gauge',
+ 'G220': D('MA115'), 'G221': D('MA115') + ' (first set aside; the nineteenth reading judged it a direct answer to the question about the summit)',
  'G224': D('MA251'), 'G224-b': D('MA251'), 'G224-c': D('MA251'), 'G232': D('MA35'), 'G266': D('MA78'), 'G269': D('MA290'), 'G269-b': D('MA290'), 'G273': D('MA291'), 'G288': D('MA157'), 'G292': D('MA271'),
  'G294': 'not drawn: a translated account of the Times\'s report; the board\'s own statement does not hold the clause, and what the company said of his staying is on its chip of that day (MA105)',
  'G296': D('MA257'), 'G296-b': D('MA257'), 'G298': D('MA70'),
@@ -87,10 +88,10 @@ PARA = {
  ('a', 'A071'): D('MA85'), ('a', 'A085'): D('MA63'), ('a', 'A095'): SUMMARY, ('a', 'A099'): SUMMARY, ('a', 'A104'): 'carried: a relay of its reply of Nov 6 that it does not share classified information with customers (MA179)',
  ('a', 'A106'): D('MA256'), ('a', 'A107'): D('MA256'), ('a', 'A111'): D('MA256'), ('a', 'A112'): D('MA254'), ('a', 'A116'): D('MA258'), ('a', 'A119'): D('MA255'),
  ('a', 'A120'): 'carried: a relay of its statements of that day that the block on sales stands (MA255, MA256)',
- ('a', 'A121'): 'carried: the same statement given to another outlet a day later, one sentence word for word (MA57, MA241)',
+ ('a', 'A121'): D('MA312') + ' (first read as the statement of the day before given to another outlet; the nineteenth reading: one repeated sentence does not prove that)',
  ('b', 'A002'): D('MA60'), ('b', 'A003'): 'carried by MA61, which was held out of the reader\'s table as a control', ('b', 'A005'): D('MA260'), ('b', 'A006'): D('MA260'), ('b', 'A007'): D('MA62'), ('b', 'A011'): D('MA243'),
  ('b', 'A012'): D('MA260'), ('b', 'A013'): D('MA260'), ('b', 'A014'): D('MA260'), ('b', 'A023'): 'carried by MA215, which was held out of the reader\'s table as a control',
- ('b', 'A025'): 'not drawn: her signature on the company\'s filing; the filing is on the board\'s chip of that day (MA63)', ('b', 'A032'): 'carried: a relay of the board\'s meeting and decision (MA62)', ('b', 'A033'): D('MA260'),
+ ('b', 'A025'): 'not drawn: her signature on the company\'s filing; the filing is on the board\'s chip of that day (MA63)', ('b', 'A032'): D('MA316') + ' (first read as a relay of the Wednesday-night meeting; the nineteenth reading: the page dates its own report, and the chip says the identity is open)', ('b', 'A033'): D('MA260'),
 }
 
 

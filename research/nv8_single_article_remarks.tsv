@@ -106,7 +106,7 @@ G104	johnson	cnn-1111-live	But there there still seems to me to be a lot of fact
 G104-b	johnson	cnn-1111-live	(a passage beside the group's line)	CANDIDATE occasion				drawn: MA268
 G105	huang	cnn-1111-live	The most important thing you should do today if you care about the future	not on the matter				
 G106	thune	sw-cbsnewscom-e684eb4c	there'll be an interest in doing oversight	carried	MA36			
-G107	mowshowitz	sw-thezvisubstackcom-01	Sleeping with a Chinese spy is not necessary to explain Jensen Huang treating America	CANDIDATE part	MA132	2		not drawn: a step in the newsletter's argument (that his lobbying needs no such explanation), not a hedge on its call; the reader was unsure of its test
+G107	mowshowitz	sw-thezvisubstackcom-01	Sleeping with a Chinese spy is not necessary to explain Jensen Huang treating America	CANDIDATE part	MA132	2		drawn: MA132 (first set aside as a step in the argument; the nineteenth reading judged it a hedge on what the affair explains)
 G108	nvidia	sw-fortunecom-04	a cloud service permitted under the export control rules.	outside the days				
 G109	wyden	sw-semaforcom-04	I’m on the intelligence committee, and I’ll leave it at that … until we	carried	MA30			
 G110	warren	sw-cnbccom-09	It's clear that the American people cannot rely on Big Tech billionaire CEOs to	reason	MA99			
@@ -203,7 +203,7 @@ G199	mast	sw-gazettecom-5cfc7b8d	They made their offer for what they would like 
 G200	jcramer	sw-mediaitecom-09	The greatest investing story ever told became almost overnight a blight on our country,	reason	MA91			
 G201	trump	nbc-exprosecutor	Jensen is currently on Air Force One,	outside the days				
 G202	mowshowitz	sw-thezvisubstackcom-01	The Nvidia board is trying to pretend otherwise pending their investigation , and is	reason	MA132			
-G203	nvidia	sw-pcgamercom-08	While such smuggling seems far-fetched, we pursue any tip we receive.	CANDIDATE occasion				"not of these days: the page says the spokesperson said it ""at the time"" of an earlier claim"
+G203	nvidia	sw-pcgamercom-08	While such smuggling seems far-fetched, we pursue any tip we receive.	CANDIDATE occasion				"not drawn: the page gives it as background, the company's answer ""at the time"" to a different claim (that a Chinese model was trained on smuggled chips); it answers nothing about this affair. That it is earlier is not the reason: a report of these days about an earlier act on the matter is drawn (reason corrected after the nineteenth reading)"
 G204	trump	sw-pbsorg-04	It's all a hoax. The data centers are great.	not on the matter				
 G205	singapore	mha-clarification-a	nothing was said about Alice Huang or any concerns or investigations, regarding her alleged	carried	MA70			
 G206	fedasiuk	biggo-fedasiuk	what is the difference between Jensen Huang's personal interest and the fiduciary interest and	reason	MA12			
@@ -221,7 +221,7 @@ G217	huang	sw-semaforcom-19	If we leave a market altogether, there’s no questi
 G218	fedasiuk	man-wsj-1109-08	has shown a unique knack for networking with the world’s ultraelite—a rare skill in	CANDIDATE occasion				drawn: MA273
 G219	himes	art-fc-rec-nhpr-himes-1110	We received a little bit of information. So, no, we have not been kept	CANDIDATE part	MA42	1		drawn: MA42
 G220	china	sw-cbsnewscom-08	I do not have information on what you mentioned.	CANDIDATE part	MA115	1		drawn: MA115
-G221	china	art-fc-rec-fmprc-1112	China and the U.S. maintain close communication on heads-of-state interactions.	CANDIDATE part	MA115	1		not drawn: the ministry on relations between the two countries, in the same answer; read the same way as its sibling sentence in the third gauge
+G221	china	art-fc-rec-fmprc-1112	China and the U.S. maintain close communication on heads-of-state interactions.	CANDIDATE part	MA115	1		drawn: MA115 (first set aside; the nineteenth reading judged it a direct answer to the question about the summit)
 G222	huang	man-ft-1112-08	We should create the conditions by which the company continues to thrive	outside the days				
 G223	subramanyam	cnbc-1111-congress-resign	There's two parts to this investigation that [need] to happen somewhere immediately,	CANDIDATE part	MA52	4		drawn: MA52
 G224	nvidia	sw-tomsguidecom-01	Building American AI infrastructure worldwide has been a core U.S. policy goal of every	CANDIDATE occasion				drawn: MA251
@@ -230,7 +230,7 @@ G225	wiblin	sw-thezvisubstackcom-01	So Jensen was having an affair with a custom
 G226	mcguire	x-mcguire-nov6	What is a POSSIBLE good explanation for why Megaspeed is still receiving chips?	reason	MA14			
 G227	fedasiuk	biggo-fedasiuk	a huge asset to American prosperity and security	reason	MA12			
 G228	huang	sw-nprorg-01	I'm really hoping that the next CEO of the company is already at the	outside the days				
-G229	nvidia	sw-pcgamercom-08	We haven’t seen any substantiation or received tips of ‘phantom data centers’ constructed to	CANDIDATE occasion				"not of these days: the page says the spokesperson said it ""at the time"" of an earlier claim"
+G229	nvidia	sw-pcgamercom-08	We haven’t seen any substantiation or received tips of ‘phantom data centers’ constructed to	CANDIDATE occasion				"not drawn: the page gives it as background, the company's answer ""at the time"" to a different claim (that a Chinese model was trained on smuggled chips); it answers nothing about this affair. That it is earlier is not the reason: a report of these days about an earlier act on the matter is drawn (reason corrected after the nineteenth reading)"
 G230	hodges	art-fc-cnn-1112	That clearly is directed to make people stop talking about the topic, || That	reason	MA162			
 G231	justice	sw-globalnewsca-02	The counterintelligence and economic espionage efforts emanating from the government of China and the	not on the matter				
 G232	kennedy	sw-implicatorai-06	We need to know why the Commerce Department was allowing Nvidia to sell advanced	CANDIDATE occasion				drawn: MA35

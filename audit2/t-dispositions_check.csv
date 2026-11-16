@@ -1,0 +1,55 @@
+part,finding_id,holds,note
+A,A-MA70,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+A,A-MA207,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+A,A-MA243,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+A,A-MA70-SCOPE,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+B1,B1-MA70,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C1,C1-UNMATCHED-INTERIM,yes,Page-specific loader correction is present and agrees with the new chief’s exact release wording; no general alias is introduced.
+C1,C1-HASHIM-POST,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C4,C4-HIMES-BRIEFING,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C4,C4-MOW-HEDGES,yes,"Both hedges requested in the original C4-MOW-HEDGES line are present. This audit’s further causal hedge is a separate new finding, not a failure to implement the two specified additions."
+C4,C4-MOW-OFFICIALS,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C4,C4-JCRAMER-POST,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C4,C4-JCRAMER-GUIDANCE,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C4,C4-MOORHEAD-POST,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C5,C5-WARREN-LAWS,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C5,C5-LETTER-DEADLINE,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C5,C5-COONS-BRIEFING,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C5,C5-WYDEN-RECORDS,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C5,C5-MAST-SCHEDULE,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C5,C5-HUANG-CONFIDENCE,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C5,C5-JONES-CONTINUITY,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C5,C5-BOARD-OVERSIGHT,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+C5,C5-SCHUMER-BRIEFING,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+D2,D2-MA239-CORROBORATION,yes,"The requested Jerusalem Post corroboration corrections were made. The frozen screen mechanically counts eight, as the disposition states, with new MA275 explaining the increase from seven. The newly discovered MA260 version problem is assessed separately; it does not undo implementation of the earlier precisely stated correction."
+D2,D2-MA240-CORROBORATION,yes,"The requested Jerusalem Post corroboration corrections were made. The frozen screen mechanically counts eight, as the disposition states, with new MA275 explaining the increase from seven. The newly discovered MA260 version problem is assessed separately; it does not undo implementation of the earlier precisely stated correction."
+figure,E-MA70-SCOPE,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+figure,E-MA70-ANSWER,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+figure,E-MA207,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+figure,E-MA243,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+figure,E-VERSION-COUNT,yes,"The requested Jerusalem Post corroboration corrections were made. The frozen screen mechanically counts eight, as the disposition states, with new MA275 explaining the increase from seven. The newly discovered MA260 version problem is assessed separately; it does not undo implementation of the earlier precisely stated correction."
+figure,E-STATUS-READINGS,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+figure,E-STATUS-REFUSAL-COUNT,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+figure,E-README-DIRECTION,yes,"The old readiness-to-add inference is withdrawn and the narrower 6/12 versus 8/12 content coding is stated. Those are the preceding report’s coded inventories, not acceptance rates."
+G,G-SCOPE,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+G,G-ANSWER,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+G,G-RELAY,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+G,G-CONTINUITY,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+G,G-VERSION,yes,"The requested Jerusalem Post corroboration corrections were made. The frozen screen mechanically counts eight, as the disposition states, with new MA275 explaining the increase from seven. The newly discovered MA260 version problem is assessed separately; it does not undo implementation of the earlier precisely stated correction."
+G,G-READINGS,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+G,G-REFUSALCOUNT,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+F,A A-MA70,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+F,B1 B1-MA70,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+F,C3 C3-jones-1,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+F,C3 C3-jones-5,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+F,C3 C3-singapore-2,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+F,figure E-ROW-70,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+F,G G-MA70,yes,The stated change is present in the frozen row/text and answers the original finding; source passage checked in Parts A–E.
+gaps,taiwan|2026-10-30,yes,"Fair scope limit, explicitly findable in README, eighteenth-reading section, Limits that remain: eight of 28 selected days have no dated census line. No negative is inferred. The individual key matches the preceding reading’s gap file."
+gaps,cramer|2026-11-09,yes,"Fair scope limit, explicitly findable in README, eighteenth-reading section, Limits that remain: eight of 28 selected days have no dated census line. No negative is inferred. The individual key matches the preceding reading’s gap file."
+gaps,mowshowitz|2026-10-29,yes,"Fair scope limit, explicitly findable in README, eighteenth-reading section, Limits that remain: eight of 28 selected days have no dated census line. No negative is inferred. The individual key matches the preceding reading’s gap file."
+gaps,mowshowitz|2026-11-12,yes,"Fair scope limit, explicitly findable in README, eighteenth-reading section, Limits that remain: eight of 28 selected days have no dated census line. No negative is inferred. The individual key matches the preceding reading’s gap file."
+gaps,moorhead|2026-11-08,yes,"Fair scope limit, explicitly findable in README, eighteenth-reading section, Limits that remain: eight of 28 selected days have no dated census line. No negative is inferred. The individual key matches the preceding reading’s gap file."
+gaps,moorhead|2026-11-09,yes,"Fair scope limit, explicitly findable in README, eighteenth-reading section, Limits that remain: eight of 28 selected days have no dated census line. No negative is inferred. The individual key matches the preceding reading’s gap file."
+gaps,globaltimes|2026-11-09,yes,"Fair scope limit, explicitly findable in README, eighteenth-reading section, Limits that remain: eight of 28 selected days have no dated census line. No negative is inferred. The individual key matches the preceding reading’s gap file."
+gaps,globaltimes|2026-11-12,yes,"Fair scope limit, explicitly findable in README, eighteenth-reading section, Limits that remain: eight of 28 selected days have no dated census line. No negative is inferred. The individual key matches the preceding reading’s gap file."

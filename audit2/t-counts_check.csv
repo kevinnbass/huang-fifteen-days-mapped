@@ -1,0 +1,80 @@
+what,figure_says,you_find,agree,note
+act rows,291,291,yes,
+active acts including undated,290,290,yes,
+dated acts,289,289,yes,
+chips,205,205,yes,Actor/day groups; compared with rendering separately.
+dashed chips,47,47,yes,A shared chip is dashed only when every act is report dated.
+report-dated acts,94,94,yes,
+actor-days in two or more articles,9,9,yes,
+actor-days in one article,13,13,yes,
+third gauge groups,11,11,yes,
+another saved page gives another day,14,14,yes,
+a day word near a cited passage in its own source,48,48,yes,
+its page was changed after the chip's day,20,20,yes,
+pages,1315,1315,yes,
+articles,1236,1236,yes,
+counted articles,1154,1154,yes,
+counted pages held in part,98,98,yes,
+refusal acts: literal finder / explicit refusals,28,28 finder; 29 explicit,no,MA259 is an explicit refusal already drawn but missed by the finder.
+refusal actors,11,11,yes,
+refusal census lines: literal finder,133,133,yes,Independent census recount recorded in C2-RECOUNT; 134 after including cannot respond.
+refusal lines inside cited articles,58,58,yes,59 after including the MA259 line.
+refusal lines outside cited articles,75,75,yes,
+outside refusal actor/article pairs,65,65,yes,
+outside lines: relays,61,61,yes,
+outside lines: not refusals,14,14,yes,
+acts that may be newer than drawn day,8,9 at least,no,"Eight labels reproduce mechanically, but MA260’s COO clause is not corroborated on Nov 11. MA252’s corrected earlier day adds a further version question."
+single lane input groups,301,301,yes,
+single lane real groups,294,294,yes,
+single lane planted groups,7,7,yes,
+single lane other candidates,101,101,yes,
+single lane other candidates drawn,95,95,yes,
+para a input lines,1162,1162,yes,
+para a grouped acts,112,112,yes,
+para a candidates including controls,32,32,yes,
+para a other candidates drawn,21,21,yes,
+para b input lines,865,865,yes,
+para b grouped acts,33,33,yes,
+para b candidates including controls,13,13,yes,
+para b other candidates drawn,9,9,yes,
+three lanes other candidates,142,142,yes,
+three lanes other candidates drawn,125,125,yes,
+three lanes other candidates not drawn,17,17,yes,
+control tests found / planted,10 / 11,10 / 11,yes,Seven planted quotation groups and four distinct paraphrase held-out acts; quotation groups represent five unique act ids.
+paraphrase lane input lines together,2027,2027,yes,
+acts added without another own-channel search,158,158,yes,133 original-search keys include withdrawn MA137; 132 keys are active.
+member articles: Warren,71,71,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Coons,48,48,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Cramer,22,22,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Schumer,22,22,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Banks,19,19,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Cornyn,9,9,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Kennedy,6,6,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Thune,13,13,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Mast,92,92,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Crawford,68,68,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Meeks,9,9,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Himes,8,8,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Huizenga,4,4,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Moolenaar,78,78,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Jeffries,30,30,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Magaziner,4,4,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Subramanyam,3,3,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Bacon,3,3,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Johnson,11,11,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Blumenthal,3,3,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Wyden,5,5,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Ricketts,5,5,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: McCaul,5,5,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Warner,4,4,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Cotton,5,5,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Scott,4,4,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+member articles: Neal,3,3,yes,"Unchanged member-selection value and story table; unique article ids, not saved page counts."
+new act rows,41,41,yes,
+amended chips / amended act rows,36,54 existing chips; 36 act rows,no,The 36 changed rows occupy 35 chips. The 41 new rows add nine chips and also expand existing chips; together 54 existing chips change.
+serial independent readings,18,18,yes,"Chronicle describes serial first through eighteenth, plus the three additional reading lanes; not 21 serial release audits."
+eighteenth: rows right as drawn,24 / 27,24 / 27,yes,
+eighteenth: agreeing recounts,56 / 59,56 / 59,yes,
+eighteenth: prior answers holding,171 / 178,171 / 178,yes,
+historical paraphrase population,4803,not reproduced,unverified,"Reconstruction 5,034 lines; 4,790 after article/actor/exact-remark deduplication. Selection-rule manifest needed; these are not asserted replacement counts."
+paraphrased lines of other actors not read this way,about 2850,not reproduced,unverified,"Reconstruction 3,016; 2,865 after the stated deduplication. Approximate proximity does not verify the historical selection."

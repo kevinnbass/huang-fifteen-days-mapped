@@ -1,0 +1,12 @@
+row_id_or_key,source,what_failed
+meeks|2026-11-09,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+johnson|2026-11-09,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+newman|2026-11-09,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+newman|2026-11-10,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+boloor|2026-11-10,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+boloor|2026-11-12,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+hashim|2026-11-10,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+thune|2026-11-09,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+cornyn|2026-11-08,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+wyden|2026-11-09,private/census_remarks_actor.tsv,"Fixed C4 chip day has no dated counted census line; untested, not evidence of no act."
+historical paraphrase population,private/census_remarks_actor.tsv; eighteenth rows; three lane input files,"4,803 total and about 2,850 untested are not independently reproduced. No complete frozen population/input-selection manifest is supplied; see out/work/population_check.py. No corrected population count is asserted."
