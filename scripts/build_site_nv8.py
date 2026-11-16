@@ -22,7 +22,9 @@ csv.field_size_limit(10**9)
 FIRST, LAST = date(2026, 10, 29), date(2026, 11, 12)
 DAYS = [(FIRST + timedelta(days=i)).isoformat() for i in range((LAST - FIRST).days + 1)]
 SIDE = {'anthropic': 'Anthropic and its people', 'network': 'Groups that Anthropic or Open Philanthropy has funded', 'nvidia': 'Nvidia', 'both': "Both companies' lobbying reports"}
-KIND = {'money': 'Money', 'grant': 'Grant award', 'role': 'Post or seat held now', 'seat': 'Post or seat held now', 'past': 'Former post',
+# 'role' and 'seat' cover a post, a seat, an affiliation or a founding link: the record's own words say which and when (the twelfth reading, Nov 16, 2026: the label
+# "held now" had been put on an employer a donor wrote down, a co-founding link and a company's connected PAC)
+KIND = {'money': 'Money', 'grant': 'Grant award', 'role': 'Role or affiliation', 'seat': 'Seat or post', 'past': 'Former post',
         'named': 'Named to a body on a stated date; not checked since', 'act': 'Official act', 'ad': 'Named in ads it announced',
         'panel': 'Same session scheduled', 'context': 'Context, worded in the row and not drawn as a line'}
 
@@ -139,8 +141,12 @@ def main():
         if r['table'] == 'tie of a member of Congress':
             assert r['member'] in known and r['side'] in SIDE, r['row_id']
             # a member's line is a count from a table of this repository; only the sources that are a public page are listed, without passages
-            lines.append({'m': r['member'], 'side': r['side'], 't': r['drawn_text'], 's': [s for s in sources(r['row_id'], passages=False) if s[1]],
-                          'n': node.get((r['member'], r['type'], r['side']), '')})
+            # every source of the line is listed, a table of this repository included (no passages: the line is a count); a search that found nothing is marked,
+            # so that the page does not count it as a tie (the twelfth reading: 100 lines had shown no source, and 34 searches without a result were counted as ties)
+            lines.append({'m': r['member'], 'side': r['side'], 't': r['drawn_text'], 's': sources(r['row_id'], passages=False),
+                          'n': node.get((r['member'], r['type'], r['side']), ''), 'neg': r['drawn_text'].startswith('No ')})
+    assert all(l['s'] for l in lines), [l['t'][:40] for l in lines if not l['s']][:3]
+    print('member lines:', len(lines), '| searches that found nothing:', dict(Counter(l['side'] for l in lines if l['neg'])))
     by_id = {r['row_id']: r for r in rows}
     groups = [{'k': g[0], 'label': g[1], 'not_shown': g[2], 'background': by_id[g[3]]['drawn_text'] if g[3] else '', 's': sources(g[3]) if g[3] else []} for g in rows_map.GROUPS]
     assert {a['g'] for a in actors} <= {g['k'] for g in groups}

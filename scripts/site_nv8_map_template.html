@@ -213,7 +213,9 @@ __FIGSTYLE__
   function addDoc(x, use) { var k = docKey(x); if (!k) return; use.p = x[3] || []; (docIx[k] = docIx[k] || { x: x, uses: [] }).uses.push(use); }
   D.acts.forEach(function (a) { (a.s || []).forEach(function (x) { addDoc(x, { ka: a.a, t: a.t, label: (a.di >= 0 ? shortDay(a.d) : 'Before the fifteen days') }); }); });
   D.ties.forEach(function (t) { (t.s || []).forEach(function (x) { addDoc(x, { ka: t.kb || t.ka, t: t.t, label: t.k, node: t.kb || t.ka ? '' : t.a }); }); });
-  D.lines.forEach(function (l) { (l.s || []).forEach(function (x) { addDoc(x, { ka: l.m, t: l.t, label: D.sides[l.side] }); }); });
+  D.lines.forEach(function (l) { (l.s || []).forEach(function (x) { addDoc(x, { ka: l.m, t: l.t, label: D.sides[l.side] + (l.neg ? ' · searched, none found' : '') }); }); });
+  D.groups.forEach(function (g) { (g.s || []).forEach(function (x) { addDoc(x, { ka: '', t: g.background, label: 'Background of a group · ' + g.label }); }); });
+  D.events.forEach(function (ev) { (ev.s || []).forEach(function (x) { addDoc(x, { ka: '', t: ev.t, label: 'Dated event · ' + shortDay(ev.d) }); }); });
   function slug(t) { return t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   function cut(t, n) { t = flat(t); return t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : t; }
   var dots = [], grid = {}, CELL = 28;
@@ -340,13 +342,16 @@ __FIGSTYLE__
       h('div', { class: 'chips' }, h('button', { class: 'btn', type: 'button', text: 'Show on the map', onclick: function () { focusActor(k); } }), back()),
       h('div', { class: 'list' }, h('h4', { text: 'Dated acts (' + acts.length + ')' }),
         acts.length ? acts.map(function (x) { var mine = flat(x.t).replace(/\.$/, ''), on = !!want && !!mine && want.indexOf(mine) >= 0; var c = actCard(x, on); if (on && !hit) hit = c; return c; }) : h('p', { class: 'muted', text: 'No dated act is drawn for this actor; the actor is on the map through the ties below.' })));
-    var ties = h('div', { class: 'list' }, h('h4', { text: 'Ties on record (' + (a.ties.length + a.lines.length) + ')' }));
+    var pos = a.lines.filter(function (l) { return !l.neg; }), none = a.lines.filter(function (l) { return l.neg; });
+    var ties = h('div', { class: 'list' }, h('h4', { text: 'Ties on record (' + (a.ties.length + pos.length) + ')' }));
     Object.keys(D.sides).forEach(function (side) {
-      var mine = a.lines.filter(function (l) { return l.side === side; });
+      var mine = pos.filter(function (l) { return l.side === side; });
       if (mine.length) ties.append(h('div', { class: 'tie' }, h('span', { class: 'kind', text: D.sides[side] }), mine.map(function (l) { return h('div', null, h('p', { text: l.t }), sources(l.s)); })));
     });
     a.ties.forEach(function (t) { ties.append(h('div', { class: 'tie' }, h('span', { class: 'kind', text: t.k }), h('p', { text: t.t }), sources(t.s))); });
-    if (!a.ties.length && !a.lines.length) ties.append(h('p', { class: 'muted', text: 'No tie is drawn for this actor.' }));
+    if (!a.ties.length && !pos.length) ties.append(h('p', { class: 'muted', text: 'No tie is drawn for this actor.' }));
+    if (none.length) ties.append(h('h4', { text: 'Searched, and none found (' + none.length + ')' }), h('p', { class: 'small', text: 'A search that found nothing is not a tie. It says what was looked for and through which date.' }),
+      none.map(function (l) { return h('div', { class: 'tie' }, h('span', { class: 'kind', text: D.sides[l.side] }), h('p', { text: l.t }), sources(l.s)); }));
     panel.append(ties, h('p', { class: 'notshown' }, h('b', { text: g.label + '. No document here shows ' }), g.not_shown));
     panel.scrollTop = 0; if (hit) hit.scrollIntoView({ block: 'nearest' });
   }
@@ -365,7 +370,7 @@ __FIGSTYLE__
     mark({ x: d.x - 5, y: d.y - 5, w: 10, h: 10 });
     clear(panel).append(head(p ? p[2] : d.t.slice(cut + 3), (p ? p[1] : d.t.slice(0, cut)) + (p ? ' · first listed ' + longDay(D.days[p[0]]) : '')),
       p && web(p[3]) ? h('p', null, h('a', { href: p[3], target: '_blank', rel: 'noopener noreferrer', text: 'Open the piece' }), ' ', h('span', { class: 'dom', text: host(p[3]) })) : null,
-      h('p', { class: 'small', text: 'One dot is one piece that Techmeme or Memeorandum listed on the story, placed on the first day a saved page of theirs lists it. A dot counts a piece, not its readers.' }),
+      h('p', { class: 'small', text: 'One dot is one piece that Techmeme or Memeorandum listed on the story, placed on the first day a saved page of theirs lists it. A dot counts a piece, not its readers. The saved aggregator page that dates each piece is in the repository\u2019s table of coverage days, not on this page.' }),
       h('div', { class: 'chips' }, back()));
     panel.scrollTop = 0;
   }
@@ -433,7 +438,7 @@ __FIGSTYLE__
     clear(panel).append(head(x[0] || x[1], (web(x[1]) ? host(x[1]) + ' · ' : '') + 'cited by ' + plural(doc.uses.length, 'record', 'records') + ' on the map'),
       h('div', { class: 'chips' }, back()),
       web(x[1]) ? h('p', null, h('a', { href: x[1], target: '_blank', rel: 'noopener noreferrer', text: 'Open the source' }), ' ', h('span', { class: 'dom', text: host(x[1]) })) : (x[2] ? h('p', { class: 'small' }, 'A table of the repository: ', h('code', { text: x[2] })) : null),
-      h('p', { class: 'muted', text: 'Every record on the map that cites this source, with the passage each one rests on. The page holds the passages, not the source itself.' }),
+      h('p', { class: 'muted', text: 'Every record on the map that cites this source. A dated act, a tie or a background shows the passage it rests on; a member\u2019s line is a count from a table and shows none. The page holds passages, not the source itself.' }),
       section('Cited by', doc.uses.map(function (u) {
         return h('div', { class: 'tie' }, h('span', { class: 'kind', text: (u.ka && A[u.ka] ? A[u.ka].n + ' · ' : '') + u.label }), h('p', { text: u.t }),
           u.p.map(function (q) { return h('blockquote', { text: '“' + q + '”' }); }), u.ka && A[u.ka] ? h('div', { class: 'chips' }, goTo(A[u.ka].n)) : (u.node ? h('div', { class: 'chips' }, goTo(u.node)) : null));
@@ -450,7 +455,7 @@ __FIGSTYLE__
       h('p', { class: 'rule', text: 'A tie is a dated record, not a motive. Nothing here says why anyone acted.' }),
       h('div', { class: 'keys' }, h('b', { text: 'Dots' }), h('span', { text: 'one piece of coverage each; click one for its headline and link' }),
         h('b', { text: 'Rows' }), h('span', { text: 'one actor each; click a row for every record behind it' }),
-        h('b', { text: 'Chips' }), h('span', { text: 'one dated act each; click one for the passages it rests on' }),
+        h('b', { text: 'Chips' }), h('span', { text: 'one or more dated acts of one actor on one day; click one for the passages each rests on' }),
         h('b', { text: 'Lines' }), h('span', { text: 'documented ties; click one for the record behind it' }),
         h('b', { text: 'Boxes' }), h('span', { text: 'companies, funders and groups at the left; click one for every record that starts or ends there' })),
       h('div', { class: 'list' }, h('h4', { text: 'The fifteen days' }), h('div', { class: 'days' }, D.days.map(function (d, i) {
@@ -462,6 +467,7 @@ __FIGSTYLE__
       h('div', { class: 'list' }, h('h4', { text: 'What the record does not show' }), h('p', { class: 'small', text: notShown.charAt(0).toUpperCase() + notShown.slice(1) })),
       h('div', { class: 'list' }, h('h4', { text: 'Groups on the map' }), h('div', { class: 'chips' }, D.groups.filter(function (g) { return region[g.k]; }).map(function (g) { return h('button', { class: 'btn', type: 'button', text: g.label, onclick: function () { showGroup(g.k, region[g.k][0]); } }); }))),
       h('p', { class: 'small', text: D.made }),
+      h('p', { class: 'small', text: 'The tables of gifts count donors and lobbyists without identifying them. The people named on this page are named for a public role, in the figure\u2019s own rows and in the headlines the aggregators listed.' }),
       REPO ? h('p', { class: 'small' }, 'The tables, the saved sources that can be copied, the scripts and the files of every independent reading are in ', h('a', { href: REPO, target: '_blank', rel: 'noopener noreferrer', text: 'the repository' }), '.') : null,
       h('p', { class: 'small', text: 'This interactive layer was checked by script only; no independent reader has read it. The map is the figure as published at commit ' + D.commit + ' (' + D.commit_day + ') of its public repository, and the panel holds nothing its tables do not.' }));
     panel.scrollTop = 0;
@@ -505,10 +511,11 @@ __FIGSTYLE__
     mine.forEach(function (x) { rep = rep || x.rep; (x.s || []).forEach(function (y) { n++; var d = web(y[1]) ? host(y[1]) : ''; if (d && hosts.indexOf(d) < 0) hosts.push(d); }); });
     var when = mine.length ? (mine[0].di >= 0 ? shortDay(mine[0].d) : 'before the fifteen days') : '';
     var body = (v.k < 0.55 ? cut(want, 230) + ' — ' : '') + plural(n, 'source', 'sources') + (hosts.length ? ': ' + hosts.slice(0, 3).join(', ') + (hosts.length > 3 ? ' and ' + (hosts.length - 3) + ' more' : '') : '')
-      + (rep ? ' · placed on the day of the report' : '');
+      + (rep ? (mine.every(function (x) { return x.rep; }) ? ' · placed on the day of the report' : ' · one act here is placed on the day of its report') : '');
     return [a.n + (when ? ' · ' + when : ''), body, 'Click for the passages and the links'];
   }
-  function rowCard(k) { var a = A[k]; return [a.n, (a.r ? a.r + ' · ' : '') + plural(a.acts.length, 'dated act', 'dated acts') + ', ' + plural(a.ties.length + a.lines.length, 'tie on record', 'ties on record'), 'Click for every record behind this row']; }
+  function rowCard(k) { var a = A[k]; return [a.n, (a.r ? a.r + ' · ' : '') + plural(a.acts.length, 'dated act', 'dated acts') + ', ' + plural(a.ties.length + a.lines.filter(function (l) { return !l.neg; }).length, 'tie on record', 'ties on record')
+    + (a.lines.some(function (l) { return l.neg; }) ? ', ' + plural(a.lines.filter(function (l) { return l.neg; }).length, 'search that found none', 'searches that found none') : ''), 'Click for every record behind this row']; }
   function edgeRecs(el) { var E = (D.edges || [])[edgeEls.indexOf(el)] || [[], [], '', '']; return { E: E, recs: E[0].map(function (i) { return D.ties[i]; }).concat(E[1].map(function (i) { return D.lines[i]; })) }; }
   function edgeCard(el) {
     var r = edgeRecs(el), keys = (el.dataset.a || '').split(/\s+/).filter(function (k) { return A[k]; });
