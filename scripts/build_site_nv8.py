@@ -56,7 +56,7 @@ def thumb(jpg):
     from PIL import Image
     Image.MAX_IMAGE_PIXELS = None
     im = Image.open(jpg); w, h_ = im.size
-    im.draft('RGB', (w // 8, h_ // 8)); assert im.size[0] <= 2000 and im.size[1] <= 3600, im.size      # never decode the full sheet
+    im.draft('RGB', (w // 8, h_ // 8)); assert im.size[0] * 8 <= w + 64 and im.size[1] * 8 <= h_ + 64 and im.size[0] * im.size[1] <= 16_000_000, im.size      # never decode the full sheet: the draft at an eighth must have taken effect
     im = im.convert('RGB'); im.thumbnail((224, 400))
     buf = io.BytesIO(); im.save(buf, 'JPEG', quality=68, optimize=True)
     return 'data:image/jpeg;base64,' + base64.b64encode(buf.getvalue()).decode()
