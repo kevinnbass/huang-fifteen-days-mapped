@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fifteen Days, Mapped</title>
+<style>
+/* Layout: the figure itself is the page. It lies on a table like a sheet map: drag it, zoom it, and click anything on it; a narrow
+   panel at the side holds the record behind whatever was clicked. The sheet keeps the figure's own paper and inks in both themes;
+   only the table and the panel follow the viewer's theme. */
+:root {
+  --table: #dedad0; --surface: #fffdf8; --sunk: #efece4; --ink: #191b1a; --muted: #5f6259; --rule: #cfccc1;
+  --link: #1d5cae; --mark: #191b1a; --flag: #8a5a00; --paper: #f7f4ee; --paper-ink: #191b1a;
+  --sans: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --table: #0c0e0c; --surface: #1c1f1d; --sunk: #262a27; --ink: #ecebe4; --muted: #a4a79c; --rule: #363a36;
+    --link: #93bdf3; --mark: #ecebe4; --flag: #e0b25a; color-scheme: dark }
+}
+:root[data-theme="dark"] { --table: #0c0e0c; --surface: #1c1f1d; --sunk: #262a27; --ink: #ecebe4; --muted: #a4a79c; --rule: #363a36;
+  --link: #93bdf3; --mark: #ecebe4; --flag: #e0b25a; color-scheme: dark }
+[hidden] { display: none !important }
+html, body { height: 100% }
+body { margin: 0; background: var(--table); color: var(--ink); font: 14px/1.45 var(--sans); overflow: hidden }
+.app, .app * { box-sizing: border-box }
+.app { height: 100%; display: flex; flex-direction: column; min-height: 0 }
+.app button, .app input { font: inherit; color: inherit }
+.app :focus-visible { outline: 2px solid var(--link); outline-offset: 1px }
+.app p, .app ul, .app h2, .app h3, .app h4, .app blockquote { margin: 0 }
+.app ul { padding: 0; list-style: none }
+.app a { color: var(--link); text-underline-offset: 2px }
+.app code { font: 0.92em var(--mono); overflow-wrap: anywhere }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%) }
+
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding-block: 8px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); background: var(--surface); border-bottom: 1px solid var(--rule) }
+.brand { display: flex; flex-direction: column; line-height: 1.15; min-width: 0 }
+.brand strong { font-size: 17px; letter-spacing: -0.01em }
+.brand span { font-size: 10.5px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted) }
+.jump { flex: 1 1 220px; max-width: 360px; min-width: 0 }
+.jump input { width: 100%; padding: 6px 10px; border: 1px solid var(--rule); border-radius: 4px; background: var(--table) }
+.tools { display: flex; flex-wrap: wrap; gap: 6px; margin-left: auto }
+.btn { border: 1px solid var(--rule); background: var(--surface); border-radius: 4px; padding: 5px 10px; cursor: pointer; white-space: nowrap }
+.btn:hover { background: var(--sunk) }
+.btn.sq { min-width: 34px; font-weight: 700 }
+
+.stage { flex: 1 1 auto; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 390px }
+.view { position: relative; overflow: hidden; touch-action: none; cursor: grab; background: var(--table); outline-offset: -2px; min-height: 0 }
+.view.drag { cursor: grabbing }
+.world { position: absolute; left: 0; top: 0; transform-origin: 0 0; will-change: transform; box-shadow: 0 2px 22px rgba(0, 0, 0, 0.28) }
+.world.fly { transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) }
+@media (prefers-reduced-motion: reduce) { .world.fly { transition: none } }
+.world .chip, .world .row, .world circle, .world .e { cursor: pointer }
+.world .e, .world .eh { pointer-events: stroke }
+.world .eh { cursor: pointer; fill: none }
+.labels { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity 0.2s }
+.view.far .labels { opacity: 1 }
+.app button.rlabel { position: absolute; pointer-events: none; border: 0; background: rgba(25, 27, 26, 0.88); color: #f7f4ee; font: 700 calc(14.5px * var(--inv, 1))/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif; padding: calc(6px * var(--inv, 1)) calc(11px * var(--inv, 1)); border-radius: calc(8px * var(--inv, 1)); cursor: pointer; transform: translate(-50%, -50%); white-space: nowrap; text-align: center }
+.app button.rlabel small { display: block; color: #f7f4ee; font-weight: 400; font-size: calc(11px * var(--inv, 1)); opacity: 0.85; margin-top: calc(2px * var(--inv, 1)) }
+.app .view.far button.rlabel { pointer-events: auto }
+.sel { position: absolute; border: 5px solid #191b1a; border-radius: 12px; pointer-events: none; box-shadow: 0 0 0 5px rgba(247, 244, 238, 0.9) }
+.tip { position: absolute; z-index: 3; pointer-events: none; background: var(--ink); color: var(--surface); font-size: 12.5px; line-height: 1.35; padding: 6px 9px; border-radius: 4px; max-width: 340px }
+.tip b { display: block; font-weight: 700 }
+.tip span { display: block }
+.tip i { display: block; font-style: normal; opacity: 0.72; font-size: 11.5px; margin-top: 3px }
+.world [data-node] { cursor: pointer }
+.app button.linkbtn { border: 0; background: none; color: var(--link); padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; font-size: 12.5px; text-align: left; width: fit-content }
+.heads { display: flex; flex-direction: column; gap: 6px; font-size: 13px }
+.heads li { overflow-wrap: anywhere }
+.days { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px }
+.days .btn { padding: 4px 2px; font-size: 12px; text-align: center; white-space: normal; line-height: 1.25 }
+.days .btn small { display: block; color: var(--muted); font-size: 11px }
+.mini { position: absolute; left: max(10px, env(safe-area-inset-left, 0px)); bottom: calc(10px + env(safe-area-inset-bottom, 0px)); width: 112px; border: 1px solid var(--rule); background: #f7f4ee; cursor: crosshair; z-index: 2; line-height: 0; box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25); touch-action: none }
+.mini img { width: 100%; height: auto; display: block; pointer-events: none }
+.minirect { position: absolute; border: 2px solid #c8321e; background: rgba(200, 50, 30, 0.12); pointer-events: none; min-width: 4px; min-height: 4px }
+.hint { position: absolute; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 2; background: var(--ink); color: var(--surface); padding: 6px 12px; border-radius: 16px; font-size: 12.5px; white-space: nowrap; max-width: calc(100% - 150px); overflow: hidden; text-overflow: ellipsis; transition: opacity 0.4s }
+.hint.gone { opacity: 0 }
+
+.panel { background: var(--surface); border-left: 1px solid var(--rule); overflow-y: auto; min-height: 0; padding: 16px; padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 14px }
+.panel h2 { font-size: 20px; line-height: 1.15; letter-spacing: -0.01em; text-wrap: balance }
+.panel h4 { font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted) }
+.panel .role, .panel .muted { color: var(--muted) }
+.panel .lead { font-size: 15px }
+.panel .rule { font-weight: 700 }
+.list { display: flex; flex-direction: column; gap: 8px }
+.act { background: var(--table); border: 1px solid var(--rule); border-radius: 5px; padding: 9px 11px; display: flex; flex-direction: column; gap: 5px }
+.act.rep { border-left: 3px dashed var(--mark) }
+.act.on { border-color: var(--mark); box-shadow: 0 0 0 1px var(--mark) }
+.when { font-weight: 700; font-size: 13px; font-variant-numeric: tabular-nums }
+.flag { font-size: 12.5px; color: var(--flag) }
+details.src { font-size: 13px }
+details.src summary, .panel details > summary { cursor: pointer; color: var(--link); width: fit-content }
+details.src ul { margin-top: 6px; display: flex; flex-direction: column; gap: 8px }
+details.src li { display: flex; flex-direction: column; gap: 3px; overflow-wrap: anywhere }
+.dom { color: var(--muted) }
+.app blockquote { border-left: 2px solid var(--rule); padding-left: 9px; color: var(--muted) }
+.tie { border-top: 1px solid var(--rule); padding-top: 8px; display: flex; flex-direction: column; gap: 4px }
+.kind { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted) }
+.notshown { border-left: 3px solid var(--mark); padding-left: 12px }
+.chips { display: flex; flex-wrap: wrap; gap: 6px }
+.chips .btn { padding: 3px 8px; font-size: 13px }
+.status { border-left: 3px solid var(--mark); padding-left: 12px; display: flex; flex-direction: column; gap: 6px; font-size: 13.5px }
+.small { font-size: 12.5px; color: var(--muted) }
+.keys { display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; font-size: 13px }
+.keys b { font-weight: 700; white-space: nowrap }
+@media (max-width: 820px) {
+  .stage { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(0, 42%) }
+  .panel { border-left: 0; border-top: 1px solid var(--rule); padding-left: max(16px, env(safe-area-inset-left, 0px)) }
+  .mini { width: 70px }
+  .hint { display: none }
+  .tools .btn.wide { display: none }
+}
+__FIGSTYLE__
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="bar">
+    <div class="brand"><span id="kicker"></span><strong>Fifteen days, mapped</strong></div>
+    <div class="jump">
+      <label class="vh" for="jump">Jump to an actor, a group, a box or a day</label>
+      <input id="jump" type="search" list="jumplist" autocomplete="off" placeholder="Jump to an actor, a group, a box or a day">
+      <datalist id="jumplist"></datalist>
+    </div>
+    <div class="tools">
+      <button class="btn sq" id="zout" type="button" aria-label="Zoom out">&minus;</button>
+      <button class="btn sq" id="zin" type="button" aria-label="Zoom in">+</button>
+      <button class="btn" id="fit" type="button">Whole map</button>
+      <button class="btn wide" id="tonotes" type="button">Notes on the map</button>
+      <button class="btn" id="about" type="button">Status</button>
+    </div>
+  </header>
+  <div class="stage">
+    <div class="view" id="view" tabindex="0" role="application" aria-label="The figure as a map. Arrow keys move it, plus and minus zoom, zero shows the whole map.">
+      <div class="world" id="world">__FIGURE__<div class="labels" id="labels"></div><div class="sel" id="sel" hidden></div></div>
+      <div class="tip" id="tip" hidden></div>
+      <div class="mini" id="mini" aria-hidden="true"><img alt="" src="__THUMB__"><div class="minirect" id="minirect"></div></div>
+      <p class="hint" id="hint">Scroll or pinch to zoom &middot; drag to move &middot; click a name on the map to go there &middot; hover anything for what it is &middot; click a dot, a chip, a row, a line or a box for its record</p>
+    </div>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+</div>
+<script type="application/json" id="data">__DATA__</script>
+<script>
+(function () {
+  'use strict';
+  var D = JSON.parse(document.getElementById('data').textContent);
+  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var WD = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  function $(id) { return document.getElementById(id); }
+  function h(tag, attrs) {
+    var e = document.createElement(tag), k, i, c;
+    for (k in (attrs || {})) {
+      if (attrs[k] == null || attrs[k] === false) continue;
+      if (k === 'class') e.className = attrs[k];
+      else if (k === 'text') e.textContent = attrs[k];
+      else if (k.slice(0, 2) === 'on') e.addEventListener(k.slice(2), attrs[k]);
+      else e.setAttribute(k, attrs[k] === true ? '' : attrs[k]);
+    }
+    for (i = 2; i < arguments.length; i++) {
+      c = arguments[i];
+      (Array.isArray(c) ? c : [c]).forEach(function (x) { if (x != null && x !== false) e.append(x.nodeType ? x : document.createTextNode(String(x))); });
+    }
+    return e;
+  }
+  function parts(iso) { var p = iso.split('-').map(Number); return { y: p[0], m: p[1], d: p[2] }; }
+  function shortDay(iso) { var p = parts(iso); return MON[p.m - 1] + ' ' + p.d; }
+  function longDay(iso) { var p = parts(iso), w = new Date(Date.UTC(p.y, p.m - 1, p.d)).getUTCDay(); return WD[w] + ', ' + MON[p.m - 1] + ' ' + p.d + ', ' + p.y; }
+  function plural(n, one, many) { return n.toLocaleString('en-US') + ' ' + (n === 1 ? one : many); }
+  function host(u) { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } }
+  function web(u) { return /^https?:\/\//i.test(u || '') ? u : null; }
+  function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); return el; }
+  function flat(t) { return (t || '').replace(/\s+/g, ' ').trim(); }
+
+  // the tables behind the sheet
+  var N = D.days.length, G = {}, A = {};
+  D.groups.forEach(function (g) { G[g.k] = g; });
+  D.actors.forEach(function (a) { A[a.k] = a; a.acts = []; a.ties = []; a.lines = []; });
+  D.acts.forEach(function (x) { x.di = D.days.indexOf(x.d); A[x.a].acts.push(x); });
+  D.ties.forEach(function (t) { if (t.ka) A[t.ka].ties.push(t); if (t.kb && t.kb !== t.ka) A[t.kb].ties.push(t); });
+  D.lines.forEach(function (l) { A[l.m].lines.push(l); });
+  var pieceOf = {};
+  D.pieces.forEach(function (p, i) { var k = p[1] + ' · ' + p[2]; if (!(k in pieceOf)) pieceOf[k] = i; });
+
+  // the sheet and the window onto it
+  var view = $('view'), world = $('world'), plot = world.querySelector('.plot'), tip = $('tip'), panel = $('panel');
+  var put = panel.append.bind(panel);
+  panel.append = function () { [].slice.call(arguments).forEach(function (c) { (Array.isArray(c) ? c : [c]).forEach(function (x) { if (x != null && x !== false) put(x.nodeType ? x : document.createTextNode(String(x))); }); }); };
+  var W = world.offsetWidth, H = world.offsetHeight, v = { x: 0, y: 0, k: 1 }, KMAX = 3, kmin = 0.05;
+  var wr0 = world.getBoundingClientRect();
+  function boxOf(el) { var r = el.getBoundingClientRect(), o = world.getBoundingClientRect(); return { x: (r.left - o.left) / v.k, y: (r.top - o.top) / v.k, w: r.width / v.k, h: r.height / v.k }; }
+  function union(bs) {
+    var x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    bs.forEach(function (b) { x0 = Math.min(x0, b.x); y0 = Math.min(y0, b.y); x1 = Math.max(x1, b.x + b.w); y1 = Math.max(y1, b.y + b.h); });
+    return bs.length ? { x: x0, y: y0, w: x1 - x0, h: y1 - y0 } : null;
+  }
+  var P = boxOf(plot);                                        // the plot's place on the sheet (identity transform at this point)
+  var rowEl = {}, chipEls = {};
+  world.querySelectorAll('.row[data-a]').forEach(function (e) { rowEl[e.dataset.a] = e; });
+  world.querySelectorAll('.chip[data-a]').forEach(function (e) { (chipEls[e.dataset.a] = chipEls[e.dataset.a] || []).push(e); });
+  var nodeOf = {}, nameKey = {}, nodeEl = {}, docIx = {};
+  D.actors.forEach(function (a) { nameKey[a.n] = a.k; });
+  D.ties.forEach(function (t) { [t.a, t.b].forEach(function (n, j) { if (j && t.b === t.a) return; (nodeOf[n] = nodeOf[n] || { ties: [], lines: [] }).ties.push(t); }); });
+  D.lines.forEach(function (l) { if (l.n) (nodeOf[l.n] = nodeOf[l.n] || { ties: [], lines: [] }).lines.push(l); });
+  world.querySelectorAll('.pan div[data-fit]').forEach(function (el) {            // a box is known by the name in its first line
+    if (el.classList.contains('chip') || el.closest('.row') || !el.firstElementChild) return;
+    var c = el.firstElementChild.cloneNode(true); [].slice.call(c.querySelectorAll('span')).forEach(function (x) { x.remove(); });
+    var n = flat(c.textContent); if (nodeOf[n] || nameKey[n]) { el.dataset.node = n; if (!nodeEl[n]) nodeEl[n] = el; }
+  });
+  function docKey(x) { return x[1] || x[0]; }
+  function addDoc(x, use) { var k = docKey(x); if (!k) return; use.p = x[3] || []; (docIx[k] = docIx[k] || { x: x, uses: [] }).uses.push(use); }
+  D.acts.forEach(function (a) { (a.s || []).forEach(function (x) { addDoc(x, { ka: a.a, t: a.t, label: (a.di >= 0 ? shortDay(a.d) : 'Before the fifteen days') }); }); });
+  D.ties.forEach(function (t) { (t.s || []).forEach(function (x) { addDoc(x, { ka: t.kb || t.ka, t: t.t, label: t.k, node: t.kb || t.ka ? '' : t.a }); }); });
+  D.lines.forEach(function (l) { (l.s || []).forEach(function (x) { addDoc(x, { ka: l.m, t: l.t, label: D.sides[l.side] }); }); });
+  function slug(t) { return t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  function cut(t, n) { t = flat(t); return t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : t; }
+  var dots = [], grid = {}, CELL = 28;
+  world.querySelectorAll('.plot circle').forEach(function (c) {         // read every place first; changing the page between readings would lay it out 2,245 times
+    var t = c.querySelector('title'), r = c.getBoundingClientRect(), d = { x: r.left + r.width / 2 - wr0.left, y: r.top + r.height / 2 - wr0.top, t: t ? t.textContent : '', el: c, title: t };
+    dots.push(d); var key = Math.floor(d.x / CELL) + ':' + Math.floor(d.y / CELL); (grid[key] = grid[key] || []).push(d);
+  });
+  dots.forEach(function (d) { if (d.title) d.title.remove(); d.title = null; });
+  function nearDot(wx, wy, reach) {
+    var best = null, bd = reach * reach, cx = Math.floor(wx / CELL), cy = Math.floor(wy / CELL), n = Math.ceil(reach / CELL), i, j;
+    for (i = cx - n; i <= cx + n; i++) for (j = cy - n; j <= cy + n; j++) (grid[i + ':' + j] || []).forEach(function (d) {
+      var q = (d.x - wx) * (d.x - wx) + (d.y - wy) * (d.y - wy); if (q <= bd) { bd = q; best = d; }
+    });
+    return best;
+  }
+  function apply() {
+    world.style.transform = 'translate(' + v.x + 'px,' + v.y + 'px) scale(' + v.k + ')';
+    world.style.setProperty('--inv', (1 / v.k).toFixed(3));                 // region names keep one size on the screen
+    if (typeof declutter === 'function' && labs) declutter();
+    view.classList.toggle('far', v.k < 0.4);
+    var r = $('minirect').style, vw = view.clientWidth, vh = view.clientHeight;
+    r.left = Math.max(0, -v.x / v.k / W * 100) + '%'; r.top = Math.max(0, -v.y / v.k / H * 100) + '%';
+    r.width = Math.min(100, vw / v.k / W * 100) + '%'; r.height = Math.min(100, vh / v.k / H * 100) + '%';
+  }
+  function clamp() {
+    var vw = view.clientWidth, vh = view.clientHeight, m = 60, sw, sh;
+    v.k = Math.max(kmin, Math.min(KMAX, v.k)); sw = W * v.k; sh = H * v.k;
+    v.x = sw + 2 * m <= vw ? (vw - sw) / 2 : Math.min(m, Math.max(vw - sw - m, v.x));
+    v.y = sh + 2 * m <= vh ? (vh - sh) / 2 : Math.min(m, Math.max(vh - sh - m, v.y));
+  }
+  function fly(on) { world.classList.toggle('fly', !!on); if (on) setTimeout(function () { world.classList.remove('fly'); }, 560); }
+  function zoomAt(sx, sy, f) {
+    var k2 = Math.max(kmin, Math.min(KMAX, v.k * f));
+    v.x = sx - (sx - v.x) * (k2 / v.k); v.y = sy - (sy - v.y) * (k2 / v.k); v.k = k2; clamp(); apply();
+  }
+  function fitBox(b, maxK, pad) {
+    var vw = view.clientWidth, vh = view.clientHeight; pad = pad == null ? 40 : pad;
+    v.k = Math.max(kmin, Math.min(maxK || 1.2, (vw - 2 * pad) / b.w, (vh - 2 * pad) / b.h));
+    v.x = (vw - b.w * v.k) / 2 - b.x * v.k; v.y = (vh - b.h * v.k) / 2 - b.y * v.k; clamp(); fly(true); apply();
+  }
+  function whole() { fitBox({ x: 0, y: 0, w: W, h: H }, 1, 10); }
+  function focusActor(k) {                                    // close enough to read the row, its left edge in view
+    var b = actorBox(k), r = rowEl[k] ? boxOf(rowEl[k]) : b; if (!b) return;
+    var vw = view.clientWidth, vh = view.clientHeight;
+    v.k = Math.max(0.8, Math.min(1.05, (vw - 60) / b.w, (vh - 60) / b.h));
+    v.x = b.w * v.k <= vw - 40 ? (vw - b.w * v.k) / 2 - b.x * v.k : 20 - r.x * v.k;
+    v.y = b.h * v.k <= vh - 40 ? (vh - b.h * v.k) / 2 - b.y * v.k : 20 - b.y * v.k;
+    clamp(); fly(true); apply();
+  }
+  function sizes() { kmin = Math.min(view.clientWidth / W, view.clientHeight / H) * 0.85; }
+
+  // names of the regions, shown while the sheet is far away
+  var labels = $('labels'), region = {};
+  function slices(els) { var by = {}; els.forEach(function (e) { var b = boxOf(e), s = b.x + b.w / 2 < P.x + 3300 ? 0 : 1; (by[s] = by[s] || []).push(b); }); return Object.keys(by).map(function (s) { return union(by[s]); }); }
+  var specs = [];                                             // measured first, added to the page afterwards in one go
+  function addLabel(text, sub, b, onpick) { specs.push([text, sub, b, onpick]); }
+  D.groups.forEach(function (g) {
+    var rows = D.actors.filter(function (a) { return a.g === g.k && rowEl[a.k]; }).map(function (a) { return rowEl[a.k]; });
+    if (!rows.length) return;
+    var parts_ = slices(rows.concat([].concat.apply([], D.actors.filter(function (a) { return a.g === g.k; }).map(function (a) { return chipEls[a.k] || []; }))));
+    region[g.k] = parts_;
+    parts_.forEach(function (b) { addLabel(g.label, plural(rows.length, 'row', 'rows'), b, function () { showGroup(g.k, b); }); });
+  });
+  (function () {
+    var by = [[], []]; dots.forEach(function (d) { by[d.x < P.x + 3300 ? 0 : 1].push({ x: d.x, y: d.y, w: 0, h: 0 }); });
+    by.forEach(function (bs) { var b = union(bs); if (b) { b = { x: b.x - 10, y: b.y - 10, w: b.w + 20, h: b.h + 20 }; addLabel('Coverage', plural(bs.length, 'piece', 'pieces') + ', one dot each', b, function () { fitBox(b, 2.2); }); } });
+    var edges = [[], []]; world.querySelectorAll('.plot .e').forEach(function (e) { var b = boxOf(e); edges[b.x + b.w / 2 < P.x + 3300 ? 0 : 1].push(b); });
+    edges.forEach(function (bs) { var b = union(bs); if (b && b.w > 200) { b = { x: b.x, y: b.y, w: Math.min(b.w, 1000), h: b.h }; addLabel('Documented ties', 'each line is a dated record', b, function () { fitBox(b, 0.9); }); } });
+  })();
+  var labs = [];
+  specs.sort(function (a, b) { return b[2].w * b[2].h - a[2].w * a[2].h; }).forEach(function (sp) {
+    var e = h('button', { class: 'rlabel', type: 'button', onclick: function (ev) { ev.stopPropagation(); sp[3](); } }, sp[0], sp[1] ? h('small', { text: sp[1] }) : null);
+    e.style.left = (sp[2].x + sp[2].w / 2) + 'px'; e.style.top = (sp[2].y + sp[2].h / 2) + 'px'; labels.append(e);
+    labs.push({ el: e, cx: sp[2].x + sp[2].w / 2, cy: sp[2].y + sp[2].h / 2, w: 0, h: 0 });
+  });
+  function declutter() {                                      // a name that would lie over the name of a larger region is left out at this distance
+    if (v.k >= 0.4) return;
+    var shown = [];
+    labs.forEach(function (L) {
+      if (!L.w) { var r0 = L.el.getBoundingClientRect(); L.w = r0.width; L.h = r0.height; }
+      var cx = L.cx * v.k + v.x, cy = L.cy * v.k + v.y, r = { l: cx - L.w / 2 - 2, t: cy - L.h / 2 - 2, r: cx + L.w / 2 + 2, b: cy + L.h / 2 + 2 };
+      var hit = shown.some(function (q) { return !(r.r < q.l || r.l > q.r || r.b < q.t || r.t > q.b); });
+      L.el.style.visibility = hit ? 'hidden' : 'visible'; if (!hit) shown.push(r);
+    });
+  }
+
+  // what is picked
+  var pinStyle = document.createElement('style'); document.head.append(pinStyle);
+  function pin(keys) {
+    if (!keys || !keys.length) { pinStyle.textContent = ''; return; }
+    var not = keys.map(function (k) { return ':not([data-a~="' + k + '"])'; }).join('');
+    pinStyle.textContent = '.world .plot .e' + not + ',.world .plot .chip' + not + '{opacity:.12}.world .plot .row' + not + '{opacity:.5}';
+  }
+  function mark(b) { var s = $('sel'); if (!b) { s.hidden = true; return; } s.hidden = false; s.style.left = (b.x - 8) + 'px'; s.style.top = (b.y - 8) + 'px'; s.style.width = (b.w + 16) + 'px'; s.style.height = (b.h + 16) + 'px'; }
+  function actorBox(k) { return union([rowEl[k]].concat(chipEls[k] || []).filter(Boolean).map(boxOf)); }
+
+  function sources(list) {
+    if (!list || !list.length) return null;
+    return h('details', { class: 'src' }, h('summary', { text: plural(list.length, 'source', 'sources') }),
+      h('ul', null, list.map(function (x) {
+        var head = web(x[1]) ? h('span', null, h('a', { href: x[1], target: '_blank', rel: 'noopener noreferrer', text: x[0] || x[1] }), ' ', h('span', { class: 'dom', text: host(x[1]) }))
+                             : h('span', null, x[0], x[2] ? [' ', h('code', { text: x[2] })] : null);
+        var uses = (docIx[docKey(x)] || { uses: [] }).uses.length;
+        return h('li', null, head, (x[3] || []).map(function (p) { return h('blockquote', { text: '“' + p + '”' }); }),
+          uses > 1 ? h('button', { class: 'linkbtn', type: 'button', text: 'Cited by ' + uses + ' records on the map', onclick: function () { showDoc(docKey(x)); } }) : null);
+      })));
+  }
+  function actCard(x, on) {
+    var card = h('article', { class: 'act' + (x.rep ? ' rep' : '') + (on ? ' on' : '') },
+      h('div', { class: 'when', text: x.di >= 0 ? shortDay(x.d) : 'Before the fifteen days' }), h('p', { text: x.t }),
+      x.rep ? h('p', { class: 'flag', text: 'Placed on the day of the report: the source gives no day for the act itself.' }) : null, sources(x.s));
+    if (on) { var d = card.querySelector('details'); if (d) d.open = true; }
+    return card;
+  }
+  function head(title, sub) { return h('div', null, h('h2', { text: title }), sub ? h('p', { class: 'role', text: sub }) : null); }
+  function back() { return h('button', { class: 'btn', type: 'button', text: 'Clear the selection', onclick: function () { pin(null); mark(null); showAbout(); try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {} } }); }
+  function showActor(k, chipText, zoom) {
+    var a = A[k]; if (!a) return;
+    var g = G[a.g], b = actorBox(k), want = flat(chipText);
+    pin([k]); mark(rowEl[k] ? boxOf(rowEl[k]) : null); if (zoom && b) focusActor(k);
+    try { history.replaceState(null, '', '#who-' + k); } catch (e) { /* a local file may refuse it */ }
+    var acts = a.acts.slice().sort(function (x, y) { return x.di - y.di; }), hit = null;
+    clear(panel).append(head(a.n, (a.r ? a.r + ' · ' : '') + g.label),
+      h('div', { class: 'chips' }, h('button', { class: 'btn', type: 'button', text: 'Show on the map', onclick: function () { focusActor(k); } }), back()),
+      h('div', { class: 'list' }, h('h4', { text: 'Dated acts (' + acts.length + ')' }),
+        acts.length ? acts.map(function (x) { var mine = flat(x.t).replace(/\.$/, ''), on = !!want && !!mine && want.indexOf(mine) >= 0; var c = actCard(x, on); if (on && !hit) hit = c; return c; }) : h('p', { class: 'muted', text: 'No dated act is drawn for this actor; the actor is on the map through the ties below.' })));
+    var ties = h('div', { class: 'list' }, h('h4', { text: 'Ties on record (' + (a.ties.length + a.lines.length) + ')' }));
+    Object.keys(D.sides).forEach(function (side) {
+      var mine = a.lines.filter(function (l) { return l.side === side; });
+      if (mine.length) ties.append(h('div', { class: 'tie' }, h('span', { class: 'kind', text: D.sides[side] }), mine.map(function (l) { return h('div', null, h('p', { text: l.t }), sources(l.s)); })));
+    });
+    a.ties.forEach(function (t) { ties.append(h('div', { class: 'tie' }, h('span', { class: 'kind', text: t.k }), h('p', { text: t.t }), sources(t.s))); });
+    if (!a.ties.length && !a.lines.length) ties.append(h('p', { class: 'muted', text: 'No tie is drawn for this actor.' }));
+    panel.append(ties, h('p', { class: 'notshown' }, h('b', { text: g.label + '. No document here shows ' }), g.not_shown));
+    panel.scrollTop = 0; if (hit) hit.scrollIntoView({ block: 'nearest' });
+  }
+  function showGroup(gk, b) {
+    var g = G[gk], mine = D.actors.filter(function (a) { return a.g === gk; });
+    pin(mine.map(function (a) { return a.k; })); mark(null);
+    if (b) { var vw = view.clientWidth, vh = view.clientHeight; v.k = Math.max(0.55, Math.min(0.9, (vw - 60) / b.w, (vh - 60) / b.h)); v.x = b.w * v.k <= vw - 40 ? (vw - b.w * v.k) / 2 - b.x * v.k : 20 - b.x * v.k; v.y = b.h * v.k <= vh - 40 ? (vh - b.h * v.k) / 2 - b.y * v.k : 20 - b.y * v.k; clamp(); fly(true); apply(); }
+    clear(panel).append(head(g.label, plural(mine.length, 'actor', 'actors') + ' drawn'), h('div', { class: 'chips' }, back()),
+      h('p', { class: 'notshown' }, h('b', { text: 'No document here shows ' }), g.not_shown),
+      g.background ? h('div', null, h('p', { class: 'muted', text: g.background }), sources(g.s)) : null,
+      h('div', { class: 'list' }, h('h4', { text: 'Actors' }), h('div', { class: 'chips' }, mine.map(function (a) { return h('button', { class: 'btn', type: 'button', text: a.n, onclick: function () { showActor(a.k, null, true); } }); }))));
+    panel.scrollTop = 0;
+  }
+  function showPiece(d) {
+    var i = pieceOf[d.t], p = i == null ? null : D.pieces[i], cut = d.t.indexOf(' · ');
+    mark({ x: d.x - 5, y: d.y - 5, w: 10, h: 10 });
+    clear(panel).append(head(p ? p[2] : d.t.slice(cut + 3), (p ? p[1] : d.t.slice(0, cut)) + (p ? ' · first listed ' + longDay(D.days[p[0]]) : '')),
+      p && web(p[3]) ? h('p', null, h('a', { href: p[3], target: '_blank', rel: 'noopener noreferrer', text: 'Open the piece' }), ' ', h('span', { class: 'dom', text: host(p[3]) })) : null,
+      h('p', { class: 'small', text: 'One dot is one piece that Techmeme or Memeorandum listed on the story, placed on the first day a saved page of theirs lists it. A dot counts a piece, not its readers.' }),
+      h('div', { class: 'chips' }, back()));
+    panel.scrollTop = 0;
+  }
+  var edgeEls = [].slice.call(world.querySelectorAll('.e')), lineOf = new Map(), firstOf = new Map();
+  // a thin or dotted line is hard to hit: each line gets an unseen wide copy under all the lines, and a click on it counts as a click on the line
+  edgeEls.forEach(function (e) { if (!firstOf.has(e.parentNode)) firstOf.set(e.parentNode, e); });
+  edgeEls.forEach(function (e) {
+    var c = e.cloneNode(false); c.setAttribute('class', 'eh'); c.removeAttribute('stroke-dasharray'); c.removeAttribute('opacity');
+    c.setAttribute('stroke', 'transparent'); c.setAttribute('stroke-width', '12'); lineOf.set(c, e); e.parentNode.insertBefore(c, firstOf.get(e.parentNode));
+  });
+  function showEdge(keys, el) {
+    keys = keys.filter(function (k) { return A[k]; }); pin(keys); mark(null);
+    var E = (D.edges || [])[edgeEls.indexOf(el)] || [[], [], '', ''], recs = [];
+    E[0].forEach(function (i) { var t = D.ties[i]; recs.push(h('div', { class: 'tie' }, h('span', { class: 'kind', text: t.k }), h('p', { text: t.t }), sources(t.s))); });
+    E[1].forEach(function (i) { var l = D.lines[i]; recs.push(h('div', { class: 'tie' }, h('span', { class: 'kind', text: D.sides[l.side] }), h('p', { text: l.t }), sources(l.s))); });
+    clear(panel).append(head(recs.length && E[2] && E[3] ? E[2] + ' → ' + E[3] : 'A line of the ties', recs.length === 1 ? 'The record behind this line' : recs.length ? recs.length + ' records between these two; this line is one of them' : plural(keys.length, 'actor', 'actors') + ' on this line'),
+      h('p', { class: 'muted', text: 'A line is a dated record that ties an actor to a company, a funder or a group. It ends at a person or a body, never at an act, and it is not a motive.' + (recs.length ? '' : ' Pick an actor to read the records.') }),
+      recs.length ? h('div', { class: 'list' }, h('h4', { text: recs.length === 1 ? 'The record' : 'The records' }), recs) : null,
+      keys.length ? h('div', { class: 'list' }, h('h4', { text: recs.length ? (keys.length === 1 ? 'The row this line reaches' : 'The rows this line leads on to') : 'Actors' }),
+        h('div', { class: 'chips' }, keys.map(function (k) { return h('button', { class: 'btn', type: 'button', text: A[k].n, onclick: function () { showActor(k, null, true); } }); }))) : null,
+      h('div', { class: 'chips' }, back()));
+    panel.scrollTop = 0;
+  }
+  function section(title, items) { return h('div', { class: 'list' }, h('h4', { text: title }), items); }
+  function goTo(name) { var k = nameKey[name]; return h('button', { class: 'btn', type: 'button', text: name, onclick: function () { if (k) showActor(k, null, true); else showNode(name, true); } }); }
+  function showNode(name, zoom) {
+    var N = nodeOf[name]; if (!N) return;
+    var keys = []; N.ties.forEach(function (t) { [t.ka, t.kb].forEach(function (k) { if (k && keys.indexOf(k) < 0) keys.push(k); }); }); N.lines.forEach(function (l) { if (keys.indexOf(l.m) < 0) keys.push(l.m); });
+    pin(keys.length ? keys : null); var el = nodeEl[name], b = el ? boxOf(el) : null; mark(b);
+    if (zoom && b) fitBox({ x: b.x - 260, y: b.y - 220, w: b.w + 900, h: b.h + 440 }, 1, 20);
+    try { history.replaceState(null, '', '#box-' + slug(name)); } catch (e) {}
+    function card(t) { var other = t.a === name ? t.b : t.a; return h('div', { class: 'tie' }, h('span', { class: 'kind', text: t.k }), h('p', { text: t.t }), sources(t.s), h('div', { class: 'chips' }, goTo(other))); }
+    var out = N.ties.filter(function (t) { return t.a === name; }), inn = N.ties.filter(function (t) { return t.a !== name; });
+    clear(panel).append(head(name, plural(N.ties.length + N.lines.length, 'record starts or ends at this box', 'records start or end at this box')),
+      h('div', { class: 'chips' }, b ? h('button', { class: 'btn', type: 'button', text: 'Show on the map', onclick: function () { showNode(name, true); } }) : null, back()),
+      h('p', { class: 'muted', text: 'A tie is a dated record, not a motive. Each record below has its sources; the buttons lead to the other end of the line.' }),
+      out.length ? section('From this box (' + out.length + ')', out.map(card)) : null,
+      inn.length ? section('To this box (' + inn.length + ')', inn.map(card)) : null,
+      N.lines.length ? section('Lines to members of Congress (' + N.lines.length + ')', N.lines.map(function (l) { return h('div', { class: 'tie' }, h('span', { class: 'kind', text: A[l.m].n }), h('p', { text: l.t }), sources(l.s), h('div', { class: 'chips' }, goTo(A[l.m].n))); })) : null);
+    panel.scrollTop = 0;
+  }
+  function showDay(i) {
+    var d = D.days[i]; if (!d) return;
+    var acts = D.acts.filter(function (x) { return x.di === i; }), pcs = D.pieces.filter(function (x) { return x[0] === i; }), ev = D.events.filter(function (x) { return x.d === d; });
+    var order = {}; D.actors.forEach(function (a, j) { order[a.k] = j; }); acts.sort(function (x, y) { return order[x.a] - order[y.a]; });
+    var keys = []; acts.forEach(function (x) { if (keys.indexOf(x.a) < 0) keys.push(x.a); }); pin(keys.length ? keys : null); mark(null);
+    try { history.replaceState(null, '', '#day-' + d); } catch (e) {}
+    var site = {}; pcs.forEach(function (x) { site[x[1]] = (site[x[1]] || 0) + 1; });
+    var top = Object.keys(site).sort(function (x, y) { return site[y] - site[x] || (x < y ? -1 : 1); }).slice(0, 8).map(function (x) { return x + (site[x] > 1 ? ' (' + site[x] + ')' : ''); });
+    var list = h('ul', { class: 'heads' }), more = h('button', { class: 'linkbtn', type: 'button', text: 'Show all ' + pcs.length.toLocaleString('en-US') + ' headlines', onclick: function () { fill(pcs.length); more.hidden = true; } });
+    function fill(n) { clear(list); pcs.slice(0, n).forEach(function (x) { list.append(h('li', null, web(x[3]) ? h('a', { href: x[3], target: '_blank', rel: 'noopener noreferrer', text: x[2] }) : x[2], ' ', h('span', { class: 'dom', text: x[1] }))); }); }
+    fill(25);
+    function step(j, label) { return D.days[j] ? h('button', { class: 'btn', type: 'button', text: label + shortDay(D.days[j]), onclick: function () { showDay(j); } }) : null; }
+    clear(panel).append(head(longDay(d), plural(acts.length, 'dated act', 'dated acts') + ' · ' + plural(pcs.length, 'piece first listed', 'pieces first listed')),
+      h('div', { class: 'chips' }, step(i - 1, '← '), step(i + 1, '→ '), back()),
+      ev.length ? section('On the record that day', ev.map(function (x) { return h('div', { class: 'tie' }, h('p', { text: x.t }), sources(x.s)); })) : null,
+      section('Acts dated this day (' + acts.length + ')', acts.length ? acts.map(function (x) { var c = actCard(x, false); c.insertBefore(goTo(A[x.a].n), c.firstChild); return c; }) : h('p', { class: 'muted', text: 'No dated act is drawn on this day.' })),
+      section('Coverage first listed this day (' + pcs.length.toLocaleString('en-US') + ')', [pcs.length ? h('p', { class: 'small', text: 'Most pieces: ' + top.join(', ') + '. A piece is placed on the first day a saved aggregator page lists it; a dot counts a piece, not its readers.' }) : h('p', { class: 'muted', text: 'No piece was first listed on this day.' }),
+        list, pcs.length > 25 ? more : null]));
+    panel.scrollTop = 0;
+  }
+  function showDoc(k) {
+    var doc = docIx[k]; if (!doc) return; var x = doc.x, keys = [];
+    doc.uses.forEach(function (u) { if (u.ka && keys.indexOf(u.ka) < 0) keys.push(u.ka); }); pin(keys.length ? keys : null); mark(null);
+    clear(panel).append(head(x[0] || x[1], (web(x[1]) ? host(x[1]) + ' · ' : '') + 'cited by ' + plural(doc.uses.length, 'record', 'records') + ' on the map'),
+      h('div', { class: 'chips' }, back()),
+      web(x[1]) ? h('p', null, h('a', { href: x[1], target: '_blank', rel: 'noopener noreferrer', text: 'Open the source' }), ' ', h('span', { class: 'dom', text: host(x[1]) })) : (x[2] ? h('p', { class: 'small' }, 'A table of the repository: ', h('code', { text: x[2] })) : null),
+      h('p', { class: 'muted', text: 'Every record on the map that cites this source, with the passage each one rests on. The page holds the passages, not the source itself.' }),
+      section('Cited by', doc.uses.map(function (u) {
+        return h('div', { class: 'tie' }, h('span', { class: 'kind', text: (u.ka && A[u.ka] ? A[u.ka].n + ' · ' : '') + u.label }), h('p', { text: u.t }),
+          u.p.map(function (q) { return h('blockquote', { text: '“' + q + '”' }); }), u.ka && A[u.ka] ? h('div', { class: 'chips' }, goTo(A[u.ka].n)) : (u.node ? h('div', { class: 'chips' }, goTo(u.node)) : null));
+      })));
+    panel.scrollTop = 0;
+  }
+  function plain(t) { return t.replace(/\*\*/g, '').replace(/<\/?b>/g, ''); }
+  function showAbout() {
+    var status = '', notShown = '';
+    D.notes.forEach(function (n) { if (n[0] === 'Status') status = plain(n[1]); if (n[0] === 'What the record does not show') notShown = plain(n[1]); });
+    var sent = status.split(/(?<=[.])\s+(?=[A-Z])/), open = sent.filter(function (x) { return /not yet read independently/.test(x); });
+    clear(panel).append(head('Fifteen days, mapped', D.kicker),
+      h('p', { class: 'lead', text: D.opening.split(/(?<=[.])\s+/).filter(function (x) { return !/:$/.test(x); }).join(' ') }),
+      h('p', { class: 'rule', text: 'A tie is a dated record, not a motive. Nothing here says why anyone acted.' }),
+      h('div', { class: 'keys' }, h('b', { text: 'Dots' }), h('span', { text: 'one piece of coverage each; click one for its headline and link' }),
+        h('b', { text: 'Rows' }), h('span', { text: 'one actor each; click a row for every record behind it' }),
+        h('b', { text: 'Chips' }), h('span', { text: 'one dated act each; click one for the passages it rests on' }),
+        h('b', { text: 'Lines' }), h('span', { text: 'documented ties; click one for the record behind it' }),
+        h('b', { text: 'Boxes' }), h('span', { text: 'companies, funders and groups at the left; click one for every record that starts or ends there' })),
+      h('div', { class: 'list' }, h('h4', { text: 'The fifteen days' }), h('div', { class: 'days' }, D.days.map(function (d, i) {
+        var n = D.acts.filter(function (x) { return x.di === i; }).length;
+        return h('button', { class: 'btn', type: 'button', onclick: function () { showDay(i); } }, shortDay(d), h('small', { text: plural(n, 'act', 'acts') }));
+      }))),
+      h('div', { class: 'status' }, h('p', null, h('b', { text: 'Status: ' }), sent.slice(0, 2).join(' ')), open.map(function (x) { return h('p', { text: x }); }),
+        h('details', null, h('summary', { text: 'The whole status sentence' }), h('p', { class: 'small', text: status }))),
+      h('div', { class: 'list' }, h('h4', { text: 'What the record does not show' }), h('p', { class: 'small', text: notShown.charAt(0).toUpperCase() + notShown.slice(1) })),
+      h('div', { class: 'list' }, h('h4', { text: 'Groups on the map' }), h('div', { class: 'chips' }, D.groups.filter(function (g) { return region[g.k]; }).map(function (g) { return h('button', { class: 'btn', type: 'button', text: g.label, onclick: function () { showGroup(g.k, region[g.k][0]); } }); }))),
+      h('p', { class: 'small', text: D.made }),
+      h('p', { class: 'small', text: 'This interactive layer was checked by script only; no independent reader has read it. The map is the figure as published at commit ' + D.commit + ' (' + D.commit_day + ') of its public repository, and the panel holds nothing its tables do not.' }));
+    panel.scrollTop = 0;
+  }
+
+  // moving the sheet
+  var ptrs = new Map(), drag = null, pinch = null, moved = false, downTarget = null;
+  function local(e) { var r = view.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+  function toWorld(p) { return { x: (p.x - v.x) / v.k, y: (p.y - v.y) / v.k }; }
+  view.addEventListener('wheel', function (e) { e.preventDefault(); var p = local(e); zoomAt(p.x, p.y, Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0016))); $('hint').classList.add('gone'); }, { passive: false });
+  view.addEventListener('pointerdown', function (e) {
+    if (e.button > 0 || e.target.closest('.mini')) return;
+    ptrs.set(e.pointerId, local(e)); downTarget = e.target; moved = false; tip.hidden = true;
+    if (ptrs.size === 1) drag = { p: local(e), x: v.x, y: v.y };
+    if (ptrs.size === 2) { var a = Array.from(ptrs.values()); pinch = { d: Math.hypot(a[0].x - a[1].x, a[0].y - a[1].y), mx: (a[0].x + a[1].x) / 2, my: (a[0].y + a[1].y) / 2 }; moved = true; }
+  });
+  view.addEventListener('pointermove', function (e) {
+    var p = local(e);
+    if (!ptrs.has(e.pointerId)) { hover(e, p); return; }
+    ptrs.set(e.pointerId, p);
+    if (ptrs.size === 1 && drag) {
+      var dx = p.x - drag.p.x, dy = p.y - drag.p.y;
+      if (!moved && Math.hypot(dx, dy) > 4) { moved = true; view.classList.add('drag'); try { view.setPointerCapture(e.pointerId); } catch (err) {} $('hint').classList.add('gone'); }
+      if (moved) { v.x = drag.x + dx; v.y = drag.y + dy; clamp(); apply(); }
+    } else if (ptrs.size === 2 && pinch) {
+      var a = Array.from(ptrs.values()), d = Math.hypot(a[0].x - a[1].x, a[0].y - a[1].y), mx = (a[0].x + a[1].x) / 2, my = (a[0].y + a[1].y) / 2;
+      v.x += mx - pinch.mx; v.y += my - pinch.my; zoomAt(mx, my, d / (pinch.d || d)); pinch = { d: d, mx: mx, my: my };
+    }
+  });
+  function up(e) {
+    if (!ptrs.has(e.pointerId)) return;
+    ptrs.delete(e.pointerId); view.classList.remove('drag');
+    if (ptrs.size === 1) { var q = Array.from(ptrs.values())[0]; drag = { p: q, x: v.x, y: v.y }; pinch = null; }
+    if (ptrs.size === 0) { drag = null; pinch = null; if (!moved && e.type === 'pointerup') click(downTarget, local(e)); }
+  }
+  view.addEventListener('pointerup', up); view.addEventListener('pointercancel', up);
+  // what the pointer is over, in three lines: what it is, the fact that matters, and what a click opens
+  function chipCard(el) {
+    var a = A[el.dataset.a], want = flat(el.textContent), hosts = [], n = 0, rep = false;
+    var mine = a.acts.filter(function (x) { var m = flat(x.t).replace(/\.$/, ''); return m && want.indexOf(m) >= 0; });
+    mine.forEach(function (x) { rep = rep || x.rep; (x.s || []).forEach(function (y) { n++; var d = web(y[1]) ? host(y[1]) : ''; if (d && hosts.indexOf(d) < 0) hosts.push(d); }); });
+    var when = mine.length ? (mine[0].di >= 0 ? shortDay(mine[0].d) : 'before the fifteen days') : '';
+    var body = (v.k < 0.55 ? cut(want, 230) + ' — ' : '') + plural(n, 'source', 'sources') + (hosts.length ? ': ' + hosts.slice(0, 3).join(', ') + (hosts.length > 3 ? ' and ' + (hosts.length - 3) + ' more' : '') : '')
+      + (rep ? ' · placed on the day of the report' : '');
+    return [a.n + (when ? ' · ' + when : ''), body, 'Click for the passages and the links'];
+  }
+  function rowCard(k) { var a = A[k]; return [a.n, (a.r ? a.r + ' · ' : '') + plural(a.acts.length, 'dated act', 'dated acts') + ', ' + plural(a.ties.length + a.lines.length, 'tie on record', 'ties on record'), 'Click for every record behind this row']; }
+  function edgeRecs(el) { var E = (D.edges || [])[edgeEls.indexOf(el)] || [[], [], '', '']; return { E: E, recs: E[0].map(function (i) { return D.ties[i]; }).concat(E[1].map(function (i) { return D.lines[i]; })) }; }
+  function edgeCard(el) {
+    var r = edgeRecs(el), keys = (el.dataset.a || '').split(/\s+/).filter(function (k) { return A[k]; });
+    if (!r.recs.length) return ['A line of the ties', plural(keys.length, 'actor', 'actors') + ' on this line', 'Click to list them'];
+    var x = r.recs[0];
+    return [r.E[2] + ' → ' + r.E[3], r.recs.length === 1 ? (x.k ? x.k + ': ' : '') + cut(x.t, 200) : r.recs.length + ' records between these two', 'Click for the record and its sources'];
+  }
+  function nodeCard(n) {
+    if (nameKey[n]) return [n, 'This actor has a row of its own in another part of the map', 'Click for the records'];
+    var N = nodeOf[n]; return [n, plural(N.ties.length + N.lines.length, 'record starts or ends at this box', 'records start or end at this box'), 'Click to list them'];
+  }
+  function hover(e, p) {
+    if (e.pointerType === 'touch' || e.target.closest('.mini') || e.target.closest('.rlabel')) { tip.hidden = true; return; }
+    var w = toWorld(p), d = nearDot(w.x, w.y, Math.max(3, 7 / v.k)), t = e.target.closest ? e.target : null, el, card = null;
+    if (d) { var i = pieceOf[d.t], pc = i == null ? null : D.pieces[i], at = d.t.indexOf(' · '); card = [pc ? pc[2] : d.t.slice(at + 3), (pc ? pc[1] : d.t.slice(0, at)) + (pc ? ' · first listed ' + shortDay(D.days[pc[0]]) : ''), 'Click for the link']; }
+    else if (t && (el = t.closest('.chip')) && A[el.dataset.a]) card = chipCard(el);
+    else if (t && (el = t.closest('.row')) && A[el.dataset.a]) card = rowCard(el.dataset.a);
+    else if (t && (el = t.closest('.e, .eh')) && el.dataset.a) card = edgeCard(lineOf.get(el) || el);
+    else if (t && (el = t.closest('[data-node]'))) card = nodeCard(el.dataset.node);
+    if (!card) { tip.hidden = true; return; }
+    clear(tip); tip.append(h('b', { text: card[0] })); if (card[1]) tip.append(h('span', { text: card[1] })); tip.append(h('i', { text: card[2] })); tip.hidden = false;
+    tip.style.left = Math.max(6, Math.min(p.x + 14, view.clientWidth - tip.offsetWidth - 6)) + 'px'; tip.style.top = Math.max(6, Math.min(p.y + 16, view.clientHeight - tip.offsetHeight - 6)) + 'px';
+  }
+  view.addEventListener('pointerleave', function () { tip.hidden = true; });
+  function click(t, p) {
+    if (!t || !t.closest) return;
+    if (t.closest('.rlabel')) return;
+    var w = toWorld(p), d = nearDot(w.x, w.y, Math.max(3, 8 / v.k)), e;
+    if (d) return showPiece(d);
+    if ((e = t.closest('.chip')) && A[e.dataset.a]) return showActor(e.dataset.a, e.textContent, false);
+    if ((e = t.closest('.row')) && A[e.dataset.a]) return showActor(e.dataset.a, null, false);
+    if ((e = t.closest('.e, .eh')) && e.dataset.a) return showEdge(e.dataset.a.split(/\s+/), lineOf.get(e) || e);
+    if ((e = t.closest('[data-node]'))) return nameKey[e.dataset.node] ? showActor(nameKey[e.dataset.node], null, false) : showNode(e.dataset.node);
+  }
+  view.addEventListener('keydown', function (e) {
+    var s = 90, vw = view.clientWidth / 2, vh = view.clientHeight / 2;
+    if (e.key === 'ArrowLeft') v.x += s; else if (e.key === 'ArrowRight') v.x -= s; else if (e.key === 'ArrowUp') v.y += s; else if (e.key === 'ArrowDown') v.y -= s;
+    else if (e.key === '+' || e.key === '=') return zoomAt(vw, vh, 1.3); else if (e.key === '-') return zoomAt(vw, vh, 1 / 1.3);
+    else if (e.key === '0') return whole(); else if (e.key === 'Escape') { pin(null); mark(null); return showAbout(); } else return;
+    e.preventDefault(); clamp(); apply();
+  });
+  var mini = $('mini'), miniDown = false;
+  function miniGo(e) { var r = mini.getBoundingClientRect(), fx = (e.clientX - r.left) / r.width, fy = (e.clientY - r.top) / r.height; v.x = view.clientWidth / 2 - fx * W * v.k; v.y = view.clientHeight / 2 - fy * H * v.k; clamp(); apply(); }
+  mini.addEventListener('pointerdown', function (e) { miniDown = true; try { mini.setPointerCapture(e.pointerId); } catch (err) {} if (v.k < 0.3) { v.k = 0.5; } miniGo(e); e.stopPropagation(); });
+  mini.addEventListener('pointermove', function (e) { if (miniDown) miniGo(e); });
+  mini.addEventListener('pointerup', function () { miniDown = false; }); mini.addEventListener('pointercancel', function () { miniDown = false; });
+  $('zin').addEventListener('click', function () { fly(true); zoomAt(view.clientWidth / 2, view.clientHeight / 2, 1.5); });
+  $('zout').addEventListener('click', function () { fly(true); zoomAt(view.clientWidth / 2, view.clientHeight / 2, 1 / 1.5); });
+  $('fit').addEventListener('click', whole);
+  $('about').addEventListener('click', function () { pin(null); mark(null); showAbout(); });
+  $('tonotes').addEventListener('click', function () { var f = world.querySelector('.footnote'); if (f) { var b = boxOf(f); fitBox({ x: b.x, y: b.y, w: Math.min(b.w, 2600), h: Math.min(b.h, 700) }, 1, 20); } });
+  var jl = $('jumplist');
+  D.groups.forEach(function (g) { if (region[g.k]) jl.append(h('option', { value: g.label })); });
+  D.actors.forEach(function (a) { jl.append(h('option', { value: a.n })); });
+  Object.keys(nodeOf).forEach(function (n) { if (!nameKey[n] && nodeEl[n]) jl.append(h('option', { value: n })); });
+  D.days.forEach(function (d) { jl.append(h('option', { value: shortDay(d) })); });
+  var lastJump = '';
+  function jump() {
+    var q = flat($('jump').value).toLowerCase(); if (!q || q === lastJump) return;      // a change event that only repeats the last jump is ignored
+    lastJump = q;
+    var a = D.actors.filter(function (x) { return x.n.toLowerCase() === q; })[0] || D.actors.filter(function (x) { return x.n.toLowerCase().indexOf(q) >= 0; })[0];
+    var g = D.groups.filter(function (x) { return region[x.k] && x.label.toLowerCase() === q; })[0];
+    var nd = Object.keys(nodeOf).filter(function (x) { return !nameKey[x] && nodeEl[x] && x.toLowerCase() === q; })[0];
+    var dy = D.days.filter(function (x) { return shortDay(x).toLowerCase() === q; })[0];
+    if (g) showGroup(g.k, region[g.k][0]); else if (nd) showNode(nd, true); else if (dy) showDay(D.days.indexOf(dy)); else if (a) showActor(a.k, null, true);
+  }
+  $('jump').addEventListener('change', jump);
+  $('jump').addEventListener('input', function () { lastJump = ''; });
+  $('jump').addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); jump(); } });
+  window.addEventListener('resize', function () { sizes(); clamp(); apply(); });
+  function route() {
+    var hsh = location.hash || '', m;
+    if ((m = /^#who-([a-z0-9]+)$/.exec(hsh)) && A[m[1]]) { showActor(m[1], null, true); return true; }
+    if ((m = /^#day-(\d{4}-\d\d-\d\d)$/.exec(hsh)) && D.days.indexOf(m[1]) >= 0) { showDay(D.days.indexOf(m[1])); return true; }
+    if ((m = /^#box-([a-z0-9-]+)$/.exec(hsh))) { var n = Object.keys(nodeOf).filter(function (x) { return !nameKey[x] && slug(x) === m[1]; })[0]; if (n) { showNode(n, true); return true; } }
+    return false;
+  }
+  window.addEventListener('hashchange', route);
+  $('kicker').textContent = D.kicker;
+  sizes(); v.k = Math.max(kmin, (view.clientWidth - 24) / W); v.x = 12; v.y = 12; clamp(); apply();
+  if (!route()) showAbout();
+  setTimeout(function () { $('hint').classList.add('gone'); }, 9000);
+})();
+</script>
+</body>
+</html>
