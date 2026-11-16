@@ -1,0 +1,2 @@
+row_id_or_key,source,what_failed
+man-ft-1112-05,private/pdf/man-ft-1112-05.pdf; saved page has no body.html,PDF read and rendered successfully. Whether older entries loaded only on request is not established by the printout; no HTML is saved and web fetching was prohibited.

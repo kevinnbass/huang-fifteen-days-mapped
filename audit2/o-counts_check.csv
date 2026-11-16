@@ -1,0 +1,71 @@
+what,figure_says,you_find,agree,note
+live entries: cnn-1111-live,69,69,yes,
+live entries: huffpost-live,143,143,yes,
+live entries: sw-cnbccom-09,56,56,yes,
+live entries: sw-financeyahoocom-23,20,20,yes,
+live entries: sw-financeyahoocom-25,20,20,yes,
+live entries: sw-financeyahoocom-32,20,20,yes,
+live entries: sw-protoscom-b7e5971b,1,1,yes,
+live entries: sw-techradarcom-03,15,15,yes,
+live entries: yahoo-live-ousted,20,20,yes,
+articles naming Warren,71,71,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Coons,48,48,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Cramer,22,22,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Schumer,22,22,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Banks,19,19,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Cornyn,9,9,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Kennedy,6,6,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Thune,13,13,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Mast,92,92,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Crawford,68,68,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Meeks,9,9,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Himes,8,8,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Huizenga,4,4,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Moolenaar,78,78,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Jeffries,30,30,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Magaziner,4,4,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Subramanyam,3,3,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Bacon,3,3,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Johnson,11,11,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Blumenthal,3,3,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Wyden,5,5,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Ricketts,5,5,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming McCaul,5,5,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Warner,4,4,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Cotton,5,5,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Scott,4,4,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+articles naming Neal,3,3,yes,Deduplicated article IDs; only copies marked counted=yes; full-name/title rule independently implemented over current text precedence.
+saved pages,1315,1315,yes,
+first-census pages,1086,1086,yes,
+saved since,229,229,yes,
+articles,1236,1236,yes,
+counted articles,1154,1154,yes,
+pages marked partial,98,98,yes,Count of current marks; not a whole-corpus completeness claim.
+HTML captures among saved pages,1149,1149,yes,
+pages with live-blog records,9,9,yes,
+newly added live entries,172,172,yes,122 + 49 + 1.
+caption/table addition pages,6,6,yes,Five captions and one table.
+restored PDF prose lines,21,21,yes,
+short article paragraph,1,1,yes,
+CNN internal passages added,3,3,yes,
+pages with collapse marks,120,120,yes,Independent regex recount yields the identical 120-ID set; positive control is the collapsed NYT live page.
+new collapse-screen pages,78,78,yes,
+effective pairs with verdict,510,510,yes,Exclude four cannot-tell cases and two superseded verdicts.
+same effective pairs,87,87,yes,
+different effective pairs,423,423,yes,
+members named for other things,10,10,yes,
+census active live-page lines,226,226,yes,The active frozen CSV is well formed; distinguish the census reader's older physical file and superseded-line errata.
+live-page author-credit records,67,67,yes,
+new gap dispositions,39,39,yes,"30 personal bylines, two analysts, four organisation/staff credits and three remark patterns."
+byline outlet/name pairs,948,948,yes,
+different byline names,873,873,yes,
+whole-name lookup evidence tables read,85,85,yes,"This line counts whole-name lookup tables, not money source reports."
+three-chairmen pages Mast,93,93,yes,Independently recounted from each current text and checked every page flag.
+three-chairmen pages Moolenaar,81,81,yes,Independently recounted from each current text and checked every page flag.
+three-chairmen pages Crawford,74,74,yes,Independently recounted from each current text and checked every page flag.
+nvidia own-money total,429735,429734.51,yes,Rounded figure agrees. All own-money=yes lines; sides not added together.
+nvidia listed-client own-money portion,70469,70469.00,yes,Rounded figure agrees. own_money=yes and measure=named.
+anthropic own-money total,124500,124500.00,yes,Rounded figure agrees. All own-money=yes lines; sides not added together.
+anthropic listed-client own-money portion,78500,78500.00,yes,Rounded figure agrees. own_money=yes and measure=named.
+network own-money total,295629,295629.35,yes,Rounded figure agrees. All own-money=yes lines; sides not added together.
+network listed-client own-money portion,85491,85491.20,yes,Rounded figure agrees. own_money=yes and measure=named.

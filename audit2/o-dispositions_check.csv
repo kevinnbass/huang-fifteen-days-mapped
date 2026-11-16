@@ -1,0 +1,44 @@
+part,finding_id,holds,note
+A,A2-005,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A2-SHORT-PROSE,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A3-01,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A3-02,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A3-03,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A3-04,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A3-05,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A3-06,yes,"The PDF is supplied and its printout was read/rendered; not told is appropriate. The absence of saved HTML leaves the older-entry loading question open, as the answer acknowledges."
+A,A3-08,yes,The PDF is supplied. Rendered pages 3–4 now confirm the displaced control belongs to the caption; the previously stated gap can close.
+A,A4-01,partial,"Recovery/count changes hold, but zero-open closure overlooks the two acts in C-MEEKS/C-DOJ. For CNN, the signature and 70-visible wording also remain; see A-CNN-SIGNATURE/A-CNN-VISIBLE."
+A,A4-03,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A4-04,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A4-05,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A4-06,yes,Frozen files implement the stated change and answer the predecessor finding.
+A,A4-07,yes,"The PDF is supplied and its printout was read/rendered; not told is appropriate. The absence of saved HTML leaves the older-entry loading question open, as the answer acknowledges."
+A,A4-08,partial,"Recovery/count changes hold, but zero-open closure overlooks the two acts in C-MEEKS/C-DOJ. For CNN, the signature and 70-visible wording also remain; see A-CNN-SIGNATURE/A-CNN-VISIBLE."
+B,B5-CLOSE,yes,Frozen files implement the stated change and answer the predecessor finding.
+C,C-01,yes,Frozen files implement the stated change and answer the predecessor finding.
+C,C-04,partial,"Recovery/count changes hold, but zero-open closure overlooks the two acts in C-MEEKS/C-DOJ. For CNN, the signature and 70-visible wording also remain; see A-CNN-SIGNATURE/A-CNN-VISIBLE."
+C,C-05,yes,Current companion commit and every flag reproduce 93/81/74 from the same text order; the two recovered posts and Protos live entry account for the increases.
+C,C-06,yes,"All 120 matching counted-page IDs are listed; 78 new IDs. The fixed 25 plus mandatory cases (32 unique pages) support the readings in the checked sample, without certifying all unseen remainders."
+C,C-CLOSE,partial,"Recovery/count changes hold, but zero-open closure overlooks the two acts in C-MEEKS/C-DOJ. For CNN, the signature and 70-visible wording also remain; see A-CNN-SIGNATURE/A-CNN-VISIBLE."
+F,F-DOCUMENT,partial,"The passage promise is qualified, but its count-or-sum exception still misdescribes descriptive member records; G-SOURCE-WORDING gives concrete examples and replacement wording."
+E,E-MAST,yes,Current companion commit and every flag reproduce 93/81/74 from the same text order; the two recovered posts and Protos live entry account for the increases.
+E,E-MOOLENAAR,yes,Current companion commit and every flag reproduce 93/81/74 from the same text order; the two recovered posts and Protos live entry account for the increases.
+E,E-CRAWFORD,yes,Current companion commit and every flag reproduce 93/81/74 from the same text order; the two recovered posts and Protos live entry account for the increases.
+recount,pages with a collapse mark,yes,"All 120 matching counted-page IDs are listed; 78 new IDs. The fixed 25 plus mandatory cases (32 unique pages) support the readings in the checked sample, without certifying all unseen remainders."
+recount,companion pages: Mast,yes,Current companion commit and every flag reproduce 93/81/74 from the same text order; the two recovered posts and Protos live entry account for the increases.
+recount,companion pages: Moolenaar,yes,Current companion commit and every flag reproduce 93/81/74 from the same text order; the two recovered posts and Protos live entry account for the increases.
+recount,companion pages: Crawford,yes,Current companion commit and every flag reproduce 93/81/74 from the same text order; the two recovered posts and Protos live entry account for the increases.
+D,A A4-02,yes,Frozen files implement the stated change and answer the predecessor finding.
+D,A A4-SHARE,yes,Frozen files implement the stated change and answer the predecessor finding.
+D,B B4-05,yes,Frozen files implement the stated change and answer the predecessor finding.
+D,C C-01,yes,Frozen files implement the stated change and answer the predecessor finding.
+D,C C-CLOSE,yes,Frozen files implement the stated change and answer the predecessor finding.
+D,F F-DOCUMENT,partial,"The passage promise is qualified, but its count-or-sum exception still misdescribes descriptive member records; G-SOURCE-WORDING gives concrete examples and replacement wording."
+D,recount pages held in part: completeness claim,yes,Frozen files implement the stated change and answer the predecessor finding.
+D,D C-02,yes,Frozen files implement the stated change and answer the predecessor finding.
+D,D C-CLOSE,yes,Frozen files implement the stated change and answer the predecessor finding.
+D,D B4 partial counted pages,yes,Frozen files implement the stated change and answer the predecessor finding.
+D-gaps,gaps cnn-1111-live,partial,All 49 additional entries and the three short passages are added. The remaining email signature is missed and only-photo-credits/70-visible claims need correction.
+gaps,man-e8a4f78b0d7e,yes,The PDF is supplied. Rendered pages 3–4 now confirm the displaced control belongs to the caption; the previously stated gap can close.
+gaps,man-ft-1112-05,yes,"The PDF is supplied and its printout was read/rendered; not told is appropriate. The absence of saved HTML leaves the older-entry loading question open, as the answer acknowledges."

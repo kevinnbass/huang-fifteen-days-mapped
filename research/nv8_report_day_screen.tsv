@@ -1,0 +1,25 @@
+screen	act	actor	day_drawn_the_reports_day	what_the_screen_saw	reading
+another saved page gives another day	MA164	megaspeed	2026-10-29	2026-11-12 (4)	not the same act: the lines of Nov 12 are the company's later statement of that day, which has its own chip; the statement to the Times has no day but its report's
+a day word near a cited passage in its own source	MA13	fedasiuk	2026-11-12	Thursday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA16	mcguire	2026-11-10	Sunday, yesterday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA29	warner	2026-11-09	today	"the page was published on the day of the briefing (Nov 9) and the quoted words say ""today""; it does not state the day of the remark, so the edge stays dashed; the chip sits on the same day either way"
+a day word near a cited passage in its own source	MA30	wyden	2026-11-09	Monday	the day word is that of the briefing; the page gives the remark no day
+a day word near a cited passage in its own source	MA32	cornyn	2026-11-08	Saturday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA36	thune	2026-11-12	Monday, Tuesday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA45	johnson	2026-11-12	Sunday, Thursday, Tuesday	the day words belong to other events and to a photo caption; the page gives the remark no day (it answers the resignation announced that day)
+a day word near a cited passage in its own source	MA51	magaziner	2026-11-08	Saturday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA81	justice	2026-11-09	Monday	the day is the one on which sources told the broadcaster of an inquiry already under way: the report's day, and the inquiry may be earlier
+a day word near a cited passage in its own source	MA85	nvidia	2026-11-09	Wednesday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA102	commerce	2026-11-09	Monday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA109	king	2026-11-12	Thursday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA125	chan	2026-11-12	Tuesday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA128	moorhead	2026-11-10	Sunday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA129	newman	2026-11-09	Monday	"the section that prints his emailed words opens ""tech analysts said on Monday"" (Nov 9, the chip's day); the page does not say when the email was sent, so the edge stays dashed; the chip sits on the same day either way"
+a day word near a cited passage in its own source	MA130	boloor	2026-11-12	yesterday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA150	justice	2026-11-10	Monday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA153	ricketts	2026-11-10	Monday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA154	ricketts	2026-11-12	Thursday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA156	cornyn	2026-11-12	Thursday	the page dates the legislators' calls of that Thursday, the report's day, and gives this remark no day of its own
+a day word near a cited passage in its own source	MA158	moorhead	2026-11-11	Wednesday	the day word belongs to another event told in the same passage; the page gives this act no day
+a day word near a cited passage in its own source	MA165	warner	2026-11-09	on Nov 9	the page dates the closed briefing (Nov 9), not the remark made after it; the chip says so
+a day word near a cited passage in its own source	MA169	justice	2026-11-12	Thursday, on Nov. 12	the day words are those of the resignation and of the report itself (Nov 12): the report's day

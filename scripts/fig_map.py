@@ -54,7 +54,7 @@ def LOOKUP_WORDS(n_pages):
     W = lambda n: {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six'}.get(n, str(n))
     other = b('pairs: record of another kind, not drawn'); assert other == 2, other        # the two the next sentence describes
     return (f"The articles counted quote {rows_map.N_ANALYSTS} analysts, experts and research groups (a person or firm written two ways is counted once). Each was looked up in the records held. "
-            f"On Nov 15 the names not drawn were searched again as whole names in the {S['tables searched']} tables of the four evidence sets: {S['people: different names searched']:,} names of two to four words among the analysts and the bylines (people's names, and a few firms and labels of the same form), "
+            f"On Nov 15, and on Nov 16 for the names added since, the names not drawn were searched again as whole names in the {S['tables searched']} tables of the four evidence sets: {S['people: different names searched']:,} names of two to four words among the analysts and the bylines (people's names, and a few firms and labels of the same form), "
             f"and {S['others: different names searched']} other firm names and one-word names among the analysts; {left} entries (bylines that are an agency, a label or an address, and analyst labels under four letters) were left out of that pass. "
             f"The {rows_map.N_ANALYSTS_DRAWN} drawn each have a remark of these days and a tie on record to Anthropic, Open Philanthropy or Nvidia: their own (a fellowship, research support, a past post, a seat on an advisory council) "
             "or that of the organisation where they hold a post (an award to it, a paid business relationship, a paper it was commissioned to write); each row says which, and an award to an organisation is not a payment to the person. "
@@ -68,7 +68,7 @@ def LOOKUP_WORDS(n_pages):
             + {2: "Two quoted investors are described on the pages as a shareholder and a short seller of Nvidia. ", 1: "One quoted investor is described on the pages as holding or shorting Nvidia shares. "}[k('investors', 'quoted and described on the pages as holding or shorting Nvidia shares')] +
             f"The pages counted carry {b('pairs of outlet and name')} bylines, counting a name once for each outlet it appears at: {b('different names')} different names, {b('names that are an agency or not a person' + chr(39) + 's name')} of them agencies or not a person's name. "
             "These are the bylines of the pages counted, those of the first search and those saved since; a page saved as an actor's own original is cited on that actor's chip and its byline is not counted here. "
-            f"Each was looked up in the fellowship and staff records held and, on Nov 15, in the whole-name search. {rows_map.NUMBER[rows_map.N_BYLINES_DRAWN].capitalize()} have a tie on record and are drawn: "
+            f"Each was looked up in the fellowship and staff records held and, on Nov 15 or 16, in the whole-name search. {rows_map.NUMBER[rows_map.N_BYLINES_DRAWN].capitalize()} have a tie on record and are drawn: "
             "Perlo and Hashim from the records held, Kubinec from his own bio at The Dispatch, Mowshowitz and Schneider from pages saved on Nov 15 (the first look-up had missed both). "
             f"{W(other).capitalize()} more have a record of another kind and no tie is drawn: a congressional fellow of the 2021 cohort of a programme that Open Philanthropy funded in 2025 (the record shows no overlap), "
             "and a reporter named on the page of a CSET event. A CSET staff member's byline on a CSET release of 2025 is no longer counted, because that page is dated before these days (he also wrote CSET's two releases of Nov 10 and 11, which are drawn in CSET's row). "
@@ -145,7 +145,7 @@ def ARTICLE_WORDS():
             "A page is whole when all of the listed page's own piece is saved, whatever it quotes or links to. A longer page that shows no sign of a barrier was not read again for this: "
             "every counted page with a collapse mark in its text was read, and every saved page whose HTML holds a live-blog record was compared with its text; a live page saved by hand as PDF cannot be checked that way. "
             f"On {W_(n_livep)} live pages the saved HTML held {n_entries} entries that the text read lacked, and they were added to it. One of them is a four-day live page of general news: an article is counted for a member when its text names the member anywhere, "
-            "so there, as in any round-up, the name can stand in an entry about something else. "
+            "so there, as in any round-up, the name can stand in an entry about something else; the four members it names only for other news carry a note beside their count. "
             f"On {W_(n_tab)} pages a table or a photo caption of the piece, which the extraction from the saved HTML had left out, was added to the text read, after a search of every page's HTML for a member's name missing from its text "
             "(a member counts as named when the name stands in the piece's own table or caption), and on " + W_(n_small) + " pages a short paragraph or passage; other photo captions and some small parts of a piece (a subheading, a credit, a short sentence) are not in the text read, "
             "and that search does not find other passages an extraction may have lost. "
@@ -425,10 +425,12 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
         lines[nm].append(('none', words))
     for t in undated_acts:                  # an act with no day cannot sit on the calendar
         lines[actors[t['actor']]['name']].append(('none', t['what']))
+    # members whom one counted article, a live page of general news, names only in entries about other news (research/nv8_general_news_page.tsv)
+    OTHER_NEWS = {r['member'] for r in csv.DictReader(open(R / 'nv8_general_news_page.tsv', newline=''), delimiter='\t') if r['named_only_for_other_news'] == 'yes'}
     for a in members:
         if not a['fec']:
             lines[a['name']].append(('none', 'No AnthroPAC contribution on file'))
-        lines[a['name']].append(('count', f'Named in {named[a["key"]]} of the {n_pages:,} articles counted'))
+        lines[a['name']].append(('count', f'Named in {named[a["key"]]} of the {n_pages:,} articles counted' + (' (one of them for other news)' if a['name'].split()[-1] in OTHER_NEWS else '')))
     for a in actors.values():
         if a['group'] == 'papers':
             lines[a['name']].append(('none', 'Sources not public. Its reporters\' names, where a saved page carries them, were looked up in the fellowship and staff records held: no record. Nothing else about them was examined'))

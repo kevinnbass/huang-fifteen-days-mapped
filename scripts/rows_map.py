@@ -288,8 +288,11 @@ ACTS = [
   ['sw-dailycallercom-03', 'sw-dailycallercom-03', 'man-nyt-1111-02', 'man-nyt-1111-02', 'man-nyt-1111-02'],
   ['pressed Commerce Secretary Howard Lutnick in a Thursday White House Situation Room meeting', 'on the entities list?', 'Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick last week', 'took place at the White House on Thursday and was described by people briefed on it',
    'A spokeswoman for the Commerce Department denied that the conversation between Mr. Bessent and Mr. Lutnick had taken place']),
- ('commerce', '2026-11-11', 'Axios, as Gizmodo relays it: the president told Lutnick "let\'s get it done"; Lutnick replied "I\'ll develop some options and come back". Gizmodo adds that the administration denied to Axios and the Times that the confrontation took place',
-  ['sw-gizmodocom-08', 'sw-gizmodocom-08', 'sw-gizmodocom-08'], ['develop some options and come back', 'at some point Trump told Lutnick', 'denied to both Axios and the Times that any such confrontation between Bessent and Lutnick had ever taken place']),
+ # Day moved from the report's day (Nov 11) to the act's own on 2026-11-16: a saved page (Implicator) gives it; found while drawing MA174.
+ ('commerce', '2026-11-05', 'Axios, as Gizmodo relays it: the president told Lutnick "let\'s get it done"; Lutnick replied "I\'ll develop some options and come back" (Implicator, citing Axios too, puts this in the Oval Office on Nov 5). Gizmodo adds that the administration denied to Axios and the Times that the confrontation took place',
+  ['sw-gizmodocom-08', 'sw-gizmodocom-08', 'sw-gizmodocom-08', 'sw-implicatorai-04', 'sw-implicatorai-04'],
+  ['develop some options and come back', 'at some point Trump told Lutnick', 'denied to both Axios and the Times that any such confrontation between Bessent and Lutnick had ever taken place',
+   'on Nov. 5, when he told officials in the Oval Office', 'After Trump decided, he said he would "develop some options and come back."']),
  ('commerce', '2026-11-12', 'A spokeswoman tells CNBC Bessent and Lutnick had "no such conversation"', ['sw-cnbccom-22'], ['Commerce Department spokeswoman Kristen Eichamer told CNBC that Bessent and Lutnick had "no such conversation"']),
  ('greer', '2026-11-12', 'Tells CNBC "Nvidia is a structurally important company"', ['sw-cnbccom-09'], ['Nvidia is a structurally important company']),
  ('whitehouse', '2026-11-09', 'Asked how the administration handled the information: "These sources have no idea what they\'re talking about"', ['msnow-resigns'], ['a White House spokesperson referred MS NOW to Trump']),
@@ -501,7 +504,9 @@ ACTS = [
   ['man-ft-1112-05', 'man-575551038d4a'], ['told reporters on Capitol Hill on Thursday that "it would make sense [for Huang to testify] because of the nature of the association and the governments and the national security interests"',
    'on Thursday said "it would make sense [for Huang to testify] because of the nature of the association and the governments and the national security interests"']),
  ('himes', '2026-11-11', 'Tells Politico after a classified briefing: "What\'s the relationship with Alice Huang and the Chinese, and what do we know about what influence or information was traded? Because today, at least, I don\'t know"; and: "I would hope that the FBI would launch a major counterintelligence investigation. I haven\'t heard that they did"',
-  ['art-fc-yahoo-politico-himes'] * 3, ["what do we know about what influence or information was traded? Because today, at least, I don't know", "I would hope that the FBI would launch a major counterintelligence investigation. I haven't heard that they did", 'PUBLISHED: 2026-11-11T23:30:07Z']),
+  # The edge was dashed (dated by the page's stamp) until 2026-11-16: the article itself gives the day of the interview, so the edge is solid.
+  ['art-fc-yahoo-politico-himes'] * 4, ["what do we know about what influence or information was traded? Because today, at least, I don't know", "I would hope that the FBI would launch a major counterintelligence investigation. I haven't heard that they did", 'PUBLISHED: 2026-11-11T23:30:07Z',
+                                        'In a wide-ranging interview on Wednesday, Himes told POLITICO']),
  # ---- slice S8: an item found on a new member's own channel (lane s6_channels_4), and the people drawn from the pages saved since
  ('ricketts', '2026-11-09', 'Statement: "We need to know if Chinese spies received sensitive information and if Nvidia chips were illegally smuggled through Megaspeed ... To start we must pass my MATCH Act and the Safe Chips Act"',
   ['art-own-ricketts-statement-1109'] * 3, ['We need to know if Chinese spies received sensitive information and if Nvidia chips were illegally smuggled through Megaspeed', 'To start we must pass my MATCH Act and the Safe Chips Act', 'PUBLISHED: 2026-11-09T23:17:00+00:00']),
@@ -522,20 +527,56 @@ ACTS = [
  # ---- the 54 pages saved by hand on Nov 16: a remark of an actor already drawn that two counted articles carry and no chip did
  ('stapp', '2026-11-11', 'Tells the FT: "People in San Francisco are thinking ... \'we know that he had an affair, and he apologised, now it\'s time to move on\'"; "DC is not going to let it move on"',
   ['man-ft-1112-03'] * 3, ['said Alec Stapp, co-founder of the Institute for Progress, a Washington tech policy think-tank', 'DC is not going to let it move on', 'Published NOV 11 2026']),
+ # ---- added after the fourteenth reading (Nov 16, 2026). It found two acts in the census reading of the recovered live pages that no chip carried; the register of
+ # remarks only lists a QUOTED remark that two pages give in the same words, so an act that two articles report in different words was not in it. A second
+ # gauge (scripts/nv8_actor_days.py: a drawn actor, a day, dated lines of the census in two or more counted articles, no chip that day) found these eight.
+ ('meeks', '2026-11-12', 'Tells reporters there is "no question" that Democrats should investigate Huang; asked whether Commerce officials should testify: "If it\'s up to me, I\'m going to at least have some questions or some hearings"',
+  ['huffpost-live', 'sw-cnbccom-09', 'sw-cnbccom-09'],
+  ['told reporters Thursday there’s “no question” that Democrats should investigate Huang', "If it's up to me, I'm going to at least have some questions or some hearings",
+   'When asked if Commerce Secretary Howard Lutnick or Under Secretary Jeffrey Kessler should be called to testify']),
+ ('justice', '2026-11-12', 'Attorney General Blanche tells reporters, of the woman in the reports, that there are "no conclusions reached by the Department of Justice, or by me, or by [FBI] Director Patel around who she is or is not"; that she is a spy is "something I have never said and that I don\'t know to be true"; says "of course" the FBI is investigating the reports',
+  ['art-fc-cnn-1112', 'man-ft-1112-05', 'man-e8a4f78b0d7e', 'man-e8a4f78b0d7e'],
+  ['no conclusions reached by the Department of Justice, or by me, or by [FBI] Director Patel around who she is or is not', 'something I have never said and that I don’t know to be true',
+   '"of course" the FBI was investigating reports', 'Todd Blanche said on Thursday that the Justice Department has not yet reached a conclusion']),
+ ('justice', '2026-11-12', 'Bloomberg, as Quartz relays it: the department "is examining whether entities tied to Alice Huang ... had a hand in attempts to smuggle Super Micro Computer\'s products into China"; the U.S. attorney\'s office in Manhattan leads; the department and that office had no comment',
+  ['sw-qzcom-3e59440e'] * 4 + ['sw-ensedailycom-9e6f248e'],
+  ['The Justice Department is examining whether entities tied to Alice Huang', "had a hand in attempts to smuggle Super Micro Computer's products into China, according to Bloomberg",
+   "The U.S. attorney's office in Manhattan is leading the scrutiny, according to Bloomberg", "Representatives for the Justice Department and the U.S. attorney's office in Manhattan likewise had no comment",
+   'Bloomberg reported on Nov. 12 local time']),
+ ('huang', '2026-11-09', 'Pulls out of speaking engagements at the ElevenLabs Summit and the Anthropic CEO Forum, in TechCrunch\'s timeline; Business Insider, as The Coin Republic relays it, dates the withdrawal to Nov 9',
+  ['sw-techcrunchcom-08', 'sw-techcrunchcom-08', 'sw-thecoinrepubliccom-01'],
+  ['The Nvidia CEO pulled out of upcoming speaking engagements at the ElevenLabs Summit and Anthropic CEO Forum', 'November 9, 2026: Huang pulls out of various speaking engagements',
+   'Business Insider reported that he withdrew from Anthropic’s executive forum and the ElevenLabs New York summit on November 9']),
+ ('musk', '2026-11-08', 'Replies "I agree" to Shaun Maguire\'s post that Huang is "irreplaceable for America\'s AI leadership"; the FT: he "backed Huang"',
+  ['man-wapo-1112-02', 'man-wapo-1112-02', 'man-ft-1109-04'],
+  ['“I agree,” replied Elon Musk', 'I believe Jensen is irreplaceable for America’s AI leadership', 'Elon Musk on Sunday backed Huang, saying he was irreplaceable for US AI leadership']),
+ ('jcramer', '2026-11-12', 'On CNBC after the announcement: "It had to happen. There\'s way too much evidence"; of the interim chief: "I think she\'s going to be terrific in trying to figure out where the pieces are"',
+  ['sw-cnbccom-23'] * 3,
+  ['"It had to happen. There\'s way too much evidence," Jim said', "I think she's going to be terrific in trying to figure out where the pieces are", 'Jim Cramer said Thursday']),
+ ('warren', '2026-11-08', 'On CBS: "on the chipmaker specifically, this is an issue where we have substantial bipartisan support in the Banking Committee ... I\'m on bipartisan bills in order to put more restraints on the ability to export our chips to China"',
+  ['sw-financeyahoocom-11', 'sw-financeyahoocom-11', 'man-politico-1109-01'],
+  ['said Sunday on CBS that "on the chipmaker specifically, this is an issue where we have substantial bipartisan support in the Banking Committee', "I'm on bipartisan bills in order to put more restraints on the ability to export our chips to China",
+   'said Sunday on CBS that there is “substantial bipartisan support” on the committee']),
+ ('trump', '2026-11-05', 'Axios, as CNBC relays it: at the meeting where Bessent pressed Lutnick, with Cabinet officials backing the export controls, he says "Let\'s get it done"; Implicator, citing Axios too: he had signed off on such curbs three times. A Commerce spokeswoman tells CNBC Bessent and Lutnick had "no such conversation"; Implicator notes that the denial "did not address the three approvals or the Oval Office meeting"',
+  ['sw-cnbccom-22', 'sw-cnbccom-22', 'sw-implicatorai-04', 'sw-cnbccom-22', 'sw-implicatorai-04'],
+  ['Trump said, "Let\'s get it done," but Lutnick has continued to delay, Axios reported', 'in the White House Situation Room last Thursday',
+   'Trump signed off three times on curbs against suspected Nvidia chip diversion to China, most recently in the Oval Office on Nov. 5',
+   'Commerce Department spokeswoman Kristen Eichamer told CNBC that Bessent and Lutnick had "no such conversation"', 'The denial did not address the three approvals or the Oval Office meeting']),
 ]
 
 # Acts whose source gives no day for the act itself: they sit on the day the source was published and are drawn with a dashed edge.
-REPORT_DAY = {('justice', '2026-11-10'), ('cornyn', '2026-11-12'), ('chan', '2026-11-12'), ('ohanlon', '2026-11-10'), ('moorhead', '2026-11-10'), ('newman', '2026-11-09'), ('newman', '2026-11-12'), ('boloor', '2026-11-12'), ('yoo', '2026-11-12'), ('commerce', '2026-11-09'), ('bresnick', '2026-11-10'), ('bresnick', '2026-11-11'), ('king', '2026-11-12'), ('nie', '2026-11-12'), ('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire', '2026-11-10'), ('grunewald', '2026-11-10'), ('stapp', '2026-11-10'), ('stapp', '2026-11-11'),
-              ('megaspeed', '2026-10-29'), ('blumenthal', '2026-11-09'), ('warner', '2026-11-09'), ('wyden', '2026-11-09'), ('ricketts', '2026-11-10'), ('ricketts', '2026-11-12'), ('moorhead', '2026-11-11'), ('himes', '2026-11-11'), ('hodges', '2026-11-12'),
+REPORT_DAY = {('justice', '2026-11-10'), ('justice', '2026-11-12'), ('cornyn', '2026-11-12'), ('chan', '2026-11-12'), ('ohanlon', '2026-11-10'), ('moorhead', '2026-11-10'), ('newman', '2026-11-09'), ('newman', '2026-11-12'), ('boloor', '2026-11-12'), ('yoo', '2026-11-12'), ('commerce', '2026-11-09'), ('bresnick', '2026-11-10'), ('bresnick', '2026-11-11'), ('king', '2026-11-12'), ('nie', '2026-11-12'), ('bresnick', '2026-11-09'), ('fedasiuk', '2026-11-12'), ('mcguire', '2026-11-10'), ('grunewald', '2026-11-10'), ('stapp', '2026-11-10'), ('stapp', '2026-11-11'),
+              ('megaspeed', '2026-10-29'), ('blumenthal', '2026-11-09'), ('warner', '2026-11-09'), ('wyden', '2026-11-09'), ('ricketts', '2026-11-10'), ('ricketts', '2026-11-12'), ('moorhead', '2026-11-11'), ('hodges', '2026-11-12'),
               ('cornyn', '2026-11-08'), ('thune', '2026-11-12'), ('johnson', '2026-11-12'),
               ('mccaul', '2026-11-08'), ('magaziner', '2026-11-08'), ('openai', '2026-11-04'),
-              ('commerce', '2026-11-11'), ('justice', '2026-11-09'), ('nvidia', '2026-11-09'),
+              ('justice', '2026-11-09'), ('nvidia', '2026-11-09'),
               ('anthropic', '2026-11-12')}
 # Row ids whose source gives the act's own day although another act of the same actor on that day is known only by its report's day
 # (slice S8, 2026-11-15: the Journal has Cornyn's post "on X Sunday"; his remark on the Times report that day is dated by CNBC's page).
 OWN_DAY = {'MA33',
            'MA142',        # Moorhead's broadcast of Nov 11 is dated by his firm's own summary; the Times article that quotes him that day gives no day for the remark (MA158)
-           'MA159'}        # Thune "told reporters on Capitol Hill on Thursday" (the FT); his "some follow-up" (MA36) is dated by CNBC's report
+           'MA159',
+           'MA168'}        # the attorney general "said on Thursday" (Reuters); the other act of the department that day (MA169) is dated by Bloomberg's report        # Thune "told reporters on Capitol Hill on Thursday" (the FT); his "some follow-up" (MA36) is dated by CNBC's report
 
 # Ties into a row that rows_people.TIES does not hold. kind: money | act (an official act) | meet (scheduled for the same session) |
 # context (a third party's statement that is worded in the row and drawn as no line: audit1b, on the newsletter about Senate Banking members)

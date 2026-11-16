@@ -13,9 +13,9 @@ import release_nv13 as R13, nv13_public as P, nv8_public as N, member_mentions, 
 csv.field_size_limit(10**9)
 LANE = Path('lanes/audit_nv8')
 RUN = ('fig_map.py', 'fig_common.py', 'rows_map.py', 'rows_people.py', 'rows_context.py', 'rows_coverage.py', 'rows_ties.py', 'rows_events.py', 'story_scope.py', 'nv8_status.py', 'build_nv8.py', 'verify_nv8.py')
-AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'nv8_articles.py', 'nv8_page_dates.py', 'fec_lpac_keyed_check.py', 'recover_bodies.py', 'nv8_dense_text.py', 'nv8_at_the_line.py', 'build_lobbyist_gifts_map.py', 'nv8_member_sweep.py', 'recover_bodies_2.py', 'nv8_partial_screen.py', 'recover_bodies_3.py', 'recover_bodies_4.py', 'recover_bodies_5.py', 'recover_bodies_6.py', 'nv8_collapse_screen.py', 'recover_bodies_7.py', 'nv8_live_pages.py', 'recover_bodies_8.py')
+AS_BUILT = ('nv8_public.py', 'make_audit_nv8.py', 'release_nv8.py', 'build_member_ties.py', 'member_mentions.py', 'harvest_links.py', 'build_coverage.py', 'build_coverage_days.py', 'build_anthropac.py', 'fec_bulk_employer.py', 'fec_sched_a_employer.py', 'nv13_public.py', 'nv8_name_search.py', 'nv8_s6_counts.py', 'nv8_articles.py', 'nv8_page_dates.py', 'fec_lpac_keyed_check.py', 'recover_bodies.py', 'nv8_dense_text.py', 'nv8_at_the_line.py', 'build_lobbyist_gifts_map.py', 'nv8_member_sweep.py', 'recover_bodies_2.py', 'nv8_partial_screen.py', 'recover_bodies_3.py', 'recover_bodies_4.py', 'recover_bodies_5.py', 'recover_bodies_6.py', 'nv8_collapse_screen.py', 'recover_bodies_7.py', 'nv8_live_pages.py', 'recover_bodies_8.py', 'recover_bodies_9.py', 'nv8_actor_days.py', 'nv8_general_news_page.py', 'nv8_report_day_screen.py')
 TABLES = ('harvest.tsv', 'coverage_rows.tsv', 'coverage_day_pages.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'member_ties.csv', 'employee_gift_rates.csv', 'committee_keys.csv', 'joint_committees.csv',
-          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv', 'nv8_articles.tsv', 'nv8_page_days_read.tsv', 'nv8_at_the_line.tsv', 'nv8_recovered_pages.tsv', 'nv8_recovered_pages_2.tsv', 'nv8_pages_added.tsv', 'nv8_member_sweep.tsv', 'nv8_pages_in_part_read.tsv', 'nv8_text_added.tsv', 'nv8_text_trimmed.tsv', 'nv8_collapse_screen.tsv', 'nv8_live_pages.tsv')
+          'pacs_by_member.csv', 'chip_bills.csv', 'lobbying_bill_reports.csv', 'employee_gift_negatives.csv', 'coverage_scope_read.tsv', 'nv8_lookup_counts.tsv', 'lobbyist_gifts_map_summary.tsv', 'nv8_remark_verdicts.tsv', 'nv8_name_search_counts.tsv', 'nv8_s6_counts.tsv', 'nv8_s6_items.tsv', 'nv8_articles.tsv', 'nv8_page_days_read.tsv', 'nv8_at_the_line.tsv', 'nv8_recovered_pages.tsv', 'nv8_recovered_pages_2.tsv', 'nv8_pages_added.tsv', 'nv8_member_sweep.tsv', 'nv8_pages_in_part_read.tsv', 'nv8_text_added.tsv', 'nv8_text_trimmed.tsv', 'nv8_collapse_screen.tsv', 'nv8_live_pages.tsv', 'nv8_actor_days.tsv', 'nv8_general_news_page.tsv', 'nv8_report_day_screen.tsv')
 SHIM = '''"""Which saved articles name each member of Congress: the counts the figure prints ("named in N of the articles counted").
 In the builder's project this module reads the saved pages themselves; they are not in this copy (no article text is), so here
 the same answer is read from research/story_pages.tsv, which lists every saved page by address with the article it is a copy of,
@@ -252,8 +252,10 @@ def main(target):
           # the twelfth reading (of the answers to the eleventh, and the first of the interactive map); its look-up check, which names people who are not drawn, is held back
           'm': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           # the thirteenth reading (of the answers to the twelfth); its look-up check is held back
-          'n': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
-    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g'}
+          'n': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
+          # the fourteenth reading (of the answers to the thirteenth); its look-up check is held back
+          'o': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h'}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
@@ -301,6 +303,9 @@ def main(target):
     disp13 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8g.csv'
     if disp13.exists():
         put(Tg, 'audit2/DISPOSITIONS-n.csv', disp13.read_text())
+    disp14 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8h.csv'
+    if disp14.exists():
+        put(Tg, 'audit2/DISPOSITIONS-o.csv', disp14.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')

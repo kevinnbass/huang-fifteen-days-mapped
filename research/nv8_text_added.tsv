@@ -14,3 +14,5 @@ cnn-1111-live	entries of a live page that the saved HTML holds	49	60333
 sw-protoscom-b7e5971b	entries of a live page that the saved HTML holds	1	319
 sw-rawstorycom-02	a short paragraph of the article	1	34
 cnn-1111-live	three short passages inside its entries (a quoted note, a pull quotation, a salutation)	3	487
+cnn-1111-live	two short lines inside its entries (the signature of a letter, the attribution of a pull quotation)	2	19
+sw-aljazeeracom-07	two short summary bullets of a live page, from its encoded data block	2	340
