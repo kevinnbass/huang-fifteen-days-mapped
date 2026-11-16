@@ -113,6 +113,8 @@ def ARTICLE_WORDS():
     pairs = list(csv.DictReader(open(R / 'nv8_article_pairs.tsv', newline=''), delimiter='\t'))
     used = lambda p: p.get('scope') == 'all' or p.get('used_for_joining') == 'yes'        # the project's table, or the published one (which leaves out the readers' sentences)
     read = sum(used(p) for p in pairs); same = sum(used(p) and p['verdict'] == 'same' for p in pairs); unread = sum(p['verdict'] == 'cannot tell' for p in pairs)
+    built = sum(used(p) and p['read_by'].startswith('the builder') for p in pairs)       # verdicts the builder gave under a stated rule; the table's read_by column says which
+    assert 0 < built < 10 and all(p['read_by'] for p in pairs)
     assert all(p['verdict'] in ('cannot tell', 'same') for p in pairs if not used(p))
     line = list(csv.DictReader(open(R / 'nv8_at_the_line.tsv', newline=''), delimiter='\t'))
     W_ = lambda n: {0: 'no', 1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven', 12: 'twelve'}.get(n, n)
@@ -121,8 +123,8 @@ def ARTICLE_WORDS():
     assert all(x['drawn'] == 'yes' for x in line) and undated == 0 and added == 2, 'the sentences below say that everyone at the line is drawn, that no counted page is undated and that two pages were saved for the line'
     return (f"Counts of who is named or quoted are counts of articles, each counted once: the {n1:,} pages saved by the first search and the {n2} saved since (the papers' own articles, saved by hand or in a licensed copy, a few transcripts and a company filing) "
             f"are {len(arts):,} articles once copies of one article are joined, and {len(cnt):,} of them are counted. Two pages are one article when they have the same address or when a reader judged them so: "
-            f"every two pages that share 25 or more seven-word runs making up a fifth of the shorter were opened by a reader from another model family ({read} pairs over four readings: {same} the same article, as a syndicated or licensed copy with its lead kept, "
-            f"a later version at one address or two snapshots of a live page; {read - same} different, such as a statement and the articles quoting it, or a later dispatch with a new lead; {W_(unread)} more could not be read, being block pages that are not counted). "
+            f"every two pages that share 25 or more seven-word runs making up a fifth of the shorter were opened by a reader from another model family ({read - built} pairs over four readings; {W_(built)} more were decided by the builder under a stated rule, and the table says which. Of the {read}, {same} are the same article, as a syndicated or licensed copy with its lead kept, "
+            f"a later version at one address or two snapshots of a live page, and {read - same} are different, such as a statement and the articles quoting it, or a later dispatch with a new lead; {W_(unread)} more could not be read, being block pages that are not counted). "
             "Copies that share less than that are not listed, so the number of articles can still be a little high. "
             "A page's day is the day of its first publication where the page shows one, and otherwise the day of the version saved, read as a U.S. Eastern day from the page's own stamp "
             f"({in_copy} pages whose metadata and text carry none, or carry one the printed stamp contradicts, were read in their saved copy). "
@@ -164,7 +166,7 @@ def LOBBY_WORDS():
             f"To the {len(drawn)} members drawn, in gifts of {mo(a)} to {mo(b)} made while the firm was registered for the client, lobbyists listed for the client gave ${tot('nvidia', True):,.0f} on Nvidia's side, ${tot('anthropic', True):,.0f} on Anthropic's and ${tot('network', True):,.0f} on the groups' side; "
             f"counting every lobbyist at those firms, ${tot('nvidia', False):,.0f}, ${tot('anthropic', False):,.0f} and ${tot('network', False):,.0f}. A firm registered for two clients puts one gift on two sides, so the sides are not added up. "
             "Each member's row gives its lines from this table by the same rule for each side: every gift of a lobbyist at a firm then registered for the client, and how much of it came from lobbyists listed for that client. "
-            f"Only a lobbyist's own money is counted. The reports also list contributions of political committees (a firm's PAC, a PAC a lobbyist serves): {len(pac)} such lines, "
+            f"Only a lobbyist's own money is counted. The reports also list contributions of political committees (a firm's PAC, a PAC a lobbyist serves, a campaign committee): {len(pac)} such lines, "
             f"{sum(not r['repeat_of'] for r in pac)} gifts once those listed by several lobbyists of one firm are counted once, are in the table and in no sum here; until Nov 16, 2026 they were counted as lobbyists' own money. "
             "The table is published with the figure. For the Speaker and for Sen. Kennedy, who share a surname with other members, only a gift whose report gives the office is counted; "
             "for Sen. Scott, whose surname several other politicians carry, only one whose report gives his given name or its initial. ")

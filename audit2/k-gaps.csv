@@ -1,0 +1,20 @@
+row_id_or_key,source,what_failed
+art-fc-ft-1107-romantic,research/primary/art-fc-ft-1107-romantic/,Saved capture is block/error content; article unavailable.
+art-fc-ft-1112-singapore,research/primary/art-fc-ft-1112-singapore/,Saved capture is block/error content; article unavailable.
+art-fc-gvwire-nyt-1109-powerful,research/primary/art-fc-gvwire-nyt-1109-powerful/,Saved capture is block/error content; article unavailable.
+art-fc-rec-axios-1111,research/primary/art-fc-rec-axios-1111/,Saved capture is block/error content; article unavailable.
+art-fc-rec-marketscreener-blanche,research/primary/art-fc-rec-marketscreener-blanche/,Saved capture is block/error content; article unavailable.
+art-fc-rec-mha-20250303,research/primary/art-fc-rec-mha-20250303/,Saved capture is block/error content; article unavailable.
+sw-nzheraldconz-01,research/primary/sw-nzheraldconz-01/,Empty saved capture; no article to read.
+sw-nzheraldconz-02,research/primary/sw-nzheraldconz-02/,Empty saved capture; no article to read.
+art-line-wex-scott-1112,research/primary/art-line-wex-scott-1112/,Only opening/excerpt/teaser is available; full article remainder could not be read.
+sw-forbesmiddleeastcom-01,research/primary/sw-forbesmiddleeastcom-01/,Only opening/excerpt/teaser is available; full article remainder could not be read.
+sw-newsbloomberglawcom-01,research/primary/sw-newsbloomberglawcom-01/,Only opening/excerpt/teaser is available; full article remainder could not be read.
+sw-newsbloomberglawcom-04,research/primary/sw-newsbloomberglawcom-04/,Only opening/excerpt/teaser is available; full article remainder could not be read.
+man-efbf718d0a5a,research/primary/man-efbf718d0a5a/,Only opening/excerpt/teaser is available; full article remainder could not be read.
+art-fc-wb-ft-1107-romantic,research/primary/art-fc-wb-ft-1107-romantic/,Only opening/excerpt/teaser is available; full article remainder could not be read.
+sw-capitalbriefcom-01,research/primary/sw-capitalbriefcom-01/,Only opening/excerpt/teaser is available; full article remainder could not be read.
+man-economist-1111-01,research/primary/man-economist-1111-01/,Damaged PDF text layer prevents exact reconstruction; its same-address copy remains grouped with it.
+sw-japantimescojp-02,research/primary/sw-japantimescojp-02/body.html,Recovery holds the available preview; full article is behind a continuation/subscription barrier. Existing saved_in_part flag is appropriate.
+sw-garymarcussubstackcom-01,research/primary/sw-garymarcussubstackcom-01/body.html,Recovery holds the available preview; full article is behind a continuation/subscription barrier. Existing saved_in_part flag is appropriate.
+B2 filing publication day,research/primary/man-cd8c08517fc7/text.txt,Signature and press-release date support Nov 12 version date; actual SEC filing/first-publication timestamp is not saved.

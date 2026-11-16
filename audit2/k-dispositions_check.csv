@@ -1,0 +1,55 @@
+part,finding_id,holds,note
+A,A-09,partial,TY149 and all fifteen changed member lines now match their counted/excluded source items. The asserted comprehensive repair misses LM0004 and unchanged TY056; a sixteenth member line needs correction (A-18).
+C,C-01,partial,"Nvidia and Anthropic totals reproduce; the groups' total still includes LM0004. Correct rounded total $295,629; 55 excluded listings and 28 gifts, rather than 54/27."
+C,C-02,yes,Both chips and both role labels match the saved filing and newsroom. Nov 12 is supported as the signed document/release version; actual SEC publication remains explicitly unknown.
+C,C-03,yes,All four new recoveries match available article paragraphs. The merged census contains exactly the 29 replacement remark rows and 7 credits. Eight further recoveries were read; no further available narrative omission found; two of those remain correctly flagged previews.
+C,C-04,partial,The sweep and its 67 Crawford matches reproduce; 53 additional current members have at most two. But the figure still prints 65 for Crawford even though the two extra legal-name references are genuine (C-02). The selection limit is appropriately disclosed.
+C,C-05,partial,"Listed-headline disclosure is real, but the two-person description understates at least four current undrawn nonofficial speakers. Published archives/source credits also retain other names. Identities only in private/lookup_check.csv (C-03)."
+C,C-06,partial,"The own-publisher rule supports both joins and 1,236/1,154 counts. The figure nevertheless calls all 505 judgments independent readings although the two new lines identify the builder (C-04)."
+C,C-CLOSE,partial,"Most corrections hold; LM0004 remains personal-money misclassification, the Crawford label misses two genuine name matches, and provenance/name limits are understated."
+B,B2d unlisted sw-forumsmacrumorscom-01 / sw-macrumorscom-01,yes,Publisher preview and corresponding article opening/link read; article IDs now agree under the stated own-publisher rule.
+B,B2d unlisted sw-forumsmacrumorscom-02 / sw-macrumorscom-02,yes,Publisher preview and corresponding article opening/link read; article IDs now agree under the stated own-publisher rule.
+B,B2d missed-join estimate,yes,The two policy joins are applied. No quantitative bound is claimed for unscreened pairs; the note expressly allows a residual overcount.
+B,B3 recovery sw-capitalbriefcom-01,yes,Available preview read. It remains counted and explicitly marked saved_in_part; no unavailable remainder is certified.
+B,B3 recovery sw-englobescoil-01,yes,The new recovered text keeps all narrative paragraphs and omits the related-headline block; merged census replacement checked.
+B,B3 recovery sw-forbesmiddleeastcom-01,yes,Available preview read. It remains counted and explicitly marked saved_in_part; no unavailable remainder is certified.
+B,B3 recovery sw-newsercom-01,yes,New recovery read against both saved story paragraphs; corrected text is used in the rebuilt census and name corpus.
+B,B3 recovery sw-newsercom-02,yes,New recovery read against both saved story paragraphs; corrected text is used in the rebuilt census and name corpus.
+B,B3 recovery sw-newsercom-82742fcd,yes,New recovery read against both saved story paragraphs; corrected text is used in the rebuilt census and name corpus.
+B,B4 hand-saved date man-cd8c08517fc7,yes,Saved filing read throughout: Nov 11 events and Nov 12 signature/release are separated. Transcript/filing inclusion is explicit in the revised figure note.
+B,B4 regulatory filing inclusion,yes,Saved filing read throughout: Nov 11 events and Nov 12 signature/release are separated. Transcript/filing inclusion is explicit in the revised figure note.
+B,B4 header-stamp comparison claim,yes,"The unsupported earlier comparison remains explicitly historical, and the README now carries the missing-list limitation. No current count depends on that unreproducible historical number."
+B,B5 at line Blumenthal,yes,"The revised reading now says Thursday, matching the exact CNBC sentence; the three separate-report count is unchanged."
+B,B5 sweep alias control Crawford,yes,The revised alias control is supported: the sweep finds 67. The outstanding 65 label is separately reported in C-02; the described sweep change itself holds.
+B,B5 targeted saving fairness,yes,The frozen page manifest preserves both targeted additions and reasons; the first-search set is closed and the half-saved-corpus limitation is explicit. This is not proof of completeness beyond the frozen record.
+B,B6 census page man-cd8c08517fc7,yes,Saved filing read throughout: Nov 11 events and Nov 12 signature/release are separated. Transcript/filing inclusion is explicit in the revised figure note.
+B,B6 added disposition 03 remark,yes,The one changed gap-disposition reason now makes no claim about the date the code was written; it says no new issue is shown.
+B,C own-money lobbyist total network,partial,"The table sums to the stated $296,629.35, but includes the campaign-committee contribution LM0004. Correct own-money sum $295,629.35."
+B,C current public undrawn names,partial,"The newly disclosed headline exception is present, but the two-person account is incomplete; see C-03 and private lookup file."
+D,answer to the eighth reading: C C-03,yes,Four replacement recoveries and census checked; stated correction holds in those files. The separate unresolved committee-money issue is identified by its own disposition keys.
+D,answer to the eighth reading: C C-06,partial,"The answered correction improves the record, but the personal-money repair remains incomplete because of LM0004/TY056; see A-18 and C-01."
+D,answer to the eighth reading: C C-CLOSE,partial,"The answered correction improves the record, but the personal-money repair remains incomplete because of LM0004/TY056; see A-18 and C-01."
+D,answer to the eighth reading: B B5 excluded sw-newsercom-01,yes,New recovery read against both saved story paragraphs; corrected text is used in the rebuilt census and name corpus.
+D,answer to the eighth reading: B B5 excluded sw-newsercom-02,yes,New recovery read against both saved story paragraphs; corrected text is used in the rebuilt census and name corpus.
+D,answer to the eighth reading: B B5 excluded sw-newsercom-82742fcd,yes,New recovery read against both saved story paragraphs; corrected text is used in the rebuilt census and name corpus.
+D,answer to the eighth reading: B C lobbyist total current network,partial,"The answered correction improves the record, but the personal-money repair remains incomplete because of LM0004/TY056; see A-18 and C-01."
+D,answer to the eighth reading: B B1 illustrative tally after demonstrated corrections,yes,"Recount gives 1,315 pages, 1,236 article IDs and 1,154 counted article IDs; replacement texts and the two forum joins support the change."
+D,answer to the eighth reading: D answer to the seventh reading: C-CLOSE,partial,"The answered correction improves the record, but the personal-money repair remains incomplete because of LM0004/TY056; see A-18 and C-01."
+gaps,art-fc-ft-1107-romantic,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,art-fc-ft-1112-singapore,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,art-fc-gvwire-nyt-1109-powerful,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,art-fc-rec-axios-1111,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,art-fc-rec-marketscreener-blanche,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,art-fc-rec-mha-20250303,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,sw-nzheraldconz-01,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,sw-nzheraldconz-02,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,art-line-wex-scott-1112,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,sw-forbesmiddleeastcom-01,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,sw-newsbloomberglawcom-01,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,sw-newsbloomberglawcom-04,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,man-efbf718d0a5a,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,art-fc-wb-ft-1107-romantic,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,sw-capitalbriefcom-01,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,man-economist-1111-01,yes,Named saved capture read. Its exclusion or saved_in_part flag agrees with the answer; missing/damaged content remains a source gap and is not evidence of absence.
+gaps,B4 filing publication day,yes,The signature/release version date is Nov 12; the actual filing/publication day is still unavailable and explicitly disclosed.
+gaps,B2d preview identities,yes,Both preview relationships are supported under the written own-publisher rule; this earlier policy gap is resolved without claiming whole-thread textual identity.

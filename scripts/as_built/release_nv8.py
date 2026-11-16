@@ -171,7 +171,8 @@ def main(target):
         if len(ids_) >= 3:
             assert w_ in known or w_ in member_mentions.NOT_A_MEMBER, ('a word after a congressional title in three or more articles is not classified', w_)
             sel.append({'name': w_, 'first_names_searched': '', 'articles': len(ids_), 'drawn': 'not a name searched',
-                        'why_not': 'a word found after a congressional title: ' + ('part of a name searched above' if w_ in known else 'not a current member: ' + member_mentions.NOT_A_MEMBER[w_])})
+                        'why_not': 'a word found after a congressional title: ' + ('part of a name searched above' + ('; in other articles ' + member_mentions.NOT_A_MEMBER[w_] if w_ in member_mentions.NOT_A_MEMBER else '')
+                                                                                  if w_ in known else 'not a current member: ' + member_mentions.NOT_A_MEMBER[w_])})
         elif len(ids_) == 2:                 # under the line: listed with its count so the line itself can be checked (second audit, Nov 15, 2026)
             sel.append({'name': w_, 'first_names_searched': '', 'articles': 2, 'drawn': 'not a name searched',
                         'why_not': 'a word found after a congressional title in two articles, under the three-article line' + ('' if w_ not in known else ': part of a name searched above')})
@@ -245,8 +246,9 @@ def main(target):
           # the eighth reading (of the answers to the seventh); its check of three look-up reasons names people who are not drawn and is held back
           'i': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           # the ninth reading (of the answers to the eighth and of the 54 pages saved by hand); its look-up check names people who are not drawn and is held back
-          'j': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
-    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c'}
+          'j': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
+          'k': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d'}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
@@ -282,6 +284,9 @@ def main(target):
     disp9 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8c.csv'
     if disp9.exists():
         put(Tg, 'audit2/DISPOSITIONS-j.csv', disp9.read_text())
+    disp10 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8d.csv'
+    if disp10.exists():
+        put(Tg, 'audit2/DISPOSITIONS-k.csv', disp10.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')

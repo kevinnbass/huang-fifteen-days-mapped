@@ -124,15 +124,31 @@ CASES = [('scott', 'Tina Scott', 'no'), ('scott', 'Sen. Tim Scott', 'yes'),
 ORG = re.compile(r'PAC\b|POLITICAL|COMMITTEE|FUND\b|ASSOC|LLC|INC\b|LLP|GROUP|COUNCIL|CHAMBER|UNION|FEDERATION|SOCIETY|LEAGUE', re.I)
 
 
-def own_name(lob, contributor):
-    """True when a lobbyist's report gives the contributor as SELF or as the filer's own name: the lobbyist's own money. A report can also list a
-    contribution of a PAC the lobbyist serves or of the firm's PAC (the ninth reading, Nov 16, 2026, found one counted as a lobbyist's own; 54 were)."""
+SUFFIX = {'jr', 'sr', 'ii', 'iii', 'iv', 'mr', 'mrs', 'ms', 'dr', 'hon', 'esq'}
+CAMPAIGN = re.compile(r'\bFOR\s+(?:U\.?\s?S\.?\s+)?(?:CONGRESS|SENATE|HOUSE|GOVERNOR|PRESIDENT|AMERICA)\b|^FRIENDS\s+OF\b|\bFOR\s+\w+\s+\w+\s*$', re.I)
+CARRIES = "a campaign committee that carries the filer's name"
+
+
+def name_words(t):
+    return re.sub(r'[^a-z ]', ' ', re.sub(r"['’.\-]", '', (t or '').lower())).split()
+
+
+def whose(lob, contributor):
+    """Whose money a line of a lobbyist's report is, from the contributor the report names: 'own' when it says SELF or gives the filer's own name
+    and nothing else (every word a part of the filer's name as the register holds it, an initial or a title); 'committee' when the name is a
+    political committee's or a firm's; 'campaign' when it is a campaign committee (it can carry the filer's surname: the tenth reading, Nov 16, 2026,
+    found one such line still counted as a lobbyist's own after the ninth had found the PACs); otherwise 'unread': a reader decides
+    (research/lobbyist_contributor_read.tsv), and the build stops until one has."""
     c = contributor.strip()
     if c.upper() == 'SELF':
-        return True
-    words = lambda t: set(re.sub(r'[^a-z ]', '', (t or '').lower()).split())
-    last = words(str(lob.get('last_name') or ''))
-    return bool(last) and last <= words(c) and not ORG.search(c)
+        return 'own'
+    name = set()
+    for f in ('first_name', 'middle_name', 'last_name', 'nickname', 'suffix', 'suffix_display', 'prefix', 'prefix_display'):
+        name |= set(name_words(str(lob.get(f) or '')))
+    last = set(name_words(str(lob.get('last_name') or ''))); cw = name_words(c)
+    if last and last <= set(cw) and all(w in name or len(w) == 1 or w in SUFFIX for w in cw):
+        return 'own'                                             # a surname can hold a word of the committee pattern, so the name is tried first
+    return 'committee' if ORG.search(c) else 'campaign' if CAMPAIGN.search(c) else 'unread'
 
 
 def items(members):
@@ -161,7 +177,7 @@ def items(members):
                         out.append({'member': m, 'registrant_id': r['registrant']['id'], 'registrant': r['registrant']['name'], 'lobbyist_id': lob,
                                     'filer_type': r['filer_type_display'], 'date': it.get('date'), 'amount_usd': it.get('amount'),
                                     'payee': it.get('payee_name'), 'honoree_as_written': hon.strip(), 'contribution_type': it.get('contribution_type_display'),
-                                    'contributor': (it.get('contributor_name') or '').strip(), 'own_name': own_name(r.get('lobbyist') or {}, it.get('contributor_name') or ''),
+                                    'contributor': (it.get('contributor_name') or '').strip(), 'whose': whose(r.get('lobbyist') or {}, it.get('contributor_name') or ''),
                                     'report_url': r['filing_document_url'], 'report_year': r['filing_year'], 'report_period': r['filing_period_display'],
                                     'source': f'{d.name}/{pg.name}'})
         assert got == total, (d.name, got, total)
@@ -224,9 +240,9 @@ def main():
                          'report_url': i['report_url'], 'pack_row': pack_row, 'source': i['source'],
                          # whose money: a lobbyist's own (the report says SELF or gives the filer's own name) or a committee's that the report lists.
                          # The measure and the line's key are kept as first published, so no audited line changes its number; own_money says what counts.
-                         'own_money': 'yes' if i['lobbyist_id'] is not None and i['own_name'] else 'no',
-                         'contributor': '' if i['lobbyist_id'] is not None and i['own_name'] else ('the registrant itself' if i['contributor'].upper() == 'SELF' else i['contributor']),
-                         'repeat_of': '', '_rid': rid})
+                         'own_money': 'yes' if i['lobbyist_id'] is not None and i['whose'] == 'own' else 'no',
+                         'contributor': '' if i['lobbyist_id'] is not None and i['whose'] == 'own' else ('the registrant itself' if i['contributor'].upper() == 'SELF' else i['contributor']),
+                         'repeat_of': '', '_rid': rid, '_whose': i['whose'] if i['lobbyist_id'] is not None else 'registrant', '_contrib': i['contributor']})
     KEY = lambda r: '|'.join(str(r[k]) for k in ('side', 'member', 'date', 'amount_usd', 'measure', 'registrant', 'payee', 'honoree_as_written', 'report_url'))
     keys = [KEY(r) for r in rows]; assert len(set(keys)) == len(keys), 'two lines share a key'
     # ---- control A: the audited three-chairmen table
@@ -272,18 +288,34 @@ def main():
     for k in sorted(mine - in_reach)[:12]:
         print('  here only:', k)
     rows.sort(key=lambda r: r['item'])
+    # a contributor the rule cannot place is decided by a reader, line by line; a campaign committee that carries the filer's surname would name
+    # the lobbyist, so the table says what it is and not its name
+    readp = R / 'lobbyist_contributor_read.tsv'
+    read = {x['item']: x for x in csv.DictReader(readp.open(newline=''), delimiter='\t')} if readp.exists() else {}
+    unread = []
+    for r in rows:
+        if r['_whose'] == 'unread':
+            v = read.get(r['item'], {}).get('whose')
+            if v not in ('own', 'committee'):
+                unread.append(r['item']); continue
+            r['own_money'] = 'yes' if v == 'own' else 'no'; r['contributor'] = '' if v == 'own' else 'a committee (read; its name would name the filer)'
+        elif r['_whose'] == 'campaign':
+            r['contributor'] = CARRIES
+    assert not unread, ('lines whose contributor is neither SELF, the filer\'s own name nor a committee by the rule: read each and add it to ' + readp.name, unread)
+    stale = sorted(set(read) - {r['item'] for r in rows if r['_whose'] == 'unread'}); assert not stale, ('a read verdict for a line that the rule now places by itself', stale)
     # a committee's gift that several lobbyists of one firm each list is one gift: later listings point at the first
     first = {}
     for r in rows:
         if r['own_money'] == 'no':
-            assert r['contributor'] == 'the registrant itself' or ORG.search(r['contributor']), ('a contributor that is neither the filer nor a committee', r['item'])
-            k = (r['side'], r['_rid'], r['contributor'].upper(), r['member'], B.norm(r['payee']), r['date'], r['amount_usd'])
+            assert r['_whose'] in ('registrant', 'committee', 'campaign') or r['item'] in read, ('a contributor that is neither the filer nor a committee', r['item'])
+            assert r['_whose'] != 'registrant' or r['contributor'] == 'the registrant itself' or ORG.search(r['_contrib']), ('a registrant\'s line with an unplaced contributor', r['item'])
+            k = (r['side'], r['_rid'], r['_contrib'].upper(), r['member'], B.norm(r['payee']), r['date'], r['amount_usd'])
             if k in first:
                 r['repeat_of'] = first[k]
             else:
                 first[k] = r['item']
     bad = [r['item'] for r in rows if r['measure'] in ('firm_pac', 'own_pac') and r['own_money'] == 'yes']; assert not bad, bad
-    cols = [c for c in rows[0] if c not in ('_lob', '_rid')]
+    cols = [c for c in rows[0] if c not in ('_lob', '_rid', '_whose', '_contrib')]
     with regp.open('w', newline='') as f:
         w = csv.writer(f, lineterminator='\n'); w.writerow(['key', 'item', 'lobbyist_no']); w.writerows([k, v[0], v[1]] for k, v in sorted(reg.items(), key=lambda kv: kv[1][0]))
     with open(R / 'lobbyist_gifts_map.csv', 'w', newline='') as f:

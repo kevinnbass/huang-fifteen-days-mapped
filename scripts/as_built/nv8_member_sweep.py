@@ -32,7 +32,7 @@ clean = lambda n: re.sub(r',?\s+(Jr\.?|Sr\.?|II|III|IV)$', '', re.sub(r'\s*["“
 by_last = {}
 for m in mem:
     by_last.setdefault(clean(m['member_name'])[-1], []).append(m['chamber'])
-out = []
+out = []; drawn_sets = {}
 for m in mem:
     parts = clean(m['member_name']); quoted = re.findall(r'["“]([^"”]+)["”]', m['member_name'])
     first, last = parts[0], parts[-1]
@@ -50,6 +50,15 @@ for m in mem:
     a = {aid for aid, copies in arts.items() if any(rx.search(t) for _, t in copies)}
     h = [r for r in cov if rx.search(r['headline']) and key(r['url']) not in saved]
     out.append((m['member_name'], m['chamber'], m['party'], len(a), len(h), last.lower() in known, sorted(a)[:6], [x['domain'] for x in h][:4]))
+    if last in M.FIRST and (first in M.FIRST[last] or set(quoted) & set(M.FIRST[last]) or set(nick.split('|')) & set(M.FIRST[last])):
+        drawn_sets[last] = a
+# control added after the tenth reading (Nov 16, 2026): the figure's own matcher (member_mentions) and these wider forms must find the same
+# articles for every member drawn; the reading found two articles that give a representative's legal given name, which the matcher did not hold
+_, fig_hit, _ = M.count()
+assert set(drawn_sets) == set(M.FIRST), ('a drawn member is not found on the roster under the names the figure searches', sorted(set(M.FIRST) ^ set(drawn_sets)))
+apart = {s: (sorted(drawn_sets[s] - set(fig_hit[s]))[:5], sorted(set(fig_hit[s]) - drawn_sets[s])[:5]) for s in M.FIRST if drawn_sets[s] != set(fig_hit[s])}
+assert not apart, ('the figure\'s matcher and the sweep find different articles for a drawn member (sweep only, matcher only)', apart)
+print('drawn members:', len(drawn_sets), 'the figure\'s matcher and the sweep find the same articles for each')
 rows = []
 for o in sorted(out, key=lambda x: (-(x[3] + x[4]), x[0])):
     if o[3] + o[4] == 0:

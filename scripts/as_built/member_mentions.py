@@ -27,12 +27,14 @@ TITLE = r"(?:Sens?\.|Senators?|Reps?\.|Representatives?|Congress(?:man|woman)|(?
 AFTER = re.compile(TITLE + r"\s+((?:[A-Z][\w.'’-]*\s+){0,2}[A-Z][\w'’-]+)")
 # first names as the pages give them; a member is named by "First Last" or by a title then the surname
 FIRST = {'Warren': ['Elizabeth'], 'Coons': ['Chris', 'Christopher'], 'Cramer': ['Kevin'], 'Schumer': ['Chuck', 'Charles'], 'Banks': ['Jim'],
-         'Cornyn': ['John'], 'Kennedy': ['John'], 'Thune': ['John'], 'Mast': ['Brian'], 'Crawford': ['Rick'], 'Meeks': ['Gregory', 'Greg'],
+         'Cornyn': ['John'], 'Kennedy': ['John'], 'Thune': ['John'], 'Mast': ['Brian'], 'Crawford': ['Rick', 'Eric'], 'Meeks': ['Gregory', 'Greg'],
          'Himes': ['Jim'], 'Huizenga': ['Bill'], 'Moolenaar': ['John'], 'Jeffries': ['Hakeem'], 'Magaziner': ['Seth'],
          'Subramanyam': ['Suhas'], 'Bacon': ['Don'],
          'Johnson': ['Mike'], 'Blumenthal': ['Richard', 'Dick'], 'Wyden': ['Ron'], 'Ricketts': ['Pete'], 'McCaul': ['Michael', 'Mike'], 'Warner': ['Mark'],
          'Cotton': ['Tom'],
          'Scott': ['Tim'], 'Neal': ['Richard']}      # drawn since Nov 15, 2026 with Ricketts, on the count of articles (Ricketts was searched before and stood at two pages)                 # drawn in the map since Nov 14, 2026: named for his letter of Oct 2025 on Megaspeed (an act on the matter before these days)
+# 'Eric' for Crawford (his legal given name; the pages mostly call him Rick): the tenth reading, Nov 16, 2026, found two articles that name him so and
+# were not counted. scripts/nv8_member_sweep.py now stops when its wider forms find an article for a drawn member that these names do not.
 # Surnames shared with another current member: only the full name counts ("Speaker Johnson" is taken as him, "Sen. Johnson" is not).
 FULL_ONLY = {'Johnson': r"(?:Speaker\s+(?:Mike\s+)?|Mike\s+)Johnson", 'Scott': r"\bTim\s+Scott\b"}        # "Sen. Scott" may be the senator from Florida
 # Surnames met after a title that are not members of Congress, or are members named only in passing lists; read by hand.

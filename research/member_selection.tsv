@@ -8,7 +8,7 @@ Cornyn	John	8	yes
 Kennedy	John	6	yes	
 Thune	John	12	yes	
 Mast	Brian	89	yes	
-Crawford	Rick	65	yes	
+Crawford	Rick / Eric	67	yes	
 Meeks	Gregory / Greg	9	yes	
 Himes	Jim	8	yes	
 Huizenga	Bill	4	yes	
@@ -49,7 +49,7 @@ Gregory		8	not a name searched	a word found after a congressional title: part of
 Massie		8	not a name searched	a word found after a congressional title: part of a name searched above
 Michael		7	not a name searched	a word found after a congressional title: part of a name searched above
 Mike		7	not a name searched	a word found after a congressional title: part of a name searched above
-Eric		6	not a name searched	a word found after a congressional title: not a current member: a former member (Swalwell)
+Eric		6	not a name searched	a word found after a congressional title: part of a name searched above; in other articles a former member (Swalwell)
 Bill		5	not a name searched	a word found after a congressional title: part of a name searched above
 Garcia		5	not a name searched	a word found after a congressional title: part of a name searched above
 Harvey		5	not a name searched	a word found after a congressional title: not a current member: Nvidia's board chair

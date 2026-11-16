@@ -139,12 +139,13 @@ def main():
     why = Counter('after' if 'after the fifteen days' in r['why_not'] else 'before' if 'before the fifteen days' in r['why_not'] else 'not the piece' if 'block or error page' in r['why_not']
                   else 'empty' if 'empty capture' in r['why_not'] else 'not news' for r in art if r['counted'] == 'no')
     prs = table('nv8_article_pairs.tsv'); used = [p for p in prs if p['used_for_joining'] == 'yes']; assert len({frozenset((p['page_a'], p['page_b'])) for p in used}) == len(used); same_ = sum(p['verdict'] == 'same' for p in used)
+    built_ = sum(p['read_by'].startswith('the builder') for p in used)
     art_of = {r['page_id']: r['article_id'] for r in art}; line_ = table('nv8_at_the_line.tsv')
     part_ = sum(r['saved_in_part'] == 'yes' for r in art); in_copy = sum(r['day_basis'] == 'read in the saved copy' for r in art); days_read = table('nv8_page_days_read.tsv')
     check(all((art_of[p['page_a']] == art_of[p['page_b']]) == (p['verdict'] == 'same') for p in used),
-          f'each of the {len(used)} pairs of pages a reader judged is joined, or kept apart, as the reader judged it ({same_} the same article, {len(used) - same_} different; research/nv8_article_pairs.tsv)',
+          f'each of the {len(used)} pairs of pages with a verdict is joined, or kept apart, as the verdict says ({same_} the same article, {len(used) - same_} different; {built_} of the verdicts are the builder\'s, by the table\'s read_by column; research/nv8_article_pairs.tsv)',
           str([(p['page_a'], p['page_b']) for p in used if (art_of[p['page_a']] == art_of[p['page_b']]) != (p['verdict'] == 'same')][:5]))
-    check(f'({len(used)} pairs over four readings: {same_} the same article' in flat and f'{len(used) - same_} different' in flat and f'{part_} counted pages are still held only in part' in flat
+    check(f'({len(used) - built_} pairs over four readings; ' in flat and f'Of the {len(used)}, {same_} are the same article' in flat and f'{len(used) - same_} are different' in flat and f'{part_} counted pages are still held only in part' in flat
           and f'({in_copy} pages whose metadata and text carry none, or carry one the printed stamp contradicts, were read in their saved copy)' in flat and in_copy == len(days_read)
           and not any(r['counted'] == 'yes' and not r['day'] for r in art)
           and {r['page_id']: r['day'] for r in days_read}.items() <= {r['page_id']: r['day'] for r in art}.items(),

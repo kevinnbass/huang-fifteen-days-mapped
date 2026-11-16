@@ -1,0 +1,47 @@
+part,finding_id,grade,disposition,what_was_done
+A,A-18,error,applied,"The line counts two gifts of lobbyists' own money: $2,000, 2023–2024, in the reading's wording. The $1,000 contribution stays in research/lobbyist_gifts_map.csv as committee money (own_money 'no'; the contributor cell says it is a campaign committee that carries the filer's name, and does not print the name, which would name the lobbyist). The fault was in the rule written after the ninth reading: it took a contributor for the filer when the name held the filer's surname and none of a list of committee words, and 'Congress' was not on the list. The rule is replaced, not patched: a line is a lobbyist's own money only when the report says SELF or gives the filer's own name and nothing else (every word a part of the name the register holds, an initial or a title); a committee's or a campaign committee's name is committee money; any other form stops the build until a reader has decided it (scripts/as_built/build_lobbyist_gifts_map.py). Applied to all 678 lines, it moves this line and no other, and no line needed a reader. The ninth reading's answer said no line of the three chairmen was among those corrected: that was true of the fifteen, and this sixteenth is a chairman's; the same line is in the three-chairmen figure's table and is due the same correction in that repository."
+C,C-01,error,applied,"The note now gives 55 lines and 28 gifts of committee money and names campaign committees among them; the groups' side is $295,629 counting every lobbyist's own money ($391,629 before the ninth reading), Nvidia's $429,735 and Anthropic's $124,500 as before. Row TY056 reads $2,000. The status and the README carry the same numbers."
+C,C-02,error,applied,"Rep. Crawford's label reads 'Named in 67 of the 1,154 articles counted'. His legal given name is added to the names the figure's count searches (scripts/member_mentions.py). For every drawn member the figure's count was then set beside the wider search of all members, article by article: the two articles were the only difference, and the wider search now stops the build if the two ever differ again. No one is added or dropped."
+C,C-03,qualification,applied,"The README no longer says how many listed headlines name a person the figure does not draw. It says that some do, that the reading found at least four, and where they appear: the coverage table, the rows and evidence tables that repeat the headlines, and the dot labels. It also says this is no promise about the rest of the repository: the figure's context lines name a funder and a company's staff member who are not actors, and the earlier readings' files and the credits in the source code name others. Headlines stay word for word; the rule to name by role covers the builder's own words and the lists of people looked up."
+C,C-04,qualification,applied,"The figure's sentence now says that 499 pairs were opened by readers from another model family over four readings and that 6 more were decided by the builder under a stated rule, marked in the table's read_by column. The reading counted two builder verdicts, the forum joins; the table holds 6: those two, two wire dispatches with a new lead, and two reports beside the transcript they quote. No verdict changes: 87 the same article, 418 different; 1,236 articles, 1,154 counted."
+C,C-CLOSE,error,applied,"As A-18, C-01 and C-02 for the two corrections, and C-03 and C-04 for the two sentences."
+B,B1 all lobbyists own money network,recount: no,applied,As C-01.
+B,B1 reduction from former all-lobbyist sum network,recount: no,applied,"As C-01: the fall from the sum before the ninth reading is $96,000."
+B,A identity LM0004,recount: no,applied,"As A-18: of the twenty lines whose contributor is a name, nineteen are the filer and this one is a campaign committee."
+B,A unchanged-member sample mast LM0004,recount: no,applied,As A-18.
+B,B2 filing day,recount: partial,stated as a limit,"The page is dated Nov 12 from its signature and the date of the press release it attaches; the day the filing was published is not on the saved page, and the notes say so. The two chips date the events of Nov 11 separately."
+B,B3 additional recovery sw-japantimescojp-02,recount: partial,stated as a limit,The site shows a preview; the recovery holds all of it. The page is counted and marked as saved in part.
+B,B3 additional recovery sw-garymarcussubstackcom-01,recount: partial,stated as a limit,The site shows a preview; the recovery holds all of it. The page is counted and marked as saved in part.
+B,B5 pair reader provenance,recount: no,applied,As C-04.
+B,B5 member count Crawford,recount: no,applied,As C-02.
+D,answer to the ninth reading: A A-09,held in part,applied,As this reading's A-18: the sixteenth line is corrected and the rule replaced.
+D,answer to the ninth reading: C C-01,held in part,applied,As this reading's C-01.
+D,answer to the ninth reading: C C-04,held in part,applied,As this reading's C-02: the figure prints 67.
+D,answer to the ninth reading: C C-05,held in part,applied,As this reading's C-03.
+D,answer to the ninth reading: C C-06,held in part,applied,As this reading's C-04.
+D,answer to the ninth reading: C C-CLOSE,held in part,applied,"As this reading's A-18, C-02, C-03 and C-04."
+D,answer to the ninth reading: B C own-money lobbyist total network,held in part,applied,As this reading's C-01.
+D,answer to the ninth reading: B C current public undrawn names,held in part,applied,As this reading's C-03.
+D,answer to the ninth reading: D answer to the eighth reading: C C-06,held in part,applied,As this reading's A-18 and C-01.
+D,answer to the ninth reading: D answer to the eighth reading: C C-CLOSE,held in part,applied,As this reading's A-18 and C-01.
+D,answer to the ninth reading: D answer to the eighth reading: B C lobbyist total current network,held in part,applied,As this reading's A-18 and C-01.
+D,answer to the ninth reading: D answer to the eighth reading: D answer to the seventh reading: C-CLOSE,held in part,applied,As this reading's A-18 and C-01.
+gaps,art-fc-ft-1107-romantic,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-ft-1112-singapore,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-gvwire-nyt-1109-powerful,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-rec-axios-1111,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-rec-marketscreener-blanche,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-rec-mha-20250303,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,sw-nzheraldconz-01,gap,stated as a limit,"An empty capture, not counted."
+gaps,sw-nzheraldconz-02,gap,stated as a limit,"An empty capture, not counted."
+gaps,art-line-wex-scott-1112,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-forbesmiddleeastcom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-newsbloomberglawcom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-newsbloomberglawcom-04,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,man-efbf718d0a5a,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,art-fc-wb-ft-1107-romantic,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-capitalbriefcom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,man-economist-1111-01,gap,stated as a limit,"The hand-saved copy's text layer is damaged; the article is counted through it and through the copy at the same address, and no chip quotes the page."
+gaps,sw-japantimescojp-02,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-garymarcussubstackcom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,B2 filing publication day,gap,stated as a limit,The page is dated Nov 12 from its signature and the date of its press release; the day it was filed is not on the saved page.
