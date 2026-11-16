@@ -1,0 +1,314 @@
+group	actor	page	first_words_of_the_quoted_line	reader_verdict	act_the_reader_named	test_the_reader_named	planted_control	builder_disposition_of_a_candidate
+G001	mowshowitz	sw-thezvisubstackcom-01	Once someone rises to the level of ‘they are going to be the target	reason	MA132			
+G002	meeks	man-a45550a35921	Did the push to approve high-end chip licences for China shape the administration’s response?	CANDIDATE occasion				drawn: MA261
+G003	nvidia	sw-daringfireballnet-03	Our visits confirmed that the GPUs shipped to Megaspeed by our partners are where	outside the days				
+G004	hashim	sw-transformernewsai-01	But even in the best case, Huang looks to have misled the public and	reason	MA111			
+G005	nvidia	sw-ensedailycom-07	This matter will not slow Nvidia's progress,	carried	MA105			
+G006	jones	sw-cnbccom-ca82d66d	Thank you for your focus, your professionalism, and your commitment to NVIDIA.	reason	MA209			
+G007	mowshowitz	sw-thezvisubstackcom-01	We have plenty of leverage over Nvidia, such as its export licenses, to force	reason	MA132			
+G008	fedasiuk	biggo-fedasiuk	the bedrock of the modern intelligence economy	reason	MA12			
+G009	blumenthal	sw-thenationalnewscom-01	Blumenthal is leading an inquiry into Big Tech companies and others who may be	not on the matter				
+G010	nvidia	sw-techcrunchcom-08	any reason to believe products had been diverted. || any reason to believe products	outside the days				
+G011	ackman	sw-joemygodcom-01	He takes full responsibility as he should.	reason	MA89			
+G012	himes	art-fc-rec-nhpr-himes-1110	Sure. I mean, and this is sort of a classic potential conflict of interest,	reason	MA42			
+G013	bresnick	sw-nprorg-02	Has he compromised U.S. national security because of this relationship?	CANDIDATE occasion				drawn: MA272
+G014	fedasiuk	sw-scientificamericancom-01	the more distracted the company will grow, and the less effort or attention it	CANDIDATE part	MA13	3		drawn: MA13
+G015	nvidia	sw-nvidianewsnvidiacom-03	To my colleagues at NVIDIA, including those I have worked alongside for decades, and	not the actor's				
+G016	mast	sw-cnbccom-09	If negotiations shut off and we don't think they're in good faith — okay,	CANDIDATE part	MA73	4		drawn: MA264
+G017	himes	art-fc-rec-nhpr-himes-1110	So really it's the categories of information and influence that these investigations need to	CANDIDATE part	MA42	3		drawn: MA42
+G018	mcguire	sw-cfrorg-01	The Department of Commerce has effectively outsourced export control enforcement to the private sector,	reason	MA210			
+G019	mcguire	x-mcguire-nov6	But also, how did @BISgov sit on this information and has still taken no	carried	MA14			
+G020	huizenga	sw-cnbccom-09	I want to hear from them a commitment and a recommitment to national security	reason	MA43			
+G021	hashim	sw-transformernewsai-01	The implications are clear: Jensen Huang should resign.	carried	MA111			
+G022	meeks	man-a45550a35921	The administration suspected Alice Huang for a year and didn’t put Megaspeed on the	CANDIDATE occasion				drawn: MA261
+G023	jcramer	sw-cnbccom-23	I think she'll provide some needed order, so I'm glad she's the one they've	carried	MA172			
+G024	huang	sw-sfexaminercom-01	the first, the most and the best.	not on the matter				
+G025	board	sw-servethehomecom-01	expect the company’s operations, customer commitments and product roadmap to continue without interruption.	CANDIDATE part	MA63	3		drawn: MA243
+G026	kudlow	sw-mediaitecom-06	end up giving the whole AI revolution a very bad name.	reason	MA103			
+G027	yoo	sw-koreajoongangdailycom-06	Nvidia has encouraged each employee to become a guru,	reason	MA131			
+G028	mowshowitz	sw-thezvisubstackcom-01	What her being a spy clarifies is that China wanted him to do this	reason	MA132			
+G029	mcguire	sw-thenationalnewscom-02	You have the CEO of one of the biggest companies in America, that is	CANDIDATE occasion				drawn: MA275
+G030	meeks	sw-cnbccom-09	All the reports say that Trump knew what took place and just basically made	reason	MA167			
+G031	schumer	cnbc-1110-schumer	I've been saying it for years: our cutting-edge AI chips are too valuable to	reason	MA26			
+G032	fedasiuk	biggo-fedasiuk	molded by and in the stead of one Jensen Huang.	reason	MA12			
+G033	nvidia	sw-nvidianewsnvidiacom-02	NVIDIA will report its third-quarter fiscal 2027 financial results on Tuesday, November 17, at	CANDIDATE part	MA63	4		drawn: MA63
+G034	mast	sw-cnbccom-09	We heard back from their team last night,	carried	MA73			
+G035	stapp	sw-thezvisubstackcom-01	So, the current position of the NVIDIA board is that there’s “no reason to	CANDIDATE occasion				drawn: MA278
+G036	board	sw-fierceelectronicscom-02	Nvidia is one of the most consequential technology companies ion the world,	reason	MA228			
+G037	hodges	art-fc-cnn-1112	Ultimately, what we typically see is those people, at a certain point in time,	reason	MA162			
+G038	kudlow	sw-mediaitecom-06	with these honeypot national security revelations, he is no longer a good spokesperson for	reason	MA103			
+G039	mowshowitz	sw-thezvisubstackcom-01	It is good that Jensen Huang took responsibility. It is not so good there	reason	MA132			
+G040	jeffries	sw-pbsorg-04	There are provisions currently in the Senate that will restrict chip access to China	carried	MA232			
+G041	neal	sw-cnbccom-09	The Trump Administration's ostensible attempt to mask an unconstitutional export tax as a national	reason	MA152			
+G042	warren	cnbc-1111-congress-resign	It is time for Congress to take decisive action to pass key bills like	carried	MA20			
+G043	china	sw-trtworldcom-01	We are against the US attempts to overstretch the concept of national security,	carried	MA115			
+G044	wyden	man-a45550a35921	whether and to what extent political considerations are improperly influencing policy decisions made by	reason	MA31			
+G045	subramanyam	cnbc-1111-congress-resign	But I never thought that he might be having an affair with a Chinese	reason	MA52			
+G046	jones	man-nyt-1112-07	the company’s operations, customer commitments and product road map to continue without interruption. ||	CANDIDATE part	MA83	3	yes	a planted control: the act was held out of the reader's table (MA243)
+G047	mast	cnbc-1110-schumer	I can't say that I've heard an answer back yet that,	CANDIDATE occasion				drawn: MA262
+G048	mcguire	x-mcguire-nov6	Why is there not a license requirement for AI chip shipments to all of	reason	MA14			
+G049	greer	sw-cnbccom-09	From time to time, you have scandal, or you have developments at companies with	reason	MA78			
+G050	nvidia	cnn-1111-live	Code of Conduct applies to all executive officers, directors, and employees, including our principal	not on the matter				
+G051	mowshowitz	sw-thezvisubstackcom-01	I would be very surprised if Jensen Huang knew he was being compromised by	CANDIDATE part	MA132	2		drawn: MA132
+G052	trump	msnow-resigns	chose not to do anything with the information at the time.	not the actor's				
+G053	nvidia	man-ft-1110-02	Despite Megaspeed not being on the entity list or subject of an ‘is informed’	CANDIDATE occasion				drawn: MA255
+G054	nvidia	sw-transformernewsai-01	we immediately remove ourselves from any decision-making role in the matter,	not on the matter				
+G055	nvidia	sw-aljazeeracom-06	support high-paying jobs and manufacturing in America	outside the days				
+G056	mcguire	x-mcguire-nov6	Tens of billions of dollars worth of AI chips have been exported to Southeast	reason	MA14			
+G057	moolenaar	man-ft-1109-05	It is vital that Jensen Huang address our national security concerns in Congress related	CANDIDATE occasion				drawn: MA266
+G058	fedasiuk	biggo-fedasiuk	It was a customer. The customer was a spy. The company actually interfered on	reason	MA12			
+G059	warren	man-5db1c88adc15	ensure our advanced technology is not fueling China’s military.	carried	MA99			
+G060	moorhead	sw-cnbccom-11	Jensen holding so much power is why Nvidia moves faster than anyone.	CANDIDATE occasion				drawn: MA280
+G061	newman	sw-cnbccom-09	If everyone turned tomorrow and went to AMD, AMD couldn't supply. We know this,	CANDIDATE occasion			yes	a planted control: the act was held out of the reader's table (MA250)
+G062	moorhead	sw-cnbccom-04	Whether Blackwell chips reached China is a Megaspeed question that predates this week,	reason	MA128			
+G063	jcramer	sw-cnbccom-09	She is absolutely the one that you need right now	carried	MA172			
+G064	subramanyam	cnbc-1111-congress-resign	I didn't agree with his sentiment that there's no downside to exporting chips to	reason	MA52			
+G065	huang	sw-businesstodayin-12	I'm responsible for an entire industry. And so I think the pressure of being	outside the days				
+G066	huang	sw-businesstodayin-12	My management style is what made it possible for the company to grow,	outside the days				
+G067	mcguire	man-bb944902439c	They should just be pushed now and voted on, up or down, as a	CANDIDATE occasion				drawn: MA276
+G068	jcramer	sw-cnbccom-23	there's 42,000 other people there who have no baring whatsoever because of the way	CANDIDATE part	MA172	2		drawn: MA172
+G069	mcguire	sw-thezvisubstackcom-01	Also, Nvidia’s most advanced chips remain available to Megaspeed, the Singapore-based company that Alice	CANDIDATE occasion				drawn: MA277
+G070	moorhead	sw-gamesbeatcom-01	This one will be hard, if not impossible, to recover from.	CANDIDATE occasion				drawn: MA282
+G071	newman	sw-cnbccom-21	deeply understands the business and has shown fierce loyalty to the company,	CANDIDATE occasion				drawn: MA284
+G072	mast	man-ft-1112-05	Due to the ongoing negotiations and how much time needs to be given to	CANDIDATE occasion				drawn: MA265
+G073	openai	sw-financeyahoocom-16	We lead in AI, and that means leading in power. It means leading in	reason	MA223			
+G074	mcguire	x-mcguire-nov8	Good for Nvidia’s board for doing an investigation.	reason	MA15			
+G075	fedasiuk	biggo-fedasiuk	I feel for the board. I feel for shareholders. I feel for the semiconductor	reason	MA12			
+G076	mcguire	x-mcguire-nov6	The intelligence community relayed this information to “a small group of top US government	reason	MA14			
+G077	nvidia	cnn-1111-live	By putting the interests of the company before our own, we can more easily	not on the matter				
+G078	hashim	sw-transformernewsai-01	Having an affair with a customer is, obviously, a conflict of interest.	reason	MA111			
+G079	jcramer	sw-pcgamercom-569569dc	Jensen we hardly knew yah. Just plain awful....	CANDIDATE occasion				drawn: MA285
+G080	bacon	cnbc-1111-congress-resign	I mean, he allowed himself to get compromised by the Chinese government. Not good.	reason	MA53			
+G081	wyden	sw-cnbccom-09	The Trump Administration's ostensible attempt to mask an unconstitutional export tax as a national	reason	MA31			
+G082	huang	sw-cbcca-03	We have to, No. 1, make sure that we have national security and that	outside the days				
+G083	fedasiuk	biggo-fedasiuk	such a digression from its fiduciary responsibility	reason	MA12			
+G084	nvidia	cnn-1111-live	We ask ourselves what the impact would be if our conduct or action became	not on the matter				
+G085	blumenthal	sw-semaforcom-04	So it is not just an intelligence issue; it’s also a potential corruption issue.	reason	MA28			
+G086	huang	cnn-1111-live	the best and brightest can do their life’s work and build a great life	not on the matter				
+G087	huang	sw-businesstodayin-12	I think you have to hold yourself responsible. You have agency. You're the CEO	outside the days				
+G088	moorhead	sw-thewrapcom-01	Near term, this is a governance and political-risk story, not a demand story,	CANDIDATE occasion				drawn: MA281
+G089	maguire	sw-emptywheelnet-01	you’re drunk and make a mistake and then you’re owned.	CANDIDATE occasion				drawn: MA287
+G090	maguire	man-ft-1110-01	But let’s also not nuke our AI industry because China ran a successful intel	CANDIDATE occasion				drawn: MA286
+G091	mowshowitz	sw-thezvisubstackcom-01	Failing to act on this intelligence was a clear and present danger to the	reason	MA132			
+G092	moorhead	sw-implicatorai-06	In my conversations with her, she goes deep on the product roadmap, from rack-scale	CANDIDATE occasion				drawn: MA283
+G093	thune	sw-semaforcom-04	We want to be responding in a serious way to anything that threatens America’s	CANDIDATE occasion				drawn: MA267
+G094	hashim	sw-thezvisubstackcom-01	Jensen himself directly lied to Bloomberg’s two of its reporters , too.	CANDIDATE occasion				drawn: MA279
+G095	board	sw-thestarcoke-ccc593c4	played a key role in Nvidia's growth and evolution	reason	MA63			
+G096	suit	sw-breitbartcom-04	As a result of Defendants’ wrongful acts and omissions, and the precipitous decline in	reason	MA84			
+G097	warren	sw-cnbccom-11	we must pass bipartisan legislation to keep our advanced AI technology out of China's	CANDIDATE part	MA19	4		drawn: MA19
+G098	mcguire	x-mcguire-nov8	require exporters to apply for a license to ship large numbers of AI chips	reason	MA15			
+G099	schumer	cnbc-1110-schumer	cut off China's access to advanced American technology.	carried	MA26			
+G100	rubio	art-fc-rec-mirage-rubio-1110	No. I mean, I have a lot of jobs, but the White House Travel	carried	MA189			
+G101	nvidia	man-ft-1110-01	conduct themselves with the highest degree of integrity, ethics and honesty. Our credibility and	not on the matter				
+G102	hashim	sw-thezvisubstackcom-01	Note that Nvidia’s spokesman the spokesman has put out multiple statements in recent weeks	CANDIDATE occasion				drawn: MA279
+G103	mowshowitz	sw-thezvisubstackcom-01	Yes, he let an AI write his apology.	reason	MA132			
+G104	johnson	cnn-1111-live	But there there still seems to me to be a lot of facts yet	CANDIDATE part	MA45	2		drawn: MA45
+G104-b	johnson	cnn-1111-live	(a passage beside the group's line)	CANDIDATE occasion				drawn: MA268
+G105	huang	cnn-1111-live	The most important thing you should do today if you care about the future	not on the matter				
+G106	thune	sw-cbsnewscom-e684eb4c	there'll be an interest in doing oversight	carried	MA36			
+G107	mowshowitz	sw-thezvisubstackcom-01	Sleeping with a Chinese spy is not necessary to explain Jensen Huang treating America	CANDIDATE part	MA132	2		not drawn: a step in the newsletter's argument (that his lobbying needs no such explanation), not a hedge on its call; the reader was unsure of its test
+G108	nvidia	sw-fortunecom-04	a cloud service permitted under the export control rules.	outside the days				
+G109	wyden	sw-semaforcom-04	I’m on the intelligence committee, and I’ll leave it at that … until we	carried	MA30			
+G110	warren	sw-cnbccom-09	It's clear that the American people cannot rely on Big Tech billionaire CEOs to	reason	MA99			
+G111	coons	sw-cbsaustincom-03	I’m concerned about our national security and the very real possibility that laws have	CANDIDATE occasion				drawn: MA270
+G112	banks	art-line-straitstimes-bloomberg-1110	Nvidia has reportedly received approvals to export hundreds of thousands of advanced AI chips	reason	MA27			
+G113	jeffries	sw-gazettecom-5cfc7b8d	This is just another example of Donald Trump weighing in on behalf of his	CANDIDATE occasion				drawn: MA269
+G114	nvidia	sw-nvidianewsnvidiacom-03	Regarding the national security concerns raised in news reports, NVIDIA’s Board of Directors has	not the actor's				
+G115	boloor	sw-rteie-05	If a transition becomes necessary then an Nvidia executive is the strongest long-term internal candidate	reason	MA130			
+G116	huang	cnbc-1109-megaspeed	No market is closed forever, and China wants foreign companies to invest in China,	outside the days				
+G117	thune	art-fc-tovima-wsj-1110	Clearly in this environment with all the cyber threats and all the world of	CANDIDATE occasion				drawn: MA267
+G118	kress	man-wsj-1112-08	We actually don’t have org charts. We kind of know who works for who.	outside the days				
+G119	mcguire	x-mcguire-nov6	Multiple independent investigations have concluded that Megaspeed is likely a Chinese cutout, which helps	reason	MA14			
+G120	mast	sw-cnbccom-09	We're negotiating which day it's going to be.	carried	MA73			
+G121	hashim	sw-transformernewsai-01	Worse, in recent weeks Nvidia and Huang have issued multiple statements we now know	reason	MA111			
+G122	huang	sw-businesstodayin-12	That's my job is to create that condition.	outside the days				
+G123	himes	art-fc-rec-nhpr-himes-1110	Yeah. I do know how long, and press reports that this was sort of	CANDIDATE part	MA42	1		drawn: MA42
+G124	board	msnow-resigns	prioritizes U.S. national and economic security, which is paramount to the interests of NVIDIA	CANDIDATE part	MA60	1	yes	a planted control: the act was held out of the reader's table (MA244)
+G125	moorhead	sw-cnbccom-04	Jensen has been Nvidia's lead voice on China, and that voice is weaker.	reason	MA128			
+G126	mcguire	man-ft-1110-02	I can’t come up with a single good reason for that inaction.	carried	MA16			
+G127	jcramer	sw-mediaitecom-09	All things considered, I would rather be in Colgate or Johnson & Johnson.	reason	MA91			
+G128	boloor	sw-ibtimescom-05	The key-person risk is massive since Jensen co-founded Nvidia, built the CUDA ecosystem that	CANDIDATE occasion				drawn: MA289
+G129	nvidia	man-ft-1110-01	pool of excellent candidates for future promotion	not on the matter				
+G130	mast	cnbc-1110-schumer	Obviously questions relating to his relationship and what information was or was not passed	CANDIDATE occasion				drawn: MA262
+G131	huang	sw-nbcnewscom-07	We’re probably the only AI company in the world that works with every AI	not on the matter				
+G132	trump	sw-unnua-02	Now that Nvidia CEO Jensen Huang, who did a fantastic job, has resigned, there	carried	MA104			
+G133	warren	sw-zerohedgecom-10	still owe Congress answers about the company’s compliance with U.S. export controls.	carried	MA99			
+G134	huang	sw-pbsorg-04	Market forces are already there. We don't need any new laws. We don't need	not on the matter				
+G135	scott	art-line-wex-scott-1112	all tools at our disposal, including subpoenas.	CANDIDATE part	MA151	4		drawn: MA151
+G136	hashim	sw-transformernewsai-01	In the worst case, Nvidia may have fundamentally undermined American national security and AI	CANDIDATE part	MA111	2		drawn: MA111
+G137	huang	sw-qzcom-01	And I think the U.S. government also has as well.	CANDIDATE part	MA106	2		drawn: MA106
+G137-b	huang	sw-qzcom-01	(a passage beside the group's line)	CANDIDATE part	MA106	1		drawn: MA106
+G138	mowshowitz	sw-thezvisubstackcom-01	I realize that Nvidia has a weak board and Jensen Huang has no successor	reason	MA132			
+G139	nvidia	sw-nvidianewsnvidiacom-03	I support the investigation and will cooperate fully.	not the actor's				
+G140	commerce	sw-cautiousoptimismnews-01	Commerce Department officials have been investigating whether Megaspeed, which has close ties to Chinese	not the actor's				
+G141	mcguire	sw-thezvisubstackcom-01	For anyone who still needs convincing that export controls support US leadership in AI,	CANDIDATE occasion				drawn: MA277
+G142	fedasiuk	man-wapo-1112-02	There are many actors in the American economy who believe that Mr. Huang’s personal	CANDIDATE occasion				drawn: MA274
+G143	board	sw-ensedailycom-05	in connection with recent reports that founder and CEO Huang has been targeted by	carried	MA60			
+G144	singapore	man-ft-1112-09	Other cases in the past have been dealt with in a similar way.	reason	MA72			
+G145	meeks	sw-msnow-01	And this is why oversight is extremely important and not just rubber-stamping what a	reason	MA40			
+G146	nvidia	sw-nvidianewsnvidiacom-03	I take full responsibility for what I did and the hurt I caused, and	not the actor's				
+G147	bresnick	sw-cnbccom-11	That is going to be very high up on the Democrats' lists of people	carried	MA11			
+G148	nvidia	sw-nvidianewsnvidiacom-03	My responsibility is to serve you and be worthy of your trust. I have	not the actor's				
+G149	mcguire	x-mcguire-nov6	Although @CommerceGov leadership was presumably briefed on this information by the U.S. intelligence community,	carried	MA14			
+G150	huang	sw-newslettersemianalysis-91720106	The important thing is that the countries and the companies that we sell to	outside the days				
+G151	moolenaar	cnbc-1110-schumer	And we have basically a Cold War race with technology. We cannot allow the	reason	MA48			
+G152	wyden	sw-cnbccom-09	On the contrary: despite reportedly learning of Mr. Huang's compromising relationship last fall, President	reason	MA31			
+G153	newman	sw-cnbccom-09	AMD is clearly the immediate beneficiary. But people need to realize AMD can't just	CANDIDATE occasion			yes	a planted control: the act was held out of the reader's table (MA250)
+G154	huang	sw-sfexaminercom-01	simultaneously, all American companies should compete globally.	not on the matter				
+G155	himes	art-fc-yahoo-politico-himes	The president is playing a very dangerous game when he wants to send these	reason	MA160			
+G156	mowshowitz	sw-thezvisubstackcom-01	I would also say that in a sane civilization anyone in the government who	CANDIDATE part	MA132	4		drawn: MA132
+G157	huang	man-50c4c8f67531	It’s gonna be great . . . it’s going to be the best one	CANDIDATE occasion				not drawn: a staff meeting about a product keynote; that it answered the scandal is the paper's characterisation, which the figure does not draw (the reader called it borderline)
+G158	moolenaar	cnbc-1110-schumer	We're dealing with the country, the Chinese Communist Party that is a foremost adversary,	reason	MA48			
+G159	fedasiuk	man-wsj-1109-08	It was this unparalleled access to politicos and other industry titans that made him	CANDIDATE occasion				drawn: MA273
+G160	mcguire	x-mcguire-nov6	Obviously, the motivations underpinning Nvidia’s policy views opposing export controls must now all be	reason	MA14			
+G161	meeks	sw-legalinsurrectioncom-02	including to companies with concerning links to China and amid alarming reports of potential	not the actor's				
+G162	mcguire	x-mcguire-nov6	What is going on here??? We need answers.	carried	MA14			
+G163	jeffries	huffpost-live	I’m sure that this is an issue that will come up, and I’ll be	carried	MA247			
+G164	nvidia	sw-protoscom-01	All officers shall hold office at the pleasure of the board of directors.	not on the matter				
+G165	cramer	cnbc-1111-congress-resign	What bothers me at the end of it is what we don't know is	reason	MA25			
+G166	neal	sw-cnbccom-09	On the contrary: despite reportedly learning of Mr. Huang's compromising relationship last fall, President	reason	MA152			
+G167	mowshowitz	sw-thezvisubstackcom-01	When you are doing a real investigation, your announcement does not sound like this.	reason	MA132			
+G168	moorhead	sw-cnbccom-04	Every China license now gets read through this story,	reason	MA128			
+G169	himes	art-fc-rec-nhpr-himes-1110	And also what information may have been conveyed or what influence applied.	reason	MA42			
+G170	fedasiuk	biggo-fedasiuk	such an attractive target to begin with.	reason	MA12			
+G171	mcguire	sw-cfrorg-01	It should enforce these regulations and also impose new controls that ban Chinese companies	CANDIDATE part	MA210	4		drawn: MA210
+G172	warren	sw-aljazeeracom-01	For months, bipartisan members of Congress have raised concerns about NVIDIA’s advanced AI chips	reason	MA19			
+G173	mast	man-wsj-1112-05	Nvidia is often a huge part of this conversation,	CANDIDATE occasion				drawn: MA263
+G174	whitehouse	sw-spectatorcom-01	the AI race is America’s to win.	outside the days				
+G175	conway	man-wapo-1112-02	Jensen’s statements have shown grace and dignity to his family and the industry. He	reason	MA163			
+G176	singapore	art-fc-spf-1030	All companies operating in Singapore are expected to take into account other countries’ regulations,	carried	MA70			
+G177	neal	man-a45550a35921	whether and to what extent political considerations are improperly influencing policy decisions made by	reason	MA152			
+G178	justice	sw-pcgamercom-02	The indictment unsealed today details alleged efforts to evade US export laws through false	outside the days				
+G179	megaspeed	sw-aljazeeracom-09	is committed to working constructively and transparently with the US government	carried	MA93			
+G180	fedasiuk	biggo-fedasiuk	there's a way that the company and the industry survive and thrive independent of	reason	MA12			
+G181	bresnick	sw-nprorg-02	It calls into question, you know, was he acting in the best interests of	CANDIDATE occasion				drawn: MA272
+G182	commerce	tnr-in-bed	We don’t sell them our best stuff, not our second-best stuff, not even our	outside the days				
+G183	banks	cnbc-1111-congress-resign	It is time for Congress to take decisive action to pass key bills like	carried	MA27			
+G184	nvidia	sw-fortunecom-04	When Jensen is available, [customers] may ask him to visit to provide updates on	outside the days				
+G185	kress	cnn-1111-live	I believe deeply in this company and in its future. More than anything, I	CANDIDATE part	MA82	3	yes	a planted control: the act was held out of the reader's table (MA245)
+G186	hashim	sw-transformernewsai-01	An investigation is necessary to see just how bad the incident was.	CANDIDATE part	MA111	2		drawn: MA111
+G187	megaspeed	art-fc-tovima-wsj-1112-kangwei	fully within the bounds of all applicable export control regulations	outside the days				
+G188	hodges	art-fc-cnn-1112	You’ve got the biggest, one of the biggest, CEOs in the world attacking people	reason	MA162			
+G189	stapp	sw-thedailyupsidecom-01	This is a dynamic situation, and new information is much likelier to break against	carried	MA18			
+G190	nvidia	man-wsj-1112-01	customers use Singapore to centralize invoicing while our products are almost always shipped elsewhere.	outside the days				
+G191	nvidia	sw-nvidianewsnvidiacom-03	Leading NVIDIA is the privilege of my life.	not the actor's				
+G192	hashim	sw-transformernewsai-01	It is hard to see how misleading the public and investors in this way	reason	MA111			
+G193	maguire	man-f2f8fbf1fc93	This has nothing to do with money. This is about America winning in AI.	CANDIDATE occasion				drawn: MA288
+G194	nvidia	art-fc-tovima-wsj-1110	When we have requests from customers for new shipments, service, or support, we have	CANDIDATE occasion				drawn: MA256
+G195	nvidia	sw-protoscom-01	Any officer may be removed from office at any time, either with or without	not on the matter				
+G196	megaspeed	man-nyt-1029-01	cannot respond to a media trial and welcomes formal, evidence-based investigation.	CANDIDATE occasion				drawn: MA259
+G197	moolenaar	cnn-1111-live	I think it’s important that we understand Chinese intelligence, how they worked in this	reason	MA96			
+G198	nvidia	man-ft-1110-01	ensures that each member has an equal voice in the affairs and management of	not on the matter				
+G199	mast	sw-gazettecom-5cfc7b8d	They made their offer for what they would like to do, and we said,	CANDIDATE part	MA73	4		drawn: MA264
+G200	jcramer	sw-mediaitecom-09	The greatest investing story ever told became almost overnight a blight on our country,	reason	MA91			
+G201	trump	nbc-exprosecutor	Jensen is currently on Air Force One,	outside the days				
+G202	mowshowitz	sw-thezvisubstackcom-01	The Nvidia board is trying to pretend otherwise pending their investigation , and is	reason	MA132			
+G203	nvidia	sw-pcgamercom-08	While such smuggling seems far-fetched, we pursue any tip we receive.	CANDIDATE occasion				"not of these days: the page says the spokesperson said it ""at the time"" of an earlier claim"
+G204	trump	sw-pbsorg-04	It's all a hoax. The data centers are great.	not on the matter				
+G205	singapore	mha-clarification-a	nothing was said about Alice Huang or any concerns or investigations, regarding her alleged	carried	MA70			
+G206	fedasiuk	biggo-fedasiuk	what is the difference between Jensen Huang's personal interest and the fiduciary interest and	reason	MA12			
+G207	nvidia	sw-nvidianewsnvidiacom-03	I am fully committed to NVIDIA and will work to earn back your confidence.	not the actor's				
+G208	bresnick	sw-nprorg-02	It calls into question the - that entire approach.	CANDIDATE occasion				drawn: MA272
+G209	jones	sw-thetechportalcom-a356bc5a	The strength of this company resides in our employees, leadership team, technical strength and	reason	MA209			
+G210	mowshowitz	sw-thezvisubstackcom-01	Those who say things like ‘no one can explain why’ this endangers national security	reason	MA132			
+G211	mcguire	x-mcguire-nov6	The fallout from this story will be massive.	reason	MA14			
+G212	fedasiuk	biggo-fedasiuk	No single person should be too big to fail or exceed investigation or the	reason	MA12			
+G213	himes	art-fc-rec-nhpr-himes-1110	What I will tell you, though, is that there's still an immense number of	CANDIDATE part	MA42	1		drawn: MA42
+G214	subramanyam	cnbc-1111-congress-resign	If Nvidia finds out that he knew about what was going on and does	CANDIDATE part	MA52	2		drawn: MA52
+G215	trump	sw-redstatecom-09	I have a lot of respect for Jensen. I didn’t know about the specific	CANDIDATE part	MA123	1		drawn on his chip of Oct 31 (MA123): the pool report of that evening prints the answer, so it is part of that exchange and not of the later page's day
+G216	nvidia	sw-datacenterdynamicscom-01	Unfortunately, US firms continue to be restricted by a combination of outdated US export	not on the matter				
+G217	huang	sw-semaforcom-19	If we leave a market altogether, there’s no question somebody else would step in	outside the days				
+G218	fedasiuk	man-wsj-1109-08	has shown a unique knack for networking with the world’s ultraelite—a rare skill in	CANDIDATE occasion				drawn: MA273
+G219	himes	art-fc-rec-nhpr-himes-1110	We received a little bit of information. So, no, we have not been kept	CANDIDATE part	MA42	1		drawn: MA42
+G220	china	sw-cbsnewscom-08	I do not have information on what you mentioned.	CANDIDATE part	MA115	1		drawn: MA115
+G221	china	art-fc-rec-fmprc-1112	China and the U.S. maintain close communication on heads-of-state interactions.	CANDIDATE part	MA115	1		not drawn: the ministry on relations between the two countries, in the same answer; read the same way as its sibling sentence in the third gauge
+G222	huang	man-ft-1112-08	We should create the conditions by which the company continues to thrive	outside the days				
+G223	subramanyam	cnbc-1111-congress-resign	There's two parts to this investigation that [need] to happen somewhere immediately,	CANDIDATE part	MA52	4		drawn: MA52
+G224	nvidia	sw-tomsguidecom-01	Building American AI infrastructure worldwide has been a core U.S. policy goal of every	CANDIDATE occasion				drawn: MA251
+G224-b	nvidia	sw-tomsguidecom-01	(a passage beside the group's line)	CANDIDATE occasion				drawn: MA251
+G225	wiblin	sw-thezvisubstackcom-01	So Jensen was having an affair with a customer, who also happened to be	reason	MA127			
+G226	mcguire	x-mcguire-nov6	What is a POSSIBLE good explanation for why Megaspeed is still receiving chips?	reason	MA14			
+G227	fedasiuk	biggo-fedasiuk	a huge asset to American prosperity and security	reason	MA12			
+G228	huang	sw-nprorg-01	I'm really hoping that the next CEO of the company is already at the	outside the days				
+G229	nvidia	sw-pcgamercom-08	We haven’t seen any substantiation or received tips of ‘phantom data centers’ constructed to	CANDIDATE occasion				"not of these days: the page says the spokesperson said it ""at the time"" of an earlier claim"
+G230	hodges	art-fc-cnn-1112	That clearly is directed to make people stop talking about the topic, || That	reason	MA162			
+G231	justice	sw-globalnewsca-02	The counterintelligence and economic espionage efforts emanating from the government of China and the	not on the matter				
+G232	kennedy	sw-implicatorai-06	We need to know why the Commerce Department was allowing Nvidia to sell advanced	CANDIDATE occasion				drawn: MA35
+G233	fedasiuk	biggo-fedasiuk	become such a liability for the company	reason	MA12			
+G234	china	sw-cbsnewscom-08	so-called Chinese spy narrative is entirely baseless and constitutes slander and smear.	carried	MA71			
+G235	huizenga	sw-cnbccom-09	The notion of being able to slow this down and be more selective is	reason	MA43			
+G236	meeks	sw-cnbccom-09	Those are the things that have to be looked at,	carried	MA167			
+G237	yoo	sw-koreajoongangdailycom-06	is also a strong line of defense.	reason	MA131			
+G238	nvidia	man-wsj-1112-01	provides a better representation of the geographic profile of our revenue.	outside the days				
+G239	blumenthal	sw-semaforcom-04	Whether it’s my subcommittee or another, there needs to be a really penetrating, comprehensive	carried	MA28			
+G240	mowshowitz	sw-thezvisubstackcom-01	At this point it is safe to presume that Megaspeed is CCP.	reason	MA132			
+G241	globaltimes	sw-zerohedgecom-06	All it took were a few photographs showing Asian faces and Nvidia's previous efforts	reason	MA95			
+G242	mcguire	x-mcguire-nov6	And not only does it seem like the MSS may be directly influencing the	carried	MA14			
+G243	hashim	sw-transformernewsai-01	Given that revelations of Huang’s affair have hit Nvidia’s stock price, demonstrating a financial	reason	MA111			
+G244	himes	art-fc-rec-nhpr-himes-1110	And we just - I was a little surprised by the NVIDIA statement because	CANDIDATE part	MA42	2		drawn: MA42
+G245	jcramer	sw-mediaitecom-09	the heartbreak of an Nvidia possibly without Jensen Huang,	reason	MA91			
+G246	warren	sw-aljazeeracom-06	The Commerce Department should complement these efforts with immediate action to close export control	carried	MA20			
+G247	hashim	sw-transformernewsai-01	But its findings are not needed to decide what to do with Jensen, who	reason	MA111			
+G248	hashim	sw-transformernewsai-01	As of right now, we do not know if the affair was disclosed to	CANDIDATE part	MA111	2		drawn: MA111
+G249	hashim	sw-transformernewsai-01	In reality, Nvidia’s board may keep him around. He has no clear successor, and	CANDIDATE part	MA111	2		drawn: MA111
+G250	mast	sw-cnbccom-09	We want to see him basically in a week,	CANDIDATE part	MA73	4		drawn: MA264
+G251	banks	sw-aljazeeracom-06	The Commerce Department should complement these efforts with immediate action to close export control	carried	MA27			
+G252	mowshowitz	sw-thezvisubstackcom-01	And your response is to do nothing?	reason	MA132			
+G253	nvidia	man-wsj-1112-01	often reflected a customer’s centralized invoicing location, even though our products were almost always	outside the days				
+G254	cramer	sw-mediaitecom-09	I can’t believe we are even considering him not resigning,	carried	MA25			
+G255	mast	msnow-resigns	likely going to be an under oath transcribed video recorded between several committees,	CANDIDATE occasion				drawn: MA265
+G256	jcramer	sw-cnbccom-23	She's is absolutely the one to have right now.	carried	MA172			
+G257	kress	cnn-1111-live	This company has achieved so much because of the work that all of you	CANDIDATE part	MA82	4	yes	a planted control: the act was held out of the reader's table (MA245)
+G258	nvidia	sw-nvidianewsnvidiacom-03	I love our country and our company. I am committed to protecting NVIDIA and	not the actor's				
+G259	board	sw-ensedailycom-04	will carefully review all available information in the course of the investigation.	carried	MA60			
+G260	fedasiuk	biggo-fedasiuk	intimately involved with every aspect of the company's operation	reason	MA12			
+G261	schumer	cnbc-1110-schumer	Despite talking a big game, Trump continues to show a troubling resistance to confront	reason	MA26			
+G262	nvidia	sw-townhallcom-107cb270	The Board of Directors appointed Harvey C. Jones as its first-ever Chair of the	not the actor's				
+G263	bessent	sw-cnbccom-08	build a constructive relationship on the basis of balance and reciprocity.	not on the matter				
+G264	singapore	man-ft-1112-09	Since September 2025, the Singapore police force has repeated this request on several occasions	carried	MA72			
+G265	nvidia	sw-protoscom-01	severance, or change-in-control agreements with our executive officers.	not on the matter				
+G266	greer	sw-cnbccom-09	The reality is the AI buildout, data centers, the next industrial revolution — that's	CANDIDATE part	MA78	3		drawn: MA78
+G267	mcguire	x-mcguire-nov6	Megaspeed remains a preferred cloud partner of Nvidia, and continues to receive Nvidia Blackwell	reason	MA14			
+G268	meeks	sw-cnbccom-09	Look, I think that anybody that could answer some questions, anybody that might have	carried	MA167			
+G269	boloor	sw-ibtimescom-5f024890	replacing that strategic vision at a company built around ~60 direct reports and no	CANDIDATE occasion				drawn: MA290
+G269-b	boloor	sw-ibtimescom-5f024890	(a passage beside the group's line)	CANDIDATE occasion				drawn: MA290
+G270	coons	sw-semaforcom-06	the more I’m convinced there is nothing this administration does that isn’t corrupt .	reason	MA22			
+G271	fedasiuk	sw-scientificamericancom-01	I don’t think it’s right to conceive of this as ‘if Jensen goes, then	CANDIDATE part	MA13	2		drawn: MA13
+G272	nvidia	sw-nvidianewsnvidiacom-03	There is no excuse for what I did. I am deeply sorry.	not the actor's				
+G273	sweeney	sw-pcgamercom-eeaddc6b	This would be an Apple firing Steve Jobs level of idiocy from Nvidia’s board	CANDIDATE occasion				drawn: MA291
+G274	mast	sw-politicalorg-a32ed3d9	We’re in negotiations for which day, which attorneys, his personnel.	carried	MA73			
+G275	subramanyam	cnbc-1111-congress-resign	One is what was going on with Nvidia and China, and two is why	CANDIDATE part	MA52	4		drawn: MA52
+G276	mowshowitz	sw-thezvisubstackcom-01	Yes. If he will not resign, the board must remove him. If the board	CANDIDATE part	MA132	4		drawn: MA132
+G277	justice	sw-globalnewsca-02	Confronting this threat is the FBI’s top counterintelligence priority.	not on the matter				
+G278	moolenaar	cnbc-1111-congress-resign	all three committees have subpoena power, and I know all three committees have a	carried	MA49			
+G279	huang	cnbc-1109-megaspeed	And so the market has to be open and it has to be welcoming.	outside the days				
+G280	moorhead	sw-implicatorai-06	She has credibility with investors because she answers hard questions directly,	CANDIDATE occasion				drawn: MA283
+G281	huang	sw-thezvisubstackcom-01	Comparing AI to nukes is lunacy. Enriched uranium is a lousy analogy. It’s an	not on the matter				
+G282	mast	sw-cnbccom-09	The people that we deal with in BIS, those are the ones that are	reason	MA73			
+G282-b	mast	sw-cnbccom-09	(a passage beside the group's line)	CANDIDATE part	MA73	1		drawn: MA264
+G283	megaspeed	sw-nbcnewscom-09	welcomes appropriate government scrutiny and is committed to demonstrating through concrete actions that it	carried	MA229			
+G284	mowshowitz	sw-thezvisubstackcom-01	That is a huge deal. It is disqualifying. Period.	carried	MA132			
+G285	mast	cnbc-1110-schumer	So that's obviously something that falls directly under Commerce,	CANDIDATE occasion				drawn with the sentence the page prints just before it, that it would not hurt to hear from the Commerce Department (MA262)
+G286	mast	sw-cnbccom-09	public hearings for other people or other things down road. || public hearings for	CANDIDATE part	MA73	2	yes	a planted control: the act was held out of the reader's table (MA246)
+G287	moorhead	sw-thewrapcom-01	Jensen is the product strategist, the closer with the big cloud companies and the	CANDIDATE occasion				drawn: MA281
+G288	megaspeed	sw-chinamoneynetworkcom-01	Our company has always adhered to the law, and we take these accusations seriously.	CANDIDATE part	MA157	2		drawn: MA157
+G289	huang	sw-thewrapcom-01	I think we made a mistake, and this mistake is hard to unwind,	not on the matter				
+G290	fedasiuk	biggo-fedasiuk	empty offices... with the lights out, with no staff.	reason	MA12			
+G291	jeffries	sw-gazettecom-5cfc7b8d	this administration has repeatedly undermined the free market economy,	CANDIDATE occasion				drawn: MA269
+G292	huizenga	tnr-lutnick	I don’t think he’s been very responsive.	CANDIDATE occasion				drawn: MA271
+G293	mowshowitz	sw-thezvisubstackcom-01	My analysis of Jensen Huang’s podcast with a podcast host emphasized that Huang’s arguments about	reason	MA132			
+G294	board	sw-asiaecokr-02	Huang is fully willing to cooperate with the investigation and will remain CEO until	CANDIDATE part	MA60	4		not drawn: a translated account of the Times's report; the board's own statement does not hold the clause, and what the company said of his staying is on its chip of that day (MA105)
+G295	fedasiuk	biggo-fedasiuk	This isn't just an apparent conflict of interest with a major customer of the	reason	MA12			
+G296	nvidia	sw-dailycallercom-03	Our due diligence has helped identify suspected attempts to circumvent U.S. export controls, leading	CANDIDATE occasion				drawn: MA257
+G296-b	nvidia	sw-dailycallercom-03	(a passage beside the group's line)	CANDIDATE occasion				drawn: MA257
+G297	himes	art-fc-rec-nhpr-himes-1110	So we received - the Congress received no briefing on this until just yesterday,	CANDIDATE part	MA42	1		drawn: MA42
+G298	singapore	art-fc-spf-1030	Singapore has charged four individuals and four companies in Court between Feb 2025 and	CANDIDATE part	MA70	1		drawn: MA70
+G299	mowshowitz	sw-thezvisubstackcom-01	I do accept ‘he was up against actual professional spies and an active operation	CANDIDATE part	MA132	2		drawn: MA132
+G300	nvidia	sw-nvidianewsnvidiacom-03	I am proud and grateful to be an American.	not the actor's				
+G301	huang	sw-businesstodayin-12	It shouldn't be a job that you take for granted,	outside the days				
+G008-b	fedasiuk	biggo-fedasiuk	(a passage beside the group's line)	CANDIDATE part	MA12	2		drawn: MA12
+G008-c	fedasiuk	biggo-fedasiuk	(a passage beside the group's line)	CANDIDATE part	MA12	2		drawn: MA12
+G068-b	jcramer	sw-cnbccom-23	(a passage beside the group's line)	CANDIDATE part	MA172	4		drawn: MA172
+G121-b	hashim	sw-transformernewsai-01	(a passage beside the group's line)	CANDIDATE part	MA111	2		drawn: MA111
+G224-c	nvidia	sw-tomsguidecom-01	(a passage beside the group's line)	CANDIDATE occasion				drawn: MA251
+G282-c	mast	sw-cnbccom-09	(a passage beside the group's line)	CANDIDATE part	MA73	4		drawn: MA264

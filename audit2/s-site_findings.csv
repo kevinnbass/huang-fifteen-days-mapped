@@ -1,0 +1,37 @@
+finding_id,grade,element_text,problem
+G-MA70,ok,MA70 data record,
+G-MA74,ok,MA74 data record,
+G-MA86,ok,MA86 data record,
+G-MA88,ok,MA88 data record,
+G-MA169,ok,MA169 data record,
+G-MA189,ok,MA189 data record,
+G-MA207,ok,MA207 data record,
+G-MA219,ok,MA219 data record,
+G-MA220,ok,MA220 data record,
+G-MA221,ok,MA221 data record,
+G-MA224,ok,MA224 data record,
+G-MA227,ok,MA227 data record,
+G-MA236,ok,MA236 data record,
+G-MA237,ok,MA237 data record,
+G-MA238,ok,MA238 data record,
+G-MA239,ok,MA239 data record,
+G-MA240,ok,MA240 data record,
+G-MA241,ok,MA241 data record,
+G-MA242,ok,MA242 data record,
+G-MA243,ok,MA243 data record,
+G-MA244,ok,MA244 data record,
+G-MA245,ok,MA245 data record,
+G-MA246,ok,MA246 data record,
+G-MA247,ok,MA247 data record,
+G-MA248,ok,MA248 data record,
+G-MA249,ok,MA249 data record,
+G-MA250,ok,MA250 data record,
+G-SCOPE,qualification,MA70,[row error] The page faithfully repeats the incomplete enforcement predicate; same problem as A-MA70-SCOPE.
+G-ANSWER,qualification,MA70,[missing part] The page faithfully repeats the omitted police prosecution answer; same problem as A-MA70.
+G-RELAY,qualification,MA207,[row error] The data and rendered chip leave the two relayers unnamed; same problem as A-MA207.
+G-CONTINUITY,qualification,MA243,[missing part] The page repeats confidence without the requested continuity assurance; same problem as A-MA243.
+G-VERSION,qualification,note,[table or text] The page carries the eight-act caveat count; same problem as D2-MA240-CORROBORATION.
+G-READINGS,qualification,status,[table or text] The page carries Sixteen at the opening of the seventeen-reading status; same problem as E-STATUS-READINGS.
+G-REFUSALCOUNT,qualification,status,[table or text] The page carries four refusals while enumerating five exchanges; same problem as E-STATUS-REFUSAL-COUNT.
+G-ALL-RECORDS,ok,"249 active acts, 84 ties, 150 member lines, 2245 listed pieces and source groupings equal the public tables; one undated active act and one withdrawn act are distinguished.",
+G-JAVASCRIPT,ok,"JavaScript bytes unchanged; date/word/report flags and passages of all 27 changed records read, including shared solid-edge cases MA237 and MA250.",

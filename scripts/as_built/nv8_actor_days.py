@@ -19,7 +19,6 @@ READ = {
         
         
         ('mast', '2026-11-09'): 'the page reports as issued "today" the chairmen\'s letter dated Nov 4, which the committee posted again on Nov 9: on the chips for Nov 5',
-        ('moolenaar', '2026-11-09'): 'the page reports as issued "today" the chairmen\'s letter dated Nov 4, which the committee posted again on Nov 9: on the chips for Nov 5',
         ('mast', '2026-11-06'): 'one news service\'s three reports give the chairmen\'s request of Nov 5 as made "on Friday": the same letter as the chip for Nov 5',
         ('cramer', '2026-11-10'): 'his "I just think he\'s got to go", said on Nov 9 and reported over the following days: on his chip for Nov 9',
         ('singapore', '2026-10-31'): 'the ministry\'s statement is timed Oct 30, 11:13 PM in Singapore and its newsroom page dates it Oct 31: the chip for Oct 30 says both',
@@ -42,7 +41,6 @@ READ1 = {
          ('huang', '2026-11-10'): 'not an act on the matter: a staff meeting about a product keynote, in one paper\'s account',
          ('kudlow', '2026-11-11'): 'his call of Nov 10 for Huang to step down, mentioned the next day: on his chip for Nov 10',
          ('mcguire', '2026-11-07'): 'his thread of Nov 6, on a copy stamped the next day: on his chip for Nov 6',
-         ('mcguire', '2026-11-09'): 'CNBC links the exact post of Nov 8 (id 2119538713650987295) and misdates it Monday: on his chip for Nov 8',
          ('nvidia', '2026-11-02'): 'not on the matter: a statement on data-centre policy in a report that does not mention the affair',
          
          ('suit', '2026-11-10'): 'the complaint filed on Nov 9, reported the next day: on its chip for Nov 9',

@@ -1,0 +1,60 @@
+what,figure_says,you_find,agree,note
+act rows,250,250,yes,
+active acts including undated,249,249,yes,
+dated acts,248,248,yes,
+chips,196,196,yes,
+dashed chips,40,40,yes,
+report-dated acts,60,60,yes,
+actor-days in two or more articles,10,10,yes,
+actor-days in one article,14,14,yes,
+third gauge groups,14,14,yes,
+report screen part 1,10,10,yes,
+report screen part 2,30,30,yes,
+report screen part 3,18,18,yes,
+acts with passages that may be newer,8,7,no,[table or text] Nov 7 relay corroborates MA240; retain MA239 as uncertain in part. Third-part listings remain 18. See D2-MA240-CORROBORATION.
+refusal acts,28,28,yes,
+refusal actors,11,11,yes,
+refusal census lines,133,133,yes,
+refusal lines inside cited articles,57,57,yes,
+refusal lines outside cited articles,76,76,yes,
+outside actor-article pairs,66,66,yes,
+outside relay classifications,62,62,yes,
+outside non-refusal classifications,14,14,yes,
+second-round labels,81,81,yes,
+counted lines brought by second-round labels,155,155,yes,
+acts added without own-channel search,117,117,yes,Recount from the original-of-chip keys; withdrawn row excluded from the later acts.
+pages,1315,1315,yes,
+articles,1236,1236,yes,
+counted articles,1154,1154,yes,
+counted pages held in part,98,98,yes,
+member articles: warren,71,71,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: coons,48,48,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: cramer,22,22,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: schumer,22,22,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: banks,19,19,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: blumenthal,3,3,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: warner,4,4,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: cornyn,9,9,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: kennedy,6,6,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: thune,13,13,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: wyden,5,5,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: cotton,5,5,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: scott,4,4,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: ricketts,5,5,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: mast,92,92,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: crawford,68,68,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: meeks,9,9,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: himes,8,8,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: huizenga,4,4,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: johnson,11,11,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: moolenaar,78,78,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: jeffries,30,30,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: magaziner,4,4,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: subramanyam,3,3,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: bacon,3,3,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: mccaul,5,5,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+member articles: neal,3,3,yes,Distinct counted article ids; public story_pages.tsv equals the seventeenth copy. Counts unchanged.
+status opening independent readings,16,17,no,[table or text] Status itself describes the seventeenth reading. See E-STATUS-READINGS.
+status refusal exchanges with restored answers,4,5,no,"[table or text] Five enumerated response occasions, even though the status says four. See E-STATUS-REFUSAL-COUNT."
+published table rows including withdrawn,2779,2779,yes,"The README figure-resting total excludes the one withdrawn row, leaving 2778."
+public companion files compared,94,94,yes,

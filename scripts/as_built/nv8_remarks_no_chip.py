@@ -30,12 +30,9 @@ READ = {
     ('china', 'we stand ready to work with the us to'): 'not on the matter: the ministry on relations between the two countries',
     ('coons', 'we write to request that the department of commerce'): SAME + 'the letter with Sen. Warren (his chip for Nov 11)',
     ('jeffries', 'there are real concerns that need to be addressed'): SAME + 'his remarks of Nov 9 asking for a full briefing (his chip for that day)',
-    ('kennedy', 'the obvious question is why did lutnick choose to'): SAME + 'his remarks to Politico that the Commerce secretary "needs to answer" (his chip for Nov 11)',
     ('kennedy', 'and they need to be investigated by the justice'): SAME + 'his remarks of Nov 10; the chip says he wants investigations',
     ('moolenaar', 'he has stated hes a patriot he has questioned'): SAME + 'his remarks of Nov 12 on the talks for an appearance before the committees (his chip for that day)',
     ('nvidia', 'datacenters and clouds built on american chips are the'): 'not on the matter: a statement on data-centre policy in reports that do not mention the affair',
-    ('nvidia', 'the prc government is not seeking nvidia products from'): SAME + 'its reply to the first report (its chip for Oct 29, which carries its denial)',
-    ('nvidia', 'we sell our data center gpus primarily to well'): 'not of these days: statements of 2025 that later reports quote as made "at the time"',
     ('mcguire', 'bisgov has done so not only by permitting the'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
     ('mcguire', 'why is commerce protecting jensen and supporting his preferred'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
 }

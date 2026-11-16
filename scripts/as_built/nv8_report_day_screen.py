@@ -38,15 +38,24 @@ READ1 = {'MA179': 'not the same act: other statements of the company, of other d
          'MA238': 'not the same act: its statements of Oct 29 and Nov 12, which have their own chips, share only the words on cooperating with the government',
          'MA240': 'not the same act: the company\'s reply of Nov 6 to another report of the Times (its chip of that day) says a similar thing of China\'s limits on imports',
          'MA211': 'not the same act: the line of Nov 8 is his acknowledgment to employees, which the cited passage mentions and which has its own chip',
-         'MA210': 'the census gives these lines other days; the sixteenth reading compared them with his saved posts of Nov 6 and Nov 8 and found the quotations only in the piece of Nov 10'}
+         'MA210': 'the census gives these lines other days; the sixteenth reading compared them with his saved posts of Nov 6 and Nov 8 and found the quotations only in the piece of Nov 10',
+         'MA251': 'the same sentence on what customers receive is in the statement the company gave on Nov 5 (its chip of that day), which CNBC says largely mirrored its first; Tom\'s Guide prints it on Oct 29 as told to it',
+         'MA258': 'not the same act: lines of other days that share only the words of a request for comment that went unanswered',
+         'MA260': 'not the same act: the lines of Nov 12 are the announcement of the interim chief and of the search (the board\'s chips of that day); this act is the reports of the day before',
+         'MA266': 'not the same act: the lines of Nov 4 and 5 are the chairmen\'s letter and its release (his chip for Nov 5); this is a comment the FT prints on Nov 9'}
 READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109', 'MA125', 'MA128', 'MA130', 'MA150', 'MA158',
-                                 'MA199', 'MA200', 'MA201', 'MA202', 'MA203', 'MA206', 'MA210', 'MA212', 'MA213', 'MA219', 'MA207', 'MA237', 'MA250')},
+                                 'MA199', 'MA200', 'MA201', 'MA202', 'MA203', 'MA206', 'MA210', 'MA212', 'MA213', 'MA219', 'MA207', 'MA237', 'MA250',
+                                 'MA251', 'MA256', 'MA257', 'MA261', 'MA266', 'MA268', 'MA270', 'MA274', 'MA275', 'MA280', 'MA283', 'MA284', 'MA286', 'MA288')},
              MA211='the day word ("today", Nov 9) is that of the Wired report as the relaying page gives it; the hiring itself has no day, and another saved page says he hired the firm "as early as last year"',
              MA214='the page says "On Monday" (Nov 9) and another saved page dates the same extension Nov 5; the accounts conflict, so the act sits on the day of the first report and the chip gives both days',
              MA81='the day is the one on which sources told the broadcaster of an inquiry already under way: the report\'s day, and the inquiry may be earlier',
              MA169='the day words are those of the resignation and of the report itself (Nov 12): the report\'s day',
              MA179='the day word is that of a senator\'s pledge of the Saturday after, which shows the FT page was changed after its first day; another saved page says the FT reported the refusal "on Friday" (Nov 6, the chip\'s day)',
-             MA195='the day word is that of the paper\'s phone call to Huang; the page does not say when the company declined')
+             MA195='the day word is that of the paper\'s phone call to Huang; the page does not say when the company declined',
+             MA254='the paper says the general counsel spoke "as recently as last week", and the chip says the week before; the day words near the passage belong to remarks of others',
+             MA260='the page says the board "met on Wednesday evening" (its chip for Nov 11); the reports this act relays are of that day',
+             MA263='the day word dates the lawmakers\' calls for a briefing; the page gives the interview no day',
+             MA271='the day word dates a senator\'s remark printed before his; the page gives his no day')
 NEWER = 'may be newer: the page was changed the day after it was first published, and the passage could come from the later version; the chip keeps the day of first publication'
 READ3 = {'MA16': 'the chip\'s day is that of the FT report it relays and of the podcast\'s own page (Nov 10); the later page is a second relay that says "yesterday"',
          'MA46': 'the chip\'s day is the one the relaying page gives for the Times article that quotes the post (Nov 8); the page itself is of the next day',
@@ -62,8 +71,10 @@ READ3 = {'MA16': 'the chip\'s day is that of the FT report it relays and of the 
          'MA217': 'may be newer: the Journal\'s page prints an update of Oct 31, and the sentence stands after one the page says was added after first publication',
          'MA219': 'the chip\'s day is that of the first report (Asia Economy, Nov 10); the other page cited is a later account, of Nov 11',
          'MA207': 'the chip\'s day is that of the first saved report (a page of Nov 11 that relays Axios); the other page cited is a later relay, of Nov 12',
-         'MA239': 'may be newer: the Times page prints an update of Nov 8, and no other saved page of Nov 7 carries the answer',
-         'MA240': 'may be newer: the Times page prints an update of Nov 8, and no other saved page of Nov 7 carries the answer',
+         'MA239': 'may be newer in one word: the Times page prints an update of Nov 8; a relay of Nov 7 (the Jerusalem Post) carries the answer, the penalties and the hiring, without the word "all"',
+         'MA240': 'the Times page prints an update of Nov 8; a relay of Nov 7 (the Jerusalem Post) carries both quotations and the sentence on China\'s limits (found by the eighteenth reading)',
+         'MA260': 'Semafor\'s page was changed the next day; Daring Fireball\'s page of Nov 11 quotes the same passages of its report of that day',
+         'MA275': 'may be newer: the page was changed the day after it was first published, and no other saved page carries the remark',
          'MA214': 'the chip\'s day is that of the first report (Yahoo Finance, Nov 10); the other page cited is a later account, of Nov 12, and the chip gives its date too'}
 DAY = re.compile(r"\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|yesterday|today|on (?:Oct|Nov)\w*\.? \d+)\b")
 

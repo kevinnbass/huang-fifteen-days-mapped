@@ -1,0 +1,9 @@
+row_id_or_key,source,what_failed
+taiwan|2026-10-30,private/census_remarks_actor.tsv,"No dated census line for the fixed sample day; untested, excluded from both rates. The chip source itself was not unavailable."
+cramer|2026-11-09,private/census_remarks_actor.tsv,"No dated census line for the fixed sample day; untested, excluded from both rates. The chip source itself was not unavailable."
+mowshowitz|2026-10-29,private/census_remarks_actor.tsv,"No dated census line for the fixed sample day; untested, excluded from both rates. The chip source itself was not unavailable."
+mowshowitz|2026-11-12,private/census_remarks_actor.tsv,"No dated census line for the fixed sample day; untested, excluded from both rates. The chip source itself was not unavailable."
+moorhead|2026-11-08,private/census_remarks_actor.tsv,"No dated census line for the fixed sample day; untested, excluded from both rates. The chip source itself was not unavailable."
+moorhead|2026-11-09,private/census_remarks_actor.tsv,"No dated census line for the fixed sample day; untested, excluded from both rates. The chip source itself was not unavailable."
+globaltimes|2026-11-09,private/census_remarks_actor.tsv,"No dated census line for the fixed sample day; untested, excluded from both rates. The chip source itself was not unavailable."
+globaltimes|2026-11-12,private/census_remarks_actor.tsv,"No dated census line for the fixed sample day; untested, excluded from both rates. The chip source itself was not unavailable."
