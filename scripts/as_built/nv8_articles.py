@@ -54,6 +54,11 @@ def main():
         for r in csv.DictReader(open(LANE.parent / f'remarks_nv8_{t_}' / 'out' / 'gaps.csv', newline='')):
             gaps[r['page_id']] = r['what_failed']
     gaps_f = {r['page_id'] for r in csv.DictReader(open(LANE.parent / 'remarks_nv8_f' / 'out' / 'gaps.csv', newline=''))}
+    # A second net for pages held only in part (after the eleventh reading, Nov 16, 2026, which found a subscription preview that no census reader had listed):
+    # every counted page that shows a sign of a barrier, or whose text is short, was read for whether the saved copy holds the whole piece
+    # (scripts/nv8_partial_screen.py lists them; research/nv8_pages_in_part_read.tsv holds the reader's verdicts).
+    _pr = R / 'nv8_pages_in_part_read.tsv'
+    part_read = {r['page_id'] for r in csv.DictReader(open(_pr, newline=''), delimiter='\t') if r['verdict'] == 'part'} if _pr.exists() else set()
     for r in csv.DictReader(open(LANE / 'pages.tsv', newline=''), delimiter='\t'):
         pages.append((r['page_id'], 'saved since', M.saved_since_text(r['page_id'])))
     # pages saved after that list was closed (research/nv8_pages_added.tsv says why each was saved); counted by the same rules
@@ -220,7 +225,7 @@ def main():
             counted, reason = 'no', 'the saved copy is a block or error page, or another page in its place (see the census gaps)'
         elif not RAW[pid] and not (title or '').strip():
             counted, reason = 'no', 'an empty capture: the saved copy holds no text and no headline'
-        part = 'yes' if counted == 'yes' and pid in gaps and (pid not in recovered or pid in gaps_f) else ''          # counted, and the census reader listed what of it could not be read (for a recovered page: the reader of the recovered text)
+        part = 'yes' if counted == 'yes' and ((pid in gaps and (pid not in recovered or pid in gaps_f)) or pid in part_read) else ''          # counted, and the census reader listed what of it could not be read (for a recovered page: the reader of the recovered text), or the second reader found the copy a preview
         out.append([pid, which, order[root], host(url), pub, basis, read_from[:60], len(text), counted, reason, why.get(pid, ''), title, part])
     with open(R / 'nv8_articles.tsv', 'w', newline='') as f:           # published with the figure: no headline, no text
         w = csv.writer(f, delimiter='\t', lineterminator='\n')

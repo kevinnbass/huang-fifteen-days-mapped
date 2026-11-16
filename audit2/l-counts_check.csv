@@ -1,0 +1,301 @@
+what,figure_says,you_find,agree,note
+Inputs: frozen hashes,all match,387 match,yes,All manifest-listed input bytes checked; no mismatch.
+B1 table listings,678,678,yes,Public/private common fields match item by item.
+B1 excluded committee listings,55,55,yes,
+B1 distinct excluded gifts,28,28,yes,Distinct within the three personal-money measures; repeat_of empty.
+B1 contributor 150PAC,committee money,2 listings; 2 distinct gifts,yes,LM0317; LM0379
+B1 contributor 150PAC.ORG,committee money,1 listings; 1 distinct gifts,yes,LM0119
+B1 contributor DLA PIPER PAC,committee money,44 listings; 17 distinct gifts,yes,LM0492; LM0495; LM0496; LM0497; LM0500; LM0501; LM0502; LM0509; LM0510; LM0511; LM0514; LM0515; LM0516; LM0517; LM0518; LM0519; LM0522; LM0523; LM0524; LM0527; LM0528; LM0529; LM0535; LM0536; LM0537; LM0543; LM0544; LM0545; LM0546; LM0547; LM0548; LM0555; LM0556; LM0557; LM0559; LM0560; LM0561; LM0563; LM0564; LM0566; LM0567; LM0569; LM0570; LM0573
+B1 contributor FRATERNITY & SORORITY PAC,committee money,6 listings; 6 distinct gifts,yes,LM0486; LM0489; LM0490; LM0505; LM0506; LM0608
+B1 contributor ROAD TO FREEDOM PAC,committee money,1 listings; 1 distinct gifts,yes,LM0424
+B1 contributor a campaign committee that carries the filer's name,committee money,1 listings; 1 distinct gifts,yes,LM0004
+B1 all lobbyists own money nvidia,"$429,735","$429,734.51",yes,"Matches the rounded figure note, status/README where stated; do not add sides."
+B1 listed-client own money nvidia,"$70,469","$70,469.00",yes,Only named measure; same rule for each side.
+B1 all lobbyists own money anthropic,"$124,500","$124,500.00",yes,"Matches the rounded figure note, status/README where stated; do not add sides."
+B1 listed-client own money anthropic,"$78,500","$78,500.00",yes,Only named measure; same rule for each side.
+B1 all lobbyists own money network,"$295,629","$295,629.35",yes,"Matches the rounded figure note, status/README where stated; do not add sides."
+B1 listed-client own money network,"$85,491","$85,491.20",yes,Only named measure; same rule for each side.
+A rule effect,LM0004 only,LM0004,yes,Only own_money and contributor change; item identities retained.
+A changed member rows,TY056 only,TY056,yes,
+A non-SELF census,all non-SELF items,155,yes,"Every item and its report filer/PAC fields read. Sides: {'network': 125, 'nvidia': 28, 'anthropic': 2}."
+A item LM0004,own_money=no,own_money=no,yes,Campaign committee in item and PAC list; description suppresses the filer name.
+A item LM0011,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0012,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0025,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0044,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0056,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0058,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0086,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0098,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0099,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0119,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0125,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0140,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0151,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0153,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0196,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0197,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0198,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0202,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0203,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0206,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0213,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0215,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0233,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0234,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0235,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0240,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0241,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0262,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0267,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0270,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0271,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0272,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0274,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0304,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0307,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0315,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0316,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0317,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0322,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0324,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0336,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0366,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0379,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0419,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0420,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0423,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0424,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0425,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0426,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0442,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0450,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0451,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0452,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0453,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0466,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0474,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0483,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0484,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0485,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0486,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0487,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0488,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0489,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0490,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0491,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0492,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0493,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0494,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0495,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0496,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0497,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0498,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0499,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0500,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0501,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0502,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0503,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0504,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0505,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0506,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0507,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0508,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0509,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0510,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0511,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0512,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0513,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0514,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0515,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0516,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0517,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0518,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0519,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0520,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0521,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0522,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0523,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0524,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0525,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0526,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0527,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0528,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0529,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0530,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0531,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0532,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0533,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0534,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0535,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0536,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0537,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0538,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0539,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0540,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0541,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0542,own_money=yes,own_money=yes,yes,Filer is a lobbyist; contributor words match the filer; no committee words.
+A item LM0543,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0544,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0545,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0546,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0547,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0548,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0549,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0550,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0555,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0556,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0557,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0558,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0559,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0560,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0561,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0562,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0563,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0564,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0565,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0566,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0567,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0568,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0569,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0570,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0571,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0573,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0574,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0600,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0608,own_money=no,own_money=no,yes,"Lobbyist report; contributor is a PAC, also in the report PAC list."
+A item LM0609,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0610,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0617,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0634,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0637,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0643,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0650,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0651,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A item LM0665,own_money=no,own_money=no,yes,Registrant report; contributor is its firm or its PAC; not personal money.
+A SELF sample LM0001,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0084,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0133,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0186,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0231,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0295,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0384,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0458,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0601,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0677,own_money=yes,SELF; Lobbyist; yes,yes,nvidia; saved contribution and filer fields read.
+A SELF sample LM0008,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0275,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0311,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0337,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0358,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0401,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0439,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0465,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0648,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0678,own_money=yes,SELF; Lobbyist; yes,yes,anthropic; saved contribution and filer fields read.
+A SELF sample LM0002,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A SELF sample LM0033,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A SELF sample LM0064,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A SELF sample LM0134,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A SELF sample LM0199,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A SELF sample LM0298,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A SELF sample LM0359,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A SELF sample LM0449,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A SELF sample LM0097,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A SELF sample LM0594,own_money=yes,SELF; Lobbyist; yes,yes,network; saved contribution and filer fields read.
+A registrant SELF control LM0027,own_money=no,SELF; Registrant; no,yes,"No lobbyist object; SELF means the registrant, not a person."
+A registrant SELF control LM0038,own_money=no,SELF; Registrant; no,yes,"No lobbyist object; SELF means the registrant, not a person."
+A registrant SELF control LM0079,own_money=no,SELF; Registrant; no,yes,"No lobbyist object; SELF means the registrant, not a person."
+A registrant SELF control LM0300,own_money=no,SELF; Registrant; no,yes,"No lobbyist object; SELF means the registrant, not a person."
+A registrant SELF control LM0376,own_money=no,SELF; Registrant; no,yes,"No lobbyist object; SELF means the registrant, not a person."
+A registrant SELF control LM0378,own_money=no,SELF; Registrant; no,yes,"No lobbyist object; SELF means the registrant, not a person."
+A registrant SELF control LM0577,own_money=no,SELF; Registrant; no,yes,"No lobbyist object; SELF means the registrant, not a person."
+A registrant SELF control LM0578,own_money=no,SELF; Registrant; no,yes,"No lobbyist object; SELF means the registrant, not a person."
+A manual item coverage,155 non-SELF plus 30 personal SELF,193 of 678 listings,yes,155/155 non-SELF; 30/515 lobbyist SELF; 8/8 registrant SELF. SELF sample is ten per side.
+A classifier on saved items,only filer own money counts,678 agree; 0 disagreements,yes,Classifier extracted without executing the builder; report type also checked. No side branch.
+A classifier controls,own / campaign / committee / unread,9 of 9 expected outcomes,yes,"SELF, filer name, title, surname-bearing campaign, PAC and three unknown forms tested."
+A unread build guard,unknown form stops before writing,original assertion raises,yes,Executed the original decision loop and assertion with an undecided synthetic item; no builder main executed.
+A public classifier copy,same rule,same AST,yes,Private/public files differ only in evidence-set root path.
+A published contributor column,committee or registrant description,no personal-name cell,yes,Every nonempty value read; the surname-bearing campaign uses a generic description.
+A known lobbyist names in publication,not named,no match,yes,432 name forms plus the protected campaign name screened in 168 manifest-listed public text files; injected name is a positive control. This is a known-name screen.
+B2 name forms Warren,Elizabeth,roster: Elizabeth Warren; extra tested forms: Liz,partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Warren,69,69,yes,Independent narrow and broader searches agree.
+B2 name forms Coons,Chris / Christopher,roster: Christopher A. Coons,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Coons,46,46,yes,Independent narrow and broader searches agree.
+B2 name forms Cramer,Kevin,roster: Kevin Cramer,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Cramer,22,22,yes,Independent narrow and broader searches agree.
+B2 name forms Schumer,Chuck / Charles,roster: Charles E. Schumer; extra tested forms: Charlie,partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Schumer,21,21,yes,Independent narrow and broader searches agree.
+B2 name forms Banks,Jim,roster: Jim Banks; extra tested forms: James,partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Banks,19,19,yes,Independent narrow and broader searches agree.
+B2 name forms Cornyn,John,roster: John Cornyn,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Cornyn,8,8,yes,Independent narrow and broader searches agree.
+B2 name forms Kennedy,John,roster: John Kennedy,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Kennedy,6,6,yes,Independent narrow and broader searches agree.
+B2 name forms Thune,John,roster: John Thune,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Thune,12,12,yes,Independent narrow and broader searches agree.
+B2 name forms Mast,Brian,roster: Brian J. Mast,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Mast,89,89,yes,Independent narrow and broader searches agree.
+B2 name forms Crawford,Rick / Eric,"roster: Eric A. ""Rick"" Crawford",yes,Roster given name and applicable quoted short name included.
+B2 articles naming Crawford,67,67,yes,Independent narrow and broader searches agree.
+B2 name forms Meeks,Gregory / Greg,roster: Gregory W. Meeks,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Meeks,9,9,yes,Independent narrow and broader searches agree.
+B2 name forms Himes,Jim,roster: James A. Himes; extra tested forms: James,partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Himes,8,8,yes,"Independent narrow and broader searches agree. Selected five-member check: A0051, A0590, A0604, A0619, A1019, A1036, A1070, A1096."
+B2 name forms Huizenga,Bill,roster: Bill Huizenga; extra tested forms: William,partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Huizenga,4,4,yes,"Independent narrow and broader searches agree. Selected five-member check: A0082, A0218, A0526, A1018."
+B2 name forms Moolenaar,John,roster: John R. Moolenaar,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Moolenaar,77,77,yes,Independent narrow and broader searches agree.
+B2 name forms Jeffries,Hakeem,roster: Hakeem S. Jeffries,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Jeffries,29,29,yes,Independent narrow and broader searches agree.
+B2 name forms Magaziner,Seth,roster: Seth Magaziner,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Magaziner,4,4,yes,Independent narrow and broader searches agree.
+B2 name forms Subramanyam,Suhas,roster: Suhas Subramanyam,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Subramanyam,3,3,yes,Independent narrow and broader searches agree.
+B2 name forms Bacon,Don,roster: Don Bacon; extra tested forms: Donald,partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Bacon,3,3,yes,"Independent narrow and broader searches agree. Selected five-member check: A0020, A0090, A0992."
+B2 name forms Johnson,Mike,"roster: Mike Johnson; extra tested forms: James, Michael",partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Johnson,6,6,yes,Independent narrow and broader searches agree.
+B2 name forms Blumenthal,Richard / Dick,"roster: Richard Blumenthal; extra tested forms: Rick, Rich",partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Blumenthal,3,3,yes,Independent narrow and broader searches agree.
+B2 name forms Wyden,Ron,roster: Ron Wyden; extra tested forms: Ronald,partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Wyden,5,5,yes,Independent narrow and broader searches agree.
+B2 name forms Ricketts,Pete,"roster: Pete Ricketts; extra tested forms: John, Peter",partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Ricketts,5,5,yes,Independent narrow and broader searches agree.
+B2 name forms McCaul,Michael / Mike,roster: Michael T. McCaul,yes,Roster given name and applicable quoted short name included.
+B2 articles naming McCaul,5,5,yes,Independent narrow and broader searches agree.
+B2 name forms Warner,Mark,roster: Mark R. Warner,yes,Roster given name and applicable quoted short name included.
+B2 articles naming Warner,4,4,yes,Independent narrow and broader searches agree.
+B2 name forms Cotton,Tom,roster: Tom Cotton; extra tested forms: Thomas,partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Cotton,5,5,yes,Independent narrow and broader searches agree.
+B2 name forms Scott,Tim,roster: Tim Scott; extra tested forms: Timothy,partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Scott,4,4,yes,"Independent narrow and broader searches agree. Selected five-member check: A1114, A1126, A1173, A1184."
+B2 name forms Neal,Richard,"roster: Richard E. Neal; extra tested forms: Richie, Rich, Dick, Rick",partial,"Additional forms find no extra counted article. James for Himes is explicitly in the roster; other extra forms are sensitivity tests, not new identity findings."
+B2 articles naming Neal,3,3,yes,"Independent narrow and broader searches agree. Selected five-member check: A0218, A1126, A1129."
+B2 Crawford added articles,67 including two legal-name reports,67,yes,Read both National articles; each explicitly names the representative as Eric Crawford. Distinct dates/leads.
+B4 member labels versus tenth copy,Crawford only,Crawford,yes,"Crawford 65 to 67; all other 26 numerators unchanged, all independently recounted here."
+B3 reader pair verdicts,499,499,yes,
+B3 builder pair verdicts,6,6,yes,The tenth reading understated these as two; the corrected attribution is supported by all six read_by values.
+B3 builder pair sw-courthousenewscom-01 / sw-inquirercom-01,different,different,yes,Read both dispatches: later one leads with the president; earlier one leads with China denial. New lead means a different report.
+B3 builder pair sw-inquirercom-01 / sw-irishnewscom-01,different,different,yes,Read both dispatches: later one leads with the president; earlier one leads with China denial. New lead means a different report.
+B3 builder pair sw-aacomtr-05 / art-fc-rec-factbase-trump-1109,different,different,yes,Read the recovered news-agency report and relevant verbatim transcript exchange: distinct works under the stated rule. This report is not flagged partial.
+B3 builder pair sw-washingtonexaminercom-03 / art-fc-rec-factbase-trump-1109,different,different,yes,Read the saved opening and verbatim transcript exchange: distinct works. Saved HTML confirms a subscription barrier and omitted remainder; saved_in_part is incorrectly blank. See C-02 and gaps.csv.
+B3 builder pair sw-forumsmacrumorscom-01 / sw-macrumorscom-01,same,same,yes,Read saved forum opening post and article: publisher bot preview links to the matching article; same under the stated publisher-forum rule.
+B3 builder pair sw-forumsmacrumorscom-02 / sw-macrumorscom-02,same,same,yes,Read saved forum opening post and article: publisher bot preview links to the matching article; same under the stated publisher-forum rule.
+B3 same pairs,87,87,yes,
+B3 different pairs,418,418,yes,
+B3 unread pair records,4,4,yes,Outside the 505 effective verdicts; two superseded rows are also outside it.
+B3 public pair provenance,private verdicts retained,all common fields match,yes,Public used_for_joining corresponds to effective rows; public table omits the private reading notes.
+B4 pages,1315,1315,yes,
+B4 articles,1236,1236,yes,
+B4 counted articles,1154,1154,yes,
+B4 counted pages,1229,1229,yes,
+B4 partial counted pages,58,58 flagged; at least 59 including one unflagged preview,no,"The table flag count reproduces, but sw-washingtonexaminercom-03 holds only an opening and subscription barrier. Metadata describes further remarks not present in the saved body; partial flag is blank."
+B4 first-search pages,1086,1086,yes,Exactly the companion figure story-page id set.
+B4 later saved pages,229,229,yes,
+B5 headline name disclosure,some; tenth reading found at least four,four independently reconfirmed,yes,CV0636; CV1019; CV1365; CV2019. Exact headlines read in saved aggregator HTML; identities only in private lookup file.
+B5 context name disclosure,undrawn funder and company staff member,both present,yes,Read current figure context and notes; identities only in private lookup file.
+B5 historical and code name disclosure,earlier audit files and source credits name others,confirmed,yes,Read a historical selection finding and a current script credit; no repository-wide anonymity promise is made.
+B5 rows table and drawn count,2694,2695 table rows; 2694 drawn,yes,"The extra row is withdrawn MA137, retained as history; the figure hidden list contains 2694 ids."
+A TY056 panel direction qualification,Published table panel: no client directed them,Saved reports do not establish whether a client directed the gifts,partial,LM0097 and LM0594: contribution fields and complete report field lists read; comments null. Own-money identity does not establish absence of client direction. Drawn words do not make this assertion.
+B4 unflagged preview sw-washingtonexaminercom-03,saved_in_part blank,partial capture; flag should be yes,no,Read both text and saved HTML. Two opening paragraphs end before recommendations and a full-access subscription barrier; the page description mentions additional remarks absent from that body. Pair verdict remains different; article/member totals need not change.

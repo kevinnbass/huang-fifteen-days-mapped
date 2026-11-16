@@ -1,0 +1,41 @@
+part,finding_id,grade,disposition,what_was_done
+A,A-01,qualification,applied,"The sentence is replaced in the supporting table for every lobbyist's line on all three sides (62 lines in research/member_ties.csv, column `panel`): ""the reports do not show whether a client directed these gifts"". The words drawn never said it, and no sum, source or drawn word changes. The same sentence had been taken out of the three-chairmen figure after one of its audits on Nov 14 and was not taken out here: a correction to one figure's wording was not carried to the other figure built from the same rows."
+C,C-01,qualification,applied,The status sentence opens with the number of readings there have been (eleven) and says they read the figure or the corrections made to it; the later phrase reads 'across the first six'.
+C,C-02,error,applied,"The page is marked as held in part. The mark had come only from the census readers' lists of what they could not read, so every counted page was screened for a sign of a barrier (the page's own structured data saying it is not free to read, a subscribe or sign-in phrase in the text or the HTML, a paywall marker with a short text, or a text under 2,000 characters; scripts/as_built/nv8_partial_screen.py) and the 248 pages the screen listed were read one by one by a reader from another model family, with 15 pages of known state mixed in as controls (research/nv8_pages_in_part_read.tsv): the reader judged 210 whole, 37 part and could not tell for 1; the controls came back as known except three posts of one aggregator-style site, judged part because they quote part of another outlet's report. Those posts, and three more like them among the pages read, are kept as whole (the post is the piece that was listed, and its text is all here), with the reader's verdict and this reason in the table. 92 counted pages are now marked as held in part (58 before). The figure's sentence gives both numbers and says what was not read again: a page of more than 2,000 characters that shows no sign of a barrier. No page's counting, no article and no member's count changes."
+C,C-CLOSE,error,applied,As C-01 and C-02; the qualification on the supporting table is A-01.
+B,B2 name forms Warren,recount: partial,applied,'Liz' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 69 articles. 
+B,B2 name forms Schumer,recount: partial,applied,'Charlie' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 21 articles. 
+B,B2 name forms Banks,recount: partial,applied,'James' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 19 articles. 
+B,B2 name forms Himes,recount: partial,applied,'James' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 8 articles. 
+B,B2 name forms Huizenga,recount: partial,applied,'William' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 4 articles. 
+B,B2 name forms Bacon,recount: partial,applied,'Donald' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 3 articles. 
+B,B2 name forms Johnson,recount: partial,stated as a limit,"Not added: 'Michael Johnson' and 'James Johnson' are other people's names too; the Speaker is matched as 'Mike Johnson' or 'Speaker Johnson', and the reading's own search with those forms adds no article."
+B,B2 name forms Blumenthal,recount: partial,stated as a limit,"Not added: 'Rick' and 'Rich' are not forms he is known by; 'Richard' and 'Dick' are searched, and the reading's own search with the other forms adds no article."
+B,B2 name forms Wyden,recount: partial,applied,'Ronald' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 5 articles. 
+B,B2 name forms Ricketts,recount: partial,applied,"'Peter' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 5 articles. 'John', his first legal given name, is not added: no page calls him so, and the reading's search with it adds no article."
+B,B2 name forms Cotton,recount: partial,applied,'Thomas' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 5 articles. 
+B,B2 name forms Scott,recount: partial,applied,'Timothy' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 4 articles. 
+B,B2 name forms Neal,recount: partial,applied,"'Richie' is added to the names searched for this member (scripts/as_built/member_mentions.py); the count stays 3 articles. The other forms the reading tried ('Rich', 'Dick', 'Rick') are not added: they are not forms he is known by, and they add no article."
+B,B4 partial counted pages,recount: no,applied,As C-02.
+B,A TY056 panel direction qualification,recount: partial,applied,As A-01.
+B,B4 unflagged preview sw-washingtonexaminercom-03,recount: no,applied,As C-02.
+gaps,art-fc-ft-1107-romantic,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-ft-1112-singapore,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-gvwire-nyt-1109-powerful,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-rec-axios-1111,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-rec-marketscreener-blanche,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,art-fc-rec-mha-20250303,gap,stated as a limit,A block or error page; not counted. Where the article is held in another copy it is counted through that copy.
+gaps,sw-nzheraldconz-01,gap,stated as a limit,"An empty capture, not counted."
+gaps,sw-nzheraldconz-02,gap,stated as a limit,"An empty capture, not counted."
+gaps,art-line-wex-scott-1112,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-forbesmiddleeastcom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-newsbloomberglawcom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-newsbloomberglawcom-04,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,man-efbf718d0a5a,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,art-fc-wb-ft-1107-romantic,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-capitalbriefcom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,man-economist-1111-01,gap,stated as a limit,"The hand-saved copy's text layer is damaged; the article is counted through it and through the copy at the same address, and no chip quotes the page."
+gaps,sw-japantimescojp-02,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,sw-garymarcussubstackcom-01,gap,stated as a limit,Counted and marked as saved in part; what could not be read is listed in the census gaps.
+gaps,B2 filing publication day,gap,stated as a limit,The page is dated Nov 12 from its signature and the date of its press release; the day it was filed is not on the saved page.
+gaps,sw-washingtonexaminercom-03,gap,applied,As C-02: now marked as held in part.

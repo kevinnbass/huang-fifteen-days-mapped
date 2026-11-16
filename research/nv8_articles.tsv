@@ -20,7 +20,7 @@ cnbc-1110-schumer	first census	A0018	cnbc.com	2026-11-10	header stamp	2026-11-10
 cnbc-1110-selloff	first census	A0019	cnbc.com	2026-11-10	header stamp	2026-11-10T09:14:29+0000	3505	yes			
 cnbc-1111-congress-resign	first census	A0020	cnbc.com	2026-11-11	header stamp	2026-11-11T21:59:34+0000	7521	yes			
 cnbc-1112-megaspeed-asia	first census	A0021	cnbc.com	2026-11-11	header stamp	2026-11-12T03:02:03+0000	7792	yes			
-cnn-1111-live	first census	A0022	cnn.com	2026-11-11	header stamp	2026-11-12T00:16:08.302Z	27976	yes			
+cnn-1111-live	first census	A0022	cnn.com	2026-11-11	header stamp	2026-11-12T00:16:08.302Z	27976	yes			yes
 cnn-1112-who-lied	first census	A0023	edition.cnn.com	2026-11-12	header stamp	2026-11-12T11:00:15.610Z	8701	yes			
 concordia-kelly	first census	A0024	concordia.net	2026-08-27	header stamp	2026-08-27T15:14:20+00:00	2122	no	dated 2026-08-27, before the fifteen days (a background page)		
 cset-advisory-board	first census	A0025	cset.georgetown.edu	2025-10-09	header stamp	2025-10-09T13:09:54+00:00	1566	no	dated 2025-10-09, before the fifteen days (a background page)		
@@ -76,7 +76,7 @@ sw-abcnetau-01	first census	A0070	abc.net.au	2026-11-08	header stamp	2026-11-08T
 sw-abcnetau-02	first census	A0071	abc.net.au	2026-11-09	header stamp	2026-11-09T05:30:36+00:00	9282	yes			
 sw-abcnetau-03	first census	A0072	abc.net.au	2026-11-09	header stamp	2026-11-09T20:28:14+00:00	4789	yes			
 sw-acecommentsmunu-2695c925	first census	A0073	acecomments.mu.nu	2026-11-12	read in the saved copy	at November 12, 2026 01:13 PM	22928	yes			
-sw-adweekcom-01	first census	A0074	adweek.com	2026-11-12	header stamp	2026-11-12T10:32:02-0500	2048	yes			
+sw-adweekcom-01	first census	A0074	adweek.com	2026-11-12	header stamp	2026-11-12T10:32:02-0500	2048	yes			yes
 sw-aipolicydailyorg-01	first census	A0075	aipolicydaily.org	2026-11-09	header stamp	2026-11-09	16246	yes			
 sw-aipolicydailyorg-02	first census	A0076	aipolicydaily.org	2026-11-12	header stamp	2026-11-12	20535	yes			
 sw-aljazeeracom-01	first census	A0077	aljazeera.com	2026-11-08	header stamp	2026-11-08T22:16:10Z	5394	yes			
@@ -85,7 +85,7 @@ sw-aljazeeracom-03	first census	A0079	aljazeera.com	2026-11-09	header stamp	2026
 sw-aljazeeracom-04	first census	A0080	aljazeera.com	2026-11-09	stamp line	Published On 9 Nov 2026	796	yes			
 sw-aljazeeracom-05	first census	A0081	aljazeera.com	2026-11-09	stamp line	Published On 9 Nov 2026	712	yes			
 sw-aljazeeracom-06	first census	A0082	aljazeera.com	2026-11-10	header stamp	2026-11-10T09:42:04Z	8239	yes			
-sw-aljazeeracom-07	first census	A0083	aljazeera.com	2026-11-12	header stamp	2026-11-12T14:44:54Z	1019	yes			
+sw-aljazeeracom-07	first census	A0083	aljazeera.com	2026-11-12	header stamp	2026-11-12T14:44:54Z	1019	yes			yes
 sw-aljazeeracom-08	first census	A0084	aljazeera.com	2026-11-09	header stamp	2026-11-09T16:00:10Z	4897	yes			
 sw-aljazeeracom-09	first census	A0085	aljazeera.com	2026-11-12	header stamp	2026-11-12T10:49:41Z	3068	yes			
 sw-aljazeeracom-10	first census	A0086	aljazeera.com	2026-11-12	header stamp	2026-11-12T14:48:10Z	6734	yes			
@@ -124,10 +124,10 @@ sw-asiaecokr-10	first census	A0118	asiae.co.kr	2026-11-11	header stamp	2026-11-1
 sw-asiaecokr-11	first census	A0119	asiae.co.kr	2026-11-12	header stamp	2026-11-12T17:46:51+0900	2305	yes			
 sw-asiaecokr-e5bb48e2	first census	A0120	asiae.co.kr	2026-11-03	header stamp	2026-11-03T17:52:00+0900	2468	yes			
 sw-asianagecom-01	first census	A0121	asianage.com	2026-11-10	header stamp	2026-11-10T21:11:28+05:30	2990	yes			
-sw-asianikkeicom-01	first census	A0122	asia.nikkei.com	2026-11-08	header stamp	2026-11-09T13:33:37.000+09:00	1795	yes			
-sw-asianikkeicom-02	first census	A0123	asia.nikkei.com	2026-11-09	header stamp	2026-11-10T07:45:01.000+09:00	1782	yes			
-sw-asianikkeicom-03	first census	A0124	asia.nikkei.com	2026-11-12	header stamp	2026-11-13T02:48:24.000+09:00	2012	yes			
-sw-asianikkeicom-04	first census	A0124	asia.nikkei.com	2026-11-12	header stamp	2026-11-13T02:48:24.000+09:00	2040	yes		text of the shorter is 100% inside the other (sw-asianikkeicom-03), which is under twice its length, and the two share their lead	
+sw-asianikkeicom-01	first census	A0122	asia.nikkei.com	2026-11-08	header stamp	2026-11-09T13:33:37.000+09:00	1795	yes			yes
+sw-asianikkeicom-02	first census	A0123	asia.nikkei.com	2026-11-09	header stamp	2026-11-10T07:45:01.000+09:00	1782	yes			yes
+sw-asianikkeicom-03	first census	A0124	asia.nikkei.com	2026-11-12	header stamp	2026-11-13T02:48:24.000+09:00	2012	yes			yes
+sw-asianikkeicom-04	first census	A0124	asia.nikkei.com	2026-11-12	header stamp	2026-11-13T02:48:24.000+09:00	2040	yes		text of the shorter is 100% inside the other (sw-asianikkeicom-03), which is under twice its length, and the two share their lead	yes
 sw-asiatimescom-01	first census	A0125	asiatimes.com	2026-11-10	header stamp	2026-11-10T12:14:42+00:00	5572	yes			
 sw-asiatimescom-02	first census	A0126	asiatimes.com	2026-11-09	header stamp	2026-11-09T21:02:25+00:00	9852	yes			
 sw-asiatimescom-03	first census	A0127	asiatimes.com	2026-11-12	header stamp	2026-11-12T10:03:09+00:00	6943	yes			
@@ -177,7 +177,7 @@ sw-calcalistechcom-04	first census	A0169	calcalistech.com	2026-11-12	header stam
 sw-calcalistechcom-05	first census	A0170	calcalistech.com	2026-11-12	header stamp	2026-11-12T14:11:41.099469Z	6689	yes			
 sw-capitalbriefcom-01	first census	A0171	capitalbrief.com	2026-11-12	header stamp	2026-11-12T05:46:03.160Z	4109	yes			yes
 sw-capitalbriefcom-57f178e4	first census	A0172	capitalbrief.com	2026-10-29	header stamp	2026-10-29T11:59:00.000Z	2208	yes			
-sw-cautiousoptimismnews-01	first census	A0173	cautiousoptimism.news	2026-11-09	header stamp	2026-11-09T16:24:59.437Z	7658	yes			
+sw-cautiousoptimismnews-01	first census	A0173	cautiousoptimism.news	2026-11-09	header stamp	2026-11-09T16:24:59.437Z	7658	yes			yes
 sw-cautiousoptimismnews-13925a6b	first census	A0174	cautiousoptimism.news	2026-11-12	header stamp	2026-11-12T16:19:16.005Z	4987	yes			
 sw-cbcca-01	first census	A0175	cbc.ca	2026-11-08	header stamp	2026-11-08T21:14:15.239Z	6450	yes			
 sw-cbcca-02	first census	A0176	cbc.ca	2026-11-09	header stamp	2026-11-09T23:47:23.508Z	7632	yes			
@@ -211,7 +211,7 @@ sw-chatgptiseatingtheworl-01	first census	A0200	chatgptiseatingtheworld.com	2026
 sw-chinamoneynetworkcom-01	first census	A0201	chinamoneynetwork.com	2026-11-09	header stamp	2026-11-09T20:25:11+08:00	3315	yes			
 sw-chinamoneynetworkcom-02	first census	A0202	chinamoneynetwork.com	2026-11-09	header stamp	2026-11-10T05:55:15+08:00	4198	yes			
 sw-chinamoneynetworkcom-03	first census	A0203	chinamoneynetwork.com	2026-11-11	header stamp	2026-11-11T18:05:19+08:00	5099	yes			
-sw-chinatalkmedia-01	first census	A0204	chinatalk.media	2026-11-10	header stamp	2026-11-10T12:28:08+00:00	764	yes			
+sw-chinatalkmedia-01	first census	A0204	chinatalk.media	2026-11-10	header stamp	2026-11-10T12:28:08+00:00	764	yes			yes
 sw-chipbriefingsubstackco-01	first census	A0205	chipbriefing.substack.com	2026-11-08	header stamp	2026-11-09T04:56:11+00:00	19050	yes			
 sw-chipbriefingsubstackco-02	first census	A0206	chipbriefing.substack.com	2026-11-10	header stamp	2026-11-11T03:20:40+00:00	23109	yes			
 sw-cityamcom-01	first census	A0207	cityam.com	2026-11-09	header stamp	2026-11-09T14:44:09+00:00	5567	yes			
@@ -386,7 +386,7 @@ sw-financeyahoocom-07	first census	A0373	finance.yahoo.com	2026-11-08	header sta
 sw-financeyahoocom-08	first census	A0301	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T09:50:21Z	4221	yes		text of the shorter is 93% inside the other (sw-decryptco-d0d0b9f5), which is under twice its length, and the two share their lead	
 sw-financeyahoocom-09	first census	A0374	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T13:52:19Z	1487	yes			
 sw-financeyahoocom-10	first census	A0375	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T19:29:00Z	2444	yes		read as the same article as man-644c1225780b by a reader from another model family (lane pairs_nv8_c, Nov 16, 2026)	
-sw-financeyahoocom-11	first census	A0376	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T14:42:35Z	4750	yes			
+sw-financeyahoocom-11	first census	A0376	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T14:42:35Z	4987	yes			
 sw-financeyahoocom-12	first census	A0377	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T23:00:00Z	5399	yes			
 sw-financeyahoocom-13	first census	A0378	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T17:03:11Z	4418	yes			
 sw-financeyahoocom-14	first census	A0379	finance.yahoo.com	2026-11-09	header stamp	2026-11-09T17:00:00Z	5666	yes			
@@ -412,7 +412,7 @@ sw-financeyahoocom-511ab07f	first census	A0394	finance.yahoo.com	2026-11-12	head
 sw-financeyahoocom-72a2f670	first census	A0395	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:15:14Z	5868	yes			
 sw-financeyahoocom-7a36698c	first census	A0396	finance.yahoo.com	2026-11-06	header stamp	2026-11-06T11:00:05Z	7062	yes			
 sw-financeyahoocom-b1ac141d	first census	A0397	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T18:09:09Z	6282	yes			
-sw-financeyahoocom-d2842b9f	first census	A0398	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T16:43:15Z	5981	yes			
+sw-financeyahoocom-d2842b9f	first census	A0398	finance.yahoo.com	2026-11-12	header stamp	2026-11-12T16:43:15Z	6272	yes			
 sw-finboldcom-01	first census	A0399	finbold.com	2026-11-09	header stamp	2026-11-09T11:22:40+00:00	5132	yes			
 sw-finboldcom-02	first census	A0400	finbold.com	2026-11-09	header stamp	2026-11-09T14:30:18+00:00	3725	yes			
 sw-finboldcom-03	first census	A0401	finbold.com	2026-11-12	header stamp	2026-11-12T13:16:28+00:00	3245	yes			
@@ -446,7 +446,7 @@ sw-fortunecom-08	first census	A0428	fortune.com	2026-11-11	header stamp	2026-11-
 sw-fortunecom-09	first census	A0429	fortune.com	2026-11-11	header stamp	2026-11-11T10:59:21-00:00	12070	yes			
 sw-fortunecom-10	first census	A0430	fortune.com	2026-11-12	header stamp	2026-11-12T12:33:17-00:00	5687	yes			
 sw-fortunecom-11	first census	A0431	fortune.com	2026-11-12	header stamp	2026-11-12T10:48:20-00:00	11831	yes			
-sw-fortunecom-12	first census	A0432	fortune.com	2026-11-12	header stamp	2026-11-12T11:58:26-00:00	3428	yes			
+sw-fortunecom-12	first census	A0432	fortune.com	2026-11-12	header stamp	2026-11-12T11:58:26-00:00	3428	yes			yes
 sw-fortunecom-13	first census	A0433	fortune.com	2026-11-12	header stamp	2026-11-12T15:41:24-00:00	4304	yes			
 sw-fortunecom-14	first census	A0434	fortune.com	2026-11-12	header stamp	2026-11-12T16:36:21-00:00	4546	yes			
 sw-fortunecom-15	first census	A0435	fortune.com	2026-11-12	header stamp	2026-11-12T15:21:51-00:00	6351	yes			
@@ -477,7 +477,7 @@ sw-gamedevelopercom-01	first census	A0458	gamedeveloper.com	2026-11-12	header st
 sw-gamerantcom-29658ce5	first census	A0459	gamerant.com	2026-11-12	header stamp	2026-11-12T17:29:06Z	3836	yes			
 sw-gamesbeatcom-01	first census	A0460	gamesbeat.com	2026-11-11	header stamp	2026-11-11T23:18:00+00:00	3128	yes			
 sw-gamesbeatcom-02	first census	A0461	gamesbeat.com	2026-11-12	header stamp	2026-11-12T15:29:37+00:00	3592	yes			
-sw-gamesmarketglobal-cdcee108	first census	A0462	gamesmarket.global	2026-11-12	header stamp	2026-11-12T16:32:02.000Z	1511	yes			
+sw-gamesmarketglobal-cdcee108	first census	A0462	gamesmarket.global	2026-11-12	header stamp	2026-11-12T16:32:02.000Z	1511	yes			yes
 sw-garymarcussubstackcom-01	first census	A0463	garymarcus.substack.com	2026-11-09	header stamp	2026-11-09T12:47:02+00:00	1039	yes			yes
 sw-garymarcussubstackcom-02	first census	A0464	garymarcus.substack.com	2026-11-08	header stamp	2026-11-09T02:04:38+00:00	4027	yes			
 sw-garymarcussubstackcom-03	first census	A0465	garymarcus.substack.com	2026-11-12	header stamp	2026-11-12T14:44:04+00:00	2789	yes			
@@ -576,7 +576,7 @@ sw-joemygodcom-03	first census	A0553	joemygod.com	2026-11-12	header stamp	2026-1
 sw-joemygodcom-04	first census	A0554	joemygod.com	2026-11-12	header stamp	2026-11-12T14:01:35+00:00	3232	yes			
 sw-joemygodcom-05	first census	A0555	joemygod.com	2026-11-12	header stamp	2026-11-12T16:15:11+00:00	2592	yes			
 sw-joemygodcom-d137af02	first census	A0556	joemygod.com	2026-11-11	header stamp	2026-11-11T21:00:36+00:00	2716	yes			
-sw-jpostcom-01	first census	A0557	jpost.com	2026-11-07	header stamp	2026-11-07T16:52:37.000+00:00	7334	yes			
+sw-jpostcom-01	first census	A0557	jpost.com	2026-11-07	header stamp	2026-11-07T16:52:37.000+00:00	7659	yes			
 sw-jpostcom-02	first census	A0030	jpost.com	2026-11-12	header stamp	2026-11-12T17:11:46.000+00:00	3834	yes		read as the same article as globe-1112-resigns by a third reader from another model family (lane pairs_nv8_b, Nov 16, 2026)	
 sw-justthenewscom-01	first census	A0558	justthenews.com	2026-11-08	header stamp	2026-11-08T15:47:29-0500	2411	yes			
 sw-justthenewscom-02	first census	A0559	justthenews.com	2026-11-09	header stamp	2026-11-09T17:44:52-0500	3622	yes			
@@ -636,17 +636,17 @@ sw-msnow-01	first census	A0604	ms.now	2026-11-10	header stamp	2026-11-11T00:32:2
 sw-mtcokr-01	first census	A0605	mt.co.kr	2026-11-11	header stamp	2026-11-12T07:57:52+09:00	5869	yes			
 sw-nairametricscom-01	first census	A0606	nairametrics.com	2026-11-09	header stamp	2026-11-09T08:14:25+00:00	3658	yes			
 sw-nairametricscom-02	first census	A0607	nairametrics.com	2026-11-12	header stamp	2026-11-12T14:49:51+00:00	2908	yes			
-sw-nationalreviewcom-01	first census	A0608	nationalreview.com	2026-11-10	header stamp	2026-11-10T21:06:35.000Z	1396	yes			
+sw-nationalreviewcom-01	first census	A0608	nationalreview.com	2026-11-10	header stamp	2026-11-10T21:06:35.000Z	1396	yes			yes
 sw-nationalreviewcom-02	first census	A0609	nationalreview.com	2026-11-11	header stamp	2026-11-11T09:00:00.000Z	7963	yes			
 sw-natlawreviewcom-01	first census	A0610	natlawreview.com	2026-11-09	read in the saved copy	November 9, 2026	4907	yes			
 sw-nbcnewscom-01	first census	A0611	nbcnews.com	2026-11-09	header stamp	2026-11-10T00:14:06.378Z	7130	yes			
 sw-nbcnewscom-02	first census	A0612	nbcnews.com	2026-11-09	header stamp	2026-11-10T00:02:25.673Z	6972	yes			
 sw-nbcnewscom-03	first census	A0613	nbcnews.com	2026-11-12	header stamp	2026-11-12T14:58:21.848Z	10806	yes			
-sw-nbcnewscom-04	first census	A0614	nbcnews.com	2026-11-09	header stamp	2026-11-09T11:29:23.195Z	3557	yes			
+sw-nbcnewscom-04	first census	A0614	nbcnews.com	2026-11-09	header stamp	2026-11-09T11:29:23.195Z	3557	yes			yes
 sw-nbcnewscom-05	first census	A0615	nbcnews.com	2026-11-09	header stamp	2026-11-09T21:19:50.189Z	8188	yes			
 sw-nbcnewscom-06	first census	A0616	nbcnews.com	2026-11-12	header stamp	2026-11-12T12:44:47.027Z	9875	yes			
 sw-nbcnewscom-07	first census	A0617	nbcnews.com	2026-11-12	header stamp	2026-11-12T15:00:31.266Z	7033	yes			
-sw-nbcnewscom-08	first census	A0618	nbcnews.com	2026-11-12	header stamp	2026-11-12T15:32:30.408Z	3601	yes			
+sw-nbcnewscom-08	first census	A0618	nbcnews.com	2026-11-12	header stamp	2026-11-12T15:32:30.408Z	3601	yes			yes
 sw-nbcnewscom-09	first census	A0619	nbcnews.com	2026-11-12	header stamp	2026-11-12T13:32:09.225Z	5989	yes			
 sw-newsbitcoincom-01	first census	A0620	news.bitcoin.com	2026-11-09	header stamp	2026-11-09T10:30:02+00:00	4911	yes			
 sw-newsbitcoincom-02	first census	A0621	news.bitcoin.com	2026-11-12	header stamp	2026-11-12T12:06:34+00:00	4751	yes			
@@ -661,11 +661,11 @@ sw-newscgtncom-01	first census	A0628	news.cgtn.com	2026-11-12	header stamp	2026-
 sw-newsercom-01	first census	A0629	newser.com	2026-11-09	read in the saved copy	Posted Nov 9, 2026 5:38 AM CST	1699	yes			
 sw-newsercom-02	first census	A0630	newser.com	2026-11-11	read in the saved copy	Posted Nov 11, 2026 5:40 PM CST	1415	yes			
 sw-newsercom-82742fcd	first census	A0631	newser.com	2026-11-12	read in the saved copy	Posted Nov 12, 2026 10:50 AM CST	1402	yes			
-sw-newslettersemianalysis-91720106	first census	A0632	newsletter.semianalysis.com	2026-11-12	header stamp	2026-11-12T18:06:26+00:00	27156	yes			
+sw-newslettersemianalysis-91720106	first census	A0632	newsletter.semianalysis.com	2026-11-12	header stamp	2026-11-12T18:06:26+00:00	27156	yes			yes
 sw-newsletterstrictlyvcco-01	first census	A0633	newsletter.strictlyvc.com	2026-11-12	header stamp	2026-11-12T06:46:54.851Z	15650	yes			
 sw-newsrthkhk-01	first census	A0634	news.rthk.hk	2026-11-09	read in the saved copy	2026-11-09 HKT 16:21	2278	yes			
 sw-newsweekcom-01	first census	A0635	newsweek.com	2026-11-10	header stamp	2026-11-10T23:33:59	16605	yes			
-sw-newsweekcom-02	first census	A0636	newsweek.com	2026-11-11	header stamp	2026-11-11T10:51:41	6162	yes			
+sw-newsweekcom-02	first census	A0636	newsweek.com	2026-11-11	header stamp	2026-11-11T10:51:41	6162	yes			yes
 sw-newsweekcom-abaa5732	first census	A0637	newsweek.com	2026-11-12	header stamp	2026-11-12T16:45:01	8263	yes			
 sw-nintendolifecom-d6bf199a	first census	A0638	nintendolife.com	2026-11-12	header stamp	2026-11-12T17:00:00+00:00	2146	yes			
 sw-novinitecom-01	first census	A0639	novinite.com	2026-11-12	read in the saved copy	November 12, 2026, Thursday // 16:24	10016	yes			
@@ -714,7 +714,7 @@ sw-politicalorg-07	first census	A0678	political.org	2026-11-11	header stamp	2026
 sw-politicalorg-08	first census	A0679	political.org	2026-11-12	header stamp	2026-11-12T06:06:42-08:00	9420	yes			
 sw-politicalorg-09	first census	A0680	political.org	2026-11-08	header stamp	2026-11-08T13:16:17-08:00	7495	yes			
 sw-politicalorg-10	first census	A0681	political.org	2026-11-09	header stamp	2026-11-09T01:31:53-08:00	10278	yes			
-sw-politicalorg-11	first census	A0682	political.org	2026-11-09	header stamp	2026-11-09T11:40:10-08:00	10160	yes			
+sw-politicalorg-11	first census	A0682	political.org	2026-11-09	header stamp	2026-11-09T11:40:10-08:00	10620	yes			
 sw-politicalorg-12	first census	A0683	political.org	2026-11-09	header stamp	2026-11-09T14:43:07-08:00	9921	yes			
 sw-politicalorg-13	first census	A0684	political.org	2026-11-11	header stamp	2026-11-10T21:26:00-08:00	10707	yes			
 sw-politicalorg-68f4c623	first census	A0685	political.org	2026-11-12	header stamp	2026-11-12T08:25:39-08:00	10274	yes			
@@ -750,7 +750,7 @@ sw-qzcom-18	first census	A0714	qz.com	2026-11-12	header stamp	2026-11-12T16:20:5
 sw-qzcom-19	first census	A0715	qz.com	2026-11-12	header stamp	2026-11-12T15:13:27.786Z	2229	yes			
 sw-qzcom-3e59440e	first census	A0716	qz.com	2026-11-12	header stamp	2026-11-12T18:21:57.914Z	2656	yes			
 sw-qzcom-efc3c07a	first census	A0717	qz.com	2026-11-12	header stamp	2026-11-12T18:26:17.254Z	2925	yes			
-sw-rawstorycom-01	first census	A0718	rawstory.com	2026-11-08	header stamp	2026-11-08T21:57:56+00:00	1751	yes			
+sw-rawstorycom-01	first census	A0718	rawstory.com	2026-11-08	header stamp	2026-11-08T21:57:56+00:00	2041	yes			
 sw-rawstorycom-02	first census	A0719	rawstory.com	2026-11-10	header stamp	2026-11-11T03:40:22+00:00	2813	yes			
 sw-rawstorycom-03	first census	A0720	rawstory.com	2026-11-11	header stamp	2026-11-11T23:47:59+00:00	3979	yes			
 sw-rawstorycom-04	first census	A0721	rawstory.com	2026-11-11	header stamp	2026-11-12T02:35:09+00:00	3162	yes			
@@ -817,7 +817,7 @@ sw-sfistcom-02	first census	A0775	sfist.com	2026-11-08	header stamp	2026-11-08T2
 sw-sfistcom-28c8d784	first census	A0776	sfist.com	2026-11-12	header stamp	2026-11-12T17:25:10.000Z	3968	yes			
 sw-sfstandardcom-01	first census	A0777	sfstandard.com	2026-11-08	header stamp	2026-11-08T14:15:00-08:00	5918	yes			
 sw-sfstandardcom-02	first census	A0778	sfstandard.com	2026-11-09	header stamp	2026-11-09T13:23:58-08:00	5791	yes			
-sw-sfstandardcom-03	first census	A0779	sfstandard.com	2026-11-11	header stamp	2026-11-11T15:51:19-08:00	7869	yes			
+sw-sfstandardcom-03	first census	A0779	sfstandard.com	2026-11-11	header stamp	2026-11-11T15:51:19-08:00	8134	yes			
 sw-sfstandardcom-04	first census	A0780	sfstandard.com	2026-11-11	header stamp	2026-11-11T16:53:51-08:00	4124	yes			
 sw-sfstandardcom-05	first census	A0781	sfstandard.com	2026-11-11	header stamp	2026-11-11T17:33:16-08:00	5638	yes			
 sw-sfstandardcom-06	first census	A0782	sfstandard.com	2026-11-12	header stamp	2026-11-11T21:20:00-08:00	11633	yes			
@@ -844,7 +844,7 @@ sw-spectatorcom-ba3b4784	first census	A0801	spectator.com	2026-11-09	header stam
 sw-spyglassorg-01	first census	A0802	spyglass.org	2026-11-09	header stamp	2026-11-09T11:42:10.000Z	1004	yes			yes
 sw-spyglassorg-02	first census	A0803	spyglass.org	2026-11-12	header stamp	2026-11-12T13:01:59.000Z	753	yes			yes
 sw-spytalkco-01	first census	A0804	spytalk.co	2026-11-08	header stamp	2026-11-09T01:40:31+00:00	3038	yes			
-sw-spytalkco-02	first census	A0805	spytalk.co	2026-11-10	header stamp	2026-11-10T21:36:56+00:00	1506	yes			
+sw-spytalkco-02	first census	A0805	spytalk.co	2026-11-10	header stamp	2026-11-10T21:36:56+00:00	1506	yes			yes
 sw-stanforddailycom-01	first census	A0806	stanforddaily.com	2026-11-10	header stamp	2026-11-10T04:22:04-08:00	4639	yes			
 sw-staradvertisercom-efab8d8f	first census	A0030	staradvertiser.com	2026-11-12	header stamp	2026-11-12T16:51:00+00:00	7869	yes		read as the same article as globe-1112-resigns by the eighth independent reading (lane audit_nv8_s8b, Nov 16, 2026)	
 sw-storyboard18com-01	first census	A0807	storyboard18.com	2026-11-09	header stamp	2026-11-09T14:06:46+05:30	6701	yes			
@@ -897,7 +897,7 @@ sw-techslashdotorg-01	first census	A0850	tech.slashdot.org	2026-11-09	read in th
 sw-techtimescom-01	first census	A0851	techtimes.com	2026-11-09	header stamp	2026-11-09T02:30:38-05:00	20158	yes			
 sw-techtimescom-02	first census	A0852	techtimes.com	2026-11-12	header stamp	2026-11-12T10:49:18-05:00	11281	yes			
 sw-teslaraticom-01	first census	A0853	teslarati.com	2026-11-12	header stamp	2026-11-12T05:51:59+00:00	13865	yes			
-sw-thealgorithmicbridgeco-e7377856	first census	A0854	thealgorithmicbridge.com	2026-11-12	header stamp	2026-11-12T17:18:33+00:00	2836	yes			
+sw-thealgorithmicbridgeco-e7377856	first census	A0854	thealgorithmicbridge.com	2026-11-12	header stamp	2026-11-12T17:18:33+00:00	2836	yes			yes
 sw-theamericanconservativ-01	first census	A0855	theamericanconservative.com	2026-11-09	header stamp	2026-11-09T23:00:00+00:00	1284	yes			
 sw-theapplepostcom-74ab5a88	first census	A0856	theapplepost.com	2026-11-12	header stamp	2026-11-12T16:57:09+00:00	6389	yes			
 sw-theapplepostcom-ba457de3	first census	A0857	theapplepost.com	2026-11-12	header stamp	2026-11-12T16:58:29+00:00	6222	yes			
@@ -913,14 +913,14 @@ sw-thedailyupsidecom-01	first census	A0865	thedailyupside.com	2026-11-10	header 
 sw-thedecodercom-01	first census	A0866	the-decoder.com	2026-11-09	header stamp	2026-11-09T11:38:43+00:00	5593	yes			
 sw-thedecodercom-a17315a0	first census	A0867	the-decoder.com	2026-11-03	header stamp	2026-11-03T12:22:12+00:00	1754	yes			
 sw-thedeepviewcom-01	first census	A0868	thedeepview.com	2026-11-09	header stamp	2026-11-09T20:38:59.300Z	3817	yes			
-sw-thedispatchcom-01	first census	A0869	thedispatch.com	2026-11-10	header stamp	2026-11-10T06:02:00+00:00	1639	yes			
+sw-thedispatchcom-01	first census	A0869	thedispatch.com	2026-11-10	header stamp	2026-11-10T06:02:00+00:00	1639	yes			yes
 sw-theenergymagcom-01	first census	A0870	theenergymag.com	2026-11-03	header stamp	2026-11-03T14:00:35.905Z	2285	yes			
 sw-theenergymagcom-02	first census	A0871	theenergymag.com	2026-11-11	header stamp	2026-11-11T13:17:14.951Z	3155	yes			
 sw-thefederalistcom-01	first census	A0872	thefederalist.com	2026-11-10	header stamp	2026-11-10T12:41:25+00:00	8843	yes			
-sw-thefpcom-01	first census	A0873	thefp.com	2026-11-09	header stamp	2026-11-10T04:17:05+00:00	1816	yes			
+sw-thefpcom-01	first census	A0873	thefp.com	2026-11-09	header stamp	2026-11-10T04:17:05+00:00	1816	yes			yes
 sw-thefpcom-02	first census	A0874	thefp.com	2026-11-10	header stamp	2026-11-10T11:19:44+00:00	6202	yes			
-sw-thefpcom-03	first census	A0875	thefp.com	2026-11-09	header stamp	2026-11-10T00:59:28+00:00	1477	yes			
-sw-thefpcom-3d0935c2	first census	A0876	thefp.com	2026-11-12	header stamp	2026-11-12T18:47:44+00:00	1338	yes			
+sw-thefpcom-03	first census	A0875	thefp.com	2026-11-09	header stamp	2026-11-10T00:59:28+00:00	1477	yes			yes
+sw-thefpcom-3d0935c2	first census	A0876	thefp.com	2026-11-12	header stamp	2026-11-12T18:47:44+00:00	1338	yes			yes
 sw-thegatewaypunditcom-01	first census	A0877	thegatewaypundit.com	2026-11-08	header stamp	2026-11-08T18:30:51-06:00	3890	yes			
 sw-thegatewaypunditcom-02	first census	A0878	thegatewaypundit.com	2026-11-11	header stamp	2026-11-11T18:20:30-06:00	3590	yes			
 sw-theglobeandmailcom-01	first census	A0879	theglobeandmail.com	2026-11-10	header stamp	2026-11-10T17:07:34-0500	4435	yes			
@@ -956,7 +956,7 @@ sw-thewrapcom-01	first census	A0907	thewrap.com	2026-11-09	header stamp	2026-11-
 sw-thewrapcom-02	first census	A0908	thewrap.com	2026-11-12	header stamp	2026-11-12T15:38:14+00:00	4126	yes			
 sw-thewrapcom-03	first census	A0909	thewrap.com	2026-11-12	header stamp	2026-11-12T14:00:20+00:00	3899	yes			
 sw-thezvisubstackcom-01	first census	A0910	thezvi.substack.com	2026-11-10	header stamp	2026-11-10T13:01:11+00:00	48827	yes			
-sw-throughlinenews-01	first census	A0911	throughline.news	2026-11-12	header stamp	2026-11-12T15:52:19+00:00	2320	yes			
+sw-throughlinenews-01	first census	A0911	throughline.news	2026-11-12	header stamp	2026-11-12T15:52:19+00:00	2320	yes			yes
 sw-thurrottcom-01	first census	A0912	thurrott.com	2026-11-09	header stamp	2026-11-09T15:22:55+00:00	3779	yes			
 sw-thurrottcom-02	first census	A0913	thurrott.com	2026-11-12	header stamp	2026-11-12T14:31:13+00:00	2560	yes			
 sw-timecom-82f796fe	first census	A0914	time.com	2026-11-12	header stamp	2026-11-12T16:01:40.000Z	2048	yes			
@@ -1021,15 +1021,15 @@ sw-vinnewscom-03	first census	A0968	vinnews.com	2026-11-10	header stamp	2026-11-
 sw-vinnewscom-bc474b31	first census	A0969	vinnews.com	2026-11-12	header stamp	2026-11-12T11:01:48-05:00	2923	yes			
 sw-voiceofemiratescom-01	first census	A0970	voiceofemirates.com	2026-11-09	header stamp	2026-11-09T10:50:15+00:00	2783	yes			
 sw-voiceofemiratescom-02	first census	A0971	voiceofemirates.com	2026-11-12	header stamp	2026-11-12T16:09:44+00:00	3625	yes			
-sw-washingtonexaminercom-01	first census	A0972	washingtonexaminer.com	2026-10-29	header stamp	2026-10-29T18:28:04+00:00	1399	yes			
-sw-washingtonexaminercom-02	first census	A0973	washingtonexaminer.com	2026-11-08	header stamp	2026-11-08T21:11:32+00:00	1494	yes			
-sw-washingtonexaminercom-03	first census	A0974	washingtonexaminer.com	2026-11-09	header stamp	2026-11-09T22:42:59+00:00	1458	yes			
-sw-washingtonexaminercom-04	first census	A0975	washingtonexaminer.com	2026-11-10	header stamp	2026-11-10T15:59:08+00:00	1404	yes			
-sw-washingtonexaminercom-05	first census	A0976	washingtonexaminer.com	2026-11-10	header stamp	2026-11-11T02:21:22+00:00	1377	yes			
-sw-washingtonexaminercom-06	first census	A0977	washingtonexaminer.com	2026-11-11	header stamp	2026-11-12T01:23:53+00:00	1258	yes			
-sw-washingtonexaminercom-07	first census	A0978	washingtonexaminer.com	2026-11-12	header stamp	2026-11-12T14:09:54+00:00	1489	yes			
-sw-washingtonexaminercom-08	first census	A0979	washingtonexaminer.com	2026-11-12	header stamp	2026-11-12T16:31:19+00:00	1147	yes			
-sw-washingtonexaminercom-09	first census	A0980	washingtonexaminer.com	2026-11-10	header stamp	2026-11-10T23:46:30+00:00	1346	yes			
+sw-washingtonexaminercom-01	first census	A0972	washingtonexaminer.com	2026-10-29	header stamp	2026-10-29T18:28:04+00:00	1399	yes			yes
+sw-washingtonexaminercom-02	first census	A0973	washingtonexaminer.com	2026-11-08	header stamp	2026-11-08T21:11:32+00:00	1494	yes			yes
+sw-washingtonexaminercom-03	first census	A0974	washingtonexaminer.com	2026-11-09	header stamp	2026-11-09T22:42:59+00:00	1458	yes			yes
+sw-washingtonexaminercom-04	first census	A0975	washingtonexaminer.com	2026-11-10	header stamp	2026-11-10T15:59:08+00:00	1404	yes			yes
+sw-washingtonexaminercom-05	first census	A0976	washingtonexaminer.com	2026-11-10	header stamp	2026-11-11T02:21:22+00:00	1377	yes			yes
+sw-washingtonexaminercom-06	first census	A0977	washingtonexaminer.com	2026-11-11	header stamp	2026-11-12T01:23:53+00:00	1258	yes			yes
+sw-washingtonexaminercom-07	first census	A0978	washingtonexaminer.com	2026-11-12	header stamp	2026-11-12T14:09:54+00:00	1489	yes			yes
+sw-washingtonexaminercom-08	first census	A0979	washingtonexaminer.com	2026-11-12	header stamp	2026-11-12T16:31:19+00:00	1147	yes			yes
+sw-washingtonexaminercom-09	first census	A0980	washingtonexaminer.com	2026-11-10	header stamp	2026-11-10T23:46:30+00:00	1346	yes			yes
 sw-washingtonsuncom-01	first census	A0981	washingtonsun.com	2026-11-09	header stamp	2026-11-09T22:54:45.959	4580	yes			
 sw-washingtonsuncom-02	first census	A0982	washingtonsun.com	2026-11-10	header stamp	2026-11-10T21:41:04.185	6257	yes			
 sw-washingtonsuncom-03	first census	A0466	washingtonsun.com	2026-11-12	header stamp	2026-11-12T14:00:20.523	4553	yes		read as the same article as sw-gazettecom-5cfc7b8d by a third reader from another model family (lane pairs_nv8_b, Nov 16, 2026)	
@@ -1047,7 +1047,7 @@ sw-windowscentralcom-01	first census	A0993	windowscentral.com	2026-11-12	header 
 sw-windowsreportcom-01	first census	A0994	windowsreport.com	2026-11-09	header stamp	2026-11-09T09:41:16+00:00	3575	yes			
 sw-windowsreportcom-02	first census	A0995	windowsreport.com	2026-11-12	header stamp	2026-11-12T15:56:13+00:00	3457	yes			
 sw-wmalcom-01	first census	A0996	wmal.com	2026-11-12	header stamp	2026-11-12T15:39:39+00:00	3537	yes			
-sw-worldpoliticsreviewcom-01	first census	A0997	worldpoliticsreview.com	2026-11-09	header stamp	2026-11-09T18:26:51+00:00	1848	yes			
+sw-worldpoliticsreviewcom-01	first census	A0997	worldpoliticsreview.com	2026-11-09	header stamp	2026-11-09T18:26:51+00:00	1848	yes			yes
 sw-wpxicom-01	first census	A0998	wpxi.com	2026-11-09	header stamp	2026-11-09T13:12:22.568Z	3981	yes			
 sw-wtopcom-01	first census	A0999	wtop.com	2026-11-11	header stamp	2026-11-11T16:07:31-05:00	5937	yes			
 sw-wtopcom-02	first census	A1000	wtop.com	2026-11-11	header stamp	2026-11-11T13:08:25-05:00	7514	yes			
@@ -1075,7 +1075,7 @@ tnr-problem-worse	first census	A1019	newrepublic.com	2026-11-12	header stamp	202
 toms-anthropic-nsc	first census	A1020	tomshardware.com	2025-08-27	header stamp	2025-08-27T18:38:16Z	4410	no	dated 2025-08-27, before the fifteen days (a background page)		
 toms-summoned	first census	A1021	tomshardware.com	2026-11-09	header stamp	2026-11-09T15:57:13Z	10843	yes			
 tpm-no-escaping	first census	A1022	talkingpointsmemo.com	2026-11-11	header stamp	2026-11-11T15:51:39+00:00	7575	yes			
-tpm-perfect-storm	first census	A1023	talkingpointsmemo.com	2026-11-09	header stamp	2026-11-09T16:33:09+00:00	3901	yes			
+tpm-perfect-storm	first census	A1023	talkingpointsmemo.com	2026-11-09	header stamp	2026-11-09T16:33:09+00:00	3901	yes			yes
 x-asialens-nov6	first census	A1024	x.com	2026-11-06	post	Sat Nov 07 02:38:14 +0000 2026	3331	yes			
 x-dream1984-article	first census	A1025	x.com	2026-11-12	post	Thu Nov 12 05:14:03 +0000 2026	35764	yes			
 x-hfacgop-letter	first census	A1026	x.com	2026-11-05	post	Thu Nov 05 20:13:11 +0000 2026	4302	yes			

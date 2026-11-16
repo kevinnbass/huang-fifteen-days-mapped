@@ -386,7 +386,7 @@ sw-financeyahoocom-07	https://finance.yahoo.com/markets/stocks/articles/nvidia-b
 sw-financeyahoocom-08	https://finance.yahoo.com/technology/articles/nvidia-board-investigates-jensen-huang-095021746.html	2026-11-12T19:09:39Z	A0301	yes		Coons
 sw-financeyahoocom-09	https://finance.yahoo.com/video/nvidia-sinks-on-spy-probe-as-trump-backs-jensen-huang-hes-an-honorable-guy-135219317.html	2026-11-12T19:09:40Z	A0374	yes		
 sw-financeyahoocom-10	https://finance.yahoo.com/markets/stocks/articles/nvidia-slides-premarket-stock-futures-132000151.html	2026-11-12T19:09:41Z	A0375	yes		
-sw-financeyahoocom-11	https://finance.yahoo.com/markets/article/trump-defends-jensen-huang-but-other-republicans-could-turn-up-the-pressure-quickly-144235766.html	2026-11-12T19:09:43Z	A0376	yes		Cornyn;Warren
+sw-financeyahoocom-11	https://finance.yahoo.com/markets/article/trump-defends-jensen-huang-but-other-republicans-could-turn-up-the-pressure-quickly-144235766.html	2026-11-12T19:09:43Z	A0376	yes		Cornyn;Mast;Warren
 sw-financeyahoocom-12	https://finance.yahoo.com/markets/stocks/articles/nvidia-6-p-500-jensen-230000817.html	2026-11-12T19:09:44Z	A0377	yes		
 sw-financeyahoocom-13	https://finance.yahoo.com/markets/stocks/articles/nvidia-once-hot-stock-falling-170311712.html	2026-11-12T19:09:46Z	A0378	yes		
 sw-financeyahoocom-14	https://finance.yahoo.com/markets/stocks/articles/trump-says-jensen-huang-stay-170000675.html	2026-11-12T19:09:47Z	A0379	yes		
@@ -412,7 +412,7 @@ sw-financeyahoocom-511ab07f	https://finance.yahoo.com/technology/article/nvidia-
 sw-financeyahoocom-72a2f670	https://finance.yahoo.com/technology/ai/articles/sex-spies-exits-rock-nvidia-181514595.html	2026-11-12T19:56:39Z	A0395	yes		
 sw-financeyahoocom-7a36698c	https://finance.yahoo.com/technology/ai/articles/chinas-nvidia-h200-bottleneck-deepens-110005761.html	2026-11-12T19:56:37Z	A0396	yes		
 sw-financeyahoocom-b1ac141d	https://finance.yahoo.com/markets/stocks/articles/5-star-analyst-revamps-nvidia-180909183.html	2026-11-12T19:56:38Z	A0397	yes		
-sw-financeyahoocom-d2842b9f	https://finance.yahoo.com/markets/article/jensen-huangs-nvidia-ousting-may-signal-shifting-winds-on-china-in-washington-164315699.html	2026-11-12T19:56:38Z	A0398	yes		Banks;Coons;Crawford;Jeffries;Mast;Moolenaar;Schumer;Warren
+sw-financeyahoocom-d2842b9f	https://finance.yahoo.com/markets/article/jensen-huangs-nvidia-ousting-may-signal-shifting-winds-on-china-in-washington-164315699.html	2026-11-12T19:56:38Z	A0398	yes		Banks;Coons;Crawford;Jeffries;Johnson;Mast;Moolenaar;Schumer;Warren
 sw-finboldcom-01	https://finbold.com/heres-how-jensen-huangs-affair-could-pump-nvidia-stock/	2026-11-12T19:10:16Z	A0399	yes		
 sw-finboldcom-02	https://finbold.com/google-stock-price-prediction-after-alphabet-escalates-ai-chip-war-with-nvidia/	2026-11-12T19:10:16Z	A0400	yes		
 sw-finboldcom-03	https://finbold.com/did-elon-musk-just-become-jensen-huangs-boss/	2026-11-12T19:10:17Z	A0401	yes		
@@ -576,7 +576,7 @@ sw-joemygodcom-03	https://www.joemygod.com/2026/11/nyt-nvidia-ceo-also-had-affai
 sw-joemygodcom-04	https://www.joemygod.com/2026/11/nvidia-ceo-resigns-after-exposure-of-affair-with-spy/	2026-11-12T19:11:45Z	A0554	yes		
 sw-joemygodcom-05	https://www.joemygod.com/2026/11/trump-calls-for-tim-cook-to-replace-ex-nvidia-ceo/	2026-11-12T19:11:45Z	A0555	yes		
 sw-joemygodcom-d137af02	https://www.joemygod.com/2026/11/bessent-confronts-lutnick-over-nvidia-spy-scandal/	2026-11-12T19:18:47Z	A0556	yes		
-sw-jpostcom-01	https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-914132	2026-11-12T19:11:45Z	A0557	yes		
+sw-jpostcom-01	https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-914132	2026-11-12T19:11:45Z	A0557	yes		Johnson
 sw-jpostcom-02	https://www.jpost.com/international/article-914737	2026-11-12T19:11:46Z	A0030	yes		
 sw-justthenewscom-01	https://justthenews.com/nation/technology/nvidia-ceo-admits-affair-board-launches-investigation	2026-11-12T19:11:46Z	A0558	yes		
 sw-justthenewscom-02	https://justthenews.com/government/white-house/trump-says-nvidia-ceo-amazing-guy-despite-admitting-affair-says-fbi-looking	2026-11-12T19:11:47Z	A0559	yes		
@@ -714,7 +714,7 @@ sw-politicalorg-07	https://political.org/2026/11/11/senators-elizabeth-warren-an
 sw-politicalorg-08	https://political.org/2026/11/12/nvidia-ceo-jensen-huang-resigns-amid-affair-and-alleged-chinese-spy-scandal-cfo-colette-kress-named-interim-ceo/	2026-11-12T19:13:01Z	A0679	yes		
 sw-politicalorg-09	https://political.org/2026/11/08/nvidia-opens-investigation-after-report-ceo-jensen-huang-was-target-of-foreign-intelligence/	2026-11-12T19:13:02Z	A0680	yes		Crawford;Mast;Moolenaar
 sw-politicalorg-10	https://political.org/2026/11/09/nvidia-shares-slide-as-board-opens-probe-into-ceo-jensen-huang-over-alleged-chinese-spy-link/	2026-11-12T19:13:04Z	A0681	yes		
-sw-politicalorg-11	https://political.org/2026/11/09/sen-chris-coons-demands-probe-into-nvidia-ceo-jensen-huangs-affair-with-suspected-chinese-spy/	2026-11-12T19:13:05Z	A0682	yes		Coons;Garcia;Magaziner
+sw-politicalorg-11	https://political.org/2026/11/09/sen-chris-coons-demands-probe-into-nvidia-ceo-jensen-huangs-affair-with-suspected-chinese-spy/	2026-11-12T19:13:05Z	A0682	yes		Coons;Crawford;Garcia;Magaziner;Mast;Moolenaar
 sw-politicalorg-12	https://political.org/2026/11/09/trump-says-fbi-is-investigating-nvidia-ceo-jensen-huang-over-alleged-chinese-intelligence-effort/	2026-11-12T19:13:06Z	A0683	yes		
 sw-politicalorg-13	https://political.org/2026/11/10/nvidia-ceo-jensen-huangs-admitted-affair-with-alleged-chinese-spy-alice-huang-raises-stakes-for-washingtons-ai-chip-policy/	2026-11-12T19:13:07Z	A0684	yes		Banks;Crawford;Mast;Moolenaar;Warren
 sw-politicalorg-68f4c623	https://political.org/2026/11/12/trump-says-tim-cook-should-replace-jensen-huang-as-nvidia-ceo-after-huangs-resignation/	2026-11-12T19:56:53Z	A0685	yes		
@@ -750,7 +750,7 @@ sw-qzcom-18	https://qz.com/kimberly-powell-nvidia-healthcare-chief-jensen-huang-
 sw-qzcom-19	https://qz.com/nvidia-huang-resigns-largest-market-value-wipeout-111226	2026-11-12T19:13:30Z	A0715	yes		
 sw-qzcom-3e59440e	https://qz.com/justice-department-alice-huang-super-micro-smuggling-china-111226	2026-11-12T19:56:55Z	A0716	yes		
 sw-qzcom-efc3c07a	https://qz.com/nvidia-huang-resigns-anthropic-ipo-pledge-111226	2026-11-12T19:56:56Z	A0717	yes		
-sw-rawstorycom-01	https://www.rawstory.com/trump-jensen-huang/	2026-11-12T19:13:31Z	A0718	yes		
+sw-rawstorycom-01	https://www.rawstory.com/trump-jensen-huang/	2026-11-12T19:13:31Z	A0718	yes		Johnson
 sw-rawstorycom-02	https://www.rawstory.com/howard-lutnick-jensen-huang/	2026-11-12T19:13:32Z	A0719	yes		
 sw-rawstorycom-03	https://www.rawstory.com/jensen-huang-trump-second-affair/	2026-11-12T19:13:32Z	A0720	yes		
 sw-rawstorycom-04	https://www.rawstory.com/elizabeth-warren-jensen-huang/	2026-11-12T19:13:33Z	A0721	yes		Coons;Cramer;Mast;Warren
@@ -817,7 +817,7 @@ sw-sfistcom-02	https://sfist.com/2026/11/08/nvidia-to-investigate-ceo-amid-alleg
 sw-sfistcom-28c8d784	https://sfist.com/2026/11/12/jensen-huang-resigns-nvidia-shares-tumble/	2026-11-12T19:56:57Z	A0776	yes		
 sw-sfstandardcom-01	https://sfstandard.com/2026/11/08/nvidia-jensen-huang-affair-board-investigation-chinese-spy/	2026-11-12T19:14:26Z	A0777	yes		Coons
 sw-sfstandardcom-02	https://sfstandard.com/2026/11/09/jensen-huang-nvidida-investigation-affair-spy/	2026-11-12T19:14:27Z	A0778	yes		
-sw-sfstandardcom-03	https://sfstandard.com/2026/11/11/as-jensen-huang-s-future-hangs-balance-10-things-need-know/	2026-11-12T19:14:27Z	A0779	yes		
+sw-sfstandardcom-03	https://sfstandard.com/2026/11/11/as-jensen-huang-s-future-hangs-balance-10-things-need-know/	2026-11-12T19:14:27Z	A0779	yes		Johnson
 sw-sfstandardcom-04	https://sfstandard.com/2026/11/11/defenders-detractors-disbelief-reaction-jensen-huang-s-scandal/	2026-11-12T19:14:28Z	A0780	yes		
 sw-sfstandardcom-05	https://sfstandard.com/2026/11/11/jensen-huang-nvidia-ouster-markets-roiled/	2026-11-12T19:14:28Z	A0781	yes		
 sw-sfstandardcom-06	https://sfstandard.com/2026/11/11/nvidia-ceo-jensen-huang-profile/	2026-11-12T19:14:28Z	A0782	yes		

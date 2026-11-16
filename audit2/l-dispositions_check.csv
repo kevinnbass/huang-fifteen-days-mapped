@@ -1,0 +1,47 @@
+part,finding_id,holds,note
+A,A-18,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals. The earlier release’s pending companion correction was subsequently applied at the separately frozen companion commit."
+C,C-01,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+C,C-02,yes,Both legal-name articles read; label is 67. All 27 independent article recounts agree; source guard compares article sets.
+C,C-03,yes,"Four original headlines, both current context cases and representative historical/code credits checked. README now gives a non-exhaustive disclosure."
+C,C-04,yes,Effective provenance is 499 reader and six builder verdicts. All six builder pairs read; corrected sentence and README hold.
+C,C-CLOSE,yes,The specific money/count/disclosure/provenance corrections all appear. The separate inherited six-versus-ten status wording issue is recorded in C-01.
+B,B1 all lobbyists own money network,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+B,B1 reduction from former all-lobbyist sum network,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+B,A identity LM0004,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+B,A unchanged-member sample mast LM0004,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+B,B2 filing day,yes,Read saved filing and README: document date distinguished from event dates; publication day remains unresolved.
+B,B3 additional recovery sw-japantimescojp-02,yes,Read recovery and saved HTML: available preview reproduced; full remainder unavailable and partial flag retained.
+B,B3 additional recovery sw-garymarcussubstackcom-01,yes,Read recovery and saved HTML: available preview reproduced; full remainder unavailable and partial flag retained.
+B,B5 pair reader provenance,yes,Effective provenance is 499 reader and six builder verdicts. All six builder pairs read; corrected sentence and README hold.
+B,B5 member count Crawford,yes,Both legal-name articles read; label is 67. All 27 independent article recounts agree; source guard compares article sets.
+D,answer to the ninth reading: A A-09,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+D,answer to the ninth reading: C C-01,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+D,answer to the ninth reading: C C-04,yes,Both legal-name articles read; label is 67. All 27 independent article recounts agree; source guard compares article sets.
+D,answer to the ninth reading: C C-05,yes,"Four original headlines, both current context cases and representative historical/code credits checked. README now gives a non-exhaustive disclosure."
+D,answer to the ninth reading: C C-06,yes,Effective provenance is 499 reader and six builder verdicts. All six builder pairs read; corrected sentence and README hold.
+D,answer to the ninth reading: C C-CLOSE,yes,The specific money/count/disclosure/provenance corrections all appear. The separate inherited six-versus-ten status wording issue is recorded in C-01.
+D,answer to the ninth reading: B C own-money lobbyist total network,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+D,answer to the ninth reading: B C current public undrawn names,yes,"Four original headlines, both current context cases and representative historical/code credits checked. README now gives a non-exhaustive disclosure."
+D,answer to the ninth reading: D answer to the eighth reading: C C-06,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+D,answer to the ninth reading: D answer to the eighth reading: C C-CLOSE,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+D,answer to the ninth reading: D answer to the eighth reading: B C lobbyist total current network,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+D,answer to the ninth reading: D answer to the eighth reading: D answer to the seventh reading: C-CLOSE,yes,"LM0004 is committee money; TY056 is $2,000 in two gifts. Non-SELF census and SELF controls support the replacement rule and the corrected totals."
+gaps,art-fc-ft-1107-romantic,yes,Saved block/error or empty capture read; current article/page tables exclude it. Other readable copies are separate records.
+gaps,art-fc-ft-1112-singapore,yes,Saved block/error or empty capture read; current article/page tables exclude it. Other readable copies are separate records.
+gaps,art-fc-gvwire-nyt-1109-powerful,yes,Saved block/error or empty capture read; current article/page tables exclude it. Other readable copies are separate records.
+gaps,art-fc-rec-axios-1111,yes,Saved block/error or empty capture read; current article/page tables exclude it. Other readable copies are separate records.
+gaps,art-fc-rec-marketscreener-blanche,yes,Saved block/error or empty capture read; current article/page tables exclude it. Other readable copies are separate records.
+gaps,art-fc-rec-mha-20250303,yes,Saved block/error or empty capture read; current article/page tables exclude it. Other readable copies are separate records.
+gaps,sw-nzheraldconz-01,yes,Saved block/error or empty capture read; current article/page tables exclude it. Other readable copies are separate records.
+gaps,sw-nzheraldconz-02,yes,Saved block/error or empty capture read; current article/page tables exclude it. Other readable copies are separate records.
+gaps,art-line-wex-scott-1112,yes,Available saved preview/excerpt read; current table counts it with saved_in_part yes. Unread remainder remains a gap.
+gaps,sw-forbesmiddleeastcom-01,yes,Available saved preview/excerpt read; current table counts it with saved_in_part yes. Unread remainder remains a gap.
+gaps,sw-newsbloomberglawcom-01,yes,Available saved preview/excerpt read; current table counts it with saved_in_part yes. Unread remainder remains a gap.
+gaps,sw-newsbloomberglawcom-04,yes,Available saved preview/excerpt read; current table counts it with saved_in_part yes. Unread remainder remains a gap.
+gaps,man-efbf718d0a5a,yes,Available saved preview/excerpt read; current table counts it with saved_in_part yes. Unread remainder remains a gap.
+gaps,art-fc-wb-ft-1107-romantic,yes,Available saved preview/excerpt read; current table counts it with saved_in_part yes. Unread remainder remains a gap.
+gaps,sw-capitalbriefcom-01,yes,Available saved preview/excerpt read; current table counts it with saved_in_part yes. Unread remainder remains a gap.
+gaps,man-economist-1111-01,yes,Damaged text layer remains flagged partial; joined to same-address copy; no drawn chip cites this capture.
+gaps,sw-japantimescojp-02,yes,Available saved preview/excerpt read; current table counts it with saved_in_part yes. Unread remainder remains a gap.
+gaps,sw-garymarcussubstackcom-01,yes,Available saved preview/excerpt read; current table counts it with saved_in_part yes. Unread remainder remains a gap.
+gaps,B2 filing publication day,yes,Read full saved filing: Nov 12 signature/release; SEC publication timestamp not supplied. README states the limit.
