@@ -150,7 +150,7 @@ L00354	megaspeed	cnbc-1112-megaspeed-asia	A0021	yes	yes	yes	para_nv8_g
 L00355	megaspeed	cnbc-1112-megaspeed-asia	A0021	yes	yes	yes	para_nv8_g	
 L00356	singapore	cnbc-1112-megaspeed-asia	A0021	yes	yes	yes	para_nv8_e	
 L00358	singapore	cnbc-1112-megaspeed-asia	A0021	yes	yes	yes	para_nv8_e	
-L00359	megaspeed	cnbc-1112-megaspeed-asia	A0021	yes	yes	yes	para_nv8_g	
+L00359	megaspeed	cnbc-1112-megaspeed-asia	A0021	yes	yes		para_nv8_g	
 L00360	megaspeed	cnbc-1112-megaspeed-asia	A0021				para_nv8_g	yes
 L00381	board	cnn-1112-who-lied	A0023	yes	yes	yes	para_nv8_b	
 L00384	board	cnn-1112-who-lied	A0023	yes	yes	yes	para_nv8_b	
@@ -216,7 +216,7 @@ L00518	trump	huffpost-trump-china	A0035	yes	yes	yes	para_nv8_d
 L00520	whitehouse	huffpost-trump-china	A0035	yes	yes	yes	para_nv8_d	
 L00521	whitehouse	huffpost-trump-china	A0035	yes	yes	yes	para_nv8_d	
 L00522	warren	huffpost-trump-china	A0035	yes	yes		para_nv8_h	
-L00523	banks	huffpost-trump-china	A0035	yes	yes	yes	para_nv8_h	
+L00523	banks	huffpost-trump-china	A0035	yes	yes		para_nv8_h	
 L00524	nvidia	huffpost-trump-china	A0035	yes	yes	yes	para_nv8_a	
 L00525	huang	huffpost-trump-china	A0035	yes	yes	yes	para_nv8_c	
 L00535	singapore	mha-clarification-a	A0036				para_nv8_e	yes
@@ -246,7 +246,7 @@ L00573	huang	msnow-resigns	A0040	yes	yes		para_nv8_c
 L00575	trump	msnow-resigns	A0040	yes	yes	yes	para_nv8_d	
 L00578	rubio	msnow-resigns	A0040				para_nv8_g	yes
 L00579	trump	msnow-resigns	A0040	yes	yes	yes	para_nv8_d	
-L00581	commerce	msnow-resigns	A0040	yes	yes	yes	para_nv8_g	
+L00581	commerce	msnow-resigns	A0040	yes	yes		para_nv8_g	
 L00586	trump	nation-oblivion	A0041	yes	yes	yes	para_nv8_d	
 L00587	trump	nation-oblivion	A0041	yes	yes	yes	para_nv8_d	
 L00591	huang	nation-oblivion	A0041	yes	yes	yes	para_nv8_c	
@@ -477,7 +477,7 @@ L01019	board	sw-acecommentsmunu-2695c925	A0073	yes			para_nv8_b
 L01022	huang	sw-acecommentsmunu-2695c925	A0073	yes	yes	yes	para_nv8_c	
 L01024	nvidia	sw-adweekcom-01	A0074	yes	yes	yes	para_nv8_a	
 L01025	board	sw-aipolicydailyorg-01	A0075	yes	yes	yes	para_nv8_b	
-L01027	rubio	sw-aipolicydailyorg-01	A0075	yes	yes	yes	para_nv8_g	
+L01027	rubio	sw-aipolicydailyorg-01	A0075	yes	yes		para_nv8_g	
 L01028	trump	sw-aipolicydailyorg-01	A0075	yes	yes	yes	para_nv8_d	
 L01029	nvidia	sw-aipolicydailyorg-01	A0075	yes	yes	yes	para_nv8_a	
 L01030	board	sw-aipolicydailyorg-01	A0075	yes			para_nv8_b	
@@ -654,7 +654,7 @@ L01354	mast	sw-aninewsin-05	A0100	yes	yes	yes	para_nv8_f
 L01355	nvidia	sw-aninewsin-05	A0100	yes	yes	yes	para_nv8_a	
 L01363	board	sw-aninewsin-06	A0101	yes	yes	yes	para_nv8_b	
 L01365	board	sw-aninewsin-07	A0102				para_nv8_b	yes
-L01366	huang	sw-aninewsin-07	A0102	yes	yes	yes	para_nv8_c	
+L01366	huang	sw-aninewsin-07	A0102	yes	yes		para_nv8_c	
 L01370	huang	sw-aninewsin-08	A0103	yes	yes	yes	para_nv8_c	
 L01371	nvidia	sw-aninewsin-08	A0103	yes	yes	yes	para_nv8_a	
 L01379	nvidia	sw-aninewsin-09	A0104	yes	yes	yes	para_nv8_a	
@@ -1067,7 +1067,7 @@ L02343	mast	sw-chatgptiseatingtheworl-01	A0200	yes
 L02344	moolenaar	sw-chatgptiseatingtheworl-01	A0200	yes				
 L02345	crawford	sw-chatgptiseatingtheworl-01	A0200	yes				
 L02347	megaspeed	sw-chinamoneynetworkcom-01	A0201	yes	yes	yes	para_nv8_g	
-L02348	megaspeed	sw-chinamoneynetworkcom-01	A0201	yes	yes	yes	para_nv8_g	
+L02348	megaspeed	sw-chinamoneynetworkcom-01	A0201	yes	yes		para_nv8_g	
 L02352	commerce	sw-chinamoneynetworkcom-01	A0201	yes	yes	yes	para_nv8_g	
 L02353	embassy	sw-chinamoneynetworkcom-01	A0201	yes	yes	yes	para_nv8_e	
 L02355	singapore	sw-chinamoneynetworkcom-01	A0201	yes	yes	yes	para_nv8_e	
@@ -1128,7 +1128,7 @@ L02463	suit	sw-cnbccom-03	A0212	yes	yes	yes	para_nv8_h
 L02467	trump	sw-cnbccom-04	A0213	yes	yes	yes	para_nv8_d	
 L02470	megaspeed	sw-cnbccom-04	A0213				para_nv8_g	yes
 L02472	commerce	sw-cnbccom-04	A0213	yes	yes	yes	para_nv8_g	
-L02475	moolenaar	sw-cnbccom-04	A0213	yes	yes	yes	para_nv8_f	
+L02475	moolenaar	sw-cnbccom-04	A0213	yes	yes		para_nv8_f	
 L02478	nvidia	sw-cnbccom-04	A0213	yes	yes	yes	para_nv8_a	
 L02479	moorhead	sw-cnbccom-04	A0213	yes	yes	yes	para_nv8_h	
 L02480	moorhead	sw-cnbccom-04	A0213	yes	yes		para_nv8_h	
@@ -1357,7 +1357,7 @@ L03164	rubio	sw-dailykoscom-02	A0273	yes	yes	yes	para_nv8_g
 L03165	trump	sw-dailykoscom-02	A0273	yes	yes	yes	para_nv8_d	
 L03166	nvidia	sw-dailykoscom-02	A0273	yes	yes	yes	para_nv8_a	
 L03167	board	sw-dailykoscom-02	A0273	yes	yes	yes	para_nv8_b	
-L03168	trump	sw-dailykoscom-02	A0273	yes	yes	yes	para_nv8_d	
+L03168	trump	sw-dailykoscom-02	A0273	yes	yes		para_nv8_d	
 L03169	huang	sw-dailykoscom-02	A0273	yes	yes	yes	para_nv8_c	
 L03178	board	sw-dailykoscom-04	A0275	yes			para_nv8_b	
 L03179	nvidia	sw-dailykoscom-04	A0275	yes	yes	yes	para_nv8_a	
@@ -1468,7 +1468,7 @@ L03413	embassy	sw-decryptco-d0d0b9f5	A0301				para_nv8_e	yes
 L03418	trump	sw-decryptco-d0d0b9f5	A0301	yes	yes	yes	para_nv8_d	
 L03419	nvidia	sw-defectorcom-01	A0302	yes	yes	yes	para_nv8_a	
 L03420	nvidia	sw-defectorcom-01	A0302	yes	yes	yes	para_nv8_a	
-L03421	commerce	sw-defectorcom-01	A0302	yes	yes	yes	para_nv8_g	
+L03421	commerce	sw-defectorcom-01	A0302	yes	yes		para_nv8_g	
 L03424	rubio	sw-defectorcom-01	A0302	yes	yes	yes	para_nv8_g	
 L03425	huang	sw-defectorcom-01	A0302	yes	yes	yes	para_nv8_c	
 L03428	huang	sw-defectorcom-01	A0302	yes	yes	yes	para_nv8_c	
@@ -1492,7 +1492,7 @@ L03456	singapore	sw-dexertocom-02	A0305	yes	yes	yes	para_nv8_e
 L03457	nvidia	sw-dexertocom-02	A0305	yes	yes	yes	para_nv8_a	
 L03465	nvidia	sw-digitaltrendscom-01	A0306	yes	yes	yes	para_nv8_a	
 L03466	justice	sw-digitaltrendscom-01	A0306	yes	yes	yes	para_nv8_g	
-L03467	megaspeed	sw-digitaltrendscom-01	A0306	yes	yes	yes	para_nv8_g	
+L03467	megaspeed	sw-digitaltrendscom-01	A0306	yes	yes		para_nv8_g	
 L03469	coons	sw-digitaltrendscom-01	A0306				para_nv8_h	yes
 L03470	singapore	sw-digitaltrendscom-01	A0306	yes	yes		para_nv8_e	
 L03471	embassy	sw-digitaltrendscom-01	A0306	yes	yes		para_nv8_e	
@@ -1676,7 +1676,7 @@ L03766	trump	sw-ensedailycom-11	A0344	yes	yes	yes	para_nv8_d
 L03768	china	sw-ensedailycom-11	A0344	yes	yes	yes	para_nv8_e	
 L03769	trump	sw-ensedailycom-11	A0344	yes	yes	yes	para_nv8_d	
 L03770	trump	sw-ensedailycom-11	A0344	yes	yes	yes	para_nv8_d	
-L03771	megaspeed	sw-ensedailycom-12	A0345	yes	yes	yes	para_nv8_g	
+L03771	megaspeed	sw-ensedailycom-12	A0345	yes	yes		para_nv8_g	
 L03772	nvidia	sw-ensedailycom-12	A0345	yes	yes	yes	para_nv8_a	
 L03773	nvidia	sw-ensedailycom-12	A0345	yes			para_nv8_a	
 L03774	huang	sw-ensedailycom-12	A0345				para_nv8_c	yes
@@ -1687,7 +1687,7 @@ L03781	globaltimes	sw-ensedailycom-13	A0346	yes	yes	yes	para_nv8_e
 L03785	rubio	sw-ensedailycom-14	A0347	yes	yes	yes	para_nv8_g	
 L03788	rubio	sw-ensedailycom-14	A0347	yes	yes	yes	para_nv8_g	
 L03789	commerce	sw-ensedailycom-14	A0347	yes	yes	yes	para_nv8_g	
-L03790	commerce	sw-ensedailycom-14	A0347	yes	yes	yes	para_nv8_g	
+L03790	commerce	sw-ensedailycom-14	A0347	yes	yes		para_nv8_g	
 L03791	cramer	sw-ensedailycom-14	A0347	yes	yes	yes	para_nv8_h	
 L03793	china	sw-ensedailycom-15	A0348	yes	yes	yes	para_nv8_e	
 L03794	board	sw-ensedailycom-15	A0348	yes	yes	yes	para_nv8_b	
@@ -2252,7 +2252,7 @@ L05128	nvidia	sw-implicatorai-01	A0523				para_nv8_a	yes
 L05129	china	sw-implicatorai-01	A0523	yes	yes	yes	para_nv8_e	
 L05130	mast	sw-implicatorai-01	A0523	yes	yes	yes	para_nv8_f	
 L05136	warren	sw-implicatorai-01	A0523	yes	yes	yes	para_nv8_h	
-L05137	moolenaar	sw-implicatorai-01	A0523	yes	yes	yes	para_nv8_f	
+L05137	moolenaar	sw-implicatorai-01	A0523	yes	yes		para_nv8_f	
 L05140	board	sw-implicatorai-02	A0524	yes	yes	yes	para_nv8_b	
 L05144	whitehouse	sw-implicatorai-02	A0524	yes	yes	yes	para_nv8_d	
 L05146	coons	sw-implicatorai-02	A0524				para_nv8_h	yes
@@ -2353,7 +2353,7 @@ L05375	jeffries	sw-internazionaleit-02	A0537	yes	yes	yes	para_nv8_h
 L05377	megaspeed	sw-internazionaleit-02	A0537	yes	yes	yes	para_nv8_g	
 L05379	board	sw-internazionaleit-02	A0537	yes	yes	yes	para_nv8_b	
 L05380	huang	sw-internazionaleit-02	A0537	yes	yes	yes	para_nv8_c	
-L05381	commerce	sw-internetgovernanceorg-593ba1ee	A0538	yes	yes	yes	para_nv8_g	
+L05381	commerce	sw-internetgovernanceorg-593ba1ee	A0538	yes	yes		para_nv8_g	
 L05382	justice	sw-internetgovernanceorg-593ba1ee	A0538	yes	yes	yes	para_nv8_g	
 L05383	commerce	sw-internetgovernanceorg-593ba1ee	A0538	yes	yes	yes	para_nv8_g	
 L05387	nvidia	sw-invenglobalcom-7d717705	A0539	yes	yes	yes	para_nv8_a	
@@ -2463,7 +2463,7 @@ L05611	nvidia	sw-koreatimescokr-01	A0572	yes	yes	yes	para_nv8_a
 L05612	megaspeed	sw-koreatimescokr-01	A0572	yes	yes	yes	para_nv8_g	
 L05613	megaspeed	sw-koreatimescokr-01	A0572	yes	yes	yes	para_nv8_g	
 L05615	singapore	sw-koreatimescokr-01	A0572	yes	yes	yes	para_nv8_e	
-L05616	megaspeed	sw-koreatimescokr-01	A0572	yes	yes	yes	para_nv8_g	
+L05616	megaspeed	sw-koreatimescokr-01	A0572	yes	yes		para_nv8_g	
 L05618	china	sw-koreatimescokr-01	A0572	yes	yes	yes	para_nv8_e	
 L05623	nvidia	sw-kotakucom-01	A0573	yes	yes	yes	para_nv8_a	
 L05624	board	sw-kotakucom-02	A0574	yes	yes	yes	para_nv8_b	
@@ -2471,7 +2471,7 @@ L05625	huang	sw-kotakucom-02	A0574	yes	yes	yes	para_nv8_c
 L05626	huang	sw-kotakucom-02	A0574	yes	yes	yes	para_nv8_c	
 L05628	suit	sw-kotakucom-03	A0575	yes	yes	yes	para_nv8_h	
 L05629	suit	sw-kotakucom-03	A0575	yes	yes	yes	para_nv8_h	
-L05630	suit	sw-kotakucom-03	A0575	yes	yes	yes	para_nv8_h	
+L05630	suit	sw-kotakucom-03	A0575	yes	yes		para_nv8_h	
 L05635	board	sw-kotakucom-04	A0576	yes	yes	yes	para_nv8_b	
 L05636	huang	sw-kotakucom-04	A0576	yes	yes	yes	para_nv8_c	
 L05637	board	sw-kotakucom-04	A0576	yes	yes	yes	para_nv8_b	
@@ -2792,7 +2792,7 @@ L06343	board	sw-nprorg-01	A0640	yes	yes	yes	para_nv8_b
 L06350	trump	sw-nprorg-02	A0641				para_nv8_d	yes
 L06351	nvidia	sw-nprorg-02	A0641	yes	yes	yes	para_nv8_a	
 L06353	bresnick	sw-nprorg-02	A0641	yes	yes	yes	para_nv8_h	
-L06355	china	sw-nprorg-02	A0641	yes	yes	yes	para_nv8_e	
+L06355	china	sw-nprorg-02	A0641	yes	yes		para_nv8_e	
 L06356	huang	sw-nprorg-02	A0641	yes	yes	yes	para_nv8_c	
 L06363	china	sw-nprorg-03	A0640	yes	yes	yes	para_nv8_e	
 L06364	huang	sw-nprorg-03	A0640	yes	yes	yes	para_nv8_c	
@@ -2959,13 +2959,13 @@ L06741	moolenaar	sw-politicalorg-13	A0684	yes	yes	yes	para_nv8_f
 L06742	mast	sw-politicalorg-13	A0684	yes	yes	yes	para_nv8_f	
 L06743	crawford	sw-politicalorg-13	A0684	yes	yes	yes	para_nv8_f	
 L06745	warren	sw-politicalorg-13	A0684	yes	yes	yes	para_nv8_h	
-L06746	banks	sw-politicalorg-13	A0684	yes	yes	yes	para_nv8_h	
+L06746	banks	sw-politicalorg-13	A0684	yes	yes		para_nv8_h	
 L06748	huang	sw-politicalorg-13	A0684	yes	yes	yes	para_nv8_c	
 L06751	nvidia	sw-politicalorg-68f4c623	A0685	yes	yes	yes	para_nv8_a	
 L06752	nvidia	sw-politicalorg-68f4c623	A0685	yes	yes	yes	para_nv8_a	
 L06753	nvidia	sw-politicalorg-68f4c623	A0685	yes	yes	yes	para_nv8_a	
 L06756	huang	sw-politicalorg-68f4c623	A0685	yes	yes	yes	para_nv8_c	
-L06760	mast	sw-politicalorg-a32ed3d9	A0686	yes	yes	yes	para_nv8_f	
+L06760	mast	sw-politicalorg-a32ed3d9	A0686	yes	yes		para_nv8_f	
 L06763	moolenaar	sw-politicalorg-a32ed3d9	A0686				para_nv8_f	yes
 L06764	warren	sw-politicalorg-a32ed3d9	A0686	yes	yes		para_nv8_h	
 L06765	moolenaar	sw-politicalorg-a32ed3d9	A0686	yes	yes		para_nv8_f	
@@ -3208,7 +3208,7 @@ L07194	commerce	sw-redstatecom-10	A0736	yes	yes	yes	para_nv8_g
 L07196	commerce	sw-redstatecom-10	A0736	yes	yes		para_nv8_g	
 L07197	nvidia	sw-redstatecom-10	A0736	yes	yes	yes	para_nv8_a	
 L07198	nvidia	sw-redstatecom-10	A0736	yes	yes	yes	para_nv8_a	
-L07199	megaspeed	sw-redstatecom-10	A0736	yes	yes	yes	para_nv8_g	
+L07199	megaspeed	sw-redstatecom-10	A0736	yes	yes		para_nv8_g	
 L07200	huang	sw-redstatecom-10	A0736				para_nv8_c	yes
 L07204	trump	sw-redstatecom-10	A0736	yes	yes	yes	para_nv8_d	
 L07207	trump	sw-redstatecom-11	A0736	yes				
@@ -3224,7 +3224,7 @@ L07216	commerce	sw-redstatecom-11	A0736	yes	yes	yes	para_nv8_g
 L07218	commerce	sw-redstatecom-11	A0736	yes	yes		para_nv8_g	
 L07219	nvidia	sw-redstatecom-11	A0736	yes	yes	yes	para_nv8_a	
 L07220	nvidia	sw-redstatecom-11	A0736	yes	yes	yes	para_nv8_a	
-L07221	megaspeed	sw-redstatecom-11	A0736	yes	yes	yes	para_nv8_g	
+L07221	megaspeed	sw-redstatecom-11	A0736	yes	yes		para_nv8_g	
 L07222	huang	sw-redstatecom-11	A0736				para_nv8_c	yes
 L07226	trump	sw-redstatecom-11	A0736	yes	yes	yes	para_nv8_d	
 L07227	nvidia	sw-redstatecom-3acc01e8	A0737	yes	yes	yes	para_nv8_a	
@@ -3506,16 +3506,16 @@ L07837	nvidia	sw-siliconrepubliccom-02	A0795	yes	yes	yes	para_nv8_a
 L07838	huang	sw-siliconrepubliccom-02	A0795	yes	yes	yes	para_nv8_c	
 L07839	nvidia	sw-siliconrepubliccom-02	A0795	yes	yes	yes	para_nv8_a	
 L07840	huang	sw-siliconrepubliccom-02	A0795	yes	yes	yes	para_nv8_c	
-L07841	trump	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_d	
+L07841	trump	sw-spectatorcom-01	A0800	yes	yes		para_nv8_d	
 L07842	trump	sw-spectatorcom-01	A0800				para_nv8_d	yes
 L07844	warren	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_h	
 L07845	banks	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_h	
 L07848	trump	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_d	
 L07849	trump	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_d	
-L07850	huang	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_c	
-L07851	trump	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_d	
+L07850	huang	sw-spectatorcom-01	A0800	yes	yes		para_nv8_c	
+L07851	trump	sw-spectatorcom-01	A0800	yes	yes		para_nv8_d	
 L07852	whitehouse	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_d	
-L07853	whitehouse	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_d	
+L07853	whitehouse	sw-spectatorcom-01	A0800	yes	yes		para_nv8_d	
 L07854	huang	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_c	
 L07855	whitehouse	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_d	
 L07856	nvidia	sw-spectatorcom-01	A0800	yes	yes	yes	para_nv8_a	
@@ -3902,7 +3902,7 @@ L08687	nvidia	sw-thenationalnewscom-02	A0887	yes	yes	yes	para_nv8_a
 L08692	moolenaar	sw-thenationalnewscom-02	A0887	yes	yes		para_nv8_f	
 L08693	trump	sw-thenationalnewscom-02	A0887	yes	yes	yes	para_nv8_d	
 L08694	board	sw-thenationalnewscom-02	A0887	yes	yes	yes	para_nv8_b	
-L08695	mcguire	sw-thenationalnewscom-02	A0887	yes	yes	yes	para_nv8_h	
+L08695	mcguire	sw-thenationalnewscom-02	A0887	yes	yes		para_nv8_h	
 L08697	china	sw-thenationalnewscom-03	A0888	yes	yes	yes	para_nv8_e	
 L08698	board	sw-thenationalnewscom-03	A0888	yes	yes	yes	para_nv8_b	
 L08699	trump	sw-thenationalnewscom-03	A0888	yes	yes	yes	para_nv8_d	
@@ -4074,7 +4074,7 @@ L09182	commerce	sw-transformernewsai-01	A0940	yes	yes	yes	para_nv8_g
 L09183	nvidia	sw-transformernewsai-01	A0940	yes	yes	yes	para_nv8_a	
 L09195	boloor	sw-trendforcecom-637e84ec	A0941	yes	yes		para_nv8_h	
 L09197	board	sw-trendforcecom-637e84ec	A0941	yes			para_nv8_b	
-L09198	boloor	sw-trendforcecom-637e84ec	A0941	yes	yes	yes	para_nv8_h	
+L09198	boloor	sw-trendforcecom-637e84ec	A0941	yes	yes		para_nv8_h	
 L09199	bessent	sw-triviumchinacom-01	A0942	yes	yes	yes	para_nv8_g	
 L09200	trump	sw-triviumchinacom-01	A0942	yes	yes	yes	para_nv8_d	
 L09206	china	sw-trtworldcom-01	A0943	yes	yes	yes	para_nv8_e	
@@ -4155,7 +4155,7 @@ L09333	johnson	sw-uniteai-bf709b60	A0956	yes	yes		para_nv8_h
 L09334	johnson	sw-uniteai-bf709b60	A0956	yes	yes		para_nv8_h	
 L09335	moolenaar	sw-uniteai-bf709b60	A0956	yes	yes		para_nv8_f	
 L09336	moolenaar	sw-uniteai-bf709b60	A0956				para_nv8_f	yes
-L09337	moolenaar	sw-uniteai-bf709b60	A0956	yes	yes		para_nv8_f	
+L09337	moolenaar	sw-uniteai-bf709b60	A0956	yes	yes	yes	para_nv8_f	
 L09339	kress	sw-uniteai-bf709b60	A0956	yes	yes	yes	para_nv8_b	
 L09342	moolenaar	sw-uniteai-bf709b60	A0956	yes				
 L09343	moolenaar	sw-uniteai-bf709b60	A0956	yes	yes	yes	para_nv8_f	
@@ -4166,7 +4166,7 @@ L09352	nvidia	sw-unnua-01	A0957	yes	yes	yes	para_nv8_a
 L09355	trump	sw-unnua-01	A0957	yes	yes	yes	para_nv8_d	
 L09359	board	sw-unnua-01	A0957	yes	yes	yes	para_nv8_b	
 L09360	board	sw-unnua-01	A0957	yes			para_nv8_b	
-L09361	megaspeed	sw-unnua-01	A0957	yes	yes	yes	para_nv8_g	
+L09361	megaspeed	sw-unnua-01	A0957	yes	yes		para_nv8_g	
 L09362	nvidia	sw-unnua-01	A0957	yes			para_nv8_a	
 L09365	board	sw-vanguardngrcom-01	A0547	yes	yes	yes	para_nv8_b	
 L09368	singapore	sw-vanguardngrcom-01	A0547	yes	yes	yes	para_nv8_e	
@@ -4244,7 +4244,7 @@ L09533	board	sw-washingtonsuncom-03	A0466	yes	yes	yes	para_nv8_b
 L09534	board	sw-washingtonsuncom-03	A0466	yes	yes	yes	para_nv8_b	
 L09535	megaspeed	sw-washingtonsuncom-03	A0466	yes	yes	yes	para_nv8_g	
 L09536	singapore	sw-washingtonsuncom-03	A0466	yes	yes	yes	para_nv8_e	
-L09538	megaspeed	sw-washingtonsuncom-03	A0466	yes	yes	yes	para_nv8_g	
+L09538	megaspeed	sw-washingtonsuncom-03	A0466	yes	yes		para_nv8_g	
 L09542	nvidia	sw-washingtonsuncom-04	A0983	yes	yes	yes	para_nv8_a	
 L09544	nvidia	sw-washingtonsuncom-04	A0983	yes	yes	yes	para_nv8_a	
 L09545	huang	sw-wburorg-245d1c19	A0984	yes	yes	yes	para_nv8_c	
@@ -4285,7 +4285,7 @@ L09612	rubio	sw-winbuzzercom-01	A0991				para_nv8_g	yes
 L09614	nvidia	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_a	
 L09615	justice	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_g	
 L09617	commerce	sw-winbuzzercom-01	A0991	yes	yes		para_nv8_g	
-L09618	megaspeed	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_g	
+L09618	megaspeed	sw-winbuzzercom-01	A0991	yes	yes		para_nv8_g	
 L09619	megaspeed	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_g	
 L09620	singapore	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_e	
 L09627	cornyn	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_h	
@@ -4301,8 +4301,8 @@ L09641	china	sw-winbuzzercom-b0d76647	A0992	yes	yes	yes	para_nv8_e
 L09646	moolenaar	sw-winbuzzercom-b0d76647	A0992	yes	yes	yes	para_nv8_f	
 L09647	megaspeed	sw-winbuzzercom-b0d76647	A0992	yes	yes	yes	para_nv8_g	
 L09648	board	sw-winbuzzercom-b0d76647	A0992	yes	yes	yes	para_nv8_b	
-L09650	mast	sw-winbuzzercom-b0d76647	A0992	yes	yes	yes	para_nv8_f	
-L09651	megaspeed	sw-winbuzzercom-b0d76647	A0992	yes	yes	yes	para_nv8_g	
+L09650	mast	sw-winbuzzercom-b0d76647	A0992	yes	yes		para_nv8_f	
+L09651	megaspeed	sw-winbuzzercom-b0d76647	A0992	yes	yes		para_nv8_g	
 L09654	grunewald	sw-winbuzzercom-b0d76647	A0992	yes	yes	yes	para_nv8_h	
 L09658	cramer	sw-winbuzzercom-b0d76647	A0992	yes	yes	yes	para_nv8_h	
 L09659	subramanyam	sw-winbuzzercom-b0d76647	A0992	yes	yes	yes	para_nv8_h	
@@ -4322,8 +4322,8 @@ L09676	nvidia	sw-windowsreportcom-02	A0995	yes	yes	yes	para_nv8_a
 L09677	kress	sw-windowsreportcom-02	A0995	yes	yes	yes	para_nv8_b	
 L09679	nvidia	sw-windowsreportcom-02	A0995	yes	yes	yes	para_nv8_a	
 L09680	board	sw-windowsreportcom-02	A0995	yes	yes	yes	para_nv8_b	
-L09685	megaspeed	sw-wmalcom-01	A0996	yes	yes	yes	para_nv8_g	
-L09686	megaspeed	sw-wmalcom-01	A0996	yes	yes	yes	para_nv8_g	
+L09685	megaspeed	sw-wmalcom-01	A0996	yes	yes		para_nv8_g	
+L09686	megaspeed	sw-wmalcom-01	A0996	yes	yes		para_nv8_g	
 L09688	trump	sw-wmalcom-01	A0996	yes	yes	yes	para_nv8_d	
 L09690	trump	sw-wmalcom-01	A0996	yes	yes		para_nv8_d	
 L09691	nvidia	sw-wmalcom-01	A0996	yes	yes	yes	para_nv8_a	
@@ -4359,7 +4359,7 @@ L09743	nvidia	sw-wtopcom-04	A0466	yes	yes	yes	para_nv8_a
 L09745	trump	sw-wtopcom-04	A0466	yes	yes	yes	para_nv8_d	
 L09746	mast	sw-wtopcom-04	A0466	yes	yes	yes	para_nv8_f	
 L09747	megaspeed	sw-wtopcom-04	A0466	yes	yes	yes	para_nv8_g	
-L09748	megaspeed	sw-wtopcom-04	A0466	yes	yes	yes	para_nv8_g	
+L09748	megaspeed	sw-wtopcom-04	A0466	yes	yes		para_nv8_g	
 L09750	singapore	sw-wtopcom-04	A0466	yes	yes	yes	para_nv8_e	
 L09751	singapore	sw-wtopcom-04	A0466	yes	yes	yes	para_nv8_e	
 L09753	nvidia	sw-wtopcom-05	A0969	yes	yes	yes	para_nv8_a	
@@ -4571,7 +4571,7 @@ L10480	board	art-fc-tovima-wsj-1111-oust	A1077	yes			para_nv8_b
 L10481	huang	art-fc-tovima-wsj-1111-oust	A1077	yes	yes	yes	para_nv8_c	
 L10495	board	art-fc-tovima-wsj-1112-kangwei	A1079	yes			para_nv8_b	
 L10496	huang	art-fc-tovima-wsj-1112-kangwei	A1079	yes	yes	yes	para_nv8_c	
-L10498	taiwan	art-fc-tovima-wsj-1112-kangwei	A1079	yes	yes	yes	para_nv8_e	
+L10498	taiwan	art-fc-tovima-wsj-1112-kangwei	A1079	yes	yes		para_nv8_e	
 L10499	singapore	art-fc-tovima-wsj-1112-kangwei	A1079	yes	yes	yes	para_nv8_e	
 L10500	singapore	art-fc-tovima-wsj-1112-kangwei	A1079	yes	yes	yes	para_nv8_e	
 L10501	nvidia	art-fc-tovima-wsj-1112-kangwei	A1079	yes	yes	yes	para_nv8_a	
@@ -4602,7 +4602,7 @@ L10711	board	man-120df7029b3a	A1102	yes	yes	yes	para_nv8_b
 L10723	singapore	man-1fbc18e5e77d	A1105	yes	yes	yes	para_nv8_e	
 L10724	singapore	man-1fbc18e5e77d	A1105	yes	yes		para_nv8_e	
 L10727	china	man-399ee485265a	A1107	yes				
-L10728	trump	man-399ee485265a	A1107	yes	yes	yes	para_nv8_d	
+L10728	trump	man-399ee485265a	A1107	yes	yes		para_nv8_d	
 L10729	bessent	man-399ee485265a	A1107	yes	yes	yes	para_nv8_g	
 L10730	commerce	man-399ee485265a	A1107	yes	yes	yes	para_nv8_g	
 L10731	nvidia	man-441e3f343197	A1109	yes	yes	yes	para_nv8_a	
@@ -4852,8 +4852,8 @@ L11581	trump	sw-yroslashdotorg-02	A1005				para_nv8_d	yes
 L11583	nvidia	sw-yroslashdotorg-02	A1005	yes	yes	yes	para_nv8_a	
 L11587	thune	art-line-straitstimes-bloomberg-1110	A1185	yes				
 L11588	thune	art-line-straitstimes-bloomberg-1110	A1185	yes	yes		para_nv8_h	
-L11593	banks	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8_h	
-L11594	warren	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8_h	
+L11593	banks	art-line-straitstimes-bloomberg-1110	A1185	yes	yes		para_nv8_h	
+L11594	warren	art-line-straitstimes-bloomberg-1110	A1185	yes	yes		para_nv8_h	
 L11597	banks	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8_h	
 L11598	warren	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8_h	
 L11600	megaspeed	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8_g	
@@ -4992,7 +4992,7 @@ L11948	huang	sw-englobescoil-01	A0331	yes	yes	yes	para_nv8_c
 L11952	jeffries	cnn-1111-live	A0022	yes	yes	yes	para_nv8_h	
 L11957	johnson	cnn-1111-live	A0022	yes				
 L11958	johnson	cnn-1111-live	A0022	yes				
-L11963	megaspeed	cnn-1111-live	A0022	yes	yes	yes	para_nv8_g	
+L11963	megaspeed	cnn-1111-live	A0022	yes	yes		para_nv8_g	
 L11968	singapore	cnn-1111-live	A0022	yes	yes		para_nv8_e	
 L11969	musk	cnn-1111-live	A0022				para_nv8_h	yes
 L11972	ackman	cnn-1111-live	A0022	yes	yes	yes	para_nv8_h	

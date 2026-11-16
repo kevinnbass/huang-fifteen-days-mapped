@@ -27,7 +27,6 @@ READ = {
     ('schumer', 'instead trump invited nvidias ceo to join him on'): SAME + 'his floor speech of Nov 10, whose criticism of the president his chips of that day carry; a further sentence of its reasons',
     ('china', 'the report in question is based on groundless speculation'): SAME + 'the ministry\'s reply to the first report, in another translation (its chip for Oct 30)',
     ('china', 'the narrative about so called chinese spies is entirely'): SAME + 'the ministry\'s reply of Nov 9, in the Journal\'s translation (its chip for that day)',
-    ('china', 'we stand ready to work with the us to'): 'not on the matter: the ministry on relations between the two countries',
     ('coons', 'we write to request that the department of commerce'): SAME + 'the letter with Sen. Warren (his chip for Nov 11)',
     ('jeffries', 'there are real concerns that need to be addressed'): SAME + 'his remarks of Nov 9 asking for a full briefing (his chip for that day)',
     ('moolenaar', 'he has stated hes a patriot he has questioned'): SAME + 'his remarks of Nov 12 on the talks for an appearance before the committees (his chip for that day)',

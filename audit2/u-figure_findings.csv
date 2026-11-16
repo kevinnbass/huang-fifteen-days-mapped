@@ -1,0 +1,6 @@
+finding_id,grade,element_text,problem,rows_checked
+E-01,error,MA305 same-day statement repeated,[row error] Same linked original resignation statement as MA96; retain the legislative clause once and withdraw the duplicate act.,MA96 MA305
+E-02,qualification,TechCrunch subpoena accounts,[row error] Bloomberg relay is omitted in two rows; both inherit one source-chain problem.,MA38 MA49
+E-03,qualification,Tells Implicator,[row error] The page does not establish direct interview; its logical-choice quotation links WIRED.,MA283
+E-05,qualification,README: same exchange in other words,"[table or text] Pages show two outlet accounts of Tuesday, not proof of one exchange. A later uncertainty sentence helps but does not make this affirmative claim established.",MA34
+C-CLOSE,ok,56 changed visible text nodes read; the status chronicle and requested README sections checked. Remaining status counts reproduce as as-built counts; no completeness certification claimed. The previous reading incomplete close and the four repeated MA252 departures are disclosed.,,60 delta rows; counts_check.csv

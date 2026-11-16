@@ -87,9 +87,10 @@ def OWN_CHANNEL_WORDS():
     """The footnote's sentences on the search of the actors' own channels, with every number from research/nv8_s6_counts.tsv
     (scripts/nv8_s6_counts.py, which reads research/nv8_s6_items.tsv)."""
     C = {r['what']: int(r['count']) for r in csv.DictReader(open(R / 'nv8_s6_counts.tsv', newline=''), delimiter='\t')}
-    n_chips = sum(1 for r in rows_map.rows() if r['row_id'].startswith('MA')); searched = C['chips whose original was searched for']       # every chip ever drawn, one since withdrawn among them
-    # the acts the search did not cover (the fifteenth reading, Nov 16, 2026: these are acts, not chips, since two acts of one day share a chip; none is withdrawn)
     covered = {r['key'] for r in csv.DictReader(open(R / 'nv8_s6_items.tsv', newline=''), delimiter='\t') if r['part'] == 'original of a chip'}
+    # every chip ever drawn, one since withdrawn among them; an act added later and then withdrawn as a duplicate (MA305, the twentieth reading) is on neither side of the count
+    n_chips = sum(1 for r in rows_map.rows() if r['row_id'].startswith('MA') and not (r.get('withdrawn') and r['row_id'] not in covered)); searched = C['chips whose original was searched for']
+    # the acts the search did not cover (the fifteenth reading, Nov 16, 2026: these are acts, not chips, since two acts of one day share a chip; none is withdrawn)
     later = [r for r in rows_map.rows() if r['row_id'].startswith('MA') and r['row_id'] not in covered and not r.get('withdrawn')]
     assert len(covered) == searched and len(later) == n_chips - searched, (len(covered), searched, len(later), n_chips)
     W = lambda n: rows_map.NUMBER.get(n, {7: 'seven', 8: 'eight', 9: 'nine'}.get(n, n))

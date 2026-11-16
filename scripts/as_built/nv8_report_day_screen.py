@@ -58,11 +58,12 @@ READ1 = {'MA179': 'not the same act: other statements of the company, of other d
          'MA85': 'not the same act: a line of Nov 8 that shares only the words "an Nvidia spokesperson said" with a passage cited here',
          'MA312': 'the lines of Nov 5 are the company\'s statement of that day and its spokesman\'s words and refusal to the Times (its chip of that day), which say similar things of his security team; this act is what its representative told The National, printed Nov 6, and the chip says the page does not tell whether that was a separate exchange',
          'MA313': 'the same words are in its statement to CNBC of Nov 8 (its chip of that day); The National prints them on Nov 9 as a statement made to it, and the chip says so. The lines of Nov 12 share only the words "said in a statement"',
-         'MA316': 'not the same act: lines of Nov 8 and Nov 11 that share only the words "the Nvidia board is" with this one'}
+         'MA316': 'not the same act: lines of Nov 8 and Nov 11 that share only the words "the Nvidia board is" with this one',
+         'MA330': 'not the same act: lines of Nov 9 and Nov 10 about his call to Huang, which share only a few common words ("that Alice Huang was", "a spy, according to") with a passage cited here'}
 READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109', 'MA125', 'MA128', 'MA130', 'MA150', 'MA158',
                                  'MA199', 'MA200', 'MA201', 'MA202', 'MA203', 'MA206', 'MA210', 'MA212', 'MA213', 'MA219', 'MA207', 'MA237', 'MA250',
                                  'MA251', 'MA256', 'MA257', 'MA261', 'MA266', 'MA268', 'MA270', 'MA274', 'MA275', 'MA280', 'MA283', 'MA284', 'MA286', 'MA288',
-                                 'MA301', 'MA302', 'MA307', 'MA308', 'MA309', 'MA312', 'MA313')},
+                                 'MA301', 'MA302', 'MA307', 'MA308', 'MA309', 'MA312', 'MA313', 'MA319', 'MA320', 'MA324', 'MA328', 'MA330')},
              MA317='"Sunday" is the day of Huang\'s admission. The page, published on the evening of Wednesday Nov 11, says analysts were "reacting to the news in real time", which suggests the remark is of that day, but it gives the remark itself no day: the edge stays dashed',
              MA316='"today" is Electronics Weekly\'s own word, in a page stamped 06:13 UTC on Nov 12 (01:13 in the eastern United States): the report\'s day, and the chip says the page does not tell whether it means the session of Wednesday night; "Wednesday" is Semafor\'s day for that session (the board\'s chip of Nov 11)',
              MA211='the day word ("today", Nov 9) is that of the Wired report as the relaying page gives it; the hiring itself has no day, and another saved page says he hired the firm "as early as last year"',
@@ -117,7 +118,8 @@ READ5 = {'MA85': 'the passage is the time stamp the hand-saved page prints, cite
 READ6 = {'MA252': 'an earlier version of the article, timed Oct 30, is saved and lacks the sentence: the chip sits on the day of the version that carries it, which is the update\'s (see part 5)',
          'MA273': 'the page prints only an update line (Nov 9, 2:59 pm); its text speaks of "Monday morning trade" (Nov 9) and of the print edition of Nov 10, so the article was first published that day',
          'MA307': 'the page prints only an update line (Nov 12, 7:44 pm); its text reports what a senator "told reporters Thursday" (Nov 12), so the article was first published that day',
-         'MA309': 'the page prints only an update line (Nov 12, 7:44 pm); its text reports what a senator "told reporters Thursday" (Nov 12), so the article was first published that day'}
+         'MA309': 'the page prints only an update line (Nov 12, 7:44 pm); its text reports what a senator "told reporters Thursday" (Nov 12), so the article was first published that day',
+         'MA328': 'the page prints only an update line (Nov 11, 12:56 in India, which is 2:26 am in the eastern United States); its text gives the closing share price of Tuesday, Nov 10, so the article was first published in the ten hours before that stamp, on Nov 10 or Nov 11 Eastern time: the chip keeps the day the page prints'}
 DAY = re.compile(r"\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|yesterday|today|on (?:Oct|Nov)\w*\.? \d+)\b")
 
 

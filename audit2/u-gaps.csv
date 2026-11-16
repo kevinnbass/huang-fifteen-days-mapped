@@ -1,0 +1,15 @@
+row_id_or_key,source,what_failed
+hodges|2026-11-12,private/census_remarks_actor.tsv,"Selected day has no dated counted-page census line. Untested, not a negative finding."
+blumenthal|2026-11-09,private/census_remarks_actor.tsv,"Selected day has no dated counted-page census line. Untested, not a negative finding."
+bresnick|2026-11-09,private/census_remarks_actor.tsv,"Selected day has no dated counted-page census line. Untested, not a negative finding."
+bresnick|2026-11-10,private/census_remarks_actor.tsv,"Selected day has no dated counted-page census line. Untested, not a negative finding."
+bresnick|2026-11-11,private/census_remarks_actor.tsv,"Selected day has no dated counted-page census line. Untested, not a negative finding."
+cotton,rows.jsonl; private/census_remarks_actor.tsv,No dated act/chip day to select under the fixed rule. Actor remains untested.
+mccaul|2026-11-08,private/census_remarks_actor.tsv,"Selected day has no dated counted-page census line. Untested, not a negative finding."
+stapp|2026-11-10,private/census_remarks_actor.tsv,"Selected day has no dated counted-page census line. Untested, not a negative finding."
+stapp|2026-11-11,private/census_remarks_actor.tsv,"Selected day has no dated counted-page census line. Untested, not a negative finding."
+MA179,art-fc-ft-1107-romantic; art-fc-wb-ft-1107-romantic,403/security response and paywall opening are not full earlier text. Cannot determine historical passage presence from them.
+MA194,art-fc-ft-1107-romantic; art-fc-wb-ft-1107-romantic,403/security response and paywall opening are not full earlier text. Cannot determine historical passage presence from them.
+MA294,art-fc-ft-1107-romantic; art-fc-wb-ft-1107-romantic,403/security response and paywall opening are not full earlier text. Cannot determine historical passage presence from them.
+MA46,sw-bostoncom-01; art-fc-inq-nyt-1108-investigation; man-nyt-1108-01,Licensed shorter copies omit the post; full own-page copy dated Nov 8 carries it. Abridgment versus later insertion has no decisive version timestamp. No new day inferred.
+C5-selection,public/audit2/REPORT-t.md; delta.tsv; cited saved statements,"Requested upper ten of new/changed unused complete statements was not obtained. Actual twenty use three eligible changed chips, ten lowest older eligible chips and seven descending older replacements. Rate is qualified, not an exact replication."

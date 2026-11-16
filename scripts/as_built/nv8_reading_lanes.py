@@ -99,6 +99,29 @@ PARA = {
 # The names and their roles are in a file that is not published (research/reading_lanes/roles.private.tsv: pattern, role, one per line).
 SCRUB = [tuple(x.split('\t')) for x in (L / 'roles.private.tsv').read_text().split('\n') if x.strip() and not x.startswith('#')]
 
+# Dispositions changed in answer to the twentieth reading (Nov 16, 2026). It read all 53 candidates of lanes c to h that the builder had not
+# drawn and found that the builder had set aside reports of earlier acts for their date, and four candidates on the false ground that the
+# reader's words were not in the page (the builder's check compared several passages as one string). The earlier dispositions stand above.
+W = lambda i, why: D(i) + f' (first set aside: {why}; drawn after the twentieth reading)'
+PARA.update({
+ ('f', 'A017'): D('MA96') + ' (first drawn as its own act, MA305, withdrawn since: the relay links the statement MA96 already carried)',
+ ('c', 'A039'): D('MA328') + ' (first joined to MA296; the pages do not prove it is that meeting, so it has its own act on its report\'s day)',
+ ('d', 'A045'): W('MA319', 'the page gives the reply no day'), ('e', 'A017'): W('MA95', 'the builder\'s check wrongly said the words were not in the page'),
+ ('e', 'A031'): W('MA320', 'read as the minister\'s statements of Nov 10 and 11'), ('f', 'A007'): W('MA38', 'read as the same position that day'), ('f', 'A010'): W('MA265', 'read as the statement to the FT'),
+ ('f', 'A019'): W('MA321', 'called background of 2025'), ('g', 'A008'): W('MA322', 'read as a relay of the Times\'s report of one assembly approval'), ('g', 'A029'): W('MA101', 'called a detail of the report'),
+ ('g', 'A030'): W('MA101', 'called a detail of the report'), ('g', 'A033'): W('MA108', 'read as carried by the exchange'), ('g', 'A040'): W('MA323', 'called background before these days'),
+ ('g', 'A044'): W('MA324', 'a one-line recall naming no report'), ('g', 'A065'): W('MA229', 'the builder\'s check wrongly said the words were not in the page'),
+ ('g', 'A091'): W('MA325', 'the builder\'s check wrongly said the words were not in the page'), ('h', 'A006'): W('MA27', 'it recalls a call of March'), ('h', 'A008'): W('MA27', 'it recalls a call of March'),
+ ('h', 'A091'): W('MA20', 'it recalls a call of March'), ('h', 'A098'): W('MA20', 'it recalls a call of March'), ('h', 'A015'): W('MA130', 'read as his point to another outlet'),
+ ('h', 'A058'): W('MA326', 'an earlier post the page sums up; the post itself is embedded in the saved page and is saved now'), ('h', 'A084'): W('MA84', 'what a complaint asks for'),
+ ('h', 'A100'): W('MA327', 'read as her statement of Oct 29'),
+ ('d', 'A027'): 'not drawn: a reason given for a position already drawn (his proposal of a successor, MA104), with no new occasion named (the first reason, that the words were not in the page, was wrong: corrected after the twentieth reading)',
+ ('d', 'A038'): 'not drawn: an unlocated referral; the page names no asking outlet, so it may be the reply to Newsweek of that day (MA202) but that is not established (reason corrected after the twentieth reading)',
+ ('d', 'A058'): 'not drawn: the page places his interest in taking Huang to Asia at Monday\'s briefing, where the Times has him say it on Sunday (MA224); the pages do not settle which, and the remark is on his Sunday chip (reason corrected after the twentieth reading)',
+ ('g', 'A147'): 'not drawn: an uncorroborated order of events in a relay (it puts the removal of her name after the inquiry began; the Times\'s first report describes a change of paperwork in 2023, before it) (reason corrected after the twentieth reading)',
+ ('h', 'A068'): 'not drawn: an unlocated recap; the page speaks of "financial coverage" and names no outlet, so it may be his remarks on the BBC (MA140) but that is not established (reason corrected after the twentieth reading)',
+})
+
 
 def scrub(t):
     for pat, role in SCRUB:
