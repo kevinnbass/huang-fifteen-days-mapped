@@ -20,7 +20,8 @@ import nv8_gaps as G, rows_map, check_rows
 MOVED = ('MA76', '2026-11-11')            # part 1's control: the act that was moved, and the day it sat on
 SOLID = 'MA160'                           # part 2's control: the act whose edge became solid
 OTHER = 'the day word belongs to another event told in the same passage; the page gives this act no day'
-READ1 = {'MA164': 'not the same act: the lines of Nov 12 are the company\'s later statement of that day, which has its own chip; the statement to the Times has no day but its report\'s'}
+READ1 = {'MA179': 'not the same act: other statements of the company, of other days, that share only the words "the U.S. government" with this one',
+         'MA164': 'not the same act: the lines of Nov 12 are the company\'s later statement of that day, which has its own chip; the statement to the Times has no day but its report\'s'}
 READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA36', 'MA51', 'MA85', 'MA102', 'MA109', 'MA125', 'MA128', 'MA130', 'MA150', 'MA153', 'MA154', 'MA158')},
              MA29='the page was published on the day of the briefing (Nov 9) and the quoted words say "today"; it does not state the day of the remark, so the edge stays dashed; the chip sits on the same day either way',
              MA30='the day word is that of the briefing; the page gives the remark no day',
@@ -28,6 +29,8 @@ READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA36', 'MA51', 'MA85',
              MA129='the section that prints his emailed words opens "tech analysts said on Monday" (Nov 9, the chip\'s day); the page does not say when the email was sent, so the edge stays dashed; the chip sits on the same day either way',
              MA81='the day is the one on which sources told the broadcaster of an inquiry already under way: the report\'s day, and the inquiry may be earlier',
              MA156='the page dates the legislators\' calls of that Thursday, the report\'s day, and gives this remark no day of its own',
+             MA184='the page says "Several Republicans told" the paper "on Tuesday" (Nov 10, the chip\'s day) and then quotes him; as with MA129 the page dates the group\'s remarks and not this one, so the edge stays dashed; the chip sits on the same day either way',
+             MA186='the pages date the briefing (Monday, Nov 9) and say his statement came afterwards; they give the statement no day of its own',
              MA165='the page dates the closed briefing (Nov 9), not the remark made after it; the chip says so',
              MA169='the day words are those of the resignation and of the report itself (Nov 12): the report\'s day')
 DAY = re.compile(r"\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|yesterday|today|on (?:Oct|Nov)\w*\.? \d+)\b")

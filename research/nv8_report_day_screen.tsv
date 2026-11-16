@@ -1,5 +1,6 @@
 screen	act	actor	day_drawn_the_reports_day	what_the_screen_saw	reading
 another saved page gives another day	MA164	megaspeed	2026-10-29	2026-11-12 (4)	not the same act: the lines of Nov 12 are the company's later statement of that day, which has its own chip; the statement to the Times has no day but its report's
+another saved page gives another day	MA179	nvidia	2026-11-06	2026-10-29 (3); 2026-11-05 (1); 2026-11-08 (3)	"not the same act: other statements of the company, of other days, that share only the words ""the U.S. government"" with this one"
 a day word near a cited passage in its own source	MA13	fedasiuk	2026-11-12	Thursday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA16	mcguire	2026-11-10	Sunday, yesterday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA29	warner	2026-11-09	today	"the page was published on the day of the briefing (Nov 9) and the quoted words say ""today""; it does not state the day of the remark, so the edge stays dashed; the chip sits on the same day either way"
@@ -23,3 +24,5 @@ a day word near a cited passage in its own source	MA156	cornyn	2026-11-12	Thursd
 a day word near a cited passage in its own source	MA158	moorhead	2026-11-11	Wednesday	the day word belongs to another event told in the same passage; the page gives this act no day
 a day word near a cited passage in its own source	MA165	warner	2026-11-09	on Nov 9	the page dates the closed briefing (Nov 9), not the remark made after it; the chip says so
 a day word near a cited passage in its own source	MA169	justice	2026-11-12	Thursday, on Nov. 12	the day words are those of the resignation and of the report itself (Nov 12): the report's day
+a day word near a cited passage in its own source	MA184	cornyn	2026-11-10	Tuesday	"the page says ""Several Republicans told"" the paper ""on Tuesday"" (Nov 10, the chip's day) and then quotes him; as with MA129 the page dates the group's remarks and not this one, so the edge stays dashed; the chip sits on the same day either way"
+a day word near a cited passage in its own source	MA186	himes	2026-11-09	Monday, Tuesday	the pages date the briefing (Monday, Nov 9) and say his statement came afterwards; they give the statement no day of its own

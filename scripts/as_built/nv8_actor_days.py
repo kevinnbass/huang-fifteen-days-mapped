@@ -3,10 +3,11 @@ A second gauge of the chips, beside the register of remarks (scripts/nv8_gaps.py
 pages give it in the same words; the fourteenth reading found two acts that two articles report in different words and no chip carried. This gauge
 takes every line of the census readings whose speaker is a drawn actor and whose day the reader could tell, inside the fifteen days, and lists each
 actor and day that two or more counted articles carry and on which the actor has no chip. Each such actor-day was read by the builder: it is either
-the same act as a chip of another day or another row (and why the days differ), or answered in the register, or it got a chip (the eight added
+the same act as a chip of another day or another row (and why the days differ), or answered in the register, or it got a chip (those added
 on Nov 16 are no longer listed, because the actor now has a chip that day). An actor-day with no reading stops the script.
-Writes research/nv8_actor_days.tsv. Limits: a line whose day the reader left blank is not seen; an act that only one counted article carries is
-not listed; a second act on a day that already has a chip is not seen by this gauge (the register of remarks covers the quoted ones)."""
+Since the same day the actor-days that only ONE counted article carries are listed and read too (READ1; counted_articles is 1 in the table).
+Writes research/nv8_actor_days.tsv. Limits: a line whose day the reader left blank is not seen; a second act on a day that already has a chip
+is not seen by this gauge (scripts/nv8_remarks_no_chip.py looks for the quoted ones that two articles carry)."""
 import csv, re, sys
 from collections import defaultdict
 from pathlib import Path
@@ -24,6 +25,27 @@ READ = {('nvidia', '2026-11-12'): 'the resignation and the appointments announce
         ('trump', '2026-11-10'): 'his words of Nov 9 on what Huang told him, quoted in pieces of the next day: on his chip for Nov 9',
         ('nvidia', '2026-11-03'): 'reports of a rule the company set for its data-centre clients, from a report of Nov 2 that does not mention the affair: answered in the register of remarks (not printed)',
         ('coons', '2026-11-12'): 'his letter with Sen. Warren, dated Nov 11 and reported on Nov 12: on his chip for Nov 11; a statement of Nov 12 is carried by one article only'}
+# The actor-days that only one counted article carries (read on Nov 16, 2026, after the fourteenth reading; twelve of them held an act with no chip and
+# are no longer listed, because the actor now has a chip that day).
+NOC = 'no act: the page says only that no reply to a request for comment had come'
+READ1 = {('bessent', '2026-11-10'): 'not on the matter: a remark on relations with China in general',
+         ('blumenthal', '2026-11-05'): 'the page says only that he "re-upped his warning" that Thursday; it gives no words and no content',
+         ('china', '2026-11-10'): 'the ministry repeats its reply of the day before ("We responded to that yesterday"): on its chip for Nov 9',
+         ('commerce', '2026-11-11'): NOC, ('megaspeed', '2026-11-05'): NOC, ('megaspeed', '2026-11-10'): NOC, ('whitehouse', '2026-11-11'): NOC,
+         ('himes', '2026-11-12'): 'his remarks to Politico, which that page dates to Thursday and the article itself to Wednesday: on his chip for Nov 11',
+         ('huang', '2026-10-30'): 'one page dates to Oct 30 what he said of Megaspeed\'s deployments; it is the interview on his chip for Oct 29 (the interviewer\'s own page is dated Oct 29)',
+         ('huang', '2026-11-10'): 'not an act on the matter: a staff meeting about a product keynote, in one paper\'s account',
+         ('kudlow', '2026-11-11'): 'his call of Nov 10 for Huang to step down, mentioned the next day: on his chip for Nov 10',
+         ('mast', '2026-11-09'): 'the page reports as issued "today" the chairmen\'s letter dated Nov 4, which the committee posted again on Nov 9: on the chips for Nov 5',
+         ('moolenaar', '2026-11-09'): 'the page reports as issued "today" the chairmen\'s letter dated Nov 4, which the committee posted again on Nov 9: on the chips for Nov 5',
+         ('mcguire', '2026-11-07'): 'his thread of Nov 6, on a copy stamped the next day: on his chip for Nov 6',
+         ('mcguire', '2026-11-09'): 'remarks to CNBC that Commerce took no action and should tighten controls: the position his chips of Nov 6 and Nov 10 carry, in other words; not drawn',
+         ('nvidia', '2026-11-02'): 'not on the matter: a statement on data-centre policy in a report that does not mention the affair',
+         ('nvidia', '2026-11-07'): 'its statement of Nov 5, reported two days later: on its chip for Nov 5',
+         ('rubio', '2026-11-09'): 'his remarks of the evening of Nov 8 in Washington, on a transcript stamped Nov 9 in Australia: on his chip for Nov 8',
+         ('rubio', '2026-11-10'): 'declines again to comment: the position his chip for Nov 8 carries',
+         ('suit', '2026-11-10'): 'the complaint filed on Nov 9, reported the next day: on its chip for Nov 9',
+         ('trump', '2026-11-11'): 'that he spoke to Huang on Wednesday, said in the interview released on Nov 12: on his chip for Nov 12'}
 
 
 def main():
@@ -40,14 +62,17 @@ def main():
         if not re.fullmatch(r'2026-1[01]-\d\d', d) or not '2026-10-29' <= d <= '2026-11-12': continue
         dated += 1; x = days[a][d]; x[0].add(art[r['page_id']]); x[1] += 1
     out = [(a, d, len(x[0]), x[1]) for a, dd in days.items() for d, x in dd.items() if d not in chips[a] and len(x[0]) >= 2]
-    one = sum(1 for a, dd in days.items() for d, x in dd.items() if d not in chips[a] and len(x[0]) == 1)
+    one = [(a, d, 1, x[1]) for a, dd in days.items() for d, x in dd.items() if d not in chips[a] and len(x[0]) == 1]
+    unread1 = sorted(o[:2] for o in one if o[:2] not in READ1); assert not unread1, ('an actor and day in one article with no chip and no reading', unread1)
+    stale1 = sorted(set(READ1) - {o[:2] for o in one}); assert not stale1, ('a reading for a single-article actor-day that is no longer listed', stale1)
     unread = [o[:3] for o in out if o[:2] not in READ]; assert not unread, ('an actor and day in two or more articles with no chip and no reading', unread)
     stale = sorted(set(READ) - {o[:2] for o in out}); assert not stale, ('a reading for an actor-day that is no longer listed', stale)
     assert ('meeks', '2026-11-12') not in {o[:2] for o in out} and '2026-11-12' in chips['meeks'], 'control: the act the reading found has its chip'
     with open(R / 'nv8_actor_days.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t', lineterminator='\n'); w.writerow(['actor', 'day_the_census_gives', 'counted_articles', 'census_lines', 'no_chip_that_day_because'])
         w.writerows([a, d, n, l, READ[(a, d)]] for a, d, n, l in sorted(out, key=lambda o: (-o[2], o[0], o[1])))
-    print('census lines of drawn actors', mapped, '| with a day in the fifteen days', dated, '| actor-days in two or more articles with no chip that day:', len(out), '(each read) | in one article only, not listed:', one)
+        w.writerows([a, d, n, l, READ1[(a, d)]] for a, d, n, l in sorted(one))
+    print('census lines of drawn actors', mapped, '| with a day in the fifteen days', dated, '| actor-days in two or more articles with no chip that day:', len(out), '(each read) | in one article only:', len(one), '(each read)')
 
 
 if __name__ == '__main__':

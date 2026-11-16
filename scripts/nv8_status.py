@@ -44,7 +44,10 @@ STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn ite
           'and four sentences that said too much or dated a search to one day. It closed incomplete: whether one live page saved as PDF had older entries cannot be settled from the PDF. '
           'Changed in answer and not yet read independently: the two acts are drawn, and a second gauge over every drawn actor and day found six more acts that two or more articles report in different words and no chip carried '
           '(among them the attorney general\'s statement of Nov 12 that the department had reached no conclusions about the woman in the reports); eight acts are added in all; one older act moved from its report\'s day to its own, and one chip\'s dashed edge became solid. '
-          'The four members are marked beside their counts; the small parts are added; the sentences are corrected.')
+          'The four members are marked beside their counts; the small parts are added; the sentences are corrected. '
+          'After that release the builder read what its own gauges had left unread, and no independent reader has read the result: the 31 days on which only one counted article carries an actor who has no chip that day, '
+          'and, with a third gauge, the quoted remarks that two or more articles carry in differing words and no chip held. Thirteen more acts are drawn (among them the president\'s answer of Nov 12 that it was not yet determined whether the woman was a spy, '
+          'Nvidia\'s and the Chinese embassy\'s replies to the Times report of Nov 6, and who backed the export controls at the meeting of Nov 5), and two chips that printed half of a remark now print both halves. A fifteenth reading is under way on the release before these additions.')
 # what changed after the audit read the figure (the README of the public copy lists these under the audit)
 AFTER_AUDIT = [
     'Five pieces were added and one moved from Nov 8 to Nov 12 (1,726 pieces became 1,731; 1,662 drawn became 1,667): six articles of one site share an address apart from the query string and had been counted as one. No row id was renumbered.',
@@ -304,5 +307,24 @@ AFTER_READING14 = [
     'The whole-name search of the names not drawn is now dated Nov 15 and Nov 16 (the names added on Nov 16 were searched that day). The interactive map\'s view of a source says a record shows the passage supplied with it, and that a record taken from a table (a count, a sum, a hearing, an ad) may show none.',
     'Left as limits: whether one live page saved by hand as PDF held older entries that load only on request cannot be settled from the PDF (the reading\'s remainder); the earlier remainder about a "Read more" control on another hand-saved page is closed (the reading saw the page as rendered: it follows the photo caption). '
     'The eight new acts were found and worded by the builder and have not been read independently.',
+]
+
+# what the builder found after releasing the answer to the fourteenth reading, while the fifteenth was reading that release (Nov 16, 2026)
+AFTER_RELEASE14 = [
+    'What was left unread. The gauge by actor and day listed only the days that two or more counted articles carry; 31 days that one counted article carries, on which the actor had no chip, were counted and not read. I read them. '
+    'Ten held an act that no chip carried; the other 21 are in `research/nv8_actor_days.tsv` with the reading of each (a refusal to comment, a repeat of a statement already drawn, a report of an act drawn on another day, or something not on the matter).',
+    'A third gauge (`scripts/as_built/nv8_remarks_no_chip.py`, `research/nv8_remarks_no_chip.tsv`). One of those days led to a remark that neither earlier gauge could see: the president\'s answer of Nov 12, in an interview released that day, '
+    'to whether Huang should have resigned ("The big thing is, was the woman a spy? And I don\'t know if that\'s been determined yet"). Two outlets quote it in slightly different words, so the register of remarks (same words on two pages) did not list it, '
+    'and he already had a chip that day, so the gauge by actor and day did not either. The new gauge takes every direct quotation of seven words or more by a drawn actor (2,808 lines on counted pages), sets aside those that share five words in a row with any chip of that actor '
+    'or that the register has judged, and groups the rest by shared wording: 23 groups were in two or more articles. I read each. Two were acts with no chip (the president\'s answer; a post of Sen. Warren\'s of Nov 9). '
+    'Two were the other half of a remark whose chip printed one half: the trade representative\'s "Nvidia is a structurally important company" now also carries his "we want the crown jewels to remain in U.S. hands or in the hands of our allies", '
+    'and Rep. Moolenaar\'s talks "on a date to come and meet with us" now also carries "we will use our subpoena power" if that does not happen. The other 19 are in the table with the reading of each.',
+    'Thirteen acts added at the end of the acts (no id changes): the president\'s answer of Nov 12, in which he also says he spoke to Huang on Wednesday; Elon Musk, Nov 5, called by the president before the decision and said to have supported the controls (one outlet\'s account of another\'s report, from unnamed sources); '
+    'the trade representative and the secretary of state, Nov 5, at the meeting and for the controls, each with the denial its source prints; Nvidia\'s spokesman, in the Times of Nov 6, that customers do not ask the company to press the government on chip policy; '
+    'the Chinese embassy, in the same article, that the reporting is "unsubstantiated"; Sen. Kevin Cramer, Nov 12, that he would support a subpoena; a post of Sen. Banks of Nov 11 on access to chips through the cloud; Sen. Cornyn\'s question whether the FBI gave Huang a defensive briefing (a post dated Nov 9, and remarks reported Nov 10); '
+    'a Global Times commentary of Nov 10, as a Korean daily relays it; Rep. Himes\'s statement after the briefing of Nov 9; and Sen. Warren\'s post of Nov 9. The two replies to the Times report of Nov 6 matter most for balance: that report\'s chip stood without the answers its own article prints. '
+    'The figure now draws 185 dated acts. Four of the thirteen sit on the day of their report, with a dashed edge; the screen of such acts now covers 45 acts and its table holds 27 listings, each read.',
+    'Limits that remain: a second act on a day that already has a chip is seen only if two counted articles quote it directly; a remark that one article carries on such a day is not seen by any gauge; the gauges read the census readers\' lines, not the pages again. '
+    'The builder found, worded and read all of this; none of it has been read independently.',
 ]
 
