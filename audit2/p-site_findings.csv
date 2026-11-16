@@ -1,0 +1,7 @@
+finding_id,grade,element_text,problem
+G-JOINS,ok,"All acts, ties, member lines and listed pieces","Exact multiset equality, including source lists/passages: 173 active acts, 84 ties, 150 member lines and 2,245 pieces. The extra active act is the explicitly undated historical Cotton act."
+G-TEN,ok,The ten changed/new act data records,"Opened all ten in the page JSON after equality checks; their day, words, report flag and supplied passages equal the public rows. MA76 occurs on Nov 5 and has no Nov 11 copy."
+G-CONTROLS,ok,Fault controls for the join check,"Changing an act date or text, or removing its sources, makes the exact comparison fail."
+G-FIXED,ok,"Every record on the map that cites this source. A record shows the passage supplied with it; a record taken from a table ... may show none. The page holds passages, not the source itself.",The only changed fixed JavaScript sentence is accurate and now includes hearings and ads as well as sums and counts.
+G-NOTES,error,174 entries; 41 chips added,The page reproduces the two erroneous count labels of the figure/README notes; correct them at their shared source.
+G-ROW-WORDS,qualification,Commerce / Justice / Warren act text,"The data faithfully reproduces the three row qualifications A-MA76, A-MA169 and A-MA173, which must be corrected at row level before rebuilding."

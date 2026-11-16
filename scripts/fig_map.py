@@ -76,11 +76,22 @@ def LOOKUP_WORDS(n_pages):
             "The lists of the names looked up are not published, because most name people for whom nothing was found; the counts and the rules are. ")
 
 
+def NEWER_WORDS():
+    """The sentence on chips dated by a report whose page was changed after its first day, counted from research/nv8_report_day_screen.tsv
+    (scripts/nv8_report_day_screen.py, part 3)."""
+    n = sum(1 for r in csv.DictReader(open(R / 'nv8_report_day_screen.tsv', newline=''), delimiter='\t') if r['screen'].startswith('its page') and r['reading'].startswith('may be newer'))
+    return (f"For {rows_map.NUMBER.get(n, n)} of them the page was changed the day after it was first published, and the passage may be newer than the chip's day. " if n else '')
+
+
 def OWN_CHANNEL_WORDS():
     """The footnote's sentences on the search of the actors' own channels, with every number from research/nv8_s6_counts.tsv
     (scripts/nv8_s6_counts.py, which reads research/nv8_s6_items.tsv)."""
     C = {r['what']: int(r['count']) for r in csv.DictReader(open(R / 'nv8_s6_counts.tsv', newline=''), delimiter='\t')}
     n_chips = sum(1 for r in rows_map.rows() if r['row_id'].startswith('MA')); searched = C['chips whose original was searched for']       # every chip ever drawn, one since withdrawn among them
+    # the acts the search did not cover (the fifteenth reading, Nov 16, 2026: these are acts, not chips, since two acts of one day share a chip; none is withdrawn)
+    covered = {r['key'] for r in csv.DictReader(open(R / 'nv8_s6_items.tsv', newline=''), delimiter='\t') if r['part'] == 'original of a chip'}
+    later = [r for r in rows_map.rows() if r['row_id'].startswith('MA') and r['row_id'] not in covered and not r.get('withdrawn')]
+    assert len(covered) == searched and len(later) == n_chips - searched, (len(covered), searched, len(later), n_chips)
     W = lambda n: rows_map.NUMBER.get(n, {7: 'seven', 8: 'eight', 9: 'nine'}.get(n, n))
     held, loc, cx = C['actors: an item about the affair is held and was read'], C['actors: links located, none could be read'], C['actors: only items that are not about the affair or not their own']
     n_act = C['actors whose own channels were searched']
@@ -96,7 +107,7 @@ def OWN_CHANNEL_WORDS():
             f"for {C['chips: original could not be opened']} it still could not be opened (posts on X and Truth Social, broadcasters' video, papers behind a paywall); "
             f"for {rows_map.NUMBER.get(C['chips: original found by the reader and refused to the project (not saved)'], 'two')} the reader found it and the site refused the project's own copy (the Journal's page, an SEC filing); and for {C['chips: original not found']} it was not found. "
             f"Of the chips still without their original, {C["chips still without their original that now also cite a paper's own report of the act"]} now also cite a paper's own report of the act, from the papers' pages saved since the first census. "
-            f"The {n_chips - searched} chips added without such a search each cite the actor's own page, the paper's own article (some in a licensed copy) or, where neither is held, a report that the chip names. ")
+            f"The {len(later)} acts added without such a search (two acts of one day share a chip) each cite the actor's own page, the paper's own article (some in a licensed copy) or, where neither is held, a report that the chip names. ")
 
 
 def ARTICLE_WORDS():
@@ -114,7 +125,7 @@ def ARTICLE_WORDS():
     n_screen = sum('lane partial_nv8_a' in p['read_by'] for p in pr)          # the pages the screen listed; the others were found by a later reading among the longer pages
     n_live = sum(p['verdict'] == 'part' and 'lane partial_nv8_a' not in p['read_by'] for p in pr)
     ta = list(csv.DictReader(open(R / 'nv8_text_added.tsv', newline=''), delimiter='\t'))
-    kind = lambda x: 'pdf' if 'page breaks' in x['what_the_text_read_lacked'] else 'live' if 'live page' in x['what_the_text_read_lacked'] else 'small' if 'short' in x['what_the_text_read_lacked'] else 'tab'
+    kind = lambda x: 'pdf' if 'page breaks' in x['what_the_text_read_lacked'] else 'small' if 'short' in x['what_the_text_read_lacked'] else 'live' if 'live page' in x['what_the_text_read_lacked'] else 'tab'
     n_pdf = sum(kind(x) == 'pdf' for x in ta); n_tab = sum(kind(x) == 'tab' for x in ta); n_pdf_lines = sum(int(x['lines_added']) for x in ta if kind(x) == 'pdf')
     n_livep = sum(kind(x) == 'live' for x in ta); n_entries = sum(int(x['lines_added']) for x in ta if kind(x) == 'live'); n_small = len({x['page_id'] for x in ta if kind(x) == 'small'})
     assert part2 == sum(p['verdict'] == 'part' for p in pr) and 0 < n_tab <= 12 and 0 < n_pdf <= 12 and 0 < n_live <= 12 and n_screen + sum('lane partial_nv8_a' not in p['read_by'] for p in pr) == n_read
@@ -920,7 +931,13 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             'They are sorted into the three kinds by site and by the section named in the page address, not by reading them. '
             'A chip is one dated act, worded from a saved report; it starts on its day, and a long one may run on over empty days to its right. '
             'View counts are those shown when the posts were saved on Nov 12. '
-            'An act is placed on the day its source gives or, failing that, the day the source was published: those chips have a dashed left edge, and the act itself may be earlier. Where one chip holds two acts of a day and only one is dated by its report, the edge is solid and the words say which. '
+            'An act is placed on the day its source gives: a day the source states, or one its context fixes (a remark dated with others like it, an answer to something that happened that day in a report of that day). '
+            'Failing that it is placed on the day the source was first published: those chips have a dashed left edge, and the act itself may be earlier. ' + NEWER_WORDS() +
+            'Where one chip holds two acts of a day and only one is dated by its report, the edge is solid and the words say which. '
+            'A refusal to comment on the actor\'s own part is drawn when two or more counted articles carry it for one report, or when it is the actor\'s only recorded answer on the matter; a line that no reply had come to a request for comment is not drawn for anyone. '
+            'An act is drawn when a saved report gives it, it is on the matter and no chip of that actor already carries the same occurrence: a similar remark on another occasion is its own act; a later article repeating a dated remark is not. '
+            'What is drawn was tested with three gauges over the readers\' lines from the saved pages (an actor carried on a day with no chip; quoted remarks in two or more articles that no chip holds; the same words on two pages); '
+            'they find candidates and do not prove completeness: an act that one article carries on a day the actor already has a chip may still be missing. '
             'Where a chip rests on one outlet\'s account of another\'s report, it says so. Grant figures are awards, not payments traced to a bank. An announced ad is not proof that it ran. '
             'Nvidia\'s board said on Nov 8 it had "no reason to believe" national security or company secrets were compromised, and NBC reported on Nov 12 that Alice Huang\'s "precise role" remained unclear. '
             + esc(ARTICLE_WORDS()) +

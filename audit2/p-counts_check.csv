@@ -1,0 +1,48 @@
+what,figure_says,you_find,agree,note
+dated acts drawn,172,172,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+actor-day chips,162,162,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+chips with dashed edge,34,34,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+acts dated by report,41,41,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+multi-article actor-day keys,13,13,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+single-article actor-day keys,31,31,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+report-day screen listings,24,24,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+saved pages,1315,1315,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+articles after joins,1236,1236,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+counted articles,1154,1154,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+counted pages held in part,98,98,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+active public rows,2702,2702,yes,"Rows/table recount; chip and dashed counts also agree with actual rendered divs. These are counts of the frozen release, before suggested changes."
+live entries recovered,174,172,no,122 HuffPost + 49 CNN + 1 Protos. Two Al Jazeera summary bullets are a different unit.
+pages with recovered live entries,4,3,no,"A fourth page gained two summary bullets, not recovered entries."
+active later acts called chips,41,40,no,Rows MA134–MA174 include withdrawn MA137; the 40 active acts occupy 37 chips.
+CNN structured entries,69,69,yes,
+CNN rendered bodies including summary,21,21,yes,
+CNN rendered text blocks,147,147,yes,
+HuffPost structured entries,143,143,yes,
+HuffPost on-matter entries,16,16,yes,
+Warren articles naming member,71,71,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Coons articles naming member,48,48,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Cramer articles naming member,22,22,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Schumer articles naming member,22,22,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Banks articles naming member,19,19,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Blumenthal articles naming member,3,3,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Warner articles naming member,4,4,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Cornyn articles naming member,9,9,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Kennedy articles naming member,6,6,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Thune articles naming member,13,13,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Wyden articles naming member,5,5,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Cotton articles naming member,5,5,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Scott articles naming member,4,4,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Ricketts articles naming member,5,5,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Mast articles naming member,92,92,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Crawford articles naming member,68,68,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Meeks articles naming member,9,9,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Himes articles naming member,8,8,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Huizenga articles naming member,4,4,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Johnson articles naming member,11,11,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Moolenaar articles naming member,78,78,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Jeffries articles naming member,30,30,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Magaziner articles naming member,4,4,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Subramanyam articles naming member,3,3,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Bacon articles naming member,3,3,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+McCaul articles naming member,5,5,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.
+Neal articles naming member,3,3,yes,Distinct counted article ids in story_pages.tsv; unchanged from the fourteenth reading. No new full-corpus member-name audit is claimed.

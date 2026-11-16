@@ -1,0 +1,20 @@
+part,finding_id,holds,note
+A,A-CNN-SIGNATURE,yes,"Both short lines are in text.added3.txt, sourced from the rendered HTML; 69 entries plus summary, 21 rendered bodies, and all 147 text blocks checked."
+A,A-CNN-VISIBLE,yes,"Both short lines are in text.added3.txt, sourced from the rendered HTML; 69 entries plus summary, 21 rendered bodies, and all 147 text blocks checked."
+A,A-HUFF-SMALL,yes,README explicitly lists short invitations/other small parts as extraction limits; the whole/partial distinction is not described as every word extracted.
+A,A-FT-PDF,yes,The existing README carries the older-entry loading question as unresolved and leaves the not-told mark unchanged. This inherited extent question was not reopened.
+A,A-AJ-SUMMARY,yes,Both missing summary bullets match the decoded saved page; the page remains partial and member counts did not move.
+C,C-MEEKS,partial,"The promised rows/text changes exist, and the CNN restorations hold. The residual actor-day explanations are not exhaustive; see B1/B2. MA169 also needs the qualifications in A-MA169."
+C,C-DOJ,partial,"The promised rows/text changes exist, and the CNN restorations hold. The residual actor-day explanations are not exhaustive; see B1/B2. MA169 also needs the qualifications in A-MA169."
+D,D-README-ZERO,partial,"The promised rows/text changes exist, and the CNN restorations hold. The residual actor-day explanations are not exhaustive; see B1/B2. MA169 also needs the qualifications in A-MA169."
+figure,D-SEARCH-DATE,yes,"Changed visible note now says Nov 15 and Nov 16 for later-added names. This checks the correction of the earlier reading’s stated dating, not a new identity lookup."
+figure,C-CLOSE,yes,"The status adds the fourteenth reading’s actual outcome, the incomplete FT extent question, and the eight builder-worded acts not yet independently read at that frozen release."
+G,G-SOURCE-WORDING,yes,"The changed source-view sentence is present in both the template and built page, and explicitly covers table-derived descriptive records."
+E,A A4-01,partial,"The promised rows/text changes exist, and the CNN restorations hold. The residual actor-day explanations are not exhaustive; see B1/B2. MA169 also needs the qualifications in A-MA169."
+E,A A4-08,partial,"The promised rows/text changes exist, and the CNN restorations hold. The residual actor-day explanations are not exhaustive; see B1/B2. MA169 also needs the qualifications in A-MA169."
+E,C C-04,partial,"The promised rows/text changes exist, and the CNN restorations hold. The residual actor-day explanations are not exhaustive; see B1/B2. MA169 also needs the qualifications in A-MA169."
+E,C C-CLOSE,partial,"The promised rows/text changes exist, and the CNN restorations hold. The residual actor-day explanations are not exhaustive; see B1/B2. MA169 also needs the qualifications in A-MA169."
+E,F F-DOCUMENT,yes,"The changed source-view sentence is present in both the template and built page, and explicitly covers table-derived descriptive records."
+E,D F F-DOCUMENT,yes,"The changed source-view sentence is present in both the template and built page, and explicitly covers table-derived descriptive records."
+E,D-gaps gaps cnn-1111-live,yes,"Both short lines are in text.added3.txt, sourced from the rendered HTML; 69 entries plus summary, 21 rendered bodies, and all 147 text blocks checked."
+gaps,man-ft-1112-05,yes,The existing README carries the older-entry loading question as unresolved and leaves the not-told mark unchanged. This inherited extent question was not reopened.

@@ -2,7 +2,7 @@
 generator and the public build (build_nv8.py) print the same words."""
 KICKER = 'Huang resignation · dated public records, Nov 2026 · draft'
 STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn item was matched by script to a saved copy of its source. '
-          'Fourteen independent readings by another company\'s model have read the figure or the corrections made to it. The first (Nov 14) read the 230 rows then drawn that are not listed pieces, recounted the pieces and recomputed the members\' lines. '
+          'Fifteen independent readings by another company\'s model have read the figure or the corrections made to it. The first (Nov 14) read the 230 rows then drawn that are not listed pieces, recounted the pieces and recomputed the members\' lines. '
           'The second (Nov 15), in three parts, read the 168 rows new or changed since then, the figure element by element, the pieces and the money recounted from the FEC\'s saved records, and who is drawn and what the chips carry; '
           'it graded 11 points as errors and 145 as needing a qualification. The third (Nov 15) read the corrections made in answer: it found no error in the 90 changed rows, two errors and eight qualifications in the changed text, '
           'and held 2 of the 181 answers insufficient and 19 only in part. A fourth (Nov 15) read the answers to it and the 45 rows added or changed since: no error in a row, 24 qualifications (18 of them one point, that lobbyists\' gifts were shown by unequal measures), '
@@ -45,9 +45,13 @@ STATUS = ('<b>Status:</b> draft of Nov 16, 2026. Each passage behind a drawn ite
           'Changed in answer and not yet read independently: the two acts are drawn, and a second gauge over every drawn actor and day found six more acts that two or more articles report in different words and no chip carried '
           '(among them the attorney general\'s statement of Nov 12 that the department had reached no conclusions about the woman in the reports); eight acts are added in all; one older act moved from its report\'s day to its own, and one chip\'s dashed edge became solid. '
           'The four members are marked beside their counts; the small parts are added; the sentences are corrected. '
-          'After that release the builder read what its own gauges had left unread, and no independent reader has read the result: the 31 days on which only one counted article carries an actor who has no chip that day, '
-          'and, with a third gauge, the quoted remarks that two or more articles carry in differing words and no chip held. Thirteen more acts are drawn (among them the president\'s answer of Nov 12 that it was not yet determined whether the woman was a spy, '
-          'Nvidia\'s and the Chinese embassy\'s replies to the Times report of Nov 6, and who backed the export controls at the meeting of Nov 5), and two chips that printed half of a remark now print both halves. A fifteenth reading is under way on the release before these additions.')
+          'After that release the builder read what its own gauges had left unread (the 31 days on which only one counted article carries an actor who has no chip that day; and, with a third gauge, quoted remarks that two or more articles carry in differing words) and drew thirteen more acts, '
+          'among them the president\'s answer of Nov 12 that it was not yet determined whether the woman was a spy, and Nvidia\'s and the Chinese embassy\'s replies to the Times report of Nov 6. '
+          'A fifteenth (Nov 16) read the release before those additions: every count reproduces; among 18 of those 31 days it found eight acts with no chip, six of which the builder had drawn by then; '
+          'it found one chip that put a reply in the wrong room, one that left out its source\'s statement that Huang is not a target of the inquiry it reports, one that did not name the outlet relaying a broadcast, two wrong count labels, '
+          'and seven dashed edges it would make solid; it noted that Anthropic\'s refusal to comment was drawn while other parties\' refusals were not. It closed complete, with the earlier open question carried. '
+          'Changed in answer and not yet read independently: 22 acts added since the answer to the fourteenth reading (194 dated acts now); thirteen edges made solid, the day being read from a source\'s ordinary context; '
+          'one rule for refusals to comment applied to every actor; the three chips and the two labels corrected; and a note on chips whose page was changed after its first day.')
 # what changed after the audit read the figure (the README of the public copy lists these under the audit)
 AFTER_AUDIT = [
     'Five pieces were added and one moved from Nov 8 to Nov 12 (1,726 pieces became 1,731; 1,662 drawn became 1,667): six articles of one site share an address apart from the query string and had been counted as one. No row id was renumbered.',
@@ -326,5 +330,34 @@ AFTER_RELEASE14 = [
     'The figure now draws 185 dated acts. Four of the thirteen sit on the day of their report, with a dashed edge; the screen of such acts now covers 45 acts and its table holds 27 listings, each read.',
     'Limits that remain: a second act on a day that already has a chip is seen only if two counted articles quote it directly; a remark that one article carries on such a day is not seen by any gauge; the gauges read the census readers\' lines, not the pages again. '
     'The builder found, worded and read all of this; none of it has been read independently.',
+]
+
+# what changed in answer to the fifteenth independent reading (lane audit_nv8_s8i, read after its marker on Nov 16, 2026)
+AFTER_READING15 = [
+    'What the reading read. It read the release that answered the fourteenth reading, before the thirteen acts of the list above were added. Of the eight acts it found among the days that one article carries, '
+    'six are in that list (Sens. Banks, Cornyn twice and Cramer, the trade representative, Rep. Himes). The other two I had read as repeats of a statement already drawn, and the reading reads them as second occurrences: '
+    'the foreign ministry\'s answers of Nov 10 and the secretary of state\'s second exchange with reporters. Both are drawn now. The second sits on Nov 9, not Nov 10: the republished transcript is titled 10 November and stamped 10:48 am in Australia, '
+    'the evening of Nov 9 in Washington. The standard is the reading\'s and is in the figure\'s note: a similar remark on another occasion is its own act; a later article repeating a dated remark is not.',
+    'Three acts among the days I had given a reason for. Each reason was true of most lines and overlooked one act: Nvidia\'s clarification on Nov 12 that Huang will not work with the company in any capacity (NBC); '
+    'Elon Musk\'s agreement, before the resignation, with a post that the board should wait for the investigation (CNBC; on the report\'s day, dashed); and Sen. Coons\'s statement of Nov 12. All three are drawn.',
+    'Three chips corrected. The Commerce secretary\'s reply no longer says it was made in the Oval Office: the account places it outside (a sentence in the list of the fourteenth reading\'s answer says "the day and the room"; the day holds, the room was wrong). '
+    'The Justice Department chip that relays Bloomberg\'s report of an inquiry now carries what the same page says beside it: Jensen Huang "is not a target of U.S. law enforcement probes", and it "remains uncertain" whether the inquiry connects to any smuggling prosecution '
+    'and what part Alice Huang or her entities had. Sen. Warren\'s remarks on CBS are marked as quoted by Yahoo Finance.',
+    'Edges. The reading would make seven dashed edges solid, reading the day from the source\'s ordinary context, and found my two refusals to do so (a senator\'s "today", an analyst under "tech analysts said on Monday") too literal. '
+    'The rule is now in the figure\'s note: a day counts as given when the source states it or its context fixes it. I read every other act dated by its report the same way and six more became solid (thirteen in all); '
+    '37 acts remain dated by their report. Each of the thirteen cites the sentence that fixes its day.',
+    'One rule for refusals to comment. The reading noted that Anthropic\'s "declined to comment" is drawn while other requests that went unanswered are not. The builder is Anthropic\'s model, and the census shows the asymmetry was wider than the reading said: '
+    'Nvidia\'s and the White House\'s refusals on the first reports were in many saved articles and on no chip. The rule now in the note: a refusal to comment on the actor\'s own part is drawn when two or more counted articles carry it for one report, '
+    'or when it is the actor\'s only recorded answer on the matter; a line that no reply had come is not drawn for anyone. Applied to every actor it adds four acts (the White House with the CIA, to the Times for its first report and to the Times and the FT on the memo; '
+    'Nvidia to the Times on the second relationship; Commerce to the FT on the entity list) and puts Nvidia\'s refusals of Nov 5 and Nov 6 on its chips of those days. Anthropic\'s stays.',
+    'Two count labels. "174 entries on four live pages" mixed units: it is 172 entries on three pages; the two summary bullets of a fourth are counted with the short passages. "The 41 chips added without such a search" used the wrong unit: they are acts, and two acts of a day share a chip. '
+    'The reading put the number at 40 by taking rows MA134 to MA174 and one withdrawn row among them; the acts the search did not cover are listed by `research/nv8_s6_items.tsv`, they were 41, and none was withdrawn. The sentence now counts 63 acts.',
+    'Pages changed after their first day. The project\'s fact-check session, a separate session working on the same saved pages, sent a list of 20 counted pages whose text reports an event later than the day of their stamp (a page updated after it was first published). '
+    'No count here depends on a page\'s day inside the fifteen days, so none moves. It does bear on chips dated by a report: the screen of those acts has a third part (`research/nv8_report_day_screen.tsv`), which lists six acts whose cited page was first published or changed after the chip\'s day; '
+    'for four the chip\'s day rests on something else (a day in the text, another page), and for two the passage may be newer than the chip\'s day. The figure\'s note says so.',
+    'The gauges are candidate finders. The reading asked that their zero of unread listings not be read as proof that every act is drawn, and the figure\'s note now says that. All of the actor-days the census carries with no chip are read (9 in two or more articles, 19 in one); '
+    'the third gauge covers quoted remarks in two or more articles on any day. Not seen by any of them: a second act that one article carries on a day the actor already has a chip; a remark the census reader did not mark as a direct quotation; an act with no line in the census.',
+    'Left as limits: Sen. Blumenthal\'s "re-upped" warning of Nov 5 (one page gives no words, another dates a notice about donations to the Wednesday; recorded in the table, not drawn); the reading\'s fixed samples (18 of 31 single-article days, ten of 17 unscreened acts, 20 solid edges) are not a reading of the rest; '
+    'whether one live page saved by hand as PDF held older entries stays open. Nothing in this list has been read independently.',
 ]
 

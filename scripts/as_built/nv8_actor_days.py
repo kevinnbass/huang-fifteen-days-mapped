@@ -14,23 +14,23 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; sys.path.insert(0, str(ROOT / 'scripts'))
 import nv8_gaps as G, rows_map
 LETTER = 'the three chairmen\'s letter is dated Nov 4 and was released on Nov 5; the chip is on the day of release and says both'
-READ = {('nvidia', '2026-11-12'): 'the resignation and the appointments announced that day: on the chips of the board, of Huang, of Kress and of Jones for Nov 12',
+READ = {
         ('mast', '2026-11-04'): LETTER, ('moolenaar', '2026-11-04'): LETTER, ('crawford', '2026-11-04'): LETTER,
         ('nvidia', '2026-11-10'): 'the hiring of outside counsel, announced that day: on the board\'s chip for Nov 10',
-        ('musk', '2026-11-12'): 'his "would be an honor" post, stamped 8:22 PM Eastern on Nov 11 and reported the next day: on his chip for Nov 11',
-        ('nvidia', '2026-11-11'): 'that the company did not comment on the reports of that day, and what its filing says of the board\'s acceptance of the resignation: the latter is on the board\'s and Huang\'s chips',
+        
+        
         ('mast', '2026-11-06'): 'one news service\'s three reports give the chairmen\'s request of Nov 5 as made "on Friday": the same letter as the chip for Nov 5',
         ('cramer', '2026-11-10'): 'his "I just think he\'s got to go", said on Nov 9 and reported over the following days: on his chip for Nov 9',
         ('singapore', '2026-10-31'): 'the ministry\'s statement is timed Oct 30, 11:13 PM in Singapore and its newsroom page dates it Oct 31: the chip for Oct 30 says both',
         ('trump', '2026-11-10'): 'his words of Nov 9 on what Huang told him, quoted in pieces of the next day: on his chip for Nov 9',
         ('nvidia', '2026-11-03'): 'reports of a rule the company set for its data-centre clients, from a report of Nov 2 that does not mention the affair: answered in the register of remarks (not printed)',
-        ('coons', '2026-11-12'): 'his letter with Sen. Warren, dated Nov 11 and reported on Nov 12: on his chip for Nov 11; a statement of Nov 12 is carried by one article only'}
+        }
 # The actor-days that only one counted article carries (read on Nov 16, 2026, after the fourteenth reading; twelve of them held an act with no chip and
 # are no longer listed, because the actor now has a chip that day).
 NOC = 'no act: the page says only that no reply to a request for comment had come'
 READ1 = {('bessent', '2026-11-10'): 'not on the matter: a remark on relations with China in general',
-         ('blumenthal', '2026-11-05'): 'the page says only that he "re-upped his warning" that Thursday; it gives no words and no content',
-         ('china', '2026-11-10'): 'the ministry repeats its reply of the day before ("We responded to that yesterday"): on its chip for Nov 9',
+         ('blumenthal', '2026-11-05'): 'one page says he "re-upped his warning" that Thursday and another dates to the Wednesday a notice to those who had not answered his inquiry into donations to the White House ballroom; neither gives words of his on the Huang matter, and the two days differ; recorded here and not drawn',
+         
          ('commerce', '2026-11-11'): NOC, ('megaspeed', '2026-11-05'): NOC, ('megaspeed', '2026-11-10'): NOC, ('whitehouse', '2026-11-11'): NOC,
          ('himes', '2026-11-12'): 'his remarks to Politico, which that page dates to Thursday and the article itself to Wednesday: on his chip for Nov 11',
          ('huang', '2026-10-30'): 'one page dates to Oct 30 what he said of Megaspeed\'s deployments; it is the interview on his chip for Oct 29 (the interviewer\'s own page is dated Oct 29)',
@@ -42,8 +42,8 @@ READ1 = {('bessent', '2026-11-10'): 'not on the matter: a remark on relations wi
          ('mcguire', '2026-11-09'): 'remarks to CNBC that Commerce took no action and should tighten controls: the position his chips of Nov 6 and Nov 10 carry, in other words; not drawn',
          ('nvidia', '2026-11-02'): 'not on the matter: a statement on data-centre policy in a report that does not mention the affair',
          ('nvidia', '2026-11-07'): 'its statement of Nov 5, reported two days later: on its chip for Nov 5',
-         ('rubio', '2026-11-09'): 'his remarks of the evening of Nov 8 in Washington, on a transcript stamped Nov 9 in Australia: on his chip for Nov 8',
-         ('rubio', '2026-11-10'): 'declines again to comment: the position his chip for Nov 8 carries',
+         
+         ('rubio', '2026-11-10'): 'the exchange on his chip for Nov 9: the republished transcript is titled 10 November and stamped the evening of Nov 9, Eastern time',
          ('suit', '2026-11-10'): 'the complaint filed on Nov 9, reported the next day: on its chip for Nov 9',
          ('trump', '2026-11-11'): 'that he spoke to Huang on Wednesday, said in the interview released on Nov 12: on his chip for Nov 12'}
 
