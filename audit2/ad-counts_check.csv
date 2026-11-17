@@ -1,0 +1,84 @@
+what,stated,recounted,agree
+real pages read for acts,89,89,yes
+reader records,601,601,yes
+pages with records,58,58,yes
+candidate records,262,262,yes
+candidates in days,74,74,yes
+candidates without period,21,21,yes
+candidates earlier,167,167,yes
+round-three dispositions,95,95,yes
+pages of round-three candidates,42,42,yes
+new E groups,151,151,yes
+egroup retained lines,631,631,yes
+lines to original register groups,333,333,yes
+lines to builder groups,13,13,yes
+lines to E groups,227,227,yes
+set-aside lines,58,58,yes
+undated retained lines,113,113,yes
+undated retained pages,27,27,yes
+current register groups,950,950,yes
+current carried groups,112,112,yes
+current open groups,838,838,yes
+current open partial groups,26,26,yes
+open group-line total including two qualifications,1589,1589,yes
+open recall pages,668,668,yes
+current drawn acts,417,417,yes
+company names among all reader records,0,0,yes
+literal disposition: carried,39,39,yes
+literal disposition: part of a chip,19,19,yes
+literal disposition: relay of a response already drawn,10,10,yes
+literal disposition: no reply: not drawn,10,10,yes
+literal disposition: earlier act: to the register,9,9,yes
+literal disposition: same act as another record,3,3,yes
+literal disposition: not an act,3,3,yes
+new acts from candidate records,2,2,yes
+actual unanswered-request records supported,10,9,no
+records still earlier rather than carried by a current chip,9,8,no
+unassigned records waiting with 167,4,3,no
+candidate records plus extra Anthropic act,3,3,yes
+amended existing chips in delta_round3,21,21,yes
+changed tie lines in delta_round3,1,1,yes
+delta_round3 rows,25,25,yes
+grouping-reader lanes,5,5,yes
+all egroup input lines,671,671,yes
+egroup planted controls,20,20,yes
+ON_COUNTED_SAME pairs,20,20,yes
+earlier lines on counted test pages,30,30,yes
+counted test pages,8,8,yes
+added lines from counted test pages,10,10,yes
+E carriers at this release: named rows plus three overrides,18,18,yes
+E carriers in the present table (later changes included),historical 18,19,historical; later release marks Ed.N034 carried
+open first-report class: in these days,61,61,yes
+open first-report class: before,265,265,yes
+open first-report class: unclear,512,512,yes
+before-second-iteration dated acts,375,not independently reconstructed from a frozen 375-act table,not checked
+held-out test chips,6,6,yes
+valid controls returned,5,5,yes
+faulty subscriber/byline control,1,1,yes
+long pages reserved for excerpt reading,5,not reconstructed; the inspected reader access gaps do not identify the excerpt backlog,not checked
+remarks readers not yet taken in,3,not independently reconstructed from their result files,not checked
+drawn acts on their report day,181,181,yes
+groups from the original six sorters,772,772,yes
+builder register groups,27,27,yes
+carried groups with a grouping-reader verdict,63,63,yes
+other carried groups,49,49,yes
+wholly open groups,812,812,yes
+open candidate lines excluding control and reader-carried line,1587,1587,yes
+open candidates on counted pages,1097,1097,yes
+counted pages with open candidates,527,527,yes
+open candidates outside the count,490,490,yes
+outside pages with open candidates,141,141,yes
+open planted control lines,1,1,yes
+open reader-carried line,1,1,yes
+initial grouping-reader E carriers,15,15,yes
+explicit company E overrides,3,3,yes
+initial open E groups including partials,133,133,yes
+current open E groups including partials,132,132,yes
+initial open E direction: neither,40,40,yes
+initial open E direction: against Huang or Nvidia,37,37,yes
+initial open E direction: for Huang or Nvidia,28,28,yes
+initial open E direction: against the administration,15,15,yes
+initial open E direction: for the administration,13,13,yes
+SAME mappings,6,6,yes
+counted page table,1324,1324,yes
+other-session ms pages in counted table,0,0,yes

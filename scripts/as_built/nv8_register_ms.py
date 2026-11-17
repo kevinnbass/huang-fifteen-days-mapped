@@ -21,6 +21,9 @@ Rules:
     such page had read it already. Where the census holds the same passage on that page (the words of one contain the words of the other; each of the twenty pairs read by the builder on Nov 17,
     list ON_COUNTED_SAME) the line is not added again: the census line stands for it, in the group and with the verdict it has there (seventeen of the twenty went to the same act in both sortings;
     two went to another act and one stands as carried in the census). The other ten are passages the census reader had not listed: they are added, and their first column says the page is counted.
+Amendment of Nov 17, 2026, after the twenty-ninth reading (its point P05). The grouping readers did not draw the line of 'no occasion named' alike: three of them set such summaries aside, two kept comparable ones as
+unresolved acts (the reading names Ea.N004 against Eb.N019 and Ee.N035; by their own wording about a third of the kept groups are undated or unidentified too). One rule holds now for every actor: a group whose
+reader found no identifiable occasion in it is REGISTERED as an open, unresolved record and marked so (KEPT_UNRESOLVED). Only the groups a reader found not to be the actor's, or not on the matter, stay set aside.
 Nothing here draws anything."""
 import csv, re, sys
 from collections import Counter, defaultdict
@@ -32,6 +35,7 @@ SAME = {('b', 'N022'): 'B.10', ('b', 'N008'): 'B.11', ('d', 'N025'): 'B.13', ('b
 # groups about Anthropic and OpenAI that a row carries although their reader named none (the builder's check of every group that names either company)
 BUILDER_CARRIED = {('c', 'N042'): ('MT20', "a live page's sentence that he used the company's cash to back dozens of AI companies, 'including OpenAI and Anthropic'; the tie lines between Nvidia and each of the two give its investments in them, and the sentence adds no particular of either"),
                    ('d', 'N019'): ('MA69', "OpenAI's chip of Nov 4 gives the report itself, from the first saved relay of it"), ('d', 'N027'): ('MT66', "the line on Anthropic's row gives the senators' citation of the report")}
+KEPT_UNRESOLVED = 'no occasion'        # since the twenty-ninth reading: registered as unresolved, for every actor (the docstring's amendment)
 ASIDE = {'no occasion': 'its grouping reader found no identifiable occasion in it', "not the actor's": 'its grouping reader found it is not an act of the actor named', 'not on the matter': 'its grouping reader found it is not on the matter'}
 LABEL = 'egroup_nv8_{k} (a grouping reader of the earlier passages on pages another session saved, outside the table of counted pages)'
 LABEL_COUNTED = 'egroup_nv8_{k} (a grouping reader of earlier passages; this page is a counted page that a first reader was given as a test, and its census reader had not listed the passage)'
@@ -84,10 +88,11 @@ def load(reg_ids, all_ids):
             else:
                 g = G[gid]; aside = g['set_aside'].strip()
                 if (k, gid) in SAME: base['target'] = SAME[(k, gid)]; st['lines to an act the builder registered after the twenty-sixth reading'] += 1
-                elif aside and (k, gid) not in BUILDER_CARRIED:        # a group about Anthropic or OpenAI that a row carries is marked carried even where its reader found no occasion in it
+                elif aside and aside != KEPT_UNRESOLVED and (k, gid) not in BUILDER_CARRIED:        # a group about Anthropic or OpenAI that a row carries is marked carried even where its reader found no occasion in it
                     assert aside in ASIDE, (lane, gid, aside); base['disp'] = 'not registered: ' + ASIDE[aside]; st['lines of a group its reader set aside'] += 1
                 else:
                     nid = f'E{k}.{gid}'; base['target'] = nid; st['lines to a new act'] += 1
+                    if aside == KEPT_UNRESOLVED and (k, gid) not in BUILDER_CARRIED: st['of them, lines of a summary in which its reader found no identifiable occasion (registered as unresolved since the twenty-ninth reading)'] += 1
                     if nid not in groups:
                         named = [x for x in re.findall(r'M[AT]\d+|TY\d+', g['carried_by']) if x in all_ids]
                         assert bool(named) == bool(g['carried_by'].strip()), ('a reader names a row that is not there', lane, gid, g['carried_by'])
@@ -95,12 +100,12 @@ def load(reg_ids, all_ids):
                             row, why = BUILDER_CARRIED[(k, gid)]; assert row in all_ids and not named; disp = f'carried since Nov 17: {row} ({why}; found by the builder, the grouping reader named no row)'
                         elif named: disp = 'carried: ' + ', '.join(named) + ' (the grouping reader\'s verdict)'
                         else: disp = None        # open: the register script words it
-                        groups[nid] = {'actor': g['actor'], 'what': g['what'], 'when': g['when'], 'kind': g['kind'], 'first_reported': g['first_reported'], 'row_it_belongs_on': g['row_it_belongs_on'], 'direction': g['direction'], 'disp': disp, 'lane': lane, 'counted_only': True}
+                        groups[nid] = {'actor': g['actor'], 'what': g['what'], 'when': g['when'], 'kind': g['kind'], 'first_reported': g['first_reported'], 'row_it_belongs_on': g['row_it_belongs_on'], 'direction': g['direction'], 'disp': disp, 'lane': lane, 'counted_only': True, 'no_occasion': aside == KEPT_UNRESOLVED and (k, gid) not in BUILDER_CARRIED}
                     used[nid] += 1; groups[nid]['counted_only'] &= on_counted
             lines.append(base)
     for (k_, gid_), (row_, _) in BUILDER_CARRIED.items(): assert row_ in all_ids, row_
     assert same_seen == ON_COUNTED_SAME, (same_seen ^ ON_COUNTED_SAME); st['new acts recalled only by a counted page'] = sum(1 for g in groups.values() if g['counted_only'])
-    st['new acts'] = len(groups); st['of them carried'] = sum(1 for g in groups.values() if g['disp']); st['pages of the lines'] = len({l['page'] for l in lines}); st['lines'] = len(lines)
+    st['new acts'] = len(groups); st['of them carried'] = sum(1 for g in groups.values() if g['disp']); st['of them, summaries with no identifiable occasion (unresolved)'] = sum(1 for g in groups.values() if g['no_occasion']); st['pages of the lines'] = len({l['page'] for l in lines}); st['lines'] = len(lines)
     return groups, lines, st
 
 

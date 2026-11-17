@@ -1,0 +1,8 @@
+finding_id,row_id,grade,passage_found,problem,suggested_wording
+I-CT24,CT24,ok,"Anthropic panel: H.R.5885 1 report, with 2 more GAIN reports; full words distinguish amendment-with-name and name-only.",,
+I-CT36,CT36,ok,"Nvidia comparison panel: H.R.5885 1 report, with 2 more GAIN reports by amendment number alone.",,
+I-glance:anthropic,glance:anthropic,ok,The summary keeps the bill-number count and separately adds the two other-basis reports.,,
+I-glance:nvidia,glance:nvidia,ok,"The same treatment is applied to Nvidia, although only Anthropic ties are drawn as graphic edges.",,
+I-CHANGES:lobbying,CHANGES:lobbying,ok,The new section accurately admits the first mistaken negative for Nvidia and describes the final symmetric correction.,,
+I-status:lobbying,status:lobbying,ok,The changed lobbying status agrees with both company tables and preserves the basis distinction.,,
+I-verify_nv13,verify_nv13,ok,"Exit 0; 94 PASS checks; 463 evidence lines, 294 copied and checked, 169 linked; ALL CHECKS PASS. Eleven House members on the firm-list subset are explicitly not recomputed by this verifier.",,

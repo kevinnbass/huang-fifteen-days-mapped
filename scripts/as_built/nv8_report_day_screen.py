@@ -170,6 +170,12 @@ def norm(s):
 def shingles(words, n=4):
     return {' '.join(words[i:i + n]) for i in range(len(words) - n + 1)}
 
+# the answer to the twenty-ninth reading (batch s9z): two responses that Bloomberg reports without a day left the company's chip of Nov 6 for a chip on the day of Bloomberg's account
+READ1.update({'MA421': 'not shown to be the same occasion: the lines of Nov 8 are CBS\'s report of that day and its relays, which give one sentence of the statement (that the government would have notified the company of a genuine threat) as the company\'s answer to CBS; '
+                       'that sentence stands on the company\'s chip of Nov 8 (MA105), and the line of Nov 10 is a later relay of it. Bloomberg gives the statement as made after the Times\'s article of Nov 6 and names no day and no outlet; a search of every saved form of every page for the words of its other sentence '
+                       'found Bloomberg\'s account and a page of Nov 10, none earlier. So the chip sits on the day of Bloomberg\'s account, as the twenty-ninth reading asked. The lines of Nov 5 and Nov 12 share only common words ("said in a statement", "would have")'})
+READ2.update({'MA421': 'the day word dates the Times\'s article ("after the Nov. 6 New York Times article"), after which, by Bloomberg, the statement was made; the page gives the statement itself no day, which is why the chip sits on the day of Bloomberg\'s account'})
+
 
 def part1(acts, by):
     out = []

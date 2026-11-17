@@ -1,0 +1,213 @@
+what,stated,recounted,agree
+current report ids: independent latest-slot selection equals supplied flags,True,True,yes
+anthropic:AI OVERWATCH Act:by_bill_number,8,8,yes
+anthropic:AI OVERWATCH Act:by_bill_number:report identities,True,True,yes
+anthropic:AI OVERWATCH Act:by_senate_amendment_number,0,0,yes
+anthropic:AI OVERWATCH Act:by_senate_amendment_number:report identities,True,True,yes
+anthropic:AI OVERWATCH Act:by_name_only,0,0,yes
+anthropic:AI OVERWATCH Act:by_name_only:report identities,True,True,yes
+anthropic:AI OVERWATCH Act:all reports,8,8,yes
+anthropic:AI OVERWATCH Act:identifiable description only,0,0,yes
+anthropic:GAIN AI Act:by_bill_number,2,2,yes
+anthropic:GAIN AI Act:by_bill_number:report identities,True,True,yes
+anthropic:GAIN AI Act:by_senate_amendment_number,1,1,yes
+anthropic:GAIN AI Act:by_senate_amendment_number:report identities,True,True,yes
+anthropic:GAIN AI Act:by_name_only,1,1,yes
+anthropic:GAIN AI Act:by_name_only:report identities,True,True,yes
+anthropic:GAIN AI Act:all reports,4,4,yes
+anthropic:GAIN AI Act:identifiable description only,0,0,yes
+anthropic:Chip Security Act:by_bill_number,5,5,yes
+anthropic:Chip Security Act:by_bill_number:report identities,True,True,yes
+anthropic:Chip Security Act:by_senate_amendment_number,0,0,yes
+anthropic:Chip Security Act:by_senate_amendment_number:report identities,True,True,yes
+anthropic:Chip Security Act:by_name_only,0,0,yes
+anthropic:Chip Security Act:by_name_only:report identities,True,True,yes
+anthropic:Chip Security Act:all reports,5,5,yes
+anthropic:Chip Security Act:identifiable description only,0,0,yes
+anthropic:MATCH Act:by_bill_number,5,5,yes
+anthropic:MATCH Act:by_bill_number:report identities,True,True,yes
+anthropic:MATCH Act:by_senate_amendment_number,0,0,yes
+anthropic:MATCH Act:by_senate_amendment_number:report identities,True,True,yes
+anthropic:MATCH Act:by_name_only,0,0,yes
+anthropic:MATCH Act:by_name_only:report identities,True,True,yes
+anthropic:MATCH Act:all reports,5,5,yes
+anthropic:MATCH Act:identifiable description only,0,0,yes
+anthropic:Remote Access Security Act:by_bill_number,0,0,yes
+anthropic:Remote Access Security Act:by_bill_number:report identities,True,True,yes
+anthropic:Remote Access Security Act:by_senate_amendment_number,0,0,yes
+anthropic:Remote Access Security Act:by_senate_amendment_number:report identities,True,True,yes
+anthropic:Remote Access Security Act:by_name_only,0,0,yes
+anthropic:Remote Access Security Act:by_name_only:report identities,True,True,yes
+anthropic:Remote Access Security Act:all reports,0,0,yes
+anthropic:Remote Access Security Act:identifiable description only,0,0,yes
+nvidia:AI OVERWATCH Act:by_bill_number,6,6,yes
+nvidia:AI OVERWATCH Act:by_bill_number:report identities,True,True,yes
+nvidia:AI OVERWATCH Act:by_senate_amendment_number,0,0,yes
+nvidia:AI OVERWATCH Act:by_senate_amendment_number:report identities,True,True,yes
+nvidia:AI OVERWATCH Act:by_name_only,0,0,yes
+nvidia:AI OVERWATCH Act:by_name_only:report identities,True,True,yes
+nvidia:AI OVERWATCH Act:all reports,6,6,yes
+nvidia:AI OVERWATCH Act:identifiable description only,0,0,yes
+nvidia:GAIN AI Act:by_bill_number,1,1,yes
+nvidia:GAIN AI Act:by_bill_number:report identities,True,True,yes
+nvidia:GAIN AI Act:by_senate_amendment_number,2,2,yes
+nvidia:GAIN AI Act:by_senate_amendment_number:report identities,True,True,yes
+nvidia:GAIN AI Act:by_name_only,0,0,yes
+nvidia:GAIN AI Act:by_name_only:report identities,True,True,yes
+nvidia:GAIN AI Act:all reports,3,3,yes
+nvidia:GAIN AI Act:identifiable description only,0,0,yes
+nvidia:Chip Security Act:by_bill_number,11,11,yes
+nvidia:Chip Security Act:by_bill_number:report identities,True,True,yes
+nvidia:Chip Security Act:by_senate_amendment_number,0,0,yes
+nvidia:Chip Security Act:by_senate_amendment_number:report identities,True,True,yes
+nvidia:Chip Security Act:by_name_only,0,0,yes
+nvidia:Chip Security Act:by_name_only:report identities,True,True,yes
+nvidia:Chip Security Act:all reports,11,11,yes
+nvidia:Chip Security Act:identifiable description only,0,0,yes
+nvidia:MATCH Act:by_bill_number,0,0,yes
+nvidia:MATCH Act:by_bill_number:report identities,True,True,yes
+nvidia:MATCH Act:by_senate_amendment_number,0,0,yes
+nvidia:MATCH Act:by_senate_amendment_number:report identities,True,True,yes
+nvidia:MATCH Act:by_name_only,0,0,yes
+nvidia:MATCH Act:by_name_only:report identities,True,True,yes
+nvidia:MATCH Act:all reports,0,0,yes
+nvidia:MATCH Act:identifiable description only,0,0,yes
+nvidia:Remote Access Security Act:by_bill_number,5,5,yes
+nvidia:Remote Access Security Act:by_bill_number:report identities,True,True,yes
+nvidia:Remote Access Security Act:by_senate_amendment_number,0,0,yes
+nvidia:Remote Access Security Act:by_senate_amendment_number:report identities,True,True,yes
+nvidia:Remote Access Security Act:by_name_only,0,0,yes
+nvidia:Remote Access Security Act:by_name_only:report identities,True,True,yes
+nvidia:Remote Access Security Act:all reports,5,5,yes
+nvidia:Remote Access Security Act:identifiable description only,0,0,yes
+GAIN extra reports: Anthropic,2,2,yes
+GAIN extra reports: Nvidia,2,2,yes
+published bill-number table byte equality with previous published release,True,True,yes
+bill-number table same rows and text as private before (line endings normalized),True,True,yes
+as-built lobbying code equals private current version,True,True,yes
+anthropic:current reports,48,48,yes
+nvidia:current reports,36,36,yes
+saved 2024 API records,22,22,yes
+active dated acts,417,417,yes
+active report-dated acts,181,181,yes
+actor tie lines,73,73,yes
+member lines,150,150,yes
+network ties,23,23,yes
+register:groups,950,950,yes
+register:carried,112,112,yes
+register:open,838,838,yes
+register:open carried in part,26,26,yes
+register:wholly unworded by labels,812,812,yes
+register:kind:statement,358,358,yes
+register:kind:event,243,243,yes
+register:kind:decision,153,153,yes
+register:kind:money,25,25,yes
+register:kind:other,59,59,yes
+register:first_reported:in these days,61,61,yes
+register:first_reported:before,265,265,yes
+register:first_reported:unclear,512,512,yes
+register:which_way_the_reader_says_it_cuts:against Huang or Nvidia,319,319,yes
+register:which_way_the_reader_says_it_cuts:for Huang or Nvidia,200,200,yes
+register:which_way_the_reader_says_it_cuts:against the administration,47,47,yes
+register:which_way_the_reader_says_it_cuts:for the administration,44,44,yes
+register:which_way_the_reader_says_it_cuts:neither,228,228,yes
+Nov17 reader statement lines,235,235,yes
+Nov17 pages on supplied list,32,32,yes
+Nov17 pages with reader lines,30,30,yes
+Nov17 reader exact-word cells naming a drawn member,1,1,yes
+ab:all written dispositions,339,339,yes
+ab:applied,19,19,yes
+ab:stated as a limit,320,320,yes
+ab:finding lines,61,61,yes
+ab:qualifications,11,11,yes
+ab:errors,0,0,yes
+ab:figure qualifications,3,3,yes
+ab:recount lines,83,83,yes
+ac:all written dispositions,75,75,yes
+ac:applied,57,57,yes
+ac:stated as a limit,18,18,yes
+ac:finding lines,126,126,yes
+ac:qualifications,31,31,yes
+ac:errors,0,0,yes
+ac:figure qualifications,6,6,yes
+ac:recount lines,431,431,yes
+coverage:listed pieces drawn,2245,2245,yes
+coverage:all pieces,2254,2254,yes
+coverage:undated not drawn,9,9,yes
+ab:recounts agreeing,82,82,yes
+ab:recount in part,1,1,yes
+ab:earlier dispositions compared or marked as coverage gaps,123,123,yes
+ab:earlier dispositions hold,16,16,yes
+ab:earlier dispositions do not hold,1,1,yes
+ab:unfinished whole-source page listings,110,110,yes
+ab:unfinished comparison listings,98,98,yes
+ac:recounts yes,122,122,yes
+ac:recounts no,10,10,yes
+ac:recounts changed,299,299,yes
+ac:earlier answers,94,94,yes
+ac:earlier answers hold,80,80,yes
+ac:earlier answers hold in part,14,14,yes
+ac:site qualifications,6,6,yes
+register:original grouping-reader groups,772,772,yes
+register:builder groups,27,27,yes
+register:other-session groups,151,151,yes
+register:open group line-column sum,1589,1589,yes
+register:open candidate lines excluding planted control and originally-carried line,1587,1587,yes
+register:pages represented by open lines,668,668,yes
+register:open lines from other-session pages,490,490,yes
+register:other-session pages among open lines,141,141,yes
+current partial group line sum (historical 180 before three new partial groups),192,192,yes
+answers target rows,17,17,yes
+pages target rows,10,10,yes
+distinct target rows after shared MT20,26,26,yes
+filing identity:anthropic:GAIN AI Act:by_senate_amendment_number:2025QQ3:ba2fc44f-6b7a-42c0-abc8-a833ef824d69,1,1,yes
+filing identity:anthropic:GAIN AI Act:by_bill_number:2025QQ4:f1f12efe-e53f-4396-886b-2fb674e4e22e,1,1,yes
+filing identity:anthropic:GAIN AI Act:by_name_only:2025QQ4:7d16065c-e4c6-465e-8b1b-1dc1e0bd3105,1,1,yes
+filing identity:anthropic:GAIN AI Act:by_bill_number:2025QQ4:b0e6f976-3cb6-499d-885e-9ae42150c81e,1,1,yes
+filing identity:anthropic:AI OVERWATCH Act:by_bill_number:2026QQ1:90cc74f3-1bd5-40c1-bba0-8d6e00fbb200,1,1,yes
+filing identity:anthropic:AI OVERWATCH Act:by_bill_number:2026QQ1:342832c2-08e4-49cf-99d3-8c0a79549a6c,1,1,yes
+filing identity:anthropic:AI OVERWATCH Act:by_bill_number:2026QQ2:812e5787-90df-48ef-a801-500468d63047,1,1,yes
+filing identity:anthropic:Chip Security Act:by_bill_number:2026QQ2:812e5787-90df-48ef-a801-500468d63047,1,1,yes
+filing identity:anthropic:MATCH Act:by_bill_number:2026QQ2:812e5787-90df-48ef-a801-500468d63047,1,1,yes
+filing identity:anthropic:AI OVERWATCH Act:by_bill_number:2026QQ2:eae91755-71b5-4876-89fa-b65a1e0fb75a,1,1,yes
+filing identity:anthropic:AI OVERWATCH Act:by_bill_number:2026QQ2:9389667a-a5ea-4572-bf77-a71207627990,1,1,yes
+filing identity:anthropic:Chip Security Act:by_bill_number:2026QQ2:9389667a-a5ea-4572-bf77-a71207627990,1,1,yes
+filing identity:anthropic:MATCH Act:by_bill_number:2026QQ2:9389667a-a5ea-4572-bf77-a71207627990,1,1,yes
+filing identity:anthropic:AI OVERWATCH Act:by_bill_number:2026QQ3:d0b9f104-2212-4fcc-8304-5c978c366768,1,1,yes
+filing identity:anthropic:Chip Security Act:by_bill_number:2026QQ3:d0b9f104-2212-4fcc-8304-5c978c366768,1,1,yes
+filing identity:anthropic:MATCH Act:by_bill_number:2026QQ3:d0b9f104-2212-4fcc-8304-5c978c366768,1,1,yes
+filing identity:anthropic:AI OVERWATCH Act:by_bill_number:2026QQ3:7c921e66-2c9a-4838-afc6-82fc4633c673,1,1,yes
+filing identity:anthropic:Chip Security Act:by_bill_number:2026QQ3:7c921e66-2c9a-4838-afc6-82fc4633c673,1,1,yes
+filing identity:anthropic:MATCH Act:by_bill_number:2026QQ3:7c921e66-2c9a-4838-afc6-82fc4633c673,1,1,yes
+filing identity:anthropic:AI OVERWATCH Act:by_bill_number:2026QQ3:2cc797fa-e091-4272-96a3-bc0f11dc1c3e,1,1,yes
+filing identity:anthropic:Chip Security Act:by_bill_number:2026QQ3:2cc797fa-e091-4272-96a3-bc0f11dc1c3e,1,1,yes
+filing identity:anthropic:MATCH Act:by_bill_number:2026QQ3:2cc797fa-e091-4272-96a3-bc0f11dc1c3e,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2025QQ2:65879724-313e-4683-a5e5-95c3dbc310e0,1,1,yes
+filing identity:nvidia:GAIN AI Act:by_senate_amendment_number:2025QQ3:adf866b5-9207-4479-a012-8697cf851bd5,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2025QQ3:adf866b5-9207-4479-a012-8697cf851bd5,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2025QQ3:cfd97d85-ffe5-43b0-8139-d77584f45166,1,1,yes
+filing identity:nvidia:GAIN AI Act:by_senate_amendment_number:2025QQ4:e76ce48d-8b5c-46c3-b47e-6c146ad0909e,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2025QQ4:e76ce48d-8b5c-46c3-b47e-6c146ad0909e,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2025QQ4:528e6285-a580-4a03-b186-3725a08ae5a6,1,1,yes
+filing identity:nvidia:GAIN AI Act:by_bill_number:2025QQ4:4da03236-bf95-421d-a135-5825aeff8412,1,1,yes
+filing identity:nvidia:AI OVERWATCH Act:by_bill_number:2026QQ1:e3bcdce8-77ad-4bfc-8d23-d52f9603efb3,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2026QQ1:e3bcdce8-77ad-4bfc-8d23-d52f9603efb3,1,1,yes
+filing identity:nvidia:Remote Access Security Act:by_bill_number:2026QQ1:e3bcdce8-77ad-4bfc-8d23-d52f9603efb3,1,1,yes
+filing identity:nvidia:AI OVERWATCH Act:by_bill_number:2026QQ1:00bbd66f-2f3d-4533-a94f-558565e73cea,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2026QQ1:00bbd66f-2f3d-4533-a94f-558565e73cea,1,1,yes
+filing identity:nvidia:Remote Access Security Act:by_bill_number:2026QQ1:00bbd66f-2f3d-4533-a94f-558565e73cea,1,1,yes
+filing identity:nvidia:AI OVERWATCH Act:by_bill_number:2026QQ2:4caec807-4163-44a7-9fbb-2001daedab24,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2026QQ2:4caec807-4163-44a7-9fbb-2001daedab24,1,1,yes
+filing identity:nvidia:Remote Access Security Act:by_bill_number:2026QQ2:4caec807-4163-44a7-9fbb-2001daedab24,1,1,yes
+filing identity:nvidia:AI OVERWATCH Act:by_bill_number:2026QQ2:6228b1d5-726a-466e-bc48-266a7f678bf8,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2026QQ2:6228b1d5-726a-466e-bc48-266a7f678bf8,1,1,yes
+filing identity:nvidia:Remote Access Security Act:by_bill_number:2026QQ2:6228b1d5-726a-466e-bc48-266a7f678bf8,1,1,yes
+filing identity:nvidia:AI OVERWATCH Act:by_bill_number:2026QQ3:017c32c9-d63b-43f1-bf16-8e1e70da4b7d,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2026QQ3:017c32c9-d63b-43f1-bf16-8e1e70da4b7d,1,1,yes
+filing identity:nvidia:Remote Access Security Act:by_bill_number:2026QQ3:017c32c9-d63b-43f1-bf16-8e1e70da4b7d,1,1,yes
+filing identity:nvidia:AI OVERWATCH Act:by_bill_number:2026QQ3:f0e5f186-6c4a-4ae7-9fe8-355bd2fe93db,1,1,yes
+filing identity:nvidia:Chip Security Act:by_bill_number:2026QQ3:f0e5f186-6c4a-4ae7-9fe8-355bd2fe93db,1,1,yes
+reader passage matches against independently parsed saved forms,235,235,yes
+reader mutated-passage control matches,0,0,yes
+frozen input manifest matching files,811,811,yes
+extra hash manifest matching files,91,91,yes
