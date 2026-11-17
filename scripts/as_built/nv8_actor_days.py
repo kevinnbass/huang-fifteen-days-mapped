@@ -39,7 +39,7 @@ READ1 = {
          ('huang', '2026-10-30'): 'one page dates to Oct 30 what he said of Megaspeed\'s deployments; it is the interview on his chip for Oct 29 (the interviewer\'s own page is dated Oct 29)',
          ('kudlow', '2026-11-11'): 'his call of Nov 10 for Huang to step down, mentioned the next day: on his chip for Nov 10',
          ('mcguire', '2026-11-07'): 'his thread of Nov 6, on a copy stamped the next day: on his chip for Nov 6',
-         ('nvidia', '2026-11-02'): 'not on the matter: a statement on data-centre policy in a report that does not mention the affair',
+         # ('nvidia', '2026-11-02') left the list on Nov 17, 2026: the FT's report of that day on the cloud-rental rule is drawn now (the earlier reading, 'not on the matter', was narrower than the figure, which draws the company's tracking rule of Nov 6)
          
          ('suit', '2026-11-10'): 'the complaint filed on Nov 9, reported the next day: on its chip for Nov 9',
          ('trump', '2026-11-11'): 'that he spoke to Huang on Wednesday, said in the interview released on Nov 12: on his chip for Nov 12'}

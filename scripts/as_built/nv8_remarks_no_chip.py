@@ -30,8 +30,7 @@ READ = {
     ('china', 'the narrative about so called chinese spies is entirely'): SAME + 'the ministry\'s reply of Nov 9, in the Journal\'s translation (its chip for that day)',
     ('coons', 'we write to request that the department of commerce'): SAME + 'the letter with Sen. Warren (his chip for Nov 11)',
     ('jeffries', 'there are real concerns that need to be addressed'): SAME + 'his remarks of Nov 9 asking for a full briefing (his chip for that day)',
-    ('moolenaar', 'he has stated hes a patriot he has questioned'): SAME + 'his remarks of Nov 12 on the talks for an appearance before the committees (his chip for that day)',
-    ('nvidia', 'datacenters and clouds built on american chips are the'): 'not on the matter: a statement on data-centre policy in reports that do not mention the affair',
+    # two readings left the list on Nov 17, 2026: a chairman's words about Huang as 'a patriot' are quoted on his chip of Nov 12 now, and the company's reply to the FT of Nov 2 is on its chip of that day (the reading 'not on the matter' was narrower than the figure)
     ('mcguire', 'bisgov has done so not only by permitting the'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
     ('mcguire', 'why is commerce protecting jensen and supporting his preferred'): SAME + 'his posts of Nov 6 to Nov 8 asking why Commerce took no action (his chips for Nov 6 and Nov 8)',
 }
