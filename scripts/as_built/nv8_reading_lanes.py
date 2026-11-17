@@ -13,7 +13,10 @@ against its saved page and wrote one disposition for each below (an act it is dr
 (carried, reason, not on the matter, outside the days, not the actor's) are the reader's and were not read again by the builder.
   earlier_nv8_a (added after the twentieth reading)   a second reading, by a further reader, of the 67 groups and acts that the readers above had set aside as
                 'outside the days' (things said or done before Oct 29 that a page of these days reports); four acts held out as controls, three of which had an item.
-Writes research/nv8_single_article_remarks.tsv, research/nv8_paraphrased_acts.tsv and research/nv8_earlier_acts.tsv. Stops on a candidate with no disposition.
+  recall_nv8_01 to recall_nv8_12 (Nov 17)   twelve further readers who together read every counted article once (1,154 articles, one page each) for reports of
+                earlier acts; two acts that are such reports were held out of each reader's table of chips. Their lines are pooled in research/reading_lanes/recall_nv8.pool.tsv
+                (scripts/nv8_recall_pool.py), which holds words of the pages and is not published; the published table gives each line without them.
+Writes research/nv8_single_article_remarks.tsv, research/nv8_paraphrased_acts.tsv, research/nv8_earlier_acts.tsv and research/nv8_recalls.tsv. Stops on a candidate with no disposition.
 Limits: these are the lines of the census readings, so a remark no census reader recorded is not here; the first two paraphrase readers were told
 to set aside what was said before Oct 29, so they did not look for reports of these days about an earlier act (the six later lanes were told to);
 and four of the six later lanes closed 'reading: incomplete', leaving acts with no verdict where the saved context did not settle which occasion a
@@ -164,6 +167,45 @@ NOW = (' (first set aside as the company\'s answer to a different claim in the p
        'of diversion through Southeast Asia, so it is drawn on that page\'s day and this page gives its words; changed after the second reading of the set-aside items)')
 ONE.update({'G203': D('MA335') + NOW, 'G229': D('MA335') + NOW})
 
+# ---- recall_nv8_01 to _12: every counted article read for reports of earlier acts (Nov 17) ----
+# Lines the builder has acted on, by page, actor and a few words of the passage; every other candidate line is open (not yet grouped or drawn).
+R_DONE = [
+ ('man-nyt-1110-01', 'huang', 'Lunacy', 'drawn: on the tie line MT57, beside the remark it answers'),
+ ('sw-techcrunchcom-baccdaa9', 'anthropic', 'appealed directly to Washington', 'drawn: tie line MT62 (background on the row)'),
+ ('sw-techcrunchcom-baccdaa9', 'openai', 'appealed directly to Washington', 'drawn: tie line MT64 (background on the row)'),
+ ('sw-decryptco-31a5e63b', 'anthropic', 'spent millions lobbying', 'drawn: tie line MT63 (background on the row), with the page\'s caution and the denial it prints'),
+ ('sw-decryptco-31a5e63b', 'anthropic', 'never advocated such a ban', 'drawn: tie line MT63 (background on the row)'),
+ ('sw-decryptco-31a5e63b', 'openai', 'spent millions lobbying', 'drawn: tie line MT64 (background on the row)'),
+ ('sw-decryptco-31a5e63b', 'openai', 'signed the pro-open-weight letter', 'drawn: tie line MT64 (background on the row)'),
+ ('x-dream1984-article', 'anthropic', 'Coons received', 'carried: the member\'s line for this gift (research/member_ties.csv, TY003), a table the reader was not given'),
+ ('x-dream1984-article', 'coons', 'Coons received', 'carried: the member\'s line for this gift (research/member_ties.csv, TY003), a table the reader was not given'),
+ ('x-dream1984-article', 'anthropic', 'took $1,000 from AnthroPAC', 'carried: the member\'s line for this gift (TY007), a table the reader was not given'),
+ ('x-dream1984-article', 'cramer', 'took $1,000 from AnthroPAC', 'carried: the member\'s line for this gift (TY007), a table the reader was not given'),
+ ('x-dream1984-article', 'anthropic', 'also received $2,500 from AnthroPAC', 'carried: the member\'s line for this gift (TY051), a table the reader was not given'),
+ ('x-dream1984-article', 'mast', 'also received $2,500 from AnthroPAC', 'carried: the member\'s line for this gift (TY051), a table the reader was not given'),
+ ('x-dream1984-article', 'anthropic', '$40 million to Public First Action', 'carried: the figure\'s box for that group states the gifts, a part of the figure the reader was not given'),
+ ('x-dream1984-article', 'anthropic', 'shared a stage at the DSET forum', 'carried: the figure draws the shared panel between the analyst and the Anthropic executive (rows of people), a table the reader was not given'),
+ ('x-dream1984-article', 'mcguire', 'shared a stage at the DSET forum', 'carried: the figure draws the shared panel between the analyst and the Anthropic executive (rows of people), a table the reader was not given'),
+ ('x-dream1984-article', 'anthropic', 'pushing for tighter curbs on AI chips to China', 'carried: tie line MT07 (the meeting of February and the announcement that followed)'),
+ ('sw-cnncom-02', 'huang', 'die at his desk', 'drawn: MA359 (the remark to a podcaster, on the day of this page; the chip of Nov 11 keeps the later interview)'),
+]
+# chips the readers named as carrying a line from a page EARLIER than the chip's day, and what the builder did
+R_EARLY = {
+ 'MA330': 'moved: the chip now sits on Oct 29, the day of the first pages that recall the permission',
+ 'MA329': 'moved: the chip now sits on Nov 8, the day of the first page that recalls the bargain',
+ 'MA301': 'moved: the chip now sits on Nov 10, the day of the first saved relay of the report',
+ 'MA322': 'moved: the chip now sits on Nov 7, the day of the first page that recalls the approvals',
+ 'MA345': 'split: the remark to a podcaster has its own chip on Nov 9 (MA359); this chip keeps the interview first recalled on Nov 11',
+ 'MA333': 'not moved: the page of Nov 5 does not mention the affair (the chip names it); a page of Nov 8 carries the sentence only after an update on Nov 9',
+ 'MA319': 'not moved: the earlier page recalls the president\'s share trades, which are tie lines; the White House\'s reply drawn here is in the page of Nov 12',
+ 'MA323': 'not moved: the earlier pages speak of the inquiry in general or give Megaspeed\'s own statement (its chip); the audits as this chip words them are in the page of Nov 12',
+ 'MA353': 'not moved: the earlier pages carry Huang\'s refusal of June, which is on the Times\'s chip of Nov 5 and on her chip of Oct 29; the letter of July 2025 is first in the page of Nov 10',
+ 'MA355': 'not moved: the earlier pages carry Huang\'s refusal of June, which is on the Times\'s chip of Nov 5 and on her chip of Oct 29; her joining the bill is first in the page of Nov 12',
+ 'MA169': 'open: the earlier pages recall the indictment of March; whether each ties it to Megaspeed has not been read by the builder',
+}
+R_OPEN = 'open: not yet grouped or drawn'
+R_OWN = 'open: the chip sits on its own day and the reader names an earlier page; not read again by the builder'
+
 
 def scrub(t):
     for pat, role in SCRUB:
@@ -174,7 +216,7 @@ def scrub(t):
 
 def main():
     ids = {r['row_id'] for r in rows_map.rows()}
-    for v in list(ONE.values()) + list(PARA.values()) + list(EARLIER.values()):
+    for v in list(ONE.values()) + list(PARA.values()) + list(EARLIER.values()) + [x[3] for x in R_DONE] + list(R_EARLY.values()):
         for i in re.findall(r'MA\d+', v): assert i in ids, ('a disposition names an act that is not there', i)
     grp = {r['group_id']: r for r in csv.DictReader(open(L / 'single_nv8_a.groups.tsv'), delimiter='\t')}
     ctl = {r['group_id']: r for r in csv.DictReader(open(L / 'single_nv8_a.controls.tsv'), delimiter='\t')}
@@ -238,6 +280,45 @@ def main():
     drawn_acts = sorted({m for o in eout if o[11].startswith('drawn') for m in re.findall(r'MA\d+', o[11].split(' (')[0])}, key=lambda x: int(x[2:]))
     print('set-aside items read again:', len(eout), '| reader verdicts', dict(Counter(o[7] for o in eout)), '| held-out acts', len(held), 'with an item', len(set(E_CONTROL.values())), 'found', len(back),
           '| builder:', dict(ec), '| acts the drawn items sit on:', len(drawn_acts))
+    # the reading of every counted article
+    acts = {r['row_id']: r for r in rows_map.rows() if r['row_id'].startswith('MA')}; acts.update({'MA' + str(int(k[2:])): v for k, v in list(acts.items())})
+    loose = lambda s: re.sub(r'[^a-z0-9]+', ' ', s.lower()).strip(); sh = lambda s: {' '.join(w[i:i + 4]) for w in [loose(s).split()] for i in range(len(w) - 3)}
+    pool = list(csv.DictReader(open(L / 'recall_nv8.pool.tsv'), delimiter='\t')); ctl = list(csv.DictReader(open(L / 'recall_nv8.controls.tsv'), delimiter='\t'))
+    CTL_BY_HAND = {('recall_nv8_01', 'MA85'): 'contacted Commerce Under Secretary', ('recall_nv8_10', 'MA348'): 'Jensen is currently on Air Force One'}
+    is_ctl = {}; found = set()
+    for k in ctl:
+        a = acts[k['act_held_out']]; want = set()
+        for q in list(a['q']) + [a['what']]: want |= sh(q)
+        for n, r in enumerate(pool):
+            if r['lane'] == k['lane'] and r['page_id'] == k['page_in_the_lane'] and r['verdict'].startswith('CANDIDATE') and (len(want & sh(r['exact_words'])) >= 2 or CTL_BY_HAND.get((k['lane'], k['act_held_out']), '\0') in r['exact_words']):
+                is_ctl[n] = k['act_held_out']; found.add(k['act_held_out'])
+    NOT_VALID = {'MA327'}        # its earlier part (a refusal of June) is carried by two other chips, as its reader said: not a test of that reader
+    assert {k['act_held_out'] for k in ctl} - found == NOT_VALID, ('controls not found', {k['act_held_out'] for k in ctl} - found)
+    rout = []; rc = Counter(); used = Counter()
+    for n, r in enumerate(pool):
+        v = r['verdict'].strip(); ids = ['MA' + str(int(x[2:])) for x in re.findall(r'MA\d+', r['chip_or_tie'])]
+        done = [d for d in R_DONE if d[0] == r['page_id'] and d[1] == r['actor'] and d[2] in r['exact_words']]
+        if n in is_ctl: disp = 'a planted control: the act was held out of the reader\'s table (' + is_ctl[n] + ')'
+        elif done: disp = done[0][3]; used[done[0][:3]] += 1
+        elif v == 'carried':
+            late = [i for i in ids if acts[i]['date'] and r['page_day'] and r['page_day'] < acts[i]['date']]
+            rep = [i for i in late if acts[i]['reported']]
+            if rep: assert all(i in R_EARLY for i in rep), ('a report-dated chip named on an earlier page, with no disposition', rep, r['page_id']); disp = R_EARLY[rep[0]]
+            elif late: disp = R_OWN
+            else: disp = ''
+        else: disp = R_OPEN
+        rc[(v, disp.split(':')[0] if disp else 'the reader\'s verdict stands')] += 1
+        rout.append([r['lane'], r['page_id'], r['page_day'], r['actor'], v, ' '.join(re.findall(r'M[AT]\d+', r['chip_or_tie'])), r['row_it_belongs_on'], r['direction'].strip(), disp])
+    assert all(used[d[:3]] for d in R_DONE), ('a line the builder says it acted on is not in the pool', [d[:3] for d in R_DONE if not used[d[:3]]])
+    with open(R / 'nv8_recalls.tsv', 'w', newline='') as f:
+        w = csv.writer(f, delimiter='\t', lineterminator='\n')
+        w.writerow(['lane', 'page', 'page_day', 'actor', 'reader_verdict', 'chip_or_tie_the_reader_named', 'row_the_reader_proposed', 'which_way_the_reader_says_it_cuts', 'builder_disposition']); w.writerows(rout)
+    npg = sum(1 for j in range(1, 13) for _ in csv.DictReader(open(L / f'recall_nv8_{j:02d}.pages.tsv'), delimiter='\t'))
+    nread = sum(1 for j in range(1, 13) for x in csv.DictReader(open(L / f'recall_nv8_{j:02d}.pages_read.csv')) if x['read_whole'].strip().lower() == 'yes')
+    cand = [o for o in rout if o[4].startswith('CANDIDATE')]
+    print('every counted article read for reports of earlier acts: pages', npg, 'read whole', nread, '| lines', len(rout), dict(Counter(o[4] for o in rout)), '| held-out acts', len(ctl), 'valid', len(ctl) - len(NOT_VALID), 'found', len(found),
+          '| candidate lines open', sum(1 for o in cand if o[8] == R_OPEN), 'on pages', len({o[1] for o in cand if o[8] == R_OPEN}), '| by direction', dict(Counter(o[7] for o in cand if o[8] == R_OPEN).most_common()),
+          '| dispositions', {f'{k[0]} / {k[1]}': v for k, v in sorted(rc.items())})
 
 
 if __name__ == '__main__':

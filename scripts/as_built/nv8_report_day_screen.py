@@ -86,7 +86,7 @@ READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109'
              MA260='the page says the board "met on Wednesday evening" (its chip for Nov 11); the reports this act relays are of that day',
              MA263='the day word dates the lawmakers\' calls for a briefing; the page gives the interview no day',
              MA271='the day word dates a senator\'s remark printed before his; the page gives his no day',
-             MA322='"Tuesday" is the day Axios reported (Nov 10, the chip\'s day); "Monday" dates the president\'s remark printed after it',
+             MA322='"Tuesday" is the day Axios reported (Nov 10), which the chip gives in words; "Monday" dates the president\'s remark printed after it; the approvals are dated May by the page of Nov 7, on whose day the chip sits',
              MA331='the word is part of the name of an archive site the page links ("Archive.today"); the page dates the Bloomberg report Dec 22, 2025 and the assurance mid-November 2025, and the chip gives both',
              MA332="the day words date the board's announcement and the company's statement to CNBC of Oct 29 (its chip of that day); the two statements drawn here are dated October and December 2025 by the page, and the chip says so",
              MA333='"Monday" dates China\'s denial (Nov 9), the subject of the dispatch; the filing is dated August by the page, and the chip says so',
@@ -100,7 +100,8 @@ READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109'
              MA349="the day word dates the president's reply of Nov 8, printed in another paragraph; the plan is dated July 2025 by the page, and the chip says so",
              MA356='the day word is the date for which the three chairmen asked for a briefing; his remark is dated July by the page, and the chip says so',
              MA357='"Thursday" dates the share price on the day of the page (Oct 29); the invitation is dated June by the page, and the chip says so',
-             MA342='"Sunday" dates Huang\'s admission, in the second page cited; the first page dates the remarks "last year" and "in May", and the chip says so')
+             MA342='"Sunday" dates Huang\'s admission, in the second page cited; the first page dates the remarks "last year" and "in May", and the chip says so',
+             MA329="the day words date Huang's admission, the midterm elections and the briefing the chairmen asked for; both pages date the bargain to August 2025, and the chip says so")
 NEWER = 'may be newer: the page was changed the day after it was first published, and the passage could come from the later version; the chip keeps the day of first publication'
 READ3 = {'MA16': 'the chip\'s day is that of the FT report it relays and of the podcast\'s own page (Nov 10); the later page is a second relay that says "yesterday"',
          'MA46': 'the chip\'s day is the one the relaying page gives for the Times article that quotes the post (Nov 8); the page itself is of the next day',
@@ -124,7 +125,7 @@ READ3 = {'MA16': 'the chip\'s day is that of the FT report it relays and of the 
          'MA313': 'may be newer: the page was changed the day after it was first published, and no other saved page carries the statement as one made to The National; the words themselves are in its statement to CNBC of Nov 8',
          'MA214': 'the chip\'s day is that of the first report (Yahoo Finance, Nov 10); the other page cited is a later account, of Nov 12, and the chip gives its date too',
          'MA112': "the chip's day is that of the first saved page of these days that reports the letter (Oct 29; its header shows no later change); the other pages cited are later accounts, of Nov 10 and Nov 12, and the chip gives their dates",
-         'MA322': "may be newer: the relaying page was first published at 10:40 pm on Nov 10 and changed the next morning, and no other saved page of Nov 10 carries the passage. That the Axios report is of Nov 10 does not rest on that page alone: another saved page reprints Axios's post of the report, dated Nov 10, and quotes these sentences from it on Nov 11. The chip keeps the day of first publication; until Nov 16 it sat on Nov 11, the day of the Seoul page",
+         'MA322': "the chip's day is that of the page that first recalls the approvals (Nov 7; its header shows no later change); the other pages cited are later ones, of Nov 10 and Nov 11, and the chip gives their dates",
          'MA338': "may be newer: the relaying page was first published at 10:40 pm on Nov 10 and changed the next morning, and no other saved page of Nov 10 carries the passage. That the Axios report is of Nov 10 does not rest on that page alone: another saved page reprints Axios's post of the report, dated Nov 10, and quotes these sentences from it on Nov 11. The chip keeps the day of first publication",
          'MA339': "may be newer: the relaying page was first published at 10:40 pm on Nov 10 and changed the next morning, and no other saved page of Nov 10 carries the passage. That the Axios report is of Nov 10 does not rest on that page alone: another saved page reprints Axios's post of the report, dated Nov 10, and quotes these sentences from it on Nov 11. The chip keeps the day of first publication",
          'MA335': "the chip's day is that of the page that recalls the response (Nov 9; its header shows no later change); the other page cited is a later one, of Nov 12, cited for the words of the response, and the chip gives its date",
@@ -132,7 +133,11 @@ READ3 = {'MA16': 'the chip\'s day is that of the FT report it relays and of the 
          'MA348': 'may be newer: the page was first published Nov 10 and changed Nov 12, and no other saved page carries the passage; the chip keeps the day of first publication',
          'MA347': 'may be newer: the page that recalls the statement was first published on Oct 29 and changed the next morning, and no other saved page of that day carries its sentence; the chip keeps the day of first publication. '
                   'The other page cited is a later one, of Nov 12, cited for the words, and the chip gives its date',
-         'MA358': NEWER}
+         'MA358': NEWER,
+         'MA301': "the chip's day is that of the first saved relay of the report (Nov 10; its header shows a change within the same minute); the two other pages cited are later ones, of Nov 11, and the chip gives their date",
+         'MA329': 'may be newer: the page that first recalls the bargain was first published on the evening of Nov 8 and changed the next morning, and no other saved page of Nov 8 carries its sentence; a page of Nov 9 recalls the same bargain and the chip cites it. The chip keeps the day of first publication; the third page cited is a later one, of Nov 12, cited for the fuller account',
+         'MA330': "the chip's day is that of the two pages that first recall the permission (Oct 29: one changed within the hour of its publication, the other the Times's first report); the third page cited is a later one, of Nov 12, cited for its words, and the chip gives its date",
+         'MA359': "the chip's day is that of the article that recalls the remark (Nov 9, changed later the same day); the other page cited is the live page of Nov 11, cited for its wording of the remark"}
 WIRE = 'copies of one wire dispatch, all of the chip\'s day: the sentence is in the longest copy only, and no day turns on it'
 READ4 = {'MA81': 'the earlier page is one a broadcaster kept updating: it is dated Nov 8 by its first publication and says the sources spoke "on Monday" (Nov 9), the chip\'s day',
          'MA130': 'two findings. The sentence on revenue is in a page of the evening of Nov 11 as told to another outlet (drawn there, act MA317; this chip says so). '

@@ -171,7 +171,7 @@ L00421	moolenaar	fox-board-probe	A0028	yes	yes	yes	para_nv8_f
 L00423	crawford	fox-board-probe	A0028	yes	yes	yes	para_nv8_f	
 L00425	huang	fox-board-probe	A0028	yes	yes	yes	para_nv8_c	
 L00427	trump	fox-board-probe	A0028	yes	yes	yes	para_nv8_d	
-L00428	huang	fox-board-probe	A0028	yes	yes	yes	para_nv8_c	
+L00428	huang	fox-board-probe	A0028	yes	yes		para_nv8_c	
 L00429	mast	fox-board-probe	A0028	yes	yes	yes	para_nv8_f	
 L00430	mast	fox-board-probe	A0028	yes	yes	yes	para_nv8_f	
 L00431	mast	fox-board-probe	A0028	yes	yes	yes	para_nv8_f	
@@ -552,7 +552,7 @@ L01171	china	sw-aljazeeracom-09	A0085	yes	yes	yes	para_nv8_e
 L01172	huang	sw-aljazeeracom-09	A0085				para_nv8_c	yes
 L01174	nvidia	sw-aljazeeracom-09	A0085	yes	yes	yes	para_nv8_a	
 L01176	trump	sw-aljazeeracom-10	A0086	yes	yes	yes	para_nv8_d	
-L01186	huang	sw-aljazeeracom-10	A0086	yes	yes	yes	para_nv8_c	
+L01186	huang	sw-aljazeeracom-10	A0086	yes	yes		para_nv8_c	
 L01192	warren	sw-aljazeeracom-10	A0086	yes	yes	yes	para_nv8_h	
 L01193	coons	sw-aljazeeracom-10	A0086	yes	yes	yes	para_nv8_h	
 L01194	commerce	sw-aljazeeracom-10	A0086	yes	yes	yes	para_nv8_g	
@@ -790,7 +790,7 @@ L01616	nvidia	sw-breitbartcom-01	A0139	yes	yes	yes	para_nv8_a
 L01617	nvidia	sw-breitbartcom-01	A0139	yes	yes	yes	para_nv8_a	
 L01627	nvidia	sw-breitbartcom-02	A0140	yes	yes	yes	para_nv8_a	
 L01628	board	sw-breitbartcom-02	A0140	yes	yes	yes	para_nv8_b	
-L01632	huang	sw-breitbartcom-03	A0141	yes	yes	yes	para_nv8_c	
+L01632	huang	sw-breitbartcom-03	A0141	yes	yes		para_nv8_c	
 L01633	board	sw-breitbartcom-03	A0141	yes	yes	yes	para_nv8_b	
 L01634	suit	sw-breitbartcom-04	A0142	yes	yes	yes	para_nv8_h	
 L01641	china	sw-breitbartcom-04	A0142	yes	yes	yes	para_nv8_e	
@@ -799,7 +799,7 @@ L01644	nvidia	sw-breitbartcom-04	A0142	yes	yes	yes	para_nv8_a
 L01645	suit	sw-breitbartcom-04	A0142	yes	yes	yes	para_nv8_h	
 L01646	board	sw-breitbartcom-05	A0143	yes			para_nv8_b	
 L01651	huang	sw-breitbartcom-05	A0143	yes	yes		para_nv8_c	
-L01656	huang	sw-breitbartcom-06	A0141	yes	yes	yes	para_nv8_c	
+L01656	huang	sw-breitbartcom-06	A0141	yes	yes		para_nv8_c	
 L01657	board	sw-breitbartcom-06	A0141	yes	yes	yes	para_nv8_b	
 L01658	rubio	sw-breitbartcom-07	A0144				para_nv8_g	yes
 L01659	trump	sw-breitbartcom-07	A0144	yes	yes	yes	para_nv8_d	
@@ -1629,7 +1629,7 @@ L03695	trump	sw-ensedailycom-01	A0334	yes	yes	yes	para_nv8_d
 L03697	mast	sw-ensedailycom-01	A0334	yes	yes	yes	para_nv8_f	
 L03698	china	sw-ensedailycom-01	A0334	yes	yes	yes	para_nv8_e	
 L03699	commerce	sw-ensedailycom-02	A0335	yes	yes	yes	para_nv8_g	
-L03700	trump	sw-ensedailycom-02	A0335	yes	yes	yes	para_nv8_d	
+L03700	trump	sw-ensedailycom-02	A0335	yes	yes		para_nv8_d	
 L03701	huang	sw-ensedailycom-02	A0335	yes	yes	yes	para_nv8_c	
 L03702	board	sw-ensedailycom-03	A0336	yes	yes	yes	para_nv8_b	
 L03703	huang	sw-ensedailycom-03	A0336	yes	yes	yes	para_nv8_c	
@@ -2156,7 +2156,7 @@ L04952	board	sw-hollywoodlifecom-a85c41c3	A0498	yes	yes	yes	para_nv8_b
 L04953	board	sw-hollywoodlifecom-a85c41c3	A0498	yes	yes	yes	para_nv8_b	
 L04955	board	sw-hotaircom-01	A0500	yes	yes	yes	para_nv8_b	
 L04957	nvidia	sw-hotaircom-01	A0500	yes	yes	yes	para_nv8_a	
-L04960	huang	sw-hotaircom-02	A0501	yes	yes	yes	para_nv8_c	
+L04960	huang	sw-hotaircom-02	A0501	yes	yes		para_nv8_c	
 L04964	trump	sw-hotaircom-02	A0501	yes	yes	yes	para_nv8_d	
 L04965	huang	sw-hotaircom-02	A0501	yes				
 L04966	nvidia	sw-hotaircom-02	A0501	yes			para_nv8_a	
@@ -3010,7 +3010,7 @@ L06838	trump	sw-pymntscom-02	A0695	yes	yes	yes	para_nv8_d
 L06839	huang	sw-pymntscom-02	A0695	yes	yes	yes	para_nv8_c	
 L06841	nvidia	sw-pymntscom-02	A0695	yes	yes	yes	para_nv8_a	
 L06842	huang	sw-pymntscom-02	A0695	yes	yes	yes	para_nv8_c	
-L06843	huang	sw-pymntscom-02	A0695	yes	yes	yes	para_nv8_c	
+L06843	huang	sw-pymntscom-02	A0695	yes	yes		para_nv8_c	
 L06848	embassy	sw-qzcom-01	A0697				para_nv8_e	yes
 L06850	huang	sw-qzcom-01	A0697	yes	yes	yes	para_nv8_c	
 L06852	nvidia	sw-qzcom-01	A0697	yes	yes	yes	para_nv8_a	
@@ -3077,7 +3077,7 @@ L06961	nvidia	sw-qzcom-14	A0710	yes			para_nv8_a
 L06963	china	sw-qzcom-14	A0710	yes	yes	yes	para_nv8_e	
 L06964	board	sw-qzcom-14	A0710				para_nv8_b	yes
 L06965	nvidia	sw-qzcom-15	A0711	yes	yes	yes	para_nv8_a	
-L06967	huang	sw-qzcom-15	A0711	yes	yes	yes	para_nv8_c	
+L06967	huang	sw-qzcom-15	A0711	yes	yes		para_nv8_c	
 L06969	huang	sw-qzcom-16	A0712	yes	yes	yes	para_nv8_c	
 L06970	nvidia	sw-qzcom-16	A0712	yes	yes	yes	para_nv8_a	
 L06971	huang	sw-qzcom-16	A0712	yes	yes	yes	para_nv8_c	
@@ -3417,7 +3417,7 @@ L07673	nvidia	sw-sfstandardcom-06	A0782	yes	yes	yes	para_nv8_a
 L07674	nvidia	sw-sfstandardcom-06	A0782	yes	yes	yes	para_nv8_a	
 L07675	board	sw-sfstandardcom-06	A0782	yes			para_nv8_b	
 L07676	huang	sw-sfstandardcom-06	A0782	yes	yes	yes	para_nv8_c	
-L07677	huang	sw-sfstandardcom-06	A0782	yes	yes	yes	para_nv8_c	
+L07677	huang	sw-sfstandardcom-06	A0782	yes	yes		para_nv8_c	
 L07678	nvidia	sw-sfstandardcom-07	A0783	yes	yes	yes	para_nv8_a	
 L07679	board	sw-sfstandardcom-07	A0783	yes	yes	yes	para_nv8_b	
 L07681	board	sw-sfstandardcom-07	A0783	yes			para_nv8_b	
@@ -3976,7 +3976,7 @@ L08875	board	sw-thewrapcom-03	A0909				para_nv8_b	yes
 L08876	board	sw-thewrapcom-03	A0909	yes	yes	yes	para_nv8_b	
 L08877	huang	sw-thewrapcom-03	A0909	yes	yes	yes	para_nv8_c	
 L08879	nvidia	sw-thezvisubstackcom-01	A0910	yes	yes	yes	para_nv8_a	
-L08880	trump	sw-thezvisubstackcom-01	A0910	yes	yes	yes	para_nv8_d	
+L08880	trump	sw-thezvisubstackcom-01	A0910	yes	yes		para_nv8_d	
 L08882	trump	sw-thezvisubstackcom-01	A0910	yes	yes	yes	para_nv8_d	
 L08885	nvidia	sw-thezvisubstackcom-01	A0910	yes			para_nv8_a	
 L08886	nvidia	sw-thezvisubstackcom-01	A0910	yes	yes	yes	para_nv8_a	
@@ -3994,7 +3994,7 @@ L09002	nvidia	sw-thurrottcom-02	A0913	yes	yes	yes	para_nv8_a
 L09003	board	sw-thurrottcom-02	A0913	yes			para_nv8_b	
 L09005	huang	sw-timecom-82f796fe	A0914	yes	yes	yes	para_nv8_c	
 L09006	trump	sw-timecom-82f796fe	A0914	yes	yes	yes	para_nv8_d	
-L09008	trump	sw-timecom-82f796fe	A0914	yes	yes	yes	para_nv8_d	
+L09008	trump	sw-timecom-82f796fe	A0914	yes	yes		para_nv8_d	
 L09012	board	sw-tmzcom-01	A0915	yes	yes	yes	para_nv8_b	
 L09013	megaspeed	sw-tmzcom-01	A0915	yes	yes	yes	para_nv8_g	
 L09014	huang	sw-todaycom-01	A0917	yes	yes	yes	para_nv8_c	
