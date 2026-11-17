@@ -176,6 +176,9 @@ READ1.update({'MA421': 'not shown to be the same occasion: the lines of Nov 8 ar
                        'found Bloomberg\'s account and a page of Nov 10, none earlier. So the chip sits on the day of Bloomberg\'s account, as the twenty-ninth reading asked. The lines of Nov 5 and Nov 12 share only common words ("said in a statement", "would have")'})
 READ2.update({'MA421': 'the day word dates the Times\'s article ("after the Nov. 6 New York Times article"), after which, by Bloomberg, the statement was made; the page gives the statement itself no day, which is why the chip sits on the day of Bloomberg\'s account'})
 
+# batch s10c: MA32 and MA51 stand on their posts' own day since the posts were fetched; they are no longer dated by a report, so their readings in the second part are withdrawn
+for _k in ('MA32', 'MA51'): READ2.pop(_k)
+
 
 def part1(acts, by):
     out = []
