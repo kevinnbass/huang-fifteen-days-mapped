@@ -22,32 +22,32 @@ recall_nv8_10	sw-emptywheelnet-03	2026-11-12	bessent	CANDIDATE occasion		bessent
 recall_nv8_11	sw-cnbccom-02	2026-11-09	blumenthal	carried	MA216	blumenthal	neither	
 recall_nv8_05	sw-emptywheelnet-01	2026-11-09	blumenthal	CANDIDATE occasion		blumenthal	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	man-nyt-1029-01	2026-10-29	commerce	CANDIDATE occasion		nyt	against the administration	open: not yet grouped or drawn
-recall_nv8_11	man-nyt-1029-01	2026-10-29	commerce	carried	MA293	nyt	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_11	man-nyt-1029-01	2026-10-29	commerce	carried	MA293	nyt	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
 recall_nv8_11	man-nyt-1029-01	2026-10-29	commerce	carried	MA01	nyt	neither	
-recall_nv8_11	sw-asiaecokr-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_11	sw-asiaecokr-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
 recall_nv8_11	sw-asiaecokr-01	2026-10-29	commerce	carried	MA01	commerce	neither	
 recall_nv8_10	sw-colombiaonecom-01	2026-10-29	commerce	carried	MA01	commerce	against the administration	
-recall_nv8_08	sw-financeyahoocom-01	2026-10-29	commerce	carried	MA293	commerce	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_04	sw-gizmodocom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_06	sw-ibtimescom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_08	sw-financeyahoocom-01	2026-10-29	commerce	carried	MA293	commerce	neither	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
+recall_nv8_04	sw-gizmodocom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
+recall_nv8_06	sw-ibtimescom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
 recall_nv8_06	sw-ibtimescom-01	2026-10-29	commerce	carried	MA01	commerce	neither	
-recall_nv8_11	sw-invezzcom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_11	sw-invezzcom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
 recall_nv8_11	sw-invezzcom-01	2026-10-29	commerce	carried	MA01	commerce	neither	
 recall_nv8_09	sw-politicalorg-01	2026-10-29	commerce	CANDIDATE part	MA293	commerce	neither	open: not yet grouped or drawn
 recall_nv8_08	sw-qzcom-01	2026-10-29	commerce	carried	MA01	commerce	neither	
-recall_nv8_05	sw-siliconanglecom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_05	sw-siliconanglecom-01	2026-10-29	commerce	carried	MA101	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_02	sw-techcrunchcom-01	2026-10-29	commerce	carried	MA01 MA101	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_10	sw-tomshardwarecom-09	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_02	sw-zerohedgecom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_03	man-923fe8754943	2026-10-31	commerce	carried	MA01 MA101	wsj	against the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_05	sw-siliconanglecom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
+recall_nv8_05	sw-siliconanglecom-01	2026-10-29	commerce	carried	MA101	commerce	against Huang or Nvidia	carried: the Times's first report (MA01, Oct 29) carries the inquiry and its handover
+recall_nv8_02	sw-techcrunchcom-01	2026-10-29	commerce	carried	MA01 MA101	commerce	against Huang or Nvidia	carried: the Times's first report (MA01, Oct 29) carries the inquiry; that the Times had first reported it in 2025 is not worded on a chip
+recall_nv8_10	sw-tomshardwarecom-09	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
+recall_nv8_02	sw-zerohedgecom-01	2026-10-29	commerce	carried	MA293	commerce	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
+recall_nv8_03	man-923fe8754943	2026-10-31	commerce	carried	MA01 MA101	wsj	against the administration	carried: the Journal's first report (MA06, Oct 30) now words the start of the inquiry in late 2024
 recall_nv8_03	man-923fe8754943	2026-10-31	commerce	CANDIDATE occasion		wsj	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_03	man-923fe8754943	2026-10-31	commerce	CANDIDATE occasion		wsj	for Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_07	man-nyt-1105-01	2026-11-05	commerce	carried	MA293	nyt	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_07	man-nyt-1105-01	2026-11-05	commerce	carried	MA293	nyt	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
 recall_nv8_01	sw-colombiaonecom-02	2026-11-05	commerce	CANDIDATE occasion		commerce	for the administration	open: not yet grouped or drawn
-recall_nv8_03	sw-implicatorai-01	2026-11-05	commerce	carried	MA293	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_03	sw-implicatorai-01	2026-11-05	commerce	carried	MA293	commerce	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
 recall_nv8_01	sw-uniteai-01	2026-11-05	commerce	CANDIDATE occasion		commerce	for the administration	open: not yet grouped or drawn
-recall_nv8_06	sw-freepressjournalin-01	2026-11-06	commerce	carried	MA293	commerce	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_06	sw-freepressjournalin-01	2026-11-06	commerce	carried	MA293	commerce	against Huang or Nvidia	carried earlier: the inspection of late 2024 is now worded on the Times's first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it
 recall_nv8_06	x-mcguire-nov6	2026-11-06	commerce	CANDIDATE part	MA14	commerce	against the administration	open: not yet grouped or drawn
 recall_nv8_09	man-nyt-1107-01	2026-11-07	commerce	carried	MA03	nyt	against the administration	
 recall_nv8_09	man-nyt-1107-01	2026-11-07	commerce	CANDIDATE occasion		nyt	against the administration	open: not yet grouped or drawn
@@ -63,20 +63,20 @@ recall_nv8_10	sw-madrobotblog-03	2026-11-07	commerce	carried	MA322	commerce	agai
 recall_nv8_10	sw-madrobotblog-03	2026-11-07	commerce	CANDIDATE occasion		commerce	against the administration	open: not yet grouped or drawn
 recall_nv8_10	sw-madrobotblog-03	2026-11-07	commerce	carried	MA03	commerce	against the administration	
 recall_nv8_10	sw-madrobotblog-03	2026-11-07	commerce	carried	MA323	commerce	against Huang or Nvidia	not moved: the earlier pages speak of the inquiry in general or give Megaspeed's own statement (its chip); the audits as this chip words them are in the page of Nov 12
-recall_nv8_02	sw-redstatecom-3acc01e8	2026-11-07	commerce	carried	MA01 MA101	commerce	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_02	sw-redstatecom-3acc01e8	2026-11-07	commerce	carried	MA01 MA101	commerce	neither	carried: the Times's first report (MA01, Oct 29) carries the handover to the Justice Department
 recall_nv8_05	sw-techcrunchcom-02	2026-11-07	commerce	carried	MA03	commerce	against the administration	
 recall_nv8_08	sw-tomshardwarecom-01	2026-11-07	commerce	carried	MA01	commerce	neither	
 recall_nv8_06	sw-vinnewscom-01	2026-11-07	commerce	carried	MA01	commerce	neither	
 recall_nv8_05	cnbc-1108-bipartisan	2026-11-08	commerce	carried	MA03	commerce	against the administration	
 recall_nv8_09	sw-digitaltrendscom-01	2026-11-08	commerce	CANDIDATE occasion		commerce	neither	open: not yet grouped or drawn
-recall_nv8_09	sw-digitaltrendscom-01	2026-11-08	commerce	carried	MA101	commerce	against the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_09	sw-digitaltrendscom-01	2026-11-08	commerce	carried	MA101	commerce	against the administration	carried earlier: the words are the Journal's of Oct 30, now on its chip (MA06)
 recall_nv8_07	sw-ensedailycom-02	2026-11-08	commerce	carried	MA03	commerce	against the administration	
 recall_nv8_07	sw-ensedailycom-02	2026-11-08	commerce	CANDIDATE occasion		commerce	for the administration	open: not yet grouped or drawn
 recall_nv8_07	sw-ensedailycom-02	2026-11-08	commerce	CANDIDATE occasion		commerce	against the administration	open: not yet grouped or drawn
-recall_nv8_01	sw-implicatorai-02	2026-11-08	commerce	carried	MA01 MA101	commerce	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_01	sw-madrobotblog-01	2026-11-08	commerce	carried	MA101	commerce	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_01	sw-madrobotblog-01	2026-11-08	commerce	carried	MA101	commerce	for the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_01	sw-madrobotblog-01	2026-11-08	commerce	carried	MA101	commerce	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_01	sw-implicatorai-02	2026-11-08	commerce	carried	MA01 MA101	commerce	neither	carried: the inquiry is on the Times's and the Journal's first reports (MA01, MA06); that no finding has been announced is the page's own remark
+recall_nv8_01	sw-madrobotblog-01	2026-11-08	commerce	carried	MA101	commerce	neither	"not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading ""Update"" and follow the Times's reports of Nov 9 and 10"
+recall_nv8_01	sw-madrobotblog-01	2026-11-08	commerce	carried	MA101	commerce	for the administration	"not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading ""Update"" and follow the Times's reports of Nov 9 and 10"
+recall_nv8_01	sw-madrobotblog-01	2026-11-08	commerce	carried	MA101	commerce	neither	"not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading ""Update"" and follow the Times's reports of Nov 9 and 10"
 recall_nv8_01	sw-madrobotblog-01	2026-11-08	commerce	CANDIDATE occasion		commerce	against the administration	open: not yet grouped or drawn
 recall_nv8_09	sw-spytalkco-01	2026-11-08	commerce	CANDIDATE occasion		commerce	against the administration	open: not yet grouped or drawn
 recall_nv8_11	sw-tomshardwarecom-13	2026-11-08	commerce	carried	MA03	commerce	against the administration	
@@ -297,7 +297,7 @@ recall_nv8_01	x-dream1984-article	2026-11-12	ft	carried	MT59	ft	against Anthropi
 recall_nv8_10	sw-emptywheelnet-03	2026-11-12	greer	CANDIDATE occasion		greer	for the administration	open: not yet grouped or drawn
 recall_nv8_12	cnbc-1029-nvidia-responds	2026-10-29	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	man-nyt-1029-01	2026-10-29	huang	CANDIDATE occasion		nyt	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_11	man-nyt-1029-01	2026-10-29	huang	CANDIDATE occasion		nyt	neither	open: not yet grouped or drawn
+recall_nv8_11	man-nyt-1029-01	2026-10-29	huang	CANDIDATE occasion		nyt	neither	drawn: MA330 (the permission and the government's share, on the day of this page; the chip quotes this sentence)
 recall_nv8_11	man-nyt-1029-01	2026-10-29	huang	CANDIDATE occasion		nyt	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	man-nyt-1029-01	2026-10-29	huang	CANDIDATE occasion		nyt	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	man-nyt-1029-01	2026-10-29	huang	CANDIDATE occasion		nyt	against Huang or Nvidia	open: not yet grouped or drawn
@@ -316,15 +316,15 @@ recall_nv8_04	sw-gizmodocom-01	2026-10-29	huang	CANDIDATE occasion		huang	agains
 recall_nv8_06	sw-ibtimescom-01	2026-10-29	huang	CANDIDATE part	MA01	huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	sw-invezzcom-01	2026-10-29	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_09	sw-politicalorg-01	2026-10-29	huang	CANDIDATE occasion		huang	for Huang or Nvidia	a planted control: the act was held out of the reader's table (MA347)
-recall_nv8_08	sw-qzcom-01	2026-10-29	huang	carried	MA327	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_08	sw-qzcom-01	2026-10-29	huang	carried	MA327	huang	against Huang or Nvidia	drawn: on the senator's chip of Oct 29 (MA357), which now adds this page's recall that Huang turned her request down
 recall_nv8_05	sw-siliconanglecom-01	2026-10-29	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_10	sw-slashdotorg-01	2026-10-29	huang	carried	MA08	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_10	sw-tech4gamerscom-01	2026-10-29	huang	carried	MA08	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_10	sw-slashdotorg-01	2026-10-29	huang	carried	MA08	huang	against Huang or Nvidia	not moved: the page gives the Times's first report (MA01, Oct 29), which speaks of a close relationship; the chip named is a later paper's own report
+recall_nv8_10	sw-tech4gamerscom-01	2026-10-29	huang	carried	MA08	huang	against Huang or Nvidia	not moved: the page gives the Times's first report (MA01, Oct 29), which speaks of a close relationship; the chip named is a later paper's own report
 recall_nv8_02	sw-techcrunchcom-01	2026-10-29	huang	CANDIDATE occasion		huang	neither	open: not yet grouped or drawn
 recall_nv8_02	sw-techcrunchcom-01	2026-10-29	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_09	sw-tomsguidecom-01	2026-10-29	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_10	sw-tomshardwarecom-09	2026-10-29	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_03	sw-washingtonexaminercom-01	2026-10-29	huang	carried	MA06	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_03	sw-washingtonexaminercom-01	2026-10-29	huang	carried	MA06	huang	against Huang or Nvidia	not moved: the page gives the Times's first report (MA01, Oct 29), which speaks of a close relationship; the chip named is a later paper's own report
 recall_nv8_02	sw-zerohedgecom-01	2026-10-29	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_02	sw-zerohedgecom-01	2026-10-29	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_02	sw-zerohedgecom-01	2026-10-29	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
@@ -333,7 +333,7 @@ recall_nv8_03	man-923fe8754943	2026-10-31	huang	CANDIDATE occasion		wsj	against 
 recall_nv8_03	man-923fe8754943	2026-10-31	huang	carried	MA06	wsj	against Huang or Nvidia	
 recall_nv8_06	sw-breitbartcom-08	2026-11-03	huang	CANDIDATE part	MA01	huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_10	cnbc-1105-asked-to-brief	2026-11-05	huang	CANDIDATE occasion		huang	neither	open: not yet grouped or drawn
-recall_nv8_10	cnbc-1105-asked-to-brief	2026-11-05	huang	carried	MA08	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_10	cnbc-1105-asked-to-brief	2026-11-05	huang	carried	MA08	huang	against Huang or Nvidia	not moved: the page gives the Times's first report (MA01, Oct 29), which speaks of a close relationship; the chip named is a later paper's own report
 recall_nv8_07	man-nyt-1105-01	2026-11-05	huang	CANDIDATE occasion		nyt	neither	open: not yet grouped or drawn
 recall_nv8_07	man-nyt-1105-01	2026-11-05	huang	carried	MA353	nyt	against Huang or Nvidia	not moved: the earlier pages carry Huang's refusal of June, which is on the Times's chip of Nov 5 and on her chip of Oct 29; the letter of July 2025 is first in the page of Nov 10
 recall_nv8_03	sw-implicatorai-01	2026-11-05	huang	carried	MA06	huang	against Huang or Nvidia	
@@ -493,7 +493,7 @@ recall_nv8_03	cnbc-1109-megaspeed	2026-11-09	huang	CANDIDATE occasion		huang	aga
 recall_nv8_02	huffpost-live	2026-11-09	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_02	huffpost-live	2026-11-09	huang	carried	MA08	huang	against Huang or Nvidia	
 recall_nv8_02	huffpost-live	2026-11-09	huang	CANDIDATE part	MA08	huang	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_02	huffpost-live	2026-11-09	huang	carried	MA05	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_02	huffpost-live	2026-11-09	huang	carried	MA05	huang	against Huang or Nvidia	not moved: the live page's item is stamped Nov 11, the chip's day
 recall_nv8_10	huffpost-trump-china	2026-11-09	huang	carried	MA08	huang	against Huang or Nvidia	
 recall_nv8_10	huffpost-trump-china	2026-11-09	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_02	man-0c5b4e4f24c9	2026-11-09	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
@@ -642,10 +642,10 @@ recall_nv8_03	sw-foolcom-01	2026-11-09	huang	carried	MA08	huang	against Huang or
 recall_nv8_05	sw-foolcom-02	2026-11-09	huang	CANDIDATE occasion		huang	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_09	sw-foolcom-03	2026-11-09	huang	CANDIDATE occasion		huang	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_10	sw-foreignpolicycom-01	2026-11-09	huang	carried	MA08	huang	against Huang or Nvidia	
-recall_nv8_10	sw-foreignpolicycom-01	2026-11-09	huang	carried	MA05	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_10	sw-foreignpolicycom-01	2026-11-09	huang	carried	MA05	huang	against Huang or Nvidia	not moved: the page says it was updated on Nov 12, and the sentence follows the resignation
 recall_nv8_10	sw-foreignpolicycom-01	2026-11-09	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_10	sw-foreignpolicycom-01	2026-11-09	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_10	sw-foreignpolicycom-01	2026-11-09	huang	carried	MA146	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_10	sw-foreignpolicycom-01	2026-11-09	huang	carried	MA146	huang	against Huang or Nvidia	not moved: the page says it was updated on Nov 12; the chip named is a commentator's remark of that day
 recall_nv8_04	sw-fortunecom-03	2026-11-09	huang	carried	MA08	huang	against Huang or Nvidia	
 recall_nv8_09	sw-fortunecom-04	2026-11-09	huang	CANDIDATE occasion		huang	against Huang or Nvidia	a planted control: the act was held out of the reader's table (MA332)
 recall_nv8_02	sw-foxnewscom-01	2026-11-09	huang	carried	MA08	huang	against Huang or Nvidia	
@@ -738,7 +738,7 @@ recall_nv8_10	sw-thecyberexpresscom-01	2026-11-09	huang	carried	MA08	huang	again
 recall_nv8_10	sw-thedecodercom-01	2026-11-09	huang	carried	MA08	huang	against Huang or Nvidia	
 recall_nv8_10	sw-thedecodercom-01	2026-11-09	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_10	sw-thedecodercom-01	2026-11-09	huang	carried	MT18	huang	against Huang or Nvidia	
-recall_nv8_10	sw-thedecodercom-01	2026-11-09	huang	carried	MA146	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_10	sw-thedecodercom-01	2026-11-09	huang	carried	MA146	huang	against Huang or Nvidia	not moved: the chip named is a commentator's remark of Nov 12; that Huang named no successor is carried on Nov 9 (MA359, MA315)
 recall_nv8_10	sw-thefpcom-01	2026-11-09	huang	carried	MA08	huang	against Huang or Nvidia	
 recall_nv8_03	sw-thejournalie-02	2026-11-09	huang	carried	MA06	huang	against Huang or Nvidia	
 recall_nv8_07	sw-thenationalnewscom-02	2026-11-09	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
@@ -897,7 +897,7 @@ recall_nv8_08	sw-thezvisubstackcom-01	2026-11-10	huang	carried	MA211	huang	again
 recall_nv8_08	sw-thezvisubstackcom-01	2026-11-10	huang	CANDIDATE occasion		huang	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_08	sw-thezvisubstackcom-01	2026-11-10	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_08	sw-thezvisubstackcom-01	2026-11-10	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_08	sw-thezvisubstackcom-01	2026-11-10	huang	carried	MA146	huang	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_08	sw-thezvisubstackcom-01	2026-11-10	huang	carried	MA146	huang	against Huang or Nvidia	not moved: his post of Nov 10 has its own chip (MA132); the chip named is a remark in his newsletter of Nov 12
 recall_nv8_04	sw-tomshardwarecom-14	2026-11-10	huang	carried	MA08	huang	against Huang or Nvidia	
 recall_nv8_09	sw-tomshardwarecom-15	2026-11-10	huang	CANDIDATE occasion		huang	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_09	sw-tomshardwarecom-15	2026-11-10	huang	CANDIDATE occasion		huang	neither	open: not yet grouped or drawn
@@ -1477,25 +1477,25 @@ recall_nv8_06	sw-ibtimescom-01	2026-10-29	justice	carried	MA01	justice	neither
 recall_nv8_11	sw-invezzcom-01	2026-10-29	justice	carried	MA01	justice	neither	
 recall_nv8_08	sw-qzcom-01	2026-10-29	justice	CANDIDATE occasion		justice	neither	open: not yet grouped or drawn
 recall_nv8_05	sw-siliconanglecom-01	2026-10-29	justice	carried	MA01	justice	neither	
-recall_nv8_02	sw-zerohedgecom-01	2026-10-29	justice	carried	MA01 MA101	justice	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_05	sw-datacenterdynamicscom-02	2026-11-06	justice	carried	MA169	justice	against Huang or Nvidia	open: the earlier pages recall the indictment of March; whether each ties it to Megaspeed has not been read by the builder
-recall_nv8_06	sw-tomshardwarecom-12	2026-11-06	justice	carried	MA169	justice	against Huang or Nvidia	open: the earlier pages recall the indictment of March; whether each ties it to Megaspeed has not been read by the builder
-recall_nv8_02	sw-redstatecom-3acc01e8	2026-11-07	justice	carried	MA01 MA101	justice	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_02	sw-zerohedgecom-01	2026-10-29	justice	carried	MA01 MA101	justice	neither	carried: the Times's first report (MA01, Oct 29) carries the handover to the Justice Department
+recall_nv8_05	sw-datacenterdynamicscom-02	2026-11-06	justice	carried	MA169	justice	against Huang or Nvidia	carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department's chip of Oct 29 (MA362) and the Journal's first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed
+recall_nv8_06	sw-tomshardwarecom-12	2026-11-06	justice	carried	MA169	justice	against Huang or Nvidia	carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department's chip of Oct 29 (MA362) and the Journal's first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed
+recall_nv8_02	sw-redstatecom-3acc01e8	2026-11-07	justice	carried	MA01 MA101	justice	neither	carried: the Times's first report (MA01, Oct 29) carries the handover to the Justice Department
 recall_nv8_06	sw-vinnewscom-01	2026-11-07	justice	carried	MA01	justice	neither	
-recall_nv8_01	sw-madrobotblog-01	2026-11-08	justice	carried	MA101	justice	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_01	sw-madrobotblog-01	2026-11-08	justice	carried	MA101	justice	neither	"not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading ""Update"" and follow the Times's reports of Nov 9 and 10"
 recall_nv8_06	art-fc-tovima-wsj-1108-board	2026-11-09	justice	carried	MA101	wsj	neither	
-recall_nv8_02	huffpost-live	2026-11-09	justice	carried	MA169	justice	against Huang or Nvidia	open: the earlier pages recall the indictment of March; whether each ties it to Megaspeed has not been read by the builder
+recall_nv8_02	huffpost-live	2026-11-09	justice	carried	MA169	justice	against Huang or Nvidia	carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department's chip of Oct 29 (MA362) and the Journal's first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed
 recall_nv8_02	huffpost-live	2026-11-09	justice	carried	MA101	justice	neither	
 recall_nv8_04	man-ft-1109-04	2026-11-09	justice	carried	MA81	ft	neither	
 recall_nv8_07	man-nyt-1109-01	2026-11-09	justice	carried	MA01 MA101	nyt	neither	
 recall_nv8_12	man-nyt-1109-03	2026-11-09	justice	CANDIDATE part	MA101	nyt	for the administration	open: not yet grouped or drawn
 recall_nv8_12	man-nyt-1109-03	2026-11-09	justice	CANDIDATE occasion		nyt	against the administration	open: not yet grouped or drawn
-recall_nv8_11	man-wsj-1109-02	2026-11-09	justice	carried	MA169	wsj	against Huang or Nvidia	open: the earlier pages recall the indictment of March; whether each ties it to Megaspeed has not been read by the builder
+recall_nv8_11	man-wsj-1109-02	2026-11-09	justice	carried	MA169	wsj	against Huang or Nvidia	carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department's chip of Oct 29 (MA362) and the Journal's first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed
 recall_nv8_09	man-wsj-1109-07	2026-11-09	justice	CANDIDATE part	MA81	wsj	neither	open: not yet grouped or drawn
 recall_nv8_10	slate-trump-scandal	2026-11-09	justice	carried	MA101	justice	neither	
 recall_nv8_07	sw-chinamoneynetworkcom-01	2026-11-09	justice	carried	MA01 MA101	justice	neither	
 recall_nv8_06	sw-financeyahoocom-08	2026-11-09	justice	carried	MA01	justice	neither	
-recall_nv8_08	sw-pcgamercom-02	2026-11-09	justice	carried	MA169	justice	neither	open: the earlier pages recall the indictment of March; whether each ties it to Megaspeed has not been read by the builder
+recall_nv8_08	sw-pcgamercom-02	2026-11-09	justice	carried	MA169	justice	neither	carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department's chip of Oct 29 (MA362) and the Journal's first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed
 recall_nv8_11	sw-redstatecom-04	2026-11-09	justice	carried	MA01	justice	neither	
 recall_nv8_07	sw-sfstandardcom-02	2026-11-09	justice	carried	MA01 MA101	justice	neither	
 recall_nv8_07	sw-sfstandardcom-02	2026-11-09	justice	CANDIDATE part	MA101	justice	neither	open: not yet grouped or drawn
@@ -1513,7 +1513,7 @@ recall_nv8_02	sw-redstatecom-10	2026-11-10	justice	carried	MA101	justice	neither
 recall_nv8_06	sw-siliconcouk-01	2026-11-10	justice	carried	MA101	justice	neither	
 recall_nv8_06	sw-storyboard18com-03	2026-11-10	justice	carried	MA101	justice	neither	
 recall_nv8_01	sw-thefederalistcom-01	2026-11-10	justice	carried	MA101	justice	neither	
-recall_nv8_06	sw-thestandardcomhk-03	2026-11-10	justice	carried	MA169	justice	against Huang or Nvidia	open: the earlier pages recall the indictment of March; whether each ties it to Megaspeed has not been read by the builder
+recall_nv8_06	sw-thestandardcomhk-03	2026-11-10	justice	carried	MA169	justice	against Huang or Nvidia	carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department's chip of Oct 29 (MA362) and the Journal's first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed
 recall_nv8_04	sw-tomshardwarecom-14	2026-11-10	justice	CANDIDATE part	MA101	justice	neither	open: not yet grouped or drawn
 recall_nv8_10	sw-wccftechcom-04	2026-11-10	justice	carried	MA101	justice	neither	
 recall_nv8_03	sw-winbuzzercom-01	2026-11-10	justice	carried	MA101	justice	against the administration	
@@ -1552,7 +1552,7 @@ recall_nv8_03	sw-cnbccom-09	2026-11-12	kress	CANDIDATE occasion		kress	for Huang
 recall_nv8_11	sw-implicatorai-0479a5e0	2026-11-12	kress	CANDIDATE occasion		kress	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	sw-implicatorai-0479a5e0	2026-11-12	kress	CANDIDATE occasion		kress	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_03	sw-implicatorai-06	2026-11-12	kress	CANDIDATE occasion		kress	for Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_10	sw-sfexaminercom-02	2026-11-12	kress	CANDIDATE occasion		nyt	for Huang or Nvidia	open: not yet grouped or drawn
+recall_nv8_10	sw-sfexaminercom-02	2026-11-12	kress	CANDIDATE occasion		nyt	for Huang or Nvidia	drawn: MA364 (on the Times's row, from its profile of the interim chief)
 recall_nv8_10	sw-sfexaminercom-02	2026-11-12	kress	CANDIDATE occasion		nyt	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_05	sw-wtopcom-05	2026-11-12	kress	CANDIDATE occasion		kress	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_01	sw-dailycallercom-07	2026-11-04	mast	CANDIDATE occasion		mast	against Huang or Nvidia	open: not yet grouped or drawn
@@ -1581,7 +1581,7 @@ recall_nv8_10	sw-tomshardwarecom-09	2026-10-29	megaspeed	CANDIDATE occasion		meg
 recall_nv8_02	sw-zerohedgecom-01	2026-10-29	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_02	sw-zerohedgecom-01	2026-10-29	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_12	sw-therundownai-dc0b60ac	2026-10-30	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_03	man-923fe8754943	2026-10-31	megaspeed	carried	MA157	wsj	for Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_03	man-923fe8754943	2026-10-31	megaspeed	carried	MA157	wsj	for Huang or Nvidia	carried earlier: the Journal's first report (MA06, Oct 30) now quotes the statement of late 2025; the chip of Nov 9 is the company's posting of it that day
 recall_nv8_07	man-nyt-1105-01	2026-11-05	megaspeed	CANDIDATE occasion		nyt	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	man-nyt-1106-01	2026-11-06	megaspeed	CANDIDATE occasion		nyt	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	man-nyt-1106-01	2026-11-06	megaspeed	CANDIDATE occasion		nyt	against Huang or Nvidia	open: not yet grouped or drawn
@@ -1613,14 +1613,14 @@ recall_nv8_10	sw-fox10phoenixcom-5b3446d0	2026-11-08	megaspeed	CANDIDATE occasio
 recall_nv8_12	sw-gulfnewscom-01	2026-11-08	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_01	sw-implicatorai-02	2026-11-08	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_01	sw-implicatorai-02	2026-11-08	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_03	sw-qzcom-02	2026-11-08	megaspeed	carried	MA157	megaspeed	for Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_03	sw-qzcom-02	2026-11-08	megaspeed	carried	MA157	megaspeed	for Huang or Nvidia	carried earlier: the Journal's first report (MA06, Oct 30) now quotes the statement of late 2025; the chip of Nov 9 is the company's posting of it that day
 recall_nv8_12	sw-thestandardcomhk-01	2026-11-08	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_06	sw-trtworldcom-f1b41737	2026-11-08	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_08	sw-wccftechcom-02	2026-11-08	megaspeed	CANDIDATE occasion		megaspeed	neither	open: not yet grouped or drawn
 recall_nv8_11	sw-zerohedgecom-03	2026-11-08	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	sw-zerohedgecom-03	2026-11-08	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_06	art-fc-tovima-wsj-1108-board	2026-11-09	megaspeed	CANDIDATE occasion		wsj	neither	open: not yet grouped or drawn
-recall_nv8_12	art-fc-tovima-wsj-1109-woman	2026-11-09	megaspeed	carried	MA293	wsj	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_12	art-fc-tovima-wsj-1109-woman	2026-11-09	megaspeed	carried	MA293	wsj	neither	drawn: MA360 (the Journal's report of the partnership letter of November 2023, on Nov 9); the chip of Nov 10 keeps the Times's detail and points to it
 recall_nv8_12	art-fc-tovima-wsj-1109-woman	2026-11-09	megaspeed	CANDIDATE occasion		wsj	neither	open: not yet grouped or drawn
 recall_nv8_12	art-fc-tovima-wsj-1109-woman	2026-11-09	megaspeed	CANDIDATE occasion		wsj	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_03	cnbc-1109-megaspeed	2026-11-09	megaspeed	carried	MA157	megaspeed	for Huang or Nvidia	
@@ -1632,7 +1632,7 @@ recall_nv8_11	man-wsj-1109-02	2026-11-09	megaspeed	CANDIDATE occasion		wsj	again
 recall_nv8_11	man-wsj-1109-02	2026-11-09	megaspeed	CANDIDATE occasion		wsj	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	sw-aljazeeracom-03	2026-11-09	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_05	sw-aninewsin-04	2026-11-09	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_04	sw-asiatimescom-02	2026-11-09	megaspeed	carried	MA293	megaspeed	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_04	sw-asiatimescom-02	2026-11-09	megaspeed	carried	MA293	megaspeed	neither	drawn: MA360 (the Journal's report of the partnership letter of November 2023, on Nov 9); the chip of Nov 10 keeps the Times's detail and points to it
 recall_nv8_04	sw-asiatimescom-02	2026-11-09	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_02	sw-businesstodayin-05	2026-11-09	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_10	sw-cbsaustincom-02	2026-11-09	megaspeed	CANDIDATE occasion		megaspeed	against Huang or Nvidia	open: not yet grouped or drawn
@@ -1823,7 +1823,7 @@ recall_nv8_11	sw-invezzcom-01	2026-10-29	nvidia	CANDIDATE occasion		nvidia	for H
 recall_nv8_05	sw-siliconanglecom-01	2026-10-29	nvidia	carried	MA56	nvidia	for Huang or Nvidia	
 recall_nv8_10	sw-tech4gamerscom-01	2026-10-29	nvidia	carried	MA106	nvidia	for Huang or Nvidia	
 recall_nv8_02	sw-zerohedgecom-01	2026-10-29	nvidia	carried	MT19	nvidia	against Huang or Nvidia	
-recall_nv8_03	man-923fe8754943	2026-10-31	nvidia	CANDIDATE occasion		wsj	for Huang or Nvidia	open: not yet grouped or drawn
+recall_nv8_03	man-923fe8754943	2026-10-31	nvidia	CANDIDATE occasion		wsj	for Huang or Nvidia	drawn: on the Journal's first report (MA06), beside the arrest of March it answers
 recall_nv8_09	man-ft-1103-01	2026-11-02	nvidia	CANDIDATE occasion		ft	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_09	man-ft-1103-01	2026-11-02	nvidia	CANDIDATE occasion		ft	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_01	sw-asiaecokr-e5bb48e2	2026-11-03	nvidia	CANDIDATE occasion		nvidia	for Huang or Nvidia	open: not yet grouped or drawn
@@ -1840,7 +1840,7 @@ recall_nv8_07	man-nyt-1105-01	2026-11-05	nvidia	CANDIDATE occasion		nyt	for Huan
 recall_nv8_03	sw-implicatorai-01	2026-11-05	nvidia	carried	MT19	nvidia	against Huang or Nvidia	
 recall_nv8_03	sw-implicatorai-01	2026-11-05	nvidia	CANDIDATE occasion		nvidia	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_07	sw-redstatecom-09	2026-11-05	nvidia	carried	MA56	nvidia	for Huang or Nvidia	
-recall_nv8_01	sw-uniteai-01	2026-11-05	nvidia	carried	MA333	nvidia	for Huang or Nvidia	not moved: the page of Nov 5 does not mention the affair (the chip names it); a page of Nov 8 carries the sentence only after an update on Nov 9
+recall_nv8_01	sw-uniteai-01	2026-11-05	nvidia	carried	MA333	nvidia	for Huang or Nvidia	moved: the chip now sits on Nov 8, the first day of the earliest page that carries the sentence, with the caveat that it may be newer (the twenty-first reading's finding); this page, of Nov 5, does not mention the affair and is named in the chip as context
 recall_nv8_01	sw-uniteai-01	2026-11-05	nvidia	CANDIDATE part	MA333	nvidia	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_01	sw-uniteai-01	2026-11-05	nvidia	CANDIDATE part	MA333	nvidia	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_01	sw-uniteai-01	2026-11-05	nvidia	CANDIDATE occasion		nvidia	neither	open: not yet grouped or drawn
@@ -1853,7 +1853,7 @@ recall_nv8_06	sw-tomshardwarecom-12	2026-11-06	nvidia	carried	MA106	nvidia	for H
 recall_nv8_06	sw-engadgetcom-02	2026-11-07	nvidia	carried	MA56	nvidia	for Huang or Nvidia	
 recall_nv8_06	sw-freepressjournalin-02	2026-11-07	nvidia	carried	MA56	nvidia	for Huang or Nvidia	
 recall_nv8_05	sw-jpostcom-01	2026-11-07	nvidia	CANDIDATE occasion		nvidia	for Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_05	sw-jpostcom-01	2026-11-07	nvidia	carried	MA333	nvidia	for Huang or Nvidia	not moved: the page of Nov 5 does not mention the affair (the chip names it); a page of Nov 8 carries the sentence only after an update on Nov 9
+recall_nv8_05	sw-jpostcom-01	2026-11-07	nvidia	carried	MA333	nvidia	for Huang or Nvidia	moved: the chip now sits on Nov 8, the first day of the earliest page that carries the sentence, with the caveat that it may be newer (the twenty-first reading's finding); this page, of Nov 5, does not mention the affair and is named in the chip as context
 recall_nv8_02	sw-redstatecom-3acc01e8	2026-11-07	nvidia	carried	MA56	nvidia	for Huang or Nvidia	
 recall_nv8_11	beast-admits	2026-11-08	nvidia	carried	MT19	nvidia	against the administration	
 recall_nv8_06	cnbc-1108-board-investigates	2026-11-08	nvidia	carried	MA56	nvidia	for Huang or Nvidia	
@@ -1865,14 +1865,14 @@ recall_nv8_02	sw-daringfireballnet-01	2026-11-08	nvidia	carried	MA56	nvidia	for 
 recall_nv8_06	sw-dexertocom-01	2026-11-08	nvidia	carried	MA106	nvidia	for Huang or Nvidia	
 recall_nv8_05	sw-financeyahoocom-03	2026-11-08	nvidia	CANDIDATE occasion		nvidia	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_01	sw-implicatorai-02	2026-11-08	nvidia	CANDIDATE occasion		nvidia	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_01	sw-madrobotblog-01	2026-11-08	nvidia	carried	MA101	nvidia	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_01	sw-madrobotblog-01	2026-11-08	nvidia	carried	MA101	nvidia	against Huang or Nvidia	"not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading ""Update"" and follow the Times's reports of Nov 9 and 10"
 recall_nv8_03	sw-qzcom-02	2026-11-08	nvidia	carried	MA106	nvidia	for Huang or Nvidia	
-recall_nv8_03	sw-rteie-02	2026-11-08	nvidia	carried	MA333	nvidia	for Huang or Nvidia	not moved: the page of Nov 5 does not mention the affair (the chip names it); a page of Nov 8 carries the sentence only after an update on Nov 9
+recall_nv8_03	sw-rteie-02	2026-11-08	nvidia	carried	MA333	nvidia	for Huang or Nvidia	
 recall_nv8_11	sw-sfstandardcom-01	2026-11-08	nvidia	CANDIDATE occasion		nvidia	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_08	sw-theregistercom-01	2026-11-08	nvidia	CANDIDATE occasion		nvidia	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	sw-zerohedgecom-03	2026-11-08	nvidia	carried	MA56	nvidia	for Huang or Nvidia	
 recall_nv8_06	art-fc-tovima-wsj-1108-board	2026-11-09	nvidia	CANDIDATE occasion		wsj	neither	open: not yet grouped or drawn
-recall_nv8_12	art-fc-tovima-wsj-1109-woman	2026-11-09	nvidia	carried	MA293	wsj	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_12	art-fc-tovima-wsj-1109-woman	2026-11-09	nvidia	carried	MA293	wsj	neither	drawn: MA360 (the Journal's report of the partnership letter of November 2023, on Nov 9); the chip of Nov 10 keeps the Times's detail and points to it
 recall_nv8_03	cnbc-1109-megaspeed	2026-11-09	nvidia	carried	MA331	nvidia	for Huang or Nvidia	
 recall_nv8_02	huffpost-live	2026-11-09	nvidia	carried	MA101 MA85	nvidia	against Huang or Nvidia	
 recall_nv8_02	huffpost-live	2026-11-09	nvidia	CANDIDATE occasion		nvidia	against Huang or Nvidia	open: not yet grouped or drawn
@@ -1885,7 +1885,7 @@ recall_nv8_12	man-ft-1110-01	2026-11-09	nvidia	CANDIDATE occasion		ft	against Hu
 recall_nv8_07	man-nyt-1109-01	2026-11-09	nvidia	carried	MT19	nyt	against Huang or Nvidia	
 recall_nv8_12	man-nyt-1109-03	2026-11-09	nvidia	carried	MA101	nyt	against Huang or Nvidia	
 recall_nv8_12	man-nyt-1109-03	2026-11-09	nvidia	CANDIDATE occasion		nyt	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_11	man-wsj-1109-02	2026-11-09	nvidia	carried	MA293	wsj	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_11	man-wsj-1109-02	2026-11-09	nvidia	carried	MA293	wsj	against Huang or Nvidia	drawn: MA360 (the Journal's report of the partnership letter of November 2023, on Nov 9); the chip of Nov 10 keeps the Times's detail and points to it
 recall_nv8_11	man-wsj-1109-02	2026-11-09	nvidia	CANDIDATE occasion		wsj	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_04	man-wsj-1109-08	2026-11-09	nvidia	carried	MA315	wsj	against Huang or Nvidia	
 recall_nv8_07	man-wsj-1109-09	2026-11-09	nvidia	CANDIDATE occasion		wsj	against Huang or Nvidia	open: not yet grouped or drawn
@@ -1893,7 +1893,7 @@ recall_nv8_06	semafor-1109-hawks	2026-11-09	nvidia	carried	MA101	nvidia	against 
 recall_nv8_10	slate-trump-scandal	2026-11-09	nvidia	carried	MA101	nvidia	against Huang or Nvidia	
 recall_nv8_06	sw-abcnetau-03	2026-11-09	nvidia	carried	MT19	nvidia	for Huang or Nvidia	
 recall_nv8_03	sw-asiaecokr-05	2026-11-09	nvidia	CANDIDATE occasion		nvidia	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_04	sw-asiatimescom-02	2026-11-09	nvidia	carried	MA293	nvidia	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_04	sw-asiatimescom-02	2026-11-09	nvidia	carried	MA293	nvidia	neither	drawn: MA360 (the Journal's report of the partnership letter of November 2023, on Nov 9); the chip of Nov 10 keeps the Times's detail and points to it
 recall_nv8_04	sw-asiatimescom-02	2026-11-09	nvidia	carried	MA157	nvidia	for Huang or Nvidia	
 recall_nv8_01	sw-cautiousoptimismnews-01	2026-11-09	nvidia	CANDIDATE occasion		nvidia	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_04	sw-chatgptiseatingtheworl-01	2026-11-09	nvidia	CANDIDATE occasion		nvidia	for Huang or Nvidia	open: not yet grouped or drawn
@@ -1989,7 +1989,7 @@ recall_nv8_04	sw-bitcoininsiderorg-03	2026-11-10	nvidia	CANDIDATE occasion		nvid
 recall_nv8_12	sw-cfrorg-01	2026-11-10	nvidia	CANDIDATE occasion		nvidia	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_09	sw-cnbccom-04	2026-11-10	nvidia	CANDIDATE occasion		nvidia	neither	open: not yet grouped or drawn
 recall_nv8_09	sw-cnbccom-04	2026-11-10	nvidia	CANDIDATE occasion		nvidia	neither	open: not yet grouped or drawn
-recall_nv8_09	sw-cnbccom-04	2026-11-10	nvidia	carried	MA340 MA358	nvidia	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_09	sw-cnbccom-04	2026-11-10	nvidia	carried	MA340 MA358	nvidia	neither	drawn: MA358 (this page's recall, on Nov 10)
 recall_nv8_09	sw-cnbccom-04	2026-11-10	nvidia	carried	MA101	nvidia	against the administration	
 recall_nv8_10	sw-dailykoscom-02	2026-11-10	nvidia	carried	MA101	nvidia	against Huang or Nvidia	
 recall_nv8_10	sw-dailykoscom-02	2026-11-10	nvidia	carried	MT19 MA343	nvidia	against Huang or Nvidia	
@@ -2217,7 +2217,7 @@ recall_nv8_04	sw-dailycallercom-02	2026-11-08	rubio	carried	MA04	rubio	for the a
 recall_nv8_02	sw-foxbusinesscom-01	2026-11-08	rubio	carried	MA04	rubio	against the administration	
 recall_nv8_11	sw-garymarcussubstackcom-02	2026-11-08	rubio	carried	MA04	rubio	against the administration	
 recall_nv8_01	sw-implicatorai-02	2026-11-08	rubio	carried	MA04	rubio	against the administration	
-recall_nv8_01	sw-madrobotblog-01	2026-11-08	rubio	carried	MA138	rubio	against the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_01	sw-madrobotblog-01	2026-11-08	rubio	carried	MA138	rubio	against the administration	"not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading ""Update"" and follow the Times's reports of Nov 9 and 10"
 recall_nv8_04	sw-rawstorycom-01	2026-11-08	rubio	carried	MA04	rubio	for the administration	
 recall_nv8_05	sw-redstatecom-02	2026-11-08	rubio	carried	MA04	rubio	for the administration	
 recall_nv8_06	sw-semaforcom-02	2026-11-08	rubio	carried	MA04	rubio	neither	
@@ -2253,12 +2253,12 @@ recall_nv8_10	sw-lawyersgunsmoneyblogco-01	2026-11-09	rubio	carried	MA04	rubio	f
 recall_nv8_06	sw-pbsorg-03	2026-11-09	rubio	carried	MA04	rubio	neither	
 recall_nv8_08	sw-politicalorg-11	2026-11-09	rubio	carried	MA04	rubio	neither	
 recall_nv8_11	sw-redstatecom-04	2026-11-09	rubio	carried	MA04	rubio	against the administration	
-recall_nv8_06	sw-sandrarosecom-01	2026-11-09	rubio	carried	MA138	rubio	against the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_06	sw-sandrarosecom-01	2026-11-09	rubio	carried	MA138	rubio	against the administration	"carried earlier: the Times's report of Nov 8 on the secretary's memo (MA04); that he ""said"" so is the page's wording and matches no saved statement of his"
 recall_nv8_03	sw-taiwannewscomtw-02	2026-11-09	rubio	carried	MA04	rubio	for the administration	
 recall_nv8_04	sw-techcrunchcom-07	2026-11-09	rubio	carried	MA04	rubio	for the administration	
 recall_nv8_10	sw-thedecodercom-01	2026-11-09	rubio	carried	MA04	rubio	against the administration	
 recall_nv8_02	sw-therundownai-01	2026-11-09	rubio	carried	MA04	rubio	against the administration	
-recall_nv8_01	sw-todaycom-01	2026-11-09	rubio	carried	MA04 MA138	rubio	against the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_01	sw-todaycom-01	2026-11-09	rubio	carried	MA04 MA138	rubio	against the administration	carried: the Times's report of Nov 8 on the secretary's memo (MA04)
 recall_nv8_08	sw-tomsguidecom-02	2026-11-09	rubio	carried	MA04	rubio	neither	
 recall_nv8_12	sw-turkiyetodaycom-01	2026-11-09	rubio	carried	MA04	rubio	for the administration	
 recall_nv8_02	art-fc-tovima-wsj-1110	2026-11-10	rubio	CANDIDATE occasion		wsj	for the administration	open: not yet grouped or drawn
@@ -2331,38 +2331,38 @@ recall_nv8_01	sw-techcrunchcom-08	2026-11-12	rubio	carried	MA04	rubio	for the ad
 recall_nv8_07	tnr-problem-worse	2026-11-12	rubio	carried	MA138	rubio	neither	
 recall_nv8_03	cnbc-1110-schumer	2026-11-10	schumer	CANDIDATE occasion		schumer	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_04	sw-cbsaustincom-04	2026-11-11	schumer	CANDIDATE occasion		schumer	against the administration	open: not yet grouped or drawn
-recall_nv8_11	man-nyt-1029-01	2026-10-29	singapore	carried	MA72	nyt	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_05	sw-capitalbriefcom-57f178e4	2026-10-29	singapore	carried	MA72	singapore	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_08	sw-financeyahoocom-01	2026-10-29	singapore	carried	MA70	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_06	sw-ibtimescom-01	2026-10-29	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_11	sw-invezzcom-01	2026-10-29	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_02	sw-zerohedgecom-01	2026-10-29	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_07	art-fc-spf-1030	2026-10-30	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_11	man-nyt-1029-01	2026-10-29	singapore	carried	MA72	nyt	neither	carried earlier: Singapore's investigation and the questioning of 2025 are now worded on the Times's first report (MA01, Oct 29); its statement of Nov 12 stays its own act
+recall_nv8_05	sw-capitalbriefcom-57f178e4	2026-10-29	singapore	carried	MA72	singapore	against Huang or Nvidia	carried earlier: Singapore's investigation and the questioning of 2025 are now worded on the Times's first report (MA01, Oct 29); its statement of Nov 12 stays its own act
+recall_nv8_08	sw-financeyahoocom-01	2026-10-29	singapore	carried	MA70	singapore	neither	carried earlier: Singapore's investigation and the questioning of 2025 are now worded on the Times's first report (MA01, Oct 29); its statement of Nov 12 stays its own act
+recall_nv8_06	sw-ibtimescom-01	2026-10-29	singapore	carried	MA72	singapore	neither	carried earlier: Singapore's investigation and the questioning of 2025 are now worded on the Times's first report (MA01, Oct 29); its statement of Nov 12 stays its own act
+recall_nv8_11	sw-invezzcom-01	2026-10-29	singapore	carried	MA72	singapore	neither	carried earlier: Singapore's investigation and the questioning of 2025 are now worded on the Times's first report (MA01, Oct 29); its statement of Nov 12 stays its own act
+recall_nv8_02	sw-zerohedgecom-01	2026-10-29	singapore	carried	MA72	singapore	neither	carried earlier: Singapore's investigation and the questioning of 2025 are now worded on the Times's first report (MA01, Oct 29); its statement of Nov 12 stays its own act
+recall_nv8_07	art-fc-spf-1030	2026-10-30	singapore	carried	MA72	singapore	neither	carried earlier: Singapore's investigation and the questioning of 2025 are now worded on the Times's first report (MA01, Oct 29); its statement of Nov 12 stays its own act
 recall_nv8_07	art-fc-spf-1030	2026-10-30	singapore	carried	MA70	singapore	neither	
-recall_nv8_03	man-923fe8754943	2026-10-31	singapore	CANDIDATE occasion		wsj	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_08	sw-tomshardwarecom-01	2026-11-07	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_03	man-923fe8754943	2026-10-31	singapore	CANDIDATE occasion		wsj	against Huang or Nvidia	drawn: on the Journal's first report (MA06), with the investigations in Singapore and Taiwan
+recall_nv8_08	sw-tomshardwarecom-01	2026-11-07	singapore	carried	MA72	singapore	neither	carried earlier: Singapore's investigation and the questioning of 2025 are now worded on the Times's first report (MA01, Oct 29); its statement of Nov 12 stays its own act
 recall_nv8_08	sw-tomshardwarecom-01	2026-11-07	singapore	carried	MA70	singapore	neither	
 recall_nv8_09	sw-digitaltrendscom-01	2026-11-08	singapore	carried	MA06	singapore	against Huang or Nvidia	
 recall_nv8_06	art-fc-tovima-wsj-1108-board	2026-11-09	singapore	carried	MA06	wsj	against Huang or Nvidia	
 recall_nv8_09	man-wsj-1109-07	2026-11-09	singapore	carried	MA06	wsj	against Huang or Nvidia	
 recall_nv8_03	sw-dailywirecom-01	2026-11-09	singapore	CANDIDATE occasion		singapore	for Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_05	sw-vanguardngrcom-01	2026-11-09	singapore	carried	MA72	singapore	against Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_11	art-fc-bs-nyt-1110-woman	2026-11-10	singapore	carried	MA72	nyt	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_11	art-fc-bs-nyt-1110-woman	2026-11-10	singapore	carried	MA72	nyt	for Huang or Nvidia	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_05	sw-vanguardngrcom-01	2026-11-09	singapore	carried	MA72	singapore	against Huang or Nvidia	carried earlier: Singapore's investigation and the questioning of 2025 are now worded on the Times's first report (MA01, Oct 29); its statement of Nov 12 stays its own act
+recall_nv8_11	art-fc-bs-nyt-1110-woman	2026-11-10	singapore	carried	MA72	nyt	neither	drawn: on the Times's chip of Nov 10 (MA293), which now carries the ban on leaving, the questioning and the finding of insufficient evidence as its profile reports them, two days before Singapore's statement
+recall_nv8_11	art-fc-bs-nyt-1110-woman	2026-11-10	singapore	carried	MA72	nyt	for Huang or Nvidia	drawn: on the Times's chip of Nov 10 (MA293), which now carries the ban on leaving, the questioning and the finding of insufficient evidence as its profile reports them, two days before Singapore's statement
 recall_nv8_02	art-fc-tovima-wsj-1110	2026-11-10	singapore	CANDIDATE part	MA06	wsj	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_01	man-ft-1110-02	2026-11-10	singapore	carried	MA72	ft	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_06	man-ft-1110-03	2026-11-10	singapore	carried	MA70 MA72	ft	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_08	man-ft-1111-01	2026-11-10	singapore	carried	MA70 MA72	ft	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_01	man-ft-1110-02	2026-11-10	singapore	carried	MA72	ft	neither	carried: Singapore's inquiry into the company is on the Times's first report (MA01) and on its own chip of Oct 30 (MA70); the start this page gives for it is not worded on a chip
+recall_nv8_06	man-ft-1110-03	2026-11-10	singapore	carried	MA70 MA72	ft	neither	carried: Singapore's inquiry into the company is on the Times's first report (MA01) and on its own chip of Oct 30 (MA70); the start this page gives for it is not worded on a chip
+recall_nv8_08	man-ft-1111-01	2026-11-10	singapore	carried	MA70 MA72	ft	neither	carried: Singapore's inquiry into the company is on the Times's first report (MA01) and on its own chip of Oct 30 (MA70); the start this page gives for it is not worded on a chip
 recall_nv8_08	man-ft-1111-01	2026-11-10	singapore	CANDIDATE occasion		ft	neither	open: not yet grouped or drawn
 recall_nv8_08	man-ft-1111-01	2026-11-10	singapore	CANDIDATE occasion		ft	neither	open: not yet grouped or drawn
-recall_nv8_02	sw-fortunecom-05	2026-11-10	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_02	sw-fortunecom-05	2026-11-10	singapore	carried	MA72	singapore	neither	drawn: on the Times's chip of Nov 10 (MA293), which now carries the ban on leaving, the questioning and the finding of insufficient evidence as its profile reports them, two days before Singapore's statement
 recall_nv8_10	sw-koreajoongangdailycom-03	2026-11-10	singapore	carried	MA06	singapore	against Huang or Nvidia	
-recall_nv8_06	sw-siliconcouk-01	2026-11-10	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_04	sw-tomshardwarecom-14	2026-11-10	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_06	sw-siliconcouk-01	2026-11-10	singapore	carried	MA72	singapore	neither	drawn: on the Times's chip of Nov 10 (MA293), which now carries the ban on leaving, the questioning and the finding of insufficient evidence as its profile reports them, two days before Singapore's statement
+recall_nv8_04	sw-tomshardwarecom-14	2026-11-10	singapore	carried	MA72	singapore	neither	drawn: on the Times's chip of Nov 10 (MA293), which now carries the ban on leaving, the questioning and the finding of insufficient evidence as its profile reports them, two days before Singapore's statement
 recall_nv8_09	cnbc-1112-megaspeed-asia	2026-11-11	singapore	CANDIDATE part	MA70	singapore	neither	open: not yet grouped or drawn
-recall_nv8_07	cnn-1111-live	2026-11-11	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_07	cnn-1111-live	2026-11-11	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
-recall_nv8_06	sw-cbsnewscom-07	2026-11-11	singapore	carried	MA72	singapore	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_07	cnn-1111-live	2026-11-11	singapore	carried	MA72	singapore	neither	not moved: the live page's item gives the ministry's statement of Nov 12, the chip's day
+recall_nv8_07	cnn-1111-live	2026-11-11	singapore	carried	MA72	singapore	neither	not moved: the live page's item gives the ministry's statement of Nov 12, the chip's day
+recall_nv8_06	sw-cbsnewscom-07	2026-11-11	singapore	carried	MA72	singapore	neither	carried: Singapore's inquiry into the company is on the Times's first report (MA01) and on its own chip of Oct 30 (MA70); the start this page gives for it is not worded on a chip
 recall_nv8_04	art-fc-tovima-wsj-1112-kangwei	2026-11-12	singapore	carried	MA72	wsj	neither	
 recall_nv8_09	man-055b5f33923f	2026-11-12	singapore	CANDIDATE occasion		wsj	neither	open: not yet grouped or drawn
 recall_nv8_09	man-1fbc18e5e77d	2026-11-12	singapore	CANDIDATE occasion		wsj	neither	open: not yet grouped or drawn
@@ -2388,8 +2388,8 @@ recall_nv8_02	sw-nbcnewscom-09	2026-11-12	singapore	carried	MA72	singapore	neith
 recall_nv8_02	sw-nbcnewscom-09	2026-11-12	singapore	carried	MA72	singapore	against the administration	
 recall_nv8_01	sw-techcrunchcom-08	2026-11-12	singapore	carried	MA72	singapore	neither	
 recall_nv8_05	sw-tomshardwarecom-05	2026-11-12	singapore	carried	MA72	singapore	against Huang or Nvidia	
-recall_nv8_03	man-923fe8754943	2026-10-31	taiwan	CANDIDATE occasion		wsj	against Huang or Nvidia	open: not yet grouped or drawn
-recall_nv8_08	sw-tomshardwarecom-01	2026-11-07	taiwan	carried	MA293	taiwan	neither	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_03	man-923fe8754943	2026-10-31	taiwan	CANDIDATE occasion		wsj	against Huang or Nvidia	drawn: on the Journal's first report (MA06), with the investigations in Singapore and Taiwan
+recall_nv8_08	sw-tomshardwarecom-01	2026-11-07	taiwan	carried	MA293	taiwan	neither	carried earlier: the Journal's first report (MA06, Oct 30) now words the investigations in Singapore and Taiwan and the surveillance teams; the monitoring from 2024 at the suggestion of the U.S. is the Times's own report of Nov 10
 recall_nv8_09	sw-digitaltrendscom-01	2026-11-08	taiwan	carried	MA06	taiwan	against Huang or Nvidia	
 recall_nv8_06	art-fc-tovima-wsj-1108-board	2026-11-09	taiwan	carried	MA06	wsj	against Huang or Nvidia	
 recall_nv8_11	man-wsj-1109-02	2026-11-09	taiwan	CANDIDATE occasion		wsj	against Huang or Nvidia	open: not yet grouped or drawn
@@ -2407,7 +2407,7 @@ recall_nv8_05	sw-newslettersemianalysis-91720106	2026-11-12	taiwan	CANDIDATE occ
 recall_nv8_05	sw-newslettersemianalysis-91720106	2026-11-12	taiwan	CANDIDATE occasion		taiwan	against Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_11	sw-taiwannewscomtw-07	2026-11-12	taiwan	carried	MA293	taiwan	neither	
 recall_nv8_11	man-nyt-1029-01	2026-10-29	trump	carried	MA01	nyt	against the administration	
-recall_nv8_11	man-nyt-1029-01	2026-10-29	trump	CANDIDATE occasion		nyt	neither	open: not yet grouped or drawn
+recall_nv8_11	man-nyt-1029-01	2026-10-29	trump	CANDIDATE occasion		nyt	neither	drawn: MA330 (the permission and the government's share, on the day of this page; the chip quotes this sentence)
 recall_nv8_11	man-nyt-1029-01	2026-10-29	trump	CANDIDATE occasion		nyt	against the administration	open: not yet grouped or drawn
 recall_nv8_11	man-nyt-1029-01	2026-10-29	trump	CANDIDATE occasion		nyt	against the administration	open: not yet grouped or drawn
 recall_nv8_11	man-nyt-1029-01	2026-10-29	trump	CANDIDATE occasion		nyt	against the administration	open: not yet grouped or drawn
@@ -2462,7 +2462,7 @@ recall_nv8_05	sw-gizmodocom-02	2026-11-06	trump	carried	MA01	trump	against the a
 recall_nv8_09	man-nyt-1107-01	2026-11-07	trump	carried	MA330	nyt	neither	
 recall_nv8_09	man-nyt-1107-01	2026-11-07	trump	CANDIDATE part	MA330	nyt	neither	open: not yet grouped or drawn
 recall_nv8_06	sw-engadgetcom-02	2026-11-07	trump	CANDIDATE occasion		trump	neither	open: not yet grouped or drawn
-recall_nv8_06	sw-engadgetcom-02	2026-11-07	trump	carried	MA138	trump	against the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_06	sw-engadgetcom-02	2026-11-07	trump	carried	MA138	trump	against the administration	carried earlier: the FT's report of Nov 6 (MA08) now words the memo that went to top officials before the trip; the briefing aboard the plane is the Times's report of Nov 10
 recall_nv8_06	sw-engadgetcom-02	2026-11-07	trump	carried	MA01	trump	against the administration	
 recall_nv8_06	sw-freepressjournalin-02	2026-11-07	trump	carried	MA01	trump	against the administration	
 recall_nv8_05	sw-jpostcom-01	2026-11-07	trump	carried	MA330	trump	against the administration	
@@ -2495,7 +2495,7 @@ recall_nv8_08	sw-globalnewsca-01	2026-11-08	trump	carried	MT18	trump	neither
 recall_nv8_01	sw-implicatorai-02	2026-11-08	trump	CANDIDATE occasion		trump	for the administration	open: not yet grouped or drawn
 recall_nv8_05	sw-internazionaleit-01	2026-11-08	trump	carried	MA01	trump	against the administration	
 recall_nv8_04	sw-localnews8com-01	2026-11-08	trump	carried	MA01	trump	against the administration	
-recall_nv8_01	sw-madrobotblog-01	2026-11-08	trump	carried	MA138 MT18	trump	against the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_01	sw-madrobotblog-01	2026-11-08	trump	carried	MA138 MT18	trump	against the administration	"not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading ""Update"" and follow the Times's reports of Nov 9 and 10"
 recall_nv8_06	sw-ntdcom-01	2026-11-08	trump	CANDIDATE occasion		trump	for Huang or Nvidia	open: not yet grouped or drawn
 recall_nv8_06	sw-ntdcom-01	2026-11-08	trump	carried	MT18	trump	for Huang or Nvidia	
 recall_nv8_08	sw-politicalorg-09	2026-11-08	trump	carried	MA01	trump	against the administration	
@@ -2525,7 +2525,7 @@ recall_nv8_10	huffpost-trump-china	2026-11-09	trump	CANDIDATE occasion		trump	ag
 recall_nv8_10	huffpost-trump-china	2026-11-09	trump	CANDIDATE occasion		trump	against the administration	open: not yet grouped or drawn
 recall_nv8_10	huffpost-trump-china	2026-11-09	trump	carried	MA330	trump	against the administration	
 recall_nv8_02	man-5378bea31457	2026-11-09	trump	CANDIDATE occasion		wsj	against the administration	open: not yet grouped or drawn
-recall_nv8_04	man-ft-1109-04	2026-11-09	trump	carried	MA138	ft	against the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_04	man-ft-1109-04	2026-11-09	trump	carried	MA138	ft	against the administration	drawn: MA361 (the FT's sentence of Nov 9, beside what its saved report of Nov 6 says and the president's reply)
 recall_nv8_12	man-ft-1109-05	2026-11-09	trump	carried	MA330	ft	against the administration	
 recall_nv8_07	man-nyt-1109-01	2026-11-09	trump	carried	MA01	nyt	against the administration	
 recall_nv8_08	man-nyt-1109-02	2026-11-09	trump	carried	MA01	nyt	against the administration	
@@ -2576,7 +2576,7 @@ recall_nv8_10	sw-foreignpolicycom-01	2026-11-09	trump	CANDIDATE occasion		trump	
 recall_nv8_10	sw-foreignpolicycom-01	2026-11-09	trump	carried	MA01	trump	against the administration	
 recall_nv8_08	sw-gizmodocom-05	2026-11-09	trump	carried	MA329 MA330	trump	neither	
 recall_nv8_11	sw-globalnewsca-02	2026-11-09	trump	CANDIDATE occasion		trump	against the administration	open: not yet grouped or drawn
-recall_nv8_10	sw-heisede-01	2026-11-09	trump	carried	MA138	trump	against the administration	open: the chip sits on its own day and the reader names an earlier page; not read again by the builder
+recall_nv8_10	sw-heisede-01	2026-11-09	trump	carried	MA138	trump	against the administration	carried earlier: the memo that went to top officials before the trip is on the FT's chip of Nov 6 (MA08) and the Times's of Nov 8 (MA04); the briefing aboard the plane is the Times's report of Nov 10
 recall_nv8_10	sw-heisede-01	2026-11-09	trump	carried	MT18	trump	against the administration	
 recall_nv8_11	sw-hotaircom-02	2026-11-09	trump	carried	MA01	trump	against the administration	
 recall_nv8_11	sw-hromadskeua-01	2026-11-09	trump	CANDIDATE occasion		trump	against the administration	open: not yet grouped or drawn

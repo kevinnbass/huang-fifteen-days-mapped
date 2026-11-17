@@ -1,0 +1,70 @@
+part,finding_id,holds,note
+F:MA305,F0016,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:MA34,F0056,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:MA38,F0057,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:MA49,F0058,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:MA283,F0059,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:D-counsel-White-House,F0060,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_d:A027,F0072,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_d:A038,F0074,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_d:A045,F0075,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_d:A058,F0076,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_e:A017,F0078,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_e:A031,F0080,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_f:A007,F0082,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_f:A010,F0083,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_f:A019,F0085,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_g:A008,F0088,partial,The addition is implemented; the stated Nov 11 placement has been superseded by the latest release's Nov 10 placement. See A-MA322 and the README's three-day changes.
+F:para_nv8_g:A029,F0092,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_g:A030,F0093,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_g:A033,F0094,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_g:A040,F0095,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_g:A044,F0097,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_g:A065,F0098,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_g:A091,F0100,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_g:A147,F0104,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_h:A006,F0105,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_h:A008,F0106,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_h:A015,F0107,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_h:A058,F0108,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_h:A068,F0109,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_h:A084,F0110,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_h:A091,F0111,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_h:A098,F0112,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:para_nv8_h:A100,F0113,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:B2-para_nv8_c:A039,F0117,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:B3-para_nv8_c:A022,F0129,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:B3-para_nv8_c:A023,F0130,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:B3-para_nv8_d:A022,F0135,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:B3-para_nv8_g:A017,F0141,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:B3-para_nv8_g:A062,F0145,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:D3-profile-cloud-partner,F0310,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:D1-email-further-parts,F0316,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:C5-MA71,F0466,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:C5-MA74,F0467,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:C5-MA127,F0473,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:C5-MA229,F0477,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F:C5-MA188,F0479,yes,The stated change is present in the named row/table/page and answers the earlier point.
+figure,E-01,yes,The stated change is present in the named row/table/page and answers the earlier point.
+figure,E-02,yes,The stated change is present in the named row/table/page and answers the earlier point.
+figure,E-03,yes,The stated change is present in the named row/table/page and answers the earlier point.
+figure,E-05,yes,The stated change is present in the named row/table/page and answers the earlier point.
+G,G-MA305,yes,The stated change is present in the named row/table/page and answers the earlier point.
+G,G-MA38/MA49,yes,The stated change is present in the named row/table/page and answers the earlier point.
+G,G-MA283,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F,C4 C4-kennedy|2026-11-10,yes,The stated change is present in the named row/table/page and answers the earlier point.
+F,C5 C5-MA96-1,yes,The stated change is present in the named row/table/page and answers the earlier point.
+gaps,hodges|2026-11-12,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,blumenthal|2026-11-09,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,bresnick|2026-11-09,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,bresnick|2026-11-10,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,bresnick|2026-11-11,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,cotton,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,mccaul|2026-11-08,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,stapp|2026-11-10,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,stapp|2026-11-11,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,MA179,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,MA194,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,MA294,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,MA46,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."
+gaps,C5-selection,yes,"Accurate description of the twentieth reading's historical limit, carried in its published gaps and in the README's Limits that remain. This is not evidence of silence or a claim that the missing earlier version was checked."

@@ -136,7 +136,7 @@ JRNL = (' on the Journal\'s row (its column of the evening of Nov 11); the refus
 TIE = 'carried: it is a tie line of the figure ({}), which the table of chips the reader was given did not show'
 EARLIER = {
  'single:G003': D('MA331'), 'a:A059': D('MA331') + ' (the same assurance as G003)', 'single:G108': D('MA332'), 'single:G184': D('MA332'), 'single:G055': D('MA336'),
- 'a:A047': D('MA333') + ' (the reader\'s page is a later copy of the dispatch; the chip cites the earliest saved copy, of the same day)',
+ 'a:A047': D('MA333') + ' (the reader\'s page is a copy of the news agency\'s dispatch; since the twenty-first reading the chip sits on Nov 8, the first day of the earliest saved page that carries the sentence, with the caveat that it may be newer)',
  'a:A054': D('MA334') + ' (one rule for every actor: a search of every counted page for a sum of money beside the word lobbying found CNBC\'s two reports of Nvidia\'s spending and no report of another actor\'s)',
  'a:A062': D('MA337'),
  'a:A076': D('MA338') + ' and, for the chief executive\'s remark in the same sentence, MA339; both on Nov 10, the day of the page that first relays the Axios report (the reader cited a page of Nov 11)',
@@ -148,7 +148,7 @@ EARLIER = {
  'single:G150': D('MA347') + ' (on Oct 29: a page of that day recalls the same statement of May 2025 in other words; the reader\'s page, of Nov 12, gives the words)',
  'single:G201': D('MA348'), 'd:A001': D('MA348'), 'single:G174': D('MA349'), 'd:A046': D('MA349'), 'single:G182': D('MA350'), 'g:A048': D('MA351'),
  'd:A057': 'carried: MA329 quotes it (an act held out of the reader\'s table as a control)',
- 'g:A049': D('MA169') + ' (added to the department\'s act of that day, which already cited the page)',
+ 'g:A049': D('MA169') + ' (the translated account is on the department\'s act of Nov 12, which already cited the page; since the twenty-first reading the indictment itself is drawn on the first saved page that recalls it, of Oct 29: MA362)',
  'h:A009': D('MA352'), 'h:A101': D('MA353'),
  'h:A025': D('MA112') + ' (the act had no day; it sits now on Oct 29, the day of the first saved page of these days that reports the letter, and carries the request for an investigation)',
  'h:A026': D('MA354'), 'h:A103': D('MA355'), 'h:A064': D('MA356'),
@@ -161,6 +161,10 @@ EARLIER = {
 }
 SAME_INTERVIEW = 'not drawn: another answer of the interview whose remarks on succession are drawn (MA345); this one is on his management and the pressure of the post, as the reader said'
 EARLIER.update({'single:G065': SAME_INTERVIEW, 'single:G066': SAME_INTERVIEW, 'single:G087': SAME_INTERVIEW})
+# three items on which the second reader's verdict stood until the twenty-first reading (Nov 17), which would draw the first two and place the third's indictment on its first report
+EARLIER.update({'a:A103': D('MA363') + ' (the second reader called the company\'s answer on financing not on the matter; the twenty-first reading would draw it, since the page ties it to what the resignation means for that financing)',
+                'b:A028': D('MA364') + ' (the second reader called the finance chief\'s statement of 2023 not on the matter; the twenty-first reading would draw it, since the Times\'s profile of the interim chief gives it under her views on export policy; on the Times\'s row)',
+                'single:G178': 'carried: the indictment of March is on the department\'s chip of Oct 29 (MA362), the first saved page that recalls it, and on the Journal\'s first report (MA06); this page, of Nov 9, recalls it later'})
 E_CONTROL = {'a:A043': 'MA85', 'a:A078': 'MA85', 'c:A022': 'MA329', 'd:A022': 'MA330'}      # the items that only a held-out act carried
 # the first reader's two candidates for the response of Dec 10, 2025: drawn now, from another page
 NOW = (' (first set aside as the company\'s answer to a different claim in the page that carried it; another page of these days, of Nov 9, sets the same response of Dec 10, 2025 against the reports '
@@ -188,6 +192,13 @@ R_DONE = [
  ('x-dream1984-article', 'mcguire', 'shared a stage at the DSET forum', 'carried: the figure draws the shared panel between the analyst and the Anthropic executive (rows of people), a table the reader was not given'),
  ('x-dream1984-article', 'anthropic', 'pushing for tighter curbs on AI chips to China', 'carried: tie line MT07 (the meeting of February and the announcement that followed)'),
  ('sw-cnncom-02', 'huang', 'die at his desk', 'drawn: MA359 (the remark to a podcaster, on the day of this page; the chip of Nov 11 keeps the later interview)'),
+ # candidate lines that chips added or amended on Nov 17 carry (the day corrections and the answer to the twenty-first reading), on the pages those chips cite
+ ('man-923fe8754943', 'nvidia', 'compliance with export restrictions is a top priority', 'drawn: on the Journal\'s first report (MA06), beside the arrest of March it answers'),
+ ('man-923fe8754943', 'singapore', 'physical surveillance teams', 'drawn: on the Journal\'s first report (MA06), with the investigations in Singapore and Taiwan'),
+ ('man-923fe8754943', 'taiwan', 'physical surveillance teams', 'drawn: on the Journal\'s first report (MA06), with the investigations in Singapore and Taiwan'),
+ ('sw-sfexaminercom-02', 'kress', 'In 2023, she said on a call', 'drawn: MA364 (on the Times\'s row, from its profile of the interim chief)'),
+ ('man-nyt-1029-01', 'huang', 'He also negotiated a deal with Mr. Trump', 'drawn: MA330 (the permission and the government\'s share, on the day of this page; the chip quotes this sentence)'),
+ ('man-nyt-1029-01', 'trump', 'He also negotiated a deal with Mr. Trump', 'drawn: MA330 (the permission and the government\'s share, on the day of this page; the chip quotes this sentence)'),
 ]
 # chips the readers named as carrying a line from a page EARLIER than the chip's day, and what the builder did
 R_EARLY = {
@@ -196,15 +207,47 @@ R_EARLY = {
  'MA301': 'moved: the chip now sits on Nov 10, the day of the first saved relay of the report',
  'MA322': 'moved: the chip now sits on Nov 7, the day of the first page that recalls the approvals',
  'MA345': 'split: the remark to a podcaster has its own chip on Nov 9 (MA359); this chip keeps the interview first recalled on Nov 11',
- 'MA333': 'not moved: the page of Nov 5 does not mention the affair (the chip names it); a page of Nov 8 carries the sentence only after an update on Nov 9',
+ 'MA333': 'moved: the chip now sits on Nov 8, the first day of the earliest page that carries the sentence, with the caveat that it may be newer (the twenty-first reading\'s finding); this page, of Nov 5, does not mention the affair and is named in the chip as context',
  'MA319': 'not moved: the earlier page recalls the president\'s share trades, which are tie lines; the White House\'s reply drawn here is in the page of Nov 12',
  'MA323': 'not moved: the earlier pages speak of the inquiry in general or give Megaspeed\'s own statement (its chip); the audits as this chip words them are in the page of Nov 12',
  'MA353': 'not moved: the earlier pages carry Huang\'s refusal of June, which is on the Times\'s chip of Nov 5 and on her chip of Oct 29; the letter of July 2025 is first in the page of Nov 10',
  'MA355': 'not moved: the earlier pages carry Huang\'s refusal of June, which is on the Times\'s chip of Nov 5 and on her chip of Oct 29; her joining the bill is first in the page of Nov 12',
- 'MA169': 'open: the earlier pages recall the indictment of March; whether each ties it to Megaspeed has not been read by the builder',
+ 'MA169': 'carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department\'s chip of Oct 29 (MA362) and the Journal\'s first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed',
 }
 R_OPEN = 'open: not yet grouped or drawn'
 R_OWN = 'open: the chip sits on its own day and the reader names an earlier page; not read again by the builder'
+# the chips that sit on their own day and that a reader named from an EARLIER page: read by the builder on Nov 17, one disposition per (chips named, page, actor); None stands for any
+R_LATE = [
+ (('MA293',), None, 'commerce', 'carried earlier: the inspection of late 2024 is now worded on the Times\'s first report (MA01, Oct 29), the first saved page that carries it; the chip of Nov 10 says it repeats it'),
+ (('MA293',), None, 'taiwan', 'carried earlier: the Journal\'s first report (MA06, Oct 30) now words the investigations in Singapore and Taiwan and the surveillance teams; the monitoring from 2024 at the suggestion of the U.S. is the Times\'s own report of Nov 10'),
+ (('MA293',), None, 'megaspeed', 'drawn: MA360 (the Journal\'s report of the partnership letter of November 2023, on Nov 9); the chip of Nov 10 keeps the Times\'s detail and points to it'),
+ (('MA293',), None, 'nvidia', 'drawn: MA360 (the Journal\'s report of the partnership letter of November 2023, on Nov 9); the chip of Nov 10 keeps the Times\'s detail and points to it'),
+ (('MA72',), 'art-fc-bs-nyt-1110-woman', 'singapore', 'drawn: on the Times\'s chip of Nov 10 (MA293), which now carries the ban on leaving, the questioning and the finding of insufficient evidence as its profile reports them, two days before Singapore\'s statement'), (('MA72',), 'sw-fortunecom-05', 'singapore', 'drawn: on the Times\'s chip of Nov 10 (MA293), which now carries the ban on leaving, the questioning and the finding of insufficient evidence as its profile reports them, two days before Singapore\'s statement'), (('MA72',), 'sw-siliconcouk-01', 'singapore', 'drawn: on the Times\'s chip of Nov 10 (MA293), which now carries the ban on leaving, the questioning and the finding of insufficient evidence as its profile reports them, two days before Singapore\'s statement'), (('MA72',), 'sw-tomshardwarecom-14', 'singapore', 'drawn: on the Times\'s chip of Nov 10 (MA293), which now carries the ban on leaving, the questioning and the finding of insufficient evidence as its profile reports them, two days before Singapore\'s statement'),
+ (('MA72',), 'man-ft-1110-02', 'singapore', 'carried: Singapore\'s inquiry into the company is on the Times\'s first report (MA01) and on its own chip of Oct 30 (MA70); the start this page gives for it is not worded on a chip'), (('MA72',), 'sw-cbsnewscom-07', 'singapore', 'carried: Singapore\'s inquiry into the company is on the Times\'s first report (MA01) and on its own chip of Oct 30 (MA70); the start this page gives for it is not worded on a chip'), (('MA70', 'MA72'), None, 'singapore', 'carried: Singapore\'s inquiry into the company is on the Times\'s first report (MA01) and on its own chip of Oct 30 (MA70); the start this page gives for it is not worded on a chip'),
+ (('MA72',), 'cnn-1111-live', 'singapore', 'not moved: the live page\'s item gives the ministry\'s statement of Nov 12, the chip\'s day'),
+ (('MA72',), None, 'singapore', 'carried earlier: Singapore\'s investigation and the questioning of 2025 are now worded on the Times\'s first report (MA01, Oct 29); its statement of Nov 12 stays its own act'), (('MA70',), None, 'singapore', 'carried earlier: Singapore\'s investigation and the questioning of 2025 are now worded on the Times\'s first report (MA01, Oct 29); its statement of Nov 12 stays its own act'),
+ (('MA101',), 'sw-madrobotblog-01', None, 'not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading "Update" and follow the Times\'s reports of Nov 9 and 10'), (('MA138',), 'sw-madrobotblog-01', None, 'not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading "Update" and follow the Times\'s reports of Nov 9 and 10'), (('MA138', 'MT18'), 'sw-madrobotblog-01', None, 'not moved: the page, first published on Nov 8, says it was updated on Nov 12; these passages stand under its heading "Update" and follow the Times\'s reports of Nov 9 and 10'),
+ (('MA101',), 'sw-siliconanglecom-01', 'commerce', 'carried: the Times\'s first report (MA01, Oct 29) carries the inquiry and its handover'),
+ (('MA101',), 'sw-digitaltrendscom-01', 'commerce', 'carried earlier: the words are the Journal\'s of Oct 30, now on its chip (MA06)'),
+ (('MA01', 'MA101'), 'sw-techcrunchcom-01', 'commerce', 'carried: the Times\'s first report (MA01, Oct 29) carries the inquiry; that the Times had first reported it in 2025 is not worded on a chip'),
+ (('MA01', 'MA101'), 'man-923fe8754943', 'commerce', 'carried: the Journal\'s first report (MA06, Oct 30) now words the start of the inquiry in late 2024'),
+ (('MA01', 'MA101'), 'sw-implicatorai-02', 'commerce', 'carried: the inquiry is on the Times\'s and the Journal\'s first reports (MA01, MA06); that no finding has been announced is the page\'s own remark'),
+ (('MA01', 'MA101'), None, None, 'carried: the Times\'s first report (MA01, Oct 29) carries the handover to the Justice Department'),
+ (('MA327',), 'sw-qzcom-01', 'huang', 'drawn: on the senator\'s chip of Oct 29 (MA357), which now adds this page\'s recall that Huang turned her request down'),
+ (('MA08',), None, 'huang', 'not moved: the page gives the Times\'s first report (MA01, Oct 29), which speaks of a close relationship; the chip named is a later paper\'s own report'), (('MA06',), None, 'huang', 'not moved: the page gives the Times\'s first report (MA01, Oct 29), which speaks of a close relationship; the chip named is a later paper\'s own report'),
+ (('MA05',), 'huffpost-live', 'huang', 'not moved: the live page\'s item is stamped Nov 11, the chip\'s day'),
+ (('MA05',), 'sw-foreignpolicycom-01', 'huang', 'not moved: the page says it was updated on Nov 12, and the sentence follows the resignation'),
+ (('MA146',), 'sw-foreignpolicycom-01', 'huang', 'not moved: the page says it was updated on Nov 12; the chip named is a commentator\'s remark of that day'),
+ (('MA146',), 'sw-thedecodercom-01', 'huang', 'not moved: the chip named is a commentator\'s remark of Nov 12; that Huang named no successor is carried on Nov 9 (MA359, MA315)'),
+ (('MA146',), 'sw-thezvisubstackcom-01', 'huang', 'not moved: his post of Nov 10 has its own chip (MA132); the chip named is a remark in his newsletter of Nov 12'),
+ (('MA157',), None, 'megaspeed', 'carried earlier: the Journal\'s first report (MA06, Oct 30) now quotes the statement of late 2025; the chip of Nov 9 is the company\'s posting of it that day'),
+ (('MA340', 'MA358'), 'sw-cnbccom-04', 'nvidia', 'drawn: MA358 (this page\'s recall, on Nov 10)'),
+ (('MA138',), 'sw-engadgetcom-02', 'trump', 'carried earlier: the FT\'s report of Nov 6 (MA08) now words the memo that went to top officials before the trip; the briefing aboard the plane is the Times\'s report of Nov 10'),
+ (('MA138',), 'man-ft-1109-04', 'trump', 'drawn: MA361 (the FT\'s sentence of Nov 9, beside what its saved report of Nov 6 says and the president\'s reply)'),
+ (('MA138',), 'sw-heisede-01', 'trump', 'carried earlier: the memo that went to top officials before the trip is on the FT\'s chip of Nov 6 (MA08) and the Times\'s of Nov 8 (MA04); the briefing aboard the plane is the Times\'s report of Nov 10'),
+ (('MA138',), 'sw-sandrarosecom-01', 'rubio', 'carried earlier: the Times\'s report of Nov 8 on the secretary\'s memo (MA04); that he "said" so is the page\'s wording and matches no saved statement of his'),
+ (('MA04', 'MA138'), 'sw-todaycom-01', 'rubio', 'carried: the Times\'s report of Nov 8 on the secretary\'s memo (MA04)'),
+]
 
 
 def scrub(t):
@@ -216,7 +259,7 @@ def scrub(t):
 
 def main():
     ids = {r['row_id'] for r in rows_map.rows()}
-    for v in list(ONE.values()) + list(PARA.values()) + list(EARLIER.values()) + [x[3] for x in R_DONE] + list(R_EARLY.values()):
+    for v in list(ONE.values()) + list(PARA.values()) + list(EARLIER.values()) + [x[3] for x in R_DONE] + list(R_EARLY.values()) + [x[3] for x in R_LATE]:
         for i in re.findall(r'MA\d+', v): assert i in ids, ('a disposition names an act that is not there', i)
     grp = {r['group_id']: r for r in csv.DictReader(open(L / 'single_nv8_a.groups.tsv'), delimiter='\t')}
     ctl = {r['group_id']: r for r in csv.DictReader(open(L / 'single_nv8_a.controls.tsv'), delimiter='\t')}
@@ -294,7 +337,7 @@ def main():
                 is_ctl[n] = k['act_held_out']; found.add(k['act_held_out'])
     NOT_VALID = {'MA327'}        # its earlier part (a refusal of June) is carried by two other chips, as its reader said: not a test of that reader
     assert {k['act_held_out'] for k in ctl} - found == NOT_VALID, ('controls not found', {k['act_held_out'] for k in ctl} - found)
-    rout = []; rc = Counter(); used = Counter()
+    rout = []; rc = Counter(); used = Counter(); used_late = Counter()
     for n, r in enumerate(pool):
         v = r['verdict'].strip(); ids = ['MA' + str(int(x[2:])) for x in re.findall(r'MA\d+', r['chip_or_tie'])]
         done = [d for d in R_DONE if d[0] == r['page_id'] and d[1] == r['actor'] and d[2] in r['exact_words']]
@@ -304,11 +347,14 @@ def main():
             late = [i for i in ids if acts[i]['date'] and r['page_day'] and r['page_day'] < acts[i]['date']]
             rep = [i for i in late if acts[i]['reported']]
             if rep: assert all(i in R_EARLY for i in rep), ('a report-dated chip named on an earlier page, with no disposition', rep, r['page_id']); disp = R_EARLY[rep[0]]
-            elif late: disp = R_OWN
+            elif late:
+                key = tuple(re.findall(r'M[AT]\d+', r['chip_or_tie'])); hit = [x for x in R_LATE if x[0] == key and x[1] in (None, r['page_id']) and x[2] in (None, r['actor'])]
+                assert hit, ('a chip on its own day named from an earlier page, with no disposition', key, r['page_id'], r['actor']); disp = hit[0][3]; used_late[R_LATE.index(hit[0])] += 1
             else: disp = ''
         else: disp = R_OPEN
         rc[(v, disp.split(':')[0] if disp else 'the reader\'s verdict stands')] += 1
         rout.append([r['lane'], r['page_id'], r['page_day'], r['actor'], v, ' '.join(re.findall(r'M[AT]\d+', r['chip_or_tie'])), r['row_it_belongs_on'], r['direction'].strip(), disp])
+    assert all(used_late[i] for i in range(len(R_LATE))), ('a disposition for no line', [R_LATE[i][:3] for i in range(len(R_LATE)) if not used_late[i]])
     assert all(used[d[:3]] for d in R_DONE), ('a line the builder says it acted on is not in the pool', [d[:3] for d in R_DONE if not used[d[:3]]])
     with open(R / 'nv8_recalls.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t', lineterminator='\n')

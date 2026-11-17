@@ -526,7 +526,7 @@ L01107	crawford	sw-aljazeeracom-03	A0079	yes	yes	yes	para_nv8_f
 L01109	trump	sw-aljazeeracom-03	A0079	yes	yes	yes	para_nv8_d	
 L01118	trump	sw-aljazeeracom-03	A0079				para_nv8_d	yes
 L01119	board	sw-aljazeeracom-03	A0079	yes	yes	yes	para_nv8_b	
-L01121	huang	sw-aljazeeracom-03	A0079	yes	yes	yes	para_nv8_c	
+L01121	huang	sw-aljazeeracom-03	A0079	yes	yes		para_nv8_c	
 L01123	huang	sw-aljazeeracom-03	A0079	yes	yes	yes	para_nv8_c	
 L01124	moolenaar	sw-aljazeeracom-03	A0079	yes	yes	yes	para_nv8_f	
 L01125	mast	sw-aljazeeracom-03	A0079	yes	yes	yes	para_nv8_f	
@@ -698,7 +698,7 @@ L01430	board	sw-asiaecokr-08	A0116	yes	yes	yes	para_nv8_b
 L01431	board	sw-asiaecokr-08	A0116	yes	yes	yes	para_nv8_b	
 L01433	china	sw-asiaecokr-09	A0117	yes	yes	yes	para_nv8_e	
 L01436	china	sw-asiaecokr-10	A0118	yes	yes	yes	para_nv8_e	
-L01437	nvidia	sw-asiaecokr-10	A0118	yes	yes	yes	para_nv8_a	
+L01437	nvidia	sw-asiaecokr-10	A0118	yes	yes		para_nv8_a	
 L01438	nvidia	sw-asiaecokr-10	A0118	yes	yes	yes	para_nv8_a	
 L01439	china	sw-asiaecokr-10	A0118	yes	yes	yes	para_nv8_e	
 L01440	board	sw-asiaecokr-10	A0118	yes	yes	yes	para_nv8_b	
@@ -2298,7 +2298,7 @@ L05251	musk	sw-implicatorai-06	A0529	yes	yes	yes	para_nv8_h
 L05252	trump	sw-implicatorai-06	A0529	yes	yes	yes	para_nv8_d	
 L05253	china	sw-implicatorai-06	A0529	yes	yes	yes	para_nv8_e	
 L05254	board	sw-implicatorai-06	A0529	yes	yes	yes	para_nv8_b	
-L05256	huang	sw-implicatorai-06	A0529	yes	yes	yes	para_nv8_c	
+L05256	huang	sw-implicatorai-06	A0529	yes	yes		para_nv8_c	
 L05257	mast	sw-implicatorai-06	A0529	yes	yes		para_nv8_f	
 L05260	huang	sw-implicatorai-06	A0529	yes	yes	yes	para_nv8_c	
 L05261	china	sw-implicatorai-06	A0529	yes	yes	yes	para_nv8_e	
@@ -2628,7 +2628,7 @@ L05944	nvidia	sw-mobilesyrupcom-01	A0599	yes	yes	yes	para_nv8_a
 L05945	huang	sw-mobilesyrupcom-01	A0599	yes	yes	yes	para_nv8_c	
 L05946	china	sw-mobilesyrupcom-01	A0599	yes	yes	yes	para_nv8_e	
 L05947	huang	sw-mockpaperscissorscom-01	A0600	yes	yes	yes	para_nv8_c	
-L05948	huang	sw-mockpaperscissorscom-01	A0600	yes	yes	yes	para_nv8_c	
+L05948	huang	sw-mockpaperscissorscom-01	A0600	yes	yes		para_nv8_c	
 L05950	nvidia	sw-morningstarcom-02	A0601	yes	yes	yes	para_nv8_a	
 L05954	huang	sw-morningstarcom-02	A0601	yes	yes	yes	para_nv8_c	
 L05955	board	sw-morningstarcom-02	A0601	yes	yes	yes	para_nv8_b	
@@ -4185,7 +4185,7 @@ L09386	board	sw-varietycom-01	A0962	yes	yes	yes	para_nv8_b
 L09388	board	sw-varietycom-01	A0962	yes	yes	yes	para_nv8_b	
 L09398	trump	sw-varietycom-01	A0962	yes	yes	yes	para_nv8_d	
 L09399	nvidia	sw-venturebeatcom-01	A0963	yes	yes	yes	para_nv8_a	
-L09400	nvidia	sw-venturebeatcom-01	A0963	yes	yes	yes	para_nv8_a	
+L09400	nvidia	sw-venturebeatcom-01	A0963	yes	yes		para_nv8_a	
 L09423	nvidia	sw-ventureburncom-01	A0964	yes	yes	yes	para_nv8_a	
 L09424	board	sw-ventureburncom-01	A0964	yes	yes	yes	para_nv8_b	
 L09425	board	sw-ventureburncom-01	A0964	yes	yes	yes	para_nv8_b	
@@ -4860,7 +4860,7 @@ L11600	megaspeed	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8
 L11601	nvidia	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8_a	
 L11602	huang	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8_c	
 L11604	nvidia	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8_a	
-L11609	nvidia	sw-yroslashdotorg-01	A1004	yes	yes	yes	para_nv8_a	
+L11609	nvidia	sw-yroslashdotorg-01	A1004	yes	yes		para_nv8_a	
 L11610	huang	art-line-straitstimes-bloomberg-1110	A1185	yes	yes	yes	para_nv8_c	
 L11618	huang	man-b8094f1ead01	A1188	yes	yes	yes	para_nv8_c	
 L11627	huang	man-598a830b2580	A1189	yes	yes	yes	para_nv8_c	
@@ -5018,7 +5018,7 @@ L12013	huang	cnn-1111-live	A0022	yes	yes	yes	para_nv8_c
 L12014	board	cnn-1111-live	A0022	yes	yes	yes	para_nv8_b	
 L12016	trump	cnn-1111-live	A0022	yes	yes	yes	para_nv8_d	
 L12019	board	cnn-1111-live	A0022	yes			para_nv8_b	
-L12022	huang	cnn-1111-live	A0022	yes	yes	yes	para_nv8_c	
+L12022	huang	cnn-1111-live	A0022	yes	yes		para_nv8_c	
 L12023	huang	cnn-1111-live	A0022	yes	yes		para_nv8_c	
 L12027	nvidia	cnn-1111-live	A0022	yes	yes	yes	para_nv8_a	
 L12030	board	cnn-1111-live	A0022				para_nv8_b	yes

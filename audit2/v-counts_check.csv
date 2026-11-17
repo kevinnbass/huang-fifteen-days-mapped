@@ -1,0 +1,121 @@
+what,figure_says,you_find,agree,note
+act rows,358,358,yes,Literal count; source findings may require later corrections.
+active acts,356,356,yes,Literal count; source findings may require later corrections.
+dated acts,356,356,yes,Literal count; source findings may require later corrections.
+chips,independent recount,221,n/a,Literal count; source findings may require later corrections.
+dashed chips,independent recount,58,n/a,Literal count; source findings may require later corrections.
+acts dated by report,147,147,yes,Literal count; source findings may require later corrections.
+another saved page gives another day,29,29,yes,
+a day word near a cited passage in its own source,77,77,yes,
+its page was changed after the chip's day,31,31,yes,
+an earlier page holds a cited passage,12,12,yes,
+a copy of the same article lacks a cited passage,7,7,yes,
+the day of its page is an update's,5,5,yes,
+may be newer acts,14,14,yes,
+nv8_actor_days.tsv,20,20,yes,
+nv8_remarks_no_chip.tsv,9,9,yes,
+multi-article actor days,8,8,yes,
+single-article actor days,12,12,yes,
+saved pages,1315,1315,yes,
+article ids,1236,1236,yes,
+counted articles,1154,1154,yes,
+pages held in part,98,98,yes,
+nv8_blind_spot_population.tsv byte identity,unchanged,changed,no,"No population recount, as requested."
+population script byte identity,unchanged,unchanged,yes,
+refusal acts,29,29,yes,Lexical recount independently joined to row source article ids; classification readings require source checks.
+refusal actors,11,11,yes,Lexical recount independently joined to row source article ids; classification readings require source checks.
+refusal census lines,133,133,yes,Lexical recount independently joined to row source article ids; classification readings require source checks.
+inside cited articles,60,60,yes,Lexical recount independently joined to row source article ids; classification readings require source checks.
+outside cited articles,73,73,yes,Lexical recount independently joined to row source article ids; classification readings require source checks.
+outside actor-article pairs,63,63,yes,Lexical recount independently joined to row source article ids; classification readings require source checks.
+relay classifications,60,60,yes,Lexical recount independently joined to row source article ids; classification readings require source checks.
+non-refusal classifications,13,13,yes,Lexical recount independently joined to row source article ids; classification readings require source checks.
+single input groups,301,301,yes,
+single controls,7,7,yes,
+single noncontrol candidates,101,101,yes,
+single noncontrol candidates drawn,99,99,yes,
+para_nv8_a input lines,1162,1162,yes,
+para_nv8_a acts,112,112,yes,
+para_nv8_a candidates,32,32,yes,
+para_nv8_a drawn,22,22,yes,
+para_nv8_b input lines,865,865,yes,
+para_nv8_b acts,33,33,yes,
+para_nv8_b candidates,13,13,yes,
+para_nv8_b drawn,10,10,yes,
+para_nv8_c input lines,812,812,yes,
+para_nv8_c acts,48,48,yes,
+para_nv8_c candidates,16,16,yes,
+para_nv8_c drawn,4,4,yes,
+para_nv8_d input lines,528,528,yes,
+para_nv8_d acts,64,64,yes,
+para_nv8_d candidates,15,15,yes,
+para_nv8_d drawn,6,6,yes,
+para_nv8_e input lines,366,366,yes,
+para_nv8_e acts,37,37,yes,
+para_nv8_e candidates,11,11,yes,
+para_nv8_e drawn,5,5,yes,
+para_nv8_f input lines,309,309,yes,
+para_nv8_f acts,30,30,yes,
+para_nv8_f candidates,15,15,yes,
+para_nv8_f drawn,11,11,yes,
+para_nv8_g input lines,543,543,yes,
+para_nv8_g acts,154,154,yes,
+para_nv8_g candidates,36,36,yes,
+para_nv8_g drawn,24,24,yes,
+para_nv8_h input lines,391,391,yes,
+para_nv8_h acts,105,105,yes,
+para_nv8_h candidates,30,30,yes,
+para_nv8_h drawn,27,27,yes,
+all para input lines,4976,4976,yes,
+all para candidates,168,168,yes,
+all para drawn,109,109,yes,
+earlier items,67,67,yes,
+earlier verdict CANDIDATE occasion,39,39,yes,
+earlier verdict CANDIDATE part,5,5,yes,
+earlier verdict carried,8,8,yes,
+earlier verdict not on the matter,14,14,yes,
+earlier verdict not an act of the actor,1,1,yes,
+earlier disposition drawn,41,41,yes,
+earlier disposition carried,3,3,yes,
+earlier disposition not drawn,3,3,yes,
+earlier disposition controls,4,4,yes,
+earlier disposition verdict stands,16,16,yes,
+acts carrying earlier drawn items,29,29,yes,
+member pages warren,71,71,yes,Compared frozen sweep cells; no new mention census requested.
+member pages coons,48,48,yes,Compared frozen sweep cells; no new mention census requested.
+member pages cramer,22,22,yes,Compared frozen sweep cells; no new mention census requested.
+member pages schumer,22,22,yes,Compared frozen sweep cells; no new mention census requested.
+member pages banks,19,19,yes,Compared frozen sweep cells; no new mention census requested.
+member pages blumenthal,3,3,yes,Compared frozen sweep cells; no new mention census requested.
+member pages warner,4,4,yes,Compared frozen sweep cells; no new mention census requested.
+member pages cornyn,9,9,yes,Compared frozen sweep cells; no new mention census requested.
+member pages kennedy,6,6,yes,Compared frozen sweep cells; no new mention census requested.
+member pages thune,13,13,yes,Compared frozen sweep cells; no new mention census requested.
+member pages wyden,5,5,yes,Compared frozen sweep cells; no new mention census requested.
+member pages cotton,5,5,yes,Compared frozen sweep cells; no new mention census requested.
+member pages scott,4,4,yes,Compared frozen sweep cells; no new mention census requested.
+member pages ricketts,5,5,yes,Compared frozen sweep cells; no new mention census requested.
+member pages mast,92,92,yes,Compared frozen sweep cells; no new mention census requested.
+member pages crawford,68,68,yes,Compared frozen sweep cells; no new mention census requested.
+member pages meeks,9,9,yes,Compared frozen sweep cells; no new mention census requested.
+member pages himes,8,8,yes,Compared frozen sweep cells; no new mention census requested.
+member pages huizenga,4,4,yes,Compared frozen sweep cells; no new mention census requested.
+member pages johnson,11,11,yes,Compared frozen sweep cells; no new mention census requested.
+member pages moolenaar,78,78,yes,Compared frozen sweep cells; no new mention census requested.
+member pages jeffries,30,30,yes,Compared frozen sweep cells; no new mention census requested.
+member pages magaziner,4,4,yes,Compared frozen sweep cells; no new mention census requested.
+member pages subramanyam,3,3,yes,Compared frozen sweep cells; no new mention census requested.
+member pages bacon,3,3,yes,Compared frozen sweep cells; no new mention census requested.
+member pages mccaul,5,5,yes,Compared frozen sweep cells; no new mention census requested.
+member pages neal,3,3,yes,Compared frozen sweep cells; no new mention census requested.
+twentieth reading Part A ok / qualification / error,55 / 4 / 1,55 / 4 / 1,yes,
+twentieth count checks agreeing,138 of 139,138 of 139,yes,
+twentieth disposition checks yes,70 of 72,70 of 72,yes,
+historical added-row cohort,224,225,no,MA134–MA358 only; historical count includes both withdrawn rows. See P12.
+interactive acts,356,356,yes,Exact tuple/source-block parity; mutation controls detected changed day and deleted source.
+interactive ties,84,84,yes,Exact tuple/source-block parity; mutation controls detected changed day and deleted source.
+interactive lines,150,150,yes,Exact tuple/source-block parity; mutation controls detected changed day and deleted source.
+interactive pieces,2245,2245,yes,Exact tuple/source-block parity; mutation controls detected changed day and deleted source.
+active historical added-row cohort,224,223,no,MA134–MA358 only; both withdrawals excluded. Historical rows: 225. See P12.
+latest answer new rows,28,28,yes,
+latest answer amended pre-existing rows,six amended,5,basis unclear,MA347 was revised after addition; explain whether it supplies the sixth historical revision. See P11.

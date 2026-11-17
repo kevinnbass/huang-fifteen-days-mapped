@@ -1,0 +1,14 @@
+row_id_or_key,source,what_failed
+C4-anthropic|2026-11-10,private/census_remarks_actor.tsv,"No dated counted-page census line for the selected actor/day; untested, not a negative."
+C4-anthropic|2026-11-12,private/census_remarks_actor.tsv,"No dated counted-page census line for the selected actor/day; untested, not a negative."
+C4-magaziner|2026-11-08,private/census_remarks_actor.tsv,"No dated counted-page census line for the selected actor/day; untested, not a negative."
+C4-openai|2026-11-04,private/census_remarks_actor.tsv,"No dated counted-page census line for the selected actor/day; untested, not a negative."
+C4-yoo|2026-11-12,private/census_remarks_actor.tsv,"No dated counted-page census line for the selected actor/day; untested, not a negative."
+C4-grunewald|2026-11-10,private/census_remarks_actor.tsv,"No dated counted-page census line for the selected actor/day; untested, not a negative."
+C4-nie|2026-11-12,private/census_remarks_actor.tsv,"No dated counted-page census line for the selected actor/day; untested, not a negative."
+C4-ohanlon|2026-11-10,private/census_remarks_actor.tsv,"No dated counted-page census line for the selected actor/day; untested, not a negative."
+C4-wiblin|2026-11-08,private/census_remarks_actor.tsv,"No dated counted-page census line for the selected actor/day; untested, not a negative."
+C5-sampling,public/audit2/REPORT-t.md; prior three C5 chip lists,The required unused twenty-chip fourth sample with the nineteenth reading's upper-ten/lower-ten allocation was not completed. Six complete statements were read as supplemental checks; 2/6 is not the requested sample rate. Do not infer an improvement trend.
+D1-MA345,cnn-1111-live,"Cited passage/context read, but the requested whole-article reading was not completed in this round. No clean whole-article date verdict is asserted."
+D2-primary-follow-through,public/research/nv8_report_day_screen.tsv parts 4–6,"Every table reading was read, but not every primary page in the long part-4 hit lists was independently followed through. Source-backed exceptions are recorded; other table readings are not a certification of their full hit lists."
+A-search-breadth,out/work/A_phrase_hits.json; out/work/recall_hits.json,Fixed-string searches were performed for all 66 rows and additional recall phrases. Typography/line wrapping prevented literal hits for 21 long selected strings. Not every broad alternative-wording candidate was read whole; earlier-date findings are a lower bound.
