@@ -236,6 +236,9 @@ READ1.update({'MA334': 'not the same act: the line of Nov 12 is the company\'s a
 READ2.update({'MA334': 'the day word dates the fall of the company\'s market value ("on Monday", Nov 9, the chip\'s day), not the lobbying, which the disclosures give by quarter', 'MA372': "the day word is that of The Information's report (Tuesday, Nov 3). It stands in the relay beside the report on OpenAI that the same page carries, and OpenAI's chip of that day states it; this chip does not, and an earlier reading here said it did (the twenty-sixth reading found that). The relay is of Nov 4, the chip's day, and gives the lobbying itself no day, as the chip says"})
 READ3.update({'MA416': "the chip's day is that of the reporter's post (the evening of Nov 9, Eastern); the page listed is Semafor's of Nov 10, which the chip names with its day"})
 
+# readings for batch s9r (the third round of acts lanes, Nov 17)
+READ2.update({'MA28': 'the day word dates another member\'s statement ("said Monday", the House Democratic leader\'s), not this senator\'s answers to Semafor, to which the page gives no day; the chip sits on the day of Semafor\'s report, that Monday', 'MA419': 'the day word says when Reuters saw the emails ("late on Monday", Nov 9); the listing cited is of the morning of Nov 10, the chip\'s day, and no earlier saved page lists the report; neither gives the sending or the retraction a day, and the chip says so'})
+
 MONTH = {'oct': 10, 'nov': 11}
 
 
