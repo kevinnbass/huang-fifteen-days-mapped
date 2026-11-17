@@ -1,0 +1,95 @@
+part,finding_id,holds,note
+P02:MA374,P02-A-MA374,yes,MA374 contains the exact second question; no separate-response identity asserted.
+P01:MA375,P01-A-MA375,yes,Both chips preserve unresolved communication identity; neither date is borrowed.
+P01:MA376,P01-A-MA376,yes,Same correction as preceding answer; confirmed in both frozen rows.
+P03:sw-techcrunchcom-04,P03-A-OPENAI-SECURITY,yes,"MT67 preserves the accusation and the complete specified OpenAI answer, undated."
+P04:fortune-1111-resigns,P04-A-ANTHROPIC-AMD,yes,"MT22 explicitly makes this the consulting officer's account, with could."
+P05:sw-hntrbrkcom-01,P05-A-ANTHROPIC-LAMBDA,yes,"MT20 carries Journal via Hunterbrook, FT tenancy and undisclosed revenue-sharing terms."
+P06:sw-hntrbrkcom-01,P06-A-ANTHROPIC-NSCALE,yes,MT20 describes talks to potentially guarantee; no completed guarantee asserted.
+P07:4.NV4-087,P07-B-EXCEPTION-4.NV4-087,yes,MT29 and both carried group labels implemented; The separately noted Stargate question remains open as the answer says.
+P07:4.NV4-091,P07-B-EXCEPTION-4.NV4-091,yes,Both objections are carried separately; no identity of occasion asserted.
+P08:3.MS01,P08-B4-3.MS01,yes,"3.MS01 correctly partial: start only, not affiliate/total/period."
+P09:4.NV4-075,P09-B4-4.NV4-075,yes,4.NV4-075 correctly partial; recurring outlook and reason remain outside.
+P10:4.NV4-077,P10-B4-4.NV4-077,yes,4.NV4-077 correctly partial; amount still absent.
+P11:4.NV4-090,P11-B4-4.NV4-090,yes,"4.NV4-090 correctly partial: opposition carried, duration not."
+P12:4.NV4-095,P12-B4-4.NV4-095,yes,"4.NV4-095 correctly partial: opposition carried, domestic-industry reason not."
+P13:sw-capitalbriefcom-57f178e4,P13-B5-CAPITALBRIEF,yes,Both added Capital Brief lines exist and the sentence contains purchase and rental separately.
+P14:README:742,P14-B6-CATALOGUE-COUNT,yes,"Catalogue says 18 builder groups, matching table."
+P15:README:742,P15-B6-CATALOGUE-OPEN,yes,"Catalogue now distinguishes carried, open partial and open."
+P16:ms_remarks.page_days.tsv,P16-C-ET-DAYS,yes,Both 135 reader-day and 156 Eastern-day counts printed; source of the latter disclosed. No count of those pages was added to articles.
+P17:status:other-session-pages,P17-C-WHOLE-PAGES,yes,"The published status and README say extracted text, not every page whole."
+P18:README:673 / status,P18-C-PENDING-UNIT,yes,965 labelled candidate records; repeats and later carriage admitted; no unsupported pending-act subtraction.
+P20:ms-gap-nova-trade-mirrormedia-orig,P20-C,yes,B.10 records the earlier website-partner removal with report attribution and no business-termination inference.
+P21:ms-gap-china-cnbc-indonesia-e33e31,P21-C,yes,"MA409 carries the specific website-name removal, undated act, on Nov9 report day; corporate registry removal is not substituted."
+P22:ms-gap-china-cnbc-indonesia-e33e31,P22-C,yes,B.11 records the disclosed prospective tenancy agreements and does not say sites built.
+P23:ms-corp-edge-bfcc90,P23-C,yes,"B.12 and 3.MS06 kept separate; CNBC added to each, outside-table source explicit."
+P24:ms-gap-whitehouse-bloomberg-lobby-,P24-C,yes,MA197 includes Bloomberg Law influence-team refusal; retained accompanying continuity answer.
+P25:ms-bills-reuters-nov09-fr-c1ccab,P25-C,yes,MA197 includes Reuters' French refusal and marks automated translation; not an unanswered request.
+P26:ms-gap-whitehouse-bloomberg-lobby-,P26-C,partial,"Three firms are drawn in MA334, but the asserted universal no-firm-name rule conflicts with MT39–MT41 (A-FIRM-RULE)."
+P27:ms-gap-whitehouse-bloomberg-lobby-,P27-C,partial,July31 termination is drawn; same overbroad firm-name explanation as answer27.
+P28:ms-gap-whitehouse-bloomberg-lobby-,P28-C,partial,Bodies and specified subjects added; quantum computing/energy in the same source still omitted (A-MA334).
+P29:ms-gap-erc-herald-meeting-response,P29-C,yes,B.13 is attributed to the relay and distinguishes missing Times sentence and already-drawn narrower agency actions.
+P30:ms-hl-protos-429bc0,P30-C,yes,B.14 preserves separate unproved-identity purchase and later-modification warning.
+P31:ms-deals-whatsnewpaper-lead-3414f8,P31-C,partial,"CNBC sentence is drawn, but the justification misses an earlier in-window account and a December2025 reference; MA417's placement fails the first-account rule (A-MA417)."
+P32:ms-people-cna-taiwan-probe-c88000,P32-C,yes,MA221 includes crime-suspicion/investigation confidentiality answer; Chinese source supports unquoted translation.
+P33:ms-people-cna-taiwan-probe-c88000,P33-C,yes,MA221 includes joint screening and visits when intelligence calls for it; Chinese source supports the clauses.
+P35:ms-gap-knew-gap-page-22-e660b7,P35-C,yes,MA383 contains Semafor's wider no-indication sentence; MA169 retains Quartz's narrower no-target statement.
+P36:ms-law-remote-proposal-sbs-855865,P36-C,yes,"The specifically requested countries, licensing and conditional exemption are added and translation provenance stated; additional reporting duties are a new finding."
+P37:ms-gap-offshoots-zaobao-kang-origi,P37-C,yes,"B.15 is by roles, with appointment and departure dates; no vote inferred."
+P38:ms-gap-booking-newstreet-primexbt-,P38-G-ANNUAL,yes,B.16 records annual-meeting compliance answer through the trading-site summary.
+P39:ms-gap-offshoots-kharon-network-18,P39-G-LETACT,yes,B.17 is explicitly a research-firm inference from July2025 filings and describes rental disclosure limits.
+P40:MA213,P40-E-COMMERCE-FIRST-REPORT,yes,Nov9 readying post is MA416; MA213 retains distinct Nov11 finalizing report. Skepticism/lithography included.
+P41:screen:MA372:day-word,P41-E-MA372-SCREEN,yes,MA372 explanation corrected; MA334 two readings and MA416 later-page reading present. Old fourth-part MA213 entry removed.
+P42:ms-relay-semafor-1112,P42-A-THUNE-SEMAFOR,yes,MA400 gives Semafor probability and no-deal-yet qualification.
+P43:ms-relay-semafor-1112,P43-A-KENNEDY-SEMAFOR,yes,MA401 gives both specified sentences to Semafor.
+P44:ms-relay-semafor-1112,P44-A-WH-GAIN,yes,B.18 registers earlier White House pressure with investment-control outcome and no sole-cause claim.
+P45:README:741,P45-F-CATALOGUE-ADDED-LINES,yes,"Catalogue says61 post-census lines, matching2916 minus2855."
+P46:sw-hntrbrkcom-01,P46-A-ANTHROPIC-BROADCOM,yes,"MT22 includes comparison, TPU use, no amount/date."
+P47:README:research/nv8_rows.tsv,P47-F-CATALOGUE-ROWS,yes,Catalogue says2952 records including3 withdrawals; both reproduce.
+P48:nv8_added_pages_acts.tsv:63,P48-F-NINEPAGE-MA367,yes,Nine-page record63 now gives MA367 solid own-day placement and explains former cell.
+figure,P01-F,yes,"Both figure chip texts preserve unresolved identity, agreeing with rows."
+figure,P08-F,partial,"The specified partial-group corrections are implemented. The headline table labels reproduce, but four additional B4 groups with carriage mean the semantic 692-unworded total still overstates absence."
+figure,P09-F,partial,"The specified partial-group corrections are implemented. The headline table labels reproduce, but four additional B4 groups with carriage mean the semantic 692-unworded total still overstates absence."
+figure,P10-F,partial,"The specified partial-group corrections are implemented. The headline table labels reproduce, but four additional B4 groups with carriage mean the semantic 692-unworded total still overstates absence."
+figure,P11-F,partial,"The specified partial-group corrections are implemented. The headline table labels reproduce, but four additional B4 groups with carriage mean the semantic 692-unworded total still overstates absence."
+figure,P12-F,partial,"The specified partial-group corrections are implemented. The headline table labels reproduce, but four additional B4 groups with carriage mean the semantic 692-unworded total still overstates absence."
+figure,P16-F,yes,Both day counts and attribution to preceding audit now printed; no page-count promotion.
+figure,P17-F,yes,"Extracted-text wording implemented, with HTML-shortfall limitation."
+figure,P18-F,yes,"Candidate-record wording implemented, with duplicate/later-carriage caveats and unpublished disposition-table limit."
+map,P01-H,yes,Site data matches both corrected White House rows.
+map,P02-H,yes,Site data matches MA374 with its second question.
+counts,all public rows,yes,"2952 physical public rows, including3 withdrawals; catalogue agrees."
+counts,semantic open groups carried in part,partial,"The specified partial-group corrections are implemented. The headline table labels reproduce, but four additional B4 groups with carriage mean the semantic 692-unworded total still overstates absence."
+counts,semantic open groups on no chip,partial,"The specified partial-group corrections are implemented. The headline table labels reproduce, but four additional B4 groups with carriage mean the semantic 692-unworded total still overstates absence."
+counts,README catalogue builder acts,yes,18 builder groups confirmed and catalogue corrected.
+counts,README catalogue post-census additions,yes,61 later lines confirmed and catalogue corrected.
+counts,nine-page MA367 disposition dating,yes,"Record63 correction verified, same as48."
+counts,news/opinion pages under Eastern rule,yes,"Both135/156 units printed, same as18."
+G,P07:ms-g17-w4-primexbt-188b26 P07-C-WH-RULE,yes,"Both White House chip corrections implemented, same as2–3."
+G,P09:ms-gap-booking-newstreet-primexbt- P09-C-ANNUAL,yes,B.16 now registered from explicitly outside-table page.
+G,P13:ms-gap-offshoots-kharon-network-18 P13-C-LETACT,yes,"B.17 now registered as inference, without illegality claim."
+G,G G gaps F-owner-request,partial,Pending scope and inability of public files to prove delivery are stated; the claimed private-session delivery itself cannot be independently confirmed here.
+g,g gaps G owner delivery,partial,"Same limitation as70: published pending status confirmed, private delivery unverifiable."
+gaps,C17,yes,The saved-opening limit is recorded in the published disposition and README source-gap remainder; no negative claim is substituted.
+gaps,B5:2026-10-30,yes,Five unfilled day strata carried as the preceding sample's limit; this audit's replacement sample has its own selection record.
+gaps,B5:2026-10-31,yes,"Same five-day sample limitation, stated as a limitation rather than no act."
+gaps,B5:2026-11-01,yes,"Same five-day sample limitation, findable in linked disposition/remainder."
+gaps,B5:2026-11-02,yes,"Same five-day sample limitation, findable in linked disposition/remainder."
+gaps,B5:2026-11-04,yes,"Same five-day sample limitation, findable in linked disposition/remainder."
+gaps,D3:four lower eligible chips,yes,Four unread lower selections and written-summary/recording limits are explicit.
+gaps,E3:earlier paraphrases,yes,"Unfinished differently-worded-earlier-account search explicitly carried, not a negative."
+gaps,F:27 member counts,yes,Unchanged member-count rather than fresh recount is stated.
+gaps,F:lookup source census,yes,Lookup counts not fresh source lookups is stated.
+gaps,C1:31 additional pages,yes,Unpublished per-reader assignment list/zero-return attendance limitation is explicit.
+gaps,C1:complete page-reading claim,yes,Extraction/body coverage limitation and89-page further-reader remainder explicit; independent full take-in not claimed.
+gaps,C01:procedural acts,yes,Procedural-eligibility remainder explicitly unresolved; not asserted absent.
+gaps,C13:live-blog eligibility,yes,Live-blog appointment/refusal and Eastern-day judgments explicitly unresolved.
+gaps,C18:financial history,yes,Financial-history/disclosure identity explicitly unresolved.
+gaps,C3:entity-alias completeness,yes,Keyword/entity-alias scope limit explicit; no non-match absence claim.
+gaps,G:owner delivery,partial,"Private delivery unverifiable, as70; pending decision is stated publicly."
+gaps,G:unread original,yes,Login-barrier source limitation published; not a source-based negative.
+gaps,G:publication stamp,yes,Publication-day inference described as the builder's unproved reading.
+gaps,G:man-ms-gap-law-bis-cloud-opinion-2011-aa9a4d,yes,Incomplete-original source limit explicit; no source conclusion credited.
+gaps,G:man-ms-probes-house-huang-1112-f4dbbb,yes,Short-transcription/no-complete-original limit explicit.
+gaps,G:man-ms-probes-house-teter-1112-04393a,yes,Short-transcription/no-complete-original limit explicit.
+gaps,G:Kharon attribution,yes,Two Kharon eligibility issues left unresolved; B.17 rental now registered as specified.

@@ -275,8 +275,10 @@ def main(target):
           'x': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           'y': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           'z': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
-          'aa': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
-    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i', 'q': 'audit_nv8_s8j', 'r': 'audit_nv8_s8k', 's': 'audit_nv8_s8l', 't': 'audit_nv8_s8m', 'u': 'audit_nv8_s8n', 'v': 'audit_nv8_s8o', 'w': 'audit_nv8_s8p', 'x': 'audit_nv8_s8q', 'y': 'audit_nv8_s8r', 'z': 'audit_nv8_s8s', 'aa': 'audit_nv8_s8t'}
+          'aa': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
+          'ab': ('findings.csv', 'figure_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),        # the twenty-seventh reading was asked for no map or companion file
+          'ac': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i', 'q': 'audit_nv8_s8j', 'r': 'audit_nv8_s8k', 's': 'audit_nv8_s8l', 't': 'audit_nv8_s8m', 'u': 'audit_nv8_s8n', 'v': 'audit_nv8_s8o', 'w': 'audit_nv8_s8p', 'x': 'audit_nv8_s8q', 'y': 'audit_nv8_s8r', 'z': 'audit_nv8_s8s', 'aa': 'audit_nv8_s8t', 'ab': 'audit_nv8_s8u', 'ac': 'audit_nv8_s8v'}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
@@ -363,6 +365,10 @@ def main(target):
     disp26 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8t.csv'
     if disp26.exists():
         put(Tg, 'audit2/DISPOSITIONS-aa.csv', disp26.read_text())
+    for key_, lane_ in (('ab', 'audit_nv8_s8u'), ('ac', 'audit_nv8_s8v')):
+        dispn = R / 'audits' / f'DISPOSITIONS-{lane_}.csv'
+        if dispn.exists():
+            put(Tg, f'audit2/DISPOSITIONS-{key_}.csv', dispn.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')

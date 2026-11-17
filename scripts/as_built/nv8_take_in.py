@@ -21,6 +21,11 @@ LANES = (('c', 'the administration'), ('a', 'Nvidia, Huang and the lawsuits'), (
 CLASSES = ('new act', 'part of a chip', 'row error in a chip', 'refusal: new act', 'refusal: added to a chip', 'carried', 'relay of a response already drawn', 'same act as another group', 'no reply: not drawn',
            'earlier act: to the register', 'not an act', "not the actor's", 'cannot be settled from the saved pages', 'not on the matter: not drawn')
 FIRST_NEW = 379
+# dispositions that an independent reading showed to be wrong or too wide: the columns to the left keep what the take-in decided, the last column gives what stands now (the twenty-seventh reading, Nov 17)
+AFTER = {'a.D040': "now carried by MA392: the twenty-seventh reading found that the Post's report does not name the earlier response as its source, so the record is not shown to be a relay of it; the chip that gives the Post's report carries the statement",
+         'c.D004': "still not drawn, and not a request that went unanswered: the twenty-seventh reading found that the page says only that the White House did not comment on the measures and states no request",
+         'd.D019': "now a part of MA68: the twenty-seventh reading found that the page's list of headlines names the launch of Anthropic's roadshow, so 'not an act' was too categorical; the company's chip of Nov 10 gives the launch since",
+         'd.D042': "now a part of MA99: the twenty-seventh reading found that the lack of a day is a reason to date the senator's renewed request by its report, not to leave it out; her chip of Nov 12 gives it since"}
 PLAIN = {'spec dropped': 'no row written', 'specs merged': 'two of the six sessions amended one chip, and the builder wrote one text', 'spec changed': 'the row was changed'}
 
 
@@ -46,11 +51,12 @@ def main():
                 assert any(x.startswith('no row written') for x in dec.get(g, [])), ('a new act with no row', g); d = 'not on the matter: not drawn'; act = ''; day = ''
             if g == 'b.D048': day = '2026-11-12'        # the chip was not moved (the builder's decision; the column on the right says why)
             assert d in CLASSES, (g, d)
-            rows.append([name, g, r['actor'], r['reader_verdict'], d, act, day, r['own_or_report'] if d != 'not on the matter: not drawn' else '', r['cuts'], ' | '.join(dec.get(g, []))])
+            rows.append([name, g, r['actor'], r['reader_verdict'], d, act, day, r['own_or_report'] if d != 'not on the matter: not drawn' else '', r['cuts'], ' | '.join(dec.get(g, [])), AFTER.get(g, '')])
     assert all(g in seen for g in chip if not g.endswith('.none') and not g.startswith('x.')), [g for g in chip if g not in seen]
+    assert set(AFTER) <= seen, set(AFTER) - seen
     with open(R / 'nv8_take_in_groups.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t', lineterminator='\n')
-        w.writerow(['reading', 'group', 'actor', 'the_grouping_reader_s_verdict', 'the_builder_s_disposition', 'chip_or_other_target', 'day', 'its_own_day_or_its_report_s', 'which_way_the_builder_reads_it', 'what_the_builder_changed_at_assembly']); w.writerows(rows)
+        w.writerow(['reading', 'group', 'actor', 'the_grouping_reader_s_verdict', 'the_builder_s_disposition', 'chip_or_other_target', 'day', 'its_own_day_or_its_report_s', 'which_way_the_builder_reads_it', 'what_the_builder_changed_at_assembly', 'changed_after_an_independent_reading']); w.writerows(rows)
     c = Counter(r[4] for r in rows); extra = [g for g in chip if g.endswith('.none') or g.startswith('x.')]
     print('groups and records', len(rows), '| by lane', dict(Counter(r[0] for r in rows)), '| by disposition', {k: c[k] for k in CLASSES if c[k]}, '| chips amended', len({x for v in amended.values() for x in v}), '| new acts', len(new),
           '| new acts from no group (found on a page by the builder)', len(extra), '| decisions at assembly', len(ns['DECISIONS']))

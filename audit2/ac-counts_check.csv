@@ -1,0 +1,432 @@
+what,figure_says,you_find,agree,note
+all row records,2952,2952,yes,counted afresh from frozen tables
+physical act rows,417,417,yes,counted afresh from frozen tables
+active acts,414,414,yes,counted afresh from frozen tables
+dated active acts,414,414,yes,counted afresh from frozen tables
+withdrawn acts,3,3,yes,counted afresh from frozen tables
+report-dated acts,179,179,yes,counted afresh from frozen tables
+report-dated acts saying may be newer,recount,3,yes,literal substring in drawn_text; distinct from the21 screen caveat classifications
+all active acts saying may be newer,recount,5,yes,literal substring in drawn_text; distinct from the21 screen caveat classifications
+actor ties,67,67,yes,counted afresh from frozen tables
+all network/actor ties,90,90,yes,counted afresh from frozen tables
+member lines,150,150,yes,counted afresh from frozen tables
+listed pieces drawn,2245,2245,yes,counted afresh from frozen tables
+saved pages,1324,1324,yes,counted afresh from frozen tables
+counted articles,1163,1163,yes,counted afresh from frozen tables
+counted pages,recount,1238,yes,counted afresh from frozen tables
+article ids all,recount,1244,yes,counted afresh from frozen tables
+recall groups,790,790,yes,counted afresh from frozen tables
+carried groups,85,85,yes,counted afresh from frozen tables
+open groups,705,705,yes,counted afresh from frozen tables
+partial open groups,13,13,yes,counted afresh from frozen tables
+groups labelled entirely uncarried,692,692,yes,label arithmetic agrees; semantic finding B6-SEMANTIC requires correction
+builder groups,18,18,yes,counted afresh from frozen tables
+builder open groups,16,16,yes,counted afresh from frozen tables
+recall lines,2916,2916,yes,counted afresh from frozen tables
+post-census lines,61,61,yes,counted afresh from frozen tables
+open lines,1102,1102,yes,counted afresh from frozen tables
+open pages,538,538,yes,counted afresh from frozen tables
+open lines outside counted table,9,9,yes,counted afresh from frozen tables
+open lines in partial groups,108,108,yes,counted afresh from frozen tables
+open groups kind statement,table,318,yes,counted afresh from frozen tables
+open groups kind decision,table,113,yes,counted afresh from frozen tables
+open groups kind event,table,205,yes,counted afresh from frozen tables
+open groups kind other,table,56,yes,counted afresh from frozen tables
+open groups kind money,table,13,yes,counted afresh from frozen tables
+open groups first_reported unclear,table,466,yes,counted afresh from frozen tables
+open groups first_reported before,table,186,yes,counted afresh from frozen tables
+open groups first_reported in these days,table,53,yes,counted afresh from frozen tables
+open groups which_way_the_reader_says_it_cuts against Huang or Nvidia,table,283,yes,counted afresh from frozen tables
+open groups which_way_the_reader_says_it_cuts for the administration,table,31,yes,counted afresh from frozen tables
+open groups which_way_the_reader_says_it_cuts for Huang or Nvidia,table,178,yes,counted afresh from frozen tables
+open groups which_way_the_reader_says_it_cuts against the administration,table,32,yes,counted afresh from frozen tables
+open groups which_way_the_reader_says_it_cuts neither,table,181,yes,counted afresh from frozen tables
+screen another saved page gives another day,table,36,yes,counted afresh from frozen tables
+screen a day word near a cited passage in its own source,table,94,yes,counted afresh from frozen tables
+screen its page was changed after the chip's day,table,50,yes,counted afresh from frozen tables
+screen an earlier page holds a cited passage,table,15,yes,counted afresh from frozen tables
+screen a copy of the same article lacks a cited passage,table,6,yes,counted afresh from frozen tables
+screen the day of its page is an update's,table,5,yes,counted afresh from frozen tables
+nine-page reader_verdict carried,table,88,yes,counted afresh from frozen tables
+nine-page reader_verdict CANDIDATE occasion,table,24,yes,counted afresh from frozen tables
+nine-page reader_verdict CANDIDATE part,table,8,yes,counted afresh from frozen tables
+nine-page builder_disposition ,table,71,yes,counted afresh from frozen tables
+nine-page builder_disposition open,table,4,yes,counted afresh from frozen tables
+nine-page builder_disposition a planted control,table,3,yes,counted afresh from frozen tables
+nine-page builder_disposition not drawn,table,11,yes,counted afresh from frozen tables
+nine-page builder_disposition drawn,table,12,yes,counted afresh from frozen tables
+"nine-page builder_disposition the page is of Nov 15 or 16, outside the days, and was not added",table,17,yes,counted afresh from frozen tables
+nine-page builder_disposition not registered,table,2,yes,counted afresh from frozen tables
+lookup: analysts / quoted on the saved pages (a person or firm written two ways counted once),282,282,yes,found unchanged; source lookup not repeated
+lookup: analysts / drawn,16,16,yes,found unchanged; source lookup not repeated
+"lookup: analysts / not drawn: at a bank, not drawn",17,17,yes,found unchanged; source lookup not repeated
+lookup: analysts / not drawn: cannot tell,1,1,yes,found unchanged; source lookup not repeated
+"lookup: analysts / not drawn: name match, not settled",1,1,yes,found unchanged; source lookup not repeated
+lookup: analysts / not drawn: none found,234,234,yes,found unchanged; source lookup not repeated
+lookup: analysts / not drawn: none found for the person,5,5,yes,found unchanged; source lookup not repeated
+lookup: analysts / not drawn: not drawn,8,8,yes,found unchanged; source lookup not repeated
+lookup: bylines / pairs of outlet and name,966,966,yes,found unchanged; source lookup not repeated
+lookup: bylines / different names,888,888,yes,found unchanged; source lookup not repeated
+lookup: bylines / pairs that are an agency or not a person's name,84,84,yes,found unchanged; source lookup not repeated
+lookup: bylines / names that are an agency or not a person's name,75,75,yes,found unchanged; source lookup not repeated
+lookup: bylines / pairs: cannot tell,84,84,yes,found unchanged; source lookup not repeated
+lookup: bylines / pairs: drawn,5,5,yes,found unchanged; source lookup not repeated
+"lookup: bylines / pairs: name match, not settled",4,4,yes,found unchanged; source lookup not repeated
+lookup: bylines / pairs: none found,871,871,yes,found unchanged; source lookup not repeated
+"lookup: bylines / pairs: record of another kind, not drawn",2,2,yes,found unchanged; source lookup not repeated
+lookup: bylines / different names drawn,5,5,yes,found unchanged; source lookup not repeated
+"lookup: banks / named by Quartz on Sep 4, 2026 as lenders to Anthropic",17,17,yes,found unchanged; source lookup not repeated
+"lookup: banks / of those, with an analyst, a note or an executive quoted on the saved pages",11,11,yes,found unchanged; source lookup not repeated
+lookup: investors / quoted and described on the pages as holding or shorting Nvidia shares,2,2,yes,found unchanged; source lookup not repeated
+"lookup: remarks / of drawn actors, on two or more pages",524,524,yes,found unchanged; source lookup not repeated
+"lookup: remarks / carried in other words, by the audit",42,37,no,found unchanged; source lookup not repeated
+lookup: remarks / not his remark,3,3,yes,found unchanged; source lookup not repeated
+lookup: remarks / not of these days,14,13,no,found unchanged; source lookup not repeated
+lookup: remarks / not printed,3,1,no,found unchanged; source lookup not repeated
+lookup: remarks / partly on a chip,15,12,no,found unchanged; source lookup not repeated
+lookup: remarks / partly on chip,40,20,no,found unchanged; source lookup not repeated
+lookup: remarks / printed on a chip,243,297,no,found unchanged; source lookup not repeated
+"lookup: remarks / same statement as a chip, not printed",164,141,no,found unchanged; source lookup not repeated
+member articles: Warren,72,72,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Coons,49,49,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Cramer,22,22,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Schumer,22,22,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Banks,19,19,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Cornyn,9,9,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Kennedy,7,7,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Thune,13,13,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Mast,93,93,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Crawford,68,68,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Meeks,9,9,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Himes,8,8,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Huizenga,4,4,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Moolenaar,78,78,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Jeffries,30,30,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Magaziner,4,4,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Subramanyam,3,3,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Bacon,3,3,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Johnson,11,11,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Blumenthal,3,3,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Wyden,6,6,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Ricketts,5,5,yes,"found unchanged, whole row; no fresh source article census"
+member articles: McCaul,5,5,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Warner,4,4,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Cotton,6,6,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Scott,4,4,yes,"found unchanged, whole row; no fresh source article census"
+member articles: Neal,4,4,yes,"found unchanged, whole row; no fresh source article census"
+gauge table records: nv8_actor_days.tsv,20,19,changed,"fresh table recount; compared with preceding copy, not a semantic completeness test"
+gauge actor-day unique actors,recount,16,yes,counted afresh from frozen tables
+gauge table records: nv8_remarks_no_chip.tsv,10,8,changed,"fresh table recount; compared with preceding copy, not a semantic completeness test"
+gauge table records: nv8_single_article_remarks.tsv,313,313,yes,"fresh table recount; compared with preceding copy, not a semantic completeness test"
+gauge table records: nv8_refusals.tsv,104,104,changed,"fresh table recount; compared with preceding copy, not a semantic completeness test"
+refusal table: a refusal drawn,table,34,yes,counted afresh from frozen tables
+refusal table: a line outside the cited articles,table,70,yes,counted afresh from frozen tables
+active actor-day chips,recount,235,yes,counted afresh from frozen tables
+dashed actor-day chips,recount,59,yes,counted afresh from frozen tables
+report-day screen all listings,206,206,yes,counted afresh from frozen tables
+screen listings beginning may be newer,21,21,yes,"screen classification, not literal chip-text phrase count"
+open group line total including two non-candidates,1104,1104,yes,counted afresh from frozen tables
+groups wholly unworded: semantic correction,692,at most 688,no,four further B4 groups have proved partial carriage; disposition correction precedes regeneration
+groups carried in part: semantic correction,13,at least 17,no,four further B4 groups; leave overall open705 unchanged
+lines in partial groups: semantic correction,108,at least 128,no,"existing108 plus6.NV6-028(3),6.NV6-048(1),B.02(9),B.03(7), all open lines; lower bound, not exhaustive"
+population present now,3877,3877,yes,counted afresh from frozen tables
+population retained union,5101,5101,yes,counted afresh from frozen tables
+eligible paraphrase lines,recount,6440,yes,counted afresh from frozen tables
+population positive control without MA56,must increase,3900,yes,3877 ->3900 proves matching path can affect the population
+population cell L00174,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L00176,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L00187,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L00190,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L00218,yes,,changed,"changed row match: MA199; literal algorithm, not semantic completeness"
+population cell L00301,yes,,changed,"changed row match: MA306; literal algorithm, not semantic completeness"
+population cell L00314,yes,,changed,"changed row match: MA393; literal algorithm, not semantic completeness"
+population cell L00342,yes,,changed,"changed row match: MA307; literal algorithm, not semantic completeness"
+population cell L00348,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L00354,yes,,changed,"changed row match: MA407,MA417; literal algorithm, not semantic completeness"
+population cell L00413,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L00459,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L00525,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L00568,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L00609,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L00620,yes,,changed,"changed row match: MA54; literal algorithm, not semantic completeness"
+population cell L00626,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L00658,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L00665,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L00924,yes,,changed,"changed row match: MA199,MA391; literal algorithm, not semantic completeness"
+population cell L01050,yes,,changed,"changed row match: MA157,MA407; literal algorithm, not semantic completeness"
+population cell L01070,yes,,changed,"changed row match: MA72; literal algorithm, not semantic completeness"
+population cell L01082,yes,,changed,"changed row match: MA306; literal algorithm, not semantic completeness"
+population cell L01106,yes,,changed,"changed row match: MA306; literal algorithm, not semantic completeness"
+population cell L01151,yes,,changed,"changed row match: MA27; literal algorithm, not semantic completeness"
+population cell L01217,yes,,changed,"changed row match: MA334; literal algorithm, not semantic completeness"
+population cell L01274,yes,,changed,"changed row match: MA85; literal algorithm, not semantic completeness"
+population cell L01397,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L01409,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L01428,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L01447,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L01448,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L01472,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L01526,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L01615,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L01627,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L01634,yes,,changed,"changed row match: MA393; literal algorithm, not semantic completeness"
+population cell L01641,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L01644,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L01668,yes,,changed,"changed row match: MA82; literal algorithm, not semantic completeness"
+population cell L01672,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L01676,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L01730,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L01731,yes,,changed,"changed row match: MA82; literal algorithm, not semantic completeness"
+population cell L01738,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L01760,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L01767,yes,,changed,"changed row match: MA306,MA96; literal algorithm, not semantic completeness"
+population cell L01929,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L01935,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L01938,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L01959,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L02022,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L02032,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L02042,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L02077,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L02150,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L02352,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L02361,yes,,changed,"changed row match: MA407; literal algorithm, not semantic completeness"
+population cell L02382,yes,,changed,"changed row match: MA253; literal algorithm, not semantic completeness"
+population cell L02433,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L02462,yes,,changed,"changed row match: MA393; literal algorithm, not semantic completeness"
+population cell L02472,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L02478,yes,,changed,"changed row match: MA85; literal algorithm, not semantic completeness"
+population cell L02542,yes,,changed,"changed row match: MA31; literal algorithm, not semantic completeness"
+population cell L02543,yes,,changed,"changed row match: MA152; literal algorithm, not semantic completeness"
+population cell L02580,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L02918,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L02987,yes,,changed,"changed row match: MA72; literal algorithm, not semantic completeness"
+population cell L03041,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L03132,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L03142,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L03219,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L03251,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L03256,yes,,changed,"changed row match: MA407; literal algorithm, not semantic completeness"
+population cell L03263,yes,,changed,"changed row match: MA73; literal algorithm, not semantic completeness"
+population cell L03267,yes,,changed,"changed row match: MA407; literal algorithm, not semantic completeness"
+population cell L03290,yes,,changed,"changed row match: MA82; literal algorithm, not semantic completeness"
+population cell L03330,yes,,changed,"changed row match: MA56; literal algorithm, not semantic completeness"
+population cell L03439,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L03441,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L03443,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L03465,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L03570,yes,,changed,"changed row match: MA384; literal algorithm, not semantic completeness"
+population cell L03682,yes,,changed,"changed row match: MA83; literal algorithm, not semantic completeness"
+population cell L03713,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L03722,yes,,changed,"changed row match: MA391; literal algorithm, not semantic completeness"
+population cell L03728,yes,,changed,"changed row match: MA22; literal algorithm, not semantic completeness"
+population cell L03762,yes,,changed,"changed row match: MA22; literal algorithm, not semantic completeness"
+population cell L03921,yes,,changed,"changed row match: MA60; literal algorithm, not semantic completeness"
+population cell L03942,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L03962,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L04029,yes,,changed,"changed row match: MA54; literal algorithm, not semantic completeness"
+population cell L04168,yes,,changed,"changed row match: MA83; literal algorithm, not semantic completeness"
+population cell L04187,yes,,changed,"changed row match: MA83; literal algorithm, not semantic completeness"
+population cell L04285,yes,,changed,"changed row match: MA73; literal algorithm, not semantic completeness"
+population cell L04372,yes,,changed,"changed row match: MA73; literal algorithm, not semantic completeness"
+population cell L04425,yes,,changed,"changed row match: MA73; literal algorithm, not semantic completeness"
+population cell L04455,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L04595,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L04640,yes,,changed,"changed row match: MA115; literal algorithm, not semantic completeness"
+population cell L04715,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L04729,yes,,changed,"changed row match: MA393; literal algorithm, not semantic completeness"
+population cell L04770,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L04886,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L04925,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L04994,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L05041,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L05058,yes,,changed,"changed row match: MA60; literal algorithm, not semantic completeness"
+population cell L05063,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L05077,yes,,changed,"changed row match: MA384; literal algorithm, not semantic completeness"
+population cell L05080,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L05081,yes,,changed,"changed row match: MA384; literal algorithm, not semantic completeness"
+population cell L05124,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L05189,yes,,changed,"changed row match: MA271; literal algorithm, not semantic completeness"
+population cell L05348,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L05362,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L05383,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L05399,yes,,changed,"changed row match: MA179,MA388; literal algorithm, not semantic completeness"
+population cell L05405,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L05469,yes,,changed,"changed row match: MA82; literal algorithm, not semantic completeness"
+population cell L05520,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L05572,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L05628,yes,,changed,"changed row match: MA393; literal algorithm, not semantic completeness"
+population cell L05641,yes,,changed,"changed row match: MA56; literal algorithm, not semantic completeness"
+population cell L05649,yes,,changed,"changed row match: MA108; literal algorithm, not semantic completeness"
+population cell L05651,yes,,changed,"changed row match: MA387; literal algorithm, not semantic completeness"
+population cell L05684,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L05795,yes,,changed,"changed row match: MA108; literal algorithm, not semantic completeness"
+population cell L05797,yes,,changed,"changed row match: MA387; literal algorithm, not semantic completeness"
+population cell L05868,yes,,changed,"changed row match: MA168,MA384; literal algorithm, not semantic completeness"
+population cell L05899,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L05954,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L05963,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L06041,yes,,changed,"changed row match: MA82; literal algorithm, not semantic completeness"
+population cell L06087,yes,,changed,"changed row match: MA56; literal algorithm, not semantic completeness"
+population cell L06178,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L06297,yes,,changed,"changed row match: MA168,MA384; literal algorithm, not semantic completeness"
+population cell L06322,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L06342,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L06367,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L06411,yes,,changed,"changed row match: MA56; literal algorithm, not semantic completeness"
+population cell L06413,yes,,changed,"changed row match: MA82; literal algorithm, not semantic completeness"
+population cell L06429,yes,,changed,"changed row match: MA334; literal algorithm, not semantic completeness"
+population cell L06481,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L06585,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L06608,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L06617,yes,,changed,"changed row match: MA393; literal algorithm, not semantic completeness"
+population cell L06625,yes,,changed,"changed row match: MA197; literal algorithm, not semantic completeness"
+population cell L06646,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L06671,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L06685,yes,,changed,"changed row match: MA82; literal algorithm, not semantic completeness"
+population cell L06693,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L06697,yes,,changed,"changed row match: MA157,MA407; literal algorithm, not semantic completeness"
+population cell L06715,yes,,changed,"changed row match: MA11; literal algorithm, not semantic completeness"
+population cell L06745,yes,,changed,"changed row match: MA20; literal algorithm, not semantic completeness"
+population cell L06793,yes,,changed,"changed row match: MA82; literal algorithm, not semantic completeness"
+population cell L06802,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L06859,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L06884,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L06906,yes,,changed,"changed row match: MA393; literal algorithm, not semantic completeness"
+population cell L06908,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L06923,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L06925,yes,,changed,"changed row match: MA393; literal algorithm, not semantic completeness"
+population cell L06933,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L06935,yes,,changed,"changed row match: MA393; literal algorithm, not semantic completeness"
+population cell L06960,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L06963,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L06982,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L07013,yes,,changed,"changed row match: MA157,MA407; literal algorithm, not semantic completeness"
+population cell L07016,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L07082,yes,,changed,"changed row match: MA54; literal algorithm, not semantic completeness"
+population cell L07083,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L07098,yes,,changed,"changed row match: MA96; literal algorithm, not semantic completeness"
+population cell L07112,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L07113,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L07117,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L07147,yes,,changed,"changed row match: MA197; literal algorithm, not semantic completeness"
+population cell L07150,yes,,changed,"changed row match: MA72; literal algorithm, not semantic completeness"
+population cell L07182,yes,,changed,"changed row match: MA56; literal algorithm, not semantic completeness"
+population cell L07262,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L07293,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L07329,yes,,changed,"changed row match: MA317; literal algorithm, not semantic completeness"
+population cell L07403,yes,,changed,"changed row match: MA27; literal algorithm, not semantic completeness"
+population cell L07410,,yes,changed,newly unmatched after MA54 changed; old MA54 carried it under lexical rule; not a semantic absence verdict
+population cell L07419,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L07523,yes,,changed,"changed row match: MA383; literal algorithm, not semantic completeness"
+population cell L07549,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L07553,yes,,changed,"changed row match: MA85; literal algorithm, not semantic completeness"
+population cell L07620,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L07640,yes,,changed,"changed row match: MA384; literal algorithm, not semantic completeness"
+population cell L07652,yes,,changed,"changed row match: MA384; literal algorithm, not semantic completeness"
+population cell L07672,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L07687,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L07691,yes,,changed,"changed row match: MA82; literal algorithm, not semantic completeness"
+population cell L07773,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L07777,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L07789,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L07793,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L07837,yes,,changed,"changed row match: MA105,MA179,MA390,MA56; literal algorithm, not semantic completeness"
+population cell L07905,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L07906,yes,,changed,"changed row match: MA54; literal algorithm, not semantic completeness"
+population cell L07919,yes,,changed,"changed row match: MA72; literal algorithm, not semantic completeness"
+population cell L07940,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L07941,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L07949,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L07950,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L07966,yes,,changed,"changed row match: MA384; literal algorithm, not semantic completeness"
+population cell L07988,yes,,changed,"changed row match: MA83; literal algorithm, not semantic completeness"
+population cell L08054,yes,,changed,"changed row match: MA383; literal algorithm, not semantic completeness"
+population cell L08071,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L08120,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L08248,yes,,changed,"changed row match: MA199,MA391; literal algorithm, not semantic completeness"
+population cell L08313,yes,,changed,"changed row match: MA96; literal algorithm, not semantic completeness"
+population cell L08392,yes,,changed,"changed row match: MA85; literal algorithm, not semantic completeness"
+population cell L08439,yes,,changed,"changed row match: MA72; literal algorithm, not semantic completeness"
+population cell L08442,yes,,changed,"changed row match: MA56; literal algorithm, not semantic completeness"
+population cell L08452,yes,,changed,"changed row match: MA83; literal algorithm, not semantic completeness"
+population cell L08508,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L08524,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L08587,yes,,changed,"changed row match: MA80; literal algorithm, not semantic completeness"
+population cell L08588,yes,,changed,"changed row match: MA197; literal algorithm, not semantic completeness"
+population cell L08593,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L08796,yes,,changed,"changed row match: MA56; literal algorithm, not semantic completeness"
+population cell L08886,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L08890,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L08891,yes,,changed,"changed row match: MA85; literal algorithm, not semantic completeness"
+population cell L09121,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L09127,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L09133,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L09144,yes,,changed,"changed row match: MA384; literal algorithm, not semantic completeness"
+population cell L09442,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L09443,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L09472,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L09515,yes,,changed,"changed row match: MA27; literal algorithm, not semantic completeness"
+population cell L09517,yes,,changed,"changed row match: MA20; literal algorithm, not semantic completeness"
+population cell L09536,yes,,changed,"changed row match: MA72; literal algorithm, not semantic completeness"
+population cell L09542,yes,,changed,"changed row match: MA56; literal algorithm, not semantic completeness"
+population cell L09570,yes,,changed,"changed row match: MA85; literal algorithm, not semantic completeness"
+population cell L09586,yes,,changed,"changed row match: MA83; literal algorithm, not semantic completeness"
+population cell L09597,yes,,changed,"changed row match: MA157,MA407; literal algorithm, not semantic completeness"
+population cell L09631,yes,,changed,"changed row match: MA225; literal algorithm, not semantic completeness"
+population cell L09636,yes,,changed,"changed row match: MA27; literal algorithm, not semantic completeness"
+population cell L09637,yes,,changed,"changed row match: MA27,MA307; literal algorithm, not semantic completeness"
+population cell L09647,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L09661,yes,,changed,"changed row match: MA20; literal algorithm, not semantic completeness"
+population cell L09662,yes,,changed,"changed row match: MA27; literal algorithm, not semantic completeness"
+population cell L09727,yes,,changed,"changed row match: MA384; literal algorithm, not semantic completeness"
+population cell L09760,yes,,changed,"changed row match: MA71; literal algorithm, not semantic completeness"
+population cell L09809,yes,,changed,"changed row match: MA179,MA388,MA56; literal algorithm, not semantic completeness"
+population cell L09940,yes,,changed,"changed row match: MA271; literal algorithm, not semantic completeness"
+population cell L10083,yes,,changed,"changed row match: MA73; literal algorithm, not semantic completeness"
+population cell L10124,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L10136,yes,,changed,"changed row match: MA168; literal algorithm, not semantic completeness"
+population cell L10155,yes,,changed,"changed row match: MA394,MA58; literal algorithm, not semantic completeness"
+population cell L10165,yes,,changed,"changed row match: MA391; literal algorithm, not semantic completeness"
+population cell L10261,yes,,changed,"changed row match: MA175,MA54; literal algorithm, not semantic completeness"
+population cell L10332,yes,,changed,"changed row match: MA115; literal algorithm, not semantic completeness"
+population cell L10353,yes,,changed,"changed row match: MA168; literal algorithm, not semantic completeness"
+population cell L10453,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L10474,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L10629,yes,,changed,"changed row match: MA225; literal algorithm, not semantic completeness"
+population cell L10742,yes,,changed,"changed row match: MA387; literal algorithm, not semantic completeness"
+population cell L10873,yes,,changed,"changed row match: MA80; literal algorithm, not semantic completeness"
+population cell L10874,yes,,changed,"changed row match: MA387; literal algorithm, not semantic completeness"
+population cell L10911,yes,,changed,"changed row match: MA387; literal algorithm, not semantic completeness"
+population cell L10982,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L11138,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L11149,yes,,changed,"changed row match: MA388; literal algorithm, not semantic completeness"
+population cell L11156,yes,,changed,"changed row match: MA179,MA56; literal algorithm, not semantic completeness"
+population cell L11169,yes,,changed,"changed row match: MA391; literal algorithm, not semantic completeness"
+population cell L11181,yes,,changed,"changed row match: MA54; literal algorithm, not semantic completeness"
+population cell L11208,yes,,changed,"changed row match: MA115; literal algorithm, not semantic completeness"
+population cell L11224,yes,,changed,"changed row match: MA387; literal algorithm, not semantic completeness"
+population cell L11355,yes,,changed,"changed row match: MA157; literal algorithm, not semantic completeness"
+population cell L11409,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L11410,yes,,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L11414,yes,,changed,"changed row match: MA23; literal algorithm, not semantic completeness"
+population cell L11530,yes,,changed,"changed row match: MA179; literal algorithm, not semantic completeness"
+population cell L11555,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L11602,yes,,changed,"changed row match: MA106; literal algorithm, not semantic completeness"
+population cell L11673,yes,,changed,"changed row match: MA58; literal algorithm, not semantic completeness"
+population cell L11678,yes,,changed,"changed row match: MA175,MA54; literal algorithm, not semantic completeness"
+population cell L11984,yes,,changed,"changed row match: MA96; literal algorithm, not semantic completeness"
+population cell L11985,yes,,changed,"changed row match: MA96; literal algorithm, not semantic completeness"
+population cell L12080,yes,,changed,"changed row match: MA108; literal algorithm, not semantic completeness"
+population cell L12111,yes,,changed,"changed row match: MA306; literal algorithm, not semantic completeness"
+population cell L12137,yes,,changed,"changed row match: MA225; literal algorithm, not semantic completeness"
+population cell L12156,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L12163,yes,,changed,"changed row match: MA102; literal algorithm, not semantic completeness"
+population cell L12175,yes,absent,changed,"changed row match: MA175; literal algorithm, not semantic completeness"
+population cell L12204,yes,absent,changed,"changed row match: MA108; literal algorithm, not semantic completeness"
+population cell L12206,yes,absent,changed,"changed row match: MA199; literal algorithm, not semantic completeness"
+population cell L12207,yes,absent,changed,"changed row match: MA72; literal algorithm, not semantic completeness"
+population cell L12231,yes,absent,changed,"changed row match: MA387; literal algorithm, not semantic completeness"
+population cell L12242,yes,absent,changed,"changed row match: MA31; literal algorithm, not semantic completeness"
+population cell L12243,yes,absent,changed,"changed row match: MA152; literal algorithm, not semantic completeness"
+nonwithdrawn public TSV/JSON reconciled records,2949,2949,yes,all primitive fields and serialized source/quote lists; withdrawn public anonymity differs intentionally

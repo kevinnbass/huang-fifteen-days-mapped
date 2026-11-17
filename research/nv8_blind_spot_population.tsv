@@ -2644,14 +2644,14 @@ L06006	trump	sw-msnow-01	A0604	yes	yes	yes	para_nv8_d
 L06008	trump	sw-msnow-01	A0604	yes	yes	yes	para_nv8_d	
 L06009	meeks	sw-msnow-01	A0604	yes	yes	yes	para_nv8_h	
 L06010	nvidia	sw-msnow-01	A0604	yes	yes	yes	para_nv8_a	
-L06013	commerce	sw-msnow-01	A0604	yes	yes	yes	para_nv8_g	
+L06013	commerce	sw-msnow-01	A0604	yes	yes		para_nv8_g	
 L06014	china	sw-msnow-01	A0604	yes	yes	yes	para_nv8_e	
 L06015	trump	sw-msnow-01	A0604	yes	yes	yes	para_nv8_d	
 L06017	board	sw-msnow-01	A0604	yes	yes	yes	para_nv8_b	
 L06021	china	sw-mtcokr-01	A0605	yes	yes	yes	para_nv8_e	
 L06022	nvidia	sw-mtcokr-01	A0605	yes	yes	yes	para_nv8_a	
 L06023	nvidia	sw-mtcokr-01	A0605	yes	yes	yes	para_nv8_a	
-L06024	nvidia	sw-mtcokr-01	A0605	yes	yes	yes	para_nv8_a	
+L06024	nvidia	sw-mtcokr-01	A0605	yes	yes		para_nv8_a	
 L06025	nvidia	sw-mtcokr-01	A0605	yes	yes	yes	para_nv8_a	
 L06028	huang	sw-mtcokr-01	A0605	yes	yes	yes	para_nv8_c	
 L06029	trump	sw-nairametricscom-01	A0606	yes	yes	yes	para_nv8_d	

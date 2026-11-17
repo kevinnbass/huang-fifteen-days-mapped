@@ -1,0 +1,24 @@
+finding_id,grade,element_text,problem
+H-ACTS,ok,414 active acts,Every actor/day/wording/report-day flag and every act source-passage set equals its row. Public TSV fields and serialized source/quote lists were separately reconciled against the JSON for all2949 nonwithdrawn records.
+H-TIES,ok,90 actor/network ties,Every endpoint and wording equals a tie row. Repository-table keys are not presented as article quotations.
+H-MEMBERS,ok,150 member lines,Every member/side/wording equals its table row.
+H-PIECES,ok,2245 listed pieces,"Every day/domain/headline/URL equals a drawn coverage row, preserving multiplicity."
+H-WITHDRAWN,ok,MA137;MA305;MA333,None appears as an act chip. Inserting a withdrawn act fails the equality check.
+H-CONTROLS,ok,Six deliberately corrupted data controls,"Wrong day, words, edge, source passage, missing listed piece and inserted withdrawal each fail the validator. Executable page script is byte-equal to the preceding copy."
+H-MA213,ok,MA213,Row fields opened: 2026-11-11; report-day flag=True;12 source passages; words agree.
+H-MA334,ok,MA334,Row fields opened: 2026-11-09; report-day flag=True;8 source passages; words agree.
+H-MA374,ok,MA374,Row fields opened: 2026-11-06; report-day flag=True;5 source passages; words agree.
+H-MA375,ok,MA375,Row fields opened: 2026-11-06; report-day flag=True;4 source passages; words agree.
+H-MA376,ok,MA376,Row fields opened: 2026-11-09; report-day flag=True;7 source passages; words agree.
+H-MA416,ok,MA416,Row fields opened: 2026-11-09; report-day flag=True;5 source passages; words agree.
+H-MA417,ok,MA417,Row fields opened: 2026-11-11; report-day flag=True;2 source passages; words agree.
+H-MT20,ok,MT20,Row fields opened: undated tie; report-day flag=None;9 source passages; words agree.
+H-MT22,ok,MT22,Row fields opened: undated tie; report-day flag=None;5 source passages; words agree.
+H-MT29,ok,MT29,Row fields opened: undated tie; report-day flag=None;11 source passages; words agree.
+H-MT67,ok,MT67,Row fields opened: undated tie; report-day flag=None;4 source passages; words agree.
+A-MA213,qualification,MA213,"[missing part] Concrete-act test: SBS also says recipients and intended uses must be notified and monitored, and exempt U.S.-operated centers must report local customers and computing scale. Those proposed compliance duties are absent. The present licensing summary does not misstate the source, so this is a part, not a row error. The site reproduces the released row/text; no separate transformation defect."
+A-MA334,qualification,MA334,[missing part] Concrete-act test: Bloomberg Law also says the company disclosed lobbying on quantum computing and energy in the third quarter; these subjects remain absent. The site reproduces the released row/text; no separate transformation defect.
+A-MA417,qualification,MA417,[row error] The first-window-account rule is not met by placement on Nov11: a counted Nov10 page already carries the website label. The explicit three-center description is also documented in a saved December2025 relay. CNBC's now is not evidence that a new edit was performed during this fortnight; no repeated-edit identity is assumed. The site reproduces the released row/text; no separate transformation defect.
+A-MT20,qualification,MT20,"[missing part] Concrete-act test: CNBC live coverage (sw-cnbccom-09) says Nvidia agreed to purchase another $10 billion of Anthropic Class N stock immediately after the IPO, in an unregistered private placement. MT20 gives only the seven-company $26 billion aggregate. The specific Nvidia commitment is absent. The site reproduces the released row/text; no separate transformation defect."
+A-HUNTERBROOK-STAMP,qualification,sw-hntrbrkcom-01,[table or text] The publication-day conflict is unacknowledged in the table and in three tie lines dated Hunterbrook Nov 10. This does not prove which stamp is right; the evidence does not support silently choosing one as settled. The site reproduces the released row/text; no separate transformation defect.
+B6-SEMANTIC,qualification,nv8_recall_groups.tsv,"[table or text] The arithmetic reproduces, but 692 on no chip is semantically too high. With the four proved B4 corrections there are at least 17 groups worded whole or in part and at most 688 wholly unworded open groups. The site reproduces the released row/text; no separate transformation defect."

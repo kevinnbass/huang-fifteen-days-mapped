@@ -1,0 +1,84 @@
+what,figure_says,you_find,agree,note
+all take-in dispositions,229,229,yes,
+disposition: new act,35,35,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: refusal: new act,2,2,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: part of a chip,65,65,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: row error in a chip,2,2,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: refusal: added to a chip,2,2,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: carried,45,45,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: relay of a response already drawn,4,4,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: same act as another group,9,9,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: no reply: not drawn,43,43,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: earlier act: to the register,9,9,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: not an act,3,3,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: not the actor's,1,1,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: not on the matter: not drawn,1,1,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+disposition: cannot be settled from the saved pages,8,8,yes,Reproduces the label count; substantive acceptance is in dispositions_check.csv.
+new act rows,37,37,yes,
+amended chips in this iteration,60,60,yes,"The delta has 61 changed rows, including MA334 assigned to the later release. MA213 is read as now published."
+new tie row,1,1,yes,
+delta rows including the misplaced MA334,99,99,yes,
+new acts by actor: whitehouse,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: commerce,8,8,yes,Direct grouping of the new row ids.
+new acts by actor: justice,2,2,yes,Direct grouping of the new row ids.
+new acts by actor: trump,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: nvidia,5,5,yes,Direct grouping of the new row ids.
+new acts by actor: suit,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: huang,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: ft,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: grunewald,2,2,yes,Direct grouping of the new row ids.
+new acts by actor: mcguire,2,2,yes,Direct grouping of the new row ids.
+new acts by actor: thune,2,2,yes,Direct grouping of the new row ids.
+new acts by actor: kennedy,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: moolenaar,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: blumenthal,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: cramer,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: mast,2,2,yes,Direct grouping of the new row ids.
+new acts by actor: megaspeed,3,3,yes,Direct grouping of the new row ids.
+new acts by actor: anthropic,1,1,yes,Direct grouping of the new row ids.
+new acts by actor: johnson,1,1,yes,Direct grouping of the new row ids.
+"act records, including withdrawn",417,417,yes,
+withdrawn act records,3,3,yes,
+active acts,414,414,yes,
+active dated acts,414,414,yes,
+active acts dated by report,179,179,yes,
+at take-in release: active acts,412,412,yes,
+at take-in release: report-day acts,177,177,yes,
+report-day screen: another saved page gives another day,36,36,yes,
+report-day screen: a day word near a cited passage in its own source,94,94,yes,
+report-day screen: its page was changed after the chip's day,50,50,yes,
+report-day screen: an earlier page holds a cited passage,15,15,yes,
+report-day screen: a copy of the same article lacks a cited passage,6,6,yes,
+report-day screen: the day of its page is an update's,5,5,yes,
+updated-page listings marked may be newer,21,21,yes,"Counts the screen’s explicit classification, not a literal substring in the chips. P01 removes one of these classifications."
+unanswered-request prose claim,43,43 no-reply labels; at least one does not state a request,partial,"P06: exact count of explicitly unanswered requests has not been established. Reclassifying c.D004 alone would leave 42 in that disposition, subject to the unfinished checks."
+refusal gauge: acts,34,34,yes,"Recounted with the published literal matcher and frozen census actor annotations; all 12,320 annotation rows agree with census text/page fields. Actor matching and relay classifications were not re-audited exhaustively."
+refusal gauge: actors,12,12,yes,"Recounted with the published literal matcher and frozen census actor annotations; all 12,320 annotation rows agree with census text/page fields. Actor matching and relay classifications were not re-audited exhaustively."
+refusal gauge: lines,130,130,yes,"Recounted with the published literal matcher and frozen census actor annotations; all 12,320 annotation rows agree with census text/page fields. Actor matching and relay classifications were not re-audited exhaustively."
+refusal gauge: inside,60,60,yes,"Recounted with the published literal matcher and frozen census actor annotations; all 12,320 annotation rows agree with census text/page fields. Actor matching and relay classifications were not re-audited exhaustively."
+refusal gauge: outside,70,70,yes,"Recounted with the published literal matcher and frozen census actor annotations; all 12,320 annotation rows agree with census text/page fields. Actor matching and relay classifications were not re-audited exhaustively."
+refusal gauge: pairs,60,60,yes,"Recounted with the published literal matcher and frozen census actor annotations; all 12,320 annotation rows agree with census text/page fields. Actor matching and relay classifications were not re-audited exhaustively."
+outside refusal lines classified relay,60,60,yes,
+outside refusal lines classified not a refusal,10,10,yes,
+MA380 counted as refusal,0,0,yes,Negative control: the same matcher includes MA381’s explicit refusal.
+current rows: tie between two actors,67,67,yes,Separate table counts; no aggregation of money or unlike tie kinds.
+current rows: tie of a member of Congress,150,150,yes,Separate table counts; no aggregation of money or unlike tie kinds.
+current rows: tie in the network at left,23,23,yes,Separate table counts; no aggregation of money or unlike tie kinds.
+take-in-release ties between actors,66,66,yes,The later answer adds MT67.
+undrawn-direction groups: neither,49,49,yes,"55 groups; excludes the nine earlier-act dispositions and the one outside the matter. These are the builder’s labels, not 55 new independent direction judgments."
+undrawn-direction groups: against Huang or Nvidia,3,3,yes,"55 groups; excludes the nine earlier-act dispositions and the one outside the matter. These are the builder’s labels, not 55 new independent direction judgments."
+undrawn-direction groups: for Huang or Nvidia,2,2,yes,"55 groups; excludes the nine earlier-act dispositions and the one outside the matter. These are the builder’s labels, not 55 new independent direction judgments."
+undrawn-direction groups: against the administration,1,1,yes,"55 groups; excludes the nine earlier-act dispositions and the one outside the matter. These are the builder’s labels, not 55 new independent direction judgments."
+triaged groups,193,193,yes,
+extra company groups,4,4,yes,
+later-reader dispositions,32,32,yes,
+dated-header page list,222,222,yes,
+candidate records excluding planted controls,965,965,yes,"820 from the dated-header pool, plus 145 from the separate undated-page reading. The 965 must not be assigned to the 222 pages alone."
+candidate records placed in these days,344,344,yes,
+candidate records placed earlier,621,621,yes,
+distinct new act targets from groups,36,36,yes,37 disposition records map to 36 chips: j.J07 and j.J08 share MA415. MA410 was added separately. The first record for MA415 is its principal report; the second is the answer printed beside it.
+"new-act directions, principal group per chip: against the administration",8,8,yes,Reproduces the builder’s tally; the response associated with MA415 is not counted as another new chip.
+"new-act directions, principal group per chip: for the administration",7,7,yes,Reproduces the builder’s tally; the response associated with MA415 is not counted as another new chip.
+"new-act directions, principal group per chip: against Huang or Nvidia",7,7,yes,Reproduces the builder’s tally; the response associated with MA415 is not counted as another new chip.
+"new-act directions, principal group per chip: for Huang or Nvidia",6,6,yes,Reproduces the builder’s tally; the response associated with MA415 is not counted as another new chip.
+"new-act directions, principal group per chip: neither",8,8,yes,Reproduces the builder’s tally; the response associated with MA415 is not counted as another new chip.
