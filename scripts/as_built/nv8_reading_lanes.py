@@ -240,6 +240,10 @@ G_BUILDER = {
 # chips that also carry a group since Nov 17, added to what its reader named
 G_BUILDER['4.NV4-017'] = ('carried since Nov 17: MA365 (the Times\'s report of Nov 7, which its relay of that day repeats, gives the forecast of August that assumed no sales to China; the builder quoted the sentence on the chip and left this group open, which the twenty-third reading found)')
 G_BUILDER['6.NV6-049'] = ('carried since Nov 17: MA72 (Singapore\'s chip of Nov 12 gives, since the nine pages were added, its ministry\'s own sentence that the inquiry began in February 2025; this group\'s one line is the Journal\'s account of that statement. The builder found this by its own search of the open groups before the release)')
+# groups that stay open and that a chip words in part (the twenty-fourth reading): what the chip words, and what stays on no chip
+APPROVALS = ('MA31, MA152 (the letter of Nov 12 by Sen. Wyden and Rep. Neal, whose footnote cites the Times\'s report of Nov 7, attacks the department\'s approvals of sales to Chinese companies "with government and military ties", and the two chips quote it; the approvals themselves, the buyers and what the pages say of each are on no chip)')
+G_PART = dict({k: APPROVALS for k in ('6.NV6-013', '6.NV6-083', '6.NV6-084', '6.NV6-085', '6.NV6-086', '6.NV6-087', '6.NV6-088', '6.NV6-089', '6.NV6-090')},
+              **{'6.NV6-019': 'MA101 (the Times\'s chip of Nov 9 quotes that officials "rapidly disclosed it to partner law enforcement agencies"; the meetings the group also recalls are on no chip)'})
 G_ALSO = {'4.NV4-012': 'MA365', '6.NV6-063': 'MA362', '3.MS44': 'MA360', '4.NV4-111': 'MA360', '1.G001': 'MA01', '1.G002': 'MA01'}
 G_AFTER = {'4.NV4-012': '; MA333 was withdrawn after the twenty-second reading as a duplicate of MA365, which carries the disclosure on the Times\'s row at Nov 7 with the filing\'s two other statements that this group\'s lines give',
            '6.NV6-021': '; the chip its reader named gave the halt and the transfer but not who asked for the pause, and since the twenty-second reading it quotes the Times\'s sentence that the Justice Department requested it',
@@ -256,6 +260,7 @@ G_NOTE = {'3.MS05': ' (first report: the builder reads unclear where its groupin
 ADDED = ' (added and coded by the builder after the twenty-second reading, which found it on saved pages; no census line held it; a scan of the saved pages by the builder gave the pages listed, and no census reader has read them for it)'
 ADDED_SPLIT = (' (registered as an act of its own by the builder after the twenty-second reading: census lines that named several investments at once had been counted as carried by a tie line that carries one of them (lines 1947 and 2012); a scan of the saved pages by the builder gave the other pages listed, and no census reader has read them for it)')
 ADDED_LANE = ' (found on no chip by the reader of nine pages saved by hand and added on Nov 17, lane acts_nv8_added_a; worded and coded by the builder)'
+ADDED_24 = ' (registered and coded by the builder after the twenty-fourth reading, which found it in a profile whose census reader had not listed it; no census line held it; a scan of the counted pages by the builder gave the seven pages listed, and may have missed others)'
 ADDED_23 = ' (registered by the builder after the twenty-third reading; its one line is a census line whose reader had named a chip that does not carry it)'
 # earlier acts that no census line held (the twenty-second reading found them); the wording, the class and the direction are the builder's
 G_NEW = {
@@ -271,17 +276,21 @@ G_NEW = {
           'when': 'No date in the earliest pages; March and October 2026 in one page, which cites Reuters and The Information.', 'kind': 'money', 'first_reported': 'before', 'row_it_belongs_on': 'nvidia', 'direction': 'neither'},
  'B.06': {'actor': 'commerce', 'what': 'Reuters reported in June that the administration had held off adding the AI startup DeepSeek, the memory chipmaker CXMT and more than 100 other companies flagged as national security risks to a trade blacklist; one page adds that the department had added no Chinese company for fear of escalating tensions.',
           'when': 'By June 2026, as the pages give it; no additions to the list since October 2025.', 'kind': 'decision', 'first_reported': 'before', 'row_it_belongs_on': 'commerce', 'direction': 'against the administration'},
+ 'B.08': {'actor': 'huang', 'what': 'Huang personally delivered Nvidia\'s first DGX-1 AI supercomputer to OpenAI, then a nonprofit research lab, handing it to Elon Musk; one page says Nvidia donated it, another that he supplied the lab\'s first supercomputer.',
+          'when': '2016; one page says a decade ago.', 'kind': 'event', 'first_reported': 'before', 'row_it_belongs_on': 'huang', 'direction': 'neither'},
  'B.07': {'actor': 'rubio', 'what': 'A blog reports that the secretary of state said he had shared information about the executive\'s connection to Nvidia with the president; it links no original, and no original or transcript of such a statement is saved.',
           'when': 'Last spring, as the page gives it.', 'kind': 'statement', 'first_reported': 'unclear', 'row_it_belongs_on': 'rubio', 'direction': 'against the administration'},
 }
-G_NEW_NOTE = {'B.01': ADDED, 'B.04': ADDED, 'B.02': ADDED_SPLIT, 'B.03': ADDED_SPLIT, 'B.05': ADDED_SPLIT, 'B.06': ADDED_LANE, 'B.07': ADDED_23}
+G_NEW_NOTE = {'B.08': ADDED_24, 'B.01': ADDED, 'B.04': ADDED, 'B.02': ADDED_SPLIT, 'B.03': ADDED_SPLIT, 'B.05': ADDED_SPLIT, 'B.06': ADDED_LANE, 'B.07': ADDED_23}
 # census lines whose reader named a chip, assigned by the builder to an open act of the register (0-based row of the pool): line 2255 to B.07, line 2012 to B.05
 L_ASSIGN = {2254: ('B.07', 'sw-sandrarosecom-01'), 2011: ('B.05', 'sw-hntrbrkcom-01')}
-LB23 = 'added by the builder (twenty-third reading)'; LBA = 'lane acts_nv8_added_a (a reader of nine pages added on Nov 17)'
+LB24 = 'added by the builder (twenty-fourth reading)'; LB23 = 'added by the builder (twenty-third reading)'; LBA = 'lane acts_nv8_added_a (a reader of nine pages added on Nov 17)'
 # P06, P08 of the twenty-third reading, and the earlier acts the reader of the nine added pages found on no chip
 R_ADDED_MORE = [('sw-venturebeatcom-01', 'nvidia', 'nvidia', 'neither', 'B.04', LB23), ('sw-datacenterdynamicscom-01', 'nvidia', 'nvidia', 'for Huang or Nvidia', '4.NV4-004', LB23),
                 ('man-1c17777255e2', 'megaspeed', 'megaspeed', 'neither', '3.MS50', LBA), ('man-a8a33ade4ff1', 'huang', 'huang', 'neither', '2.NV2-194', LBA),
                 ('man-reuters-1111-06', 'commerce', 'commerce', 'against the administration', 'B.06', LBA), ('man-c9469105da89', 'commerce', 'commerce', 'against the administration', 'B.06', LBA)]
+# the delivery of 2016: the twenty-fourth reading found it in one profile; the builder's scan of the counted pages found it in six more
+R_ADDED_MORE += [(pg, 'huang', 'huang', 'neither', 'B.08', LB24) for pg in ('sw-cnncom-02', 'art-fc-ht-econ-1109-survive', 'man-5dbffa3344fb', 'man-ft-1112-05', 'sw-financeyahoocom-30', 'sw-sfstandardcom-06', 'sw-teslaraticom-01')]
 # lines the census readers did not list, added by the builder after the twenty-second reading: (page, actor, row, direction, earlier act). The first two are pages whose reader missed an act that other pages' lines hold
 R_ADDED = ([('sw-breitbartcom-08', 'nvidia', 'nvidia', 'for Huang or Nvidia', '4.NV4-004'), ('sw-implicatorai-01', 'megaspeed', 'megaspeed', 'against Huang or Nvidia', '3.MS01'), ('man-ft-1112-03', 'ft', 'ft', 'against Huang or Nvidia', 'B.01')]
            + [(pg, 'nvidia', 'nvidia', 'neither', 'B.02') for pg in ('sw-techcrunchcom-04', 'prospect-honeypot', 'sw-hntrbrkcom-01', 'sw-bitcoininsiderorg-04', 'sw-cnbccom-09', 'sw-financeyahoocom-31', 'sw-techcrunchcom-15', 'sw-venturebeatcom-01', 'man-cf6650e331b3')]
@@ -428,8 +437,9 @@ def main():
         if k in G_REOPEN: g_disp[k] = 'open: on no chip (' + G_REOPEN[k] + ': the twenty-second reading); not drawn until the owner decides what the image should carry'
         elif named: g_disp[k] = 'carried: ' + ', '.join(named + [G_ALSO[k]] if k in G_ALSO else named) + ' (the grouping reader\'s verdict)' + G_AFTER.get(k, '')
         elif k in G_BUILDER: g_disp[k] = G_BUILDER[k]
+        elif k in G_PART: g_disp[k] = 'open, carried in part: ' + G_PART[k] + '; the rest is not drawn until the owner decides what the image should carry'
         else: g_disp[k] = G_OPEN + G_CTL_NOTE.get(k, '') + G_NOTE.get(k, '') + G_NEW_NOTE.get(k, '')
-    assert set(G_NEW_NOTE) == set(G_NEW)
+    assert set(G_NEW_NOTE) == set(G_NEW) and not set(G_PART) - set(grp) and all(g_disp[k].startswith('open, carried in part') for k in G_PART), 'a group to mark carried in part is not there, or another list took it'
     assert not (set(G_BUILDER) | set(G_ALSO) | set(G_CTL_NOTE) | set(G_AFTER) | set(G_REOPEN) | set(G_FIRST) | set(G_NOTE)) - set(grp), 'a reading for a group that is not there'
     assert all(g_disp[k].startswith('carried') for k in list(G_ALSO) + list(G_AFTER)) and all(g_disp[k].startswith('open') for k in list(G_NOTE) + list(G_NEW)), 'a note on a group of the other kind'
     assert all(any(i in all_ids for i in re.findall(r'M[AT]\d+', v)) for v in G_BUILDER.values()) and all(v in all_ids for v in G_ALSO.values())
@@ -505,7 +515,7 @@ A_DISP = {6: 'open: an earlier act the register holds (3.MS50); this page\'s lin
           73: 'not drawn: a summary that names no occasion; his advocacy on occasions the pages date is on his chips', 82: 'not drawn: names no purchase; the purchases the pages give with amounts are an open act of the register (3.MS01)',
           84: 'not drawn: the page describes what the company\'s site lists and gives it no day; not a statement on the matter', 87: 'not drawn: the outlet\'s own attempts to reach the company, not an act of the company',
           104: 'not registered: ' + OUT + '; the register holds acts that pages of the fifteen days recall', 111: 'not registered: ' + OUT + '; the register holds acts that pages of the fifteen days recall',
-          114: 'not added: the date asked of the secretary is only in this page; ' + OUT + '; the saved letters and reports of Nov 12 do not give it',
+          114: 'drawn: on MA151, from a report of Nov 12 that another session of this project had saved and the table of pages does not hold (not from this page: ' + OUT + '). The builder had written that only this later page gives the date; the twenty-fourth reading found it in that report',
           115: 'not drawn: the only saved account of the post is this page; ' + OUT + '; the post itself is not saved (a lead for a search of his own channel)', 120: ONLET + ' (not from this page: ' + OUT + ')', 121: ONLET + ' (not from this page: ' + OUT + ')'}
 
 

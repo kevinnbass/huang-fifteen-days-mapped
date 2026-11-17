@@ -1,0 +1,183 @@
+what,figure_says,you_find,agree,note
+all_acts,368,368,yes,
+active,365,365,yes,
+dated,365,365,yes,
+chips,226,226,yes,
+dashed_chips,59,59,yes,
+report_dated,149,149,yes,
+may_be_newer,4,4,yes,Literal chip text count for may_be_newer; screen annotations are counted separately.
+ties,87,87,yes,
+member_lines,150,150,yes,
+may_be_newer_screen,16,16,yes,Sixteen readings begin may be newer; four active row texts literally say it. A-MA367 supplies date corroboration for one.
+pages,1324,1324,yes,
+article_ids,1244,1244,yes,
+counted_articles,1163,1163,yes,
+partial,100,100,yes,
+recall_lines,2892,2892,yes,
+recall_added_after_census,37,37,yes,
+recall_groups,779,779,yes,
+recall_open,722,722,yes,"Reproduces classifications, not semantic validity; C-APPROVALS and C-DISCLOSURE identify ten open groups with at least partial carriage."
+recall_carried,57,57,yes,"Reproduces classifications, not semantic validity; C-APPROVALS and C-DISCLOSURE identify ten open groups with at least partial carriage."
+recall_open_group_lines_sum,1136,1136,yes,
+recall_direct_open_lines,1133,1133,yes,
+recall_direct_open_pages,533,533,yes,
+README_census_open_lines,1134,1133,no,C-README-COUNT; current census paragraph stale.
+README_census_open_pages,534,533,no,C-README-COUNT; current census paragraph stale.
+README_census_neutral_lines,234,233,no,C-README-COUNT; current census paragraph stale.
+open_kind: statement,318,318,yes,Independent grouping/count of frozen table cells.
+open_kind: decision,124,124,yes,Independent grouping/count of frozen table cells.
+open_kind: event,206,206,yes,Independent grouping/count of frozen table cells.
+open_kind: other,61,61,yes,Independent grouping/count of frozen table cells.
+open_kind: money,13,13,yes,Independent grouping/count of frozen table cells.
+open_first: unclear,464,464,yes,Independent grouping/count of frozen table cells.
+open_first: before,192,192,yes,Independent grouping/count of frozen table cells.
+open_first: in these days,66,66,yes,Independent grouping/count of frozen table cells.
+open_direction: against Huang or Nvidia,285,285,yes,Independent grouping/count of frozen table cells.
+open_direction: for the administration,31,31,yes,Independent grouping/count of frozen table cells.
+open_direction: for Huang or Nvidia,180,180,yes,Independent grouping/count of frozen table cells.
+open_direction: against the administration,39,39,yes,Independent grouping/count of frozen table cells.
+open_direction: neither,187,187,yes,Independent grouping/count of frozen table cells.
+census_verdict: carried,1514,1514,yes,Independent grouping/count of frozen table cells.
+census_verdict: CANDIDATE occasion,1260,1260,yes,Independent grouping/count of frozen table cells.
+census_verdict: CANDIDATE part,118,118,yes,Independent grouping/count of frozen table cells.
+census_disposition: (blank),1415,1415,yes,Independent grouping/count of frozen table cells.
+census_disposition: drawn,30,30,yes,Independent grouping/count of frozen table cells.
+census_disposition: carried,202,202,yes,Independent grouping/count of frozen table cells.
+census_disposition: open,1133,1133,yes,Independent grouping/count of frozen table cells.
+census_disposition: carried earlier,36,36,yes,Independent grouping/count of frozen table cells.
+census_disposition: carried since Nov 17,13,13,yes,Independent grouping/count of frozen table cells.
+census_disposition: not moved,30,30,yes,Independent grouping/count of frozen table cells.
+census_disposition: a planted control,30,30,yes,Independent grouping/count of frozen table cells.
+census_disposition: carried in part,2,2,yes,Independent grouping/count of frozen table cells.
+census_disposition: registered,1,1,yes,Independent grouping/count of frozen table cells.
+open_lines_direction: against Huang or Nvidia,577,577,yes,Independent grouping/count of frozen table cells.
+open_lines_direction: neither,233,233,yes,Independent grouping/count of frozen table cells.
+open_lines_direction: for the administration,42,42,yes,Independent grouping/count of frozen table cells.
+open_lines_direction: against the administration,109,109,yes,Independent grouping/count of frozen table cells.
+open_lines_direction: for Huang or Nvidia,172,172,yes,Independent grouping/count of frozen table cells.
+refusals_acts,29,29,yes,Independent join of frozen actor-labelled census and active row sources; table classes recounted for outside lines.
+refusals_actors,11,11,yes,Independent join of frozen actor-labelled census and active row sources; table classes recounted for outside lines.
+refusals_census_lines,133,133,yes,Independent join of frozen actor-labelled census and active row sources; table classes recounted for outside lines.
+refusals_inside,60,60,yes,Independent join of frozen actor-labelled census and active row sources; table classes recounted for outside lines.
+refusals_outside,73,73,yes,Independent join of frozen actor-labelled census and active row sources; table classes recounted for outside lines.
+refusals_outside_pairs,63,63,yes,Independent join of frozen actor-labelled census and active row sources; table classes recounted for outside lines.
+refusals_table_relay_lines,60,60,yes,Independent join of frozen actor-labelled census and active row sources; table classes recounted for outside lines.
+refusals_table_not_refusals,13,13,yes,Independent join of frozen actor-labelled census and active row sources; table classes recounted for outside lines.
+actor_day_gauge_rows,20,20,yes,
+remarks_no_chip_groups,10,10,yes,
+population_now,4185,4185,yes,"Own code, no builder module execution."
+population_rows,5109,5109,yes,"Own code, no builder module execution."
+population_eligible,6440,6440,yes,"Own code, no builder module execution."
+population_cells_changed,15,15,yes,
+population_rows_added,38,38,yes,
+added_records_verdict: carried,88,88,yes,
+added_records_verdict: CANDIDATE occasion,24,24,yes,
+added_records_verdict: CANDIDATE part,8,8,yes,
+added_records_disposition: carried,71,71,yes,"Literal disposition prefixes, including excluded later-page carried records."
+added_records_disposition: open,4,4,yes,"Literal disposition prefixes, including excluded later-page carried records."
+added_records_disposition: a planted control,3,3,yes,"Literal disposition prefixes, including excluded later-page carried records."
+added_records_disposition: not drawn,11,11,yes,"Literal disposition prefixes, including excluded later-page carried records."
+added_records_disposition: drawn,11,11,yes,"Literal disposition prefixes, including excluded later-page carried records."
+"added_records_disposition: the page is of Nov 15 or 16, outside the days, and was not added",17,17,yes,"Literal disposition prefixes, including excluded later-page carried records."
+added_records_disposition: not registered,2,2,yes,"Literal disposition prefixes, including excluded later-page carried records."
+added_records_disposition: not added,1,1,yes,"Literal disposition prefixes, including excluded later-page carried records."
+member_articles: Warren,72,72,yes,Previously 71; added page(s): man-c9469105da89. 
+member_articles: Coons,49,49,yes,Previously 48; added page(s): man-c9469105da89. 
+member_articles: Cramer,22,22,yes,Previously 22; added page(s): none. 
+member_articles: Schumer,22,22,yes,Previously 22; added page(s): none. 
+member_articles: Banks,19,19,yes,Previously 19; added page(s): none. 
+member_articles: Cornyn,9,9,yes,Previously 9; added page(s): none. 
+member_articles: Kennedy,7,7,yes,Previously 6; added page(s): man-c9469105da89. 
+member_articles: Thune,13,13,yes,Previously 13; added page(s): none. 
+member_articles: Mast,93,93,yes,Previously 92; added page(s): man-c9469105da89. 
+member_articles: Crawford,68,68,yes,Previously 68; added page(s): none. 
+member_articles: Meeks,9,9,yes,Previously 9; added page(s): none. 
+member_articles: Himes,8,8,yes,Previously 8; added page(s): none. 
+member_articles: Huizenga,4,4,yes,Previously 4; added page(s): none. 
+member_articles: Moolenaar,78,78,yes,Previously 78; added page(s): none. 
+member_articles: Jeffries,30,30,yes,Previously 30; added page(s): none. NFKC: three PDFs print ff as one ligature
+member_articles: Magaziner,4,4,yes,Previously 4; added page(s): none. 
+member_articles: Subramanyam,3,3,yes,Previously 3; added page(s): none. 
+member_articles: Bacon,3,3,yes,Previously 3; added page(s): none. 
+member_articles: Johnson,11,11,yes,Previously 11; added page(s): none. 
+member_articles: Blumenthal,3,3,yes,Previously 3; added page(s): none. 
+member_articles: Wyden,6,6,yes,Previously 5; added page(s): man-c9469105da89. 
+member_articles: Ricketts,5,5,yes,Previously 5; added page(s): none. 
+member_articles: McCaul,5,5,yes,Previously 5; added page(s): none. 
+member_articles: Warner,4,4,yes,Previously 4; added page(s): none. 
+member_articles: Cotton,6,6,yes,Previously 5; added page(s): man-c9469105da89. 
+member_articles: Scott,4,4,yes,Previously 4; added page(s): none. 
+member_articles: Neal,4,4,yes,Previously 3; added page(s): man-c9469105da89. 
+lookup analysts: quoted on the saved pages (a person or firm written two ways counted once),282,282,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup analysts: drawn,16,16,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+"lookup analysts: not drawn: at a bank, not drawn",17,17,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup analysts: not drawn: cannot tell,1,1,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+"lookup analysts: not drawn: name match, not settled",1,1,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup analysts: not drawn: none found,234,234,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup analysts: not drawn: none found for the person,5,5,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup analysts: not drawn: not drawn,8,8,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup bylines: pairs of outlet and name,966,966,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup bylines: different names,888,888,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level. Normalized whitespace/case or grouped literal status labels independently.
+lookup bylines: pairs that are an agency or not a person's name,84,84,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup bylines: names that are an agency or not a person's name,75,75,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup bylines: pairs: cannot tell,84,84,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup bylines: pairs: drawn,5,5,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+"lookup bylines: pairs: name match, not settled",4,4,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup bylines: pairs: none found,871,871,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+"lookup bylines: pairs: record of another kind, not drawn",2,2,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup bylines: different names drawn,5,5,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+"lookup banks: named by Quartz on Sep 4, 2026 as lenders to Anthropic",17,17,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+"lookup banks: of those, with an analyst, a note or an executive quoted on the saved pages",11,11,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup investors: quoted and described on the pages as holding or shorting Nvidia shares,2,2,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+"lookup remarks: of drawn actors, on two or more pages",524,524,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+"lookup remarks: carried in other words, by the audit",42,42,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level. Normalized whitespace/case or grouped literal status labels independently.
+lookup remarks: not his remark,3,3,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup remarks: not of these days,14,14,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup remarks: not printed,3,3,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup remarks: partly on a chip,15,15,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+lookup remarks: partly on chip,40,40,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level. Normalized whitespace/case or grouped literal status labels independently.
+lookup remarks: printed on a chip,243,243,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level. Normalized whitespace/case or grouped literal status labels independently.
+"lookup remarks: same statement as a chip, not printed",164,164,yes,Twenty new targets independently searched; other unchanged statuses recounted at table level.
+whole_name_search: register lines of analysts and bylines,1232,1232,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+whole_name_search: tables searched,85,85,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+whole_name_search: people: register lines searched,1115,1115,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+whole_name_search: people: different names searched,1039,1039,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+whole_name_search: people: register lines whose name occurs in a table,41,41,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+"whole_name_search: others (firms, one-word names, longer labels among the analysts): register lines searched",36,36,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+whole_name_search: others: different names searched,36,36,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+whole_name_search: others: register lines whose name occurs in a table,13,13,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+"whole_name_search: not searched as a whole name (bylines that are an agency, a label or an address; analyst labels under four letters)",81,81,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+"whole_name_search: controls found, of 7",7,7,yes,Published search bookkeeping checked against search-hit/register files; fresh twenty-target sweep uses the same 85 named tables with seven positive controls.
+set_aside_items,67,67,yes,
+set_aside_second_verdict: CANDIDATE occasion,39,39,yes,
+set_aside_second_verdict: carried,8,8,yes,
+set_aside_second_verdict: not on the matter,14,14,yes,
+set_aside_second_verdict: CANDIDATE part,5,5,yes,
+set_aside_second_verdict: not an act of the actor,1,1,yes,
+own_channel: actors whose own channels were searched,82,82,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: actors: an item about the affair is held and was read,41,41,yes,"Unchanged historical table-level count, not a fresh channel search."
+"own_channel: actors: the reader matched an item about the affair to a chip, and the project holds no copy",0,0,yes,"Unchanged historical table-level count, not a fresh channel search."
+"own_channel: actors: links located, none could be read",2,2,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: actors: only items that are not about the affair or not their own,4,4,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: actors: nothing found on a channel that could be read,25,25,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: actors: no channel could be read,10,10,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: chips whose original was searched for,133,133,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: chips: original read and cited on the chip,36,36,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: chips: the search did not yield the original; a saved copy of the publisher's page is now cited,7,7,yes,"Unchanged historical table-level count, not a fresh channel search."
+"own_channel: chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited",9,9,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: chips: original carries the first of the chip's two remarks,1,1,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: chips: original could not be opened,71,71,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: chips: original found by the reader and refused to the project (not saved),2,2,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: chips: original not found,7,7,yes,"Unchanged historical table-level count, not a fresh channel search."
+own_channel: chips still without their original that now also cite a paper's own report of the act,14,14,yes,"Unchanged historical table-level count, not a fresh channel search."
+site_acts,365,365,yes,
+site_ties,87,87,yes,
+site_member_lines,150,150,yes,
+site_pieces,2245,2245,yes,
+public13_files_equal,94,94,yes,No repository file byte difference; commit 76dbbed.
+report_day_screen: another saved page gives another day,27,27,yes,Independent count of screen table rows; changed readings separately read.
+report_day_screen: a day word near a cited passage in its own source,79,79,yes,Independent count of screen table rows; changed readings separately read.
+report_day_screen: its page was changed after the chip's day,36,36,yes,Independent count of screen table rows; changed readings separately read.
+report_day_screen: an earlier page holds a cited passage,12,12,yes,Independent count of screen table rows; changed readings separately read.
+report_day_screen: a copy of the same article lacks a cited passage,6,6,yes,Independent count of screen table rows; changed readings separately read.
+report_day_screen: the day of its page is an update's,5,5,yes,Independent count of screen table rows; changed readings separately read.

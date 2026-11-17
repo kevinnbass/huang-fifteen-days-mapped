@@ -272,8 +272,9 @@ def main(target):
           # the twenty-second reading (of the answer to the twenty-first, the dispositions of the census and the register of earlier acts)
           'w': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           # the twenty-third reading (of the answer to the twenty-second)
-          'x': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
-    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i', 'q': 'audit_nv8_s8j', 'r': 'audit_nv8_s8k', 's': 'audit_nv8_s8l', 't': 'audit_nv8_s8m', 'u': 'audit_nv8_s8n', 'v': 'audit_nv8_s8o', 'w': 'audit_nv8_s8p', 'x': 'audit_nv8_s8q'}
+          'x': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
+          'y': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i', 'q': 'audit_nv8_s8j', 'r': 'audit_nv8_s8k', 's': 'audit_nv8_s8l', 't': 'audit_nv8_s8m', 'u': 'audit_nv8_s8n', 'v': 'audit_nv8_s8o', 'w': 'audit_nv8_s8p', 'x': 'audit_nv8_s8q', 'y': 'audit_nv8_s8r'}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
@@ -351,6 +352,9 @@ def main(target):
     disp23 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8q.csv'
     if disp23.exists():
         put(Tg, 'audit2/DISPOSITIONS-x.csv', disp23.read_text())
+    disp24 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8r.csv'
+    if disp24.exists():
+        put(Tg, 'audit2/DISPOSITIONS-y.csv', disp24.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')

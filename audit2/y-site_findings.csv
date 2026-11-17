@@ -1,0 +1,5 @@
+finding_id,grade,element_text,problem
+H-DATA,ok,"365 acts; 87 ties; 150 member lines; 2,245 listed pieces",
+H-PART-A,ok,"All thirteen Part A rows: embedded day, words, edge and excerpt passages match the frozen rows",
+H-MA367,qualification,Kennedy / Nov 12 / dashed,"[row error] Same problem A-MA367: the site faithfully reproduces the row, including its unnecessarily dashed edge. Update both from the saved CNN relay."
+H-CONTROLS,ok,"In-memory alterations of day, text, edge, an extra chip and piece headline were all detected; all three withdrawn acts are absent",
