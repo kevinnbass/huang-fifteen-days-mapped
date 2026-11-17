@@ -21,7 +21,7 @@ g = P.public_gifts()
 with open(L / 'tables' / 'employee_gifts.csv', 'x', newline='') as f:
     w = csv.DictWriter(f, fieldnames=P.GIFT_COLS, lineterminator='\n'); w.writeheader(); w.writerows(g)
 for name in ('member_ties.csv', 'coverage_rows.tsv', 'harvest.tsv', 'anthropac_by_recipient.csv', 'anthropac_party.csv', 'employee_gift_rates.csv', 'committee_keys.csv', 'pacs_by_member.csv',
-             'chip_bills.csv', 'lobbying_bill_reports.csv'):
+             'chip_bills.csv', 'lobbying_bill_reports.csv', 'lobbying_family_reports.csv'):
     shutil.copyfile(R / name, L / 'tables' / name)
 shutil.copyfile(ROOT / 'figures' / (N.STEM + '.html'), L / 'figures' / (N.STEM + '.html'))
 sha = {str(p.relative_to(L)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(L.rglob('*')) if p.is_file() and (p.parts[len(L.parts)] in ('tables', 'figures') or p.name in ('rows.jsonl', 'evidence.tsv'))}
