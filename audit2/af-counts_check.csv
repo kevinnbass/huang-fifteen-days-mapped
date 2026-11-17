@@ -1,0 +1,156 @@
+what,stated,recounted,agree
+register groups,993,993,yes
+carried labels,116,116,yes
+open labels,877,877,yes
+open wholly-unworded labels,848,848,yes
+open partial labels,29,29,yes
+stale register lead: partial groups now,26,29,no
+original sorter groups,772,772,yes
+builder groups,27,27,yes
+other-session E groups,194,194,yes
+E groups carried,23,23,yes
+all recall table lines,3556,3556,yes
+other-session grouping lines,631,631,yes
+open raw group line sum,1633,1633,yes
+open candidate lines,1631,1631,yes
+open candidate pages,677,677,yes
+open lines on counted pages,1101,1101,yes
+open counted-page ids,527,527,yes
+open lines on other-session pages,530,530,yes
+open other-session page ids,150,150,yes
+partial groups raw line sum,196,196,yes
+open groups kind: statement,388,388,yes
+open groups kind: event,243,243,yes
+open groups kind: decision,155,155,yes
+open groups kind: money,26,26,yes
+open groups kind: other,65,65,yes
+open groups first_reported: in these days,61,61,yes
+open groups first_reported: before,267,267,yes
+open groups first_reported: unclear,549,549,yes
+open groups which_way_the_reader_says_it_cuts: against Huang or Nvidia,331,331,yes
+open groups which_way_the_reader_says_it_cuts: for Huang or Nvidia,214,214,yes
+open groups which_way_the_reader_says_it_cuts: against the administration,48,48,yes
+open groups which_way_the_reader_says_it_cuts: for the administration,46,46,yes
+open groups which_way_the_reader_says_it_cuts: neither,238,238,yes
+new unresolved summary groups,43,43,yes
+new summary lines,48,48,yes
+new summaries fully-carried labels,5,5,yes
+new summaries partial labels,1,1,yes
+new summaries wholly-open labels,37,37,yes
+still set-aside grouping lines,10,10,yes
+all act rows,424,424,yes
+dated drawn acts,421,421,yes
+report-dated drawn acts,182,182,yes
+drawn acts without day,0,0,yes
+delta rows,17,17,yes
+ad findings rows,35,35,yes
+ad figure_findings rows,3,3,yes
+ad counts_check rows,83,83,yes
+ad dispositions_check rows,155,155,yes
+ad findings ok,23,23,yes
+ad findings qualification,12,12,yes
+ad findings error,0,0,yes
+ad prior dispositions yes,144,144,yes
+ad prior dispositions partial,10,10,yes
+ad prior dispositions no,1,1,yes
+ad builder disposition rows,41,41,yes
+ad builder applied,29,29,yes
+ad builder limits,12,12,yes
+ad agreeing old recounts,76,76,yes
+ad disagreeing old recounts,3,3,yes
+ae findings rows,44,44,yes
+ae figure_findings rows,1,1,yes
+ae site_findings rows,2,2,yes
+ae counts_check rows,212,212,yes
+ae dispositions_check rows,134,134,yes
+ae findings13 rows,7,7,yes
+ae findings ok,25,25,yes
+ae findings qualification,18,18,yes
+ae findings error,1,1,yes
+ae prior dispositions yes,132,132,yes
+ae prior dispositions partial,2,2,yes
+ae prior dispositions no,0,0,yes
+ae builder disposition rows,35,35,yes
+ae builder applied,27,27,yes
+ae builder limits,8,8,yes
+ae agreeing old recounts,212,212,yes
+ae disagreeing old recounts,0,0,yes
+third-round table rows,95,95,yes
+third-round changed-last-column rows,9,9,yes
+third-round historical no-reply class,10,10,yes
+third-round request-not-proved correction,1,1,yes
+combined builder applied dispositions,56,56,yes
+combined builder stated limits,20,20,yes
+prior auditor unworded-line table entries,114,114,yes
+company reader total lines,235,235,yes
+anthropic current quarterly report slots,48,48,yes
+nvidia current quarterly report slots,36,36,yes
+saved 2024 API records,22,22,yes
+open candidate-line direction: against Huang or Nvidia,785,785,yes
+open candidate-line direction: for Huang or Nvidia,255,255,yes
+open candidate-line direction: against the administration,143,143,yes
+open candidate-line direction: for the administration,65,65,yes
+open candidate-line direction: neither,383,383,yes
+carried prefix: reader named a carrier,62,62,yes
+carried prefix: since Nov 17,54,54,yes
+original census recall lines,2855,2855,yes
+lines added after original census,70,70,yes
+added lines still open,50,50,yes
+grouped E candidate lines still open,529,529,yes
+E group line sum,275,275,yes
+E groups still open,171,171,yes
+third-round k reader records,215,215,yes
+third-round k candidates,78,78,yes
+third-round k earlier candidates,46,46,yes
+third-round k window candidates,11,11,yes
+third-round l reader records,198,198,yes
+third-round l candidates,77,77,yes
+third-round l earlier candidates,53,53,yes
+third-round l window candidates,24,24,yes
+third-round m reader records,188,188,yes
+third-round m candidates,107,107,yes
+third-round m earlier candidates,68,68,yes
+third-round m window candidates,39,39,yes
+third-round reader records total,601,601,yes
+third-round candidates total,262,262,yes
+third-round earlier candidates total,167,167,yes
+third-round window-or-unknown candidates,95,95,yes
+third-round historical class: carried,39,39,yes
+third-round historical class: part of a chip,19,19,yes
+third-round historical class: relay of a response already drawn,10,10,yes
+third-round historical class: no reply: not drawn,10,10,yes
+third-round historical class: earlier act: to the register,9,9,yes
+third-round historical class: not an act,3,3,yes
+third-round historical class: same act as another record,3,3,yes
+third-round historical class: refusal: new act,1,1,yes
+third-round historical class: new act,1,1,yes
+ad assigned figure rows,25,25,yes
+ad assigned figure rows ok,23,23,yes
+ae assigned figure rows,26,26,yes
+ae assigned figure rows ok,19,19,yes
+anthropic GAIN family total,4,4,yes
+anthropic GAIN family bill-number,2,2,yes
+anthropic GAIN family amendment-number,1,1,yes
+anthropic GAIN family name-only,1,1,yes
+anthropic GAIN extra beyond bill number,2,2,yes
+nvidia GAIN family total,3,3,yes
+nvidia GAIN family bill-number,1,1,yes
+nvidia GAIN family amendment-number,2,2,yes
+nvidia GAIN family name-only,0,0,yes
+nvidia GAIN extra beyond bill number,2,2,yes
+other measure families extra beyond bill number,0,0,yes
+company-reader relevant subset,162,not independently reclassified,not checked
+company-reader unworded subset after this answer,not recounted,not recounted,yes
+company reader pages listed,32,32,yes
+this audit delta cited page folders,48,48,yes
+this audit cited pages whose saved article forms were read,48,48,yes
+inputs frozen hashes checked,835,835,yes
+inputs frozen hash failures,0,0,yes
+extra frozen hashes checked,92,92,yes
+extra frozen hash failures,0,0,yes
+original post 2119845552732983572 Eastern day,2026-11-09,2026-11-09,yes
+original post 2119830505298305049 Eastern day,2026-11-09,2026-11-09,yes
+original post 2119912406218318293 Eastern day,2026-11-09,2026-11-09,yes
+original post 2119829312811704407 Eastern day,2026-11-09,2026-11-09,yes
+original post 2119972260685451366 Eastern day,2026-11-09,2026-11-09,yes
+new original posts falling on Nov 9 Eastern,5,5,yes

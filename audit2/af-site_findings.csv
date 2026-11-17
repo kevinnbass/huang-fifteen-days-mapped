@@ -1,0 +1,5 @@
+finding_id,grade,element_text,problem
+H-PASSAGES,ok,All members' line panels,All 168 displayed passages (165 unique) match exact evidence.tsv cells of the corresponding row. All textual passages were read. Gift-record passages use identifiers. The separately flagged witness heading names an existing drawn network endpoint who is also a donor.
+H-TY021,ok,Sen. Banks lobbying panel,The amendment short-title and sponsor passages are present in the embedded data and match this row's evidence cells.
+H-TY088,ok,Rep. Moolenaar lobbying panel,The bill-purpose passage and amendment short-title/sponsor passages are present and match this row's evidence cells.
+H-TY090,qualification,"Rep. Moolenaar hearing panel, TY090: witness-heading passage","[table or text] H-TY090: One passage names the policy cofounder who is a donor on TI02. This person is already drawn in TI02/TI11/TI18, so the passage passes the drawn-person test; it nevertheless names a donor under the brief's separate literal donor-name test. Render the heading with the public role in square brackets. This is not an anonymous employee or lobbyist newly identified by the panel."

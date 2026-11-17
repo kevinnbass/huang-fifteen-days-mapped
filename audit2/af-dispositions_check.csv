@@ -1,0 +1,145 @@
+part,finding_id,holds,note
+B,Ea.N004,yes,"No statement occasion: all three Bloomberg copies say the company has called smuggling insignificant. Supportive company position; not proof that smuggling was insignificant. MA106 carries another identified interview, not this summary."
+B,Ea.N009,yes,No individual contact: Reuters attributes opposition to a former staffer in contact over months. MA197 carries this exact account in full. Adverse lobbying description is fairly coded.
+B,Ea.N010,yes,No identified denial: the French account fixes the period before prior-year indictments. MA197 carries the sentence in full. The adverse retrospective framing is fairly coded.
+B,Ea.N012,yes,"No dated company response: the page dates the SEC request, not the committee description. No identified edition or linked response. Supportive description is fairly coded and is not proof of effectiveness."
+B,Ea.N014,yes,No identified response/filing: the 99% statement and geographic explanation stand as an undated summary. MA340/MA358 carry other filing content. The supportive direction is fair.
+B,Ea.N015,yes,No individual assurance: the source recalls repeated no-diversion claims inside the short seller's criticism. The underlying company assurance is supportive; the source's criticism is separately attributed.
+B,Ea.N017,yes,No identified bill contact: the 2026 campaign summary does not select one intervention. The spending records and China trip do not establish its identity. Adverse direction is fair.
+B,Ea.N023,yes,No specific contact: the source separately dates White House feedback. MA376 carries the same lobbying sentence. Direction is fair.
+B,Ea.N024,yes,No response occasion: the author paraphrases allocation fairness and directly quotes customer choice. MA396 carries the same sentence from the other copy. Direction is fair.
+B,Ea.N025,yes,"No individual lobbying occasion. MA376 words opposition to the gap's closure, but not this author's especially-hard account. Partial disposition appropriately preserves that identity limit. Direction is fair."
+B,Ea.N032,yes,No individual lobbying occasion: a 2025 campaign precedes the H200 decision. Later named interventions do not prove its identity. Direction is fair.
+B,Ea.N033,yes,No individual lobbying occasion in the long-lobbied summary. Do not merge it with a specific meeting or bill fight. Direction is fair.
+B,Ea.N036,yes,No occasion for the recurring dependence argument. Other speeches of similar reasoning do not prove identity. Supportive coding is fair.
+B,Ea.N037,yes,"No identified company statement: the former official describes rejection of the prior rule. MT75 gives another sourced criticism of that policy, without proving this summary's individual occasions. Neutral coding is defensible."
+B,Ea.N042,yes,No individual company response: the Atlantic Council summary does not identify an interview or statement. Similar ordinary-business replies do not prove identity. Supportive coding is fair.
+B,Ea.N043,yes,No individual Washington contact in the market-access summary. This policy position is not itself proof of misconduct. The adverse coding is contextual rather than a claim about motive.
+B,Ea.N045,yes,No identified policy-statement occasion. Product enrolment does not itself carry the rejection of government backdoors. Supportive coding is fair.
+B,Eb.N010,yes,"Undated website representation, not a launch announcement. The cloud-partner designation does not prove which website version is meant. Supportive representation is fairly coded."
+B,Ec.N003,yes,No individual denial; the source gives a pre-indictment period. MA197 carries the same sentence in full. Adverse retrospective coding is fair.
+B,Ec.N009,yes,"Several media interviews, none individually identified. MA359 carries a named podcast with similar succession reasoning, but this page supplies no identity link. Adverse succession-risk framing is fairly coded."
+B,Ec.N010,yes,"Undated filing-described reimbursement practice; no journey, payment or filing edition identified. Supportive coding is fair."
+B,Ec.N013,yes,Undated guidance without a title or issue date. The general licence requirement does not identify one adoption act. Supportive institutional coding is defensible.
+B,Ec.N017,yes,"The previous sentence names an earnings call, but the separate has-said claim does not date itself to that call. No individual occasion; succession-risk coding is fair."
+B,Ec.N018,yes,Undated securities-filing account of governance practice; no meeting or edition identified. Adverse oversight framing is fairly coded.
+B,Ec.N023,yes,No individual lobbying act in the same campaign sentence as Ea.N032. The groups overlap in content; do not delete either without full record identity. Direction is fair.
+B,Ec.N030,yes,"No individual secretary's statement. The rule work supplies context, not a speaking date. Neutral coding is defensible."
+B,Ec.N032,yes,No identified speech/interview for the Super Micro denial. A general no-diversion statement about another subject cannot prove identity. Supportive coding is fair.
+B,Ec.N037,yes,No individual intervention in the account of the secretary's internal advocacy. The source distinguishes its own judgment from the reported policy position. Adverse coding is fair.
+B,Ec.N039,yes,Both Fortune versions repeat has-previously-said without an original occasion. Supportive coding is fair; do not identify it with a particular denial by similarity.
+B,Ec.N046,yes,"The page summarizes a recurring dependence argument, not a dated statement. Supportive coding is fair."
+B,Ec.N047,yes,Both CNN copies describe repeated lobbying without an individual meeting. Separate dated events nearby do not select its occasion. Contextual adverse coding is fair.
+B,Ed.N024,partial,"[table or text] B-Ed.N024: No individual Trump speech is identified, but the same page's attributed McGuire description of his no-Blackwell policy is already worded by MA398. It cannot be wholly on no chip. Mark at least carried in part while leaving the underlying Trump occasions unidentified. Supportive-policy coding is fair."
+B,Ed.N031,yes,No identified expression of support in the bipartisan-support summary. Other named endorsements do not prove this one's identity. Adverse-to-Nvidia policy coding is fair.
+B,Ed.N032,yes,No individual occasion in the repeated-warning summary. The quoted metaphor does not identify a post or speech. Adverse-to-Nvidia policy coding is fair.
+B,Ee.N002,yes,No identified company response in has-maintained. Similar compliance denials elsewhere do not prove this one's identity. Supportive coding is fair.
+B,Ee.N006,yes,"Undated website plan/description, not proof that the three planned centres were built. No individual launch identified; neutral coding is fair."
+B,Ee.N007,yes,"Standing own-page capability claim, with no launch/revision date. It is an advertisement, not a verified installed count. Neutral coding is fair."
+B,Ee.N028,yes,"Undated website service offer, not a dated launch. Existing partner-designation chips do not carry this systems offer. Neutral coding is fair."
+B,Ee.N029,yes,Standing BIS institutional overview; no decision or publication occasion identified. Neutral coding is fair.
+B,Ee.N041,yes,Standing H100 scalability advertisement; no launch or revision identified and no verified installed total. Neutral coding is fair.
+B,Ee.N042,yes,Standing network/VPC advertisement; no dated deployment or launch. Neutral coding is fair.
+B,Ee.N043,yes,"Standing virtual-server advertisement; five-second starts are a company claim, not an independent measurement. No launch date; neutral coding is fair."
+B,Ee.N045,yes,Undated course of lobbying; no individual contact. The narrative's later approval does not date a company intervention. Neutral coding is defensible.
+B,Ee.N019,yes,The filing occasion is partially carried by MA340/MA358; its separate diversion-risk warning remains unworded. The current partial label correctly states both components and preserves the warning.
+B,Ed.N008,no,[table or text] B-Ed.N008: MA197 carries everything this source and group identify: Justice chip-smuggling indictments in the preceding year. The disposition invents an unworded remainder of case identities/days which this account never supplied. Mark the source-bounded group fully carried; retain its identity uncertainty.
+B,ASIDE:b.L090,partial,"[table or text] B-ASIDE-1: The causal effect is conjectural, but the source refers to crackdowns in Taiwan and Malaysia as its premises. Not the actor's conflates the author's causal hypothesis with the underlying enforcement summary. Reconsider Taiwan's summary under the same unresolved-record rule; do not promote a specific crackdown without identity evidence."
+B,ASIDE:b.L120,yes,"The source names a network, not the drawn legal company as acquirer; the receiving entity is unresolved."
+B,ASIDE:c.L008,yes,Nvidia's account of a US-government answer does not identify Commerce as the answering agency; its company account is retained elsewhere.
+B,ASIDE:c.L009,yes,Unnamed sources' account of nonparticipation is not a BIS speaking act.
+B,ASIDE:c.L013,yes,The second copy does not turn unnamed-source reporting into a BIS statement.
+B,ASIDE:c.L040,yes,The third copy likewise supplies no BIS speaking act.
+B,ASIDE:c.L051,yes,The company account names the US government without identifying Commerce; no agency assignment is established.
+B,ASIDE:c.L142,yes,The official abstract concerns address removals without an established chip-affair nexus.
+B,ASIDE:c.L143,yes,The official abstract concerns entity/alias removals without an established chip-affair nexus.
+B,ASIDE:d.L034,yes,"The ordinary supply request has no established export-control, spy-affair or succession nexus."
+C,k.76,yes,The full saved page summarizes an undated position or repeated denials; the named chips do not establish a particular occurrence match. The new uncertainty wording correctly supersedes the historical relay label.
+C,k.118,yes,The full Raw Story HTML gives repeated deputy-level warnings; MA207 carries the same Axios account.
+C,k.194,yes,The full saved page summarizes an undated position or repeated denials; the named chips do not establish a particular occurrence match. The new uncertainty wording correctly supersedes the historical relay label.
+C,l.17,yes,"The Reuters French copy states only non-comment, without a request or explicit refusal."
+C,l.161,yes,"The undated Bloomberg responses are now carried on MA421, Nov 9, with a dashed edge."
+C,l.162,yes,"The undated Bloomberg referral is now carried on MA421, Nov 9, with a dashed edge."
+C,m.119,yes,The full saved page summarizes an undated position or repeated denials; the named chips do not establish a particular occurrence match. The new uncertainty wording correctly supersedes the historical relay label.
+C,m.188,yes,The full saved page summarizes an undated position or repeated denials; the named chips do not establish a particular occurrence match. The new uncertainty wording correctly supersedes the historical relay label.
+C,m.189,yes,The full saved page summarizes an undated position or repeated denials; the named chips do not establish a particular occurrence match. The new uncertainty wording correctly supersedes the historical relay label.
+C,nv8_recalls:data-line-2012,yes,Hunterbrook's OpenAI investment is carried by MT29. The corrected census cell names it and retains the original reader identifier as history; MT20 carries the Anthropic investment.
+C,nv8_recalls:data-line-2274,yes,The exact-prefix lexical screen leaves one no-chip cell that mentions candidate carriers. In the full Emptywheel HTML it is the author's State exclusion claim; MA294/MA348 do not carry that attribution. The retained reason is correct.
+C,Ed.N024,partial,"[table or text] B-Ed.N024: The census lines inherit the same wholly-unworded label as the group, although MA398 carries the attributed policy description from the same source. See the Part B check; one problem, not a second omission."
+C,2.NV2-319,partial,"[table or text] C-CONTROL-1: The group says wholly on no chip while acknowledging its one line as a cited passage of MA349. MA349 actually words the same Huawei-switch argument from the same Spectator page. Mark the group at least carried in part, retaining the unworded negotiating-leverage detail and its control status. No missing occasion is alleged."
+G:ad,A-MA179,yes,MA179/MA421 separate the undated later responses. Primary Bloomberg HTML and the bounded earlier-source search support Nov 9; the CBS sentence is already on MA105.
+G:ad,A-MA197,yes,"MA197 carries both French sentences, their fair English meaning and the pre-indictment clause."
+G:ad,P03,yes,The last column for l.17 corrects the historical no-reply label: no request is stated. The README/status distinguish this one from the nine supported requests.
+G:ad,P04,yes,"Ee.N019 is now open, carried in part: MA340/MA358 carry the geographic change and the separate risk warning remains unworded."
+G:ad,P05,partial,"[table or text] B-Ed.N024: The 43 summaries are registered by one code rule, but the claimed five-full/one-part/37-none comparison misses the same-source wording on MA398. The set-aside causal-summary boundary also needs the qualification B-ASIDE-1."
+G:ad,P06,yes,"k.118 now names MA207 for the same Axios deputy-level warnings, and the prose reduces the waiting unassigned records from four to three."
+G:ad,P07,yes,All five named relay cells retain their old class as history and add that no particular response occasion is established. No new act is claimed.
+G:ad,P08,yes,"Original post 2119845552732983572 is on MA422, Nov 9 Eastern, solid. The original point asked that this post be drawn; further omitted requested actions are A-MA422-1."
+G:ad,P09,yes,"Original post 2119830505298305049 is on MA423, Nov 9 Eastern, solid, with its conditional allegation. The further inquiry-request part is A-MA423-1."
+G:ad,P10,yes,"Original post 2119912406218318293 is on MA423, Nov 9 Eastern, solid; its company and public-interest criticism is preserved."
+G:ad,P11,yes,"Original post 2119829312811704407 is on MA424, Nov 9 Eastern, solid, with its quoted-headline context."
+G:ad,P12,yes,"Original post 2119972260685451366 is on MA424 on its Eastern Nov 9, with Bloomberg attribution. Its nested earlier post produces the separate MA18 finding."
+G:ad,P03,yes,"The current third-round prose says nine supported requests and one non-comment with no request, matching l.17 and the unchanged historical class."
+G:ad,P06,yes,"The text identifies one formerly waiting record as carried by MA207 and three still unassigned, matching the corrected k.118 cell."
+G:ad,P04,yes,"The table and current totals count Ee.N019 as open and partial, not fully carried; the geographic-change/risk-warning distinction is explicit."
+G:ad,actual unanswered-request records supported,yes,"The effective no-reply account is nine supported requests and one request not stated, while ten historical labels remain visible."
+G:ad,records still earlier rather than carried by a current chip,yes,"Of nine historical register-class records, k.118 is now carried; eight remain earlier candidates. The new column preserves both states."
+G:ad,unassigned records waiting with 167,yes,"The corrected waiting set has three unassigned records after k.118 is recognized as carried, matching the text."
+G:ad,E carriers in the present table (later changes included),partial,"[table or text] G-LIMIT-1: The linked audit and disposition retain the historical carrier-count explanation, but the README does not identify this specific old/current reconciliation as an audit remainder."
+G:ad,before-second-iteration dated acts,partial,"[table or text] G-LIMIT-1: The README says three older counts were not rebuilt, without identifying the 375-act baseline as one of them."
+G:ad,long pages reserved for excerpt reading,partial,"[table or text] G-LIMIT-1: The five-page backlog is disclosed, but the reader's inability to identify/reconcile that exact five is not stated in the README."
+G:ad,remarks readers not yet taken in,partial,"[table or text] G-LIMIT-1: The unread remarks results are disclosed, but this reading's inability to count the original result sets is not separately identified."
+G:ad,k.76,yes,k.76 has the new uncertainty qualification; the page does not identify one response occasion with the named chips.
+G:ad,k.118,yes,k.118 now records MA207 as carrying the same repeated deputy-level warnings.
+G:ad,k.194,yes,"k.194 now says the page supplies an undated position, not a proved specific relay occurrence."
+G:ad,l.17,yes,l.17 now records that the page states no request; the record remains undrawn without treating silence as refusal.
+G:ad,l.161,yes,"l.161 now points to MA421 on Nov 9, report-dated, for the undated Bloomberg response."
+G:ad,l.162,yes,"l.162 now points to MA421 on Nov 9, report-dated, for the undated FT-referral account."
+G:ad,m.119,yes,m.119 now states that the summary does not prove the response occurrence it relays.
+G:ad,m.188,yes,"m.188 now states the same occasion-identity limit, preserving the original class as history."
+G:ad,m.189,yes,"m.189 now states the same occasion-identity limit, with no new act drawn."
+G:ad,Eb.N019,yes,Eb.N019 is registered under the uniform unresolved-summary rule. Its pre-Oct-29 timing remains explicitly unproved.
+G:ad,P05,partial,[table or text] B-Ed.N024: Same P05 comparison overclaim and B-ASIDE-1 boundary; the registration mechanism itself is applied.
+G:ad,MA419 |  Anthropic account,yes,The twenty-ninth-reading section says no fuller copy was found in the saved texts; the linked gap bounds that search.
+G:ad,Ed.N037 | ms-g17-w1-yacnews-474f7a; ms-probes-fortune-liaw-075d04; ms-,no,"[table or text] G-LIMIT-1: The specific June-inquiry document identity gap is in the linked disposition, but is not identified in the README. A generic source-identity closing line does not tell a reader what remains unresolved."
+G:ad,C2 timing | Eb.N019; Ec.N004; Ec.N042; Ec.N033; Ee.N035,partial,"[table or text] G-LIMIT-1: The register descriptions retain timing uncertainty; the README gives only a generic source-identity limit, without identifying the five groups or their pre-Oct-29 cutoff issue."
+G:ad,F historical baseline | 375 dated acts before the second iteration,partial,[table or text] G-LIMIT-1: Same historical-baseline disclosure gap as the count disposition above.
+G:ad,F excerpt backlog | five long pages in README,partial,[table or text] G-LIMIT-1: Same unreconciled five-page backlog limit as the count disposition above.
+G:ad,A broader omissions | all whole sources read,yes,The README explicitly says the reading did not search all 950 groups for other wordings.
+G:ad,earlier audit context | REPORT-ab.md; REPORT-ac.md,no,[table or text] G-LIMIT-1: The README does not disclose that this reading did not reread the long remainder and every disposition of the two earlier audits as a census. The linked gap does.
+G:ad,F remarks readers | three remarks-reader result sets,partial,[table or text] G-LIMIT-1: Same uncounted remarks-result limit as the count disposition above.
+G:ae,P01,yes,MA396 now leaves allocation fairness unquoted as the author's paraphrase and quotes customer choice alone. The earlier claim that this was already repaired is explicitly corrected.
+G:ae,P04,yes,"MT20 now carries the technology partnership, design/engineering, Azure purchase, Copilot commitment and three-chief-executive gathering. MT71 carries the primary-cloud/training-partner statement."
+G:ae,P14,yes,"MT57 gives the essay's advocacy, claimed rejection by policymakers and speaking against government policy as the chief executive's own account."
+G:ae,P08,yes,"MT65 adds the lower review threshold, conditional additional allocation and enforcement funding, with the source's qualifications."
+G:ae,P03,yes,"MT70 adds the concentration-versus-monopoly distinction and room for open-weights models, with Fortune attribution and the adviser's caveat retained."
+G:ae,P02,yes,MT71 restores the law firm's According to public reporting qualification before the account of the directive's origin.
+G:ae,P05,partial,"[missing part] A-MT71-1: The main answer/remediation context is added, with attribution, but the specific new classifier and concrete testing/research measures requested by the original safeguard-improvements point remain unworded. The omission is recorded in Part A."
+G:ae,P16,yes,"MT74 gives the favorable district ruling, contrary appellate outcome, rehearing request and possible Defense Production Act use, with the filing's attribution."
+G:ae,P15,yes,"MT74 gives the company-attributed defense agreement, GSA offer, classified deployments and summit meeting. MT73 keeps its narrower senator-agreement claim and no-contact limit."
+G:ae,P19,yes,"MT70 gives opposition to the moratorium, federal preference, California support and startup exemption/answer as the company's account."
+G:ae,P06,yes,MT72 adds the separate 2023 licensing-agency proposal as the research centre recalls it; no precise hearing day is invented.
+G:ae,P07,yes,MT75 separates the earlier February interview from later company support; the less-immediate-concern wording is not called withdrawal.
+G:ae,P11,yes,The current census investment cell identifies MT20 for Anthropic and MT29 for OpenAI and explicitly corrects the earlier answer's overclaim.
+G:ae,P12,yes,MT67 carries the Standard's whole lawsuit/dismissal/arrest sentence and its missing-day/uncertain-link limits. MT76 adds the specified prospectus counterpart; further selective omissions are Part A findings.
+G:ae,P13,yes,"MT57 adds the 2024 proposed coalition's chip/equipment denial and reciprocal benefits, dated by the page's month. The original requested elements are present; the further military component is A-MT57-1."
+G:ae,P17,yes,"MT71 gives the earlier US/UK testing as a separate record, with only the relative date supported by Semafor."
+G:ae,P18,yes,"MT72 adds OpenAI's agreement to such testing, distinct from the later government-requested launch delay."
+G:ae,P20,yes,"MT75 carries Nvidia's announcement-period diffusion-rule criticism as the Register reports it, naming the officer by role."
+G:ae,P21,yes,MT75 gives Huang's April 30 briefing separately. The fundraiser and charge retain their existing open-register treatment.
+G:ae,P09,yes,"The latest README/status qualify the take-in and list unworded categories, including other-company records and the controls' particulars. They expressly say the old 114 was not recounted."
+G:ae,H-P10-TY021,yes,"TY021's embedded member-panel data now includes the amendment title and sponsor passages, exactly matching its evidence cells."
+G:ae,H-P10-TY088,yes,"TY088's embedded member-panel data now includes the official bill-purpose and amendment passages, exactly matching its evidence cells."
+G:ae,A-P03,yes,The earlier allocation-paraphrase repair overclaim is corrected by the actual MA396 change and the new disposition; the frozen earlier file is not silently rewritten.
+G:ae,B6-INVESTMENT-LINES,yes,"The current Hunterbrook census investment line now names the OpenAI carrier MT29, and the new disposition corrects the earlier both-lines claim."
+G:ae,MT29 | art-aspen-report,yes,The thirtieth-reading section expressly discloses the anthology was read only at cited passages.
+G:ae,MT57;A2:1–12 | ms-ag-amodei-adolescence,yes,The same paragraph expressly discloses that the long essays were not read whole.
+G:ae,A2:13–15 | ms-ag-amodei-loving-grace,yes,The same paragraph expressly discloses that the long essays were not read whole.
+G:ae,A2:barrier | ms-ag-axios-1016-sacks,yes,"The decoded Axios capture is readable and its charge, both outlet questions and political context are worded on MT70/MT74."
+G:ae,A2:barrier | ms-ag-implicator-lifts-controls,yes,The full archived Implicator page is readable; MT71/MT72 carry the specified origin/rebuttal and OpenAI preview material.
+G:ae,A2:video | ms-ag-anthropic-msft-nvda-1118,no,[table or text] G-LIMIT-1: The README does not disclose the missing transcript/unchecked speech in the partnership video. The linked disposition does.
+G:ae,B:6561 | billstatus-119-s4784; private lobbying filing d0b9f104-2212-,yes,The saved Congressional Record contains the amendment by the named senators and none of the five chip measures. Its antitrust/security-coordination content does not alter those measure counts.
+G:ae,B:2024-forerunners | lda-gov-nvidia-2024,no,[table or text] G-LIMIT-1: The README does not state the unresolved pedigree of H.R.8315 ENFORCE. Its statement that no 2024 record names the five later measures is narrower and does not disclose this limit.
+G:ae,F:historical populations | 28 and register history,yes,The README expressly says not every older count was rebuilt from launch records.
+G:ae,A1:comparable-statement | saved primary text*.txt search; cached search record in work,yes,The README expressly calls the comparable drawn-member statement search bounded.
+G:ae,A2:undated-sidebar-headlines | reader notes and saved visible HTML of the Nov17 pages,no,[table or text] G-LIMIT-1: The README does not identify the four undated sidebar leads and their missing underlying articles/days. They remain in the linked disposition.

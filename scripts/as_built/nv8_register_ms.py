@@ -36,6 +36,9 @@ SAME = {('b', 'N022'): 'B.10', ('b', 'N008'): 'B.11', ('d', 'N025'): 'B.13', ('b
 BUILDER_CARRIED = {('c', 'N042'): ('MT20', "a live page's sentence that he used the company's cash to back dozens of AI companies, 'including OpenAI and Anthropic'; the tie lines between Nvidia and each of the two give its investments in them, and the sentence adds no particular of either"),
                    ('d', 'N019'): ('MA69', "OpenAI's chip of Nov 4 gives the report itself, from the first saved relay of it"), ('d', 'N027'): ('MT66', "the line on Anthropic's row gives the senators' citation of the report")}
 KEPT_UNRESOLVED = 'no occasion'        # since the twenty-ninth reading: registered as unresolved, for every actor (the docstring's amendment)
+# the thirty-first reading (B-ASIDE-1): one summary its reader set aside as not the actor's rests on acts of the actor named. The page's sentence is "It's possible that smuggling has fallen since mid-2025 because of crackdowns in Malaysia and Taiwan":
+# the fall is the author's guess, the crackdowns are those governments' acts, and none is identified. It is registered as an unresolved record like the other summaries with no identifiable occasion (its reader's note says no crackdown can be identified).
+REREAD_UNRESOLVED = {('b', 'N021')}
 ASIDE = {'no occasion': 'its grouping reader found no identifiable occasion in it', "not the actor's": 'its grouping reader found it is not an act of the actor named', 'not on the matter': 'its grouping reader found it is not on the matter'}
 LABEL = 'egroup_nv8_{k} (a grouping reader of the earlier passages on pages another session saved, outside the table of counted pages)'
 LABEL_COUNTED = 'egroup_nv8_{k} (a grouping reader of earlier passages; this page is a counted page that a first reader was given as a test, and its census reader had not listed the passage)'
@@ -87,6 +90,7 @@ def load(reg_ids, all_ids):
                 base['target'] = gid; st['lines to an act the register holds'] += 1
             else:
                 g = G[gid]; aside = g['set_aside'].strip()
+                if (k, gid) in REREAD_UNRESOLVED: assert aside == "not the actor's", (k, gid, aside); aside = KEPT_UNRESOLVED
                 if (k, gid) in SAME: base['target'] = SAME[(k, gid)]; st['lines to an act the builder registered after the twenty-sixth reading'] += 1
                 elif aside and aside != KEPT_UNRESOLVED and (k, gid) not in BUILDER_CARRIED:        # a group about Anthropic or OpenAI that a row carries is marked carried even where its reader found no occasion in it
                     assert aside in ASIDE, (lane, gid, aside); base['disp'] = 'not registered: ' + ASIDE[aside]; st['lines of a group its reader set aside'] += 1
@@ -104,6 +108,7 @@ def load(reg_ids, all_ids):
                     used[nid] += 1; groups[nid]['counted_only'] &= on_counted
             lines.append(base)
     for (k_, gid_), (row_, _) in BUILDER_CARRIED.items(): assert row_ in all_ids, row_
+    assert all(f'E{k_}.{g_}' in groups for k_, g_ in REREAD_UNRESOLVED), 'a reread summary is not registered'
     assert same_seen == ON_COUNTED_SAME, (same_seen ^ ON_COUNTED_SAME); st['new acts recalled only by a counted page'] = sum(1 for g in groups.values() if g['counted_only'])
     st['new acts'] = len(groups); st['of them carried'] = sum(1 for g in groups.values() if g['disp']); st['of them, summaries with no identifiable occasion (unresolved)'] = sum(1 for g in groups.values() if g['no_occasion']); st['pages of the lines'] = len({l['page'] for l in lines}); st['lines'] = len(lines)
     return groups, lines, st
