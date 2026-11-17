@@ -33,6 +33,7 @@ READ1 = {
          
          ('bessent', '2026-11-11'): 'not on the matter: a remark of the day before on relations with China in general',
          ('blumenthal', '2026-11-04'): 'a notice of that Wednesday to those who had not cooperated with a range of his inquiries (Big Tech, cryptocurrency); the page does not tie it to this matter, and his re-issued warning of Thursday is on his chip for Nov 5',
+         ('cornyn', '2026-11-09'): 'his post on a defensive briefing, which a blog embeds with the day Nov 9: that is the post\'s day in UTC; its own stamp read as U.S. Eastern is the evening of Nov 8, and it is on his chip for Nov 8 (batch s10e)',
          ('crawford', '2026-11-09'): 'the page reports as issued "today" the chairmen\'s letter dated Nov 4, which the committee posted again on Nov 9: on the chips for Nov 5',
          ('megaspeed', '2026-11-05'): NOC, ('whitehouse', '2026-11-11'): NOC,
          ('himes', '2026-11-12'): 'his remarks to Politico, which that page dates to Thursday and the article itself to Wednesday: on his chip for Nov 11',
