@@ -252,6 +252,8 @@ READ3.update({'MA416': "the chip's day is that of the reporter's post (the eveni
 
 # readings for batch s9r (the third round of acts lanes, Nov 17)
 READ2.update({'MA28': 'the day word dates another member\'s statement ("said Monday", the House Democratic leader\'s), not this senator\'s answers to Semafor, to which the page gives no day; the chip sits on the day of Semafor\'s report, that Monday', 'MA419': 'the day word says when Reuters saw the emails ("late on Monday", Nov 9); the listing cited is of the morning of Nov 10, the chip\'s day, and no earlier saved page lists the report; neither gives the sending or the retraction a day, and the chip says so'})
+READ3.update({'MA69': "the chip's day is that of the Daily Caller's relay (Nov 4) of The Information's report of Nov 3; the pages listed are a newsletter of Nov 6 and its editor's post of Nov 5, which the chip names with their days and cites for their reading of the company's policy paper as a change after that report (added with the answer to the thirty-second reading)"})
+READ2.update({'MA432': "the day word dates the election (Democrats 'will likely hold more power in Washington after Tuesday', Nov 3), not the company's push or its lobbyist's interview, to which the page gives no day ('as Axios first reported'); the chip sits on the day of Semafor's page, that Tuesday (added with the answer to the thirty-second reading)"})
 
 MONTH = {'oct': 10, 'nov': 11}
 

@@ -1,0 +1,3 @@
+finding_id,grade,element_text,problem
+H-ANSWER-PANELS,ok,Changed company tie-line panels,"All 160 displayed passages across eight changed tie-line panels match an exact evidence.tsv passage of their own row. The displayed passage text was read. No undrawn private speaker, donor or lobbyist is named in these passages; source titles name a drawn analyst or a company chief in public context. MT78's substantive omission is in Part A, not a data mismatch."
+H-WITNESS,ok,Existing hearing witness heading,The unchanged heading identifies an already drawn public network participant. Keeping it complies with the rule in this brief; it does not disclose an otherwise undrawn employee or lobbyist.

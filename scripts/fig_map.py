@@ -683,7 +683,8 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
                 else:
                     c[n] = cy; solid.append((CAT[n][0], cy - hh / 2, CAT[n][2], hh))
         if 'Anthropic' in names:
-            ms = [c[t['b']] for t in tp if t['a'] == 'Anthropic' and t['b'] in c]; mid = (min(ms) + max(ms)) / 2; half = CAT['Anthropic'][3] / 2
+            ms = [c[t['b']] for t in tp if t['a'] == 'Anthropic' and t['b'] in c] or [yc[key_of[t['b']]] for t in tp if t['a'] == 'Anthropic' and t['b'] in by_name]        # s10j: in a panel where the company has lines into rows only (its line with Musk), it sits by those rows
+            mid = (min(ms) + max(ms)) / 2; half = CAT['Anthropic'][3] / 2
             c['Anthropic'] = min(range(math.ceil(lo + half), int(hi - half) + 1, 10), key=lambda y: (behind('Anthropic', y, 14, 0.62) + 0.004 * abs(y - mid), abs(y - mid)))
         SOLID[p] = [b for b in solid if b[0] >= X_INST - 200]          # the institutions' boxes and the dashed ones
         return OrderedDict((n, (CAT[n][0], c[n], CAT[n][2], CAT[n][3], CAT[n][4])) for n in CAT if n in names)
