@@ -11,7 +11,9 @@ The controls: acts taken out of the table of chips the reader was given, so that
 that does not call them missing is not relied on. The reader gave each group or act one verdict; the builder then checked every CANDIDATE
 against its saved page and wrote one disposition for each below (an act it is drawn on, or the reason it is not drawn). The other verdicts
 (carried, reason, not on the matter, outside the days, not the actor's) are the reader's and were not read again by the builder.
-Writes research/nv8_single_article_remarks.tsv and research/nv8_paraphrased_acts.tsv. Stops on a candidate with no disposition.
+  earlier_nv8_a (added after the twentieth reading)   a second reading, by a further reader, of the 67 groups and acts that the readers above had set aside as
+                'outside the days' (things said or done before Oct 29 that a page of these days reports); four acts held out as controls, three of which had an item.
+Writes research/nv8_single_article_remarks.tsv, research/nv8_paraphrased_acts.tsv and research/nv8_earlier_acts.tsv. Stops on a candidate with no disposition.
 Limits: these are the lines of the census readings, so a remark no census reader recorded is not here; the first two paraphrase readers were told
 to set aside what was said before Oct 29, so they did not look for reports of these days about an earlier act (the six later lanes were told to);
 and four of the six later lanes closed 'reading: incomplete', leaving acts with no verdict where the saved context did not settle which occasion a
@@ -122,6 +124,46 @@ PARA.update({
  ('h', 'A068'): 'not drawn: an unlocated recap; the page speaks of "financial coverage" and names no outlet, so it may be his remarks on the BBC (MA140) but that is not established (reason corrected after the twentieth reading)',
 })
 
+# ---- earlier_nv8_a: the second reading of what the readers above set aside as 'outside the days' (Nov 16, after the twentieth reading) ----
+# One disposition for each candidate of that reader, and for each item where the builder did not follow the reader's verdict. A report of these days about an
+# earlier act on the matter is drawn on the day of the first saved page that carries it, dashed, in words that say whose report it is and that the act is earlier.
+SUCC = (' (the reader called it not on the matter, under a brief whose definition of the matter left succession out; the figure draws acts on succession, '
+        'so the builder drew his earlier remarks on it, on the day of the first saved page that recalls them)')
+JRNL = (' on the Journal\'s row (its column of the evening of Nov 11); the refusal the column reports is now on the company\'s act of that day (MA195), and its act of Nov 12 (MA199) says so')
+TIE = 'carried: it is a tie line of the figure ({}), which the table of chips the reader was given did not show'
+EARLIER = {
+ 'single:G003': D('MA331'), 'a:A059': D('MA331') + ' (the same assurance as G003)', 'single:G108': D('MA332'), 'single:G184': D('MA332'), 'single:G055': D('MA336'),
+ 'a:A047': D('MA333') + ' (the reader\'s page is a later copy of the dispatch; the chip cites the earliest saved copy, of the same day)',
+ 'a:A054': D('MA334') + ' (one rule for every actor: a search of every counted page for a sum of money beside the word lobbying found CNBC\'s two reports of Nvidia\'s spending and no report of another actor\'s)',
+ 'a:A062': D('MA337'),
+ 'a:A076': D('MA338') + ' and, for the chief executive\'s remark in the same sentence, MA339; both on Nov 10, the day of the page that first relays the Axios report (the reader cited a page of Nov 11)',
+ 'single:G190': D('MA340') + JRNL, 'single:G238': D('MA340') + JRNL, 'single:G253': D('MA340') + JRNL, 'a:A041': D('MA340') + JRNL,
+ 'a:A053': TIE.format('Nvidia to President Trump, money: the gift to the ballroom project'),
+ 'a:A001': D('MA335'),
+ 'a:A082': D('MA335') + ' (the same response of Dec 10, 2025: the page links the report of that date; drawn on the day of the earlier page, which sets it against the reports of diversion)',
+ 'single:G116': D('MA341'), 'single:G279': D('MA341'), 'c:A028': D('MA342'), 'c:A048': D('MA342'), 'c:A044': D('MA343'), 'single:G217': D('MA344'), 'single:G082': D('MA346'),
+ 'single:G150': D('MA347') + ' (on Oct 29: a page of that day recalls the same statement of May 2025 in other words; the reader\'s page, of Nov 12, gives the words)',
+ 'single:G201': D('MA348'), 'd:A001': D('MA348'), 'single:G174': D('MA349'), 'd:A046': D('MA349'), 'single:G182': D('MA350'), 'g:A048': D('MA351'),
+ 'd:A057': 'carried: MA329 quotes it (an act held out of the reader\'s table as a control)',
+ 'g:A049': D('MA169') + ' (added to the department\'s act of that day, which already cited the page)',
+ 'h:A009': D('MA352'), 'h:A101': D('MA353'),
+ 'h:A025': D('MA112') + ' (the act had no day; it sits now on Oct 29, the day of the first saved page of these days that reports the letter, and carries the request for an investigation)',
+ 'h:A026': D('MA354'), 'h:A103': D('MA355'), 'h:A064': D('MA356'),
+ 'h:A102': D('MA357') + ' (on her row, on Oct 29, the day of the page; the reader proposed a part of the Times\'s act MA327 of Nov 5)',
+ 'h:A003': TIE.format('Anthropic, context: the remark at Davos'),
+ # items where the builder did not follow the reader
+ 'single:G222': D('MA345') + SUCC, 'single:G228': D('MA345') + SUCC,
+ 'single:G301': D('MA345') + ' (another line of the same interview; the chip names the interview and the page, and does not quote this line)' + SUCC,
+ 'single:G122': D('MA345') + ' (another line of the same interview; the chip names the interview and the page, and does not quote this line)' + SUCC,
+}
+SAME_INTERVIEW = 'not drawn: another answer of the interview whose remarks on succession are drawn (MA345); this one is on his management and the pressure of the post, as the reader said'
+EARLIER.update({'single:G065': SAME_INTERVIEW, 'single:G066': SAME_INTERVIEW, 'single:G087': SAME_INTERVIEW})
+E_CONTROL = {'a:A043': 'MA85', 'a:A078': 'MA85', 'c:A022': 'MA329', 'd:A022': 'MA330'}      # the items that only a held-out act carried
+# the first reader's two candidates for the response of Dec 10, 2025: drawn now, from another page
+NOW = (' (first set aside as the company\'s answer to a different claim in the page that carried it; another page of these days, of Nov 9, sets the same response of Dec 10, 2025 against the reports '
+       'of diversion through Southeast Asia, so it is drawn on that page\'s day and this page gives its words; changed after the second reading of the set-aside items)')
+ONE.update({'G203': D('MA335') + NOW, 'G229': D('MA335') + NOW})
+
 
 def scrub(t):
     for pat, role in SCRUB:
@@ -132,7 +174,7 @@ def scrub(t):
 
 def main():
     ids = {r['row_id'] for r in rows_map.rows()}
-    for v in list(ONE.values()) + list(PARA.values()):
+    for v in list(ONE.values()) + list(PARA.values()) + list(EARLIER.values()):
         for i in re.findall(r'MA\d+', v): assert i in ids, ('a disposition names an act that is not there', i)
     grp = {r['group_id']: r for r in csv.DictReader(open(L / 'single_nv8_a.groups.tsv'), delimiter='\t')}
     ctl = {r['group_id']: r for r in csv.DictReader(open(L / 'single_nv8_a.controls.tsv'), delimiter='\t')}
@@ -174,6 +216,28 @@ def main():
         w.writerow(['lane', 'act_as_the_reader_numbered_it', 'actor', 'census_lines_sorted_into_it', 'of_them_lines_only_a_held_out_act_carried', 'reader_verdict', 'chip_the_reader_named', 'what_it_is_in_the_reader_s_words', 'builder_disposition_of_a_candidate']); w.writerows(pout)
     print('paraphrased lines: ' + ' | '.join(f"{l}: lines {tot[(l, 'lines')]}, acts {tot[(l, 'acts')]}, candidates {tot[(l, 'candidates')]}, drawn {tot[(l, 'drawn')]}, no verdict {blank[(l, 'acts')]} acts ({blank[(l, 'lines')]} lines)" for l in 'abcdefgh'),
           '| all: lines', sum(tot[(l, 'lines')] for l in 'abcdefgh'), 'candidates', sum(tot[(l, 'candidates')] for l in 'abcdefgh'), 'drawn', sum(tot[(l, 'drawn')] for l in 'abcdefgh'))
+    # the second reading of the set-aside items
+    ein = {r['item']: r for r in csv.DictReader(open(L / 'earlier_nv8_a.items_in.tsv'), delimiter='\t')}; held = set((L / 'earlier_nv8_a.controls.txt').read_text().split())
+    eout = []; ec = Counter(); back = set()
+    for r in csv.DictReader(open(L / 'earlier_nv8_a.items.csv')):
+        i = ein[r['item']]; cand = r['verdict'].startswith('CANDIDATE'); k = r['item']
+        if k in E_CONTROL:
+            assert E_CONTROL[k] in held and cand, ('a held-out act the reader did not call a candidate', k); back.add(E_CONTROL[k]); disp = 'a planted control: the act was held out of the reader\'s table (' + E_CONTROL[k] + ')'; kind = 'control'
+        else:
+            if cand: assert k in EARLIER, ('a candidate with no disposition', k)
+            disp = EARLIER.get(k, ''); kind = 'drawn' if disp.startswith('drawn') else ('carried' if disp.startswith('carried') else ('not drawn' if disp else 'the reader\'s verdict stands'))
+            if r['chip'] and not disp: assert all(x in ids for x in re.findall(r'MA\d+', r['chip'])), ('the reader names a chip that is not there', k, r['chip'])
+        ec[kind] += 1
+        first = scrub(' '.join((i['first_reader_exact_words'] or r['exact_words']).split()[:14]))
+        eout.append([k, i['lane'], i['act_or_group'], i['actor'], i['page_id'].split()[0], first, 'outside the days', r['verdict'], r['chip'], r['report_day'], 'yes' if k in E_CONTROL else '', disp])
+    assert len(eout) == len(ein) == 67 and not set(EARLIER) - set(ein), 'an item with no row, or a disposition for no item'
+    with open(R / 'nv8_earlier_acts.tsv', 'w', newline='') as f:
+        w = csv.writer(f, delimiter='\t', lineterminator='\n')
+        w.writerow(['item', 'lane_of_the_first_reader', 'group_or_act_there', 'actor', 'page', 'first_words', 'first_reader_verdict', 'second_reader_verdict', 'chip_the_second_reader_named', 'report_day_the_second_reader_gave',
+                    'planted_control', 'builder_disposition']); w.writerows(eout)
+    drawn_acts = sorted({m for o in eout if o[11].startswith('drawn') for m in re.findall(r'MA\d+', o[11].split(' (')[0])}, key=lambda x: int(x[2:]))
+    print('set-aside items read again:', len(eout), '| reader verdicts', dict(Counter(o[7] for o in eout)), '| held-out acts', len(held), 'with an item', len(set(E_CONTROL.values())), 'found', len(back),
+          '| builder:', dict(ec), '| acts the drawn items sit on:', len(drawn_acts))
 
 
 if __name__ == '__main__':

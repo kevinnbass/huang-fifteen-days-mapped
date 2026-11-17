@@ -37,7 +37,6 @@ READ1 = {
          ('megaspeed', '2026-11-05'): NOC, ('whitehouse', '2026-11-11'): NOC,
          ('himes', '2026-11-12'): 'his remarks to Politico, which that page dates to Thursday and the article itself to Wednesday: on his chip for Nov 11',
          ('huang', '2026-10-30'): 'one page dates to Oct 30 what he said of Megaspeed\'s deployments; it is the interview on his chip for Oct 29 (the interviewer\'s own page is dated Oct 29)',
-         ('huang', '2026-11-10'): 'not an act on the matter: a staff meeting about a product keynote, in one paper\'s account',
          ('kudlow', '2026-11-11'): 'his call of Nov 10 for Huang to step down, mentioned the next day: on his chip for Nov 10',
          ('mcguire', '2026-11-07'): 'his thread of Nov 6, on a copy stamped the next day: on his chip for Nov 6',
          ('nvidia', '2026-11-02'): 'not on the matter: a statement on data-centre policy in a report that does not mention the affair',
