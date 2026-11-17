@@ -240,11 +240,22 @@ G_BUILDER = {
 # chips that also carry a group since Nov 17, added to what its reader named
 G_BUILDER['4.NV4-017'] = ('carried since Nov 17: MA365 (the Times\'s report of Nov 7, which its relay of that day repeats, gives the forecast of August that assumed no sales to China; the builder quoted the sentence on the chip and left this group open, which the twenty-third reading found)')
 G_BUILDER['6.NV6-049'] = ('carried since Nov 17: MA72 (Singapore\'s chip of Nov 12 gives, since the nine pages were added, its ministry\'s own sentence that the inquiry began in February 2025; this group\'s one line is the Journal\'s account of that statement. The builder found this by its own search of the open groups before the release)')
+# the twenty-fifth reading compared the open groups of Huang, the president and the White House with the chips: nine groups are worded in full by the Times's first report, three in part (G_PART below)
+PHOTOS = ('carried since Nov 17: MA01 (the Times\'s first report gives the photographed occasions this group recalls, at a bar in Taipei in June 2024 and leaving a restaurant there in May 2025; '
+          'the twenty-fifth reading found the group worded in full by that chip)')
+G_BUILDER.update({k: PHOTOS for k in ('1.U002', '1.U005', '1.U006', '1.U007', '1.U008', '1.U021', '1.U030', '1.U031', '2.NV2-195')})
+# Nvidia's investment in OpenAI and the delivery of 2016 are on the tie line between the two since the answer to the twenty-fifth reading, which noted that the investment in Anthropic was drawn and these were not
+G_BUILDER['B.05'] = ('carried since Nov 17: MT29 (the tie line between Nvidia and OpenAI now gives the investment, from TechCrunch and Hunterbrook; registered by the builder after the twenty-second reading and drawn after the twenty-fifth, '
+                     'which noted that the investment in Anthropic was drawn and this one was not)')
+G_BUILDER['B.08'] = 'carried since Nov 17: MT29 (the tie line between Nvidia and OpenAI now gives the delivery of 2016, from Yahoo Finance and CNN; registered by the builder after the twenty-fourth reading and drawn after the twenty-fifth)'
 # groups that stay open and that a chip words in part (the twenty-fourth reading): what the chip words, and what stays on no chip
 APPROVALS = ('MA31, MA152 (the letter of Nov 12 by Sen. Wyden and Rep. Neal, whose footnote cites the Times\'s report of Nov 7, attacks the department\'s approvals of sales to Chinese companies "with government and military ties", and the two chips quote it; the approvals themselves, the buyers and what the pages say of each are on no chip)')
 G_PART = dict({k: APPROVALS for k in ('6.NV6-013', '6.NV6-083', '6.NV6-084', '6.NV6-085', '6.NV6-086', '6.NV6-087', '6.NV6-088', '6.NV6-089', '6.NV6-090')},
               **{'6.NV6-019': 'MA101 (the Times\'s chip of Nov 9 quotes that officials "rapidly disclosed it to partner law enforcement agencies"; the meetings the group also recalls are on no chip)'})
 G_ALSO = {'4.NV4-012': 'MA365', '6.NV6-063': 'MA362', '3.MS44': 'MA360', '4.NV4-111': 'MA360', '1.G001': 'MA01', '1.G002': 'MA01'}
+G_PART.update({'1.U033': 'MA01 (the Times\'s first report gives the photograph at a bar in Taipei in June 2024; the second photograph this page recalls, of the following May, is not identified with the restaurant the chip gives)',
+               '1.U048': 'MA01 (the Times\'s first report gives the restaurant in Taipei in May 2025, which this page\'s caption names; the photograph of 2024 it also recalls is not identified)',
+               '2.NV2-197': 'MT57 (the tie line gives his answer on a podcast to the nuclear analogy, "Lunacy"; the five-layer explanation the page also recalls is on no chip)'})        # the twenty-fifth reading
 G_AFTER = {'4.NV4-012': '; MA333 was withdrawn after the twenty-second reading as a duplicate of MA365, which carries the disclosure on the Times\'s row at Nov 7 with the filing\'s two other statements that this group\'s lines give',
            '6.NV6-021': '; the chip its reader named gave the halt and the transfer but not who asked for the pause, and since the twenty-second reading it quotes the Times\'s sentence that the Justice Department requested it',
            '1.G001': '; the chips its reader named give the gathering only through the company\'s explanation, and since Nov 17 the Times\'s first report (MA01) words the gathering itself',
@@ -291,6 +302,14 @@ R_ADDED_MORE = [('sw-venturebeatcom-01', 'nvidia', 'nvidia', 'neither', 'B.04', 
                 ('man-reuters-1111-06', 'commerce', 'commerce', 'against the administration', 'B.06', LBA), ('man-c9469105da89', 'commerce', 'commerce', 'against the administration', 'B.06', LBA)]
 # the delivery of 2016: the twenty-fourth reading found it in one profile; the builder's scan of the counted pages found it in six more
 R_ADDED_MORE += [(pg, 'huang', 'huang', 'neither', 'B.08', LB24) for pg in ('sw-cnncom-02', 'art-fc-ht-econ-1109-survive', 'man-5dbffa3344fb', 'man-ft-1112-05', 'sw-financeyahoocom-30', 'sw-sfstandardcom-06', 'sw-teslaraticom-01')]
+# the twenty-fifth reading: a later delivery in the same paragraph as the delivery of 2016; one more page that recalls the delivery of 2016; a page whose census reader had not listed the appointment to the president's council
+ADDED_25 = ' (registered and coded by the builder after the twenty-fifth reading, which found it in the same paragraph as the delivery of 2016; no census line held it, and a search of the saved text of the counted pages found no other page that recalls it)'
+G_NEW['B.09'] = {'actor': 'huang', 'what': 'Huang delivered one of the first units of Nvidia\'s desktop-size DGX Spark to Elon Musk at SpaceX\'s Starbase facility in Texas.', 'when': 'Nearly a decade after 2016, as the page gives it; no date.',
+                 'kind': 'event', 'first_reported': 'unclear', 'row_it_belongs_on': 'huang', 'direction': 'neither'}
+G_NEW_NOTE['B.09'] = ADDED_25
+LB25 = 'added by the builder (twenty-fifth reading)'
+R_ADDED_MORE += [('sw-financeyahoocom-30', 'huang', 'huang', 'neither', 'B.09', LB25), ('cnn-1111-live', 'huang', 'huang', 'neither', 'B.08', LB25 + '; the three entries that recall it are stamped Nov 12, a day after the page\'s day in the table'),
+                 ('sw-implicatorai-02', 'huang', 'huang', 'neither', '2.NV2-285', LB25), ('sw-implicatorai-02', 'trump', 'trump', 'for Huang or Nvidia', '5.NV5-073', LB25)]
 # lines the census readers did not list, added by the builder after the twenty-second reading: (page, actor, row, direction, earlier act). The first two are pages whose reader missed an act that other pages' lines hold
 R_ADDED = ([('sw-breitbartcom-08', 'nvidia', 'nvidia', 'for Huang or Nvidia', '4.NV4-004'), ('sw-implicatorai-01', 'megaspeed', 'megaspeed', 'against Huang or Nvidia', '3.MS01'), ('man-ft-1112-03', 'ft', 'ft', 'against Huang or Nvidia', 'B.01')]
            + [(pg, 'nvidia', 'nvidia', 'neither', 'B.02') for pg in ('sw-techcrunchcom-04', 'prospect-honeypot', 'sw-hntrbrkcom-01', 'sw-bitcoininsiderorg-04', 'sw-cnbccom-09', 'sw-financeyahoocom-31', 'sw-techcrunchcom-15', 'sw-venturebeatcom-01', 'man-cf6650e331b3')]
@@ -441,7 +460,7 @@ def main():
         else: g_disp[k] = G_OPEN + G_CTL_NOTE.get(k, '') + G_NOTE.get(k, '') + G_NEW_NOTE.get(k, '')
     assert set(G_NEW_NOTE) == set(G_NEW) and not set(G_PART) - set(grp) and all(g_disp[k].startswith('open, carried in part') for k in G_PART), 'a group to mark carried in part is not there, or another list took it'
     assert not (set(G_BUILDER) | set(G_ALSO) | set(G_CTL_NOTE) | set(G_AFTER) | set(G_REOPEN) | set(G_FIRST) | set(G_NOTE)) - set(grp), 'a reading for a group that is not there'
-    assert all(g_disp[k].startswith('carried') for k in list(G_ALSO) + list(G_AFTER)) and all(g_disp[k].startswith('open') for k in list(G_NOTE) + list(G_NEW)), 'a note on a group of the other kind'
+    assert all(g_disp[k].startswith('carried') for k in list(G_ALSO) + list(G_AFTER)) and all(g_disp[k].startswith('open') for k in list(G_NOTE) + [x for x in G_NEW if x not in G_BUILDER]), 'a note on a group of the other kind'
     assert all(any(i in all_ids for i in re.findall(r'M[AT]\d+', v)) for v in G_BUILDER.values()) and all(v in all_ids for v in G_ALSO.values())
     rout = []; rc = Counter(); used = Counter(); used_late = Counter(); used_wd = Counter()
     for n, r in enumerate(pool):
@@ -467,8 +486,8 @@ def main():
     assert all(used_wd[k] for k in R_WD), ('a disposition for no line', [k for k in R_WD if not used_wd[k]])
     art = {r['page_id']: r for r in csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t')}
     for page, actor, row, direction, k, *lab_ in R_ADDED + R_ADDED_MORE:        # lines no census reader listed: they join the act they belong to, with the lane column saying whose they are
-        assert k in grp and g_disp[k].startswith('open') and art[page]['counted'] == 'yes' and '2026-10-29' <= art[page]['day'] <= '2026-11-12', (page, k)
-        rc[('CANDIDATE occasion', 'open')] += 1; g_lines[k] += 1
+        assert k in grp and (g_disp[k].startswith('open: ') or k in G_BUILDER) and art[page]['counted'] == 'yes' and '2026-10-29' <= art[page]['day'] <= '2026-11-12', (page, k)        # an act the builder registered can since be drawn (B.05, B.08)
+        rc[('CANDIDATE occasion', g_disp[k].split(':')[0])] += 1; g_lines[k] += 1
         rout.append([lab_[0] if lab_ else 'added by the builder (twenty-second reading)', page, art[page]['day'], actor, 'CANDIDATE occasion', '', row, direction, g_disp[k], k])
     assert all(used_late[i] for i in range(len(R_LATE))), ('a disposition for no line', [R_LATE[i][:3] for i in range(len(R_LATE)) if not used_late[i]])
     assert all(used[d[:3]] for d in R_DONE), ('a line the builder says it acted on is not in the pool', [d[:3] for d in R_DONE if not used[d[:3]]])

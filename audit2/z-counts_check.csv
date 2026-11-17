@@ -1,0 +1,192 @@
+what,figure_says,you_find,agree,note
+all act rows,369,369,yes,Independent row-type/withdrawal/actor-day grouping; published row tables agree with JSON.
+withdrawn acts,3,3,yes,Independent row-type/withdrawal/actor-day grouping; published row tables agree with JSON.
+active dated acts,366,366,yes,Independent row-type/withdrawal/actor-day grouping; published row tables agree with JSON.
+chips,226,226,yes,Independent row-type/withdrawal/actor-day grouping; published row tables agree with JSON.
+dashed chips,58,58,yes,Independent row-type/withdrawal/actor-day grouping; published row tables agree with JSON.
+acts dated by report,148,148,yes,Independent row-type/withdrawal/actor-day grouping; published row tables agree with JSON.
+active chip texts saying may be newer,3,3,yes,Independent row-type/withdrawal/actor-day grouping; published row tables agree with JSON.
+tie rows,87,87,yes,Independent row-type/withdrawal/actor-day grouping; published row tables agree with JSON.
+member lines,150,150,yes,Independent row-type/withdrawal/actor-day grouping; published row tables agree with JSON.
+rows JSON/public TSV equivalence,2901,2901,yes,"Every id, text, ordered source and passage list checked."
+register groups,780,780,yes,Literal frozen coding; semantic carriage findings may require recoding.
+register carried groups,57,57,yes,Literal frozen coding; semantic carriage findings may require recoding.
+register open groups,723,723,yes,Literal frozen coding; semantic carriage findings may require recoding.
+register marked carried in part,10,10,yes,Literal frozen coding; semantic carriage findings may require recoding.
+census lines,2899,2899,yes,Literal frozen coding; semantic carriage findings may require recoding.
+lines added after census,44,44,yes,Literal frozen coding; semantic carriage findings may require recoding.
+direct open candidate lines,1140,1140,yes,Literal frozen coding; semantic carriage findings may require recoding.
+direct open pages,535,535,yes,Literal frozen coding; semantic carriage findings may require recoding.
+open group line sum,1143,1143,yes,Literal frozen coding; semantic carriage findings may require recoding.
+open group controls,1,1,yes,Literal frozen coding; semantic carriage findings may require recoding.
+direct open carried-in-part lines,12,12,yes,Literal frozen coding; semantic carriage findings may require recoding.
+open groups / kind / decision,124,124,yes,
+open groups / kind / event,207,207,yes,
+open groups / kind / money,13,13,yes,
+open groups / kind / other,61,61,yes,
+open groups / kind / statement,318,318,yes,
+open groups / first_reported / before,193,193,yes,
+open groups / first_reported / in these days,66,66,yes,
+open groups / first_reported / unclear,464,464,yes,
+open groups / which_way_the_reader_says_it_cuts / against Huang or Nvidia,285,285,yes,
+open groups / which_way_the_reader_says_it_cuts / against the administration,39,39,yes,
+open groups / which_way_the_reader_says_it_cuts / for Huang or Nvidia,180,180,yes,
+open groups / which_way_the_reader_says_it_cuts / for the administration,31,31,yes,
+open groups / which_way_the_reader_says_it_cuts / neither,188,188,yes,
+open census lines / direction / against Huang or Nvidia,577,577,yes,
+open census lines / direction / against the administration,109,109,yes,
+open census lines / direction / for Huang or Nvidia,172,172,yes,
+open census lines / direction / for the administration,42,42,yes,
+open census lines / direction / neither,240,240,yes,
+pages,1324,1324,yes,
+article ids,1244,1244,yes,
+counted pages,1238,1238,yes,
+counted articles,1163,1163,yes,
+counted pages held in part,100,100,yes,
+"other-session pages / ('', False, '')",768,768,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('', True, '')",18,18,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('no', False, 'address')",48,48,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('no', False, 'first date in the text (to be read)')",171,171,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('no', False, 'header stamp')",545,545,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('no', True, 'header stamp')",4,4,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('yes', False, 'address')",16,16,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('yes', False, 'first date in the text (to be read)')",34,34,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('yes', False, 'header stamp')",210,210,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('yes', True, 'address')",3,3,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('yes', True, 'first date in the text (to be read)')",3,3,yes,First sorting only; header stamp does not prove full-body availability or article date.
+"other-session pages / ('yes', True, 'header stamp')",22,22,yes,First sorting only; header stamp does not prove full-body availability or article date.
+report-day screen / a copy of the same article lacks a cited passage,6,6,yes,
+report-day screen / a day word near a cited passage in its own source,78,78,yes,
+report-day screen / an earlier page holds a cited passage,12,12,yes,
+report-day screen / another saved page gives another day,27,27,yes,
+report-day screen / its page was changed after the chip's day,35,35,yes,
+report-day screen / the day of its page is an update's,5,5,yes,
+screen readings may be newer,15,15,yes,
+nine-page records / reader_verdict / CANDIDATE occasion,24,24,yes,
+nine-page records / reader_verdict / CANDIDATE part,8,8,yes,
+nine-page records / reader_verdict / carried,88,88,yes,
+nine-page records / builder_disposition / (blank),71,71,yes,
+nine-page records / builder_disposition / a planted control,3,3,yes,
+nine-page records / builder_disposition / drawn,12,12,yes,
+nine-page records / builder_disposition / not drawn,11,11,yes,
+nine-page records / builder_disposition / not registered,2,2,yes,
+nine-page records / builder_disposition / open,4,4,yes,
+"nine-page records / builder_disposition / the page is of Nov 15 or 16, outside the days, and was not added",17,17,yes,
+set-aside items / second_reader_verdict / CANDIDATE occasion,39,39,yes,
+set-aside items / second_reader_verdict / CANDIDATE part,5,5,yes,
+set-aside items / second_reader_verdict / carried,8,8,yes,
+set-aside items / second_reader_verdict / not an act of the actor,1,1,yes,
+set-aside items / second_reader_verdict / not on the matter,14,14,yes,
+set-aside items / builder_disposition / (blank),13,13,yes,
+set-aside items / builder_disposition / a planted control,4,4,yes,
+set-aside items / builder_disposition / carried,4,4,yes,
+set-aside items / builder_disposition / drawn,43,43,yes,
+set-aside items / builder_disposition / not drawn,3,3,yes,
+nv8_actor_days.tsv rows,20,20,yes,
+nv8_remarks_no_chip.tsv rows,10,10,yes,
+lookups / analysts / quoted on the saved pages (a person or firm written two ways counted once),282,282,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / analysts / drawn,16,16,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+"lookups / analysts / not drawn: at a bank, not drawn",17,17,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / analysts / not drawn: cannot tell,1,1,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+"lookups / analysts / not drawn: name match, not settled",1,1,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / analysts / not drawn: none found,234,234,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / analysts / not drawn: none found for the person,5,5,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / analysts / not drawn: not drawn,8,8,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / bylines / pairs of outlet and name,966,966,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / bylines / different names,888,888,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / bylines / pairs that are an agency or not a person's name,84,84,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / bylines / names that are an agency or not a person's name,75,75,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / bylines / pairs: cannot tell,84,84,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / bylines / pairs: drawn,5,5,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+"lookups / bylines / pairs: name match, not settled",4,4,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / bylines / pairs: none found,871,871,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+"lookups / bylines / pairs: record of another kind, not drawn",2,2,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / bylines / different names drawn,5,5,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+"lookups / banks / named by Quartz on Sep 4, 2026 as lenders to Anthropic",17,17,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+"lookups / banks / of those, with an analyst, a note or an executive quoted on the saved pages",11,11,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / investors / quoted and described on the pages as holding or shorting Nvidia shares,2,2,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+"lookups / remarks / of drawn actors, on two or more pages",524,524,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+"lookups / remarks / carried in other words, by the audit",42,42,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / remarks / not his remark,3,3,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / remarks / not of these days,14,14,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / remarks / not printed,3,3,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / remarks / partly on a chip,15,15,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / remarks / partly on chip,40,40,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+lookups / remarks / printed on a chip,243,243,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+"lookups / remarks / same statement as a chip, not printed",164,164,yes,Literal table cell; unchanged against previous frozen copy. No renewed regulator/name-search audit.
+member articles / Sen. Elizabeth Warren,72,72,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Chris Coons,49,49,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Kevin Cramer,22,22,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Chuck Schumer,22,22,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Jim Banks,19,19,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Richard Blumenthal,3,3,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Mark Warner,4,4,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. John Cornyn,9,9,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. John Kennedy,7,7,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. John Thune,13,13,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Ron Wyden,6,6,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Tom Cotton,6,6,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Tim Scott,4,4,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Sen. Pete Ricketts,5,5,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Brian Mast,93,93,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Rick Crawford,68,68,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Gregory Meeks,9,9,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Jim Himes,8,8,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Bill Huizenga,4,4,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Mike Johnson,11,11,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. John Moolenaar,78,78,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Hakeem Jeffries,30,30,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Seth Magaziner,4,4,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Suhas Subramanyam,3,3,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Don Bacon,3,3,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Michael McCaul,5,5,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+member articles / Rep. Richard Neal,4,4,yes,Distinct article ids in story_pages.tsv; naming decisions inherited. Frozen story_pages unchanged.
+blind-spot present population,4185,4185,yes,Independent token/run computation from all census lines and active JSON acts; actor assignment inherited; removal of MA56 is positive control.
+population cells changed since prior copy,0,0,yes,
+refusal acts,29,29,yes,"Frozen finder/list coding, not completeness. New sampled refusal is outside the finder inputs."
+refusal actors,11,11,yes,"Frozen finder/list coding, not completeness. New sampled refusal is outside the finder inputs."
+refusal finder census lines,133,133,yes,"Frozen finder/list coding, not completeness. New sampled refusal is outside the finder inputs."
+refusal finder inside,60,60,yes,"Frozen finder/list coding, not completeness. New sampled refusal is outside the finder inputs."
+refusal finder outside,73,73,yes,"Frozen finder/list coding, not completeness. New sampled refusal is outside the finder inputs."
+outside actor/article pairs,63,63,yes,"Frozen finder/list coding, not completeness. New sampled refusal is outside the finder inputs."
+outside labelled relays,60,60,yes,"Frozen finder/list coding, not completeness. New sampled refusal is outside the finder inputs."
+outside labelled nonrefusals,13,13,yes,"Frozen finder/list coding, not completeness. New sampled refusal is outside the finder inputs."
+B5 pages with a proved census omission,diagnostic sample,1/13 (7.7%),yes,Rate of the explicitly identified positives; not a population completeness estimate.
+C2 selected pages with a proved missing occasion,diagnostic sample,6/30 (20.0%),yes,Rate of the explicitly identified positives; not a population completeness estimate.
+C2 whole-body pages with a proved missing occasion,diagnostic sample,6/29 (20.7%),yes,Rate of the explicitly identified positives; not a population completeness estimate.
+C2 selected pages affected including the Coons date,diagnostic sample,7/30 (23.3%),yes,Rate of the explicitly identified positives; not a population completeness estimate.
+D3 completed strict eligible statements with a further part,diagnostic sample,0/3 (0.0%),yes,Rate of the explicitly identified positives; not a population completeness estimate.
+open-group semantic classification after P04 alone,57 carried /723 open /10 partial,66 carried /714 open /13 partial,no,Conditional recoding of the twelve identified groups only; before adding new source exposures or acts.
+register-derived lookup / analysts / quoted on the saved pages (a person or firm written two ways counted once),282,282,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / analysts / drawn,16,16,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+"register-derived lookup / analysts / not drawn: at a bank, not drawn",17,17,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / analysts / not drawn: cannot tell,1,1,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+"register-derived lookup / analysts / not drawn: name match, not settled",1,1,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / analysts / not drawn: none found,234,234,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / analysts / not drawn: none found for the person,5,5,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / analysts / not drawn: not drawn,8,8,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / bylines / pairs of outlet and name,966,966,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / bylines / different names,888,888,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / bylines / pairs that are an agency or not a person's name,84,84,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / bylines / names that are an agency or not a person's name,75,75,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / bylines / pairs: cannot tell,84,84,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / bylines / pairs: drawn,5,5,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+"register-derived lookup / bylines / pairs: name match, not settled",4,4,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / bylines / pairs: none found,871,871,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+"register-derived lookup / bylines / pairs: record of another kind, not drawn",2,2,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / bylines / different names drawn,5,5,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+"register-derived lookup / remarks / of drawn actors, on two or more pages",524,524,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+"register-derived lookup / remarks / carried in other words, by the audit",42,42,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / remarks / not his remark,3,3,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / remarks / not of these days,14,14,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / remarks / not printed,3,3,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / remarks / partly on a chip,15,15,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / remarks / partly on chip,40,40,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+register-derived lookup / remarks / printed on a chip,243,243,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+"register-derived lookup / remarks / same statement as a chip, not printed",164,164,yes,Recomputed from saved gap-register records; semantic statuses inherited.
+post-base historical acts excluding duplicate withdrawals,234,234,yes,"MA134..MA369, minus MA305/MA333; includes the separately withdrawn selection MA137. This is the stated historical, not active, cohort."
+post-base currently active acts,233,233,yes,"Also excludes MA137, whose withdrawal is for article-count admission, not duplication."
+triage folders with text file,1842,1842,yes,
+register-derived banks named in lender list,17,17,yes,Seventeen entries counted in the saved bank-name/alias list.
+register-derived quoted lender banks,11,11,yes,Eleven distinct saved bank labels matched to register names/roles; former roles excluded.
+register-derived Nvidia investor speakers,2,2,yes,"All census roles considered, not only each speaker’s commonest register role; exact normalized saved speaker/name/key joins."

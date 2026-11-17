@@ -71,7 +71,7 @@ READ1 = {'MA179': 'not the same act: other statements of the company, of other d
 READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109', 'MA125', 'MA128', 'MA130', 'MA150', 'MA158',
                                  'MA199', 'MA200', 'MA201', 'MA202', 'MA203', 'MA206', 'MA210', 'MA212', 'MA213', 'MA219', 'MA207', 'MA237', 'MA250',
                                  'MA251', 'MA256', 'MA257', 'MA261', 'MA266', 'MA268', 'MA270', 'MA274', 'MA275', 'MA280', 'MA283', 'MA284', 'MA286', 'MA288',
-                                 'MA301', 'MA302', 'MA307', 'MA308', 'MA309', 'MA312', 'MA313', 'MA319', 'MA320', 'MA324', 'MA328', 'MA330')},
+                                 'MA301', 'MA302', 'MA307', 'MA309', 'MA312', 'MA313', 'MA319', 'MA320', 'MA324', 'MA328', 'MA330')},
              MA317='"Sunday" is the day of Huang\'s admission. The page, published on the evening of Wednesday Nov 11, says analysts were "reacting to the news in real time", which suggests the remark is of that day, but it gives the remark itself no day: the edge stays dashed',
              MA316='"today" is Electronics Weekly\'s own word, in a page stamped 06:13 UTC on Nov 12 (01:13 in the eastern United States): the report\'s day, and the chip says the page does not tell whether it means the session of Wednesday night; "Wednesday" is Semafor\'s day for that session (the board\'s chip of Nov 11)',
              MA211='the day word ("today", Nov 9) is that of the Wired report as the relaying page gives it; the hiring itself has no day, and another saved page says he hired the firm "as early as last year"',
@@ -213,6 +213,14 @@ def eastern(s):
     off = m.group(4) or 'Z'; h, mi = (0, 0) if off == 'Z' else (int(off[:3]), int(off[0] + off[-2:]))
     return (datetime.datetime.fromisoformat(f'{m.group(1)}T{m.group(2)}:{m.group(3)}') - datetime.timedelta(hours=h, minutes=mi) - datetime.timedelta(hours=5)).date().isoformat()
 
+
+# readings for the acts added or amended in answer to the twenty-fifth reading (Nov 17)
+READ1.update({'MA374': 'not the same response: other refusals of the company, on other days, that share only the words of refusal with this one',
+              'MA376': 'not the same act: the line of Nov 12 is the White House\'s statement of confidence in the Commerce secretary, which shares only the words "White House officials told" with this one'})
+TUESDAY = 'the day word is that of The Information\'s report (Tuesday, Nov 3), which the chip states; the relay that carries it is of Nov 4, the chip\'s day, and the report gives the act itself no day'
+READ2.update({'MA69': TUESDAY, 'MA372': TUESDAY})
+READ3.update({'MA376': 'the chip\'s day is that of the reporter\'s post (the evening of Nov 9, Eastern); the two pages listed are the later relays the chip names with their own days (Nov 10 and Nov 11)',
+              'MA378': 'may be newer: the page was first published on Nov 12 and changed on Nov 13, and no other saved page carries the refusal; the chip says so'})
 
 MONTH = {'oct': 10, 'nov': 11}
 

@@ -1,0 +1,6 @@
+finding_id,grade,element_text,problem
+H-ALL,ok,366 acts; 87 ties; 150 member lines; 2245 pieces,"Exact identities, days, words and act edges; all act passage sets; withdrawn acts absent. Deliberately altered words fail the comparison."
+H-MA84,ok,MA84,"Site data reproduces the row day, words, edge and source passages. Source-content findings are in findings.csv."
+H-MA151,ok,MA151,"Site data reproduces the row day, words, edge and source passages. Source-content findings are in findings.csv."
+H-MA367,ok,MA367,"Site data reproduces the row day, words, edge and source passages. Source-content findings are in findings.csv."
+H-MA369,ok,MA369,"Site data reproduces the row day, words, edge and source passages. Source-content findings are in findings.csv."
