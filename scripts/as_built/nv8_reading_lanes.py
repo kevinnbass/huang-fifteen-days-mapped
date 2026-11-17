@@ -199,6 +199,7 @@ R_DONE = [
  ('sw-sfexaminercom-02', 'kress', 'In 2023, she said on a call', 'drawn: MA364 (on the Times\'s row, from its profile of the interim chief)'),
  ('man-nyt-1029-01', 'huang', 'He also negotiated a deal with Mr. Trump', 'drawn: MA330 (the permission and the government\'s share, on the day of this page; the chip quotes this sentence)'),
  ('man-nyt-1029-01', 'trump', 'He also negotiated a deal with Mr. Trump', 'drawn: MA330 (the permission and the government\'s share, on the day of this page; the chip quotes this sentence)'),
+ ('sw-semaforcom-19', 'huang', 'largely neutral tenor', 'drawn: on MA344 (the review\'s finding for the years before 2025, with the words that it scored the interviews with AI models of Anthropic and OpenAI)'),
 ]
 # chips the readers named as carrying a line from a page EARLIER than the chip's day, and what the builder did
 R_EARLY = {
@@ -215,6 +216,7 @@ R_EARLY = {
  'MA169': 'carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department\'s chip of Oct 29 (MA362) and the Journal\'s first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed',
 }
 R_OPEN = 'open: not yet grouped or drawn'
+NOT_VALID_CTL = {'MA327'}        # its earlier part (a refusal of June) is carried by two other chips, as its reader said: not a test of that reader
 G_OPEN = 'open: on no chip; not drawn until the owner decides what the image should carry'
 # groups of the six grouping lanes that the builder reads otherwise than their reader did: chips drawn or amended on Nov 17, after the lanes' tables were frozen
 G_BUILDER = {
@@ -224,6 +226,7 @@ G_BUILDER = {
  '4.NV4-101': 'carried since Nov 17: MA364 (on the Times\'s row; this is the page the chip cites)',
  '6.NV6-007': 'carried since Nov 17: MA06 (the Journal\'s first report; Singapore\'s denial is on its chip of Oct 30)',
  '6.NV6-008': 'carried since Nov 17: MA06 (the Journal\'s first report)',
+ '2.NV2-227': 'carried since Nov 17: MA344 (the chip that relays the review now gives its finding for the years before 2025, and says the review scored the interviews with AI models of Anthropic and OpenAI)',
  '4.NV4-115': 'carried since Nov 17: MT20 (the tie line between Anthropic and Nvidia now gives the page\'s sentence on the interim chief\'s part in financing deals)',
 }
 # chips that also carry a group since Nov 17, added to what its reader named
@@ -344,14 +347,13 @@ def main():
     loose = lambda s: re.sub(r'[^a-z0-9]+', ' ', s.lower()).strip(); sh = lambda s: {' '.join(w[i:i + 4]) for w in [loose(s).split()] for i in range(len(w) - 3)}
     pool = list(csv.DictReader(open(L / 'recall_nv8.pool.tsv'), delimiter='\t')); ctl = list(csv.DictReader(open(L / 'recall_nv8.controls.tsv'), delimiter='\t'))
     CTL_BY_HAND = {('recall_nv8_01', 'MA85'): 'contacted Commerce Under Secretary', ('recall_nv8_10', 'MA348'): 'Jensen is currently on Air Force One'}
-    is_ctl = {}; found = set()
+    # the control lines are frozen as they were found when the census was first read (research/reading_lanes/recall_nv8.control_lines.tsv, from the table released at ee4f40d): a chip amended later
+    # can come to share words with another line of its page, which is not a control (the first matcher, by shared words with the act as it stands, is kept below as a check on the frozen list)
+    is_ctl = {int(r['row_in_the_pool']): r['act_held_out'] for r in csv.DictReader(open(L / 'recall_nv8.control_lines.tsv'), delimiter='\t')}; found = set(is_ctl.values())
     for k in ctl:
-        a = acts[k['act_held_out']]; want = set()
-        for q in list(a['q']) + [a['what']]: want |= sh(q)
-        for n, r in enumerate(pool):
-            if r['lane'] == k['lane'] and r['page_id'] == k['page_in_the_lane'] and r['verdict'].startswith('CANDIDATE') and (len(want & sh(r['exact_words'])) >= 2 or CTL_BY_HAND.get((k['lane'], k['act_held_out']), '\0') in r['exact_words']):
-                is_ctl[n] = k['act_held_out']; found.add(k['act_held_out'])
-    NOT_VALID = {'MA327'}        # its earlier part (a refusal of June) is carried by two other chips, as its reader said: not a test of that reader
+        if k['act_held_out'] in NOT_VALID_CTL: continue
+        assert any(a == k['act_held_out'] and pool[n]['lane'] == k['lane'] and pool[n]['page_id'] == k['page_in_the_lane'] and pool[n]['verdict'].startswith('CANDIDATE') for n, a in is_ctl.items()), ('a control with no frozen line', k)
+    NOT_VALID = NOT_VALID_CTL        # its earlier part (a refusal of June) is carried by two other chips, as its reader said: not a test of that reader
     assert {k['act_held_out'] for k in ctl} - found == NOT_VALID, ('controls not found', {k['act_held_out'] for k in ctl} - found)
     # the grouping lanes: every open candidate line (and the planted controls of the census) sorted into distinct earlier acts by six further readers
     grp = {}; line_g = {}; g_ctl = Counter(); n_in = 0

@@ -1206,7 +1206,7 @@ L02773	board	sw-cnbccom-17	A0226	yes	yes	yes	para_nv8_b
 L02780	nvidia	sw-cnbccom-18	A0227	yes	yes	yes	para_nv8_a	
 L02805	nvidia	sw-cnbccom-19	A0228	yes	yes	yes	para_nv8_a	
 L02808	board	sw-cnbccom-19	A0228	yes	yes	yes	para_nv8_b	
-L02809	huang	sw-cnbccom-19	A0228	yes	yes		para_nv8_c	
+L02809	huang	sw-cnbccom-19	A0228	yes	yes	yes	para_nv8_c	
 L02846	musk	sw-cnbccom-20	A0229	yes	yes	yes	para_nv8_h	
 L02847	cramer	sw-cnbccom-20	A0229	yes	yes	yes	para_nv8_h	
 L02848	huang	sw-cnbccom-20	A0229	yes	yes	yes	para_nv8_c	
