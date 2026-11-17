@@ -24,6 +24,11 @@ Rules:
 Amendment of Nov 17, 2026, after the twenty-ninth reading (its point P05). The grouping readers did not draw the line of 'no occasion named' alike: three of them set such summaries aside, two kept comparable ones as
 unresolved acts (the reading names Ea.N004 against Eb.N019 and Ee.N035; by their own wording about a third of the kept groups are undated or unidentified too). One rule holds now for every actor: a group whose
 reader found no identifiable occasion in it is REGISTERED as an open, unresolved record and marked so (KEPT_UNRESOLVED). Only the groups a reader found not to be the actor's, or not on the matter, stay set aside.
+Amendment of Nov 17, 2026 (the third round): two more grouping readers, egroup_nv8_f and egroup_nv8_g, sorted the 170 earlier passages of the third round of first readers (pool ms_acts_klm.pool.tsv, map ms_group_klm.lines_map.tsv; eight more census lines were planted as controls).
+  - 49 of those records carry the verdict CANDIDATE with no further word and name no chip: each is taken as CANDIDATE occasion, and its first column says so;
+  - two pages that the day reader finds no day on print one after the fifteen days in their visible text (PAGE_DAY_BUILDER, read by the builder): their lines are listed and not registered, like those of every page dated outside the days;
+  - one group that its reader set aside as not the actor's is a statement of another actor the register holds (REFILED, read by the builder on the ministry's own pages) and is registered under that actor.
+The other undated pages are kept and marked, as before; several are documents older than the fifteen days (a code of conduct, a law firm's note, a hearing record, ministry transcripts), which the first column cannot show: named as a limit in the README.
 Nothing here draws anything."""
 import csv, re, sys
 from collections import Counter, defaultdict
@@ -39,12 +44,18 @@ KEPT_UNRESOLVED = 'no occasion'        # since the twenty-ninth reading: registe
 # the thirty-first reading (B-ASIDE-1): one summary its reader set aside as not the actor's rests on acts of the actor named. The page's sentence is "It's possible that smuggling has fallen since mid-2025 because of crackdowns in Malaysia and Taiwan":
 # the fall is the author's guess, the crackdowns are those governments' acts, and none is identified. It is registered as an unresolved record like the other summaries with no identifiable occasion (its reader's note says no crackdown can be identified).
 REREAD_UNRESOLVED = {('b', 'N021')}
+# the third round: a group its reader set aside as not the actor's (Nvidia, the actor its first reader named) whose passages are a statement of Singapore's trade minister in Parliament on Feb 18, 2025, on the ministry's own two pages (read by the builder in the saved HTML): registered under Singapore
+REFILED = {('f', 'N025'): 'singapore'}
+# pages on which the day reader finds no day and whose visible text prints one after the fifteen days (read by the builder on Nov 17, 2026): a restaurant story stamped 'November 15, 2026, 11:10 AM' in Singapore, the evening of Nov 14 Eastern; a broadcaster's release of 'November 13, 2026'
+PAGE_DAY_BUILDER = {'ms-people-mothership-dinner-2117f3': '2026-11-14', 'ms-gap-interview-cnbc-excerpts-83b5ab': '2026-11-13'}
+PLAIN = '; its first reader wrote the verdict as CANDIDATE with no further word and named no chip: taken as an occasion'
 ASIDE = {'no occasion': 'its grouping reader found no identifiable occasion in it', "not the actor's": 'its grouping reader found it is not an act of the actor named', 'not on the matter': 'its grouping reader found it is not on the matter'}
 LABEL = 'egroup_nv8_{k} (a grouping reader of the earlier passages on pages another session saved, outside the table of counted pages)'
 LABEL_COUNTED = 'egroup_nv8_{k} (a grouping reader of earlier passages; this page is a counted page that a first reader was given as a test, and its census reader had not listed the passage)'
 # lines on counted pages whose passage the census reader of that page had listed (lane letter, line): each pair of passages read by the builder on Nov 17, 2026; load() checks the words of each
 ON_COUNTED_SAME = {('a', 'L043'), ('a', 'L145'), ('b', 'L024'), ('b', 'L057'), ('b', 'L146'), ('c', 'L032'), ('c', 'L033'), ('c', 'L034'), ('c', 'L035'), ('c', 'L060'), ('c', 'L087'), ('c', 'L088'), ('c', 'L126'),
-                   ('d', 'L017'), ('d', 'L018'), ('d', 'L070'), ('e', 'L004'), ('e', 'L005'), ('e', 'L007'), ('e', 'L008')}
+                   ('d', 'L017'), ('d', 'L018'), ('d', 'L070'), ('e', 'L004'), ('e', 'L005'), ('e', 'L007'), ('e', 'L008'),
+                   ('f', 'L051'), ('f', 'L053')}        # the third round: two pairs, read by the builder on Nov 17 (the census reader's passage holds the first reader's words)
 _norm = lambda t: ' '.join(re.findall(r'[a-z0-9]+', t.lower().replace('\u2019', '').replace("'", '')))
 UNDATED = '; the page carries no day of its own'
 
@@ -52,18 +63,20 @@ UNDATED = '; the page carries no day of its own'
 def load(reg_ids, all_ids):
     """reg_ids: the ids the register holds already; all_ids: every row id a disposition may name. Returns (groups, lines, stats)."""
     import nv8_page_dates as D
-    pools = {f: list(csv.DictReader(open(RL / f, newline='', encoding='utf-8'), delimiter='\t')) for f in ('ms_acts.pool.tsv', 'ms_acts_i.pool.tsv')}
-    maps = [r for f in ('ms_group.lines_map.tsv', 'ms_group_i.lines_map.tsv') for r in csv.DictReader(open(RL / f, newline=''), delimiter='\t') if r['lane'].startswith('egroup_nv8_')]
+    pools = {f: list(csv.DictReader(open(RL / f, newline='', encoding='utf-8'), delimiter='\t')) for f in ('ms_acts.pool.tsv', 'ms_acts_i.pool.tsv', 'ms_acts_klm.pool.tsv')}
+    maps = [r for f in ('ms_group.lines_map.tsv', 'ms_group_i.lines_map.tsv', 'ms_group_klm.lines_map.tsv') for r in csv.DictReader(open(RL / f, newline=''), delimiter='\t') if r['lane'].startswith('egroup_nv8_')]
     counted = {r['page_id'] for r in csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t')}        # the table of counted pages
     census = defaultdict(list)        # the census readers' passages, by page
     for r in csv.DictReader(open(RL / 'recall_nv8.pool.tsv', newline='', encoding='utf-8'), delimiter='\t'): census[r['page_id']].append(_norm(r['exact_words']))
     same_seen = set()
     day_of = {}
     def day(pid):
-        if pid not in day_of: day_of[pid] = D.day_of(pid, *D.meta(pid))[0] or ''
+        if pid not in day_of:
+            day_of[pid] = D.day_of(pid, *D.meta(pid))[0] or ''
+            if pid in PAGE_DAY_BUILDER: assert not day_of[pid], ('the day reader now finds a day here', pid); day_of[pid] = PAGE_DAY_BUILDER[pid]
         return day_of[pid]
     groups = {}; lines = []; st = Counter(); used = defaultdict(int)
-    for k in 'abcde':
+    for k in 'abcdefg':
         lane = f'egroup_nv8_{k}'
         G = {r['group']: r for r in csv.DictReader(open(RL / f'{lane}.groups.csv', newline='', encoding='utf-8'))}
         LG = {r['line']: r['group'] for r in csv.DictReader(open(RL / f'{lane}.lines.csv', newline='', encoding='utf-8'))}
@@ -78,7 +91,9 @@ def load(reg_ids, all_ids):
                 if held: same_seen.add((k, m['line'])); st['lines on a counted page whose census reader had listed the same passage (not added again)'] += 1; continue
                 st['lines on a counted page whose census reader had not listed the passage (added, and marked)'] += 1
             gid = LG[m['line']]; d = day(m['page_id']); in_days = (not d) or '2026-10-29' <= d <= '2026-11-12'; st['lines on a page with no day of its own (kept, and marked)'] += not d
-            base = {'lane': (LABEL_COUNTED if on_counted else LABEL).format(k=k) + ('' if d else UNDATED), 'page': m['page_id'], 'day': d, 'actor': m['actor'], 'verdict': p['verdict'].strip(), 'chip': ' '.join(re.findall(r'M[AT]\d+', p['chip_or_tie'])),
+            plain = p['verdict'].strip() == 'CANDIDATE'
+            if plain: assert k in 'fg' and not re.findall(r'M[AT]\d+', p['chip_or_tie']), (lane, m['line']); st['lines whose first reader wrote CANDIDATE with no further word (taken as an occasion, and marked)'] += 1
+            base = {'lane': (LABEL_COUNTED if on_counted else LABEL).format(k=k) + ('' if d else UNDATED) + (PLAIN if plain else ''), 'page': m['page_id'], 'day': d, 'actor': m['actor'], 'verdict': 'CANDIDATE occasion' if plain else p['verdict'].strip(), 'chip': ' '.join(re.findall(r'M[AT]\d+', p['chip_or_tie'])),
                     'row': p['row_it_belongs_on'].strip(), 'direction': p['direction'].strip(), 'target': '', 'disp': ''}
             assert base['verdict'] in ('CANDIDATE occasion', 'CANDIDATE part'), (lane, m['line'], base['verdict'])
             if not in_days and (k, gid) in BUILDER_CARRIED:        # a record about Anthropic or OpenAI is never left without its row, whatever the page's day
@@ -86,11 +101,13 @@ def load(reg_ids, all_ids):
             elif not in_days:
                 base['disp'] = f'not registered: the page is of {d}, outside the fifteen days; the register holds acts that pages of the fifteen days recall'
                 st['lines on a page dated outside the fifteen days'] += 1
-            elif gid in reg_ids:
+            elif gid in reg_ids or gid in groups:        # the third round's readers were given the register with the acts the first five lanes had added (ids Ea. to Ee.): such a line joins that act
                 base['target'] = gid; st['lines to an act the register holds'] += 1
+                if gid in groups: used[gid] += 1; groups[gid]['counted_only'] &= on_counted
             else:
                 g = G[gid]; aside = g['set_aside'].strip()
                 if (k, gid) in REREAD_UNRESOLVED: assert aside == "not the actor's", (k, gid, aside); aside = KEPT_UNRESOLVED
+                if (k, gid) in REFILED: assert aside == "not the actor's" and g['actor'] == m['actor'] != REFILED[(k, gid)], (k, gid, aside); aside = ''; g = dict(g, actor=REFILED[(k, gid)], row_it_belongs_on=REFILED[(k, gid)]); base['actor'] = base['row'] = REFILED[(k, gid)]; st['lines of a group the builder registered under another actor'] += 1
                 if (k, gid) in SAME: base['target'] = SAME[(k, gid)]; st['lines to an act the builder registered after the twenty-sixth reading'] += 1
                 elif aside and aside != KEPT_UNRESOLVED and (k, gid) not in BUILDER_CARRIED:        # a group about Anthropic or OpenAI that a row carries is marked carried even where its reader found no occasion in it
                     assert aside in ASIDE, (lane, gid, aside); base['disp'] = 'not registered: ' + ASIDE[aside]; st['lines of a group its reader set aside'] += 1
@@ -109,6 +126,7 @@ def load(reg_ids, all_ids):
             lines.append(base)
     for (k_, gid_), (row_, _) in BUILDER_CARRIED.items(): assert row_ in all_ids, row_
     assert all(f'E{k_}.{g_}' in groups for k_, g_ in REREAD_UNRESOLVED), 'a reread summary is not registered'
+    assert all(f'E{k_}.{g_}' in groups and groups[f'E{k_}.{g_}']['actor'] == a_ for (k_, g_), a_ in REFILED.items()), 'a refiled group is not registered'
     assert same_seen == ON_COUNTED_SAME, (same_seen ^ ON_COUNTED_SAME); st['new acts recalled only by a counted page'] = sum(1 for g in groups.values() if g['counted_only'])
     st['new acts'] = len(groups); st['of them carried'] = sum(1 for g in groups.values() if g['disp']); st['of them, summaries with no identifiable occasion (unresolved)'] = sum(1 for g in groups.values() if g['no_occasion']); st['pages of the lines'] = len({l['page'] for l in lines}); st['lines'] = len(lines)
     return groups, lines, st
