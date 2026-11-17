@@ -1,0 +1,169 @@
+what,figure_says,you_find,agree,note
+act rows,378,378,yes,
+active acts,375,375,yes,
+active dated acts,375,375,yes,
+acts dated by their report,154,154,yes,
+later-version readings classified may be newer,16,16,yes,Classification in the version screen; only four act texts literally use that phrase.
+chips,227,227,yes,Distinct actor/day groups; value derived independently.
+dashed chips,58,58,yes,All acts in shared chip must be report-dated.
+saved pages,1324,1324,yes,
+articles,1244,1244,yes,
+counted articles,1163,1163,yes,
+counted pages held in part,100,100,yes,
+census lines,2903,2903,yes,"Literal dispositions, before this audit’s semantic findings."
+lines added after first 2855,48,48,yes,"Literal dispositions, before this audit’s semantic findings."
+register groups,781,781,yes,"Literal dispositions, before this audit’s semantic findings."
+carried groups,68,68,yes,"Literal dispositions, before this audit’s semantic findings."
+open groups,713,713,yes,"Literal dispositions, before this audit’s semantic findings."
+coded open groups carried in part,13,13,yes,"Literal dispositions, before this audit’s semantic findings."
+coded groups on no chip,700,700,yes,"Literal dispositions, before this audit’s semantic findings."
+direct-open lines,1117,1117,yes,"Literal dispositions, before this audit’s semantic findings."
+pages with direct-open lines,532,532,yes,"Literal dispositions, before this audit’s semantic findings."
+lines in open groups,1119,1119,yes,"Literal dispositions, before this audit’s semantic findings."
+open group planted controls,1,1,yes,"Literal dispositions, before this audit’s semantic findings."
+direct-open lines carried in part,15,15,yes,"Literal dispositions, before this audit’s semantic findings."
+open groups kind: decision,124,124,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups kind: event,205,205,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups kind: money,12,12,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups kind: other,54,54,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups kind: statement,318,318,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups first_reported: before,182,182,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups first_reported: in these days,66,66,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups first_reported: unclear,465,465,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups which_way_the_reader_says_it_cuts: against Huang or Nvidia,284,284,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups which_way_the_reader_says_it_cuts: against the administration,39,39,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups which_way_the_reader_says_it_cuts: for Huang or Nvidia,180,180,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups which_way_the_reader_says_it_cuts: for the administration,31,31,yes,Recount of coded classifications; no independent recoding of all sources.
+open groups which_way_the_reader_says_it_cuts: neither,179,179,yes,Recount of coded classifications; no independent recoding of all sources.
+open lines direction: against Huang or Nvidia,569,569,yes,Coded classification.
+open lines direction: against the administration,109,109,yes,Coded classification.
+open lines direction: for Huang or Nvidia,173,173,yes,Coded classification.
+open lines direction: for the administration,42,42,yes,Coded classification.
+open lines direction: neither,224,224,yes,Coded classification.
+population present column,4171,4171,yes,Exact line-id equality: True
+population retained rows,5108,5108,yes,
+population line-id differences,0,0,yes,
+population positive control grows,True,True,yes,Without MA56: 4188
+refusal acts,31,31,yes,
+refusal actors,11,11,yes,
+refusal census lines,133,133,yes,
+refusal census inside cited articles,60,60,yes,
+refusal census outside cited articles,73,73,yes,
+refusal outside actor-article pairs,63,63,yes,
+refusal outside coded relays,60,60,yes,
+refusal outside coded non-refusals,13,13,yes,
+new refusals listed,True,True,yes,
+nine-page record table,120,120,yes,
+nine-page reader_verdict: CANDIDATE occasion,24,24,yes,Literal table field; long source material is not copied.
+nine-page reader_verdict: CANDIDATE part,8,8,yes,Literal table field; long source material is not copied.
+nine-page reader_verdict: carried,88,88,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: ,71,71,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: a planted control: carried by MA120, which was held out of the reader's table",1,1,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: a planted control: carried by MA168, which was held out of the reader's table",1,1,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: a planted control: carried by MA99, which was held out of the reader's table",1,1,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: drawn: MA367 (on its report's day, with the words that the passage may be newer than the page's first day)",1,1,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: drawn: MA368,1,1,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: drawn: on MA151, from a report of Nov 12 that another session of this project had saved and the table of pages does not hold (not from this page: the page is of Nov 15 or 16, outside the days, and was not added). The builder had written that only this later page gives the date; the twenty-fourth reading found it in that report",1,1,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: drawn: on MA31 and MA152, from the letter itself",2,2,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: drawn: on MA31 and MA152, from the letter itself (not from this page: the page is of Nov 15 or 16, outside the days, and was not added)",2,2,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: drawn: on MA72, from the ministry's own statement of Nov 12, which the chip already cited",5,5,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: not drawn: a report that no reply had come to a request is not a refusal under the figure's rule,5,5,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: not drawn: a summary that names no occasion; his advocacy on occasions the pages date is on his chips,1,1,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: not drawn: names no purchase; the purchases the pages give with amounts are an open act of the register (3.MS01),1,1,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: not drawn: the only saved account of the post is this page; the page is of Nov 15 or 16, outside the days, and was not added; the post itself is not saved (a lead for a search of his own channel)",1,1,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: not drawn: the outlet's own attempts to reach the company, not an act of the company",1,1,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: not drawn: the page describes what the company's site lists and gives it no day; not a statement on the matter,1,1,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: not drawn: the page names no occasion; the ministry's statement of Nov 9 is on its chip in its own words (MA71),1,1,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: not registered: the page is of Nov 15 or 16, outside the days, and was not added; the register holds acts that pages of the fifteen days recall",2,2,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: open: an earlier act the register holds (2.NV2-194); this page's line is added to it,1,1,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: open: an earlier act the register holds (3.MS50); this page's line is added to it,1,1,yes,Literal table field; long source material is not copied.
+nine-page builder_disposition: open: registered as a new earlier act (B.06),2,2,yes,Literal table field; long source material is not copied.
+"nine-page builder_disposition: the page is of Nov 15 or 16, outside the days, and was not added",17,17,yes,Literal table field; long source material is not copied.
+interactive acts,375,375,yes,"Independent frozen-row comparison, with altered-input controls."
+interactive ties,88,88,yes,"Independent frozen-row comparison, with altered-input controls."
+interactive lines,150,150,yes,"Independent frozen-row comparison, with altered-input controls."
+interactive pieces,2245,2245,yes,"Independent frozen-row comparison, with altered-input controls."
+tie rows including network at left,88,88,yes,65 actor ties plus 23 ties in the network at left.
+all public rows,2908,2911,no,
+semantic open groups carried in part,13,18,no,"Five additional partial-carriage findings P08–P12, retaining all group identities. Qualification findings, not silent recoding of input."
+semantic open groups on no chip,700,695,no,Conditional on the five documented partial-carriage corrections; 713 open remains unchanged.
+README catalogue builder acts,7,9,no,Nine B. ids; main register paragraph already says nine.
+README catalogue post-census additions,37,48,no,"2,903 minus the 2,855 original lines."
+nine-page MA367 disposition dating,report-day and may be newer,solid; no newer caution,no,Record 63 is stale against the corrected MA367 and its own Thursday act-day cell.
+seven acts-reader records,2085,2085,yes,
+further acts-reader records,288,288,yes,
+remarks-reader pages,222,222,yes,
+undated pages sorted: real pages,356,356,yes,376 sorted rows minus 20 planted counted pages; not 376 new real pages.
+held-out tests,16,16,yes,
+held-out tests returned,14,14,yes,Two faulty source stubs do not support a success/completeness claim.
+candidate pool records,965,965,yes,
+candidate records these days,344,344,yes,
+candidate records earlier,621,621,yes,
+candidate record-bearing pages,188,188,yes,
+news/opinion pages under Eastern rule,135,156,no,"135 reproduces returned reader dates; holding kinds fixed, 21 publication-boundary conversions add pages."
+actor-day gauge listings,20,20,yes,Literal table recount; does not establish semantic coverage.
+quotation gauge listings,10,10,yes,Literal table recount; does not establish semantic coverage.
+single-article remark records,313,313,yes,Literal table recount; does not establish semantic coverage.
+set-aside items,67,67,yes,
+set-aside disposition drawn,43,43,yes,
+set-aside disposition reader verdict stands,13,13,yes,
+set-aside disposition not drawn,3,3,yes,
+set-aside disposition carried,4,4,yes,
+set-aside disposition a planted control,4,4,yes,
+member articles: Warren,72,72,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Coons,49,49,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Cramer,22,22,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Schumer,22,22,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Banks,19,19,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Cornyn,9,9,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Kennedy,7,7,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Thune,13,13,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Mast,93,93,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Crawford,68,68,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Meeks,9,9,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Himes,8,8,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Huizenga,4,4,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Moolenaar,78,78,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Jeffries,30,30,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Magaziner,4,4,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Subramanyam,3,3,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Bacon,3,3,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Johnson,11,11,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Blumenthal,3,3,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Wyden,6,6,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Ricketts,5,5,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: McCaul,5,5,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Warner,4,4,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Cotton,6,6,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Scott,4,4,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+member articles: Neal,4,4,unchanged; not freshly recounted,Unchanged against the prior frozen table; fresh source-level recount is a recorded gap.
+lookup analysts: quoted on the saved pages (a person or firm written two ways counted once),282,282,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup analysts: drawn,16,16,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+"lookup analysts: not drawn: at a bank, not drawn",17,17,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup analysts: not drawn: cannot tell,1,1,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+"lookup analysts: not drawn: name match, not settled",1,1,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup analysts: not drawn: none found,234,234,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup analysts: not drawn: none found for the person,5,5,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup analysts: not drawn: not drawn,8,8,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup bylines: pairs of outlet and name,966,966,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup bylines: different names,888,888,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup bylines: pairs that are an agency or not a person's name,84,84,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup bylines: names that are an agency or not a person's name,75,75,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup bylines: pairs: cannot tell,84,84,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup bylines: pairs: drawn,5,5,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+"lookup bylines: pairs: name match, not settled",4,4,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup bylines: pairs: none found,871,871,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+"lookup bylines: pairs: record of another kind, not drawn",2,2,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup bylines: different names drawn,5,5,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+"lookup banks: named by Quartz on Sep 4, 2026 as lenders to Anthropic",17,17,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+"lookup banks: of those, with an analyst, a note or an executive quoted on the saved pages",11,11,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup investors: quoted and described on the pages as holding or shorting Nvidia shares,2,2,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+"lookup remarks: of drawn actors, on two or more pages",524,524,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+"lookup remarks: carried in other words, by the audit",42,42,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup remarks: not his remark,3,3,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup remarks: not of these days,14,14,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup remarks: not printed,3,3,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup remarks: partly on a chip,15,15,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup remarks: partly on chip,40,40,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+lookup remarks: printed on a chip,243,243,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.
+"lookup remarks: same statement as a chip, not printed",164,164,unchanged; source census not rebuilt,Identical to prior summary cell; individual source lookup census is not rebuilt.

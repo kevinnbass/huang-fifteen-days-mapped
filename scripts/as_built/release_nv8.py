@@ -274,14 +274,15 @@ def main(target):
           # the twenty-third reading (of the answer to the twenty-second)
           'x': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           'y': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
-          'z': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
-    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i', 'q': 'audit_nv8_s8j', 'r': 'audit_nv8_s8k', 's': 'audit_nv8_s8l', 't': 'audit_nv8_s8m', 'u': 'audit_nv8_s8n', 'v': 'audit_nv8_s8o', 'w': 'audit_nv8_s8p', 'x': 'audit_nv8_s8q', 'y': 'audit_nv8_s8r', 'z': 'audit_nv8_s8s'}
+          'z': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
+          'aa': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i', 'q': 'audit_nv8_s8j', 'r': 'audit_nv8_s8k', 's': 'audit_nv8_s8l', 't': 'audit_nv8_s8m', 'u': 'audit_nv8_s8n', 'v': 'audit_nv8_s8o', 'w': 'audit_nv8_s8p', 'x': 'audit_nv8_s8q', 'y': 'audit_nv8_s8r', 'z': 'audit_nv8_s8s', 'aa': 'audit_nv8_s8t'}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
         if (L2 / 'done' / 'DONE').exists() and (L2 / 'out' / 'REPORT.md').exists():
             fix = lambda x, n_=L2.name: scrub(x).replace(f'lanes/{n_}', 'audit2')
-            put(Tg, f'audit2/BRIEF-{t}.md', fix((L2 / 'PROMPT.md').read_text()))
+            put(Tg, f'audit2/BRIEF-{t}.md', fix((L2 / ('PROMPT_v2.md' if t == 'aa' else 'PROMPT.md')).read_text()))        # the twenty-sixth reading ran from its second brief: the first gave a wrong count
             put(Tg, f'audit2/REPORT-{t}.md', fix((L2 / 'out' / 'REPORT.md').read_text()))
             for name in names:
                 if (L2 / 'out' / name).exists():
@@ -359,6 +360,9 @@ def main(target):
     disp25 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8s.csv'
     if disp25.exists():
         put(Tg, 'audit2/DISPOSITIONS-z.csv', disp25.read_text())
+    disp26 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8t.csv'
+    if disp26.exists():
+        put(Tg, 'audit2/DISPOSITIONS-aa.csv', disp26.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')

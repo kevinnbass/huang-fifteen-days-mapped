@@ -567,7 +567,7 @@ L01212	justice	sw-americanbazaaronlineco-02	A0089	yes	yes	yes	para_nv8_g
 L01213	trump	sw-americanbazaaronlineco-02	A0089	yes	yes	yes	para_nv8_d	
 L01214	nvidia	sw-americanbazaaronlineco-02	A0089	yes	yes	yes	para_nv8_a	
 L01215	china	sw-americanbazaaronlineco-02	A0089	yes	yes	yes	para_nv8_e	
-L01217	nvidia	sw-americanbazaaronlineco-02	A0089	yes	yes	yes	para_nv8_a	
+L01217	nvidia	sw-americanbazaaronlineco-02	A0089	yes	yes		para_nv8_a	
 L01219	huang	sw-americanbazaaronlineco-02	A0089	yes	yes	yes	para_nv8_c	
 L01220	rubio	sw-americanbazaaronlineco-02	A0089				para_nv8_g	yes
 L01221	mast	sw-americanbazaaronlineco-02	A0089	yes	yes	yes	para_nv8_f	
@@ -2812,7 +2812,7 @@ L06412	nvidia	sw-nvidianewsnvidiacom-02	A0646	yes	yes	yes	para_nv8_a
 L06413	kress	sw-nvidianewsnvidiacom-02	A0646	yes	yes		para_nv8_b	
 L06414	nvidia	sw-nvidianewsnvidiacom-02	A0646	yes	yes	yes	para_nv8_a	
 L06415	nvidia	sw-nvidianewsnvidiacom-02	A0646	yes	yes	yes	para_nv8_a	
-L06429	nvidia	sw-outlookindiacom-01	A0651	yes	yes	yes	para_nv8_a	
+L06429	nvidia	sw-outlookindiacom-01	A0651	yes	yes		para_nv8_a	
 L06430	cramer	sw-outlookindiacom-01	A0651	yes	yes	yes	para_nv8_h	
 L06431	china	sw-outlookindiacom-01	A0651	yes	yes	yes	para_nv8_e	
 L06432	schumer	sw-outlookindiacom-01	A0651	yes	yes	yes	para_nv8_h	

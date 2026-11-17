@@ -1,0 +1,26 @@
+finding_id,grade,element_text,problem
+H-acts,ok,375 acts,Exact frozen-row comparison passes. Saved-original passages are compared where present; table-source numeric cells are not misrepresented as quotations.
+H-ties,ok,88 ties,Exact frozen-row comparison passes. Saved-original passages are compared where present; table-source numeric cells are not misrepresented as quotations.
+H-lines,ok,150 lines,Exact frozen-row comparison passes. Saved-original passages are compared where present; table-source numeric cells are not misrepresented as quotations.
+H-pieces,ok,2245 pieces,Exact frozen-row comparison passes. Saved-original passages are compared where present; table-source numeric cells are not misrepresented as quotations.
+H-MA59,ok,MA59,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA69,ok,MA69,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA140,ok,MA140,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA141,ok,MA141,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA145,ok,MA145,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA308,ok,MA308,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA367,ok,MA367,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA370,ok,MA370,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA371,ok,MA371,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA372,ok,MA372,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA373,ok,MA373,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA374,ok,MA374,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA375,ok,MA375,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA376,ok,MA376,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA377,ok,MA377,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MA378,ok,MA378,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MT29,ok,MT29,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-MT65,ok,MT65,The page data preserves its row’s day/text/report-day flag and saved-original passages. This does not clear the row’s source meaning.
+H-withdrawn-control,ok,MA137; MA305; MA333,Withdrawn acts are absent. Four deliberately altered date/text/edge/passage controls fail the comparator.
+P01-H,qualification,MA375; MA376,[row error] The page faithfully repeats the source-identity inference described by P01; no separate site transformation defect.
+P02-H,qualification,MA374,[missing part] The page preserves the row’s omission of the regional-scope question; see P02.

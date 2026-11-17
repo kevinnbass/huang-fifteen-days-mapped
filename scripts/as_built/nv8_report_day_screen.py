@@ -230,6 +230,12 @@ READ3.update({'MA213': "the chip's day is that of The Information's report (Wedn
 READ4.update({'MA85': "the earlier page is a blog post first published on Nov 8 and changed until Nov 12 by its own header; it recounts the Times's report of Nov 9, so the passage comes from a later version", 'MA162': "the earlier pages are two encyclopedia articles dated by their first version; the passage found in them is the headline of CNN's report of Nov 12 in their lists of sources, added later", 'MA213': 'the cited page is itself of Nov 10: the chip sits on Nov 11 for its first part and gives Nov 10 in words for this one', 'MA384': "the earlier page is CNBC's summary of the Times's report of Nov 9, whose words on the transfer of the probe CBS repeats; the refusal itself is in CBS's page only", 'MA391': "the earlier pages are those of the company's statements of Nov 2 and Nov 8, which the chip cites with their days for the words the profile repeats"})
 READ6.update({'MA387': "the page listed is the Journal's report, cited for its sentence that the department did not respond; it prints only an update line (Nov 12, 7:44 pm). The chip's day is that of ChosunBiz's page, stamped the evening of Nov 12, Eastern"})
 
+# readings for the answer to the twenty-sixth reading (batches s9p and s9q, Nov 17)
+READ4.pop('MA213')        # the chip no longer cites the page of Nov 10: the earlier report it gave from that page is a chip of its own now (MA416)
+READ1.update({'MA334': 'not the same act: the line of Nov 12 is the company\'s announcement of the day on which it reports its results for the third quarter, which shares only the words "the third quarter of" with the lobbying report'})
+READ2.update({'MA334': 'the day word dates the fall of the company\'s market value ("on Monday", Nov 9, the chip\'s day), not the lobbying, which the disclosures give by quarter', 'MA372': "the day word is that of The Information's report (Tuesday, Nov 3). It stands in the relay beside the report on OpenAI that the same page carries, and OpenAI's chip of that day states it; this chip does not, and an earlier reading here said it did (the twenty-sixth reading found that). The relay is of Nov 4, the chip's day, and gives the lobbying itself no day, as the chip says"})
+READ3.update({'MA416': "the chip's day is that of the reporter's post (the evening of Nov 9, Eastern); the page listed is Semafor's of Nov 10, which the chip names with its day"})
+
 MONTH = {'oct': 10, 'nov': 11}
 
 

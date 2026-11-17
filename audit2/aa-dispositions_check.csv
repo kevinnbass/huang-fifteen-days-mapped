@@ -1,0 +1,65 @@
+part,finding_id,holds,note
+P01:MA367,P01-A-KENNEDY,yes,Added questions and both secretaries are in MA367 and its complete source.
+P02:B.08,P02-B08-CNN,yes,CNN line is added; the other delivery page already had R2899 in the prior copy (physical line 2900). MT29 now carries B.08.
+P03:sw-financeyahoocom-30,P03-SPARK,yes,B.09 and its line exist. The OpenAI exception is explicit in the take-in section; B.09 is outside it. A bounded search is not proof of absence.
+P04:1.U002,P04-B3-1.U002,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:1.U005,P04-B3-1.U005,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:1.U006,P04-B3-1.U006,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:1.U007,P04-B3-1.U007,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:1.U008,P04-B3-1.U008,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:1.U021,P04-B3-1.U021,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:1.U030,P04-B3-1.U030,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:1.U031,P04-B3-1.U031,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:1.U033,P04-B3-1.U033,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:1.U048,P04-B3-1.U048,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:2.NV2-195,P04-B3-2.NV2-195,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P04:2.NV2-197,P04-B3-2.NV2-197,yes,The named full/partial correction holds against MA01 or MT57. Repeated totals match literal codes; P08–P12 identify further semantic corrections.
+P05:sw-implicatorai-02,P05-B5-PCAST,yes,Both appointment lines exist; the groups now give Nov 8 and remain separate.
+P06:ms-deals-bloomberg-tracking-f60e52,P06-C-REFUSAL,yes,"MA374 and the refusal gauge exist, with the two principal question subjects. P02 identifies one further scope question."
+P07:ms-g17-w4-primexbt-188b26,P07-C-WH-RULE,partial,The two acts and earlier pages are present. P01: the cross-reference additionally treats identity of the feedback as proved.
+P08:ms-hl-yahoo-7876c3,P08-C-WH-DISCUSS,yes,"MA377 words the ongoing discussion, unanswered request and confidence statement."
+P09:ms-gap-booking-newstreet-primexbt-,P09-C-ANNUAL,partial,"The deferral is disclosed in the README, but the act is still neither registered nor drawn. Page-table membership explains intake order; it does not resolve this finding. See P38/P39."
+P10:MA308,P10-C-COONS,yes,"Nov 9, solid edge and NPR original are present. The post and other outlet exchange remain separate."
+P11:README / Changed in answer to the ,P11-README-ABSOLUTE,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+P12:ms-gap-offshoots-kharon-network-18,P12-C-BIS-REFUSAL,yes,MA378 and its HTML-only refusal are present with the later-version caution; extraction limit is disclosed.
+P13:ms-gap-offshoots-kharon-network-18,P13-C-LETACT,partial,"The deferral is disclosed in the README, but the act is still neither registered nor drawn. Page-table membership explains intake order; it does not resolve this finding. See P38/P39."
+P14:MA59,P14-D-RESIGNATION,yes,MA59 now words all three offices and separates acceptance from announcement.
+P15:MA140,P15-D-BBC,yes,MA140 adds the wider condition and expressly labels the summary and unheard broadcast.
+P16:MA141,P16-D-ABC-UNCERTAINTY,yes,"MA141 contains the two limits and four inquiry questions, with the AI-summary label."
+P17:MA141,P17-D-ABC-QUESTIONS,yes,"MA141 contains the two limits and four inquiry questions, with the AI-summary label."
+P18:MA145,P18-D-NEWSLETTER,yes,MA145 gives the rest of the author’s own sentence without attributing it to the Times.
+figure,F-P04,yes,The stated twelve-cell recoding and later two-carried/one-new arithmetic hold. New P08–P12 affect the resulting semantic claim.
+counts,open-group semantic classification after P04 alone,yes,The stated twelve-cell recoding and later two-carried/one-new arithmetic hold. New P08–P12 affect the resulting semantic claim.
+G,C:README:565 C-README-ABSENCE,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G:DISPOSITIONS-x:group answers G-README-ANSWER,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G B:4.NV4-017 B5-P11-4.NV4-017,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G B:R1854 B5-P11-R1854,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G B:census/register/status B5-P11-census/register/status,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G figure E-P11,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G G G-P11,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G counts marked-open groups already explicitly carried (semantic control),yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F B:6.NV6-046 B2-6.NV6-046,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F B:6.NV6-036 B2-6.NV6-036,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F B:FT-earlier-letter B7-letter,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F B:R1947 B6-R1947,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F B:Nvidia-August-financing B6-August-financing,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F B:sw-financeyahoocom-31 B5-P12,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F B:sw-financeyahoocom-31 B5-P13,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F figure E-P11,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F G G-P11,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G F F D:D1-FT-letter D1-FT-letter,yes,"The specific main-paragraph sentence is repaired and MT29 is drawn. The catalogue still has an unqualified open/not-drawn gloss (P15); the repeated totals match codes, subject to new P08–P12."
+G,G gaps F-owner-request,partial,The pending decision and inability to prove delivery are disclosed. The frozen inputs cannot independently establish that the owner received the reported requests.
+g,gaps G owner delivery,partial,The pending decision and inability to prove delivery are disclosed. The frozen inputs cannot independently establish that the owner received the reported requests.
+gaps,ms-gap-knew-huang-bloomberg-1030-219c8b,yes,Saved text and HTML stop at the login opening; the published remainder acknowledges this gap.
+gaps,B5:2026-10-30,yes,The README preserves this sample limit. This audit’s separately fixed sample rule also finds no eligible page on these five days.
+gaps,B5:2026-10-31,yes,The README preserves this sample limit. This audit’s separately fixed sample rule also finds no eligible page on these five days.
+gaps,B5:2026-11-01,yes,The README preserves this sample limit. This audit’s separately fixed sample rule also finds no eligible page on these five days.
+gaps,B5:2026-11-02,yes,The README preserves this sample limit. This audit’s separately fixed sample rule also finds no eligible page on these five days.
+gaps,B5:2026-11-04,yes,The README preserves this sample limit. This audit’s separately fixed sample rule also finds no eligible page on these five days.
+gaps,man-c2192c2d5c8d,yes,"The saved opening has no numeric publication day. The answer labels its outside-window inference as an inference, not proof."
+gaps,man-ms-gap-law-bis-cloud-opinion-2011-aa9a4d,yes,The saved folder’s text has no readable body; the README carries the gap. No OCR or fetch attempted.
+gaps,man-ms-probes-house-huang-1112-f4dbbb,yes,The saved-folder material is only a short transcription; the remainder is disclosed. The external recorded PDF path was not inspected in this bounded audit.
+gaps,man-ms-probes-house-teter-1112-04393a,yes,The saved-folder material is only a short transcription; the remainder is disclosed. The external recorded PDF path was not inspected in this bounded audit.
+gaps,C2:Kharon-network-transactions,yes,Both Kharon passages are in the full saved HTML. Attribution/on-matter eligibility remains expressly undecided.
+gaps,D3:remaining eight of eleven,yes,The prior report confirms only three of eleven whole statements read. The README preserves eight unread and does not give an eleven-chip rate.
+gaps,D3:source eligibility,yes,The prior eligibility limit is stated in the published remainder; ordinary quotations are not counted as complete originals.
