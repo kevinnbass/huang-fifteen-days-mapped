@@ -23,7 +23,7 @@ and four of the six later lanes closed 'reading: incomplete', leaving acts with 
 line belongs to (the script prints how many acts and lines). Where a paper that has its own row reports an earlier act of someone else, the report is drawn
 on the paper's row, and a reader's candidate for it on the other actor's row is answered 'carried on the paper's row'."""
 import csv, re, sys
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; L = R / 'reading_lanes'; sys.path.insert(0, str(ROOT / 'scripts'))
 import rows_map
@@ -215,6 +215,22 @@ R_EARLY = {
  'MA169': 'carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department\'s chip of Oct 29 (MA362) and the Journal\'s first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed',
 }
 R_OPEN = 'open: not yet grouped or drawn'
+G_OPEN = 'open: on no chip; not drawn until the owner decides what the image should carry'
+# groups of the six grouping lanes that the builder reads otherwise than their reader did: chips drawn or amended on Nov 17, after the lanes' tables were frozen
+G_BUILDER = {
+ '6.NV6-002': 'carried since Nov 17: MA01, MA06 (the Times\'s and the Journal\'s first reports now word the start of the inquiry in late 2024)',
+ '4.NV4-006': 'carried since Nov 17: MA06 (the Journal\'s first report, beside the arrest of March)',
+ '4.NV4-096': 'carried since Nov 17: MA364 (on the Times\'s row)',
+ '4.NV4-101': 'carried since Nov 17: MA364 (on the Times\'s row; this is the page the chip cites)',
+ '6.NV6-007': 'carried since Nov 17: MA06 (the Journal\'s first report; Singapore\'s denial is on its chip of Oct 30)',
+ '6.NV6-008': 'carried since Nov 17: MA06 (the Journal\'s first report)',
+ '4.NV4-115': 'carried since Nov 17: MT20 (the tie line between Anthropic and Nvidia now gives the page\'s sentence on the interim chief\'s part in financing deals)',
+}
+# chips that also carry a group since Nov 17, added to what its reader named
+G_ALSO = {'6.NV6-063': 'MA362', '3.MS44': 'MA360', '4.NV4-111': 'MA360', '1.G001': 'MA01', '1.G002': 'MA01'}
+G_AFTER = {'1.G001': '; the chips its reader named give the gathering only through the company\'s explanation, and since Nov 17 the Times\'s first report (MA01) words the gathering itself',
+           '1.G002': '; the chip its reader named gives the dinner only through the company\'s explanation, and since Nov 17 the Times\'s first report (MA01) words it'}
+G_CTL_NOTE = {'2.NV2-319': ' (its one line is a planted control: the sentence is a cited passage of the White House\'s chip MA349, which the grouping reader did not name)'}
 R_OWN = 'open: the chip sits on its own day and the reader names an earlier page; not read again by the builder'
 # the chips that sit on their own day and that a reader named from an EARLIER page: read by the builder on Nov 17, one disposition per (chips named, page, actor); None stands for any
 R_LATE = [
@@ -337,6 +353,25 @@ def main():
                 is_ctl[n] = k['act_held_out']; found.add(k['act_held_out'])
     NOT_VALID = {'MA327'}        # its earlier part (a refusal of June) is carried by two other chips, as its reader said: not a test of that reader
     assert {k['act_held_out'] for k in ctl} - found == NOT_VALID, ('controls not found', {k['act_held_out'] for k in ctl} - found)
+    # the grouping lanes: every open candidate line (and the planted controls of the census) sorted into distinct earlier acts by six further readers
+    grp = {}; line_g = {}; g_ctl = Counter(); n_in = 0
+    for j in range(1, 7):
+        nm = f'group_nv8_{j:02d}'; lin = [r['line'] for r in csv.DictReader(open(L / f'{nm}.lines_in.tsv'), delimiter='\t')]; n_in += len(lin)
+        gs = {r['group']: r for r in csv.DictReader(open(L / f'{nm}.groups.csv'))}; asg = list(csv.DictReader(open(L / f'{nm}.lines.csv')))
+        assert sorted(r['line'] for r in asg) == sorted(lin) and all(r['group'] in gs for r in asg), ('a line with no group or two', nm)
+        cl = {r['line'] for r in csv.DictReader(open(L / f'{nm}.controls.tsv'), delimiter='\t')}
+        for r in asg: line_g[int(r['line'][1:])] = f"{j}.{r['group']}"; g_ctl[f"{j}.{r['group']}"] += r['line'] in cl
+        for k, g in gs.items(): grp[f'{j}.{k}'] = g
+    all_ids = {r['row_id'] for r in rows_map.rows()} | {r['row_id'] for r in csv.DictReader(open(R / 'member_ties.csv'))}
+    g_lines = Counter(line_g.values()); g_disp = {}
+    for k, g in grp.items():
+        named = [x for x in re.findall(r'M[AT]\d+|TY\d+', g.get('carried_by') or '') if x in all_ids]
+        assert bool(named) == bool((g.get('carried_by') or '').strip()), ('a group whose reader names a chip that is not there', k, g.get('carried_by'))
+        if named: g_disp[k] = 'carried: ' + ', '.join(named + [G_ALSO[k]] if k in G_ALSO else named) + ' (the grouping reader\'s verdict)' + G_AFTER.get(k, '')
+        elif k in G_BUILDER: g_disp[k] = G_BUILDER[k]
+        else: g_disp[k] = G_OPEN + G_CTL_NOTE.get(k, '')
+    assert not (set(G_BUILDER) | set(G_ALSO) | set(G_CTL_NOTE) | set(G_AFTER)) - set(grp), 'a reading for a group that is not there'
+    assert all(any(i in all_ids for i in re.findall(r'M[AT]\d+', v)) for v in G_BUILDER.values()) and all(v in all_ids for v in G_ALSO.values())
     rout = []; rc = Counter(); used = Counter(); used_late = Counter()
     for n, r in enumerate(pool):
         v = r['verdict'].strip(); ids = ['MA' + str(int(x[2:])) for x in re.findall(r'MA\d+', r['chip_or_tie'])]
@@ -351,19 +386,39 @@ def main():
                 key = tuple(re.findall(r'M[AT]\d+', r['chip_or_tie'])); hit = [x for x in R_LATE if x[0] == key and x[1] in (None, r['page_id']) and x[2] in (None, r['actor'])]
                 assert hit, ('a chip on its own day named from an earlier page, with no disposition', key, r['page_id'], r['actor']); disp = hit[0][3]; used_late[R_LATE.index(hit[0])] += 1
             else: disp = ''
-        else: disp = R_OPEN
+        else:
+            assert n in line_g, ('an open candidate line that no grouping lane holds', n, r['page_id'])
+            disp = g_disp[line_g[n]]
         rc[(v, disp.split(':')[0] if disp else 'the reader\'s verdict stands')] += 1
-        rout.append([r['lane'], r['page_id'], r['page_day'], r['actor'], v, ' '.join(re.findall(r'M[AT]\d+', r['chip_or_tie'])), r['row_it_belongs_on'], r['direction'].strip(), disp])
+        rout.append([r['lane'], r['page_id'], r['page_day'], r['actor'], v, ' '.join(re.findall(r'M[AT]\d+', r['chip_or_tie'])), r['row_it_belongs_on'], r['direction'].strip(), disp, line_g.get(n, '')])
     assert all(used_late[i] for i in range(len(R_LATE))), ('a disposition for no line', [R_LATE[i][:3] for i in range(len(R_LATE)) if not used_late[i]])
     assert all(used[d[:3]] for d in R_DONE), ('a line the builder says it acted on is not in the pool', [d[:3] for d in R_DONE if not used[d[:3]]])
     with open(R / 'nv8_recalls.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t', lineterminator='\n')
-        w.writerow(['lane', 'page', 'page_day', 'actor', 'reader_verdict', 'chip_or_tie_the_reader_named', 'row_the_reader_proposed', 'which_way_the_reader_says_it_cuts', 'builder_disposition']); w.writerows(rout)
+        w.writerow(['lane', 'page', 'page_day', 'actor', 'reader_verdict', 'chip_or_tie_the_reader_named', 'row_the_reader_proposed', 'which_way_the_reader_says_it_cuts', 'builder_disposition', 'earlier_act']); w.writerows(rout)
+    # the register of distinct earlier acts: one row for each group, in its reader's words (no words of pages), with the builder's disposition
+    FR = lambda g: next((x for x in ('in these days', 'before', 'unclear') if (g.get('first_reported') or '').strip().lower().startswith(x)), 'unclear')
+    pages_of = defaultdict(set); days_of = defaultdict(list)
+    for o in rout:
+        if o[9]: pages_of[o[9]].add(o[1]); days_of[o[9]].append((o[2], o[1]))
+    gout = []
+    for k, g in sorted(grp.items(), key=lambda kv: (kv[1]['actor'], -len(pages_of[kv[0]]), kv[0])):
+        first = min(days_of[k])
+        gout.append([k, g['actor'], scrub(g['what']), scrub(g.get('when') or ''), (g.get('kind') or '').strip(), FR(g), first[1], first[0], g_lines[k], len(pages_of[k]), g_ctl[k] or '',
+                     (g.get('row_it_belongs_on') or '').strip(), (g.get('direction') or '').strip(), g_disp[k]])
+    with open(R / 'nv8_recall_groups.tsv', 'w', newline='') as f:
+        w = csv.writer(f, delimiter='\t', lineterminator='\n')
+        w.writerow(['earlier_act', 'actor', 'what_it_is_in_the_grouping_reader_s_words', 'when_as_the_pages_give_it', 'kind', 'first_reported', 'earliest_page', 'earliest_day', 'lines', 'pages', 'of_them_planted_controls',
+                    'row_the_reader_proposed', 'which_way_the_reader_says_it_cuts', 'builder_disposition']); w.writerows(gout)
+    gop = [o for o in gout if o[13].startswith('open')]; n_ctl_lines = sum(g_ctl.values()); ctl_carried = sum(g_ctl[k] for k in grp if not g_disp[k].startswith('open'))
+    print('grouping of the open lines: lines', n_in, 'of them planted controls', n_ctl_lines, 'in a carried group', ctl_carried, '| groups', len(gout), '| carried', len(gout) - len(gop), '| open', len(gop), 'with lines', sum(o[8] for o in gop),
+          '| open by first report', dict(Counter(o[5] for o in gop).most_common()), '| open by direction', dict(Counter(o[12] for o in gop).most_common()), '| open by kind', dict(Counter(o[4] for o in gop).most_common()),
+          '| open in these days by direction', dict(Counter(o[12] for o in gop if o[5] == 'in these days').most_common()))
     npg = sum(1 for j in range(1, 13) for _ in csv.DictReader(open(L / f'recall_nv8_{j:02d}.pages.tsv'), delimiter='\t'))
     nread = sum(1 for j in range(1, 13) for x in csv.DictReader(open(L / f'recall_nv8_{j:02d}.pages_read.csv')) if x['read_whole'].strip().lower() == 'yes')
     cand = [o for o in rout if o[4].startswith('CANDIDATE')]
     print('every counted article read for reports of earlier acts: pages', npg, 'read whole', nread, '| lines', len(rout), dict(Counter(o[4] for o in rout)), '| held-out acts', len(ctl), 'valid', len(ctl) - len(NOT_VALID), 'found', len(found),
-          '| candidate lines open', sum(1 for o in cand if o[8] == R_OPEN), 'on pages', len({o[1] for o in cand if o[8] == R_OPEN}), '| by direction', dict(Counter(o[7] for o in cand if o[8] == R_OPEN).most_common()),
+          '| candidate lines open', sum(1 for o in cand if o[8].startswith('open')), 'on pages', len({o[1] for o in cand if o[8].startswith('open')}), '| by direction', dict(Counter(o[7] for o in cand if o[8].startswith('open')).most_common()),
           '| dispositions', {f'{k[0]} / {k[1]}': v for k, v in sorted(rc.items())})
 
 
