@@ -1,9 +1,9 @@
 what	count
-register lines of analysts and bylines	1212
+register lines of analysts and bylines	1232
 tables searched	85
-people: register lines searched	1095
-people: different names searched	1022
-people: register lines whose name occurs in a table	40
+people: register lines searched	1115
+people: different names searched	1039
+people: register lines whose name occurs in a table	41
 others (firms, one-word names, longer labels among the analysts): register lines searched	36
 others: different names searched	36
 others: register lines whose name occurs in a table	13

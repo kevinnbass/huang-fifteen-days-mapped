@@ -48,7 +48,7 @@ def main():
     first = len(pages)
     # what the readers of the census could not read, for every page (lanes a to d read the first census, e the pages saved since)
     gaps = {}
-    for t_ in 'abcdefg':               # f read the recovered pages and two saved since: its gaps are what is still missing of those; g read the 54 pages saved on Nov 16
+    for t_ in 'abcdefgj':              # f read the recovered pages and two saved since: its gaps are what is still missing of those; g read the 54 pages saved on Nov 16; j read nine pages added on Nov 17 (two are openings before a subscription prompt)
         if not (LANE.parent / f'remarks_nv8_{t_}' / 'done' / 'DONE').exists():
             continue
         for r in csv.DictReader(open(LANE.parent / f'remarks_nv8_{t_}' / 'out' / 'gaps.csv', newline='')):

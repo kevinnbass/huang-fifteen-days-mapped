@@ -1,0 +1,10 @@
+finding_id,grade,element_text,problem
+G-acts,ok,All 362 active acts: actor/day/words/report edge,ok
+G-ties,ok,All 87 ties: endpoints/kind/words,ok
+G-members,ok,All 150 member lines: actor/side/words,ok
+G-coverage,ok,"All 2,245 drawn listed pieces: day/domain/headline/URL",ok
+G-A-passages,ok,Every Part A source passage in the panel; withdrawn MA333 absent,ok
+G-P01,qualification,MA08 on Nov 6,[row error] P01: Exact data parity preserves the additional Nov 7 relay in the Nov 6 chip.
+G-P02,qualification,MA365 wire wording from Nov 8,[row error] P02: Exact data parity preserves the transferred wire sentence without its may-be-newer caveat.
+G-P09,qualification,Status: the twenty-second reading,[table or text] P09: The notes repeat the status without saying that the twenty-second reading closed incomplete; the separate README section does say so.
+G-P11,error,None of the 722 is drawn,"[table or text] P11: This group and its R1854 member remain open/on no chip, but MA365 now explicitly quotes the same August no-China-sales forecast, citing the same Times report and Jerusalem Post relay. This is proven carriage, not an inference from a similar view. The status claim that none of the 722 open groups is drawn is false."

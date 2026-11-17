@@ -1,0 +1,2 @@
+finding_id,row_id,grade,passage_found,problem,suggested_wording
+H-01,public13,ok,"COMMIT.txt and all 94 non-cache files, byte-hash comparison with audit_nv8_s8p/public13",ok,Commit 76dbbed; identical file set and hashes. No changed companion file found; the prior tree supplies the positive comparison control.

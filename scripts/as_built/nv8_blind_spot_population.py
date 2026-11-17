@@ -17,6 +17,8 @@ The population depends on the chips, so it is counted at three stages:
   stage 2  the acts after the answer to those lanes and to the eighteenth reading, before lanes c to h (290; ..._stage2.tsv);
   now      the acts as they stand.
 A lane's input was the population of its actors at its stage, plus the lines that only an act held out as a control carried.
+Lines on pages added to the table after the lanes had run (nine pages, Nov 17, 2026) are counted only in the present column: no paraphrase lane
+read them; a later reader read those pages whole against the chips, and the table names that lane for them.
 
 Writes research/nv8_blind_spot_population.tsv: one row for every line that was in the population at any stage or in a lane's input, with
 its number in the census readings (the line ids the lanes used), its actor, page and article, the stages at which it was in the population,
@@ -73,6 +75,11 @@ def main():
     now = [r for r in rows_map.rows() if r['row_id'].startswith('MA') and not r.get('withdrawn')]
     acts['now'] = [(r['actor'], r['what'] + ' ' + ' '.join(r['q'])) for r in now]
     pop = {k: uncarried(lines, v) for k, v in acts.items()}
+    # Pages added to the table after the paraphrase lanes had run (nine, on Nov 17, 2026): their lines were in no lane's population, so they
+    # are counted only in the present column; a reader read those pages whole against the chips (lane acts_nv8_added_a), which the table says.
+    late_pages = {r['page_id'] for r in csv.DictReader(open(R / 'nv8_pages_added.tsv', newline=''), delimiter='\t') if 'found outside this table on Nov 17' in r['why_saved']}
+    late = {l['n'] for l in lines if l['page'] in late_pages}; assert len(late_pages) == 9 and late and min(late) > max(l['n'] for l in lines if l['n'] not in late), 'the lines of the pages added later must come after every other line'
+    pop['1'] -= late; pop['2'] -= late
     lane_of = {}; held = set(); lane_actors = defaultdict(set)
     for k in LANE_STAGE:
         ctl = {int(r['line_id'][1:]) for r in csv.DictReader(open(L / f'para_nv8_{k}.controls.tsv'), delimiter='\t') if r['only_a_held_out_act_carried_it'] == 'yes'}
@@ -89,17 +96,17 @@ def main():
         w = csv.writer(f, delimiter='\t', lineterminator='\n')
         w.writerow(['census_line', 'actor', 'page', 'article', 'in_population_stage_1', 'in_population_stage_2', 'in_population_now', 'lane_that_read_it', 'only_a_held_out_act_carried_it'])
         for n in keep:
-            l = byn[n]; w.writerow([f'L{n:05d}', l['actor'], l['page'], l['art']] + ['yes' if n in pop[k] else '' for k in ('1', '2', 'now')] + ['para_nv8_' + lane_of[n] if n in lane_of else '', 'yes' if n in held else ''])
+            l = byn[n]; w.writerow([f'L{n:05d}', l['actor'], l['page'], l['art']] + ['yes' if n in pop[k] else '' for k in ('1', '2', 'now')] + ['para_nv8_' + lane_of[n] if n in lane_of else ('acts_nv8_added_a (its page was added on Nov 17 and read whole against the chips)' if n in late else ''), 'yes' if n in held else ''])
     c = lambda s: (len(s), sum(1 for n in s if byn[n]['actor'] in FIRST), sum(1 for n in s if byn[n]['actor'] not in FIRST))
     ab = {n for n, k in lane_of.items() if k in 'ab'}; rest = set(lane_of) - ab
     drop = next(i for i, (a, _) in enumerate(acts['now']) if a == 'nvidia'); ctl_n = len(uncarried(lines, acts['now'][:drop] + acts['now'][drop + 1:]))
     assert ctl_n > len(pop['now']), 'control: taking an act away did not enlarge the population'
-    print('lines of drawn actors on counted pages that are not a direct quotation of seven words or more:', len(lines))
+    print('lines of drawn actors on counted pages that are not a direct quotation of seven words or more:', len(lines), '| of them on the nine pages added on Nov 17:', len(late), 'in the present population:', len(late & pop['now']))
     for k, name in (('1', 'stage 1 (before the first lanes)'), ('2', 'stage 2 (before lanes c to h)'), ('now', 'now')):
         t, a, b = c(pop[k]); print(f'{name}: acts {len(acts[k])} | lines no chip carries by its words {t} | of the company, its board, chairman and interim chief {a} | of the other actors {b}')
     print('lane inputs: a and b', len(ab), '=', len(ab - held), 'of the stage 1 population +', len(ab & held), 'that only a held-out act carried | c to h', len(rest), '=', len(rest - held), 'of the stage 2 population +',
           len(rest & held), 'that only a held-out act carried | all', len(lane_of), '| by lane', dict(sorted(Counter(lane_of.values()).items())))
-    print('of the population now:', len(pop['now'] & set(lane_of)), 'were read by a lane |', len(pop['now'] - set(lane_of)), 'were not (carried by words at their lane\'s stage, not now) | rows written', len(keep), '| control: without one act', ctl_n)
+    print('of the population now:', len(pop['now'] & set(lane_of)), 'were read by a lane |', len(pop['now'] - set(lane_of)), 'were not:', len((pop['now'] - set(lane_of)) & late), 'on the nine pages added on Nov 17 (read whole by a later reader) and', len(pop['now'] - set(lane_of) - late), 'carried by words at their lane\'s stage and not now | rows written', len(keep), '| control: without one act', ctl_n)
 
 
 if __name__ == '__main__':

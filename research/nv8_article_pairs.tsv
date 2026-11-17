@@ -515,3 +515,6 @@ cnn-1111-live	sw-localnews8com-04	different	live page carries the stand-alone re
 cnn-1111-live	sw-ktvzcom-01	different	live page carries the stand-alone report	yes	a reader from another model family (lane pairs_nv8_d, Nov 16, 2026)
 cnn-1111-live	sw-localnews8com-06	different	live page carries the stand-alone report	yes	a reader from another model family (lane pairs_nv8_d, Nov 16, 2026)
 cnn-1111-live	sw-wtopcom-03	different	quotes the same document	yes	a reader from another model family (lane pairs_nv8_e, Nov 16, 2026)
+sw-joemygodcom-d137af02	man-axios-1111-02	different	one quotes the other	yes	the builder (Nov 17, 2026: three pairs listed when nine pages saved by hand were added; no independent reader has read them)
+sw-joemygodcom-02	man-d1bdda3e3488	different	one quotes the other	yes	the builder (Nov 17, 2026: three pairs listed when nine pages saved by hand were added; no independent reader has read them)
+man-1fbc18e5e77d	man-f120cef932fc	different	different entries of a series	yes	the builder (Nov 17, 2026: three pairs listed when nine pages saved by hand were added; no independent reader has read them)

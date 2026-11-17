@@ -119,3 +119,6 @@ man-83733609b719	wsj.com	1	1	the summary box under the headline
 man-0c5b4e4f24c9	reuters.com	1	1	a photo caption	
 man-e8a4f78b0d7e	reuters.com	1	1	a photo caption	
 man-wsj-1112-08	wsj.com	1	1	the summary box under the headline	
+man-1c17777255e2	washingtonpost.com	0	1	the site's own summary of readers' comments, under the piece	
+man-axios-1111-02	axios.com	0	3	a subscription or sign-in line where the saved copy stops: the page is marked as held in part	yes
+man-d1bdda3e3488	axios.com	0	2	a subscription or sign-in line where the saved copy stops: the page is marked as held in part	yes

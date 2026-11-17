@@ -1,31 +1,31 @@
 register	what	count
-analysts	quoted on the saved pages (a person or firm written two ways counted once)	280
+analysts	quoted on the saved pages (a person or firm written two ways counted once)	282
 analysts	drawn	16
 analysts	not drawn: at a bank, not drawn	17
 analysts	not drawn: cannot tell	1
 analysts	not drawn: name match, not settled	1
-analysts	not drawn: none found	233
-analysts	not drawn: none found for the person	4
+analysts	not drawn: none found	234
+analysts	not drawn: none found for the person	5
 analysts	not drawn: not drawn	8
-bylines	pairs of outlet and name	948
-bylines	different names	873
+bylines	pairs of outlet and name	966
+bylines	different names	888
 bylines	pairs that are an agency or not a person's name	84
 bylines	names that are an agency or not a person's name	75
 bylines	pairs: cannot tell	84
 bylines	pairs: drawn	5
-bylines	pairs: name match, not settled	3
-bylines	pairs: none found	854
+bylines	pairs: name match, not settled	4
+bylines	pairs: none found	871
 bylines	pairs: record of another kind, not drawn	2
 bylines	different names drawn	5
 banks	named by Quartz on Sep 4, 2026 as lenders to Anthropic	17
 banks	of those, with an analyst, a note or an executive quoted on the saved pages	11
 investors	quoted and described on the pages as holding or shorting Nvidia shares	2
-remarks	of drawn actors, on two or more pages	523
+remarks	of drawn actors, on two or more pages	524
 remarks	carried in other words, by the audit	42
 remarks	not his remark	3
 remarks	not of these days	14
 remarks	not printed	3
 remarks	partly on a chip	15
 remarks	partly on chip	40
-remarks	printed on a chip	242
+remarks	printed on a chip	243
 remarks	same statement as a chip, not printed	164

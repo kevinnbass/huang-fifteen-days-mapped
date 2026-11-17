@@ -45,6 +45,8 @@ READ.update({p: 'a sign-in line after the complete piece (a reader judged the pa
 READ.update({p: BIO for p in ('sw-coingapecom-01', 'sw-proactiveinvestorscom-01', 'sw-windowsreportcom-01', 'sw-windowsreportcom-02')})
 READ.update({'man-921a60b7ee50': "the site's own summary of readers' comments, under the piece", 'man-wapo-1112-02': "the site's own summary of readers' comments, under the piece",
              'sw-ambcryptocom-01': 'words of the article itself, not a control', 'art-line-straitstimes-bloomberg-1110': "the page's description line", 'cnn-1111-live': LIVE_LINKS})
+# three of the nine pages saved by hand and added on Nov 17, read by the builder that day (the two Axios pages also carry a sponsor's link and the site's invitation line; the barrier is what matters)
+READ.update({'man-1c17777255e2': "the site's own summary of readers' comments, under the piece", 'man-axios-1111-02': BARRIER, 'man-d1bdda3e3488': BARRIER})
 arts = [r for r in csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t') if r['counted'] == 'yes']
 text_of = {pid: t for copies in M.articles().values() for pid, t in copies}
 out, live = [], []

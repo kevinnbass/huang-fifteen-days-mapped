@@ -1,13 +1,13 @@
 name	first_names_searched	articles	drawn	why_not
-Warren	Elizabeth / Liz	71	yes	
-Coons	Chris / Christopher	48	yes	
+Warren	Elizabeth / Liz	72	yes	
+Coons	Chris / Christopher	49	yes	
 Cramer	Kevin	22	yes	
 Schumer	Chuck / Charles / Charlie	22	yes	
 Banks	Jim / James	19	yes	
 Cornyn	John	9	yes	
-Kennedy	John	6	yes	
+Kennedy	John	7	yes	
 Thune	John	13	yes	
-Mast	Brian	92	yes	
+Mast	Brian	93	yes	
 Crawford	Rick / Eric	68	yes	
 Meeks	Gregory / Greg	9	yes	
 Himes	Jim / James	8	yes	
@@ -19,13 +19,13 @@ Subramanyam	Suhas	3	yes
 Bacon	Don / Donald	3	yes	
 Johnson	Mike	11	yes	
 Blumenthal	Richard / Dick	3	yes	
-Wyden	Ron / Ronald	5	yes	
+Wyden	Ron / Ronald	6	yes	
 Ricketts	Pete / Peter	5	yes	
 McCaul	Michael / Mike	5	yes	
 Warner	Mark	4	yes	
-Cotton	Tom / Thomas	5	yes	
+Cotton	Tom / Thomas	6	yes	
 Scott	Tim / Timothy	4	yes	
-Neal	Richard / Richie	3	yes	
+Neal	Richard / Richie	4	yes	
 Jordan	Jim	13	no	a current member the articles name for other things: his election as House minority leader
 Stevens	Haley	7	no	a current member the articles name for other things: an endorsement and an absence from a vote
 Massie	Thomas	11	no	a current member the articles name for other things: his bid to impeach the defense secretary
@@ -36,10 +36,10 @@ Sullivan	Dan / Daniel	3	no	a current member the articles name for other things: 
 Slotkin	Elissa	3	no	a current member the articles name for other things: the Senate leadership contest and a mention by the president on another matter
 Pelosi	Nancy	3	no	a current member the articles name for other things: missing a vote on impeaching the defense secretary, and an older case about another member
 Horsford	Steven / Steve	3	no	a current member the articles name for other things: missing a vote on impeaching the defense secretary, and a letter on a sale of data
-Brian		64	not a name searched	a word found after a congressional title: part of a name searched above
-John		59	not a name searched	a word found after a congressional title: part of a name searched above
-Elizabeth		57	not a name searched	a word found after a congressional title: part of a name searched above
-Chris		25	not a name searched	a word found after a congressional title: part of a name searched above
+Brian		65	not a name searched	a word found after a congressional title: part of a name searched above
+John		60	not a name searched	a word found after a congressional title: part of a name searched above
+Elizabeth		58	not a name searched	a word found after a congressional title: part of a name searched above
+Chris		26	not a name searched	a word found after a congressional title: part of a name searched above
 Rick		25	not a name searched	a word found after a congressional title: part of a name searched above
 Kevin		24	not a name searched	a word found after a congressional title: part of a name searched above
 Hakeem		21	not a name searched	a word found after a congressional title: part of a name searched above
@@ -47,28 +47,28 @@ Jim		21	not a name searched	a word found after a congressional title: part of a 
 Chuck		15	not a name searched	a word found after a congressional title: part of a name searched above
 Massie		11	not a name searched	a word found after a congressional title: part of a name searched above
 Mike		11	not a name searched	a word found after a congressional title: part of a name searched above
+Greer		10	not a name searched	a word found after a congressional title: not a current member: the U.S. trade representative
+Jamieson		10	not a name searched	a word found after a congressional title: not a current member: the U.S. trade representative
 Thomas		10	not a name searched	a word found after a congressional title: part of a name searched above
-Greer		9	not a name searched	a word found after a congressional title: not a current member: the U.S. trade representative
-Jamieson		9	not a name searched	a word found after a congressional title: not a current member: the U.S. trade representative
 Gregory		8	not a name searched	a word found after a congressional title: part of a name searched above
 Michael		7	not a name searched	a word found after a congressional title: part of a name searched above
+Ron		7	not a name searched	a word found after a congressional title: part of a name searched above
 Eric		6	not a name searched	a word found after a congressional title: part of a name searched above; in other articles a former member (Swalwell)
 Garcia		6	not a name searched	a word found after a congressional title: part of a name searched above
+Richard		6	not a name searched	a word found after a congressional title: part of a name searched above
 Robert		6	not a name searched	a word found after a congressional title: part of a name searched above
-Ron		6	not a name searched	a word found after a congressional title: part of a name searched above
 Bill		5	not a name searched	a word found after a congressional title: part of a name searched above
 Cindy		5	not a name searched	a word found after a congressional title: part of a name searched above
 Harvey		5	not a name searched	a word found after a congressional title: not a current member: Nvidia's board chair
 Huang		5	not a name searched	"a word found after a congressional title: not a current member: Nvidia's chief executive (""Nvidia Leader Before Jensen Huang"", ""Board Chair After Jensen Huang"")"
 Hyde-Smith		5	not a name searched	a word found after a congressional title: part of a name searched above
 Jones		5	not a name searched	a word found after a congressional title: not a current member: Nvidia's board chair
-Richard		5	not a name searched	a word found after a congressional title: part of a name searched above
+Tom		5	not a name searched	a word found after a congressional title: part of a name searched above
 Jensen		4	not a name searched	"a word found after a congressional title: not a current member: Huang (""Nvidia Leader ... Jensen Huang"")"
 Pete		4	not a name searched	a word found after a congressional title: part of a name searched above
 Seth		4	not a name searched	a word found after a congressional title: part of a name searched above
 Swalwell		4	not a name searched	a word found after a congressional title: not a current member: a former member
 Tim		4	not a name searched	a word found after a congressional title: part of a name searched above
-Tom		4	not a name searched	a word found after a congressional title: part of a name searched above
 Bernie		3	not a name searched	a word found after a congressional title: part of a name searched above
 Mark		3	not a name searched	a word found after a congressional title: part of a name searched above
 Nancy		3	not a name searched	a word found after a congressional title: part of a name searched above
