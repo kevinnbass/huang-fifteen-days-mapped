@@ -63,7 +63,6 @@ READ1 = {'MA179': 'not the same act: other statements of the company, of other d
          # the reports of earlier acts drawn on Nov 16 (answer to the second reading of the set-aside items)
          'MA331': 'not the same act: a line of Nov 8 that shares only the words "an Nvidia spokesperson said" with a passage cited here',
          'MA332': 'not the same act: the company\'s statements of Oct 29, Nov 5, Nov 6 and Nov 8 (its chips of those days), which share only the words "the U.S. government" with a passage cited here',
-         'MA333': 'not the same act: lines of Nov 8 and Nov 12 that share only the words "Nvidia said in a" with a passage cited here',
          'MA341': 'the same remarks: the census gives them the day of the interview itself, Oct 22, before these days; the chip is the recall of Nov 9 and says so',
          'MA342': 'not the same act: a line of Nov 8 that shares only the words "the U.S. and" with a passage cited here',
          'MA345': 'the same remarks: the census gives them a day in mid-October, the time of the interview itself, before these days; the chip is the recall of Nov 11 and says so',
@@ -89,7 +88,6 @@ READ2 = dict({k: OTHER for k in ('MA13', 'MA16', 'MA32', 'MA51', 'MA85', 'MA109'
              MA322='"Tuesday" is the day Axios reported (Nov 10), which the chip gives in words; "Monday" dates the president\'s remark printed after it; the approvals are dated May by the page of Nov 7, on whose day the chip sits',
              MA331='the word is part of the name of an archive site the page links ("Archive.today"); the page dates the Bloomberg report Dec 22, 2025 and the assurance mid-November 2025, and the chip gives both',
              MA332="the day words date the board's announcement and the company's statement to CNBC of Oct 29 (its chip of that day); the two statements drawn here are dated October and December 2025 by the page, and the chip says so",
-             MA333='"Monday" dates China\'s denial (Nov 9), the subject of the dispatch; the filing is dated August by the page, and the chip says so',
              MA335='"Saturday" dates an earlier article of the same site; the response is dated Dec 10, 2025 by the post the page reprints, and the chip says so',
              MA337="the day words date the share price and an advertisement; the page gives the company's statement no day, only that it followed the restrictions of April 2025",
              MA338='"Tuesday" is the day Axios reported (Nov 10, the chip\'s day); "Monday" dates the president\'s remark printed after it; the disclosure is dated February by the page',
@@ -139,7 +137,6 @@ READ3 = {'MA16': 'the chip\'s day is that of the FT report it relays and of the 
          'MA329': 'may be newer: the page that first recalls the bargain was first published on the evening of Nov 8 and changed the next morning, and no other saved page of Nov 8 carries its sentence; a page of Nov 9 recalls the same bargain and the chip cites it. The chip keeps the day of first publication; the third page cited is a later one, of Nov 12, cited for the fuller account',
          'MA330': "the chip's day is that of the two pages that first recall the permission (Oct 29: one changed within the hour of its publication, the other the Times's first report); the third page cited is a later one, of Nov 12, cited for its words, and the chip gives its date",
          'MA317': 'may be newer, for the remark on the next decade only: the page that paraphrases it was first published on the evening of Nov 11 and changed the next morning, and no other saved page of Nov 11 carries it; the chip says so and keeps the day of first publication (the twenty-first reading\'s finding). The sentence on revenue is in a page of Nov 11 that was not changed',
-         'MA333': 'may be newer: the earliest page that carries the sentence was first published on the evening of Nov 8 and updated at noon on Nov 9, and no earlier version of it is saved. A copy of the same article timed the next morning lacks the sentence, and it matches a news agency\'s dispatch of that morning; that is evidence, not proof, of a later insertion, and the chip says both. It keeps the day of first publication, as the rule says (the twenty-first reading\'s finding)',
          'MA359': "the chip's day is that of the article that recalls the remark (Nov 9, changed later the same day); the other page cited is the live page of Nov 11, cited for its wording of the remark"}
 WIRE = 'copies of one wire dispatch, all of the chip\'s day: the sentence is in the longest copy only, and no day turns on it'
 READ4 = {'MA81': 'the earlier page is one a broadcaster kept updating: it is dated Nov 8 by its first publication and says the sources spoke "on Monday" (Nov 9), the chip\'s day',
@@ -153,8 +150,8 @@ READ4 = {'MA81': 'the earlier page is one a broadcaster kept updating: it is dat
          'MA268': 'the cited page is a live report that began on Nov 11; the entry that carries the remark has its own stamp of Nov 12',
          'MA299': 'not the same act: the page of Oct 29 gives the embassy\'s reply to the Times of that day (its chip of Oct 29) in words that begin alike',
          'MA316': 'the cited page was first published Nov 11 and changed on the morning of Nov 12; the clause is in the changed version only, and the chip says so',
-         'MA346': "not the act drawn: the earlier page quotes a news agency's sentence that sums up his argument, which the cited page also carries; the quotation from the June interview is in the cited page only",
-         'MA333': 'one earlier page, named in the chip: an article of Nov 5 that does not mention the affair, cited for its account of the same quarterly report. The chip sits on Nov 8, the first day of the earliest page that carries the recalled sentence (see part 3)'}
+         'MA169': 'not the act drawn: the sentence that Megaspeed has denied wrongdoing stands in pages from Nov 8 as their summary of the company\'s position (its own statements are on its chips, from Oct 29); the chip cites it as the denial that the account of Nov 12 prints beside the department\'s inquiry, which is the act drawn',
+         'MA346': "not the act drawn: the earlier page quotes a news agency's sentence that sums up his argument, which the cited page also carries; the quotation from the June interview is in the cited page only"}
 READ5 = {'MA85': 'the passage is the time stamp the hand-saved page prints, cited for the day; the other copy of the report carries its passages',
          'MA158': 'the passage is an address printed on the licensed copy, cited for its date; the Times\'s own page has no such line',
          'MA169': WIRE, 'MA212': WIRE,

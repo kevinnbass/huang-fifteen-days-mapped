@@ -136,7 +136,7 @@ JRNL = (' on the Journal\'s row (its column of the evening of Nov 11); the refus
 TIE = 'carried: it is a tie line of the figure ({}), which the table of chips the reader was given did not show'
 EARLIER = {
  'single:G003': D('MA331'), 'a:A059': D('MA331') + ' (the same assurance as G003)', 'single:G108': D('MA332'), 'single:G184': D('MA332'), 'single:G055': D('MA336'),
- 'a:A047': D('MA333') + ' (the reader\'s page is a copy of the news agency\'s dispatch; since the twenty-first reading the chip sits on Nov 8, the first day of the earliest saved page that carries the sentence, with the caveat that it may be newer)',
+ 'a:A047': D('MA365') + ' (the reader\'s page is a copy of the news agency\'s dispatch; the disclosure it recalls is drawn on the Times\'s row at Nov 7, the first saved page that carries it; the chip first drawn for it, MA333, was withdrawn as its duplicate after the twenty-second reading)',
  'a:A054': D('MA334') + ' (one rule for every actor: a search of every counted page for a sum of money beside the word lobbying found CNBC\'s two reports of Nvidia\'s spending and no report of another actor\'s)',
  'a:A062': D('MA337'),
  'a:A076': D('MA338') + ' and, for the chief executive\'s remark in the same sentence, MA339; both on Nov 10, the day of the page that first relays the Axios report (the reader cited a page of Nov 11)',
@@ -199,6 +199,7 @@ R_DONE = [
  ('sw-sfexaminercom-02', 'kress', 'In 2023, she said on a call', 'drawn: MA364 (on the Times\'s row, from its profile of the interim chief)'),
  ('man-nyt-1029-01', 'huang', 'He also negotiated a deal with Mr. Trump', 'drawn: MA330 (the permission and the government\'s share, on the day of this page; the chip quotes this sentence)'),
  ('man-nyt-1029-01', 'trump', 'He also negotiated a deal with Mr. Trump', 'drawn: MA330 (the permission and the government\'s share, on the day of this page; the chip quotes this sentence)'),
+ ('sw-techcrunchcom-04', 'nvidia', 'Nvidia has invested in OpenAI, Anthropic, xAI, CoreWeave, and Nebius', 'carried in part: the tie line MT20 carries the investment in Anthropic and MT53 the one in xAI; the investments in OpenAI, CoreWeave and Nebius are on no chip or tie line and are open in the register (earlier acts B.05, B.02 and B.03, added by the builder after the twenty-second reading)'),
  ('sw-semaforcom-19', 'huang', 'largely neutral tenor', 'drawn: on MA344 (the review\'s finding for the years before 2025, with the words that it scored the interviews with AI models of Anthropic and OpenAI)'),
 ]
 # chips the readers named as carrying a line from a page EARLIER than the chip's day, and what the builder did
@@ -208,12 +209,18 @@ R_EARLY = {
  'MA301': 'moved: the chip now sits on Nov 10, the day of the first saved relay of the report',
  'MA322': 'moved: the chip now sits on Nov 7, the day of the first page that recalls the approvals',
  'MA345': 'split: the remark to a podcaster has its own chip on Nov 9 (MA359); this chip keeps the interview first recalled on Nov 11',
- 'MA333': 'moved: the chip now sits on Nov 8, the first day of the earliest page that carries the sentence, with the caveat that it may be newer (the twenty-first reading\'s finding); this page, of Nov 5, does not mention the affair and is named in the chip as context',
  'MA319': 'not moved: the earlier page recalls the president\'s share trades, which are tie lines; the White House\'s reply drawn here is in the page of Nov 12',
  'MA323': 'not moved: the earlier pages speak of the inquiry in general or give Megaspeed\'s own statement (its chip); the audits as this chip words them are in the page of Nov 12',
  'MA353': 'not moved: the earlier pages carry Huang\'s refusal of June, which is on the Times\'s chip of Nov 5 and on her chip of Oct 29; the letter of July 2025 is first in the page of Nov 10',
  'MA355': 'not moved: the earlier pages carry Huang\'s refusal of June, which is on the Times\'s chip of Nov 5 and on her chip of Oct 29; her joining the bill is first in the page of Nov 12',
  'MA169': 'carried earlier: the indictment of March is now worded on the first saved pages that recall it, the department\'s chip of Oct 29 (MA362) and the Journal\'s first report (MA06, Oct 30); the chip of Nov 12 keeps the report that the department is examining a link to Megaspeed',
+}
+# a chip the readers named that was withdrawn since as a duplicate: where its act is carried now, by (chip, page); None stands for any other page
+R_WD = {
+ ('MA333', 'sw-jpostcom-01'): 'drawn: MA365 (on the Times\'s row at Nov 7; this page is the relay of that day which the chip cites for the Times\'s sentences on the small shipments of the quarter that ended in July). The chip the reader named, of Nov 8, was withdrawn as its duplicate (the twenty-second reading)',
+ ('MA333', 'sw-uniteai-01'): 'carried: MA365 names this page, an article of Nov 5 that does not mention the affair, for its account of the same quarterly report; the chip the reader named was withdrawn as a duplicate of MA365 (the twenty-second reading)',
+ ('MA333', 'sw-newsweekcom-01'): 'carried: the licences of February are on MA338; the small shipments are on the Times\'s row at Nov 7 (MA365), the other chip the reader named having been withdrawn as its duplicate (the twenty-second reading)',
+ ('MA333', None): 'carried earlier: the same disclosure is on the Times\'s row at Nov 7 (MA365), the first saved page that recalls it, which also quotes the wire sentence; the chip the reader named, of Nov 8, was withdrawn as its duplicate (the twenty-second reading)',
 }
 R_OPEN = 'open: not yet grouped or drawn'
 NOT_VALID_CTL = {'MA327'}        # its earlier part (a refusal of June) is carried by two other chips, as its reader said: not a test of that reader
@@ -230,10 +237,39 @@ G_BUILDER = {
  '4.NV4-115': 'carried since Nov 17: MT20 (the tie line between Anthropic and Nvidia now gives the page\'s sentence on the interim chief\'s part in financing deals)',
 }
 # chips that also carry a group since Nov 17, added to what its reader named
-G_ALSO = {'6.NV6-063': 'MA362', '3.MS44': 'MA360', '4.NV4-111': 'MA360', '1.G001': 'MA01', '1.G002': 'MA01'}
-G_AFTER = {'1.G001': '; the chips its reader named give the gathering only through the company\'s explanation, and since Nov 17 the Times\'s first report (MA01) words the gathering itself',
+G_ALSO = {'4.NV4-012': 'MA365', '6.NV6-063': 'MA362', '3.MS44': 'MA360', '4.NV4-111': 'MA360', '1.G001': 'MA01', '1.G002': 'MA01'}
+G_AFTER = {'4.NV4-012': '; MA333 was withdrawn after the twenty-second reading as a duplicate of MA365, which carries the disclosure on the Times\'s row at Nov 7 with the filing\'s two other statements that this group\'s lines give',
+           '6.NV6-021': '; the chip its reader named gave the halt and the transfer but not who asked for the pause, and since the twenty-second reading it quotes the Times\'s sentence that the Justice Department requested it',
+           '1.G001': '; the chips its reader named give the gathering only through the company\'s explanation, and since Nov 17 the Times\'s first report (MA01) words the gathering itself',
            '1.G002': '; the chip its reader named gives the dinner only through the company\'s explanation, and since Nov 17 the Times\'s first report (MA01) words it'}
 G_CTL_NOTE = {'2.NV2-319': ' (its one line is a planted control: the sentence is a cited passage of the White House\'s chip MA349, which the grouping reader did not name)'}
+# groups whose reader named a chip that carries an outcome or a neighbouring act, not the act itself (the twenty-second reading): open again
+G_REOPEN = {
+ '6.NV6-036': 'its grouping reader named MA294 and MA348, which give his omission from the first list for the trip and the president\'s invitation, not the page\'s attribution of the exclusion to the State Department, which the line\'s reader calls unconfirmed',
+ '6.NV6-046': 'its grouping reader named MA150, which gives the inquiry into Megaspeed and into a recruitment, not an investigation of the relationship by the FBI lasting at least a year',
+}
+G_FIRST = {'3.MS05': 'unclear'}        # its grouping reader read before; a job advertisement the page calls recent is not shown to have been public before Oct 29 (the twenty-second reading)
+G_NOTE = {'3.MS05': ' (first report: the builder reads unclear where its grouping reader read before, since a job advertisement the page calls recent is not shown to predate Oct 29: the twenty-second reading)'}
+ADDED = ' (added and coded by the builder after the twenty-second reading, which found it on saved pages and in no census line; a scan of the saved pages by the builder gave the pages listed, and no census reader has read it)'
+# earlier acts that no census line held (the twenty-second reading found them); the wording, the class and the direction are the builder's
+G_NEW = {
+ 'B.01': {'actor': 'ft', 'what': 'The FT recalls a letter of the year before in which leading Senate Democrats said national security decisions were being made at the behest of a well-connected chief executive who stood to gain from the lifting of export controls; the page names no signer.',
+          'when': 'Last year (2025), as the page gives it.', 'kind': 'statement', 'first_reported': 'unclear', 'row_it_belongs_on': 'ft', 'direction': 'against Huang or Nvidia'},
+ 'B.02': {'actor': 'nvidia', 'what': 'Nvidia invested $2 billion in CoreWeave.', 'when': 'January 2026; one page says at the start of 2026, and the earliest names the investment without a date.',
+          'kind': 'money', 'first_reported': 'before', 'row_it_belongs_on': 'nvidia', 'direction': 'neither'},
+ 'B.03': {'actor': 'nvidia', 'what': 'Nvidia invested $2 billion in Nebius.', 'when': 'March 2026; the earliest page names the investment without a date.',
+          'kind': 'money', 'first_reported': 'before', 'row_it_belongs_on': 'nvidia', 'direction': 'neither'},
+ 'B.04': {'actor': 'nvidia', 'what': 'Nvidia signed preliminary agreements with six financial firms aimed at mobilizing more than $500 billion over time; Huang said Nvidia could backstop up to a quarter of it.',
+          'when': 'August 2026.', 'kind': 'money', 'first_reported': 'before', 'row_it_belongs_on': 'nvidia', 'direction': 'neither'},
+ 'B.05': {'actor': 'nvidia', 'what': 'Nvidia invested in OpenAI; one page says an investment of $30 billion was finalized in March and completed by October.',
+          'when': 'No date in the earliest pages; March and October 2026 in one page, which cites Reuters and The Information.', 'kind': 'money', 'first_reported': 'before', 'row_it_belongs_on': 'nvidia', 'direction': 'neither'},
+}
+# lines the census readers did not list, added by the builder after the twenty-second reading: (page, actor, row, direction, earlier act). The first two are pages whose reader missed an act that other pages' lines hold
+R_ADDED = ([('sw-breitbartcom-08', 'nvidia', 'nvidia', 'for Huang or Nvidia', '4.NV4-004'), ('sw-implicatorai-01', 'megaspeed', 'megaspeed', 'against Huang or Nvidia', '3.MS01'), ('man-ft-1112-03', 'ft', 'ft', 'against Huang or Nvidia', 'B.01')]
+           + [(pg, 'nvidia', 'nvidia', 'neither', 'B.02') for pg in ('sw-techcrunchcom-04', 'prospect-honeypot', 'sw-hntrbrkcom-01', 'sw-bitcoininsiderorg-04', 'sw-cnbccom-09', 'sw-financeyahoocom-31', 'sw-techcrunchcom-15', 'sw-venturebeatcom-01', 'man-cf6650e331b3')]
+           + [(pg, 'nvidia', 'nvidia', 'neither', 'B.03') for pg in ('sw-techcrunchcom-04', 'sw-hntrbrkcom-01', 'man-ac79ea8f3db1', 'man-cf6650e331b3', 'sw-cnbccom-09', 'sw-financeyahoocom-31', 'sw-techcrunchcom-15')]
+           + [(pg, 'nvidia', 'nvidia', 'neither', 'B.04') for pg in ('sw-techcrunchcom-04', 'sw-hntrbrkcom-01')]
+           + [(pg, 'nvidia', 'nvidia', 'neither', 'B.05') for pg in ('man-nyt-1109-02', 'sw-techcrunchcom-04', 'prospect-honeypot', 'man-cf6650e331b3', 'sw-cnbccom-09', 'sw-ensedailycom-18', 'sw-financeyahoocom-31', 'sw-techcrunchcom-15', 'sw-gamerantcom-29658ce5', 'sw-venturebeatcom-01')])
 R_OWN = 'open: the chip sits on its own day and the reader names an earlier page; not read again by the builder'
 # the chips that sit on their own day and that a reader named from an EARLIER page: read by the builder on Nov 17, one disposition per (chips named, page, actor); None stands for any
 R_LATE = [
@@ -261,11 +297,11 @@ R_LATE = [
  (('MA146',), 'sw-thezvisubstackcom-01', 'huang', 'not moved: his post of Nov 10 has its own chip (MA132); the chip named is a remark in his newsletter of Nov 12'),
  (('MA157',), None, 'megaspeed', 'carried earlier: the Journal\'s first report (MA06, Oct 30) now quotes the statement of late 2025; the chip of Nov 9 is the company\'s posting of it that day'),
  (('MA340', 'MA358'), 'sw-cnbccom-04', 'nvidia', 'drawn: MA358 (this page\'s recall, on Nov 10)'),
- (('MA138',), 'sw-engadgetcom-02', 'trump', 'carried earlier: the FT\'s report of Nov 6 (MA08) now words the memo that went to top officials before the trip; the briefing aboard the plane is the Times\'s report of Nov 10'),
+ (('MA138',), 'sw-engadgetcom-02', 'trump', 'drawn: on the FT\'s chip of Nov 6 (MA08), which since the twenty-second reading gives this page\'s relay of Nov 7, that the president was among those notified before the trip, beside what the saved copy of the FT\'s report says (top officials); the briefing aboard the plane is the Times\'s report of Nov 10 (the chip the reader named)'),
  (('MA138',), 'man-ft-1109-04', 'trump', 'drawn: MA361 (the FT\'s sentence of Nov 9, beside what its saved report of Nov 6 says and the president\'s reply)'),
- (('MA138',), 'sw-heisede-01', 'trump', 'carried earlier: the memo that went to top officials before the trip is on the FT\'s chip of Nov 6 (MA08) and the Times\'s of Nov 8 (MA04); the briefing aboard the plane is the Times\'s report of Nov 10'),
- (('MA138',), 'sw-sandrarosecom-01', 'rubio', 'carried earlier: the Times\'s report of Nov 8 on the secretary\'s memo (MA04); that he "said" so is the page\'s wording and matches no saved statement of his'),
- (('MA04', 'MA138'), 'sw-todaycom-01', 'rubio', 'carried: the Times\'s report of Nov 8 on the secretary\'s memo (MA04)'),
+ (('MA138',), 'sw-heisede-01', 'trump', 'carried earlier: that the president was told before the trip is worded from Nov 7 on the FT\'s chip (MA08, as Engadget relays its report) and in the FT\'s own sentence of Nov 9 (MA361); the memo\'s circulation to officials is on MA08 and on the Times\'s chip of Nov 8 (MA04); this page names no source for the warning'),
+ (('MA138',), 'sw-sandrarosecom-01', 'rubio', 'not carried as worded: the page has the secretary say that he shared the information with the president, and no saved page holds such a statement of his (his answer of Nov 8 was that he could not comment: MA74). What the papers report is on their chips: he oversaw the memo and it went to cleared officials before the trip (MA04, the Times, Nov 8); the president was told (MA08 as relayed on Nov 7, MA361, MA138)'),
+ (('MA04', 'MA138'), 'sw-todaycom-01', 'rubio', 'carried: the Times\'s report of Nov 8 (MA04), which since the twenty-second reading gives its sentences that the memo he oversaw warned top administration officials and went to cleared officials ahead of the trip; that he warned the White House is this page\'s wording of that report'),
 ]
 
 
@@ -278,7 +314,7 @@ def scrub(t):
 
 def main():
     ids = {r['row_id'] for r in rows_map.rows()}
-    for v in list(ONE.values()) + list(PARA.values()) + list(EARLIER.values()) + [x[3] for x in R_DONE] + list(R_EARLY.values()) + [x[3] for x in R_LATE]:
+    for v in list(ONE.values()) + list(PARA.values()) + list(EARLIER.values()) + [x[3] for x in R_DONE] + list(R_EARLY.values()) + [x[3] for x in R_LATE] + list(R_WD.values()):
         for i in re.findall(r'MA\d+', v): assert i in ids, ('a disposition names an act that is not there', i)
     grp = {r['group_id']: r for r in csv.DictReader(open(L / 'single_nv8_a.groups.tsv'), delimiter='\t')}
     ctl = {r['group_id']: r for r in csv.DictReader(open(L / 'single_nv8_a.controls.tsv'), delimiter='\t')}
@@ -364,22 +400,27 @@ def main():
         cl = {r['line'] for r in csv.DictReader(open(L / f'{nm}.controls.tsv'), delimiter='\t')}
         for r in asg: line_g[int(r['line'][1:])] = f"{j}.{r['group']}"; g_ctl[f"{j}.{r['group']}"] += r['line'] in cl
         for k, g in gs.items(): grp[f'{j}.{k}'] = g
+    assert not set(G_NEW) & set(grp); grp.update(G_NEW)
     all_ids = {r['row_id'] for r in rows_map.rows()} | {r['row_id'] for r in csv.DictReader(open(R / 'member_ties.csv'))}
     g_lines = Counter(line_g.values()); g_disp = {}
     for k, g in grp.items():
         named = [x for x in re.findall(r'M[AT]\d+|TY\d+', g.get('carried_by') or '') if x in all_ids]
         assert bool(named) == bool((g.get('carried_by') or '').strip()), ('a group whose reader names a chip that is not there', k, g.get('carried_by'))
-        if named: g_disp[k] = 'carried: ' + ', '.join(named + [G_ALSO[k]] if k in G_ALSO else named) + ' (the grouping reader\'s verdict)' + G_AFTER.get(k, '')
+        if k in G_REOPEN: g_disp[k] = 'open: on no chip (' + G_REOPEN[k] + ': the twenty-second reading); not drawn until the owner decides what the image should carry'
+        elif named: g_disp[k] = 'carried: ' + ', '.join(named + [G_ALSO[k]] if k in G_ALSO else named) + ' (the grouping reader\'s verdict)' + G_AFTER.get(k, '')
         elif k in G_BUILDER: g_disp[k] = G_BUILDER[k]
-        else: g_disp[k] = G_OPEN + G_CTL_NOTE.get(k, '')
-    assert not (set(G_BUILDER) | set(G_ALSO) | set(G_CTL_NOTE) | set(G_AFTER)) - set(grp), 'a reading for a group that is not there'
+        else: g_disp[k] = G_OPEN + G_CTL_NOTE.get(k, '') + G_NOTE.get(k, '') + (ADDED if k in G_NEW else '')
+    assert not (set(G_BUILDER) | set(G_ALSO) | set(G_CTL_NOTE) | set(G_AFTER) | set(G_REOPEN) | set(G_FIRST) | set(G_NOTE)) - set(grp), 'a reading for a group that is not there'
+    assert all(g_disp[k].startswith('carried') for k in list(G_ALSO) + list(G_AFTER)) and all(g_disp[k].startswith('open') for k in list(G_NOTE) + list(G_NEW)), 'a note on a group of the other kind'
     assert all(any(i in all_ids for i in re.findall(r'M[AT]\d+', v)) for v in G_BUILDER.values()) and all(v in all_ids for v in G_ALSO.values())
-    rout = []; rc = Counter(); used = Counter(); used_late = Counter()
+    rout = []; rc = Counter(); used = Counter(); used_late = Counter(); used_wd = Counter()
     for n, r in enumerate(pool):
         v = r['verdict'].strip(); ids = ['MA' + str(int(x[2:])) for x in re.findall(r'MA\d+', r['chip_or_tie'])]
         done = [d for d in R_DONE if d[0] == r['page_id'] and d[1] == r['actor'] and d[2] in r['exact_words']]
         if n in is_ctl: disp = 'a planted control: the act was held out of the reader\'s table (' + is_ctl[n] + ')'
         elif done: disp = done[0][3]; used[done[0][:3]] += 1
+        elif v == 'carried' and any((i, None) in R_WD for i in ids):
+            w_ = next(i for i in ids if (i, None) in R_WD); assert acts[w_].get('withdrawn'), w_; disp = R_WD.get((w_, r['page_id']), R_WD[(w_, None)]); used_wd[(w_, r['page_id']) if (w_, r['page_id']) in R_WD else (w_, None)] += 1
         elif v == 'carried':
             late = [i for i in ids if acts[i]['date'] and r['page_day'] and r['page_day'] < acts[i]['date']]
             rep = [i for i in late if acts[i]['reported']]
@@ -393,33 +434,39 @@ def main():
             disp = g_disp[line_g[n]]
         rc[(v, disp.split(':')[0] if disp else 'the reader\'s verdict stands')] += 1
         rout.append([r['lane'], r['page_id'], r['page_day'], r['actor'], v, ' '.join(re.findall(r'M[AT]\d+', r['chip_or_tie'])), r['row_it_belongs_on'], r['direction'].strip(), disp, line_g.get(n, '')])
+    assert all(used_wd[k] for k in R_WD), ('a disposition for no line', [k for k in R_WD if not used_wd[k]])
+    art = {r['page_id']: r for r in csv.DictReader(open(R / 'nv8_articles.tsv', newline=''), delimiter='\t')}
+    for page, actor, row, direction, k in R_ADDED:        # lines no census reader listed: they join the act they belong to, with the lane column saying whose they are
+        assert k in grp and g_disp[k].startswith('open') and art[page]['counted'] == 'yes' and '2026-10-29' <= art[page]['day'] <= '2026-11-12', (page, k)
+        rc[('CANDIDATE occasion', 'open')] += 1; g_lines[k] += 1
+        rout.append(['added by the builder (twenty-second reading)', page, art[page]['day'], actor, 'CANDIDATE occasion', '', row, direction, g_disp[k], k])
     assert all(used_late[i] for i in range(len(R_LATE))), ('a disposition for no line', [R_LATE[i][:3] for i in range(len(R_LATE)) if not used_late[i]])
     assert all(used[d[:3]] for d in R_DONE), ('a line the builder says it acted on is not in the pool', [d[:3] for d in R_DONE if not used[d[:3]]])
     with open(R / 'nv8_recalls.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t', lineterminator='\n')
         w.writerow(['lane', 'page', 'page_day', 'actor', 'reader_verdict', 'chip_or_tie_the_reader_named', 'row_the_reader_proposed', 'which_way_the_reader_says_it_cuts', 'builder_disposition', 'earlier_act']); w.writerows(rout)
     # the register of distinct earlier acts: one row for each group, in its reader's words (no words of pages), with the builder's disposition
-    FR = lambda g: next((x for x in ('in these days', 'before', 'unclear') if (g.get('first_reported') or '').strip().lower().startswith(x)), 'unclear')
+    FR = lambda g, k='': G_FIRST.get(k) or next((x for x in ('in these days', 'before', 'unclear') if (g.get('first_reported') or '').strip().lower().startswith(x)), 'unclear')
     pages_of = defaultdict(set); days_of = defaultdict(list)
     for o in rout:
         if o[9]: pages_of[o[9]].add(o[1]); days_of[o[9]].append((o[2], o[1]))
     gout = []
     for k, g in sorted(grp.items(), key=lambda kv: (kv[1]['actor'], -len(pages_of[kv[0]]), kv[0])):
         first = min(days_of[k])
-        gout.append([k, g['actor'], scrub(g['what']), scrub(g.get('when') or ''), (g.get('kind') or '').strip(), FR(g), first[1], first[0], g_lines[k], len(pages_of[k]), g_ctl[k] or '',
+        gout.append([k, g['actor'], scrub(g['what']), scrub(g.get('when') or ''), (g.get('kind') or '').strip(), FR(g, k), first[1], first[0], g_lines[k], len(pages_of[k]), g_ctl[k] or '',
                      (g.get('row_it_belongs_on') or '').strip(), (g.get('direction') or '').strip(), g_disp[k]])
     with open(R / 'nv8_recall_groups.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t', lineterminator='\n')
         w.writerow(['earlier_act', 'actor', 'what_it_is_in_the_grouping_reader_s_words', 'when_as_the_pages_give_it', 'kind', 'first_reported', 'earliest_page', 'earliest_day', 'lines', 'pages', 'of_them_planted_controls',
                     'row_the_reader_proposed', 'which_way_the_reader_says_it_cuts', 'builder_disposition']); w.writerows(gout)
     gop = [o for o in gout if o[13].startswith('open')]; n_ctl_lines = sum(g_ctl.values()); ctl_carried = sum(g_ctl[k] for k in grp if not g_disp[k].startswith('open'))
-    print('grouping of the open lines: lines', n_in, 'of them planted controls', n_ctl_lines, 'in a carried group', ctl_carried, '| groups', len(gout), '| carried', len(gout) - len(gop), '| open', len(gop), 'with lines', sum(o[8] for o in gop),
+    print('grouping of the open lines: lines', n_in, 'of them planted controls', n_ctl_lines, 'in a carried group', ctl_carried, '| groups', len(gout), 'of them added by the builder', len(G_NEW), '| carried', len(gout) - len(gop), '| open', len(gop), 'with lines', sum(o[8] for o in gop), 'of them planted controls', sum(o[10] or 0 for o in gop), 'and added by the builder', len(R_ADDED),
           '| open by first report', dict(Counter(o[5] for o in gop).most_common()), '| open by direction', dict(Counter(o[12] for o in gop).most_common()), '| open by kind', dict(Counter(o[4] for o in gop).most_common()),
           '| open in these days by direction', dict(Counter(o[12] for o in gop if o[5] == 'in these days').most_common()))
     npg = sum(1 for j in range(1, 13) for _ in csv.DictReader(open(L / f'recall_nv8_{j:02d}.pages.tsv'), delimiter='\t'))
     nread = sum(1 for j in range(1, 13) for x in csv.DictReader(open(L / f'recall_nv8_{j:02d}.pages_read.csv')) if x['read_whole'].strip().lower() == 'yes')
     cand = [o for o in rout if o[4].startswith('CANDIDATE')]
-    print('every counted article read for reports of earlier acts: pages', npg, 'read whole', nread, '| lines', len(rout), dict(Counter(o[4] for o in rout)), '| held-out acts', len(ctl), 'valid', len(ctl) - len(NOT_VALID), 'found', len(found),
+    print('every counted article read for reports of earlier acts: pages', npg, 'read whole', nread, '| lines', len(rout), 'of them added by the builder', len(R_ADDED), dict(Counter(o[4] for o in rout)), '| held-out acts', len(ctl), 'valid', len(ctl) - len(NOT_VALID), 'found', len(found),
           '| candidate lines open', sum(1 for o in cand if o[8].startswith('open')), 'on pages', len({o[1] for o in cand if o[8].startswith('open')}), '| by direction', dict(Counter(o[7] for o in cand if o[8].startswith('open')).most_common()),
           '| dispositions', {f'{k[0]} / {k[1]}': v for k, v in sorted(rc.items())})
 

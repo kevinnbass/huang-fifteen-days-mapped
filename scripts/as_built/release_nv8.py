@@ -268,8 +268,10 @@ def main(target):
           # the twentieth reading (of the six further lanes' rows and of the answer to the nineteenth); its look-up check holds a header only and is held back with the others
           'u': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
           # the twenty-first reading (of the answer to the twentieth, the builder's scan of versions and the answer to the second reading of the set-aside items)
-          'v': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
-    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i', 'q': 'audit_nv8_s8j', 'r': 'audit_nv8_s8k', 's': 'audit_nv8_s8l', 't': 'audit_nv8_s8m', 'u': 'audit_nv8_s8n', 'v': 'audit_nv8_s8o'}
+          'v': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv'),
+          # the twenty-second reading (of the answer to the twenty-first, the dispositions of the census and the register of earlier acts)
+          'w': ('findings.csv', 'findings13.csv', 'figure_findings.csv', 'site_findings.csv', 'counts_check.csv', 'dispositions_check.csv', 'gaps.csv')}
+    A2_LANE = {'h': 'audit_nv8_s8a', 'i': 'audit_nv8_s8b', 'j': 'audit_nv8_s8c', 'k': 'audit_nv8_s8d', 'l': 'audit_nv8_s8e', 'm': 'audit_nv8_s8f', 'n': 'audit_nv8_s8g', 'o': 'audit_nv8_s8h', 'p': 'audit_nv8_s8i', 'q': 'audit_nv8_s8j', 'r': 'audit_nv8_s8k', 's': 'audit_nv8_s8l', 't': 'audit_nv8_s8m', 'u': 'audit_nv8_s8n', 'v': 'audit_nv8_s8o', 'w': 'audit_nv8_s8p'}
     audit2_notes = {}
     for t, names in A2.items():
         L2 = LANE.parent / A2_LANE.get(t, f'audit_nv8_s7{t}')
@@ -341,6 +343,9 @@ def main(target):
     disp21 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8o.csv'
     if disp21.exists():
         put(Tg, 'audit2/DISPOSITIONS-v.csv', disp21.read_text())
+    disp22 = R / 'audits' / 'DISPOSITIONS-audit_nv8_s8p.csv'
+    if disp22.exists():
+        put(Tg, 'audit2/DISPOSITIONS-w.csv', disp22.read_text())
     if (R / 'lpac_keyed_check.csv').exists() and (LANE.parent / 'fec_lpac_keyed' / 'DONE').exists():      # published once the pull has ended
         put(Tg, 'research/lpac_keyed_check.csv', (R / 'lpac_keyed_check.csv').read_text())
     put(Tg, '.gitignore', '__pycache__/\n*.pyc\n')

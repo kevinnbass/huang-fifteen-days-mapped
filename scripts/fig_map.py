@@ -88,7 +88,7 @@ def OWN_CHANNEL_WORDS():
     (scripts/nv8_s6_counts.py, which reads research/nv8_s6_items.tsv)."""
     C = {r['what']: int(r['count']) for r in csv.DictReader(open(R / 'nv8_s6_counts.tsv', newline=''), delimiter='\t')}
     covered = {r['key'] for r in csv.DictReader(open(R / 'nv8_s6_items.tsv', newline=''), delimiter='\t') if r['part'] == 'original of a chip'}
-    # every chip ever drawn, one since withdrawn among them; an act added later and then withdrawn as a duplicate (MA305, the twentieth reading) is on neither side of the count
+    # every chip ever drawn, one since withdrawn among them; an act added later and then withdrawn as a duplicate (MA305, the twentieth reading; MA333, the twenty-second) is on neither side of the count
     n_chips = sum(1 for r in rows_map.rows() if r['row_id'].startswith('MA') and not (r.get('withdrawn') and r['row_id'] not in covered)); searched = C['chips whose original was searched for']
     # the acts the search did not cover (the fifteenth reading, Nov 16, 2026: these are acts, not chips, since two acts of one day share a chip; none is withdrawn)
     later = [r for r in rows_map.rows() if r['row_id'].startswith('MA') and r['row_id'] not in covered and not r.get('withdrawn')]
@@ -108,7 +108,7 @@ def OWN_CHANNEL_WORDS():
             f"for {C['chips: original could not be opened']} it still could not be opened (posts on X and Truth Social, broadcasters' video, papers behind a paywall); "
             f"for {rows_map.NUMBER.get(C['chips: original found by the reader and refused to the project (not saved)'], 'two')} the reader found it and the site refused the project's own copy (the Journal's page, an SEC filing); and for {C['chips: original not found']} it was not found. "
             f"Of the chips still without their original, {C["chips still without their original that now also cite a paper's own report of the act"]} now also cite a paper's own report of the act, from the papers' pages saved since the first census. "
-            f"The {len(later)} acts added without such a search (two acts of one day share a chip; an act added and later withdrawn as a duplicate is not counted) each cite the actor's own page, the paper's own article (some in a licensed copy) or, where neither is held, a report that the chip names. ")
+            f"The {len(later)} acts added without such a search (two acts of one day share a chip; the two acts added and later withdrawn as duplicates are not counted) each cite the actor's own page, the paper's own article (some in a licensed copy) or, where neither is held, a report that the chip names. ")
 
 
 def ARTICLE_WORDS():

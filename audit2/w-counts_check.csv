@@ -1,0 +1,114 @@
+what,figure_says,you_find,agree,note
+act rows,364,364,yes,
+active acts,362,362,yes,
+dated acts,362,362,yes,
+actor/day chips,not separately stated,225,n/a,Independent grouping; displayed count to be read.
+dashed actor/day chips,not separately stated,60,n/a,A solid act makes the shared chip solid.
+acts dated by report,150,150,yes,
+private report-dated list,150,150,yes,
+tie rows,64,64,yes,
+pages,1315,1315,yes,
+articles,1236,1236,yes,
+counted articles,1154,1154,yes,
+counted pages held in part,98,98,yes,
+census verdict carried,1514,1514,yes,
+census verdict CANDIDATE occasion,1223,1223,yes,
+census verdict CANDIDATE part,118,118,yes,
+census lines,2855,2855,yes,
+open census lines,1097,1097,yes,
+open census pages,524,524,yes,
+open census direction against Huang or Nvidia,575,575,yes,
+open census direction for Huang or Nvidia,172,172,yes,
+open census direction against the administration,107,107,yes,
+open census direction for the administration,41,41,yes,
+open census direction neither,202,202,yes,
+register acts,772,772,yes,
+register marked carried,56,56,yes,Literal table count; three carrying judgments are disputed in B.2.
+register marked open,716,716,yes,Literal open-group count; neither a proved distinct-act count nor an upper bound.
+open register kind statement,319,319,yes,
+open register kind event,205,205,yes,
+open register kind decision,121,121,yes,
+open register kind money,10,10,yes,
+open register kind other,61,61,yes,
+open register first report in these days,66,66,yes,
+open register first report before,190,190,yes,
+open register first report unclear,460,460,yes,
+open register direction against Huang or Nvidia,284,284,yes,
+open register direction for Huang or Nvidia,182,182,yes,
+open register direction against the administration,37,37,yes,
+open register direction for the administration,30,30,yes,
+open register direction neither,183,183,yes,
+sum of open register line counts,1097,1098,no,"Raw sum is 1,098 and includes the one open planted control; published 1,097 excludes it. Count-basis qualification P19."
+photographed meetings lines,97,97,yes,
+carried census lines with disposition,92,92,yes,
+may be newer acts,16,16,yes,
+screen another saved page gives another day,29,29,yes,
+screen a day word near a cited passage in its own source,79,79,yes,
+screen its page was changed after the chip's day,37,37,yes,
+screen an earlier page holds a cited passage,12,12,yes,
+screen a copy of the same article lacks a cited passage,6,6,yes,
+screen the day of its page is an update's,5,5,yes,
+actor-days multiple articles,8,8,yes,
+actor-days single article,12,12,yes,
+quoted remark groups,9,9,yes,
+set-aside items,67,67,yes,
+set-aside disposition drawn,43,43,yes,
+set-aside disposition carried,4,4,yes,
+set-aside disposition not drawn,3,3,yes,
+set-aside disposition control,4,4,yes,"a planted control prefix, not literal control"
+set-aside disposition reader stands,13,13,yes,
+chips whose originals were searched,133,133,yes,
+active acts outside original-search cohort,230,230,yes,Both withdrawals excluded; one withdrawal belonged to searched cohort.
+population now lines,4153,4153,yes,Independent lexical calculation; actor mapping inherited and disclosed.
+refusals acts,29,29,yes,
+refusals actors,11,11,yes,
+refusals lines,133,133,yes,
+refusals inside,60,60,yes,
+refusals outside,73,73,yes,
+refusals outside_pairs,63,63,yes,
+outside refusal labels: relays,60,60,yes,
+outside refusal labels: non-refusals,13,13,yes,
+census assigned articles,1151,1151,yes,
+census assigned pages read whole,1135,1135,yes,
+census assigned pages not whole,16,16,yes,
+held-out valid act ids recovered,23,23,yes,23 unique ids on 30 planted pool lines; MA327 invalid as a held-out test.
+grouping control lines,30,30,yes,
+grouping controls with named carrier,29,29,yes,
+carried-line disposition carried earlier,34,34,yes,"Counted from all 92 specified lines, not just the historical 77-line subset."
+carried-line disposition carried,12,12,yes,"Counted from all 92 specified lines, not just the historical 77-line subset."
+carried-line disposition not moved,30,30,yes,"Counted from all 92 specified lines, not just the historical 77-line subset."
+carried-line disposition drawn,14,14,yes,"Counted from all 92 specified lines, not just the historical 77-line subset."
+carried-line disposition moved,2,2,yes,"Counted from all 92 specified lines, not just the historical 77-line subset."
+member Warren counted articles,71,71,yes,Previous frozen count 71; union over article ids in saved-page name index.
+member Coons counted articles,48,48,yes,Previous frozen count 48; union over article ids in saved-page name index.
+member Cramer counted articles,22,22,yes,Previous frozen count 22; union over article ids in saved-page name index.
+member Schumer counted articles,22,22,yes,Previous frozen count 22; union over article ids in saved-page name index.
+member Banks counted articles,19,19,yes,Previous frozen count 19; union over article ids in saved-page name index.
+member Cornyn counted articles,9,9,yes,Previous frozen count 9; union over article ids in saved-page name index.
+member Kennedy counted articles,6,6,yes,Previous frozen count 6; union over article ids in saved-page name index.
+member Thune counted articles,13,13,yes,Previous frozen count 13; union over article ids in saved-page name index.
+member Mast counted articles,92,92,yes,Previous frozen count 92; union over article ids in saved-page name index.
+member Crawford counted articles,68,68,yes,Previous frozen count 68; union over article ids in saved-page name index.
+member Meeks counted articles,9,9,yes,Previous frozen count 9; union over article ids in saved-page name index.
+member Himes counted articles,8,8,yes,Previous frozen count 8; union over article ids in saved-page name index.
+member Huizenga counted articles,4,4,yes,Previous frozen count 4; union over article ids in saved-page name index.
+member Moolenaar counted articles,78,78,yes,Previous frozen count 78; union over article ids in saved-page name index.
+member Jeffries counted articles,30,30,yes,Previous frozen count 30; union over article ids in saved-page name index.
+member Magaziner counted articles,4,4,yes,Previous frozen count 4; union over article ids in saved-page name index.
+member Subramanyam counted articles,3,3,yes,Previous frozen count 3; union over article ids in saved-page name index.
+member Bacon counted articles,3,3,yes,Previous frozen count 3; union over article ids in saved-page name index.
+member Johnson counted articles,11,11,yes,Previous frozen count 11; union over article ids in saved-page name index.
+member Blumenthal counted articles,3,3,yes,Previous frozen count 3; union over article ids in saved-page name index.
+member Wyden counted articles,5,5,yes,Previous frozen count 5; union over article ids in saved-page name index.
+member Ricketts counted articles,5,5,yes,Previous frozen count 5; union over article ids in saved-page name index.
+member McCaul counted articles,5,5,yes,Previous frozen count 5; union over article ids in saved-page name index.
+member Warner counted articles,4,4,yes,Previous frozen count 4; union over article ids in saved-page name index.
+member Cotton counted articles,5,5,yes,Previous frozen count 5; union over article ids in saved-page name index.
+member Scott counted articles,4,4,yes,Previous frozen count 4; union over article ids in saved-page name index.
+member Neal counted articles,3,3,yes,Previous frozen count 3; union over article ids in saved-page name index.
+interactive active acts,362,362,yes,
+interactive all ties,87,87,yes,
+interactive member lines,150,150,yes,
+interactive listed pieces,2245,2245,yes,
+frozen input hashes matching,703,703,yes,
+open register non-control lines,1097,1097,yes,Excludes the one open planted control; this reconciles the census and register.
