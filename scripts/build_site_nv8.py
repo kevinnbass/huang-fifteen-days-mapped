@@ -140,10 +140,11 @@ def main():
     for r in rows:
         if r['table'] == 'tie of a member of Congress':
             assert r['member'] in known and r['side'] in SIDE, r['row_id']
-            # a member's line is a count from a table of this repository; only the sources that are a public page are listed, without passages
-            # every source of the line is listed, a table of this repository included (no passages: the line is a count); a search that found nothing is marked,
-            # so that the page does not count it as a tie (the twelfth reading: 100 lines had shown no source, and 34 searches without a result were counted as ties)
-            lines.append({'m': r['member'], 'side': r['side'], 't': r['drawn_text'], 's': sources(r['row_id'], passages=False),
+            # a member's line is a count from a table of this repository, and every source of the line is listed, such a table included; a search that found nothing is marked,
+            # so that the page does not count it as a tie (the twelfth reading: 100 lines had shown no source, and 34 searches without a result were counted as ties).
+            # Since the thirtieth reading (Nov 17, 2026) the passages of its saved originals are given too (an amendment's short title and sponsor, a bill's title, a statement's words):
+            # until then the panel listed the sources without them, although the evidence table holds them. A table has no passage: the line's count is its content.
+            lines.append({'m': r['member'], 'side': r['side'], 't': r['drawn_text'], 's': sources(r['row_id'], passages=True),
                           'n': node.get((r['member'], r['type'], r['side']), ''), 'neg': r['drawn_text'].startswith('No ')})
     assert all(l['s'] for l in lines), [l['t'][:40] for l in lines if not l['s']][:3]
     print('member lines:', len(lines), '| searches that found nothing:', dict(Counter(l['side'] for l in lines if l['neg'])))
