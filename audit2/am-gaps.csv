@@ -1,0 +1,3 @@
+row_id_or_key,source,what_failed
+F-chapter-count,Company-records metadata / excluded report,"Retained attribution limit: the seven-record keyword proxy is reproducible, but there is no chapter field. The excluded page and transcript were not opened; the proxy is not an independent chapter-specific count."
+F-prior-scope,public/audit2/al-dispositions_check.csv / private/listed_on_amended_pages.tsv of the preceding reading,"The former 117-item private subset is not supplied in this delta. Its total is documented in the previous audit table and report, but cannot be independently reconstructed merely by counting all records on the presently hand-marked pages. No contrary count established."

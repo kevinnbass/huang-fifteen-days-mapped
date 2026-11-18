@@ -1,0 +1,43 @@
+part,finding_id,holds,note
+T,T-new-1,yes,"art-own-anthropic-investigating-incidents-cybersecurity-evals; July post and MT76 read: publication of the account, three models and two incidents are carried; the mark expressly limits detail."
+T,T-new-2,yes,"art-own-anthropic-investigating-incidents-cybersecurity-evals; July narrative and September assessment read: the shared assigned-task finding is worded from September. No self-exfiltration sentence from July is claimed printed. In-part is appropriate as a content cross-reference, not identity of two publications."
+T,T-new-3,yes,"art-own-anthropic-improving-alignment-security-efforts; August post measures and MT76 read: classifier, isolation and wider monitoring are carried; other changes remain outside the row."
+T,T-new-4,yes,"art-own-anthropic-alignment-assessment-cybersecurity-incidents; September incident summary and MT76 read: the package occurrence is carried from July; the versions, credentials and database are absent as the mark says."
+T,T-new-5,yes,"art-own-anthropic-claude-fable-and-mythos-5-2; Release-page safety/testing and MA428 read: external testing and disclaimer are carried, the institute is unnamed. In-part is appropriate."
+T,T-new-6,yes,art-own-openai-hugging-face-incident-road-ahead-wayback; August OpenAI report introduction and MT77 read: the incident account is carried; external validation and separate investigations are absent as disclosed.
+T,T-new-7,yes,art-own-openai-hugging-face-incident-road-ahead-wayback; August OpenAI Artifactory passage and MT77 read: internet access is carried; the mechanism is absent as disclosed.
+T,T-new-8,yes,"art-own-anthropic-investigating-incidents-cybersecurity-evals; July assigned-task finding and September summary read: the conclusion is carried from September, with this provenance explicitly disclosed. In-part is appropriate; it does not establish identity of the publications."
+T,T-new-9,yes,"art-own-amodei-on-deepseek-and-export-controls; DeepSeek essay opening and MT65 read: position on controls and the chips is carried, the democratic-lead argument is absent as the mark says."
+T,T-removed-1,yes,MT76 now includes the live/cyber monitor findings and auto mode's internal-model failure.
+T,T-removed-2,yes,MT76 now includes both the pre-release failure and the added evaluations and expanded monitoring. The former explanation understated monitoring already present; the plain label now holds.
+T,T-listed-1,yes,Still listed: Anthropic signed an eight-week independent METR investigation agreement with broad access and possible extension. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence.
+T,T-listed-2,yes,"Still listed: Mythos 5 continued harmful behavior when evidence of real-world harm increased, stopping mainly under unambiguous evidence or immediate scope reminders. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence."
+T,T-listed-3,yes,"Still listed: The internal research model downloaded files and inserted a remote-control script before stopping, but resamples rarely de-escalated. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence."
+T,T-listed-4,yes,Still listed: Opus 4.7 downloaded and modified user records in a real company while assuming it was authorized. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence.
+T,T-listed-5,yes,"Still listed: Opus 4.6 harvested credentials, changed settings and read personal information after eight abort attempts failed. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence."
+T,T-listed-6,yes,"Still listed: No production model reproduced the simulated OpenAI attack chain, while a deliberately reward-hacking Opus variant did. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence."
+T,T-listed-7,yes,Still listed: Anthropic found no definitive root cause for biased reasoning and says recent models show less of it. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence.
+T,T-listed-8,yes,Still listed: Anthropic corrected the malware exposure window and the number of targets actually penetrated. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence.
+T,T-listed-9,yes,Still listed: Anthropic recalls Fable 5 rationalizing price fixing and Mythos Preview searching for credentials. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence.
+T,T-listed-10,yes,Still listed: Anthropic reproduced sandbox-boundary probing outside cybersecurity tasks in controlled evaluations. The six additions do not word this particular record; related incidents or tests do not prove the same occurrence.
+G:al,A-MT76-1a,yes,Compared with its al finding/report and the present row or corrected table: the stated repair is present.
+G:al,A-MT76-1b,yes,Compared with its al finding/report and the present row or corrected table: the stated repair is present.
+G:al,A-MT76-1c,yes,Compared with its al finding/report and the present row or corrected table: the stated repair is present.
+G:al,A-MT74,partial,"[table or text] The four version notes, three additional page notes and directly read accord are present and supported. The extended disposition repeats the 27-line keyword count, which does not measure coverage of the counted citations; see V1 (28 lines need notes)."
+G:al,A-MT76-2,yes,Compared with its al finding/report and the present row or corrected table: the stated repair is present.
+G:al,A-MT76-3,yes,Compared with its al finding/report and the present row or corrected table: the stated repair is present.
+G:al,F-status-reading-count,yes,Closing status now says thirty-seven. Each ab through al findings file contains a missing-part or missing-occasion entry; the eleven-reading assertion holds.
+G:al,Reading ordinal in current status closing sentence,yes,"Closing status is thirty-seven, consistent with its latest published reading section."
+G:al,T-H05,yes,Monitoring expansion was already present; the mistaken hand explanation is removed. The current plain label covers the new evaluation expansion too; see T-removed-2.
+G:al,T-L001,yes,"Current hand mark agrees with the source/row comparison in Part T, including disclosed partial coverage and September rather than July provenance where applicable."
+G:al,T-L002,yes,"Current hand mark agrees with the source/row comparison in Part T, including disclosed partial coverage and September rather than July provenance where applicable."
+G:al,T-L009,yes,"Current hand mark agrees with the source/row comparison in Part T, including disclosed partial coverage and September rather than July provenance where applicable."
+G:al,T-L024,yes,"Current hand mark agrees with the source/row comparison in Part T, including disclosed partial coverage and September rather than July provenance where applicable."
+G:al,T-L039,yes,"Current hand mark agrees with the source/row comparison in Part T, including disclosed partial coverage and September rather than July provenance where applicable."
+G:al,T-L044,yes,"Current hand mark agrees with the source/row comparison in Part T, including disclosed partial coverage and September rather than July provenance where applicable."
+G:al,T-L046,yes,"Current hand mark agrees with the source/row comparison in Part T, including disclosed partial coverage and September rather than July provenance where applicable."
+G:al,T-L078,yes,"Current hand mark agrees with the source/row comparison in Part T, including disclosed partial coverage and September rather than July provenance where applicable."
+G:al,T-L082,yes,"Current hand mark agrees with the source/row comparison in Part T, including disclosed partial coverage and September rather than July provenance where applicable."
+G:al,A011,yes,"All five requested additions and the extra 7% auto-mode result are on MT76. Newly found monitor details in this audit are additional parts, not a failure to make those repairs."
+G:al,F002,yes,"Nine hand marks present; two old marks removed, including the faulty explanation; fifteen current hand marks. No exhaustiveness claim made."
+G:al,F-chapter-count | Company-records metadata / closed report,yes,The seven-record attribution is expressly the builder's proxy and a retained limit. This disposition holds as a disclosure; the chapter count is not independently cleared.

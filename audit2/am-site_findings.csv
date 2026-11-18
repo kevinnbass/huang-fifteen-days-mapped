@@ -1,0 +1,9 @@
+finding_id,grade,element_text,problem
+H-MT74-row,ok,MT74 embedded row text,Exactly one tie record matches the present row text. Both self-context lines are exposed through the actor panel and the shared sources renderer.
+H-MT74-evidence,ok,MT74 displayed passage blocks,"95 passages, each an exact same-row evidence.tsv passage with the matching citation address or local reference; all 14 delta-added entries present. An altered-passage control and a wrong-address control were rejected."
+H-MT74-names,ok,MT74 passage privacy reading,"Every displayed passage read individually: names are drawn actors or public officials; no undrawn donor, lobbyist or other nonofficial private person named in these passages. Citation titles are separate from passage blocks."
+H-MT76-row,ok,MT76 embedded row text,Exactly one tie record matches the present row text. Both self-context lines are exposed through the actor panel and the shared sources renderer.
+H-MT76-evidence,ok,MT76 displayed passage blocks,"114 passages, each an exact same-row evidence.tsv passage with the matching citation address or local reference; all 12 delta-added entries present. An altered-passage control and a wrong-address control were rejected."
+H-MT76-names,ok,MT76 passage privacy reading,"Every displayed passage read individually: names are drawn actors or public officials; no undrawn donor, lobbyist or other nonofficial private person named in these passages. Citation titles are separate from passage blocks."
+H-image-2,ok,Truth Social attachment selection,No second-image attachment id or source is present in either row's displayed passages/citations. The first-image source is present as a positive control. Image 2 was not opened.
+H-render,ok,"sources(list), showActor and showEdge","Renderer emits each evidence entry as its own text blockquote; row panels call it with their own source lists. Checked saved data and code, without opening the figure image or claiming a runtime browser test."

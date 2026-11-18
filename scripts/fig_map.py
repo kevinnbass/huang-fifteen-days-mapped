@@ -80,7 +80,9 @@ def NEWER_WORDS():
     """The sentence on chips dated by a report whose page was changed after its first day, counted from research/nv8_report_day_screen.tsv
     (scripts/nv8_report_day_screen.py, part 3)."""
     n = sum(1 for r in csv.DictReader(open(R / 'nv8_report_day_screen.tsv', newline=''), delimiter='\t') if r['screen'].startswith('its page') and r['reading'].startswith('may be newer'))
-    return (f"For {rows_map.NUMBER.get(n, n)} of the acts so dated a cited page was changed after it was first published, and a passage taken from it (for some, one passage of several) may be newer than the act's day. " if n else '')
+    tv = list(csv.DictReader(open(R / 'nv8_tie_line_versions.tsv', newline=''), delimiter='\t')); k = sum(1 for r in tv if r['how_the_figure_says_it'] == 'noted on the line')        # the tie lines: scripts/nv8_tie_versions.py
+    ties = (f"On the tie lines {len(tv)} citations are to a page changed after its first day: {k} carry that warning in the line's own words, and {len(tv) - k}, which state a standing fact from a page, are listed in a table. " if tv else '')
+    return (f"For {rows_map.NUMBER.get(n, n)} of the acts so dated a cited page was changed after it was first published, and a passage taken from it (for some, one passage of several) may be newer than the act's day. " if n else '') + ties
 
 
 def OWN_CHANNEL_WORDS():

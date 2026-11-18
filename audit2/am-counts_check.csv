@@ -1,0 +1,87 @@
+what,stated,recounted,agree
+al findings lines,10,10,yes
+al changed rows,6,6,yes
+al findings ok lines,4,4,yes
+al findings error lines,0,0,yes
+al findings qualification lines,6,6,yes
+al distinct rows ok,4,4,yes
+al distinct rows qualification,2,2,yes
+al distinct rows error,0,0,yes
+al text points,1,1,yes
+al text qualifications,1,1,yes
+al map checks,8,8,yes
+al map ok,8,8,yes
+al recounts,49,49,yes
+al recount yes,47,47,yes
+al recount no,1,1,yes
+al recount not checked,1,1,yes
+al table checks,19,19,yes
+al table yes,9,9,yes
+al table partial,1,1,yes
+al table no,9,9,yes
+al prior-disposition checks,10,10,yes
+al prior-disposition yes,8,8,yes
+al prior-disposition partial,2,2,yes
+al unfinished lines,1,1,yes
+current al dispositions,21,21,yes
+current al applied,20,20,yes
+current al limits,1,1,yes
+non-gap open-point disposition keys matched,20,20,yes
+extra/missing non-gap disposition keys,0,0,yes
+act rows,441,441,yes
+dated drawn acts,438,438,yes
+drawn report-day acts,177,177,yes
+drawn acts without day,0,0,yes
+nonmember tie lines,80,80,yes
+register groups,1017,1017,yes
+register carried,121,121,yes
+register open,896,896,yes
+company records total,1138,1138,yes
+company worded records,182,182,yes
+company reader-found records,340,340,yes
+company listed not drawn,616,616,yes
+listed anthropic,389,389,yes
+listed openai,227,227,yes
+prior hand marks,8,8,yes
+new hand marks,9,9,yes
+removed hand marks,2,2,yes
+current hand marks,15,15,yes
+new marks anthropic,7,7,yes
+new marks openai,2,2,yes
+new marks anthropic against the company,3,3,yes
+new marks anthropic for the company,3,3,yes
+new marks anthropic neither,1,1,yes
+new marks openai against the company,1,1,yes
+new marks openai for the company,1,1,yes
+header later citations,53,53,yes
+header later tie lines,31,31,yes
+rows with no version-like wording (literal builder flag),27,27,yes
+rows lacking a note for a counted citation (published implication),27,28,no
+accord reports with later-day own stamps,4,4,yes
+new MT74 later-version notes,2,2,yes
+new MT76 later-version notes,2,2,yes
+TechCrunch calendar-day lag,3,3,yes
+Spotlight calendar-day lag,6,6,yes
+previously requested assessment parts,5,5,yes
+requested adverse parts,3,3,yes
+requested favorable parts,2,2,yes
+builder extra adverse part,1,1,yes
+post images,2,2,yes
+post own visible text characters,0,0,yes
+post edit recorded,0,0,yes
+documented reading ordinal (a/b/c are three parts of second; first in audit/),37,37,yes
+reading ab has missing-part/occasion line,True,True,yes
+reading ac has missing-part/occasion line,True,True,yes
+reading ad has missing-part/occasion line,True,True,yes
+reading ae has missing-part/occasion line,True,True,yes
+reading af has missing-part/occasion line,True,True,yes
+reading ag has missing-part/occasion line,True,True,yes
+reading ah has missing-part/occasion line,True,True,yes
+reading ai has missing-part/occasion line,True,True,yes
+reading aj has missing-part/occasion line,True,True,yes
+reading ak has missing-part/occasion line,True,True,yes
+reading al has missing-part/occasion line,True,True,yes
+last consecutive readings with missing-part/occasion findings,11,11,yes
+builder seven-record keyword proxy only,7,7,yes
+independent chapter attribution,7,Not independently attributable without excluded source,not checked
+al 117-record scope (documented audit scope; original subset unavailable),117,117 in al T-listed-remainder; original per-item subset unavailable,not checked
