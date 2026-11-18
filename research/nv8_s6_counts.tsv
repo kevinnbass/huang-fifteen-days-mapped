@@ -9,9 +9,10 @@ actors: no channel could be read	10
 chips whose original was searched for	133
 chips: original read and cited on the chip	36
 chips: the search did not yield the original; a saved copy of the publisher's page is now cited	7
-chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited	9
+chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited	12
+chips: the search could not open the post; the project's own copy of it, saved before the search, is cited	2
 chips: original carries the first of the chip's two remarks	1
-chips: original could not be opened	71
+chips: original could not be opened	66
 chips: original found by the reader and refused to the project (not saved)	2
 chips: original not found	7
 chips still without their original that now also cite a paper's own report of the act	14

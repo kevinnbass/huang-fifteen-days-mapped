@@ -1,0 +1,5 @@
+finding_id,grade,element_text,problem
+H-MT76-text,ok,MT76 saved interactive panel text,"The 19,949-character line exactly matches rows.jsonl, including both additions and their qualifications. Actor-panel renderer uses this full text."
+H-MT76-passages,ok,MT76 saved interactive source passages,All 119 displayed passages in 19 source groups individually match same-row evidence.tsv passages and their source address/local reference. Both added passages occur once. The renderer gives each its own text blockquote.
+H-MT76-privacy,ok,All MT76 displayed passages,"Read all 119 passages individually. No passage names an undrawn donor, lobbyist or other undrawn person without public office; no personal name requiring redaction was found. This checks passage text, not source titles or the whole repository."
+H-controls,ok,Saved-data comparison controls,A real same-row passage passes; altered passage text and a wrong source address fail. Saved data and rendering code checked; no browser runtime test or image read.

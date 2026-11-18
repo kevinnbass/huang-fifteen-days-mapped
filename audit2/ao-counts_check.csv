@@ -1,0 +1,88 @@
+what,stated,recounted,agree
+an finding lines,22,22,yes
+an distinct rows,21,21,yes
+an finding lines ok,20,20,yes
+an finding lines qualification,2,2,yes
+an finding lines error,0,0,yes
+an ok rows,20,20,yes
+an qualified rows,1,1,yes
+an text/table points,3,3,yes
+an site checks,23,23,yes
+an site checks ok,23,23,yes
+an recount lines,63,63,yes
+an recount yes,61,61,yes
+an recount no,1,1,yes
+an recount not checked,1,1,yes
+an T checks,12,12,yes
+an T yes,12,12,yes
+an T partial,0,0,yes
+an T no,0,0,yes
+an G:am checks,10,10,yes
+an G:am yes,9,9,yes
+an G:am partial,1,1,yes
+an G:am no,0,0,yes
+an citation checks,97,97,yes
+an genuine later citations,59,59,yes
+an citation classifications right,97,97,yes
+an gap lines,1,1,yes
+an written answers,8,8,yes
+an applied answers,7,7,yes
+an answers stated as limit,1,1,yes
+an open lines each answered once,8,8,yes
+present act rows,441,441,yes
+present dated drawn acts,438,438,yes
+present drawn acts on report day,177,177,yes
+present undated drawn acts,0,0,yes
+present nonmember tie lines,80,80,yes
+present register groups,1017,1017,yes
+present carried register groups,121,121,yes
+present open register groups,896,896,yes
+present company records worded,182,182,yes
+present company records reader-found,340,340,yes
+present company records listed,616,616,yes
+present listed anthropic,389,389,yes
+present listed openai,227,227,yes
+present hand marks,14,14,yes
+hand marks removed in present delta,0,0,yes
+supplied formerly private list records,117,117,yes
+supplied list unique record keys,117,117,yes
+later-version citations,59,59,yes
+later-version tie lines,31,31,yes
+later-version pages,41,41,yes
+noted citations,47,47,yes
+noted lines,22,22,yes
+standing citations,12,12,yes
+standing lines,9,9,yes
+table citations with both day cells,59,59,yes
+an new warning rows,19,19,yes
+an new warning citations,36,36,yes
+an pre-existing warning citations,11,11,yes
+standing quotations on three named lines,3,3,yes
+audit2 report inventory,40,40,yes
+published reading total excluding present unpublished reading,39,39,yes
+reading ab has missing-part/occasion mark,at least 1,2,yes
+reading ac has missing-part/occasion mark,at least 1,18,yes
+reading ad has missing-part/occasion mark,at least 1,6,yes
+reading ae has missing-part/occasion mark,at least 1,16,yes
+reading af has missing-part/occasion mark,at least 1,12,yes
+reading ag has missing-part/occasion mark,at least 1,22,yes
+reading ah has missing-part/occasion mark,at least 1,20,yes
+reading ai has missing-part/occasion mark,at least 1,8,yes
+reading aj has missing-part/occasion mark,at least 1,21,yes
+reading ak has missing-part/occasion mark,at least 1,3,yes
+reading al has missing-part/occasion mark,at least 1,5,yes
+reading am has missing-part/occasion mark,at least 1,4,yes
+reading an has missing-part/occasion mark,at least 1,2,yes
+each of last thirteen readings has missing-part/occasion,13,13,yes
+an newly identified monitor parts,2,2,yes
+an underlying text/table corrections,3,3,yes
+am changed rows,2,2,yes
+am missing parts,4,4,yes
+am missing monitor parts,3,3,yes
+am missing accord part,1,1,yes
+historical 27 corrected to 28,28,28,yes
+status historical reading total before correction,37,37,yes
+present delta rows,1,1,yes
+present newly cited pages,0,0,yes
+MT76 current characters,19949,19949,yes
+MT76 added saved passages,2,2,yes

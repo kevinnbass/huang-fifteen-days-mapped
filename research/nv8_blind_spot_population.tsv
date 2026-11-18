@@ -3047,7 +3047,7 @@ L06910	nvidia	sw-qzcom-08	A0704	yes	yes	yes	para_nv8_a
 L06911	megaspeed	sw-qzcom-08	A0704	yes	yes	yes	para_nv8_g	
 L06912	nvidia	sw-qzcom-08	A0704	yes	yes	yes	para_nv8_a	
 L06913	warren	sw-qzcom-08	A0704	yes	yes		para_nv8_h	
-L06914	huang	sw-qzcom-08	A0704	yes	yes	yes	para_nv8_c	
+L06914	huang	sw-qzcom-08	A0704	yes	yes		para_nv8_c	
 L06916	china	sw-qzcom-08	A0704	yes	yes	yes	para_nv8_e	
 L06918	trump	sw-qzcom-09	A0705	yes	yes	yes	para_nv8_d	
 L06919	nvidia	sw-qzcom-09	A0705	yes	yes	yes	para_nv8_a	
@@ -4283,7 +4283,7 @@ L09607	board	sw-winbuzzercom-01	A0991	yes			para_nv8_b
 L09611	nvidia	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_a	
 L09612	rubio	sw-winbuzzercom-01	A0991				para_nv8_g	yes
 L09614	nvidia	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_a	
-L09615	justice	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_g	
+L09615	justice	sw-winbuzzercom-01	A0991	yes	yes		para_nv8_g	
 L09617	commerce	sw-winbuzzercom-01	A0991	yes	yes		para_nv8_g	
 L09618	megaspeed	sw-winbuzzercom-01	A0991	yes	yes		para_nv8_g	
 L09619	megaspeed	sw-winbuzzercom-01	A0991	yes	yes	yes	para_nv8_g	
@@ -4372,7 +4372,7 @@ L09774	embassy	sw-zerohedgecom-01	A1006				para_nv8_e	yes
 L09775	nvidia	sw-zerohedgecom-01	A1006	yes			para_nv8_a	
 L09777	nvidia	sw-zerohedgecom-01	A1006	yes	yes		para_nv8_a	
 L09783	trump	sw-zerohedgecom-01	A1006	yes	yes	yes	para_nv8_d	
-L09784	justice	sw-zerohedgecom-01	A1006	yes	yes	yes	para_nv8_g	
+L09784	justice	sw-zerohedgecom-01	A1006	yes	yes		para_nv8_g	
 L09787	trump	sw-zerohedgecom-02	A1007	yes	yes	yes	para_nv8_d	
 L09790	moolenaar	sw-zerohedgecom-02	A1007	yes	yes	yes	para_nv8_f	
 L09793	mast	sw-zerohedgecom-02	A1007	yes	yes	yes	para_nv8_f	
