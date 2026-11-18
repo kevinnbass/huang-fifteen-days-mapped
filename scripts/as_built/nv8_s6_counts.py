@@ -15,9 +15,11 @@ Every line of an actor's own channel gets one class, and an actor is counted onc
 can draw a context item (Anthropic's share-sale filing, OpenAI's policy paper): being on a chip does not make it an item about the
 affair, and an item counts as held only where the project holds the page (two readings of Nov 15, 2026 found the earlier counts wrong
 on both points)."""
-import csv
+import csv, sys
 from collections import Counter, defaultdict
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import rows_map
 R = Path(__file__).resolve().parent.parent / 'research'
 CONTEXT_CHIPS = {'MA68', 'MA69'}          # Anthropic's share-sale filing; OpenAI's policy paper: drawn as context, neither names the affair
 ORDER = ['held', 'reader', 'located', 'context', 'none', 'unread']
@@ -25,8 +27,8 @@ ORDER = ['held', 'reader', 'located', 'context', 'none', 'unread']
 
 def chip_kind(r):
     d = r['what_was_done']
-    if d.startswith('held before the search (post): '):      # the reader could not open the post; the project had saved it before the search, and the chip cites that copy
-        return 'post held'
+    if d.startswith('held before the search'):      # the reader could not open the post or page; the project had saved it before the search, and the chip cites that copy
+        return 'held before'
     if d.startswith('now cited (post): '):      # the reader could not open the post; the project saved it afterwards by its id
         return 'post later'
     if d.startswith('now cited: '):             # the search did not yield the original; a saved copy of the publisher's page is cited now
@@ -85,11 +87,18 @@ def main():
            ('chips whose original was searched for', len(chips)), ('chips: original read and cited on the chip', cc['cited']),
            ('chips: the search did not yield the original; a saved copy of the publisher\'s page is now cited', cc['cited later']),
            ('chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited', cc['post later']),
-           ("chips: the search could not open the post; the project's own copy of it, saved before the search, is cited", cc['post held']),
+           ("chips: the search could not open the original; the project's own copy of it, saved before the search, is cited", cc['held before']),
            ('chips: original carries the first of the chip\'s two remarks', cc['part']), ('chips: original could not be opened', cc['blocked']),
            ('chips: original found by the reader and refused to the project (not saved)', cc['found, not saved']),
            ('chips: original not found', cc['not found']),
-           ('chips still without their original that now also cite a paper\'s own report of the act', sum(1 for r in chips if r['what_was_done'].startswith('gap: ') and "a paper's own report of it" in r['what_was_done']))]
+           ('chips still without their original that now also cite a paper\'s own report of the act', sum(1 for r in chips if r['what_was_done'].startswith('gap: ') and "a paper's own report of it" in r['what_was_done'])),
+           ("chips still without their original that cite the paper's report in a copy another outlet carries", sum(1 for r in chips if r['what_was_done'].startswith('gap: ') and "a paper's own report of it" in r['what_was_done'] and 'in a licensed copy' in r['what_was_done'])),
+           ('chips: of those whose original could not be opened or was not found, a part of it is now held and cited', sum(1 for r in chips if r['what_was_done'].startswith(('gap: blocked for ', 'gap: not found for '))))]
+    # a line that says an original is not held is read against its chip whenever the chip's citations change (the forty-first reading found twelve such lines out of date)
+    rev = {r['key']: r['pages_the_chip_cited_when_the_line_was_last_read'] for r in csv.DictReader(open(R / 'nv8_s6_gap_review.tsv', newline=''), delimiter='\t')}
+    now = {r['row_id']: ' '.join(sorted(set(r['src']))) for r in rows_map.rows() if r['row_id'].startswith('MA')}; now.update({'MA' + k[2:].lstrip('0'): v for k, v in now.items()})
+    gaps = [r['key'] for r in chips if r['what_was_done'].startswith('gap:')]; moved = [k for k in gaps if rev.get(k) != now.get(k)]
+    assert not moved and set(rev) == set(gaps), ('a chip whose line says its original is not held cites other pages than when the line was last read: read the line against the chip, correct it if it is out of date, then update research/nv8_s6_gap_review.tsv', moved, sorted(set(rev) ^ set(gaps)))
     with open(R / 'nv8_s6_counts.tsv', 'w', newline='') as f:
         w = csv.writer(f, delimiter='\t', lineterminator='\n'); w.writerow(['what', 'count']); w.writerows(out)
     for k, v in out:

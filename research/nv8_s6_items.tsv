@@ -8,25 +8,25 @@ original of a chip	MA111		https://www.transformernews.ai/p/jensen-huang-should-r
 original of a chip	MA17		https://www.aljazeera.com/economy/2026/11/10/nvidia-spy-scandal-fuels-debate-over-chip-exports-to-china	2026-11-10	found	the page the chip already cites is the original (sw-aljazeeracom-06)
 original of a chip	MA26		https://www.democrats.senate.gov/newsroom/press-releases/leader-schumer-floor-remarks-on-trumps-troubling-defense-of-nvidia-ceo-jensen-huang-at-the-cost-of-american-national-security	2026-11-10	found	saved as art-own-schumer-floor-1110 and cited on the chip
 original of a chip	MA31		https://www.wyden.senate.gov/imo/media/doc/11122026wydenneallettertolutnickonnvidia.pdf	2026-11-12	found	saved as art-own-wyden-neal-letter-1112 and cited on the chip
-original of a chip	MA01				blocked	gap: blocked
-original of a chip	MA02				blocked	gap: blocked
-original of a chip	MA03				blocked	gap: blocked
-original of a chip	MA04				blocked	gap: blocked
-original of a chip	MA09				blocked	gap: blocked
-original of a chip	MA10				blocked	gap: blocked
+original of a chip	MA01				blocked	held before the search: the Times's own article, saved by hand on Nov 12 (man-nyt-1029-01), is what the chip cites; at the search the reader could not open it
+original of a chip	MA02				blocked	held before the search: the Times's own article, saved by hand on Nov 12 (man-nyt-1106-01), is what the chip cites; at the search the reader could not open it
+original of a chip	MA03				blocked	held before the search: the Times's own article, saved by hand on Nov 12 (man-nyt-1107-01), is what the chip cites; at the search the reader could not open it
+original of a chip	MA04				blocked	held before the search: the Times's own article, saved by hand on Nov 12 (man-nyt-1108-02), is what the chip cites; at the search the reader could not open it
+original of a chip	MA09				blocked	held before the search: the outlet's own article on Nov 12 (sw-thedispatchcom-01), is what the chip cites; at the search the reader could not open it
+original of a chip	MA10				blocked	held before the search: the outlet's own article on Nov 12 (sw-nbcnewscom-08), is what the chip cites; at the search the reader could not open it
 original of a chip	MA14				blocked	held before the search (post): the post itself, which the project had saved on Nov 12 (x-mcguire-nov6), is what the chip cites; at the search the reader could not open it
 original of a chip	MA15				blocked	held before the search (post): the post itself, which the project had saved on Nov 12 (x-mcguire-nov8), is what the chip cites; at the search the reader could not open it
 original of a chip	MA19		https://www.banking.senate.gov/newsroom/minority/senator-warren-statement-on-reports-that-nvidia-ceo-jensen-huang-seen-as-target-of-chinese-spy-plot	2026-10-29	found	saved and cited; the chip moved from Nov 8 to Oct 29, the date of her own statement
 original of a chip	MA20		https://www.banking.senate.gov/newsroom/minority/warren-banks-statement-on-nvidias-continued-export-of-advanced-ai-chips-following-reports-of-foreign-intelligence-operation	2026-11-09	found	saved as art-own-warren-banks-1109 and cited on the chip
 original of a chip	MA27		https://www.banking.senate.gov/newsroom/minority/warren-banks-statement-on-nvidias-continued-export-of-advanced-ai-chips-following-reports-of-foreign-intelligence-operation	2026-11-09	found	saved as art-own-warren-banks-1109 and cited on the chip
 original of a chip	MA34		https://www.washingtonexaminer.com/news/justice/4799564/republicans-nvidia-ceo-china-spy-investigation/	2026-11-10	found	the page the chip already cites is the original (sw-washingtonexaminercom-05)
-original of a chip	MA05				blocked	gap: blocked
+original of a chip	MA05				blocked	held before the search: the Times's own article, saved by hand on Nov 12 (man-e1161e38dc19), is what the chip cites; at the search the reader could not open it
 original of a chip	MA06				blocked	now cited: the Journal's own page saved by hand on Nov 15, (man-923fe8754943) is cited on the chip, beside a licensed partner's copy; at the search the reader could not open it
 original of a chip	MA07		https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad?mod=hp_onevizplusstories_pos_1		found, words differ	the Journal's page refused an automated reader; not saved (a gap, for a hand-saved copy)
 original of a chip	MA08				blocked	now cited: the FT's own article saved by hand on Nov 15, (man-ft-1107-01) is cited on the chip; at the search the reader could not open it
 original of a chip	MA11				blocked	gap: blocked
 original of a chip	MA12				blocked	gap: blocked
-original of a chip	MA13				blocked	gap: blocked
+original of a chip	MA13				blocked	held before the search: the magazine's own article, saved on Nov 12 (sw-scientificamericancom-01), is what the chip cites for what he told the magazine, and his institute's own page (art-own-thefai-1112-nvidia-is-bigger-than-jensen-huang) for his essay; at the search the reader could not open the magazine's page, which the search lane's own record names as the page it could not open
 original of a chip	MA16		https://www.ft.com/content/afb6c960-a910-4d67-9588-73ba3bea5b06?syn-25a6b1a6=1		blocked	now cited: the FT's own article saved by hand on Nov 15 (man-ft-1110-02) is cited on the chip; at the search the reader could not open it
 original of a chip	MA18				blocked	now cited (post): the post itself was saved by its id on Nov 17 (art-own-x-2119887613872201762) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA22				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the FT's own article (man-ft-1107-01)
@@ -55,12 +55,12 @@ original of a chip	MA50		https://abcnews.com/Politics/house-republicans-issuing-
 original of a chip	MA51				blocked	now cited (post): the post itself was saved by its id on Nov 17 (art-own-x-2119040221602021765) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA54		https://www.euronews.com/video/2026/11/09/trump-calls-nvidia-chief-jensen-huang-an-honorable-guy-amid-spy-allegations	2026-11-09	blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Times's own report of the remarks (man-nyt-1108-02)
 original of a chip	MA55				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Times's own report of the remarks (man-nyt-1109-01)
-original of a chip	MA73				blocked	gap: blocked
+original of a chip	MA73				blocked	gap: blocked for the spoken remarks: no recording of them is held; the search lane's own record says the reader could not open CNBC's live page and found only a relay of an interview; the project holds that page and Engadget's (sw-cnbccom-09, sw-engadgetcom-0b81faf0) and the chip gives the remarks from them; the committee's own release (art-own-foreignaffairs-1112-chairmen-mast-moolenaar-and-crawfo) is cited for the second request
 original of a chip	MA74				blocked	now cited: a republished copy of the State Department's transcript, saved on Nov 15 (art-fc-rec-mirage-rubio-1109), is cited on the chip; at the search the reader could not open the original
 original of a chip	MA96		https://newsroom.ap.org/detail/CongressseeksanswersfromHuangonNvidiascandal/d6ba97b2212d4da7ac55298b31001898/video?currentItemNo=10&sourceLocation=Topic&startingItemNo=0&vs=false		blocked	gap: blocked
 original of a chip	MA97				blocked	gap: blocked
 original of a chip	MA98				blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120921049097187618) and is cited on the chip; at the search the reader could not open it
-original of a chip	MA99				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Times's live page (man-nyt-1112-09)
+original of a chip	MA99				blocked	gap: blocked for the statement as a whole; a paper's own report of it, saved since, is now cited on the chip: the Times's live page (man-nyt-1112-09); her committee's own release, saved since (ms-bills-warren-nov12-d4fee4), is cited for one sentence of it
 original of a chip	MA100				blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2119855894318252137) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA101				blocked	now cited: the Times's own article was saved by hand (man-nyt-1109-03) is cited on the chip; at the search the reader could not open it
 original of a chip	MA104		https://truthsocial.com/@realDonaldTrump/posts/117604177898784579		blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the FT's live page (man-ft-1112-05)
@@ -89,7 +89,7 @@ original of a chip	MA78				blocked	gap: blocked
 original of a chip	MA79				blocked	gap: blocked
 original of a chip	MA80				blocked	gap: blocked
 original of a chip	MA102				blocked	gap: blocked; a paper's own report of it, saved since, is now cited on the chip: the Journal's article, in a licensed copy (art-fc-tovima-wsj-1110)
-original of a chip	MA106				blocked	gap: blocked
+original of a chip	MA106				blocked	gap: blocked for the interview in full: Bloomberg's own page (man-bbg-1029-01) is held as far as its opening and is cited; the remarks are given from relays and from a copy of the report on another site
 original of a chip	MA107				blocked	gap: blocked
 original of a chip	MA87		https://x.com/elonmusk/status/2120688743111971293		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120688743111971293) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA89		https://x.com/BillAckman/status/2119560712855183434		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2119560712855183434) and is cited on the chip; at the search the reader could not open it
@@ -99,7 +99,7 @@ original of a chip	MA103		https://www.foxbusiness.com/video/6408204801112		block
 original of a chip	MA92				blocked	gap: blocked
 original of a chip	MA69				blocked	now cited: OpenAI's policy paper was saved (art-own-openai-compute-campus-policy-blueprint) is cited on the chip; at the search the reader could not open it
 original of a chip	MA62				not found	gap: not found; a paper's own report of it, saved since, is now cited on the chip: the Times's own report of the meeting (man-nyt-1112-07)
-original of a chip	MA75				not found	gap: not found
+original of a chip	MA75				not found	gap: not found for the question as quoted: Axios's own page, saved since (man-axios-1111-02), is cited for the opening of its report; the question stands behind the page's sign-up prompt and is given from a relay
 original of a chip	MA76				not found	gap: not found
 original of a chip	MA81				not found	gap: not found
 original of a chip	MA85				not found	now cited: the search did not find the original; Bloomberg's own page, saved by hand on Nov 12 (man-efbf718d0a5a), is cited on the chip; it shows the opening of the piece only
@@ -245,16 +245,16 @@ actor's own channel		Global Times	https://www.globaltimes.cn/page/202611/1374159
 original of a chip	MA122		https://www.aljazeera.com/news/2026/11/9/why-is-nvidias-jensen-huang-at-the-centre-of-a-us-china-spy-scandal	2026-11-09	found	the page the chip already cites is the original (sw-aljazeeracom-03)
 original of a chip	MA123		https://www.whitehouse.gov/videos/president-trump-gaggles-with-press-at-a-halloween-party-at-mar-a-lago-oct-31-2026/	2026-10-31	blocked	gap: blocked for the words (the White House's own page for the exchange, saved as art-own-whitehouse-1031-gaggle-halloween-party, is now cited for the event and its day; its video could not be read as text, so the words stay as two outlets relay them)
 original of a chip	MA124		https://abcnews.com/Politics/house-republicans-issuing-subpoena-nvidia-ceo-jensen-huang/story?id=138022782	2026-11-10	found	the page the chip already cites is the original (abc-subpoena)
-original of a chip	MA125		https://www.cnbc.com/2026/11/12/nvidia-trump-jensen-chip-export-controls-china-xi-.html		blocked	gap: blocked (the reader could not open the outlet's page; the chip cites the project's saved copy of it, sw-cnbccom-08)
-original of a chip	MA126		https://www.newsweek.com/trump-jensen-huang-spy-claim-nvidia-25m-ballroom-donation-12696326		blocked	gap: blocked (the reader could not open the outlet's page; the chip cites the project's saved copy of it, sw-newsweekcom-01)
+original of a chip	MA125		https://www.cnbc.com/2026/11/12/nvidia-trump-jensen-chip-export-controls-china-xi-.html		blocked	held before the search: the outlet's own page on Nov 12 (sw-cnbccom-08), is what the chip cites; at the search the reader could not open it
+original of a chip	MA126		https://www.newsweek.com/trump-jensen-huang-spy-claim-nvidia-25m-ballroom-donation-12696326		blocked	held before the search: the outlet's own page on Nov 12 (sw-newsweekcom-01), is what the chip cites; at the search the reader could not open it
 original of a chip	MA127		https://x.com/robertwiblin/status/2119543114222522593		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2119543114222522593) and is cited on the chip; at the search the reader could not open it
-original of a chip	MA128		https://www.cnbc.com/2026/11/10/jensen-huang-nvidia-china-ties.html		blocked	gap: blocked (the reader could not open the outlet's page; the chip cites the project's saved copy of it, sw-cnbccom-04)
+original of a chip	MA128		https://www.cnbc.com/2026/11/10/jensen-huang-nvidia-china-ties.html		blocked	held before the search: the outlet's own page on Nov 12 (sw-cnbccom-04), is what the chip cites; at the search the reader could not open it
 original of a chip	MA129		https://www.cbsnews.com/news/nvidia-jensen-huang-stock-board-investigation-spy/	2026-11-09	found	the page the chip already cites is the original (sw-cbsnewscom-03; a statement by email to that outlet only)
 original of a chip	MA130		https://fortune.com/2026/11/12/nvidia-exit-jensen-huang-affair-trump-preserve-documents-spying-chip-smuggling/		found, words differ	the first remark is on the page the chip cites (sw-fortunecom-11); the second is carried by RTE (sw-rteie-05), which the reader could not open
 original of a chip	MA131		https://www.koreajoongangdaily.com/business/without-huang-nvidias-chips-hold-up-but-its-ai-investment-web-may-not/12970452	2026-11-12	found	the page the chip already cites is the original (sw-koreajoongangdailycom-06)
 original of a chip	MA132		https://thezvi.substack.com/p/nvidia-ceo-jensen-huang-had-an-affair	2026-11-10	found	the page the chip already cites is the original (sw-thezvisubstackcom-01)
 original of a chip	MA133		https://www.chinatalk.media/p/the-spy-who-leased-me	2026-11-10	found	the page the chip already cites is the original (sw-chinatalkmedia-01); the podcast's own feed dates the episode a day earlier: saved as art-own-applepodcasts-chinatalk-emergency-pod, cited on the chip, and a chip for Nov 9 added (MA148)
-original of a chip	MA134		https://www.npr.org/2026/11/12/nx-s1-6037833/jensen-huang-nvidia-board-fired		blocked	gap: blocked (the reader could not open the outlet's page; the chip cites the project's saved copy of it, sw-nprorg-01)
+original of a chip	MA134		https://www.npr.org/2026/11/12/nx-s1-6037833/jensen-huang-nvidia-board-fired		blocked	held before the search: the outlet's own page on Nov 12 (sw-nprorg-01), is what the chip cites; at the search the reader could not open it
 original of a chip	MA135		https://x.com/ClementDelangue/status/2120883918119592037		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120883918119592037) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA136		https://x.com/cz_binance/status/2120888881717612576		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120888881717612576) and is cited on the chip; at the search the reader could not open it
 original of a chip	MA137		https://finance.yahoo.com/video/nvidias-ceo-search-has-a-3--to-4-month-clock-its-pretty-urgent-175552767.html		blocked	gap: blocked (the outlet's own video clip; the chip cites its page about the interview, sw-financeyahoocom-23)
@@ -327,7 +327,7 @@ actor's own channel		Sen. Pete Ricketts	https://www.ricketts.senate.gov/newsroom
 actor's own channel		Sen. Pete Ricketts	https://x.com/SenatorRicketts		blocked	nothing to draw
 actor's own channel		Sen. Pete Ricketts	https://www.ricketts.senate.gov/feed/		blocked	nothing to draw
 actor's own channel		Sen. Pete Ricketts	https://www.ricketts.senate.gov/newsroom/newsfeed/		blocked	nothing to draw
-original of a chip	MA162		https://www.cnn.com/2026/11/12/politics/alice-huang-us-intel		blocked	gap: blocked (the reader could not open the outlet's page; the chip cites the project's saved copy of it, art-fc-cnn-1112)
+original of a chip	MA162		https://www.cnn.com/2026/11/12/politics/alice-huang-us-intel		blocked	now cited: the outlet's own page, saved on Nov 15 (art-fc-cnn-1112), is cited on the chip; at the search the reader could not open it
 original of a chip	MA163		https://x.com/i/status/2120633328441479589		blocked	now cited (post): the post itself was saved by its id on Nov 15 (art-own-x-2120633328441479589) and is cited on the chip; at the search the reader could not open it
 actor's own channel		Joshua Hodges	https://www.uscc.gov/press-releases		nothing on the matter found, Oct 29 to Nov 12	nothing to draw
 actor's own channel		Joshua Hodges	https://www.uscc.gov/announcements/all		nothing on the matter found, Oct 29 to Nov 12	nothing to draw
@@ -343,3 +343,7 @@ a paper's report on a chip	MA364	The New York Times			not held	the Times's profi
 a paper's report on a chip	MA267	The Wall Street Journal			not held	the Journal's article with these words is not among the saved pages of the Journal; the chip quotes it as To Vima carries it (art-fc-tovima-wsj-1110)
 a paper's report on a chip	MA370	The Wall Street Journal			not held	the Journal's report of November 2025 is not among the saved pages of the Journal; the chip gives it as Reuters relayed it, on a page of BusinessWorld (ms-ag-bworld-1114-wsj-gain), and says so
 a paper's report on a chip	MA439	Financial Times			not held	the FT's report of Nov 8 is not among the saved pages of the FT; the chip gives it as a newsletter lists it (sw-chipbriefingsubstackco-01) and says so
+a paper's report on a chip	MA199	The Wall Street Journal			not held	the Journal's article of Nov 12 on the businessman who introduced the two is not among the saved pages of the Journal; the chip takes a passage from it as To Vima carries it (art-fc-tovima-wsj-1112-kangwei); the page of the Journal's own site that the chip cites (man-wsj-1112-02) is another piece
+a paper's report on a chip	MA256	The Wall Street Journal			not held	the Journal's article of Nov 10 on how the affair became a security matter is not among the saved pages of the Journal; the chip takes three passages from it as To Vima carries it (art-fc-tovima-wsj-1110); a newsletter of the Journal's, saved and not cited (man-wsj-1110-04), repeats one of them; the page of the Journal's own site that the chip cites (man-bb944902439c) is another article
+a paper's report on a chip	MA320	The Wall Street Journal			not held	the Journal's article of Nov 12 on the businessman who introduced the two is not among the saved pages of the Journal; the chip quotes it as To Vima carries it (art-fc-tovima-wsj-1112-kangwei)
+a paper's report on a chip	MA360	The Wall Street Journal			not held	the Journal's profile of Nov 9 is not among the saved pages of the Journal; the chip quotes it as To Vima carries it (art-fc-tovima-wsj-1109-woman); the page of the Journal's own site that the chip cites (man-wsj-1109-02) is its editorial of that day

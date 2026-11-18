@@ -1,0 +1,83 @@
+what,stated,recounted,agree
+S mechanical original read and cited,36,36,yes
+S mechanical publisher copy now cited,7,7,yes
+S mechanical post saved afterwards,12,12,yes
+S mechanical post held before search,2,2,yes
+S mechanical first of two remarks,1,1,yes
+S mechanical original could not be opened,66,66,yes
+S mechanical reader found; project refused,2,2,yes
+S mechanical original not found,7,7,yes
+S searched chips,133,133,yes
+S gap-prefixed lines,73,73,yes
+S paper reports added to gap lines,14,14,yes
+S named chips in paper table,119,119,yes
+S currently unopened originals: established upper bound after 12 definite held originals,66,at most 54; unresolved composite/partial cases require separate treatment,no
+F channel count all,82,82,yes
+F channel count held,41,41,yes
+F channel count reader,0,0,yes
+F channel count located,2,2,yes
+F channel count context,4,4,yes
+F channel count none,25,25,yes
+F channel count unread,10,10,yes
+F paper-table chips,119,119,yes
+F paper-table pairs,133,133,yes
+F paper-table own,102,102,yes
+F paper-table items,13,13,yes
+F paper-table hand,18,18,yes
+F eight new item lines,8,8,yes
+F new item lines The New York Times,5,5,yes
+F new item lines The Wall Street Journal,2,2,yes
+F new item lines Financial Times,1,1,yes
+F changed chips,5,5,yes
+F new own pages,4,4,yes
+F original-table corrected lines,5,5,yes
+F old blocked count,71,71,yes
+F old later-post count,9,9,yes
+F act rows,441,441,yes
+F dated drawn acts,438,438,yes
+F report-day acts,177,177,yes
+F undated drawn acts,0,0,yes
+F nonmember tie lines,80,80,yes
+F post-search added acts,306,306,yes
+F register total,1017,1017,yes
+F register open,896,896,yes
+F register carried,121,121,yes
+F company records worded,182,182,yes
+F company records reader-found,340,340,yes
+F company records listed,616,616,yes
+F listed Anthropic,389,389,yes
+F listed OpenAI,227,227,yes
+F fortieth findings.csv lines,1,1,yes
+F fortieth site_findings.csv lines,4,4,yes
+F fortieth counts_check.csv lines,87,87,yes
+F fortieth gaps.csv lines,0,0,yes
+F fortieth distinct rows,1,1,yes
+F fortieth ok finding lines,1,1,yes
+F fortieth agreeing recounts,87,87,yes
+F fortieth ok site lines,4,4,yes
+F fortieth T yes,12,12,yes
+F fortieth G yes,8,8,yes
+F missing-occasion/part marked lines ab,2,2,yes
+F missing-occasion/part marked lines ac,18,18,yes
+F missing-occasion/part marked lines ad,6,6,yes
+F missing-occasion/part marked lines ae,16,16,yes
+F missing-occasion/part marked lines af,12,12,yes
+F missing-occasion/part marked lines ag,22,22,yes
+F missing-occasion/part marked lines ah,20,20,yes
+F missing-occasion/part marked lines ai,8,8,yes
+F missing-occasion/part marked lines aj,21,21,yes
+F missing-occasion/part marked lines ak,3,3,yes
+F missing-occasion/part marked lines al,5,5,yes
+F missing-occasion/part marked lines am,4,4,yes
+F missing-occasion/part marked lines an,2,2,yes
+F missing-occasion/part marked lines ao,0,0,yes
+F thirteen before fortieth with omissions,13,13,yes
+F published readings,40,40,yes
+F annotated gap entries with an own-site paper citation versus note wording,14,12,no
+H MA76 displayed passages matching evidence,6,6,yes
+H MA178 displayed passages matching evidence,5,5,yes
+H MA212 displayed passages matching evidence,5,5,yes
+H MA292 displayed passages matching evidence,2,2,yes
+H MA384 displayed passages matching evidence,6,6,yes
+H total displayed passages,24,24,yes
+H source groups,14,14,yes

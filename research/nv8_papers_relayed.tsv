@@ -1,134 +1,142 @@
-row_id	paper	how_it_stands	why
-MA01	The New York Times	cites the paper's own page	
-MA02	The New York Times	cites the paper's own page	
-MA03	The New York Times	cites the paper's own page	
-MA04	The New York Times	cites the paper's own page	
-MA05	The New York Times	cites the paper's own page	
-MA06	The Wall Street Journal	cites the paper's own page	
-MA07	The Wall Street Journal	the items table says why not	its line of the part 'original of a chip'
-MA08	Financial Times	cites the paper's own page	
-MA16	Financial Times	cites the paper's own page	
-MA32	The New York Times	the items table says why not	its line of the part 'original of a chip'
-MA46	The New York Times	cites the paper's own page	
-MA56	The New York Times	cites the paper's own page	
-MA57	The New York Times	cites the paper's own page	
-MA66	Financial Times	cites the paper's own page	
-MA70	The Wall Street Journal	the items table says why not	its line of the part 'original of a chip'
-MA72	The Wall Street Journal	cites the paper's own page	
-MA75	The New York Times	cites the paper's own page	
-MA76	The New York Times	cites the paper's own page	
-MA80	The Wall Street Journal	cites the paper's own page	
-MA85	The New York Times	the items table says why not	its line of the part 'original of a chip'
-MA92	The New York Times	cites the paper's own page	
-MA94	The Wall Street Journal	the items table says why not	its line of the part 'original of a chip'
-MA99	The New York Times	cites the paper's own page	
-MA101	The New York Times	cites the paper's own page	
-MA102	The New York Times	cites the paper's own page	
-MA105	The New York Times	cites the paper's own page	
-MA107	The New York Times	cites the paper's own page	
-MA108	The New York Times	cites the paper's own page	
-MA113	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement
-MA138	The New York Times	cites the paper's own page	
-MA139	The New York Times	cites the paper's own page	
-MA145	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement
-MA148	Financial Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement
-MA154	Financial Times	cites the paper's own page	
-MA155	The New York Times	cites the paper's own page	
-MA156	Financial Times	cites the paper's own page	
-MA157	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row
-MA158	The New York Times	cites the paper's own page	
-MA164	The New York Times	cites the paper's own page	
-MA166	Financial Times	cites the paper's own page	
-MA169	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row
-MA171	Financial Times	cites the paper's own page	
-MA178	The New York Times	cites the paper's own page	
-MA179	The New York Times	cites the paper's own page	
-MA179	Financial Times	cites the paper's own page	
-MA180	The New York Times	cites the paper's own page	
-MA193	The New York Times	cites the paper's own page	
-MA194	The New York Times	cites the paper's own page	
-MA194	Financial Times	cites the paper's own page	
-MA195	The New York Times	cites the paper's own page	
-MA195	The Wall Street Journal	cites the paper's own page	
-MA195	Financial Times	cites the paper's own page	
-MA196	Financial Times	cites the paper's own page	
-MA197	The New York Times	cites the paper's own page	
-MA197	Financial Times	cites the paper's own page	
-MA198	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""
-MA199	The Wall Street Journal	cites the paper's own page	
-MA199	Financial Times	cites the paper's own page	
-MA200	The New York Times	cites the paper's own page	
-MA201	The New York Times	cites the paper's own page	
-MA202	The New York Times	cites the paper's own page	
-MA202	Financial Times	cites the paper's own page	
-MA203	The New York Times	cites the paper's own page	
-MA204	Financial Times	cites the paper's own page	
-MA205	The New York Times	cites the paper's own page	
-MA207	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row
-MA208	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""
-MA212	The New York Times	cites the paper's own page	
-MA217	The Wall Street Journal	cites the paper's own page	
-MA221	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement
-MA222	The New York Times	cites the paper's own page	
-MA224	The New York Times	cites the paper's own page	
-MA224	Financial Times	cites the paper's own page	
-MA225	The New York Times	cites the paper's own page	
-MA225	The Wall Street Journal	cites the paper's own page	
-MA225	Financial Times	cites the paper's own page	
-MA227	The New York Times	cites the paper's own page	
-MA238	The New York Times	cites the paper's own page	
-MA239	The New York Times	cites the paper's own page	
-MA240	The New York Times	cites the paper's own page	
-MA252	The Wall Street Journal	cites the paper's own page	
-MA254	Financial Times	cites the paper's own page	
-MA255	Financial Times	cites the paper's own page	
-MA256	The Wall Street Journal	cites the paper's own page	
-MA259	The New York Times	cites the paper's own page	
-MA261	Financial Times	cites the paper's own page	
-MA263	The Wall Street Journal	cites the paper's own page	
-MA265	Financial Times	cites the paper's own page	
-MA266	Financial Times	cites the paper's own page	
-MA267	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip"""
-MA273	The Wall Street Journal	cites the paper's own page	
-MA276	The Wall Street Journal	cites the paper's own page	
-MA277	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement
-MA286	Financial Times	cites the paper's own page	
-MA292	The New York Times	cites the paper's own page	
-MA293	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""
-MA293	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row
-MA294	Financial Times	cites the paper's own page	
-MA295	Financial Times	cites the paper's own page	
-MA298	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""
-MA299	The Wall Street Journal	cites the paper's own page	
-MA300	The New York Times	cites the paper's own page	
-MA315	The Wall Street Journal	cites the paper's own page	
-MA322	The New York Times	names the paper, not as relayed	the words drawn are another outlet's own; the paper's report is named as their occasion
-MA325	Financial Times	cites the paper's own page	
-MA327	The New York Times	cites the paper's own page	
-MA330	The New York Times	cites the paper's own page	
-MA332	The New York Times	cites the paper's own page	
-MA340	The Wall Street Journal	cites the paper's own page	
-MA345	Financial Times	cites the paper's own page	
-MA358	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row
-MA360	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row
-MA360	The Wall Street Journal	cites the paper's own page	
-MA361	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row
-MA361	Financial Times	cites the paper's own page	
-MA362	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row
-MA364	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""
-MA365	The New York Times	cites the paper's own page	
-MA366	Financial Times	cites the paper's own page	
-MA370	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip"""
-MA384	The New York Times	cites the paper's own page	
-MA387	The Wall Street Journal	cites the paper's own page	
-MA388	Financial Times	cites the paper's own page	
-MA389	The New York Times	cites the paper's own page	
-MA391	Financial Times	cites the paper's own page	
-MA392	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row
-MA394	Financial Times	cites the paper's own page	
-MA395	Financial Times	cites the paper's own page	
-MA421	The New York Times	cites the paper's own page	
-MA421	Financial Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement
-MA422	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement
-MA423	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement
-MA439	Financial Times	the items table says why not	"its line of the part ""a paper's report on a chip"""
+row_id	paper	how_it_stands	why	copies_cited
+MA01	The New York Times	cites the paper's own page		
+MA02	The New York Times	cites the paper's own page		
+MA03	The New York Times	cites the paper's own page		
+MA04	The New York Times	cites the paper's own page		
+MA05	The New York Times	cites the paper's own page		
+MA06	The Wall Street Journal	cites the paper's own page		art-fc-itiger-wsj-1030-v1 art-fc-itiger-wsj-1030
+MA07	The Wall Street Journal	the items table says why not	its line of the part 'original of a chip'	art-fc-tovima-wsj-1111-oust
+MA08	Financial Times	cites the paper's own page		
+MA16	Financial Times	cites the paper's own page		
+MA32	The New York Times	the items table says why not	its line of the part 'original of a chip'	
+MA33	The Wall Street Journal	the items table says why not	its line of the part 'original of a chip'	art-fc-tovima-wsj-1108-board
+MA46	The New York Times	cites the paper's own page		
+MA56	The New York Times	cites the paper's own page		
+MA57	The New York Times	cites the paper's own page		
+MA58	Financial Times	the items table says why not	its line of the part 'original of a chip'	art-fc-tovima-ft-1109-admits
+MA66	Financial Times	cites the paper's own page		
+MA70	The Wall Street Journal	the items table says why not	its line of the part 'original of a chip'	
+MA72	The Wall Street Journal	cites the paper's own page		
+MA75	The New York Times	cites the paper's own page		
+MA76	The New York Times	cites the paper's own page		
+MA80	The Wall Street Journal	cites the paper's own page		
+MA85	The New York Times	the items table says why not	its line of the part 'original of a chip'	
+MA92	The New York Times	cites the paper's own page		
+MA94	The Wall Street Journal	the items table says why not	its line of the part 'original of a chip'	art-fc-mint-wsj-taiwan
+MA99	The New York Times	cites the paper's own page		
+MA101	The New York Times	cites the paper's own page		
+MA102	The New York Times	cites the paper's own page		
+MA102	The Wall Street Journal	the items table says why not	its line of the part 'original of a chip'	art-fc-tovima-wsj-1110
+MA105	The New York Times	cites the paper's own page		
+MA105	The Wall Street Journal	the items table says why not	its line of the part 'original of a chip'	art-fc-tovima-wsj-1108-board
+MA107	The New York Times	cites the paper's own page		
+MA108	The New York Times	cites the paper's own page		
+MA113	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement	
+MA138	The New York Times	cites the paper's own page		
+MA139	The New York Times	cites the paper's own page		
+MA145	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement	
+MA148	Financial Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement	
+MA154	Financial Times	cites the paper's own page		
+MA155	The New York Times	cites the paper's own page		
+MA156	Financial Times	cites the paper's own page		
+MA157	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA158	The New York Times	cites the paper's own page		sw-bostonglobecom-01
+MA164	The New York Times	cites the paper's own page		
+MA166	Financial Times	cites the paper's own page		
+MA169	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA171	Financial Times	cites the paper's own page		
+MA178	The New York Times	cites the paper's own page		
+MA179	The New York Times	cites the paper's own page		
+MA179	Financial Times	cites the paper's own page		
+MA180	The New York Times	cites the paper's own page		
+MA193	The New York Times	cites the paper's own page		
+MA194	The New York Times	cites the paper's own page		
+MA194	Financial Times	cites the paper's own page		
+MA195	The New York Times	cites the paper's own page		
+MA195	The Wall Street Journal	cites the paper's own page		
+MA195	Financial Times	cites the paper's own page		
+MA196	Financial Times	cites the paper's own page		
+MA197	The New York Times	cites the paper's own page		
+MA197	Financial Times	cites the paper's own page		
+MA198	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""	art-fc-bs-nyt-1110-woman
+MA199	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip""; the chip also cites a page of the paper's own site, for another report"	art-fc-tovima-wsj-1112-kangwei
+MA199	Financial Times	cites the paper's own page		
+MA200	The New York Times	cites the paper's own page		
+MA201	The New York Times	cites the paper's own page		
+MA202	The New York Times	cites the paper's own page		
+MA202	Financial Times	cites the paper's own page		
+MA203	The New York Times	cites the paper's own page		
+MA204	Financial Times	cites the paper's own page		
+MA205	The New York Times	cites the paper's own page		
+MA207	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA208	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""	art-fc-bs-nyt-1110-woman
+MA212	The New York Times	cites the paper's own page		
+MA217	The Wall Street Journal	cites the paper's own page		art-fc-itiger-wsj-1030-v1
+MA221	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement	
+MA222	The New York Times	cites the paper's own page		
+MA222	The Wall Street Journal	cites the paper's own page		
+MA224	The New York Times	cites the paper's own page		
+MA224	Financial Times	cites the paper's own page		
+MA225	The New York Times	cites the paper's own page		
+MA225	The Wall Street Journal	cites the paper's own page		
+MA225	Financial Times	cites the paper's own page		
+MA227	The New York Times	cites the paper's own page		
+MA238	The New York Times	cites the paper's own page		
+MA239	The New York Times	cites the paper's own page		
+MA240	The New York Times	cites the paper's own page		
+MA252	The Wall Street Journal	cites the paper's own page		art-fc-itiger-wsj-1030-v1
+MA254	Financial Times	cites the paper's own page		
+MA255	Financial Times	cites the paper's own page		
+MA256	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip""; the chip also cites a page of the paper's own site, for another report"	art-fc-tovima-wsj-1110
+MA259	The New York Times	cites the paper's own page		
+MA261	Financial Times	cites the paper's own page		
+MA263	The Wall Street Journal	cites the paper's own page		
+MA265	Financial Times	cites the paper's own page		
+MA266	Financial Times	cites the paper's own page		
+MA267	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip"""	art-fc-tovima-wsj-1110
+MA273	The Wall Street Journal	cites the paper's own page		
+MA276	The Wall Street Journal	cites the paper's own page		
+MA277	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement	
+MA286	Financial Times	cites the paper's own page		
+MA292	The New York Times	cites the paper's own page		sw-bostoncom-01
+MA293	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""	art-fc-bs-nyt-1110-woman
+MA293	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA294	Financial Times	cites the paper's own page		
+MA295	Financial Times	cites the paper's own page		
+MA298	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""	art-fc-bs-nyt-1112-trump
+MA299	The Wall Street Journal	cites the paper's own page		art-fc-itiger-wsj-1030-v1
+MA300	The New York Times	cites the paper's own page		
+MA307	The Wall Street Journal	cites the paper's own page		
+MA309	The Wall Street Journal	cites the paper's own page		
+MA315	The Wall Street Journal	cites the paper's own page		
+MA320	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip"""	art-fc-tovima-wsj-1112-kangwei
+MA322	The New York Times	names the paper, not as relayed	the words drawn are another outlet's own; the paper's report is named as their occasion	
+MA325	Financial Times	cites the paper's own page		
+MA327	The New York Times	cites the paper's own page		
+MA330	The New York Times	cites the paper's own page		
+MA332	The New York Times	cites the paper's own page		
+MA340	The Wall Street Journal	cites the paper's own page		
+MA345	Financial Times	cites the paper's own page		
+MA358	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA360	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA360	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip""; the chip also cites a page of the paper's own site, for another report"	art-fc-tovima-wsj-1109-woman
+MA361	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA361	Financial Times	cites the paper's own page		
+MA362	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA364	The New York Times	the items table says why not	"its line of the part ""a paper's report on a chip"""	sw-sfexaminercom-02
+MA365	The New York Times	cites the paper's own page		
+MA366	Financial Times	cites the paper's own page		
+MA370	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip"""	
+MA384	The New York Times	cites the paper's own page		
+MA387	The Wall Street Journal	cites the paper's own page		
+MA388	Financial Times	cites the paper's own page		
+MA389	The New York Times	cites the paper's own page		
+MA391	Financial Times	cites the paper's own page		
+MA392	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA394	Financial Times	cites the paper's own page		
+MA395	Financial Times	cites the paper's own page		
+MA421	The New York Times	cites the paper's own page		
+MA421	Financial Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement	
+MA422	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement	
+MA423	The New York Times	names the paper, not as relayed	the chip is the actor's own statement, post or reply about the paper's report, cited from the actor's own page or post or from the outlet that carries the statement	
+MA439	Financial Times	the items table says why not	"its line of the part ""a paper's report on a chip"""	
