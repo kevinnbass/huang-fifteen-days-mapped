@@ -1,0 +1,4 @@
+finding_id,grade,element_text,problem
+H-PASSAGES,ok,34 changed panels; 677 displayed passages.,
+H-MARKERS,ok,Changed-panel passages: 0 marker-pattern matches; marker-bearing source tails were separately inspected.,
+H-NAMES,ok,"Changed-panel evidence strings, including MT70 and MT74: private names are cut from the passages. Public officials are distinguished from private speakers. Citation titles/addresses are metadata.",

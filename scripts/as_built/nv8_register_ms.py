@@ -75,7 +75,11 @@ ON_COUNTED_SAME = {('a', 'L043'), ('a', 'L145'), ('b', 'L024'), ('b', 'L057'), (
                    ('d', 'L017'), ('d', 'L018'), ('d', 'L070'), ('e', 'L004'), ('e', 'L005'), ('e', 'L007'), ('e', 'L008'),
                    ('f', 'L051'), ('f', 'L053')}        # the third round: two pairs, read by the builder on Nov 17 (the census reader's passage holds the first reader's words)
 _norm = lambda t: ' '.join(re.findall(r'[a-z0-9]+', t.lower().replace('\u2019', '').replace("'", '')))
-UNDATED = '; no day was found on the page (by the day reader, the thirty-third reading or the builder)'
+# Batch s10t (the thirty-fourth reading, finding F-DATE-INVEDECK): one more of those pages prints a day beside its heading (2026-11-08, which its address also carries), and its only saved version is a later
+# revision ('Verified as of 2026-11-17 · Revision 21') that recounts later events. Its lines carry the printed day and say that they may be newer: the figure's rule for a changed page of which one version is saved.
+PAGE_DAY_BUILDER.update({'ms-g17-w1-invedeck-3f859d': '2026-11-08'})
+PAGE_NOTE_BUILDER = {'ms-g17-w1-invedeck-3f859d': '; the page prints Nov 8, 2026 beside its heading, and its only saved version is a revision of Nov 17 that recounts later events: its passages may be newer than that day'}
+UNDATED = '; no day was found on the page (by the day reader, the thirty-third and thirty-fourth readings or the builder)'
 
 
 def load(reg_ids, all_ids):
@@ -111,7 +115,7 @@ def load(reg_ids, all_ids):
             gid = LG[m['line']]; d = day(m['page_id']); in_days = (not d) or '2026-10-29' <= d <= '2026-11-12'; st['lines on a page on which no day was found (kept, and marked)'] += not d
             plain = p['verdict'].strip() == 'CANDIDATE'
             if plain: assert k in 'fg' and not re.findall(r'M[AT]\d+', p['chip_or_tie']), (lane, m['line']); st['lines whose first reader wrote CANDIDATE with no further word (taken as an occasion, and marked)'] += 1
-            base = {'lane': (LABEL_COUNTED if on_counted else LABEL).format(k=k) + ('' if d else UNDATED) + (PLAIN if plain else ''), 'page': m['page_id'], 'day': d, 'actor': m['actor'], 'verdict': 'CANDIDATE occasion' if plain else p['verdict'].strip(), 'chip': ' '.join(re.findall(r'M[AT]\d+', p['chip_or_tie'])),
+            base = {'lane': (LABEL_COUNTED if on_counted else LABEL).format(k=k) + ('' if d else UNDATED) + PAGE_NOTE_BUILDER.get(m['page_id'], '') + (PLAIN if plain else ''), 'page': m['page_id'], 'day': d, 'actor': m['actor'], 'verdict': 'CANDIDATE occasion' if plain else p['verdict'].strip(), 'chip': ' '.join(re.findall(r'M[AT]\d+', p['chip_or_tie'])),
                     'row': p['row_it_belongs_on'].strip(), 'direction': p['direction'].strip(), 'target': '', 'disp': ''}
             assert base['verdict'] in ('CANDIDATE occasion', 'CANDIDATE part'), (lane, m['line'], base['verdict'])
             if not in_days and (k, gid) in BUILDER_CARRIED:        # a record about Anthropic or OpenAI is never left without its row, whatever the page's day

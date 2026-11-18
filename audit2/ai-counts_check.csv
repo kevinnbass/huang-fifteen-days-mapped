@@ -1,0 +1,121 @@
+what,stated,recounted,agree
+Current act rows,441,441,yes
+Current drawn dated act rows,438,438,yes
+Report-day drawn rows,177,177,yes
+Nonmember tie rows,80,80,yes
+anthropic act rows,12,12,yes
+anthropic actor/day chips,10,10,yes
+openai act rows,12,12,yes
+openai actor/day chips,7,7,yes
+Link-check release act rows (reconstructed without five later additions),436,436,yes
+Link-check release drawn rows,433,433,yes
+Link-check release report-day rows,174,174,yes
+All company records,1138,1138,yes
+Company record pages,98,98,yes
+Current mechanical labels: worded,125,125,yes
+Current mechanical labels: reader found,350,350,yes
+Current mechanical labels: listed,663,663,yes
+Listed anthropic against the company,119,119,yes
+Listed anthropic for the company,146,146,yes
+Listed anthropic neither,150,150,yes
+Listed openai against the company,86,86,yes
+Listed openai for the company,99,99,yes
+Listed openai neither,63,63,yes
+First four readers records,964,964,yes
+First four readers unique pages,82,82,yes
+Fifth reader records,174,174,yes
+Fifth reader pages,16,16,yes
+Historical link-release mechanical worded,91,earlier disposition snapshot not supplied,not checked
+Historical link-release mechanical reader found,285,earlier disposition snapshot not supplied,not checked
+Historical link-release mechanical listed,588,earlier disposition snapshot not supplied,not checked
+Historical listed Anthropic against,105,earlier disposition snapshot not supplied,not checked
+Historical listed Anthropic for,123,earlier disposition snapshot not supplied,not checked
+Historical listed Anthropic neither,121,earlier disposition snapshot not supplied,not checked
+Historical listed OpenAI against,85,earlier disposition snapshot not supplied,not checked
+Historical listed OpenAI for,93,earlier disposition snapshot not supplied,not checked
+Historical listed OpenAI neither,61,earlier disposition snapshot not supplied,not checked
+Register groups,1016,1016,yes
+Register carried,119,119,yes
+Register open,897,897,yes
+Register partly worded open,31,31,yes
+E groups,217,217,yes
+Builder groups,27,27,yes
+Six readers groups,772,772,yes
+Status current open kind statement,388,395,no
+README register open kind statement,395,395,yes
+Status current open kind event,243,250,no
+README register open kind event,250,250,yes
+Status current open kind decision,154,158,no
+README register open kind decision,158,158,yes
+README register open kind money,26,26,yes
+README register open kind other,68,68,yes
+Status current open direction against Huang or Nvidia,330,339,no
+README register open direction against Huang or Nvidia,339,339,yes
+Status current open direction for Huang or Nvidia,214,222,no
+README register open direction for Huang or Nvidia,222,222,yes
+Status current open direction against the administration,48,48,yes
+README register open direction against the administration,48,48,yes
+Status current open direction for the administration,46,47,no
+README register open direction for the administration,47,47,yes
+Status current open direction neither,239,241,no
+README register open direction neither,241,241,yes
+Sum of status direction cells,897,877,no
+Open groups first reported in these days,65,65,yes
+Open groups first reported before,268,268,yes
+Open groups first reported unclear,564,564,yes
+Open groups line-count sum,1720,1720,yes
+Unresolved E summaries,53,not certified from current disposition-marker count alone,not checked
+Day-reader blank pages in supplied table,36,36,yes
+Builder dates filled in supplied table,25,25,yes
+Older-page lines,44,44,yes
+Eleven remaining blank-page lines in supplied table,70,70,yes
+Day-reader blanks: dated pages now located by this audit,25,26,no
+Day-reader blanks: pages still without an established day in this audit,11,10,no
+Removed groups,14,14,yes
+Removed groups neither,9,9,yes
+Removed groups for the administration,2,2,yes
+Removed groups against the administration,1,1,yes
+Removed groups for Huang or Nvidia,2,2,yes
+Removed groups against Huang or Nvidia,0,0,yes
+Fetched-since33 folders,111,111,yes
+Uncited fetched folders,60,60,yes
+Written ah dispositions,167,167,yes
+ah dispositions applied,82,82,yes
+ah dispositions stated as a limit,85,85,yes
+ah disposition part B,48,48,yes
+ah disposition part G:ag,3,3,yes
+ah disposition part counts,12,12,yes
+ah disposition part gaps,14,14,yes
+ah disposition part figure,7,7,yes
+ah disposition part left out,35,35,yes
+ah disposition part links,26,26,yes
+ah disposition part anthropic,4,4,yes
+ah disposition part openai,4,4,yes
+ah finding lines,31,31,yes
+ah finding ok,9,9,yes
+ah finding qualification,20,20,yes
+ah finding error,2,2,yes
+ah recount lines,70,70,yes
+ah recount yes,58,58,yes
+ah recount no,3,3,yes
+ah recount not checked,7,7,yes
+ah recount not applicable,2,2,yes
+ah link entries,87,87,yes
+ah unsaved link entries,26,26,yes
+"ah unsaved distinct addresses, trim slash",23,23,yes
+ah left-out inventory,42,42,yes
+ah left-out on no row,35,35,yes
+Changed-panel data matches,34,34,yes
+Changed-panel evidence mismatches,0,0,yes
+Changed-panel marker-pattern hits,0,0,yes
+Link-source pages checked by builder,55,historical input/output ledger not reconstructed,not checked
+Link entries screened by builder,908,historical input/output ledger not reconstructed,not checked
+Links already saved at that release,68,historical input/output ledger not reconstructed,not checked
+Link-check pages fetched,86,historical input/output ledger not reconstructed,not checked
+Own pages fetched,24,historical input/output ledger not reconstructed,not checked
+Earlier outlet reports fetched,33,historical input/output ledger not reconstructed,not checked
+Relayed originals fetched,29,historical input/output ledger not reconstructed,not checked
+Relayed posts fetched,14,historical input/output ledger not reconstructed,not checked
+Relayed documents fetched,15,historical input/output ledger not reconstructed,not checked
+OpenAI Archive pages in link check,7,historical input/output ledger not reconstructed,not checked
+Builder whole pages,9,historical input/output ledger not reconstructed,not checked
