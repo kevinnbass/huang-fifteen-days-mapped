@@ -28,6 +28,9 @@ Amendment of Nov 17, 2026 (the third round): two more grouping readers, egroup_n
   - 49 of those records carry the verdict CANDIDATE with no further word and name no chip: each is taken as CANDIDATE occasion, and its first column says so;
   - two pages that the day reader finds no day on print one after the fifteen days in their visible text (PAGE_DAY_BUILDER, read by the builder): their lines are listed and not registered, like those of every page dated outside the days;
   - one group that its reader set aside as not the actor's is a statement of another actor the register holds (REFILED, read by the builder on the ministry's own pages) and is registered under that actor.
+Amendment of batch s10n (the thirty-third reading, B-UNDATED and B-REFILE): 25 of the 36 pages the day reader gave no day print one, read by that reading and then by the builder (PAGE_DAY_BUILDER). Seventeen are of the
+fifteen days and their lines now carry the day; eight are older documents and their lines are listed and not registered, like those of every page dated outside the days. The refiled group stood on two of the eight
+(Feb 18, 2025) and is no longer registered. Eleven pages print no day anyone found: kept and marked, as before.
 The other undated pages are kept and marked, as before; several are documents older than the fifteen days (a code of conduct, a law firm's note, a hearing record, ministry transcripts), which the first column cannot show: named as a limit in the README.
 Nothing here draws anything."""
 import csv, re, sys
@@ -45,9 +48,24 @@ KEPT_UNRESOLVED = 'no occasion'        # since the twenty-ninth reading: registe
 # the fall is the author's guess, the crackdowns are those governments' acts, and none is identified. It is registered as an unresolved record like the other summaries with no identifiable occasion (its reader's note says no crackdown can be identified).
 REREAD_UNRESOLVED = {('b', 'N021')}
 # the third round: a group its reader set aside as not the actor's (Nvidia, the actor its first reader named) whose passages are a statement of Singapore's trade minister in Parliament on Feb 18, 2025, on the ministry's own two pages (read by the builder in the saved HTML): registered under Singapore
-REFILED = {('f', 'N025'): 'singapore'}
+REFILED = {}        # until batch s10n: {('f', 'N025'): 'singapore'}. Its two pages print Feb 18, 2025 (PAGE_DAY_BUILDER below), so by the one rule its lines are listed and not registered; the thirty-third reading had also found that the
+                    # row's actor is the Ministry of Home Affairs, not the trade ministry whose minister spoke (finding B-REFILE)
 # pages on which the day reader finds no day and whose visible text prints one after the fifteen days (read by the builder on Nov 17, 2026): a restaurant story stamped 'November 15, 2026, 11:10 AM' in Singapore, the evening of Nov 14 Eastern; a broadcaster's release of 'November 13, 2026'
 PAGE_DAY_BUILDER = {'ms-people-mothership-dinner-2117f3': '2026-11-14', 'ms-gap-interview-cnbc-excerpts-83b5ab': '2026-11-13'}
+# Batch s10n (the thirty-third reading, finding B-UNDATED): "no day" was a blank in the day reader's result, not a property of the pages. That reading gave a table of the 36 pages with the date each visibly
+# prints; the builder then read each printed date in the saved file (a letter's own date line, a release's date, a report's dateline, a court filing's date). 25 pages print a day and take it here; one rule holds
+# for all seven lanes: a page dated outside the fifteen days gives lines that are listed and not registered. Eight of the 25 are documents older than the days (two parliamentary pages of Singapore's trade
+# ministry and a ministry transcript of 2025, three reports of a trade publication of 2025 and 2026, a law firm's note of 2023, a Senate hearing record of 2025). The other eleven pages print no day that the
+# builder or the reading found (company pages, two codes of conduct, an agency's explanatory page, a list of rules, a commentary, a page updated from Nov 8 to Nov 16): they stay kept and marked.
+# Days abroad are the local days the pages name; one digest stamped 00:01 UTC on Nov 9 is of Nov 8 Eastern.
+PAGE_DAY_BUILDER.update({
+    'ms-admin-consult-finance-letter-refused-a588a7': '2026-11-12', 'ms-admin-consult-wyden-letter-refused-bf3718': '2026-11-12', 'ms-admin-house-fa-chip-letter-40e5f0': '2026-11-09', 'ms-corp-mha-e560f9': '2026-11-12',
+    'ms-deals-bennett-letter-667058': '2026-11-10', 'ms-gap-block-coinlive-carbonarc-bc102c': '2026-11-12', 'ms-gap-booking-06ai-scale-2fd701': '2026-11-08', 'ms-gap-offshoots-hkej-vfo-93b8da': '2026-11-11',
+    'ms-gap-suits-blunt-curtis-pdf-refused-d4beab': '2026-11-12', 'ms-gap-suits-congress-batch-2-45e678': '2026-11-12', 'ms-gap-suits-liaw-doc69-81b402': '2026-10-29', 'ms-gap-tender-access-008-bb41f6': '2026-11-11',
+    'ms-gap-tender-hkej-transfer-3287c5': '2026-11-11', 'ms-gap-whitehouse-hf-democrats-20261109-3ee2c1': '2026-11-09', 'ms-gap-whitehouse-meeks-letter-20261109-c5dde0': '2026-11-09', 'ms-people-mha-statement-e560f9': '2026-11-12',
+    'ms-probes-rochester-curtis-d4beab': '2026-11-12',
+    'ms-bills-dcd-gain-exclusion-21d618': '2025-12-04', 'ms-deals-dcd-bridge-dd7ff9': '2026-04-09', 'ms-deals-dcd-land-07ef3c': '2025-09-03', 'ms-gap-erc-senate-bessent-june2025-3d30c2': '2025-06-11',
+    'ms-gap-law-hogan-headquarters-3c8fa4': '2023-10-23', 'ms-gap-partners-sg-minister-march2025-c9094b': '2025-03-03', 'ms-law-singapore-unilateral-520ebb': '2025-02-18', 'ms-nvda-sg-mainanswer-20250218-b15726': '2025-02-18'})
 PLAIN = '; its first reader wrote the verdict as CANDIDATE with no further word and named no chip: taken as an occasion'
 ASIDE = {'no occasion': 'its grouping reader found no identifiable occasion in it', "not the actor's": 'its grouping reader found it is not an act of the actor named', 'not on the matter': 'its grouping reader found it is not on the matter'}
 LABEL = 'egroup_nv8_{k} (a grouping reader of the earlier passages on pages another session saved, outside the table of counted pages)'
@@ -57,7 +75,7 @@ ON_COUNTED_SAME = {('a', 'L043'), ('a', 'L145'), ('b', 'L024'), ('b', 'L057'), (
                    ('d', 'L017'), ('d', 'L018'), ('d', 'L070'), ('e', 'L004'), ('e', 'L005'), ('e', 'L007'), ('e', 'L008'),
                    ('f', 'L051'), ('f', 'L053')}        # the third round: two pairs, read by the builder on Nov 17 (the census reader's passage holds the first reader's words)
 _norm = lambda t: ' '.join(re.findall(r'[a-z0-9]+', t.lower().replace('\u2019', '').replace("'", '')))
-UNDATED = '; the page carries no day of its own'
+UNDATED = '; no day was found on the page (by the day reader, the thirty-third reading or the builder)'
 
 
 def load(reg_ids, all_ids):
@@ -90,7 +108,7 @@ def load(reg_ids, all_ids):
                 assert held == ((k, m['line']) in ON_COUNTED_SAME), ('the words do not agree with the pairs the builder read', lane, m['line'])
                 if held: same_seen.add((k, m['line'])); st['lines on a counted page whose census reader had listed the same passage (not added again)'] += 1; continue
                 st['lines on a counted page whose census reader had not listed the passage (added, and marked)'] += 1
-            gid = LG[m['line']]; d = day(m['page_id']); in_days = (not d) or '2026-10-29' <= d <= '2026-11-12'; st['lines on a page with no day of its own (kept, and marked)'] += not d
+            gid = LG[m['line']]; d = day(m['page_id']); in_days = (not d) or '2026-10-29' <= d <= '2026-11-12'; st['lines on a page on which no day was found (kept, and marked)'] += not d
             plain = p['verdict'].strip() == 'CANDIDATE'
             if plain: assert k in 'fg' and not re.findall(r'M[AT]\d+', p['chip_or_tie']), (lane, m['line']); st['lines whose first reader wrote CANDIDATE with no further word (taken as an occasion, and marked)'] += 1
             base = {'lane': (LABEL_COUNTED if on_counted else LABEL).format(k=k) + ('' if d else UNDATED) + (PLAIN if plain else ''), 'page': m['page_id'], 'day': d, 'actor': m['actor'], 'verdict': 'CANDIDATE occasion' if plain else p['verdict'].strip(), 'chip': ' '.join(re.findall(r'M[AT]\d+', p['chip_or_tie'])),

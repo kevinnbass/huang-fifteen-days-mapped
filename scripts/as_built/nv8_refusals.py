@@ -13,14 +13,16 @@ Writes research/nv8_refusals.tsv. Limits: the words searched are a fixed list (d
 comment, not going to comment, demur); a refusal a reader paraphrased otherwise, or one on a page with no line in the census readings, is not
 seen. A relay is matched to the response it repeats by what it says was asked, not by proof that no second request was made. A candidate
 finder, like the gauges: it does not prove that every refusal is drawn.
-Control: with the act that draws Anthropic's refusal taken away, the article that carries it must fall into the second kind."""
+Control: with the act that draws the refusal of Anthropic's that Quartz reported (MA86) taken away, the article that carries it must fall into the second kind.
+(Batch s10n, after the thirty-third reading: three more refusals of Anthropic's are drawn, to CNBC on Nov 6 and Nov 7 and to the Financial Times on Nov 8, so the control names the act it
+takes away instead of expecting one such act; and an evaluator's disclosure that a member of its team "received an offer and declined it" is not a refusal to comment.)"""
 import csv, re, sys
 from collections import defaultdict
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; sys.path.insert(0, str(ROOT / 'scripts'))
 import nv8_gaps as G, rows_map
 REF = re.compile(r"declin|no comment|not comment|n't comment|unable to comment|refus\w* to (?:comment|say|answer|discuss)|would not (?:say|discuss|answer|confirm|immediately comment)|wouldn't (?:say|discuss|answer|confirm)|demur|not going to comment|cannot comment|cannot respond", re.I)
-NOT_A_REFUSAL = re.compile(r"declin\w* (?:in|of) (?:the )?(?:market|value|share)|precipitous decline|stock decline|The decline followed|declin\w* to impose", re.I)
+NOT_A_REFUSAL = re.compile(r"declin\w* (?:in|of) (?:the )?(?:market|value|share)|precipitous decline|stock decline|The decline followed|declin\w* to impose|received an offer and declined it", re.I)
 # An act counts as a refusal when its words carry one outside these phrases (added Nov 17, 2026: a chip quotes a report that the export bureau "has declined to impose
 # restrictions", a decision not to act; before that day no act's words held such a phrase, so the count of earlier releases is unchanged).
 is_ref = lambda t: bool(REF.search(NOT_A_REFUSAL.sub(' ', t)))
@@ -80,8 +82,8 @@ def main():
         t = (r.get('direct_quote') or '') + ' ' + (r.get('remark') or ''); a = G.actor_of(G.canon(r.get('speaker') or ''), r.get('kind', ''))
         if a and REF.search(t) and not NOT_A_REFUSAL.search(t): lines.append((a, art[r['page_id']], r['page_id'], (r.get('day') or '').strip(), ' '.join(t.split())))
     ref, inside, outside, out_arts = split(acts, lines, art)
-    held = [(rid, a) for rid, a in acts if a['actor'] == 'anthropic' and is_ref(a['what'])]; assert len(held) == 1, 'control: the act that draws Anthropic\'s refusal'
-    _, _, _, o2 = split([x for x in acts if x[0] != held[0][0]], lines, art); assert o2.get('anthropic'), 'control: without that act its article is not in the second kind'
+    held = [(rid, a) for rid, a in acts if a['actor'] == 'anthropic' and is_ref(a['what'])]; assert 'MA86' in {rid for rid, _ in held}, 'control: the act that draws the refusal of Anthropic\'s that Quartz reported'
+    _, _, _, o2 = split([x for x in acts if x[0] != 'MA86'], lines, art); assert o2.get('anthropic'), 'control: without that act its article is not in the second kind'
     rows = [['a refusal drawn', a['actor'], a['date'] or 'before the calendar', 'the day of its report' if a['reported'] else 'its own day', rid, a['what']] for rid, a in acts if is_ref(a['what']) and not a.get('withdrawn')]
     rows.sort(key=lambda r: (r[1], r[2], r[4]))
     cited = {a: [(rid, arts) for rid, arts in v] for a, v in ref.items()}; have = {rid for v in ref.values() for rid, _ in v}; out_rows = []; unread = []

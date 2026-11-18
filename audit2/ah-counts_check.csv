@@ -1,0 +1,71 @@
+what,stated,recounted,agree
+Current act rows,433,433,yes
+Current drawn dated act rows,430,430,yes
+Current drawn report-dated act rows,174,174,yes
+Drawn act rows without a day,0,0,yes
+Nonmember tie rows,80,80,yes
+Answer before MA433: act rows,432,432,yes
+Answer before MA433: drawn act rows,429,429,yes
+Answer before MA433: report-dated,174,174,yes
+New act rows MA426–MA433,8,8,yes
+New actor/day chips,8,7,no
+Final status new OpenAI chips,5,4,no
+README answer new OpenAI chips before MA433,4,3,no
+Register groups,1030,1030,yes
+Register carried groups,120,120,yes
+Register open groups,910,910,yes
+Register entirely open groups,879,879,yes
+Register partial groups,31,31,yes
+Eligible open candidate lines,1761,1761,yes
+Eligible open pages,698,698,yes
+Open raw group-line sum,1763,1763,yes
+Current partial candidate lines,not stated,206,not applicable
+Partial groups with eligible candidate lines,not stated,30,not applicable
+New Ef/Eg groups,36,36,yes
+f/g rows taken in,168,168,yes
+f/g existing-group lines,122,122,yes
+f/g new-group lines,40,40,yes
+f/g listed unregistered lines,6,6,yes
+One-word verdict rows listed,48,48,yes
+Day-reader blank lines,163,163,yes
+Day-reader blank page IDs,36,36,yes
+Third-round original earlier passages,170,170,yes
+Repeated census passages not added,2,2,yes
+"Added lines after census, total",69,69,yes
+"Added lines, open",49,49,yes
+Added lines on other-session pages,8,8,yes
+Nine-page reader additions,4,4,yes
+Original recall-reader lines,2855,2855,yes
+Seven grouping-reader lines,799,799,yes
+Register table total lines,2855 + 799 + 69,3723,yes
+Current fetched-page table,25,25,yes
+Current cited pages in fetched table,17,17,yes
+Current uncited pages in fetched table,8,8,yes
+Answer-stage pages before capture-list addition,24,24,yes
+Answer-stage cited pages before MA433,15,15,yes
+Written ag dispositions,46,46,yes
+ag dispositions applied,31,31,yes
+ag dispositions stated as a limit,15,15,yes
+ag findings total,40,40,yes
+ag findings ok,17,17,yes
+ag findings qualification,22,22,yes
+ag findings error,1,1,yes
+ag figure_findings total,5,5,yes
+ag figure_findings qualification,3,3,yes
+ag figure_findings error,2,2,yes
+ag site_findings total,2,2,yes
+ag site_findings ok,2,2,yes
+ag counts_check total,89,89,yes
+ag counts_check yes,79,79,yes
+ag counts_check no,3,3,yes
+ag counts_check not checked,7,7,yes
+ag dispositions_check total,63,63,yes
+ag dispositions_check yes,59,59,yes
+ag dispositions_check partial,4,4,yes
+Unreconstructed history: first post screen,19,no frozen selection manifest,not checked
+Unreconstructed history: second screen population,175,no frozen selection manifest,not checked
+Unreconstructed history: second screen linking pages,34,no frozen selection manifest,not checked
+Unreconstructed history: second screen surname handles,5,no frozen selection manifest,not checked
+Unreconstructed history: own-day population,249,no frozen selection manifest,not checked
+Unreconstructed history: selected loving-grace paragraphs,14,no frozen selection manifest,not checked
+Unreconstructed history: selected adolescence paragraphs,48,no frozen selection manifest,not checked
