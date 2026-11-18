@@ -1,5 +1,5 @@
 """Every chip that names one of the three papers with a row of its own (the New York Times, the Wall Street Journal, the Financial Times),
-that stands on such a paper's row, or that cites a copy of one of their articles carried by another outlet: how the chip stands toward
+that stands on such a paper's row, or that cites a listed copy of one of their articles carried by another outlet: how the chip stands toward
 that paper's own page.
 
 Run: python3 -I scripts/nv8_papers_relayed.py   -> research/nv8_papers_relayed.tsv (row_id, paper, how_it_stands, why, copies_cited)
@@ -8,8 +8,9 @@ How a pair of chip and paper gets into the table (since the answer to the forty-
   - the chip's words name the paper (the patterns below; 'the Journal' in either case), or the chip stands on the paper's row; or
   - the chip cites a page listed in COPIES: another outlet's copy of an article of the paper. COPIES is kept by hand from a census of every
     page a live chip cites. The script repeats the census's strong signs on every run (the paper's short name in the page id, a join with a
-    page of the paper's own site in the table of articles, a credit line of the paper) and STOPS on a cited page that shows one and is in
-    neither COPIES nor NOT_COPIES. A copy that carries no such sign is not found by it.
+    page of the paper's own site in the table of articles, one of a few credit lines: the Times's company name or 'originally appeared in The New York Times', an address at wsj.com or the
+    words 'Dow Jones', 'The Financial Times Limited') and STOPS on a cited page that shows one and is in neither COPIES nor NOT_COPIES.
+    A copy with another credit line, or with none, is not found by it: the forty-second reading found one such page by comparing texts.
 How a pair stands, tried in this order:
   the items table says why not     the chip cites a copy of an article of the paper that is not held on the paper's own site, and
                                    research/nv8_s6_items.tsv has a line for the chip: part 'original of a chip' (the chips drawn before the
@@ -42,18 +43,19 @@ WHY = {'own statement': "the chip is the actor's own statement, post or reply ab
        'another outlet': "the words drawn are another outlet's own; the paper's report is named as their occasion"}
 BY_HAND = {('MA113', T): 'own statement', ('MA145', T): 'own statement', ('MA148', F): 'own statement', ('MA221', T): 'own statement', ('MA277', T): 'own statement',
            ('MA421', F): 'own statement', ('MA422', T): 'own statement', ('MA423', T): 'own statement',
-           ('MA157', J): 'pointer', ('MA169', J): 'pointer', ('MA207', T): 'pointer', ('MA293', J): 'pointer', ('MA358', J): 'pointer', ('MA360', T): 'pointer', ('MA361', T): 'pointer',
+           ('MA169', J): 'pointer', ('MA207', T): 'pointer', ('MA293', J): 'pointer', ('MA358', J): 'pointer', ('MA360', T): 'pointer', ('MA361', T): 'pointer',
            ('MA362', J): 'pointer', ('MA392', T): 'pointer',
            ('MA322', T): 'another outlet'}
 # another outlet's copy of an article of the paper (read in the census of Nov 18, 2026: research/scratch_archive_s9a/papers_copies_census_s11c.tsv in the project, not published)
 COPIES = {'art-fc-bs-nyt-1110-woman': T, 'art-fc-bs-nyt-1112-trump': T, 'sw-bostoncom-01': T, 'sw-bostonglobecom-01': T, 'sw-sfexaminercom-02': T,
           'art-fc-itiger-wsj-1030': J, 'art-fc-itiger-wsj-1030-v1': J, 'art-fc-mint-wsj-taiwan': J, 'art-fc-tovima-wsj-1108-board': J, 'art-fc-tovima-wsj-1109-woman': J,
           'art-fc-tovima-wsj-1110': J, 'art-fc-tovima-wsj-1111-oust': J, 'art-fc-tovima-wsj-1112-kangwei': J,
-          'art-fc-tovima-ft-1109-admits': F}
+          'art-fc-tovima-ft-1109-admits': F,
+          'art-fc-itiger-2682389645': J}          # found by the forty-second reading: a plain Dow Jones credit, which the signs did not read
 # a cited page that shows a strong sign and is not a copy
 NOT_COPIES = {'ms-ag-bworld-1114-wsj-gain': "an agency's relay of the Journal's report, carried by a third outlet: not a copy of the article"}
 ID_SIGN = {T: r'(?:^|-)nyt(?:-|$)', J: r'(?:^|-)wsj(?:-|$)', F: r'(?:^|-)ft(?:-|$)'}
-CREDIT = {T: r"The New York Times Company|originally appeared in The New York Times", J: r"@wsj\.com|Dow Jones & Company", F: r"The Financial Times Limited"}
+CREDIT = {T: r"The New York Times Company|originally appeared in The New York Times", J: r"@wsj\.com|Dow Jones(?! Industrial)", F: r"The Financial Times Limited"}
 OLD, NEW = 'original of a chip', "a paper's report on a chip"
 
 

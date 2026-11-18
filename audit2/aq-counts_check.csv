@@ -1,0 +1,103 @@
+what,stated,recounted,agree
+chips whose original was searched for,133,133,yes
+chips: original read and cited on the chip,36,36,yes
+chips: the search did not yield the original; a saved copy of the publisher's page is now cited,8,8,yes
+"chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited",12,12,yes
+"chips: the search could not open the original; the project's own copy of it, saved before the search, is cited",14,14,yes
+chips: original carries the first of the chip's two remarks,1,1,yes
+chips: original could not be opened,53,53,yes
+chips: original found by the reader and refused to the project (not saved),2,2,yes
+chips: original not found,7,7,yes
+chips still without their original that now also cite a paper's own report of the act,14,14,yes
+chips still without their original that cite the paper's report in a copy another outlet carries,4,4,yes
+"chips: of those whose original could not be opened or was not found, a part of it is now held and cited",5,5,yes
+source-status classes sum,133,133,yes
+note: added acts excluding two withdrawn duplicates,306,306,yes
+review table rows,60,60,yes
+semantic correction: blocked originals after correcting MA99,53,52,no
+semantic correction: publisher page now cited after correcting MA99,8,9,no
+semantic correction: partial originals after correcting MA99,5,4,no
+semantic correction: gap chips with paper report after correcting MA99,14,13,no
+semantic correction: gap review rows after correcting MA99,60,59,no
+P: published pairs,141,141,yes
+P: published distinct chips,124,124,yes
+P: copies listed in script,14,14,yes
+P: copies after confirmed omission,14,15,no
+P: classes after confirmed omission: own,102,102,yes
+P: classes after confirmed omission: items,21,22,no
+P: classes after confirmed omission: hand,18,17,no
+P: census candidates,31,31,yes
+G written dispositions,54,54,yes
+G applied labels,51,51,yes
+G stated-as-limit labels,3,3,yes
+G every prior adverse point answered once,54,54,yes
+G off-site paper-copy chips,4,4,yes
+F act rows,441,441,yes
+F live dated acts,438,438,yes
+F report-day acts,177,177,yes
+F undated live acts,0,0,yes
+F nonmember tie lines,80,80,yes
+F register groups,1017,1017,yes
+F register carried,121,121,yes
+F register open,896,896,yes
+F worded company records,182,182,yes
+F reader-found company records,340,340,yes
+F listed company records,616,616,yes
+F listed anthropic,389,389,yes
+F listed openai,227,227,yes
+F ap findings total,29,29,yes
+F ap findings ok,5,5,yes
+F ap findings qualification,24,24,yes
+F ap findings error,0,0,yes
+F ap figure_findings total,4,4,yes
+F ap site_findings total,6,6,yes
+F ap site_findings ok,6,6,yes
+F ap counts_check total,82,82,yes
+F ap counts_check yes,80,80,yes
+F ap counts_check no,2,2,yes
+F ap dispositions_check total,121,121,yes
+F ap dispositions_check yes,102,102,yes
+F ap dispositions_check partial,7,7,yes
+F ap dispositions_check no,12,12,yes
+F ap gaps total,5,5,yes
+F ap P:hand rows,18,18,yes
+F ap P:line rows,8,8,yes
+F ap P:own rows,15,15,yes
+F ap gap-original lines reviewed,73,73,yes
+F ap still-true original lines,56,56,yes
+"F historical ab missing marks (lines, not distinct acts)",2,2,yes
+"F historical ac missing marks (lines, not distinct acts)",18,18,yes
+"F historical ad missing marks (lines, not distinct acts)",6,6,yes
+"F historical ae missing marks (lines, not distinct acts)",16,16,yes
+"F historical af missing marks (lines, not distinct acts)",12,12,yes
+"F historical ag missing marks (lines, not distinct acts)",22,22,yes
+"F historical ah missing marks (lines, not distinct acts)",20,20,yes
+"F historical ai missing marks (lines, not distinct acts)",8,8,yes
+"F historical aj missing marks (lines, not distinct acts)",21,21,yes
+"F historical ak missing marks (lines, not distinct acts)",3,3,yes
+"F historical al missing marks (lines, not distinct acts)",5,5,yes
+"F historical am missing marks (lines, not distinct acts)",4,4,yes
+"F historical an missing marks (lines, not distinct acts)",2,2,yes
+F thirteen readings before the fortieth with missing marks,13,13,yes
+F published readings,41,41,yes
+F old paper pairs,133,133,yes
+F old paper chips,119,119,yes
+F current paper pairs,141,141,yes
+F current paper chips,124,124,yes
+F current own class,102,102,yes
+F current items class,21,21,yes
+F current hand class,18,18,yes
+F added pairs,8,8,yes
+F rewritten original lines,17,17,yes
+F reclassified original lines,13,13,yes
+F narrowed original lines,4,4,yes
+F new paper-report lines,4,4,yes
+F unchanged original lines not reread,56,56,yes
+F newly changed chips,2,2,yes
+F distinct Journal articles behind four new lines,4,3,no
+F Nov 12 save dates in eleven cited own-page corrections,11,11,yes
+H current panels checked,2,2,yes
+note: publisher-page class marked as opening only,1,1,yes
+note: remarks on the first-remark chip,2,three source accounts; number of distinct remark occasions not established,no
+F preceding table: blocked originals,66,66,yes
+F preceding table: publisher page now cited,7,7,yes

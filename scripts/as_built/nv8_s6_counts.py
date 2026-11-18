@@ -88,7 +88,7 @@ def main():
            ('chips: the search did not yield the original; a saved copy of the publisher\'s page is now cited', cc['cited later']),
            ('chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited', cc['post later']),
            ("chips: the search could not open the original; the project's own copy of it, saved before the search, is cited", cc['held before']),
-           ('chips: original carries the first of the chip\'s two remarks', cc['part']), ('chips: original could not be opened', cc['blocked']),
+           ('chips: the original that is held carries one of the accounts the chip gives', cc['part']), ('chips: original could not be opened', cc['blocked']),
            ('chips: original found by the reader and refused to the project (not saved)', cc['found, not saved']),
            ('chips: original not found', cc['not found']),
            ('chips still without their original that now also cite a paper\'s own report of the act', sum(1 for r in chips if r['what_was_done'].startswith('gap: ') and "a paper's own report of it" in r['what_was_done'])),

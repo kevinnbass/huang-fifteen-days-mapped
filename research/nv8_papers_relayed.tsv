@@ -39,7 +39,7 @@ MA148	Financial Times	names the paper, not as relayed	the chip is the actor's ow
 MA154	Financial Times	cites the paper's own page		
 MA155	The New York Times	cites the paper's own page		
 MA156	Financial Times	cites the paper's own page		
-MA157	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
+MA157	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip"""	art-fc-itiger-2682389645
 MA158	The New York Times	cites the paper's own page		sw-bostonglobecom-01
 MA164	The New York Times	cites the paper's own page		
 MA166	Financial Times	cites the paper's own page		
@@ -119,7 +119,7 @@ MA340	The Wall Street Journal	cites the paper's own page
 MA345	Financial Times	cites the paper's own page		
 MA358	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
 MA360	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
-MA360	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip""; the chip also cites a page of the paper's own site, for another report"	art-fc-tovima-wsj-1109-woman
+MA360	The Wall Street Journal	the items table says why not	"its line of the part ""a paper's report on a chip""; the chip also cites a page of the paper's own site, for another report"	art-fc-tovima-wsj-1109-woman art-fc-itiger-2682389645
 MA361	The New York Times	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	
 MA361	Financial Times	cites the paper's own page		
 MA362	The Wall Street Journal	names the paper, not as relayed	the paper is named only as a pointer to another chip or to the paper's own row	

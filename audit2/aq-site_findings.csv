@@ -1,0 +1,3 @@
+finding_id,grade,element_text,problem
+H-MA198,ok,MA198 panel,"ok: complete current chip text includes the Business Standard attribution; actor, Nov 10 date, report-day flag, source passage and URL match. The renderer displays the full text through textContent. Saved-data/code check; no image or browser visual test."
+H-MA208,ok,MA208 panel,"ok: complete current chip text includes the Business Standard attribution; actor, Nov 10 date, report-day flag, source passage and URL match. The renderer displays the full text through textContent. Saved-data/code check; no image or browser visual test."
