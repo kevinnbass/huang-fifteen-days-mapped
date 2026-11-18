@@ -258,6 +258,9 @@ READ2.update({'MA437': "the day words near the cited sentences date the market's
 READ3.update({'MA439': "the chip's day is the one the newsletter gives for the Financial Times's report ('FT (11/08)'), and that of the newsletter's own stamp, 11:56 p.m. Eastern on Nov 8 (the page was changed a minute later, at 04:57 UTC on Nov 9); the other page listed is Fortune's newsletter of Nov 10, which the chip names with its day (added with the answer to the thirty-third reading)"})
 READ3.update({'MA212': "not newer: the passage added from the Times's live page is in an entry stamped 12:33 p.m. Eastern on Nov 12, the chip's day; the page as a whole prints 'Published Nov. 12, 2026 Updated Nov. 13, 2026', and the chip names the entry's time"})          # batch s11b: the chip now also cites the Times's own page for the report CNBC confirms
 READ4.update({'MA212': "the earlier pages (an FT article of Nov 2, a Breitbart page of Nov 3) hold only the stock words of attribution, 'according to two people familiar with the matter', about other reports; the report of the hiring is in the Times's entry of Nov 12, the chip's day"})
+# batch s11f: a new chip (a drawn podcast host's question of Nov 12 that names both AI companies), found on pages another session saved
+READ2.update({'MA442': "the day word stands in a guest's sentence about prices ('at today's pricing') on the host's own page, before the question, and dates nothing; the chip's day is the one an episode-listing site's page gives the conversation"})
+READ3.update({'MA442': "the page listed is the host's own page of the conversation, dated Nov 13, which the chip names with its day and cites for his name and for his own wording of the question; the chip sits on Nov 12, the day of the earlier saved page of the same conversation, from which its quotation is taken"})
 
 MONTH = {'oct': 10, 'nov': 11}
 

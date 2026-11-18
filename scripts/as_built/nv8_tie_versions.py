@@ -29,7 +29,8 @@ STAMP = r'(\d{4}-\d\d-\d\dT[\d:.]+(?:Z|[+-]\d\d:?\d\d)?)'
 MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
 day = lambda d: f"{MON[d.month - 1]} {d.day}, {d.year}"
 SITE = {'anthropic.com': "Anthropic's own page", 'cnbc.com': "CNBC's page", 'theregister.com': "The Register's page", 'semafor.com': "Semafor's page", 'huffpost.com': "HuffPost's page", 'fortune.com': "Fortune's page", 'siliconangle.com': "SiliconANGLE's page",
-        'infosecurity-magazine.com': "Infosecurity Magazine's page", 'spotlightdelaware.org': "Spotlight Delaware's page", 'aljazeera.com': "Al Jazeera's page", 'chinatalk.media': "ChinaTalk's page", 'whbl.com': "the saved copy of the Reuters dispatch"}
+        'infosecurity-magazine.com': "Infosecurity Magazine's page", 'spotlightdelaware.org': "Spotlight Delaware's page", 'aljazeera.com': "Al Jazeera's page", 'chinatalk.media': "ChinaTalk's page", 'whbl.com': "the saved copy of the Reuters dispatch",
+        'priscilachauhan.substack.com': "the essay's page"}        # batch s11f: an essay on export controls that MT07 cites for a letter of June 10, 2026 (its author is not named on the line)
 # a standing fact of the page, not dated by the page's first publication: listed in the table, no warning on the line
 STANDING = {('MT17', 'abc-anthropic-pentagon-0227'): 'the line gives the order by its month, from the report', ('MT18', 'nbc-1108-investigation'): 'the line gives the award by its month', ('MT18', 'cnbc-1111-congress-resign'): 'the line gives the flight by its month',
             ('MT25', 'art-pfa-conservative'): "the group's own page names its co-founder", ('MT43', 'art-f1-cnas-supporters'): 'a list of supporters for a stated period (Oct 2024 to Sep 2025)', ('MT44', 'art-f1-cnas-supporters'): 'a list of supporters for a stated period (Oct 2024 to Sep 2025)',
