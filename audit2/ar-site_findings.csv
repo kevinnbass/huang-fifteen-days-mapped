@@ -1,0 +1,3 @@
+finding_id,grade,element_text,problem
+H-MA198,ok,MA198 panel,"ok: actor, day, complete chip wording, report-day flag, source URL and refusal passage match the frozen row and evidence. The actor binding and actCard/textContent rendering preserve the full wording. Static saved-data/code check; no image or browser runtime test."
+H-MA208,ok,MA208 panel,"ok: actor, day, complete chip wording, report-day flag, source URL and refusal passage match the frozen row and evidence. The actor binding and actCard/textContent rendering preserve the full wording. Static saved-data/code check; no image or browser runtime test."

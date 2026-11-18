@@ -1,0 +1,109 @@
+what,stated,recounted,agree
+S: actors whose own channels were searched,82,82,yes
+S: actors: an item about the affair is held and was read,41,41,yes
+"S: actors: the reader matched an item about the affair to a chip, and the project holds no copy",0,0,yes
+"S: actors: links located, none could be read",2,2,yes
+S: actors: only items that are not about the affair or not their own,4,4,yes
+S: actors: nothing found on a channel that could be read,25,25,yes
+S: actors: no channel could be read,10,10,yes
+S: chips whose original was searched for,133,133,yes
+S: chips: original read and cited on the chip,36,36,yes
+S: chips: the search did not yield the original; a saved copy of the publisher's page is now cited,9,9,yes
+"S: chips: the search could not open the post; the post itself, saved afterwards by its id, is now cited",12,12,yes
+"S: chips: the search could not open the original; the project's own copy of it, saved before the search, is cited",15,15,yes
+S: chips: the original that is held carries one of the accounts the chip gives,1,1,yes
+S: chips: original could not be opened,51,51,yes
+S: chips: original found by the reader and refused to the project (not saved),2,2,yes
+S: chips: original not found,7,7,yes
+S: chips still without their original that now also cite a paper's own report of the act,13,13,yes
+S: chips still without their original that cite the paper's report in a copy another outlet carries,4,4,yes
+"S: chips: of those whose original could not be opened or was not found, a part of it is now held and cited",3,3,yes
+S: gap review rows,58,58,yes
+S: gap review citation mismatches,0,0,yes
+S: eight chip classes add to searched chips,133,133,yes
+"S: saved Journal-site pages of the Nov 9 profile (manifest, titles, exact-lead control)",0,0,yes
+P: listed copies,15,15,yes
+P: pairs,141,141,yes
+P: chips,124,124,yes
+P: own-page pairs,102,102,yes
+P: items-line pairs,22,22,yes
+P: hand pairs,17,17,yes
+P: cited off-site pages with unlisted strong signs,0,0,yes
+G: written dispositions,39,39,yes
+G: applied labels,35,35,yes
+G: stated-as-limit labels,4,4,yes
+G: each prior adverse line or gap answered exactly once,39,39,yes
+F: aq findings lines,6,6,yes
+F: aq findings ok,2,2,yes
+F: aq findings qualification,4,4,yes
+F: aq findings error,0,0,yes
+F: aq text points,5,5,yes
+F: aq site checks,2,2,yes
+F: aq site checks ok,2,2,yes
+F: aq recounts,102,102,yes
+F: aq recounts yes,92,92,yes
+F: aq recounts no,10,10,yes
+F: aq disposition checks,213,213,yes
+F: aq disposition checks yes,197,197,yes
+F: aq disposition checks partial,13,13,yes
+F: aq disposition checks no,3,3,yes
+F: aq gaps,4,4,yes
+F: aq S checks,17,17,yes
+F: aq rewritten lines yes,15,15,yes
+F: aq rewritten lines partial,1,1,yes
+F: aq rewritten lines no,1,1,yes
+F: aq P:line checks,4,4,yes
+F: aq P:line checks holding,4,4,yes
+F: aq P:copy checks,15,15,yes
+F: aq listed copies excluding its one non-copy check,14,14,yes
+F: aq P:own checks,20,20,yes
+F: aq P:own checks holding,20,20,yes
+F: current act rows,441,441,yes
+F: live dated acts,438,438,yes
+F: report-day acts,177,177,yes
+F: undated live acts,0,0,yes
+F: nonmember tie lines,80,80,yes
+F: register groups,1017,1017,yes
+F: register carried,121,121,yes
+F: register open,896,896,yes
+F: company records worded,182,182,yes
+F: company records reader-found,340,340,yes
+F: company records listed,616,616,yes
+F: listed anthropic,389,389,yes
+F: listed openai,227,227,yes
+F: historical ab missing-mark lines,2,2,yes
+F: historical ac missing-mark lines,18,18,yes
+F: historical ad missing-mark lines,6,6,yes
+F: historical ae missing-mark lines,16,16,yes
+F: historical af missing-mark lines,12,12,yes
+F: historical ag missing-mark lines,22,22,yes
+F: historical ah missing-mark lines,20,20,yes
+F: historical ai missing-mark lines,8,8,yes
+F: historical aj missing-mark lines,21,21,yes
+F: historical ak missing-mark lines,3,3,yes
+F: historical al missing-mark lines,5,5,yes
+F: historical am missing-mark lines,4,4,yes
+F: historical an missing-mark lines,2,2,yes
+F: thirteen readings before the fortieth with missing marks,13,13,yes
+F: ao missing-mark lines,0,0,yes
+F: ap missing-mark lines,0,0,yes
+F: aq missing-mark lines,0,0,yes
+F: changed frozen rows (byte comparison control),0,0,yes
+F: non-whitespace delta bytes,0,0,yes
+F: rewritten original lines in this answer,3,3,yes
+F: added paper-report lines in this answer,1,1,yes
+F: unchanged original lines not reopened from the earlier 56 (cited limit),56,56,yes
+F: changed paper-table rows,2,2,yes
+F: preceding paper class the items table says why not,21,21,yes
+"F: preceding paper class names the paper, not as relayed",18,18,yes
+F: previous original could not be opened,53,53,yes
+F: previous saved copy of the publisher,8,8,yes
+F: previous saved before the search,14,14,yes
+F: previous a part of it is now held,5,5,yes
+F: prior four Journal lines,4,4,yes
+F: distinct articles on prior four Journal lines,3,3,yes
+F: current five Journal lines in the correction,5,5,yes
+F: distinct articles on those current five lines,3,3,yes
+H: panels with present complete words,2,2,yes
+H: altered-word control rejected,2,2,yes
+F: named input pins checked,19,19,yes
