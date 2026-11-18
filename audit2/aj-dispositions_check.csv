@@ -1,0 +1,142 @@
+part,finding_id,holds,note
+G:ai,findings | A-MT79-ESCALATION,yes,Correction matches the old point and current drawn wording.
+G:ai,findings | A-MT77-ROLLOUT,yes,Correction matches the old point and current drawn wording.
+G:ai,findings | A-MA427-COI,yes,Correction matches the old point and current drawn wording.
+G:ai,findings | A-MA427-REVIEW-BOUND,yes,Correction matches the old point and current drawn wording.
+G:ai,findings | A-MA434-EXTERNAL,yes,Correction matches the old point and current drawn wording.
+G:ai,findings | A-MA432-LOCAL-HIRING,yes,Correction matches the old point and current drawn wording.
+G:ai,findings | A-MA441-PORTFOLIO,yes,Correction matches the old point and current drawn wording.
+G:ai,findings | A-NVIDIA-POLITICO-11,yes,Correction matches the old point and current drawn wording.
+G:ai,findings | A-ACCORD-ANTHROPIC,yes,"Signing now carried. Further omissions from the same record are A008, not an undrawn signing."
+G:ai,findings | A-ACCORD-OPENAI,yes,The signature and shared-record pointer are present. New omissions from the shared account are assessed separately in A008.
+G:ai,figure | F-REGISTER-STATUS,yes,Current register/status distributions agree; independently recounted in counts_check.csv.
+G:ai,figure | F-DATE-INVEDECK,yes,Heading day and revision are both present; the two recall lines carry the caveat.
+G:ai,figure | F-DISPOSITIONS-REMOVED,yes,All six contradictory kept clauses are withdrawn with visible correction notes; group IDs are absent.
+G:ai,figure | F-GAPS-LOCATION,yes,All fourteen gap-location corrections point to the supplied gap table.
+G:ai,figure | F-REMOVAL-SCOPE,yes,Wording now concerns old grouping provenance; land act remains under other IDs.
+G:ai,figure | F-COMPANY-DISPOSITION,yes,The company table now explicitly marks partial carriage and names the omitted pilot/embedded stage.
+G:ai,figure | F-POLICY-EXCLUSION,partial,"[table or text] The old proposals-not-acts claim is withdrawn, but the narrower cut still conflicts with the published money-and-rules test; see F005."
+G:ai,figure | F-ACCORD-BOUND,yes,Historical negative is dated to that release; current text describes the reported accord.
+G:ai,counts | Status current open kind statement,partial,[table or text] Numeric statement count is fixed; the assertion that these three kinds sum to all open acts is false (803 versus 897); see F004.
+G:ai,counts | Status current open kind event,partial,[table or text] Numeric event count is fixed; same sum assertion as F004.
+G:ai,counts | Status current open kind decision,partial,[table or text] Numeric decision count is fixed; same sum assertion as F004.
+G:ai,counts | Status current open direction against Huang or Nvidia,yes,Correction matches the old point and current drawn wording.
+G:ai,counts | Status current open direction for Huang or Nvidia,yes,Correction matches the old point and current drawn wording.
+G:ai,counts | Status current open direction for the administration,yes,Correction matches the old point and current drawn wording.
+G:ai,counts | Status current open direction neither,yes,Correction matches the old point and current drawn wording.
+G:ai,counts | Sum of status direction cells,yes,Correction matches the old point and current drawn wording.
+G:ai,counts | Day-reader blanks: dated pages now located by this audit,yes,Correction matches the old point and current drawn wording.
+G:ai,counts | Day-reader blanks: pages still without an established day in this audit,yes,Correction matches the old point and current drawn wording.
+G:ai,B | ms-g17-w1-invedeck-3f859d,yes,Correction matches the old point and current drawn wording.
+G:ai,B | Ee.N005,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | B-UNDATED,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | Eg.N013,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | Ef.N024,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | Eg.N014,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | Eg.N015,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | Eg.N016,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | Eg.N017,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | MT57 / MT76 / MT79 / G:ag | ms-ag-amodei-adolescence,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | A:HTML-completeness | reference pages outside the new art-own set,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | B:undated pages | company undated pages,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | A.6 | man-nyt-1110-01; man-9e4f3db24cad,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | A.4:comparable dealings | financiers across the saved corpus,yes,Correction matches the old point and current drawn wording.
+G:ai,G:ah | line 6 | art-own-metr-1105-anthropic-rd-acceleration | Anthropic,partial,"[table or text] The safeguard is drawn, but the corrected earlier CSV cell splits into extra columns; F003."
+G:ai,G:ah | line 16 | art-own-openai-compute-campus-policy-blueprint | OpenAI,partial,[table or text] Correction is marked; narrower cut still conflicts with the published money-and-rules test; F005.
+G:ai,G:ah | line 17 | art-own-openai-compute-campus-policy-blueprint | OpenAI,partial,"[table or text] Hiring commitment is drawn, but the corrected earlier CSV cell splits into extra columns; F003."
+G:ai,left out | line 1 | art-own-cnbc-261116-openai-independent-evaluators | OpenAI,yes,Correction matches the old point and current drawn wording.
+G:ai,left out | line 2 | art-own-cnbc-261116-openai-independent-evaluators | OpenAI,yes,Correction matches the old point and current drawn wording.
+G:ai,left out | line 3 | art-own-cnbc-261116-openai-independent-evaluators | OpenAI,yes,Correction matches the old point and current drawn wording.
+G:ai,left out | line 4 | art-own-cnbc-261116-openai-independent-evaluators | Anthropic,yes,Correction matches the old point and current drawn wording.
+G:ai,left out | line 5 | art-own-openai-grid-protectors-program-wayback | OpenAI,yes,Correction matches the old point and current drawn wording.
+G:ai,findings | COVERAGE-MA428,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,findings | COVERAGE-MA433,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,findings | COVERAGE-MA439,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,findings | COVERAGE-MT57,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,findings | COVERAGE-MT64,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,findings | COVERAGE-MT67,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,findings | COVERAGE-MT70,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,findings | COVERAGE-MT74,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,B | ms-admin-tilt-lutnick-rationale-8d1f0c,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,B | ms-g17-w5-q4cdn-d95df4,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,B | ms-gap-partners-code-conduct-415e6c,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,B | ms-nova-cmp-megaspeed-virtual-servers,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,B | Ee.N006,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,B | Ee.N032,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,B | Eg.N013,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,B | Eg.N016,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,B | Eg.N003 / Ec.N013,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | F-STALE-INDEPENDENT,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | day:ms-gap-erc-bis-overview-9c2c63,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | art-own-cnbc-0913-china-dilemma-slowdown | Anthropic | watch-cnbcs-full-interview-with-anthropic-ceo-dario-amodei.html,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | art-own-cnbc-1102-anthropic-revised-s1 | Anthropic | anthropic-reports-17-billion-in-q3-revenue.html,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | art-own-cnbc-1109-fable-5-2-release | Anthropic | anthropic-openai-cheaper-ai-models.html,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | art-own-thezvi-1112-ai-194 | Anthropic | anthropic-residency,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | art-own-thezvi-1112-ai-194 | OpenAI | cot-monitorability-model-lifecycle,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | ms-ag-fortune-1026-s1-risks | Anthropic | anthropics-s-1,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | ms-ag-sfstandard-1026-s1-risks | Anthropic | exploring-model-welfare,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | ms-hl-substack-e0e0da | Anthropic | us,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,G:ah | ms-ag-register-0501-anthropic | Anthropic | securing-america-s-compute-advantage-anthropic-s-position-on-the-diffu,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MA427 | art-own-metr-1105-anthropic-rd-acceleration; art-own-x-21184,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MA431 | art-own-openai-control-room-wayback; art-own-thezvi-1112-ai-,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MA434 | art-own-openai-how-we-detect-frontier-model-misalignment-way,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MA439 | sw-chipbriefingsubstackco-01; sw-fortunecom-07,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MT57 | sw-techcrunchcom-04; man-nyt-1110-01; ms-ag-fortune-0611-hua,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MT64 | sw-techcrunchcom-baccdaa9; sw-decryptco-31a5e63b; art-own-re,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MT67 | sw-techcrunchcom-04; ms-ag-sfstandard-1026-s1-risks; art-own,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MT70 | ms-ag-fortune-0818-sacks-dmv; ms-ag-morningstar-s1-risks; ar,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MT74 | art-axios-1016-anthropic-sacks-wayback; ms-ag-amodei-stateme,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | MT79 | art-own-cnbc-0913-china-dilemma-slowdown; art-own-amodei-we-,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | A.2 | METR reports and September essay source union,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | A.5 | Fifth-reader 16 pages and twelve high-listed pages,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | B.2 | Fourteen removed groups and all in-window saved coverage,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | F:lead-ins | All older README/status lead-ins,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ai,gaps | Accord original | White House Accord on Super Intelligence,yes,Accurately preserves an unfinished check as a limit; does not turn it into a negative.
+G:ah,Eg.N013,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,Ef.N024,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,Eg.N014,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,Eg.N015,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,Eg.N016,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,Eg.N017,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,MT57 / MT76 / MT79 / G:ag | ms-ag-amodei-adolescence,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,MT57 / G:ag | ms-ag-amodei-loving-grace,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,MT78 | lda-gov-anthropic-2026-p2,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,A:HTML-completeness | reference pages outside the new art-own set,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,"B:source-identity | Eg groups other than Ef.N010, Ef.N025 and the three carried ",yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,"B:one-word-sample | f L018, f L091, g L020, g L021 source contexts",yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,B:undated pages | company undated pages,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,F:history | count claims,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,F:reading-process | README Pages item and fetched_since32.tsv,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,A.6 | man-nyt-1110-01; man-9e4f3db24cad,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,A.6:coverage | newsletter source union for delta and MT67–MT80,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,A.2:all-sentences | September essay and its reports,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,A.4:comparable dealings | financiers across the saved corpus,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,A:further-omissions |  register,yes,The marked correction identifies the prior assertion and supplies the supported replacement; original gap wording is retained where applicable.
+G:ah,line 6 | art-own-metr-1105-anthropic-rd-acceleration | Anthropic,partial,[table or text] F003: unescaped commas put the end of the correction in extra columns; the five-column cell is incomplete.
+G:ah,line 16 | art-own-openai-compute-campus-policy-blueprint | OpenAI,partial,"[table or text] The prior invalid proposals-not-acts reason is identified, but the substituted cut is narrower than the published two-company test; F005."
+G:ah,line 17 | art-own-openai-compute-campus-policy-blueprint | OpenAI,partial,[table or text] F003: unescaped commas put the end of the correction in extra columns; the five-column cell is incomplete.
+B,B.1 InveDeck,yes,Visible heading gives Nov 8 and saved text identifies Nov 17 revision 21. Both recall lines give Nov 8 and warn that passages may be newer.
+B,Ee.N003,yes,The December 23 website statement is still carried on MA157/MA06; removing this old grouping does not establish an omitted occasion.
+B,Ee.N004,partial,"Positive in-window recall: sw-tomshardwarecom-12, Nov 6, gives the 68.4 MW reallocation. Eb.N004 covers the related termination/dummy-server allegation, but identity of the original capacity acquisition with that group is not proved. Carry this candidate forward without merging."
+B,Ee.N005,yes,In-window land-purchase recall confirmed on cnbc-1112-megaspeed-asia and other reports; Eb.N025 and B.12 remain open carriers. No additional occasion inferred.
+B,Ee.N006,yes,"The original DCD description is an undated three-centre plan. The completed dated-corpus text/visible-HTML search did not establish an in-window recall of this plan; do not turn an unidentified occasion into an identified act. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Ee.N030,yes,"The original Senate passage is the June 11, 2025 no-quid-pro-quo answer. Search hits concern 2026 trade negotiations, commentary or unrelated sidebars, not that answer. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Ee.N031,yes,"The original Senate answer attributes extensive technology-transfer analysis to Treasury, Commerce and the White House science office. No in-window recall of that analysis was established by the completed search. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Ee.N032,yes,"The original Senate question recalls an unspecified rollback before the UAE trip. Search hits concern a 2026 photograph, resignation timing and unrelated environmental safeguards; no same occurrence established. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Ef.N024,yes,"The original parliamentary transcript explicitly identifies the third quarter of 2024. The in-window 22% passages concern July/summer 2025, or omit an identifiable quarter; a matching percentage does not prove the same filing. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Ef.N025,yes,"The original February 18 answer and supplement give less than 1% physical deliveries, with the supplement fixing Q3 2024. Search hits concern H200 shipments to China or a different fiscal-year Singapore figure; no same statement established. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Eg.N013,yes,"The original law-firm account identifies the 2023 addition of thirteen Chinese entities. Broad hits were dates, amounts or unrelated entities. Exact-term follow-through over every candidate page found no matching addition; the original is a positive control. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Eg.N014,yes,"The original March 3 transcript asks both the US and Malaysia for information. November 12 investigation updates concern later repeated requests to US agencies; the searched passages do not establish the same March request to both governments. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Eg.N015,yes,"The original March 3 conditional offer to support a US export-control investigation is distinct from search hits about support for the company board inquiry. No same offer established. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Eg.N016,yes,"The original March 3 transcript describes longstanding joint export-control outreach without an individual date. Hits concern other outreach, US intelligence and investigations, not that joint explanatory activity. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,Eg.N017,yes,"The original March 3 transcript attributes the two questions to the Journal. The sole broad search hit concerns a different minister and investigation; no in-window recall of those questions established. Bounded search: 1,403 established-day source paths plus 1,262 visible HTML forms, with known land-purchase and original-passage controls; this is not a claim about every undated saved page."
+B,B.3 ms-admin-tilt-lutnick-rationale-8d1f0c,no,"[table or text] F006: visible story metadata prints Nov 13 beside this record. The Monday Nov 16 masthead is the site clock. Record Nov 13, 2026 with its context; it is outside the fifteen days."
+B,B.3 ms-chk-fr-bis-rules-since-20251010,yes,"The API list dates its constituent rules (including Nov 9, 2026) and its query lower bound. These are not one publication day for the response; keep the distinction, and date individual records individually."
+B,B.3 ms-deals-megaspeed-company-a6b09e,yes,"No article day was established in the selected text, visible HTML or page address. The date search had positive controls on InveDeck and Tilt; this remains an undated-source limit, not a negative about acts."
+B,B.3 ms-g17-w5-q4cdn-d95df4,yes,The PDF has a 2023 copyright year; its address has /2023/06/. Neither supplies a day. This month/year evidence should be recorded without inventing a June day.
+B,B.3 ms-gap-erc-bis-overview-9c2c63,yes,"No article day was established in the selected text, visible HTML or page address. The date search had positive controls on InveDeck and Tilt; this remains an undated-source limit, not a negative about acts."
+B,B.3 ms-gap-nova-trade-bitpush-3ce576,yes,The article recounts many dated events and links a source report with 5-13-2026 in its address. Those do not establish this commentary’s publication day; no day is assigned from the linked report.
+B,B.3 ms-gap-partners-code-conduct-415e6c,yes,"The PDF prints a 2023 copyright year, with no calendar day established. The separately saved PDF differs from the other code copy; neither was discarded or conflated."
+B,B.3 ms-nova-cmp-megaspeed-hgx-h100,yes,"No article day was established in the selected text, visible HTML or page address. The date search had positive controls on InveDeck and Tilt; this remains an undated-source limit, not a negative about acts."
+B,B.3 ms-nova-cmp-megaspeed-networking,yes,"No article day was established in the selected text, visible HTML or page address. The date search had positive controls on InveDeck and Tilt; this remains an undated-source limit, not a negative about acts."
+B,B.3 ms-nova-cmp-megaspeed-virtual-servers,yes,"No article day was established in the selected text, visible HTML or page address. The date search had positive controls on InveDeck and Tilt; this remains an undated-source limit, not a negative about acts."

@@ -135,7 +135,7 @@ L00309	huang	cnbc-1110-selloff	A0019	yes	yes	yes	para_nv8_c
 L00310	suit	cnbc-1110-selloff	A0019	yes	yes	yes	para_nv8_h	
 L00313	huang	cnbc-1110-selloff	A0019	yes	yes	yes	para_nv8_c	
 L00314	suit	cnbc-1110-selloff	A0019	yes	yes		para_nv8_h	
-L00321	mast	cnbc-1111-congress-resign	A0020	yes	yes	yes	para_nv8_f	
+L00321	mast	cnbc-1111-congress-resign	A0020	yes	yes		para_nv8_f	
 L00322	mast	cnbc-1111-congress-resign	A0020	yes	yes	yes	para_nv8_f	
 L00339	huang	cnbc-1111-congress-resign	A0020	yes	yes	yes	para_nv8_c	
 L00340	huang	cnbc-1111-congress-resign	A0020	yes	yes		para_nv8_c	
@@ -1222,7 +1222,7 @@ L02877	jones	sw-cnbccom-ca82d66d	A0234	yes	yes	yes	para_nv8_b
 L02891	nvidia	sw-cnncom-01	A0235	yes			para_nv8_a	
 L02903	nvidia	sw-cnncom-01	A0235	yes	yes	yes	para_nv8_a	
 L02906	trump	sw-cnncom-01	A0235	yes	yes	yes	para_nv8_d	
-L02908	mast	sw-cnncom-01	A0235	yes	yes	yes	para_nv8_f	
+L02908	mast	sw-cnncom-01	A0235	yes	yes		para_nv8_f	
 L02912	nvidia	sw-cnncom-01	A0235	yes	yes	yes	para_nv8_a	
 L02913	huang	sw-cnncom-01	A0235	yes	yes	yes	para_nv8_c	
 L02915	trump	sw-cnncom-01	A0235	yes	yes	yes	para_nv8_d	
@@ -2334,7 +2334,7 @@ L05320	trump	sw-inquirercom-53b966e2	A0534	yes	yes	yes	para_nv8_d
 L05321	huang	sw-inquirercom-53b966e2	A0534	yes	yes	yes	para_nv8_c	
 L05322	huang	sw-inquirercom-53b966e2	A0534	yes	yes	yes	para_nv8_c	
 L05323	trump	sw-inquirercom-53b966e2	A0534	yes	yes	yes	para_nv8_d	
-L05324	anthropic	sw-inquirercom-53b966e2	A0534	yes	yes	yes	para_nv8_h	
+L05324	anthropic	sw-inquirercom-53b966e2	A0534	yes	yes		para_nv8_h	
 L05328	rubio	sw-instapunditcom-01	A0535	yes	yes	yes	para_nv8_g	
 L05342	trump	sw-insurancejournalcom-01	A0536	yes	yes	yes	para_nv8_d	
 L05345	board	sw-insurancejournalcom-01	A0536				para_nv8_b	yes
@@ -2524,7 +2524,7 @@ L05728	nvidia	sw-localnews8com-01	A0235	yes	yes	yes	para_nv8_a
 L05729	trump	sw-localnews8com-01	A0235	yes	yes	yes	para_nv8_d	
 L05730	huang	sw-localnews8com-01	A0235	yes	yes	yes	para_nv8_c	
 L05735	globaltimes	sw-localnews8com-01	A0235	yes	yes	yes	para_nv8_e	
-L05738	mast	sw-localnews8com-01	A0235	yes	yes	yes	para_nv8_f	
+L05738	mast	sw-localnews8com-01	A0235	yes	yes		para_nv8_f	
 L05752	nvidia	sw-localnews8com-02	A0586	yes	yes	yes	para_nv8_a	
 L05753	board	sw-localnews8com-02	A0586	yes	yes	yes	para_nv8_b	
 L05755	nvidia	sw-localnews8com-02	A0586	yes	yes	yes	para_nv8_a	

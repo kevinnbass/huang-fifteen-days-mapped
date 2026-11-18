@@ -78,8 +78,11 @@ _norm = lambda t: ' '.join(re.findall(r'[a-z0-9]+', t.lower().replace('\u2019', 
 # Batch s10t (the thirty-fourth reading, finding F-DATE-INVEDECK): one more of those pages prints a day beside its heading (2026-11-08, which its address also carries), and its only saved version is a later
 # revision ('Verified as of 2026-11-17 · Revision 21') that recounts later events. Its lines carry the printed day and say that they may be newer: the figure's rule for a changed page of which one version is saved.
 PAGE_DAY_BUILDER.update({'ms-g17-w1-invedeck-3f859d': '2026-11-08'})
+# Batch s10w (the thirty-fifth reading, finding F006 and its check B.3): one more of those pages prints a day, in its saved HTML and not in its text file: 'Nov 13' beside the story, under a banner that gives the site's
+# clock (Monday, November 16, 2026). Nov 13 is after the fifteen days: its one line is listed and not registered, like those of every page dated outside the days.
+PAGE_DAY_BUILDER.update({'ms-admin-tilt-lutnick-rationale-8d1f0c': '2026-11-13'})
 PAGE_NOTE_BUILDER = {'ms-g17-w1-invedeck-3f859d': '; the page prints Nov 8, 2026 beside its heading, and its only saved version is a revision of Nov 17 that recounts later events: its passages may be newer than that day'}
-UNDATED = '; no day was found on the page (by the day reader, the thirty-third and thirty-fourth readings or the builder)'
+UNDATED = '; no day was found on the page (by the day reader, the thirty-third, thirty-fourth and thirty-fifth readings or the builder)'
 
 
 def load(reg_ids, all_ids):

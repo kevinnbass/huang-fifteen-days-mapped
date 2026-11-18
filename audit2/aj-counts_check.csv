@@ -1,0 +1,98 @@
+what,stated,recounted,agree
+Previous findings lines,38,38,yes
+Previous findings ok,2,2,yes
+Previous findings error,2,2,yes
+Previous findings qualification,34,34,yes
+Previous changed rows,34,34,yes
+Previous coverage-only rows,26,26,yes
+Previous text/table points,8,8,yes
+Previous text/table errors,2,2,yes
+Previous interactive checks,3,3,yes
+Previous interactive ok,3,3,yes
+Previous recount lines,120,120,yes
+Previous recount yes,89,89,yes
+Previous recount no,10,10,yes
+Previous recount not checked,21,21,yes
+Previous disposition/register checks,176,176,yes
+Previous disposition/register yes,101,101,yes
+Previous disposition/register partial,68,68,yes
+Previous disposition/register no,7,7,yes
+Previous left-out lines,5,5,yes
+Previous gap lines,46,46,yes
+Current ai dispositions,180,180,yes
+Applied ai dispositions,50,50,yes
+Limit ai dispositions,130,130,yes
+Unique ai disposition keys,180,180,yes
+Corrected ah cells,23,23,yes
+Corrected removed-group cells,6,6,yes
+Corrected gap-location cells,14,14,yes
+Current act rows,441,441,yes
+Current drawn dated acts,438,438,yes
+Current report-day act rows,177,177,yes
+Current nonmember ties,80,80,yes
+Drawn acts without day,0,0,yes
+anthropic act rows,12,12,yes
+anthropic calendar chips,10,10,yes
+openai act rows,12,12,yes
+openai calendar chips,7,7,yes
+Register acts,1016,1016,yes
+Open register acts,897,897,yes
+Carried register acts,119,119,yes
+Open carried in part,31,31,yes
+Open kind statement,395,395,yes
+Open kind event,250,250,yes
+Open kind decision,158,158,yes
+Open kind money,26,26,yes
+Open kind other,68,68,yes
+Sum of all open kinds,897,897,yes
+Disposition claim: sum of three named kinds is total,897,803,no
+Open direction against Huang or Nvidia,339,339,yes
+Open direction for Huang or Nvidia,222,222,yes
+Open direction against the administration,48,48,yes
+Open direction for the administration,47,47,yes
+Open direction neither,241,241,yes
+Sum of open directions,897,897,yes
+Open first-reported before,268,268,yes
+Open first-reported unclear,564,564,yes
+Company records,1138,1138,yes
+Company source pages,98,98,yes
+Company record labels worded,133,133,yes
+Company record labels found,349,349,yes
+Company record labels listed,656,656,yes
+Listed company records anthropic,414,414,yes
+Listed company records openai,242,242,yes
+First four company readers records,964,964,yes
+Fifth company reader records,174,174,yes
+Day-reader blank pages supplied,36,36,yes
+Table: pages with recorded day,26,26,yes
+Table: undated pages,10,10,yes
+Table: lines on undated pages,68,68,yes
+After this reading: still undated pages,10,9,no
+After this reading: dated pages,26,27,no
+After this reading: lines on undated pages,68,67,no
+Removed groups,14,14,yes
+Removed group direction neither,9,9,yes
+Removed group direction for the administration,2,2,yes
+Removed group direction against the administration,1,1,yes
+Removed group direction for Huang or Nvidia,2,2,yes
+Removed group direction against Huang or Nvidia,0,0,yes
+Accord delta rows,2,2,yes
+Answer delta rows,7,7,yes
+Total changed rows,9,9,yes
+Accord saved folders,12,12,yes
+Accord fetched addresses excluding capture folders,10,10,yes
+Accord cited pages,6,6,yes
+Accord complete uncited editorial pages,2,2,yes
+Historical refusal search sentences,53,not independently reconstructed: the supplied outputs are not an independent all-pages census,not checked
+Historical refusal counted/noncounted split,22 / 31,not independently reconstructed: same process limit,not checked
+Historical fetched linked pages,102,not independently reconstructed: a frozen fetch-run manifest for that earlier process is not among this brief’s named inputs,not checked
+Historical whole-reading conduct,6 at once / 2 captures / one whole / one not read,"not independently reconstructed: files prove availability, not what the builder read",not checked
+Open first-reported in these days,65,65,yes
+Previous refusal classification table lines,31,31,yes
+Previous refusal relay classifications,12,12,yes
+Previous refusal open-register classifications,7,7,yes
+Previous not-Nvidia-refusal classifications,3,3,yes
+Previous unrepresented classifications,9,9,yes
+Previous unrepresented after-period cases,7,7,yes
+Previous unrepresented undated cases,1,1,yes
+Previous unrepresented eligible cases,1,1,yes

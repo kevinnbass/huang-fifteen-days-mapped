@@ -1,0 +1,6 @@
+row_id_or_key,source,what_failed
+A.1,art-own-akingump-white-house-accord-super-intelligence,Only a saved refusal/stub is available; no article to read. No web fetch attempted.
+MT66,art-own-anthropic-threat-intelligence-report-0926,Chapter Detecting and countering biological misuse of AI was not read: the reader provider stopped the first session on this chapter. Excluded in session 2; not a finding against the row.
+B.2 Ee.N004,Saved coverage and recall register,"The completed text/visible-HTML search found the Nov 6 recall of the 68.4 MW reassignment. Its identity with the original acquisition, and with registered dummy-server/termination group Eb.N004, is unresolved. Do not merge or count it as a new occasion without proof."
+Conformance measurement,verification_conformance.py on public/,Command exited 1 before gate lines: public/casework.json is absent. The standard’s casework gate cannot measure this frozen repository layout; no pack-wide verification is claimed.
+F historical process,README/status historical process assertions,"Four recount lines remain not checked: the 53-refusal semantic census, its 22/31 split, the historical 102-link fetch total, and builder reading conduct. The supplied current files do not independently reconstruct those processes; no exhaustive refusal, link or first-occasion clearance is claimed."
