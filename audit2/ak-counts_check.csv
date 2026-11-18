@@ -1,0 +1,61 @@
+what,stated,recounted,agree
+Prior findings rows,43,43,yes
+Prior figure_findings rows,6,6,yes
+Prior site_findings rows,10,10,yes
+Prior counts_check rows,97,97,yes
+Prior dispositions_check rows,141,141,yes
+Prior left_out rows,16,16,yes
+Prior gaps rows,5,5,yes
+Prior findings ok,13,13,yes
+Prior findings error,1,1,yes
+Prior findings qualification,29,29,yes
+Prior figure_findings error,3,3,yes
+Prior site_findings ok,9,9,yes
+Prior site_findings error,1,1,yes
+Prior counts_check yes,89,89,yes
+Prior counts_check no,4,4,yes
+Prior counts_check not checked,4,4,yes
+Prior dispositions_check yes,129,129,yes
+Prior dispositions_check partial,11,11,yes
+Prior dispositions_check no,1,1,yes
+Prior missing parts,17,17,yes
+Prior rows with missing parts,14,14,yes
+Prior assigned rows,33,33,yes
+Prior distinct row grade ok,13,13,yes
+Prior distinct row grade qualification,19,19,yes
+Prior distinct row grade error,1,1,yes
+Prior rows without stated source gap,32,32,yes
+Prior fully read company-row baseline,31,31,yes
+aj disposition rows,74,74,yes
+aj applied,64,64,yes
+aj stated as a limit,10,10,yes
+Act rows,441,441,yes
+Drawn dated acts,438,438,yes
+Report-day drawn acts,177,177,yes
+Drawn acts lacking day,0,0,yes
+Nonmember tie lines,80,80,yes
+Register groups,1017,1017,yes
+Register carried,121,121,yes
+Register open,896,896,yes
+Partly carried open,31,31,yes
+Lines with no established page day,67,67,yes
+Pages with no established day,9,9,yes
+Original blank-page set (credited prior checked baseline),36,36,yes
+Dated pages of original blank set (36 minus current nine),27,27,yes
+Company records,1138,1138,yes
+Company pages,98,98,yes
+Company disposition labels worded on,163,163,yes
+Company disposition labels its reader found it on,340,340,yes
+"Company disposition labels listed, not drawn",635,635,yes
+Listed records anthropic,403,403,yes
+Listed records openai,232,232,yes
+Earlier reader records on excluded report (metadata only),7,Chapter-specific count not recounted under the exclusion; table has no chapter field,not checked
+Corrected historical kind subtotal,803,803,yes
+Historical remaining kinds,94,94,yes
+Historical open acts,897,897,yes
+Two accord groups source lines,11,11,yes
+New capacity group lines,1,1,yes
+Changed rows,22,22,yes
+Unique newly cited pages,10,10,yes
+Changed panels matching one data record,22,22,yes
+Added/replaced passages present,130,130,yes

@@ -1,0 +1,91 @@
+part,finding_id,holds,note
+R,R1a,yes,"All four passages read on sw-humaneventscom-01, man-nyt-1106-01, man-wsj-1109-08 and sw-cnncom-02. Sept 29 luncheon/summit and CNN accord description identify the meeting carried by MT74."
+R,R1b,yes,"All seven passages read on man-nyt-1029-01 (including its added text), man-nyt-1106-01, man-wsj-1109-08, sw-cnncom-02, man-399ee485265a and the two additional CNN pages. MT74 explicitly carries Huang signing, his seat and words; the line endpoint does not erase that occurrence."
+R,R2-accord,yes,"Semantic searches of open groups by Sept 29, White House, luncheon and self-policing return 5.NV5-026 at the same summit. Its specific China-behind remark is not worded on MT74, so its open status remains defensible. The search also retrieves the two now-carried groups as controls."
+R,R2-order,yes,"Open-group searches for June 12/26/30, models, relevant company/model names and officials return no matching Commerce-model order; broader model matches concern chip sales, not this directive. Positive control retrieves the accord groups."
+R,R2-Anthropic-incidents,yes,"Open-group searches by company/models, cyber incidents, evaluation/transcripts and periods produce no matching open group; unrelated model/chip and prosecution groups read as exclusions."
+R,R2-OpenAI-incidents,yes,"Open-group searches by company, Hugging Face, hacks/breaches and evaluation contexts produce no matching open group; known carried White House controls are recovered."
+R,R2-arrest,yes,"Company, recording device, conference room and San Francisco searches produce no matching open group. Broad search finds unrelated photos/prosecution records and is demonstrably live on controls."
+R,R2-rounds,yes,"Open-group searches for both companies, May 28, March, funding/rounds and sums produce no matching group; stock issuance of another company is distinguishable."
+R,R2-banks,yes,"Searches by April, bank executives, Treasury, former Federal Reserve chair and model name produce no matching bank-warning occasion; other bank/official references are unrelated."
+R,R3,yes,Nov 6 Tom’s Hardware passage and publication stamp support B.28. The other saved page alleges dummy servers at a named operator in April 2026; the overlap is plausible but identity is not proven. Keep both and retain the suspicion.
+R,R4,yes,Tilt saved visible HTML prints Story / US Politics / Nov 13 beside this story; its Nov 16 site header is separate. The post-period exclusion is supported.
+G:aj,findings | A002,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A003,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A004,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A007,yes,The requested alternative of an explicit common exception is stated. This is an owner policy decision; the three examples retain attribution.
+G:aj,findings | A008,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A009,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A010,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A011,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A012,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A013,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A014,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A015,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A016,partial,"[row error] The requested Nov 10 remark is added with the uncertainty retained, but the additional Nov 13 coverage citation breaches the chip cutoff; see A022."
+G:aj,findings | A018,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A019,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A020,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A026,yes,Same common exception as A007; removal is left to the owner.
+G:aj,findings | A027,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A028,yes,Coverage limit only; the excluded chapter remains unopened and no row clearance is inferred.
+G:aj,findings | A029,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A031,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A032,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A033,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A034,yes,Same common exception as A007; applied to favorable supplier praise as well as criticism.
+G:aj,findings | A037,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A038,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A039,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A040,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A042,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,findings | A043,yes,Compared with the prior finding and current row; the requested correction is present. The delta source reading is recorded in Part A.
+G:aj,figure | F001,yes,Saved news-agency HTML contains the full article; its meetings sentence concerns participating companies. The corrected explanation is supported; historical builder reading is not independently proven.
+G:aj,figure | F002,yes,MT71 now carries the refusal; the matching company-record cell accurately names it.
+G:aj,figure | F003,yes,"Every ah record now parses as five fields, and joining the old overflow fields reproduces both repaired cells exactly."
+G:aj,figure | F004,yes,"The three cells visibly withdraw the erroneous sum; 395+250+158=803, with 26+68=94 remaining of 897."
+G:aj,figure | F005,yes,Who made this now distinguishes listing test from drawing cut for both companies; requested records are drawn. Separate table-label issues remain in this delta audit.
+G:aj,figure | F006,yes,Tilt story Nov 13 is after the window; its line is removed from the register. Current day-table labels are checked in Part F.
+G:aj,site | H010,yes,The refusal passage is cut before the undrawn person’s surname. Panel correspondence and the changed passages are checked in Part H.
+G:aj,counts | Disposition claim: sum of three named kinds is total,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,counts | After this reading: still undated pages,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,counts | After this reading: dated pages,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,counts | After this reading: lines on undated pages,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ai | figure | F-POLICY-EXCLUSION,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ai | counts | Status current open kind statement,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ai | counts | Status current open kind event,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ai | counts | Status current open kind decision,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ai | G:ah | line 6 | art-own-metr-1105-anthropic-rd-acceleration | Anthropic,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ai | G:ah | line 16 | art-own-openai-compute-campus-policy-blueprint | OpenAI,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ai | G:ah | line 17 | art-own-openai-compute-campus-policy-blueprint | OpenAI,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ah | line 6 | art-own-metr-1105-anthropic-rd-acceleration | Anthropic,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ah | line 16 | art-own-openai-compute-campus-policy-blueprint | OpenAI,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,G:ah | line 17 | art-own-openai-compute-campus-policy-blueprint | OpenAI,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,B | Ee.N004,yes,B.28 registers the Nov 6 recall and preserves the unproven overlap; Part R source checks support it.
+G:aj,B | B.3 ms-admin-tilt-lutnick-rationale-8d1f0c,yes,"Compared with the prior answered point and current target; the correction is present. See the related source, CSV or count check in Parts A, R and F."
+G:aj,gaps | A.1 | art-own-akingump-white-house-accord-super-intelligence,yes,"The prior gap and stated limit agree. No historical process, unavailable article, excluded chapter, capacity identity or conformance clearance is inferred."
+G:aj,gaps | MT66 | art-own-anthropic-threat-intelligence-report-0926,yes,"The prior gap and stated limit agree. No historical process, unavailable article, excluded chapter, capacity identity or conformance clearance is inferred."
+G:aj,gaps | B.2 Ee.N004 | Saved coverage and recall register,yes,"The prior gap and stated limit agree. No historical process, unavailable article, excluded chapter, capacity identity or conformance clearance is inferred."
+G:aj,gaps | Conformance measurement | verification_conformance.py on public/,yes,"The prior gap and stated limit agree. No historical process, unavailable article, excluded chapter, capacity identity or conformance clearance is inferred."
+G:aj,gaps | F historical process | README/status historical process assertions,yes,"The prior gap and stated limit agree. No historical process, unavailable article, excluded chapter, capacity identity or conformance clearance is inferred."
+G:aj,left out | L001 | art-own-axios-260930-ai-constitution-trump-wayback | OpenAI,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L002 | art-own-axios-260930-ai-constitution-trump-wayback | Anthropic,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L003 | art-own-axios-260930-ai-constitution-trump-wayback | Anthropic,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L004 | art-own-axios-260930-ai-constitution-trump-wayback | OpenAI,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L005 | art-own-forbesau-white-house-accord-what-it-says | Anthropic; OpenAI,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L006 | art-own-cato-261013-joint-commitment-frontier-ai-wayback | Anthropic; OpenAI,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L007 | art-own-cato-261013-joint-commitment-frontier-ai-wayback | Anthropic; OpenAI,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L008 | art-own-techstrong-voluntary-super-intelligence-accord | Anthropic; OpenAI,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L009 | art-own-pymnts-ai-giants-white-house-safety-pact | OpenAI,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L010 | art-own-pymnts-ai-giants-white-house-safety-pact | OpenAI,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L011 | art-own-pymnts-ai-giants-white-house-safety-pact | Anthropic,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L012 | art-own-axios-260930-ai-constitution-trump-wayback | Nvidia,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L013 | art-own-techstrong-voluntary-super-intelligence-accord | President Trump; Speaker Johnson,yes,"The source is a Sept 30 relay about an earlier state dinner, outside the coverage window; the broader scope choice is an explicit limit."
+G:aj,left out | L014 | art-own-siliconangle-260930-voluntary-white-house-accord | President Trump,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L015 | art-own-forbesau-white-house-accord-what-it-says | President Trump,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:aj,left out | L016 | art-own-aa-trump-tech-leaders-accord-super-intelligence | Anthropic; OpenAI,yes,Compared with the prior inventory entry and current row; the described addition and attribution are present. Source reading is recorded in Part A.
+G:ah,line 6 | art-own-metr-1105-anthropic-rd-acceleration | Anthropic,yes,Five-field CSV. Earlier wording is recoverable from visible correction history; the corrected safeguard/hiring qualification or historical 803-of-897 explanation is supported.
+G:ah,line 17 | art-own-openai-compute-campus-policy-blueprint | OpenAI,yes,Five-field CSV. Earlier wording is recoverable from visible correction history; the corrected safeguard/hiring qualification or historical 803-of-897 explanation is supported.
+G:ai,Status current open kind statement,yes,Five-field CSV. Earlier wording is recoverable from visible correction history; the corrected safeguard/hiring qualification or historical 803-of-897 explanation is supported.
+G:ai,Status current open kind event,yes,Five-field CSV. Earlier wording is recoverable from visible correction history; the corrected safeguard/hiring qualification or historical 803-of-897 explanation is supported.
+G:ai,Status current open kind decision,yes,Five-field CSV. Earlier wording is recoverable from visible correction history; the corrected safeguard/hiring qualification or historical 803-of-897 explanation is supported.

@@ -1,0 +1,2 @@
+row_id_or_key,source,what_failed
+F-chapter-count,Company-records table / excluded report metadata,The seven-record chapter-specific count is not independently recounted: the table has no chapter field and the excluded chapter is not opened. No negative finding follows.
