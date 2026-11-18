@@ -1,0 +1,50 @@
+what,stated,recounted,agree
+Prior findings lines,23,23,yes
+Prior distinct rows,22,22,yes
+Prior findings ok lines,17,17,yes
+Prior findings error lines,2,2,yes
+Prior findings qualification lines,4,4,yes
+Prior text/table points,2,2,yes
+Prior text/table errors,1,1,yes
+Prior site checks,23,23,yes
+Prior site checks ok,23,23,yes
+Prior recount lines,60,60,yes
+Prior recount yes,59,59,yes
+Prior recount not checked,1,1,yes
+Prior disposition/register checks,90,90,yes
+Prior disposition/register yes,89,89,yes
+Prior disposition/register partial,1,1,yes
+Prior unfinished lines,1,1,yes
+Current ak dispositions,10,10,yes
+Current ak applied,9,9,yes
+Current ak stated as a limit,1,1,yes
+Prior distinct row grade ok,17,17,yes
+Prior distinct row grade qualification,3,3,yes
+Prior distinct row grade error,2,2,yes
+Prior unique newly cited pages,10,10,yes
+Prior G dispositions,79,79,yes
+Prior G yes,78,78,yes
+Prior G partial,1,1,yes
+Prior missing-part findings,3,3,yes
+Current act rows,441,441,yes
+Current drawn dated acts,438,438,yes
+Current report-day drawn acts,177,177,yes
+Current drawn acts without day,0,0,yes
+Current nonmember tie lines,80,80,yes
+Current register groups,1017,1017,yes
+Current register carried,121,121,yes
+Current register open,896,896,yes
+Company records,1138,1138,yes
+Company records worded,173,173,yes
+Company reader-found,340,340,yes
+Company listed not drawn,625,625,yes
+Company listed Anthropic,396,396,yes
+Company listed OpenAI,229,229,yes
+Records reconsidered on amended pages,117,117,yes
+Hand marks,8,8,yes
+Attributed-characterization examples named,4,4,yes
+Present delta rows,6,6,yes
+Present new cited pages,0,0,yes
+Builder seven-record keyword proxy (not chapter attribution),7,7,yes
+Independent attribution of seven records to closed chapter,7,Not independently recounted; source chapter remains closed,not checked
+Reading ordinal in current status closing sentence,32,36,no

@@ -1,0 +1,2 @@
+finding_id,grade,element_text,problem
+F-status-reading-count,qualification,"README current status and nv8_status.py: Several of the thirty-two readings, the last six among them","[table or text] The same status has just described the thirty-sixth reading, but its closing sentence still presents thirty-two readings. Update the ordinal/count reference; the assertion about the latest six was not independently re-audited here."
