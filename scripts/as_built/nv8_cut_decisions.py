@@ -11,7 +11,9 @@ Keys: reader, page, company, the first 90 characters of the reader's sentence. W
 Batch s11i (Nov 19, 2026; the answer to the forty-fifth reading, which found four records whose reasons failed and one rule applied unevenly): thirteen records left this module because a line now words them
 (two deliveries to OpenAI and Nvidia's sentence on its contribution to OpenAI's models; Anthropic's expansions of April 2026 and a supplier without a sum; two critics' readings of the call to slow down, recorded
 for each company, and the investment a third critic's charge rests on; four sentences of one report on gifts by Anthropic's staff to possible reviewers). The two kinds added in batch s11h had not been applied to
-the records listed before it; the builder read every reason again under the cut as written here (make_cut_decisions_s11i.py). Three reason kinds had one record each and have none now; they are gone from WHY."""
+the records listed before it; the builder read every reason again under the cut as written here (make_cut_decisions_s11i.py). Three reason kinds had one record each and have none now; they are gone from WHY.
+Batch s11j (Nov 19, 2026; the answer to the forty-sixth reading, which found the report's most prominent election case drawn for one company only): both lines now give that case whole and the report's sentence
+on the three races that drew the most money; the two records of that sentence (one for each company) left this module."""
 WHY = {
     'EST': 'an outside estimate, forecast, calculation or scenario of computing power, spending or value; not a record of an act (an exclusion stated with the batch of Nov 18)',
     'CALL': "a mention of the company as a customer or user on one of Nvidia's earnings calls, or a relay of one, with no delivery, agreement, sum or decision in it (an exclusion stated with the batch of Nov 18); the company's line with Nvidia gives their dealings from releases and filings",
@@ -205,11 +207,9 @@ DEC = {
     ('k', 'ms-sgp-20250201-malaymail-mti', 'openai', 'Malay Mail says OpenAI launched an investigation into whether DeepSeek improperly used its'): 'HELD64',
     ('k', 'ms-sgp-roic-call-q4fy25', 'openai', 'Jensen Huang says OpenAI has publicly reported bringing Grace Blackwell systems online.'): 'CALL',
     ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'anthropic', 'Justice Democrats’ communications director warns that the AI lobby is becoming difficult t'): 'OPIN',
-    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'anthropic', 'The Times identifies the Foushee, Bores and Florida district primaries as the races attrac'): 'POLX',
     ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'anthropic', 'The Times says Defending Our Values supported a Texas House candidate who is Rep. Monica D'): 'POLX',
     ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'anthropic', 'The Times says the big AI players spent more heavily for Democrats than Republicans.'): 'POLX',
     ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'Justice Democrats’ communications director warns that the AI lobby is becoming difficult t'): 'OPIN',
-    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times identifies the Foushee, Bores and Florida district primaries as the races attrac'): 'POLX',
     ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times says American Mission backed a county commissioner whose campaign opposes heavy-'): 'POLX',
     ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times says American Mission spent roughly $500,000 each for three Senate candidates in'): 'POLX',
     ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times says OpenAI-aligned Think Big paid for an ad supporting a former representative’'): 'POLX',

@@ -1,0 +1,140 @@
+what,stated,recounted,agree
+act rows,442,442,yes
+dated drawn acts,439,439,yes
+report-day acts,178,178,yes
+drawn acts without day,0,0,yes
+nonmember tie lines,88,88,yes
+delta rows,11,11,yes
+new rows,2,2,yes
+amended rows,9,9,yes
+company records,1659,1659,yes
+readers,12,12,yes
+records labelled worded,335,335,yes
+records labelled reader-found,508,508,yes
+records listed,816,816,yes
+listed Anthropic,483,483,yes
+listed OpenAI,333,333,yes
+first-five listed without reasons,615,615,yes
+later reasons,201,201,yes
+written reasons nonempty,201,201,yes
+taken-away reasons,13,13,yes
+reasons before this answer,214,214,yes
+hand marks,31,31,yes
+new hand marks,1,1,yes
+later listed anthropic for the company,35,35,yes
+later listed anthropic against the company,19,19,yes
+later listed anthropic neither,40,40,yes
+later listed openai for the company,14,14,yes
+later listed openai against the company,34,34,yes
+later listed openai neither,59,59,yes
+later-version citations,70,70,yes
+tie lines with later versions,35,35,yes
+warnings on line,58,58,yes
+standing facts,12,12,yes
+new citation pairs,13,13,yes
+distinct newly cited pages,8,8,yes
+register groups,1017,1017,yes
+register open,896,896,yes
+register carried,121,121,yes
+forty-fifth findings.csv total,21,21,yes
+forty-fifth findings.csv ok,15,15,yes
+forty-fifth findings.csv error,1,1,yes
+forty-fifth findings.csv qualification,5,5,yes
+forty-fifth figure_findings.csv total,2,2,yes
+forty-fifth dispositions_check.csv total,32,32,yes
+forty-fifth dispositions_check.csv yes,23,23,yes
+forty-fifth dispositions_check.csv partial,6,6,yes
+forty-fifth dispositions_check.csv no,3,3,yes
+forty-fifth versions_check.csv total,27,27,yes
+forty-fifth counts_check.csv yes,111,111,yes
+forty-fifth counts_check.csv no,2,2,yes
+forty-fifth counts_check.csv n/a,26,26,yes
+forty-fifth site_findings.csv total,1,1,yes
+forty-fifth site_findings.csv ok,1,1,yes
+forty-fifth gaps.csv total,1,1,yes
+forty-fifth wrong later-version classification,1,1,yes
+written dispositions,20,20,yes
+applied dispositions,19,19,yes
+stated limits,1,1,yes
+twelfth raw records,72,72,yes
+twelfth retained,63,63,yes
+twelfth omitted controls,9,9,yes
+twelfth pages read,10,10,yes
+twelfth new pages,8,8,yes
+twelfth controls,2,2,yes
+new folder census,20,20,yes
+folders naming neither company,12,12,yes
+twelfth page 1 record count (pages_read.csv order),0,0,yes
+twelfth page 2 record count (pages_read.csv order),10,10,yes
+twelfth page 3 record count (pages_read.csv order),5,5,yes
+twelfth page 4 record count (pages_read.csv order),1,1,yes
+twelfth page 5 record count (pages_read.csv order),4,4,yes
+twelfth page 6 record count (pages_read.csv order),0,0,yes
+twelfth page 7 record count (pages_read.csv order),14,14,yes
+twelfth page 8 record count (pages_read.csv order),0,0,yes
+twelfth page 9 record count (pages_read.csv order),36,36,yes
+twelfth page 10 record count (pages_read.csv order),2,2,yes
+adverse Anthropic records in both spending reports,9,9,yes
+adverse Anthropic records strictly about aligned election spending,measured,5,n/a
+adverse Anthropic records about prospective staff gifts/reviewer conflicts,measured,4,n/a
+"first-five LISTED NIST agreement occasions now added, as limits paragraph says",2,0,no
+NIST planned-feedback records still listed,measured,2,n/a
+published last report identical to original,True,True,yes
+Yardeni cited passages old,41,41,yes
+Yardeni cited passages current,55,55,yes
+status missing marks ab,positive,positive,yes
+status missing marks ac,positive,positive,yes
+status missing marks ad,positive,positive,yes
+status missing marks ae,positive,positive,yes
+status missing marks af,positive,positive,yes
+status missing marks ag,positive,positive,yes
+status missing marks ah,positive,positive,yes
+status missing marks ai,positive,positive,yes
+status missing marks aj,positive,positive,yes
+status missing marks ak,positive,positive,yes
+status missing marks al,positive,positive,yes
+status missing marks am,positive,positive,yes
+status missing marks an,positive,positive,yes
+status missing marks ao,zero,zero,yes
+status missing marks ap,zero,zero,yes
+status missing marks aq,zero,zero,yes
+status missing marks ar,zero,zero,yes
+status missing marks as,positive,positive,yes
+status missing marks at,positive,positive,yes
+PNG previous-byte comparison,fewer bytes,not measured by the routine against the preceding encoder,n/a
+historical host-limit margin,within one percent,no baseline or host-limit measurement in the named code,n/a
+historical release start time,01:08 UTC,stated by the builder; no independent publication log among assigned inputs,n/a
+H exact row panels,measured,11,n/a
+H displayed passage placements,measured,535,n/a
+H exact evidence matches,measured,535,n/a
+H distinct passages read,measured,513,n/a
+H title headings including publisher pseudonym,measured,11,n/a
+H title placements including publisher pseudonym,measured,16,n/a
+H title people including publisher pseudonym,measured,4,n/a
+H title headings excluding publisher pseudonym,measured,10,n/a
+H title placements excluding publisher pseudonym,measured,15,n/a
+H title people excluding publisher pseudonym,measured,3,n/a
+twelfth reader newly labelled worded anthropic against the company,measured,5,n/a
+twelfth reader newly labelled worded anthropic for the company,measured,4,n/a
+twelfth reader newly labelled worded anthropic neither,measured,6,n/a
+twelfth reader newly labelled worded openai against the company,measured,4,n/a
+twelfth reader newly labelled worded openai for the company,measured,3,n/a
+twelfth reader newly labelled worded openai neither,measured,9,n/a
+answer newly labelled worded anthropic against the company,measured,5,n/a
+answer newly labelled worded anthropic for the company,measured,2,n/a
+answer newly labelled worded anthropic neither,measured,1,n/a
+answer newly labelled worded openai against the company,measured,2,n/a
+answer newly labelled worded openai for the company,measured,1,n/a
+answer newly labelled worded openai neither,measured,2,n/a
+later worded anthropic against the company,measured,21,n/a
+later worded anthropic for the company,measured,20,n/a
+later worded anthropic neither,measured,23,n/a
+later worded openai against the company,measured,22,n/a
+later worded openai for the company,measured,16,n/a
+later worded openai neither,measured,46,n/a
+all worded anthropic against the company,measured,60,n/a
+all worded anthropic for the company,measured,50,n/a
+all worded anthropic neither,measured,58,n/a
+all worded openai against the company,measured,48,n/a
+all worded openai for the company,measured,45,n/a
+all worded openai neither,measured,74,n/a

@@ -1,0 +1,16 @@
+row_id,page,first_day,changed_day_eastern,real_later_version,how_classed,class_right,note
+MT29,ms-sg2-nvidiaown-b6726b,2024-05-29,2024-05-29,no,no later-day warning established as necessary,yes,no later-day change; call itself is May 22
+MT29,ms-sgp-fool-call-20241120,2024-11-20,2024-11-20,no,no later-day warning established as necessary,yes,02:00 UTC Nov 21 is Nov 20 Eastern; call Nov 20
+MT29,ms-sgp-nvda-q2fy26-call-transcript-pdf,2025-08-27,,not established,no later-day warning established as necessary,yes,"printed corrected transcript; no dated modification stamp, no HTML expected"
+MT68,ct-epoch-frontier-labs-compute,2026-05-20,,not established,no later-day warning established as necessary,yes,"visible May 20 date, matching date-only article data; Updated dates are related-work cards, not this article"
+MT68,art-own-cnbc-260608-openai-confidential-ipo-filing,2026-06-08,2026-06-08,no,no later-day warning established as necessary,yes,article’s own created/modified stamps and visible 5:14/5:39 PM EDT agree
+MT69,ct-epoch-frontier-labs-compute,2026-05-20,,not established,no later-day warning established as necessary,yes,"visible May 20 date, matching date-only article data; Updated dates are related-work cards, not this article"
+MT70,ms-xpost-transformer-anthropic-philanthropy-20260312,2026-03-12,2026-03-13,yes,noted on the line,yes,article modification meta and visible March 13 correction; warned on MT70/MT87
+MT71,art-own-nist-2408-aisi-agreements,2024-08-29,2026-05-04,yes,noted on the line,yes,article stamps and visible Released/Updated dates; warned on MT71/MT72
+MT72,art-own-nist-2408-aisi-agreements,2024-08-29,2026-05-04,yes,noted on the line,yes,article stamps and visible Released/Updated dates; warned on MT71/MT72
+MT77,ms-xpost-nyt-inquirer-ai-midterm-spending-20261002,2026-10-02,2026-10-02,no,no later-day warning established as necessary,yes,article’s own JSON-LD first day and modification meta remain Oct 2 Eastern
+MT87,ms-xpost-transformer-anthropic-philanthropy-20260312,2026-03-12,2026-03-13,yes,noted on the line,yes,article modification meta and visible March 13 correction; warned on MT70/MT87
+MT87,ms-xpost-nyt-inquirer-ai-midterm-spending-20261002,2026-10-02,2026-10-02,no,no later-day warning established as necessary,yes,article’s own JSON-LD first day and modification meta remain Oct 2 Eastern
+MT88,ms-xpost-nyt-inquirer-ai-midterm-spending-20261002,2026-10-02,2026-10-02,no,no later-day warning established as necessary,yes,article’s own JSON-LD first day and modification meta remain Oct 2 Eastern
+MT57,ms-sg2-officials-50e663,2024-12-11,2026-05-26,yes,noted on the line,yes,visible Published date and article Report dateModified; also citation_publication_date; MT57 warns
+MT72,ms-ag-csis-commerce-anthropic,2026-06-16,2026-06-23,yes,noted on the line,yes,visible Published date and article Report dateModified; MT72 warns
