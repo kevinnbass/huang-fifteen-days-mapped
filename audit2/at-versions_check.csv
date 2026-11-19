@@ -1,0 +1,28 @@
+row_id,page,first_day,changed_day_eastern,real_later_version,how_classed,class_right,note
+MT22,ms-sg2-nov2026-9502f2,,,no,not a later-version citation,yes,Annual archive; individual quoted letter headings checked; no page publication/change stamp.
+MT29,ms-sgp-nvda-cloudfront-92e3c52f,2025-05-28,,no,no later stamp,yes,"Printed filing/release date; PDF, no saved HTML."
+MT29,ms-sgp-nvda-8k-20250827-pdf,2025-08-27,,no,no later stamp,yes,Printed filing/release date; PDF.
+MT29,ms-sg2-nov2026-9502f2,,,no,not a later-version citation,yes,Annual archive; individual quoted letter headings checked; no page publication/change stamp.
+MT57,ms-sg2-officials-50e663,2024-12-11,2026-05-26,yes,missing from version table and line,no,"Visible Published December 11, 2024; own Report JSON-LD dateModified May 26, 2026, 09:57:47 -0400. MT57 has no warning. Companion PDF confirms the quotation but does not remove this cited HTML page’s later-version status."
+MT57,ms-sg2-y2024-b374ab,2024-12,,no,no later stamp,yes,"PDF prints December 2024; exact day is supplied by companion HTML, not PDF filename."
+MT57,ms-sg2-nov2026-9502f2,,,no,not a later-version citation,yes,Annual archive; individual quoted letter headings checked; no page publication/change stamp.
+MT62,sw-dailycallercom-01,2026-11-06,2026-11-06,no,same Eastern day,yes,Own JSON-LD publication and modification both 20:55:49Z.
+MT62,ms-sg2-nov2026-9502f2,,,no,not a later-version citation,yes,Annual archive; individual quoted letter headings checked; no page publication/change stamp.
+MT62,ms-n18-gizmodo-f1efaa,2026-11-17,2026-11-17,no,same Eastern day,yes,Own article metadata and JSON-LD agree.
+MT64,ms-sg2-deepseekasia-329512,2025-01-31,2025-01-31,no,same Eastern day,yes,Own article publication and itemprop modification are equivalent UTC/+0800 times.
+MT64,ms-sgp-202502-asiatimes-lutnick,2025-02-01,2025-02-06,yes,warned on MT64,yes,Own article metadata and JSON-LD agree with the line and table.
+MT64,ms-sg2-nov2026-9502f2,,,no,not a later-version citation,yes,Annual archive; individual quoted letter headings checked; no page publication/change stamp.
+MT64,ms-n18-gizmodo-f1efaa,2026-11-17,2026-11-17,no,same Eastern day,yes,Own article metadata and JSON-LD agree.
+MT68,ms-sg2-dec2023-5a50f5,2023-11-25,,no,no later stamp,yes,Printed digest date; PDF.
+MT68,ms-sg2-congress-57f65b,2025-04-08,,no,no later stamp,yes,Printed testimony date; PDF.
+MT68,ms-sg2-nov2026-9502f2,,,no,not a later-version citation,yes,Annual archive; individual quoted letter headings checked; no page publication/change stamp.
+MT68,ms-sg2-change-aeb715,2025-11-20,2026-10-21,yes,warned on MT68,yes,First exactly midnight UTC is a date. Article JSON-LD has later dateModified than older OpenGraph modified value. The line/table correctly use the later article stamp.
+MT68,ms-sg2-analysts-0d4216,2025-05-28,2025-07-22,yes,warned on MT68,yes,First 2025-05-29 01:55:18Z is May 28 Eastern; modified July 22 Eastern.
+MT69,ms-sg2-nov2026-9502f2,,,no,not a later-version citation,yes,Annual archive; individual quoted letter headings checked; no page publication/change stamp.
+MT71,ms-sg2-analysts-4e0a2b,2026-06-10,2026-06-10,no,same Eastern day,yes,Article JSON-LD and OpenGraph differ by minutes only.
+MT72,ms-sg2-deepseekasia-71d95f,2025-02-10,,no,no later stamp,yes,"Weekly’s printed issue date; saved text PDF, no HTML."
+MT77,art-own-cnbc-260608-openai-confidential-ipo-filing,2026-06-08,2026-06-08,no,same Eastern day,yes,Main article’s own dates; unrelated embedded recommendation dates excluded.
+MT79,ms-sg2-nov2026-9502f2,,,no,not a later-version citation,yes,Annual archive; individual quoted letter headings checked; no page publication/change stamp.
+MT83,man-ms-gap-now-extra-024-c84eba,2026-11-15,,no,no later stamp,yes,"Article prints Nov.15, 2026 10:59 pm ET; hand-saved PDF text."
+MT84,man-ms-gap-now-extra-024-c84eba,2026-11-15,,no,no later stamp,yes,"Article prints Nov.15, 2026 10:59 pm ET; hand-saved PDF text."
+MT86,ms-g17-x3-hearinghighl-979923,2026-07-14,,no,no later stamp,yes,Visible hearing date and own article publication stamp agree; no article modification stamp.

@@ -1,22 +1,31 @@
 """The builder's written reason for every record of the six later readers (lanes own_read_nv8_f to _k) that the readers' table still labels `listed, not drawn`.
 The forty-fourth reading found that the builder had applied its cut to these records by impression. The cut, as applied since, alike for both companies: an agreement, purchase, financing or charge that names
-a maker of chips or a supplier of computing with its sum or size; a dealing with Nvidia beyond a mention as a customer; a position of the company's own officers on export rules; a decision or public
-statement of a government about the company, or an agreement of the company with a government body; a proceeding; an act of either company inside the fifteen days. Every record the cut covers is drawn;
+a maker of chips or a supplier of computing, with its sum or size where the page gives one (until batch s11i the rule asked for a sum or a size; the forty-fifth reading found it applied to OpenAI without one
+and withheld from Anthropic, and it is now the company's own agreement with a named supplier, sized or not, for both); a dealing with Nvidia beyond a mention as a customer (a delivery and a stated technical
+contribution count as dealings since batch s11i); a position of the company's own officers on export rules; a decision or public
+statement of a government about the company, or an agreement of the company with a government body; a proceeding; an act of either company inside the fifteen days. With the twelfth reader's records (batch s11h, Nov 19, 2026) the cut gained two kinds, alike for both: election spending by groups
+aligned with the company (a report's total, its largest cases, its cases with a charge and an answer, and the groups' own answers; a further case of the same report has the reason POLX), and a charge about
+the company's motives or influence by an official or a named critic, with the accused party's answer where a saved page holds one. Every record the cut covers is drawn, with that one exception;
 every other record of those readers has one reason here. scripts/nv8_company_records.py writes the reason into the table and stops if a listed record of those readers has none, or a reason has no record.
-Keys: reader, page, company, the first 90 characters of the reader's sentence. Written by research/scratch_archive_s9a/make_cut_decisions_s11g.py (batch s11g, Nov 19, 2026)."""
+Keys: reader, page, company, the first 90 characters of the reader's sentence. Written by research/scratch_archive_s9a/make_cut_decisions_s11g.py (batch s11g, Nov 19, 2026) and make_cut_decisions_s11h.py (reader l).
+Batch s11i (Nov 19, 2026; the answer to the forty-fifth reading, which found four records whose reasons failed and one rule applied unevenly): thirteen records left this module because a line now words them
+(two deliveries to OpenAI and Nvidia's sentence on its contribution to OpenAI's models; Anthropic's expansions of April 2026 and a supplier without a sum; two critics' readings of the call to slow down, recorded
+for each company, and the investment a third critic's charge rests on; four sentences of one report on gifts by Anthropic's staff to possible reviewers). The two kinds added in batch s11h had not been applied to
+the records listed before it; the builder read every reason again under the cut as written here (make_cut_decisions_s11i.py). Three reason kinds had one record each and have none now; they are gone from WHY."""
 WHY = {
     'EST': 'an outside estimate, forecast, calculation or scenario of computing power, spending or value; not a record of an act (an exclusion stated with the batch of Nov 18)',
-    'CALL': "a mention of the company as a customer or user on one of Nvidia's earnings calls, or a relay of one, with no agreement, sum or decision in it (an exclusion stated with the batch of Nov 18); the company's line with Nvidia gives their dealings from releases and filings",
+    'CALL': "a mention of the company as a customer or user on one of Nvidia's earnings calls, or a relay of one, with no delivery, agreement, sum or decision in it (an exclusion stated with the batch of Nov 18); the company's line with Nvidia gives their dealings from releases and filings",
     'OPIN': 'an opinion, belief, expectation, projection, joke or passing remark, of a commentator or other third party or as an outlet attributes it; not an act of the company or of a government',
     'REMARK': "a remark of the company's own officers, or about them, that states no position on export rules and reports no agreement, decision or proceeding",
     'FIN': "the company's finances, owners, funding, customers or listing, with no maker of chips, supplier agreement, export rule, government decision or proceeding in the sentence",
-    'CAP': 'computing capacity, data centres, power or spending on them, without an agreement that names a supplier with its sum or size',
+    'CAP': "computing capacity, data centres, power or spending on them, without an agreement of the company's own that names its supplier",
     'SEC': 'security, misuse or copying, with no decision or statement of a government and no proceeding in the sentence',
     'GOV': "how the company is governed (its founders' control, its board's dispute of 2023, its legal form); outside the cut",
     'HELD64': "the company's line on the alleged copying of its models gives what it told a House committee it had found, and DeepSeek's answer; the report that it was investigating adds no further act",
     'HELD64T': "the company's line on the alleged copying of its models quotes the same committee report on what the company said it had found; the terms of use that the report also quotes add no act",
-    'HELD69': "the company's line on its dealings gives its commitments for Amazon's and Google's chips with their sums, from its own filing; this sentence adds the month and one more supplier without a sum",
     'OTHER': "a record about other actors (the Commerce secretary's former firm and the developer of a data-centre campus): the company appears as a backer of the project, with no chips, export rule, decision or proceeding that concerns it; whether such records of other actors are drawn is the owner's decision",
+    'POLX': "a further sentence or case of a report on election spending from which the company's line on that spending already gives the total, the review of the ads, the largest cases, the cases with a charge and an answer, and the groups' own answers; this one is not on the line",
+    'EMPG': "gifts of the company's employees to candidates who are not actors of this figure, as a news site totals them; the figure counts employees' gifts to its actors from filings and names no giver",
 }
 DEC = {
     ('f', 'ms-geo-nvda-q3fy26-call-fool', 'anthropic', 'Nvidia’s finance chief describes the company as increasing its compute spending aggressive'): 'CALL',
@@ -28,13 +37,11 @@ DEC = {
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter dates Anthropic’s confidential S-1 submission to June 1."): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays Anthropic’s filing showing 11,900 customers generating at"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays Anthropic’s report that a northern Yemen weapons cell use"): 'SEC',
-    ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays Capital Alpha’s criticism that outside audits and regulat"): 'OPIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays Forbes’ account that Uber’s Claude Code usage helped exha"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays Groundbreaker’s estimate that OpenAI and Anthropic accoun"): 'EST',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays Reuters Breakingviews’ expectation of a 5% Anthropic marg"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays Reuters’ draft prospectus figures of nearly $4.6 billion "): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays The Verge’s report of Microsoft canceling most Claude Cod"): 'FIN',
-    ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays a critic’s theory that a slowdown could conceal poor comp"): 'OPIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays one analyst’s estimate of $241 billion Anthropic revenue "): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter relays that a suspected Iran-linked actor used Claude for U.S. n"): 'SEC',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter reports $16.3 billion first-half revenue and prints a seemingly "): 'FIN',
@@ -50,14 +57,12 @@ DEC = {
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter says Anthropic’s repeat-customer cohort generated about nine tim"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter says Anthropic’s revenue grew 1,127% year over year while comput"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter says Anthropic’s revenue run rate passed $65 billion in July fro"): 'FIN',
-    ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter says FTX invested roughly $500 million in Anthropic in a discuss"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter says G42 through MGX is in talks to support Anthropic."): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter says consumption billing supplied 80% of Anthropic’s first-half "): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter says large businesses reportedly supplied about 80% of Anthropic"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'anthropic', "Yardeni Research's letter says the company is reportedly seeking existing 20–30 MW facilit"): 'CAP',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter calculates OpenAI revenue-to-compute coverage of 0.19 in 2026 an"): 'EST',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter refers to SoftBank’s more than $60 billion commitment to OpenAI’"): 'FIN',
-    ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter relays Capital Alpha’s criticism that outside audits and regulat"): 'OPIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter relays Groundbreaker’s estimate that OpenAI and Anthropic accoun"): 'EST',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter relays OpenAI’s annualized revenue rising from $2 billion in 202"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter relays Reuters, citing CNBC, that OpenAI expects more than $280 "): 'FIN',
@@ -66,7 +71,6 @@ DEC = {
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter relays a $1 trillion OpenAI IPO valuation target and elsewhere c"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter relays a critic’s calculation of $20.9 billion in OpenAI losses "): 'EST',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter relays a critic’s estimate that OpenAI could account for 20–40% "): 'EST',
-    ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter relays a critic’s theory that a slowdown could conceal poor comp"): 'OPIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter relays an OpenClaw team’s report of a $1.3 million OpenAI bill o"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter says Abu Dhabi’s G42 backed OpenAI through MGX as part of the Gu"): 'FIN',
     ('f', 'ms-sg2-nov2026-9502f2', 'openai', "Yardeni Research's letter says Amazon owns an OpenAI stake smaller than Microsoft’s and So"): 'FIN',
@@ -122,7 +126,6 @@ DEC = {
     ('h', 'ms-sg2-deepseekasia-329512', 'openai', 'China Times relays Bloomberg that Microsoft and OpenAI were investigating possible unautho'): 'HELD64',
     ('h', 'ms-sgp-20250203-trendforce-soar', 'openai', 'TrendForce relays reports that Microsoft and OpenAI were investigating unauthorized access'): 'HELD64',
     ('h', 'ms-sgp-20250416-house-deepseek-report-pdf', 'openai', 'The committee quotes OpenAI’s terms barring use of its outputs for competing models, autom'): 'HELD64T',
-    ('h', 'ms-sgp-fool-call-20241120', 'openai', "Nvidia's finance chief says Nvidia shipped one of its first Blackwell DGX engineering samp"): 'CALL',
     ('h', 'ms-sgp-fool-call-20250226', 'openai', 'Jensen Huang says OpenAI had publicly brought up a Grace Blackwell system.'): 'CALL',
     ('h', 'ms-sgp-fool-call-20250226', 'openai', "Nvidia's finance chief says the first Stargate data centers will use Nvidia Spectrum-X."): 'CALL',
     ('i', 'ms-g17-x8-yale-03f302', 'openai', 'The Yale commentary recalls OpenAI’s 2023 board collapse and its chief executive’s comebac'): 'GOV',
@@ -138,7 +141,6 @@ DEC = {
     ('i', 'ms-sg2-nvidiaown-2e277e', 'openai', 'Huang says Nvidia uses OpenAI’s Codex broadly internally and its coders often use it along'): 'CALL',
     ('i', 'ms-sg2-nvidiaown-2e277e', 'openai', 'Huang says OpenAI’s demand is very strong and argues that more compute would permit faster'): 'CALL',
     ('i', 'ms-sg2-nvidiaown-b6726b', 'anthropic', "Nvidia's finance chief says Anthropic and other labs are building on Nvidia AI in the clou"): 'CALL',
-    ('i', 'ms-sg2-nvidiaown-b6726b', 'openai', "Nvidia's finance chief says Huang delivered the first H200 system to OpenAI and that it po"): 'CALL',
     ('i', 'ms-sg2-officials-a06328', 'anthropic', 'Jordan Schneider joked about nationalizing Anthropic and jailing its chief executive, then'): 'OPIN',
     ('i', 'ms-sgp-202502-asiatimes-lutnick', 'openai', 'A Beijing technology columnist says other Chinese models also used distilled ChatGPT-o1 da'): 'SEC',
     ('i', 'ms-sgp-20250417-claimsjournal-house', 'openai', 'The report relays Bloomberg’s account that Microsoft and OpenAI were investigating possibl'): 'HELD64',
@@ -149,7 +151,6 @@ DEC = {
     ('j', 'ct-ai2027-compute-forecast', 'openai', 'The forecast uses OpenAI revenue of $1 billion in 2023 and about $4 billion in 2024.'): 'FIN',
     ('j', 'ct-ai2027-compute-forecast', 'openai', 'Under an illustrative assumption that OpenAI remains the leader, the forecast raises its c'): 'EST',
     ('j', 'ct-epoch-frontier-labs-compute', 'anthropic', 'An internal OpenAI memo estimated Anthropic’s capacity at 1.4 GW and reports put its cloud'): 'EST',
-    ('j', 'ct-epoch-frontier-labs-compute', 'anthropic', 'Anthropic signed multi-GW expansions with Amazon and Google and added CoreWeave as a compu'): 'HELD69',
     ('j', 'ct-epoch-frontier-labs-compute', 'anthropic', 'Epoch estimates Anthropic had at least one million H100 equivalents, substantially less th'): 'EST',
     ('j', 'ct-epoch-frontier-labs-compute', 'anthropic', 'Epoch reports Anthropic’s annualized revenue rose from $9 billion to $30 billion in the fi'): 'FIN',
     ('j', 'ct-epoch-frontier-labs-compute', 'anthropic', 'Epoch says Anthropic will reportedly double quarterly compute spending from about $3 billi'): 'CAP',
@@ -181,7 +182,6 @@ DEC = {
     ('j', 'ms-sg2-y2024-a52eec', 'openai', 'A financial commentator uses a report that only a fraction of Microsoft’s $10 billion inve'): 'OPIN',
     ('j', 'ms-sgp-nvda-q2fy26-call-transcript-pdf', 'openai', 'Nvidia lists OpenAI among companies adopting NVFP4 on GB300 for training.'): 'CALL',
     ('j', 'ms-sgp-nvda-q2fy26-call-transcript-pdf', 'openai', 'Nvidia says OpenAI uses GB200 NVL72 at data-center scale for training and production infer'): 'CALL',
-    ('j', 'ms-sgp-nvda-q2fy26-call-transcript-pdf', 'openai', 'Nvidia says it contributes to OpenAI models, data and software.'): 'CALL',
     ('k', 'man-ms-sg2-deepseekus-d620c9', 'openai', 'Investopedia says OpenAI stated it was probing whether DeepSeek improperly used its data t'): 'HELD64',
     ('k', 'ms-g17-x4-sfgate-453b3b', 'openai', 'SFGATE says OpenAI’s chief executive praised the White House AI adviser during the respons'): 'REMARK',
     ('k', 'ms-g17-x5-datacenterdy-a29a15', 'openai', 'DCD relays Cantor Fitzgerald’s statement that it advised on $600 million of debt for the 1'): 'OTHER',
@@ -204,4 +204,29 @@ DEC = {
     ('k', 'ms-sg2-nov2026-076fdd', 'openai', 'The blog relays a planned $33 billion, 9.2 GW SoftBank gas plant supplying the Ohio campus'): 'CAP',
     ('k', 'ms-sgp-20250201-malaymail-mti', 'openai', 'Malay Mail says OpenAI launched an investigation into whether DeepSeek improperly used its'): 'HELD64',
     ('k', 'ms-sgp-roic-call-q4fy25', 'openai', 'Jensen Huang says OpenAI has publicly reported bringing Grace Blackwell systems online.'): 'CALL',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'anthropic', 'Justice Democrats’ communications director warns that the AI lobby is becoming difficult t'): 'OPIN',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'anthropic', 'The Times identifies the Foushee, Bores and Florida district primaries as the races attrac'): 'POLX',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'anthropic', 'The Times says Defending Our Values supported a Texas House candidate who is Rep. Monica D'): 'POLX',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'anthropic', 'The Times says the big AI players spent more heavily for Democrats than Republicans.'): 'POLX',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'Justice Democrats’ communications director warns that the AI lobby is becoming difficult t'): 'OPIN',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times identifies the Foushee, Bores and Florida district primaries as the races attrac'): 'POLX',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times says American Mission backed a county commissioner whose campaign opposes heavy-'): 'POLX',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times says American Mission spent roughly $500,000 each for three Senate candidates in'): 'POLX',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times says OpenAI-aligned Think Big paid for an ad supporting a former representative’'): 'POLX',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times says Think Big spent roughly $50,000 supporting Rep. Joseph Morelle in New York.'): 'POLX',
+    ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times says the big AI players spent more heavily for Democrats than Republicans.'): 'POLX',
+    ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'anthropic', 'Transformer relays Forbes’s estimate that each of Anthropic’s seven co-founders held rough'): 'FIN',
+    ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'anthropic', 'Transformer relays a forum commenter’s warning that organizations accepting employee donat'): 'OPIN',
+    ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'anthropic', 'Transformer relays the policy lead’s preference for risk-reducing measures that do not slo'): 'OPIN',
+    ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'anthropic', 'Transformer reports Anthropic finalized a funding round at a $380 billion valuation in mid'): 'FIN',
+    ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'anthropic', 'Transformer reports Anthropic opened its first tender offer allowing current and former em'): 'FIN',
+    ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'anthropic', 'Transformer reports would-be share buyers were struggling to find Anthropic employees will'): 'FIN',
+    ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'anthropic', 'Transformer says Anthropic employees collectively gave $401,250 to campaigns supporting Bo'): 'EMPG',
+    ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'anthropic', 'Transformer says an Anthropic IPO was expected in the coming year.'): 'FIN',
+    ('l', 'ms-xpost-yahoo-anthropic-valuation-20260529', 'anthropic', 'Yahoo describes Anthropic and OpenAI as racing toward anticipated public offerings.'): 'FIN',
+    ('l', 'ms-xpost-yahoo-anthropic-valuation-20260529', 'anthropic', 'Yahoo says Anthropic reported in April that its annual revenue run rate exceeded $30 billi'): 'FIN',
+    ('l', 'ms-xpost-yahoo-anthropic-valuation-20260529', 'anthropic', 'Yahoo says Anthropic updated its annual revenue run rate to $47 billion earlier that month'): 'FIN',
+    ('l', 'ms-xpost-yahoo-anthropic-valuation-20260529', 'anthropic', 'Yahoo says Wall Street analysts were positive on Anthropic because its spending was relati'): 'OPIN',
+    ('l', 'ms-xpost-yahoo-anthropic-valuation-20260529', 'openai', 'Yahoo contrasts OpenAI’s spending unfavourably with Anthropic’s in describing analysts’ vi'): 'OPIN',
+    ('l', 'ms-xpost-yahoo-anthropic-valuation-20260529', 'openai', 'Yahoo describes Anthropic and OpenAI as racing toward anticipated public offerings.'): 'FIN',
 }

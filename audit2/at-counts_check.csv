@@ -1,0 +1,140 @@
+what,stated,recounted,agree
+README act rows,442,442,yes
+README/status dated drawn acts,439,439,yes
+README/status report-day acts,178,178,yes
+status drawn acts without day,0,0,yes
+README nonmember tie lines,86,86,yes
+README/status all company records,1596,1596,yes
+README represented readers,11,11,yes
+README/status records worded,291,291,yes
+README/status records its reader found it,505,505,yes
+"README/status records listed, not drawn",800,800,yes
+README/status listed anthropic,471,471,yes
+README/status listed openai,329,329,yes
+README first-five listed without individual reasons,615,615,yes
+README listed records considered in new cut,210,210,yes
+README new cut records now worded,25,25,yes
+README new cut records left with reasons,185,185,yes
+README hand marks,31,31,yes
+brief changed hand marks,12,12,yes
+README six-reader listed anthropic for the company,34,34,yes
+README six-reader listed anthropic against the company,20,20,yes
+README six-reader listed anthropic neither,28,28,yes
+README six-reader listed openai for the company,15,15,yes
+README six-reader listed openai against the company,34,34,yes
+README six-reader listed openai neither,54,54,yes
+brief distinct written reasons,12,12,yes
+README exclusion FIN,56,56,yes
+README exclusion OPIN,29,29,yes
+README exclusion SEC,25,25,yes
+README exclusion CALL,20,20,yes
+README exclusion EST,15,15,yes
+README exclusion CAP,13,13,yes
+README exclusion GOV,11,11,yes
+README exclusion REMARK,3,3,yes
+README exclusion OTHER,4,4,yes
+README repeat-source exclusions,9,9,yes
+README version table citations as stored,64,64,yes
+README version table rows as stored,33,33,yes
+README warnings as stored,52,52,yes
+README standing facts as stored,12,12,yes
+README later-version citations including omitted CSIS HTML,64,65,no
+README tie lines with later-version citations including MT57,33,34,no
+README register acts,1017,1017,yes
+README register carried,121,121,yes
+README register open,896,896,yes
+previous section open groups worded in part,32,32,yes
+README changed folders excluding builder prefix,1064,1064,yes
+README folders from other session by census prefixes,1026,1026,yes
+README folders saved by hand by census prefixes,6,6,yes
+README aggregator snapshots,32,32,yes
+census rows supplied,measured,1195,n/a
+README population including duplicate copies,182,182,yes
+README duplicate copies read once,2,2,yes
+status distinct assigned noncontrol pages,180,180,yes
+README long pages given windows,25,25,yes
+README saved-HTML reading texts,34,34,yes
+README unread folders,23,23,yes
+README excluded snapshots,32,32,yes
+reader f raw records,measured,160,n/a
+reader f page log,measured,31,n/a
+reader g raw records,measured,79,n/a
+reader g page log,measured,32,n/a
+reader h raw records,measured,78,n/a
+reader h page log,measured,32,n/a
+reader i raw records,measured,73,n/a
+reader i page log,measured,32,n/a
+reader j raw records,measured,75,n/a
+reader j page log,measured,32,n/a
+reader k raw records,measured,54,n/a
+reader k page log,measured,33,n/a
+README control pages,12,12,yes
+README earlier control records,76,76,yes
+README earlier control passages matched by published rule,57,57,yes
+later control records excluded by script,measured,61,n/a
+README new control records retained,15,15,yes
+README noncontrol records,443,443,yes
+README noncontrol pages with records,96,96,yes
+README noncontrol Anthropic records,199,199,yes
+README noncontrol OpenAI records,244,244,yes
+README incomplete readers,3,3,yes
+README incomplete pages,4,4,yes
+status whole noncontrol page logs,151,151,yes
+README six later readers,6,6,yes
+prior batch retained later-reader records,458,458,yes
+README prior findings lines,28,28,yes
+README prior findings ok,8,8,yes
+README prior findings error,4,4,yes
+README prior findings qualification,16,16,yes
+README prior text findings,4,4,yes
+README prior disposition-check lines,69,69,yes
+README prior checks yes,28,28,yes
+README prior checks partial,33,33,yes
+README prior checks no,8,8,yes
+README prior recounts yes,67,67,yes
+README prior recounts not checked,4,4,yes
+README prior recounts n/a,20,20,yes
+README prior site checks,2,2,yes
+README prior site ok,1,1,yes
+README prior site problem,1,1,yes
+README prior gaps,8,8,yes
+README written dispositions,78,78,yes
+brief written dispositions applied,66,66,yes
+brief written dispositions stated as a limit,11,11,yes
+brief written dispositions applied in part; the rest stated as a limit,1,1,yes
+brief record-by-record dispositions,18,18,yes
+newly worded records across all readers,measured,52,n/a
+answer newly worded anthropic for the company,measured,1,n/a
+answer newly worded anthropic against the company,measured,5,n/a
+answer newly worded anthropic neither,measured,8,n/a
+answer newly worded openai for the company,measured,3,n/a
+answer newly worded openai against the company,measured,9,n/a
+answer newly worded openai neither,measured,26,n/a
+README published report differs only by described phrase,True,True,yes
+status historical missing-mark ab,positive,positive,yes
+status historical missing-mark ac,positive,positive,yes
+status historical missing-mark ad,positive,positive,yes
+status historical missing-mark ae,positive,positive,yes
+status historical missing-mark af,positive,positive,yes
+status historical missing-mark ag,positive,positive,yes
+status historical missing-mark ah,positive,positive,yes
+status historical missing-mark ai,positive,positive,yes
+status historical missing-mark aj,positive,positive,yes
+status historical missing-mark ak,positive,positive,yes
+status historical missing-mark al,positive,positive,yes
+status historical missing-mark am,positive,positive,yes
+status historical missing-mark an,positive,positive,yes
+status historical missing-mark ao,zero,zero,yes
+status historical missing-mark ap,zero,zero,yes
+status historical missing-mark aq,zero,zero,yes
+status historical missing-mark ar,zero,zero,yes
+status historical missing-mark as,positive,positive,yes
+delta rows,16,16,yes
+new citation pairs,27,27,yes
+new distinct cited pages,18,18,yes
+H exact row panels,16,16,yes
+H displayed passage placements,measured,652,n/a
+H distinct passages read,measured,581,n/a
+H undrawn-name source headings including publisher pseudonym,measured,12,n/a
+H those source-heading placements,measured,19,n/a
+H known title people including publisher pseudonym,measured,6,n/a

@@ -4,6 +4,8 @@ The page grows to fit its content; the PNG is cut at the measured height."""
 import io
 from pathlib import Path
 import re
+import struct
+import zlib
 from playwright.sync_api import sync_playwright
 from PIL import Image
 
@@ -56,6 +58,37 @@ h1{{font-size:46px;letter-spacing:-1.4px;margin:12px 0 10px;line-height:1.07;max
 </style></head><body><div class="kicker">{esc(kicker)}</div><h1>{title}</h1><p class="subtitle">{subtitle}</p>{body}<div class="footnote">{footnote}</div></body></html>'''
 
 
+def _png_chunk(f, kind, data):
+    f.write(struct.pack('>I', len(data))); f.write(kind); f.write(data); f.write(struct.pack('>I', zlib.crc32(data, zlib.crc32(kind)) & 0xffffffff))
+
+
+def save_png_bands(im, path, band=64):
+    """Write an RGB picture as a PNG, losslessly, with the row filter chosen band by band (Nov 19, 2026).
+    The library chooses a filter for every row by a rule of thumb. For this figure, dense small text on a flat ground, two fixed choices do better: no filter where the text is densest (the status text at the
+    foot) and the filter Up elsewhere. For every band of rows both are tried: each candidate is compressed alone at level 9 and the smaller is fed to ONE zlib stream at level 9. The file holds the chunks
+    IHDR, IDAT and IEND. The pixels are never changed: the written file is decoded again and compared with the picture, band by band, before this returns."""
+    import numpy as np
+    assert im.mode == 'RGB'; W, H = im.size; stride = W * 3; co = zlib.compressobj(9, zlib.DEFLATED, 15, 9, zlib.Z_DEFAULT_STRATEGY); picks = [0, 0]; prev = None
+    with open(path, 'wb') as f:
+        f.write(b'\x89PNG\r\n\x1a\n'); _png_chunk(f, b'IHDR', struct.pack('>IIBBBBB', W, H, 8, 2, 0, 0, 0)); buf = bytearray()
+        for y in range(0, H, band):
+            a = np.frombuffer(im.crop((0, y, W, min(H, y + band))).tobytes(), dtype=np.uint8).reshape(-1, stride); n = a.shape[0]
+            up = a.copy(); up[1:] = a[1:] - a[:-1]                 # bytes wrap at 256, as the filter is defined; the first row of the picture has no row above and stays as it is
+            if prev is not None: up[0] = a[0] - prev
+            prev = a[-1].copy()
+            c0 = np.concatenate([np.zeros((n, 1), np.uint8), a], axis=1).tobytes(); c2 = np.concatenate([np.full((n, 1), 2, np.uint8), up], axis=1).tobytes()
+            use_up = len(zlib.compress(c2, 9)) < len(zlib.compress(c0, 9)); picks[use_up] += 1; buf += co.compress(c2 if use_up else c0)
+            if len(buf) >= 1 << 23: _png_chunk(f, b'IDAT', bytes(buf)); buf = bytearray()
+        buf += co.flush(); _png_chunk(f, b'IDAT', bytes(buf)); _png_chunk(f, b'IEND', b'')
+    lim = Image.MAX_IMAGE_PIXELS; Image.MAX_IMAGE_PIXELS = None
+    try:
+        with Image.open(path) as chk:
+            chk.load(); assert chk.mode == 'RGB' and chk.size == im.size, (chk.mode, chk.size)
+            for y in range(0, H, 4096): assert chk.crop((0, y, W, min(H, y + 4096))).tobytes() == im.crop((0, y, W, min(H, y + 4096))).tobytes(), ('the PNG does not decode to the picture', y)
+    finally: Image.MAX_IMAGE_PIXELS = lim
+    print('png written in bands', Path(path).name, Path(path).stat().st_size, 'bytes | bands without a filter', picks[0], '| with the filter Up', picks[1], '| decoded again: the same pixels')
+
+
 def render(stem, document, width):
     FIGURES.mkdir(parents=True, exist_ok=True)
     path = FIGURES / (stem + '.html'); path.write_text(document, encoding='utf-8')
@@ -77,7 +110,10 @@ def render(stem, document, width):
                 assert tile.size == (w_ * 2, h_ * 2), (stem, 'a tile of the picture has the wrong size', (x, y), tile.size)
                 im.paste(tile, (x * 2, y * 2))
         b.close()
-    im.save(FIGURES / (stem + '.png'))
+    # The map figure's PNG is written band by band (save_png_bands below: the same pixels, about 5% smaller than the library writes it, about three minutes more per render): its host refuses a file
+    # of 100 MiB or more, and the image stood at 99.5 MiB on Nov 19, 2026. A stopgap for that figure only; how the image is to be kept under the limit for good is the owner's decision.
+    if stem == 'nv8-fifteen-days-mapped': save_png_bands(im, FIGURES / (stem + '.png'))
+    else: im.save(FIGURES / (stem + '.png'))
     # A JPEG can have no side over 65,500 pixels. The map passed that height on Nov 17, 2026 (83,628 pixels): its JPG is then the PNG scaled down to the limit, and the PNG stays the full image.
     if max(im.size) > 65500:
         k = 65500 / max(im.size); small = im.resize((int(im.width * k), int(im.height * k)), Image.LANCZOS); small.save(FIGURES / (stem + '.jpg'), quality=92); print('jpg scaled to', small.size, 'from', im.size)

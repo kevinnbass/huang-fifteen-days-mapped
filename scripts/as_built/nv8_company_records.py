@@ -13,7 +13,10 @@ One reader's sentences name an analyst firm by its founder's surname; the firm's
 
 Batch s11g (Nov 19, 2026, the answer to the forty-fourth reading, which found the builder's cut applied by impression): the last column, `why_it_is_not_drawn`, gives the builder's written reason for every record of the six
 later readers that is still `listed, not drawn` (scripts/nv8_cut_decisions.py holds the cut as applied and the reasons). This script stops if such a record has no reason, or if a reason matches no listed record. The column is
-empty for the records of the first five readers: those were weighed in earlier rounds, without a written reason for each."""
+empty for the records of the first five readers: those were weighed in earlier rounds, without a written reason for each.
+
+Batch s11h (Nov 19, 2026): a twelfth reader (lane own_read_nv8_l) read the eight pages, among twenty folders another session saved after the builder's count of Nov 18, whose text names either company, and two control
+pages (research/reading_lanes/own_read_s11h.population.tsv and .controls.tsv; not published). Its records are taken in by the same rules, and each one left listed has a written reason."""
 import csv, re, shutil, sys
 from collections import Counter
 from pathlib import Path
@@ -21,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; RL = R / 'rea
 import rows_map
 import nv8_cut_decisions as CD
 csv.field_size_limit(10**9)
-LETTERS = 'abcdefghijk'; SECOND = 'fghijk'
+LETTERS = 'abcdefghijkl'; SECOND = 'fghijkl'
 for k in LETTERS:
     for n in ('records.csv', 'pages_read.csv', 'REPORT.md'):
         dst = RL / f'own_read_nv8_{k}.{n}'
@@ -106,14 +109,16 @@ BY_HAND = {
     ('j', 'ms-sgp-nvda-q2fy26-call-transcript-pdf', 'Nvidia partnered with OpenAI to optimize'):
         "worded on MT29 (marked by hand: the line quotes Nvidia's release for the same quarter)",
     # batch s11g, the cut applied record by record: two records that a line now gives from ANOTHER page
-    ('j', 'ct-epoch-frontier-labs-compute', 'OpenAI added Amazon in February'):
-        "worded on MT68 (marked by hand, in part: the line gives the agreement with Amazon and its sums from an analyst firm's letter; the one with Google is not on it)",
+    # hand mark taken away in batch s11i (the rule sees the record since the line gained the report's own sentence): 'OpenAI added Amazon in February'
     ('i', 'ms-n18-yahoo-d1dd28', 'Yahoo Finance relays Nvidia'):
         "worded on MT29 (marked by hand: the line gives the same from Nvidia's release of that day)",
+    # batch s11i (the answer to the forty-fifth reading; the builder's pass over the listed records under the cut's two newer kinds): one record that a line gives from another sentence of the page
+    ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'A Stanford philosophy professor warns'):
+        "worded on MT70 (marked by hand, in part: the line gives the report's sentence that paying people to hold you accountable carries risks; his own sentence on competitive pressure is not on it)",
 }
 HAND_SEEN = set(); WHY_SEEN = set(); why_n = Counter()
 out = []; st = Counter()
-CTL = {(r['lane'][-1], r['page_id']) for r in csv.DictReader(open(RL / 'own_read_s11f.controls.tsv', newline=''), delimiter='\t')}; FIRST = {}; twice = Counter()
+CTL = {(r['lane'][-1], r['page_id']) for n_ in ('own_read_s11f.controls.tsv', 'own_read_s11h.controls.tsv') for r in csv.DictReader(open(RL / n_, newline=''), delimiter='\t')}; FIRST = {}; twice = Counter()
 def same(a, b):
     return bool(a and b) and (a in b or b in a or any(a[i:i + 40] in b for i in range(0, max(1, len(a) - 39), 8)))
 for k in LETTERS:
@@ -144,4 +149,4 @@ c = Counter(o['company'] for o in out); cc = Counter((o['company'], o['which_way
 print('control pages of lanes f to k: records that an earlier reader had listed, left out as listed twice', dict(twice), sum(twice.values()))
 print('records', len(out), dict(c), '| pages', len({o['page'] for o in out}), '| by disposition', dict(Counter(o['the_builder_s_disposition'].split(' on ')[0] for o in out)), '| listed, not drawn, by company and direction', dict(cc))
 sl = [o for o in out if o['reader'] in SECOND and o['the_builder_s_disposition'] == 'listed, not drawn']
-print('the six later readers: records', sum(1 for o in out if o['reader'] in SECOND), '| listed, each with a written reason', len(sl), dict(sorted(Counter((o['company'], o['which_way_its_reader_says_it_cuts']) for o in sl).items())), '| by company and reason', dict(sorted(why_n.items())))
+print('the later readers (f to l): records', sum(1 for o in out if o['reader'] in SECOND), '| listed, each with a written reason', len(sl), dict(sorted(Counter((o['company'], o['which_way_its_reader_says_it_cuts']) for o in sl).items())), '| by company and reason', dict(sorted(why_n.items())))
