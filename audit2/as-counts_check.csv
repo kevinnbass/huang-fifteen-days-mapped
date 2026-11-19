@@ -1,0 +1,92 @@
+what,stated,recounted,agree
+README population including duplicate copies,182,182,yes
+README duplicate copies read once,2,2,yes
+status distinct new pages,180,180,yes
+README long pages given as windows,25,25,yes
+README pages read from saved HTML,34,34,yes
+README unread folders,23,23,yes
+README hourly snapshots left out,32,32,yes
+README new noncontrol records,443,443,yes
+README noncontrol pages with records,96,96,yes
+README noncontrol Anthropic records,199,199,yes
+README noncontrol OpenAI records,244,244,yes
+README new readers,6,6,yes
+README incomplete readers,3,3,yes
+README incomplete pages,4,4,yes
+README control pages,12,12,yes
+README earlier control records,76,76,yes
+README new control-only records retained,15,15,yes
+README earlier control passages matched,57,55 full normalized containment; partial-overlap measure not reconstructed,not checked
+README six readers records retained,458,458,yes
+README six readers retained listed,235,235,yes
+README act rows,442,442,yes
+README dated drawn acts,439,439,yes
+README report-day acts,178,178,yes
+status drawn acts without date,0,0,yes
+README nonmember tie lines,85,85,yes
+README all company records,1596,1596,yes
+README readers represented,11,11,yes
+README worded records,239,239,yes
+README reader-found records,506,506,yes
+README listed records,851,851,yes
+README listed anthropic,484,484,yes
+README listed openai,367,367,yes
+README hand labels,20,20,yes
+README new hand labels,6,6,yes
+README register acts,1017,1017,yes
+README open acts,896,896,yes
+README carried acts,121,121,yes
+README open acts in part,32,32,yes
+README later-version citations,61,61,yes
+README later-version tie lines,33,33,yes
+README line warnings,49,49,yes
+README standing fact citations,12,12,yes
+status new tie lines,5,5,yes
+status amended tie lines,9,9,yes
+status new chip,1,1,yes
+new page citations,36,36,yes
+new distinct pages,18,18,yes
+README changed folders other than builder fetches,1064,not independently reconstructable from frozen named inventory,not checked
+README folders from other session,1026,not independently reconstructable from frozen named inventory,not checked
+README folders saved by hand,6,not independently reconstructable from frozen named inventory,not checked
+reader f raw records (including controls),measured,160,n/a
+reader f retained records,measured,150,n/a
+reader f page log,measured,31,n/a
+reader g raw records (including controls),measured,79,n/a
+reader g retained records,measured,69,n/a
+reader g page log,measured,32,n/a
+reader h raw records (including controls),measured,78,n/a
+reader h retained records,measured,65,n/a
+reader h page log,measured,32,n/a
+reader i raw records (including controls),measured,73,n/a
+reader i retained records,measured,66,n/a
+reader i page log,measured,32,n/a
+reader j raw records (including controls),measured,75,n/a
+reader j retained records,measured,64,n/a
+reader j page log,measured,32,n/a
+reader k raw records (including controls),measured,54,n/a
+reader k retained records,measured,44,n/a
+reader k page log,measured,33,n/a
+status historical missing-mark presence ab,positive,positive,yes
+status historical missing-mark presence ac,positive,positive,yes
+status historical missing-mark presence ad,positive,positive,yes
+status historical missing-mark presence ae,positive,positive,yes
+status historical missing-mark presence af,positive,positive,yes
+status historical missing-mark presence ag,positive,positive,yes
+status historical missing-mark presence ah,positive,positive,yes
+status historical missing-mark presence ai,positive,positive,yes
+status historical missing-mark presence aj,positive,positive,yes
+status historical missing-mark presence ak,positive,positive,yes
+status historical missing-mark presence al,positive,positive,yes
+status historical missing-mark presence am,positive,positive,yes
+status historical missing-mark presence an,positive,positive,yes
+status historical missing-mark presence ao,zero,zero,yes
+status historical missing-mark presence ap,zero,zero,yes
+status historical missing-mark presence aq,zero,zero,yes
+status historical missing-mark presence ar,zero,zero,yes
+six readers noncontrol whole texts,coverage detail,151,n/a
+six readers noncontrol window readings,25,25,yes
+six readers noncontrol incomplete pages,4,4,yes
+brief finance-chief full-name substitutions,3,3,yes
+additional surname-only role substitutions,not stated,9,n/a
+analyst-firm name expansions in retained records,one firm,"110 sentences, one firm",yes
