@@ -1,0 +1,5 @@
+row_id_or_key,source,what_failed
+MT66,private/mt66_excerpts.txt / art-own-anthropic-threat-intelligence-report-0926,Intentional source limit: only the builder’s three cuts were read. The original page and closed chapter were never opened; original context and version history are not independently cleared.
+V-MT62-MT64,man-ca3e18f95a8f,The hand-saved dispatch prints Feb 23 publication and Feb 24 update without a timezone. Its displayed next-day sequence is checked; an Eastern update day cannot be established.
+F-intermediate,first Nov 21 release,"No intermediate rows or 6,232-character status module are supplied. The 3,038 and 17,013 separate character increments and the intermediate 385,297 total are not independently reconstructed; the combined 20,051-character difference reproduces."
+F-populations,"728-folder later census and 6,082-page keyword search","Underlying population/search inventories are not among the bounded inputs. The 85 target pages reproduce from the three readers’ files; the 728/160/482/1 partition and the 6,082 search population are carried as unverified here, not treated as negative evidence."

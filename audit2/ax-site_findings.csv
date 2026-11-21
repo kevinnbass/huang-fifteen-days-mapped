@@ -1,0 +1,18 @@
+finding_id,grade,element_text,problem
+H-MA445,ok,MA445,Panel text equals frozen row; 5 passage placements each equal a single same-row evidence entry; all 5 added bindings appear.
+H-MA446,ok,MA446,Panel text equals frozen row; 5 passage placements each equal a single same-row evidence entry; all 5 added bindings appear.
+H-MT29,ok,MT29,Panel text equals frozen row; 56 passage placements each equal a single same-row evidence entry; all 14 added bindings appear.
+H-MT57,ok,MT57,Panel text equals frozen row; 51 passage placements each equal a single same-row evidence entry; all 5 added bindings appear.
+H-MT62,ok,MT62,Panel text equals frozen row; 39 passage placements each equal a single same-row evidence entry; all 3 added bindings appear.
+H-MT64,ok,MT64,Panel text equals frozen row; 57 passage placements each equal a single same-row evidence entry; all 7 added bindings appear.
+H-MT65,ok,MT65,Panel text equals frozen row; 88 passage placements each equal a single same-row evidence entry; all 23 added bindings appear.
+H-MT66,ok,MT66,Panel text equals frozen row; 33 passage placements each equal a single same-row evidence entry; all 14 added bindings appear.
+H-MT68,ok,MT68,Panel text equals frozen row; 61 passage placements each equal a single same-row evidence entry; all 5 added bindings appear.
+H-MT70,ok,MT70,Panel text equals frozen row; 61 passage placements each equal a single same-row evidence entry; all 11 added bindings appear.
+H-MT71,ok,MT71,Panel text equals frozen row; 104 passage placements each equal a single same-row evidence entry; all 17 added bindings appear.
+H-MT72,ok,MT72,Panel text equals frozen row; 59 passage placements each equal a single same-row evidence entry; all 17 added bindings appear.
+H-MT76,ok,MT76,Panel text equals frozen row; 130 passage placements each equal a single same-row evidence entry; all 2 added bindings appear.
+H-MT77,ok,MT77,Panel text equals frozen row; 102 passage placements each equal a single same-row evidence entry; all 6 added bindings appear.
+H-MT80,ok,MT80,Panel text equals frozen row; 10 passage placements each equal a single same-row evidence entry; all 2 added bindings appear.
+H01,error,"MT65, evidence n=76, cn-clips-huang-dwarkesh; “[Anthropic’s chief executive] had this quote …”",[table or text] This displayed passage begins with the first name of an undrawn nonofficial speaker. That violates the passage naming rule. Cut the name and use a bracketed role. The name is deliberately not reproduced here.
+H-titles,ok,14 distinct source headings / 22 placements,Known title exception: headings name undrawn people; names are not repeated.

@@ -133,6 +133,11 @@ BY_HAND = {
     ('a', 'art-own-anthropic-threat-intelligence-report-0926', 'Chinese public/state-security actors overcame refusals'):
         "worded on MT66 (marked by hand, in part: the line quotes the report's own sentences that a refusal was overcome on further prompting and that the model complied across many sessions; the case's other particulars are not on it)",
 }
+# batch s11n (the forty-ninth reading, T-worded-175 and -176): one interview page holds Huang's words about his stake in each company; a line for each company quotes its own sentence, and the rule, which compares
+# passages of a page and not companies, labelled each record as worded on both lines. A record listed here is labelled only with the rows named (each must be among those the rule finds).
+ONLY_ON = {('p', 'cn-clips-huang-dwarkesh', 'anthropic', 'Huang confirms Nvidia invests in Anthropic to help it scale'): ['MT65'],
+           ('p', 'cn-clips-huang-dwarkesh', 'openai', 'Huang confirms Nvidia invests in OpenAI to help it scale'): ['MT29']}
+ONLY_SEEN = set()
 HAND_SEEN = set(); WHY_SEEN = set(); why_n = Counter()
 out = []; st = Counter()
 CTL = {(r['lane'][-1], r['page_id']) for n_ in ('own_read_s11f.controls.tsv', 'own_read_s11h.controls.tsv', 'own_read_s11k.controls.tsv', 'own_read_s11l.controls.tsv') for r in csv.DictReader(open(RL / n_, newline=''), delimiter='\t')}; FIRST = {}; twice = Counter()
@@ -152,6 +157,8 @@ for k in LETTERS:
         if k in SECOND: r['what'] = re.sub(r"\b(?:Colette )?Kress\b", "Nvidia's finance chief", r['what'])        # the office, not the name: the release's rule for names in this table
         if k in 'nop': r['what'] = re.sub(r"\bRyan Fedasiuk\b", "The author of a post on X", re.sub(r"\bJordan Schneider\b", "ChinaTalk's host", r['what']))        # batch s11m: two people the figure does not draw, by role
         w = worded(r['page_id'], r['exact_words']); named = r['already_on_row'].strip()
+        for (k_, p_, c_, s_), keep_ in ONLY_ON.items():
+            if (k_, p_, c_) == (k, r['page_id'], r['company']) and r['what'].startswith(s_): assert set(keep_) < set(w), ('the rule no longer finds more rows than the ones kept: take the entry away', s_, w); w = [x for x in w if x in keep_]; ONLY_SEEN.add((k_, p_, c_, s_))
         d = ('worded on ' + ', '.join(w)) if w else (('its reader found it on ' + named) if named and named != 'none' else 'listed, not drawn')
         for (k_, p_, s_), v_ in BY_HAND.items():
             if (k_, p_) == (k, r['page_id']) and r['what'].startswith(s_): assert not w, ('the rule now sees it: take the hand mark away', s_); d = v_; HAND_SEEN.add((k_, p_, s_))
@@ -166,6 +173,7 @@ for k in LETTERS:
 with open(R / 'nv8_company_records.tsv', 'w', newline='') as f:
     w = csv.DictWriter(f, fieldnames=list(out[0]), delimiter='\t', lineterminator='\n'); w.writeheader(); w.writerows(out)
 assert HAND_SEEN == set(BY_HAND), 'a hand mark matches no record'
+assert ONLY_SEEN == set(ONLY_ON), 'a label restriction matches no record'
 assert WHY_SEEN == set(CD.DEC), ('a written reason matches no listed record', sorted(set(CD.DEC) - WHY_SEEN)[:3])
 c = Counter(o['company'] for o in out); cc = Counter((o['company'], o['which_way_its_reader_says_it_cuts']) for o in out if o['the_builder_s_disposition'] == 'listed, not drawn')
 print('control pages of lanes f to k: records that an earlier reader had listed, left out as listed twice', dict(twice), sum(twice.values()))

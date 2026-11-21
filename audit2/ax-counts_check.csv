@@ -1,0 +1,162 @@
+what,stated,recounted,agree
+current act rows,446,446,yes
+current drawn dated acts,443,443,yes
+current report-day acts,178,178,yes
+current nonmember tie lines,88,88,yes
+current act/tie wording characters (tie pair prefixes omitted),402310,402310,yes
+prior act rows,444,444,yes
+prior drawn dated acts,441,441,yes
+prior report-day acts,178,178,yes
+prior nonmember tie lines,88,88,yes
+prior act/tie wording characters (tie pair prefixes omitted),382259,382259,yes
+first release act rows,444,444,yes
+first release drawn acts,441,441,yes
+first release character total,385297,intermediate rows not supplied,limit
+first release character increment,3038,intermediate rows not supplied,limit
+second release character increment,17013,intermediate rows not supplied,limit
+combined two-release row-character increment,20051,20051,yes
+current records,1875,1875,yes
+current readers,16,16,yes
+current worded,434,434,yes
+current reader-found,563,563,yes
+current listed,878,878,yes
+current Anthropic listed,517,517,yes
+current OpenAI listed,361,361,yes
+first release / prior records,1697,1697,yes
+first release / prior readers,13,13,yes
+first release / prior worded,374,374,yes
+first release / prior reader-found,513,513,yes
+first release / prior listed,810,810,yes
+first release / prior Anthropic listed,486,486,yes
+first release / prior OpenAI listed,324,324,yes
+nonblank decisions,878,878,yes
+decision OWEDM,41,41,yes
+decision OWEDL,84,84,yes
+decision OWEDK,8,8,yes
+decision OWEDS,50,50,yes
+decision OWEDI,30,30,yes
+decision OWEDB,2,2,yes
+decision WHOLE,19,19,yes
+decision TWIN,14,14,yes
+OWEDM anthropic,24,24,yes
+OWEDM openai,17,17,yes
+OWEDL anthropic,53,53,yes
+OWEDL openai,31,31,yes
+OWEDK anthropic,7,7,yes
+OWEDK openai,1,1,yes
+OWEDS anthropic,34,34,yes
+OWEDS openai,16,16,yes
+OWEDI anthropic,0,0,yes
+OWEDI openai,30,30,yes
+OWEDB anthropic,0,0,yes
+OWEDB openai,2,2,yes
+all owed anthropic,118,118,yes
+all owed openai,97,97,yes
+all owed,215,215,yes
+already-carried reasons,33,33,yes
+closed-page listed records,87,87,yes
+closed-page now OWEDS,16,16,yes
+closed-page retained SEC,71,71,yes
+hand marks now,34,34,yes
+hand marks before,31,31,yes
+label records of new readers,178,178,yes
+changed earlier labels,7,7,yes
+labels_changed worded,60,60,yes
+labels_changed its reader,51,51,yes
+labels_changed listed,74,74,yes
+new decisions,74,74,yes
+new DETAILB decisions,9,9,yes
+changed decisions,18,18,yes
+gone decisions,6,6,yes
+reader n records,62,62,yes
+reader o records,56,56,yes
+reader p records,99,99,yes
+three-reader records,217,217,yes
+three-reader assigned page placements,91,91,yes
+control pages,6,6,yes
+target page placements,85,85,yes
+target distinct pages,85,85,yes
+entered table,178,178,yes
+control records excluded,39,39,yes
+planted control records,42,42,yes
+control literal hits,39,39,yes
+control literal misses,3,3,yes
+semantic recoveries among misses,2,2,read
+missing among misses,1,1,read
+ranked records,20,20,yes
+ranked drawn now,1,1,yes
+ranked owed now,19,19,yes
+unchanged other-company labels,13,13,yes
+later-version citations,77,77,yes
+later-version lines,36,36,yes
+on-line later-version warnings,65,65,yes
+standing-fact citations,12,12,yes
+register groups,1017,1017,yes
+register carried,121,121,yes
+register open,896,896,yes
+open first_reported in these days,65,65,yes
+open first_reported before,267,267,yes
+open first_reported unclear,564,564,yes
+open kind statement,395,395,yes
+open kind event,249,249,yes
+open kind decision,158,158,yes
+current STATUS characters,5664,5664,yes
+old STATUS characters,83902,83902,yes
+old STATUS equals prior original,True,True,yes
+first shortened STATUS characters,6232,intermediate module not supplied,log-supported
+prior image bytes,104333444,104333444,log-supported
+prior free bytes,524156,524156,log-supported
+first shortened image bytes,100376371,100376371,log-supported
+trial image bytes,104766504,104766504,log-supported
+trial free bytes,91096,91096,log-supported
+final image bytes,104749856,104749856,log-supported
+final free bytes,107744,107744,log-supported
+host byte limit,104857600,104857600,log-supported
+row byte-per-character estimate,220,builder estimate; no image opened,estimate
+old directional lean judgments described as four,4,6,no
+predecessor published report identical,True,True,yes
+later population folders,728,not independently reconstructed from supplied population files,limit
+later population company pages,85,not independently reconstructed from supplied population files,limit
+later population gaps,160,not independently reconstructed from supplied population files,limit
+later population neither-company,482,not independently reconstructed from supplied population files,limit
+later population owner post,1,not independently reconstructed from supplied population files,limit
+predecessor findings.csv rows,15,15,yes
+predecessor findings.csv ok,9,9,yes
+predecessor findings.csv qualification,6,6,yes
+predecessor findings.csv error,0,0,yes
+predecessor figure_findings.csv rows,5,5,yes
+predecessor dispositions_check.csv rows,119,119,yes
+predecessor dispositions_check.csv yes,113,113,yes
+predecessor dispositions_check.csv partial,4,4,yes
+predecessor dispositions_check.csv no,2,2,yes
+predecessor versions_check.csv rows,167,167,yes
+predecessor versions_check.csv yes,166,166,yes
+predecessor versions_check.csv scope limit,1,1,yes
+predecessor counts_check.csv rows,125,125,yes
+predecessor counts_check.csv yes,108,108,yes
+predecessor counts_check.csv limit,1,1,yes
+predecessor counts_check.csv log agrees,8,8,yes
+predecessor counts_check.csv measurement,8,8,yes
+predecessor site_findings.csv rows,13,13,yes
+predecessor site_findings.csv ok,13,13,yes
+predecessor gaps.csv rows,1,1,yes
+predecessor distinct assigned rows,13,13,yes
+predecessor assigned rows qualified,4,4,yes
+predecessor separate occasion findings,2,2,yes
+predecessor dispositions,20,20,yes
+first release owed anthropic,103,103,yes
+first release owed openai,98,98,yes
+first release owed total,201,201,yes
+first release keyword-search page population,6082,search inventory not supplied / not rerun,limit
+first release directional lean judgments toward Anthropic,3,4,no
+first release directional lean judgments against Anthropic,1,2,no
+H panels,15,15,measured
+H passage placements,861,861,measured
+H distinct URL/passage pairs,780,780,measured
+H added bindings,136,136,measured
+H known title headings,14,14,measured
+H known title placements,22,22,measured
+target-page reader mode yes,71,71,measured
+target-page reader mode windows,13,13,measured
+target-page reader mode no,1,1,measured
+selected frozen input pins,27,27,measured

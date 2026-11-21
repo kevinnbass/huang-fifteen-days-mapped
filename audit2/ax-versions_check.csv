@@ -1,0 +1,28 @@
+row_id,page,first_day,changed_day_eastern,real_later_version,how_classed,class_right,note
+MA445,art-own-openai-news-listing-near-20261107-wayback,,,no later-day stamp established,not a later-day case on supplied stamps,yes,
+MA445,art-own-openai-to-acquire-pierre-wayback,2026-11-04,,no later-day stamp established,not a later-day case on supplied stamps,yes,Own printed date checked in HTML; capture date is not publication day.
+MA446,art-own-openai-daybreak-red-aws-govcloud,2026-11-04,,no later-day stamp established,not a later-day case on supplied stamps,yes,Own printed date checked in HTML; capture date is not publication day.
+MA446,art-own-openai-news-listing-near-20261107-wayback,,,no later-day stamp established,not a later-day case on supplied stamps,yes,
+MT29,cn-clips-huang-dwarkesh,2026-04-15,2026-10-01,yes,line warning,yes,
+MT29,cn-factions-latetalk-188,2026-11-14,2026-11-14,no,not a later-day case on supplied stamps,yes,
+MT29,man-8fe865a2b656,2026-11-14,2026-11-14,no,not a later-day case on supplied stamps,yes,Printed Nov 14 and 6:25 p.m. ET update on same day.
+MT57,cn-tolerate-aws,2024-08-23,2024-08-23,no,not a later-day case on supplied stamps,yes,
+MT62,man-ca3e18f95a8f,2026-02-23,not resolvable to Eastern,displayed next day,line warning,yes,PDF prints Feb 23 publication and Feb 24 update without a timezone. Row reproduces that displayed sequence; an Eastern conversion is not independently established.
+MT64,cn-tolerate-aws,2024-08-23,2024-08-23,no,not a later-day case on supplied stamps,yes,
+MT64,man-ca3e18f95a8f,2026-02-23,not resolvable to Eastern,displayed next day,line warning,yes,PDF prints Feb 23 publication and Feb 24 update without a timezone. Row reproduces that displayed sequence; an Eastern conversion is not independently established.
+MT65,art-own-anthropic-2028-ai-leadership,2026-05-14,2026-10-14,yes,line warning,yes,
+MT65,art-own-chinatalk-amodei-on-ai-competition,2025-02-05,2025-02-06,yes,line warning,yes,
+MT65,cn-clips-huang-dwarkesh,2026-04-15,2026-10-01,yes,line warning,yes,
+MT66,art-own-anthropic-threat-intelligence-report-0926,,,not checked,existing line warning,scope limit,Original intentionally unopened; builder-cut excerpts only. No independent version-history claim.
+MT66,cn-clips-technical-3,2025-11-13,2026-10-19,yes,line warning,yes,
+MT68,cn-labs-kaifu-202410,2024-10-20,,no later-day stamp established,not a later-day case on supplied stamps,yes,Own HTML publication stamp is +08:00 and converts to Oct 20 Eastern; no modification stamp is supplied.
+MT70,cn-factions-latetalk-188,2026-11-14,2026-11-14,no,not a later-day case on supplied stamps,yes,
+MT71,cn-clips-primary-7,,,no later-day stamp established,not a later-day case on supplied stamps,yes,
+MT71,cn-clips-technical-4,2026-11-13,,no later-day stamp established,not a later-day case on supplied stamps,yes,Dated PDF; no HTML saved.
+MT71,cn-factions-chen-ai-202609,2026-09-18,,no later-day stamp established,not a later-day case on supplied stamps,yes,"Printed university-page publication date, also in saved HTML."
+MT72,cn-clips-primary-7,,,no later-day stamp established,not a later-day case on supplied stamps,yes,
+MT72,cn-clips-technical-4,2026-11-13,,no later-day stamp established,not a later-day case on supplied stamps,yes,Dated PDF; no HTML saved.
+MT72,cn-factions-chen-ai-202609,2026-09-18,,no later-day stamp established,not a later-day case on supplied stamps,yes,"Printed university-page publication date, also in saved HTML."
+MT76,art-own-anthropic-alignment-assessment-cybersecurity-incidents,2026-09-09,2026-11-13,yes,line warning,yes,
+MT77,art-own-metr-hugging-face-incident-report-0826-pdf,,,no later-day stamp established,not a later-day case on supplied stamps,yes,
+MT80,art-own-cnbc-260506-anthropic-spacex-compute,2026-05-06,2026-05-06,no,not a later-day case on supplied stamps,yes,

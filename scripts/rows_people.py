@@ -40,7 +40,7 @@ BENCH = [
  ('Sihao Huang', 'Trump', 'Senior policy advisor for AI, White House Office of Science and Technology Policy',
   'Head of frontier compute strategy, since September 2026', 'confirmed', '',
   ['cnbc-1009-poach'],
-  ['Sihao Huang joined Amodei\'s AI lab in September as head of frontier compute strategy. He was previously a senior policy advisor for AI and emerging technology at the White House Office of Science and Technology Policy']),
+  ['AI lab in September as head of frontier compute strategy. He was previously a senior policy advisor for AI and emerging technology at the White House Office of Science and Technology Policy']),
  ('Sarah Heck', 'Trump', 'National Security Council, per the article only (not confirmed here)',
   'Head of Policy', 'confirmed', 'The Anthropic title is in her court declaration; her NSC service and its dates were not confirmed here.',
   ['heck-declaration', A],

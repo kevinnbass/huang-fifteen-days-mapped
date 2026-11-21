@@ -27,7 +27,11 @@ credited the pass with a verdict it never gave is DETAILB; a commentator's charg
 The rule for a company's own posts dated inside the fifteen days, written out because the forty-eighth reading found two such posts of OpenAI on no chip: the figure draws a post that concerns chips, computing capacity or its power, a supplier
 of computing (a channel through which a product is sold is not one), export rules, a government (an agreement, access for government bodies, an appointment from government, a decision or statement), a proceeding or suit, the control or financing of the company or of
 a company it buys, the security of its models and systems, the testing or alignment of its frontier models, or election spending. It does not draw a post about product features and safeguards for consumers,
-guidance on how a model should behave, appointments from outside government, education and community programmes, or research on other subjects. The same rule holds for both companies."""
+guidance on how a model should behave, appointments from outside government, education and community programmes, or research on other subjects. The same rule holds for both companies.
+Batch s11n (Nov 21, 2026; the answer to the forty-ninth reading): a federal judge's statement about OpenAI's financial and technical position, made in the antitrust case against Google, had been set aside because OpenAI
+was no party to that case. The cut covers a public statement of a government about the company and names no such exception: the record is OWED (reason OWEDR), and the reason of the three other records of that case no longer
+speaks of the court's example. Two records of a wire report of 2024 (a client named in a cloud provider's posts; the posts' removal after the wire asked) left this module: the reading found that Anthropic's line read more
+favourably without them, and the line now gives them."""
 WHY = {
     'EST': 'an outside estimate, forecast, calculation or scenario of computing power, spending or value; not a record of an act (an exclusion stated with the batch of Nov 18)',
     'CALL': "a mention of the company as a customer or user on one of Nvidia's earnings calls, or a relay of one, with no delivery, agreement, sum or decision in it (an exclusion stated with the batch of Nov 18); the company's line with Nvidia gives their dealings from releases and filings",
@@ -55,6 +59,7 @@ WHY = {
     'TWIN': "a row quotes the same words from another saved copy of the same report or page; the table's rule links a record only to rows that cite the record's own page",
     'DETAILB': "a further particular of an act, an incident, a report or a filing that a row already gives; in the builder's own judgment the row reads no more and no less favourably to the company without it (no reader of the pass read this record)",
     'OWEDB': "OWED. In the builder's own judgment the record is of the cut's kinds, or a row that gives the act reads differently without this particular; it is still to be added (no reader of the pass read this record)",
+    'OWEDR': "OWED. The forty-ninth reading found the record to be of the cut's kinds (a public statement of a government body about the company: a federal judge's, in a case against another company) where the builder had set it aside because the company was no party. The builder accepts the reading's view and has not yet drawn the record: the image has no room for an addition of its length",
 }
 DEC = {
     ('f', 'ms-geo-nvda-q3fy26-call-fool', 'anthropic', 'Nvidia’s finance chief describes the company as increasing its compute spending aggressive'): 'CALL',
@@ -889,11 +894,11 @@ DEC = {
     ('o', 'cn-clips-singju-luckey', 'anthropic', 'Anduril’s founder says every major model has been jailbroken, but distinguishes control at'): 'OPIN',
     ('o', 'cn-clips-singju-luckey', 'openai', 'Anduril’s founder says every major model has been jailbroken, but distinguishes control at'): 'OPIN',
     ('o', 'cn-counter-b11-6', 'anthropic', 'CSET calls approximately $183 billion Anthropic’s latest valuation.'): 'FIN',
-    ('o', 'cn-counter-b11-6', 'anthropic', 'CSET says the Google antitrust data-sharing remedy may give the company access to Google’s'): "=a proceeding against another company (the antitrust case against Google); the company appears as a possible beneficiary of the remedy, as a would-be buyer or as the court's example, not as a party",
+    ('o', 'cn-counter-b11-6', 'anthropic', 'CSET says the Google antitrust data-sharing remedy may give the company access to Google’s'): "=a proceeding against another company (the antitrust case against Google); the company appears as a possible beneficiary of the remedy or as a would-be buyer, not as a party, and the record gives no statement of the court about the company",
     ('o', 'cn-counter-b11-6', 'openai', 'CSET says Microsoft’s required approval came on confidential terms, with observers thinkin'): 'FIN',
-    ('o', 'cn-counter-b11-6', 'openai', 'CSET says OpenAI reportedly expressed interest in acquiring Chrome, but the judge did not '): "=a proceeding against another company (the antitrust case against Google); the company appears as a possible beneficiary of the remedy, as a would-be buyer or as the court's example, not as a party",
-    ('o', 'cn-counter-b11-6', 'openai', 'CSET says the Google antitrust data-sharing remedy may give the company access to Google’s'): "=a proceeding against another company (the antitrust case against Google); the company appears as a possible beneficiary of the remedy, as a would-be buyer or as the court's example, not as a party",
-    ('o', 'cn-counter-b11-6', 'openai', 'CSET says the federal judge in Google’s antitrust case cited OpenAI’s financial and techni'): "=a proceeding against another company (the antitrust case against Google); the company appears as a possible beneficiary of the remedy, as a would-be buyer or as the court's example, not as a party",
+    ('o', 'cn-counter-b11-6', 'openai', 'CSET says OpenAI reportedly expressed interest in acquiring Chrome, but the judge did not '): "=a proceeding against another company (the antitrust case against Google); the company appears as a possible beneficiary of the remedy or as a would-be buyer, not as a party, and the record gives no statement of the court about the company",
+    ('o', 'cn-counter-b11-6', 'openai', 'CSET says the Google antitrust data-sharing remedy may give the company access to Google’s'): "=a proceeding against another company (the antitrust case against Google); the company appears as a possible beneficiary of the remedy or as a would-be buyer, not as a party, and the record gives no statement of the court about the company",
+    ('o', 'cn-counter-b11-6', 'openai', 'CSET says the federal judge in Google’s antitrust case cited OpenAI’s financial and techni'): 'OWEDR',
     ('o', 'cn-counter-b11-6', 'openai', 'CSET says the proposed deal would give OpenAI’s nonprofit board about $100 billion of equi'): 'FIN',
     ('o', 'cn-counter-b11-6', 'openai', 'CSET separately calls approximately $500 billion OpenAI’s latest valuation.'): 'FIN',
     ('o', 'cn-factions-chan-triolo-20260512', 'anthropic', 'A High Capacity podcast guest criticizes its chief executive’s nuclear-weapons analogy and'): 'OPIN',
@@ -931,8 +936,6 @@ DEC = {
     ('p', 'cn-labs-zhipu-gpu-appeal-20260221', 'anthropic', 'Yicai reports Anthropic annualized recurring revenue rose from USD100 million in 2023 to U'): 'FIN',
     ('p', 'cn-labs-zhipu-gpu-appeal-20260221', 'anthropic', 'Yicai reports a USD380 billion valuation in Anthropic’s latest fundraiser.'): 'FIN',
     ('p', 'cn-policy-statefunded-private-project', 'openai', 'Reuters says Microsoft, Meta and OpenAI collectively spent or allocated hundreds of billio'): 'CAP',
-    ('p', 'cn-tolerate-aws', 'anthropic', 'Reuters reports Amazon identified Chinese gaming firm Source Technology as a Claude client'): 'DETAILB',
-    ('p', 'cn-tolerate-aws', 'anthropic', 'Reuters says Amazon added regional-availability notices and removed promotional posts incl'): 'DETAILB',
     ('p', 'cnpol-x-fedasiuk-2055097086312624481', 'anthropic', 'The author of a post on X argues that selling chips to Chinese labs would equip competitor'): 'OPIN',
     ('p', 'cnpol-x-fedasiuk-2055097086312624481', 'openai', 'The author of a post on X argues that selling chips to Chinese labs would equip competitor'): 'OPIN',
 }
