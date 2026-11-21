@@ -1,0 +1,2 @@
+row_id_or_key,source,what_failed
+listing-census,OpenAI November 2 listing capture,Listing names October 30 teen-protection report and October 29 Model Spec update; no full saved source was located by the bounded exact-title text search. Their full content/scope cannot be cleared from titles. No web fetch.

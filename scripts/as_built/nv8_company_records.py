@@ -20,7 +20,9 @@ pages (research/reading_lanes/own_read_s11h.population.tsv and .controls.tsv; no
 Batch s11k (Nov 20, 2026): a thirteenth reader (lane own_read_nv8_m) read the five pages, among thirteen folders another session saved on Nov 19, 2026 after the builder's last count, whose text names either company,
 and two control pages (research/reading_lanes/own_read_s11k.population.tsv, .left_out.tsv and .controls.tsv; not published). One of the five, a list page of OpenAI's, was saved with five entries of its list as its text:
 the reader was given the whole visible text of its saved HTML. Its records are taken in by the same rules, and each one left listed has a written reason. The five pages stand in the table under the ids of the
-builder's own copies of the same addresses (see ALIAS below)."""
+builder's own copies of the same addresses (see ALIAS below).
+Batch s11m (Nov 21, 2026): three further readers (lanes own_read_nv8_n, _o, _p) read 85 pages that session saved after the thirteenth reader's, with six control pages
+(research/reading_lanes/own_read_s11l.population.tsv, .left_out.tsv and .controls.tsv; not published); reader n closed incomplete over one hand-saved page with missing characters."""
 import csv, re, shutil, sys
 from collections import Counter
 from pathlib import Path
@@ -28,13 +30,14 @@ ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; RL = R / 'rea
 import rows_map
 import nv8_cut_decisions as CD
 csv.field_size_limit(10**9)
-LETTERS = 'abcdefghijklm'; SECOND = 'fghijklm'
+LETTERS = 'abcdefghijklmnop'; SECOND = 'fghijklmnop'
 for k in LETTERS:
     for n in ('records.csv', 'pages_read.csv', 'REPORT.md'):
         dst = RL / f'own_read_nv8_{k}.{n}'
         if not dst.exists():
             assert (LANES / f'own_read_nv8_{k}' / 'done' / 'DONE').exists(); shutil.copyfile(LANES / f'own_read_nv8_{k}' / 'out' / n, dst)
-key = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
+key = lambda s: re.sub(r'[^a-z0-9\u3400-\u9fff]', '', s.lower())        # batch s11m: Chinese characters are kept (until then a passage in Chinese was compared by its Latin letters alone, and two passages that
+#   both name a company looked alike)
 cited = {}
 for r in rows_map.rows():
     if r.get('withdrawn'): continue
@@ -42,6 +45,7 @@ for r in rows_map.rows():
         cited.setdefault(page, []).append((r['row_id'], key(q)))
 def worded(page, words):
     w = key(words); out = []
+    if len(w) < 12: return out        # batch s11m: a record whose copied words hold fewer than twelve letters, digits or Chinese characters cannot be compared by this rule (an empty key stood 'in' every passage)
     for row, q in cited.get(page, []):
         if len(q) >= 12 and (q in w or w in q or any(w[i:i + 40] in q for i in range(0, max(1, len(w) - 39), 8))): out.append(row)
     return sorted(set(out), key=lambda x: (x[:2], int(x[2:])))
@@ -119,10 +123,19 @@ BY_HAND = {
     # batch s11i (the answer to the forty-fifth reading; the builder's pass over the listed records under the cut's two newer kinds): one record that a line gives from another sentence of the page
     ('l', 'ms-xpost-transformer-anthropic-philanthropy-20260312', 'A Stanford philosophy professor warns'):
         "worded on MT70 (marked by hand, in part: the line gives the report's sentence that paying people to hold you accountable carries risks; his own sentence on competitive pressure is not on it)",
+    # batch s11m (the forty-eighth reading, T-stale-owed): two records of the pass that were marked OWED and that a line has worded since batch s11k from another page or passage
+    ('a', 'art-own-openai-hugging-face-incident-road-ahead-wayback', 'High-volume agent activity caused an Artifactory outage'):
+        "worded on MT77 (marked by hand: the line gives the outage of July 4 from the evaluator's report)",
+    ('d', 'art-own-chinatalk-amodei-on-ai-competition', 'Anthropic’s chief executive says controls cannot prevent tens of thousands of chips or smuggling'):
+        'worded on MT65 (marked by hand: the line quotes his words that the controls were never designed to prevent tens of thousands of chips and that smuggling is to be expected)',
+    # batch s11m: a sentence on the page with the closed chapter that the forty-eighth reading found partly worded
+    # (a hand mark for a record in Chinese, on the line with a competitor's founder's claim, was taken away in the same batch: the rule compares Chinese characters now and sees it)
+    ('a', 'art-own-anthropic-threat-intelligence-report-0926', 'Chinese public/state-security actors overcame refusals'):
+        "worded on MT66 (marked by hand, in part: the line quotes the report's own sentences that a refusal was overcome on further prompting and that the model complied across many sessions; the case's other particulars are not on it)",
 }
 HAND_SEEN = set(); WHY_SEEN = set(); why_n = Counter()
 out = []; st = Counter()
-CTL = {(r['lane'][-1], r['page_id']) for n_ in ('own_read_s11f.controls.tsv', 'own_read_s11h.controls.tsv', 'own_read_s11k.controls.tsv') for r in csv.DictReader(open(RL / n_, newline=''), delimiter='\t')}; FIRST = {}; twice = Counter()
+CTL = {(r['lane'][-1], r['page_id']) for n_ in ('own_read_s11f.controls.tsv', 'own_read_s11h.controls.tsv', 'own_read_s11k.controls.tsv', 'own_read_s11l.controls.tsv') for r in csv.DictReader(open(RL / n_, newline=''), delimiter='\t')}; FIRST = {}; twice = Counter()
 def same(a, b):
     return bool(a and b) and (a in b or b in a or any(a[i:i + 40] in b for i in range(0, max(1, len(a) - 39), 8)))
 # batch s11k: the thirteenth reader read five pages in the copies another session of the project had saved; that session's folder names hold a string the release does not publish. The table gives each of the five
@@ -137,6 +150,7 @@ for k in LETTERS:
             if any(same(key(r['exact_words']), x) for x in FIRST.get(r['page_id'], [])): twice[k] += 1; continue
         if k in SECOND: r['what'] = re.sub(r"\bYardeni\b(?! Research)", "Yardeni Research's letter", r['what'])
         if k in SECOND: r['what'] = re.sub(r"\b(?:Colette )?Kress\b", "Nvidia's finance chief", r['what'])        # the office, not the name: the release's rule for names in this table
+        if k in 'nop': r['what'] = re.sub(r"\bRyan Fedasiuk\b", "The author of a post on X", re.sub(r"\bJordan Schneider\b", "ChinaTalk's host", r['what']))        # batch s11m: two people the figure does not draw, by role
         w = worded(r['page_id'], r['exact_words']); named = r['already_on_row'].strip()
         d = ('worded on ' + ', '.join(w)) if w else (('its reader found it on ' + named) if named and named != 'none' else 'listed, not drawn')
         for (k_, p_, s_), v_ in BY_HAND.items():

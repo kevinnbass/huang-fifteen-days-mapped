@@ -1,0 +1,126 @@
+what,stated,recounted,agree
+delta rows,13,13,yes
+new chips,2,2,yes
+amended act rows,1,1,yes
+amended ties,10,10,yes
+act rows,444,444,yes
+drawn dated acts,441,441,yes
+drawn report-day acts,178,178,yes
+drawn acts without date,0,0,yes
+nonmember ties,88,88,yes
+anthropic act rows,12,12,yes
+anthropic chips,10,10,yes
+openai act rows,14,14,yes
+openai chips,9,9,yes
+company records,1697,1697,yes
+readers,13,13,yes
+worded labels,374,374,yes
+reader-found labels,513,513,yes
+listed labels,810,810,yes
+Anthropic listed labels,486,486,yes
+OpenAI listed labels,324,324,yes
+nonblank listed decisions,810,810,yes
+hand marks,31,31,yes
+opposite-company labels,13,13,yes
+version citations,73,73,yes
+tie lines with later versions,35,35,yes
+warnings on tie lines,61,61,yes
+standing-fact version entries,12,12,yes
+register acts,1017,1017,yes
+register open,896,896,yes
+register carried,121,121,yes
+thirteenth-reader table records,38,38,yes
+thirteenth-reader newly drawn labels,4,4,yes
+thirteenth-reader found labels,6,6,yes
+thirteenth-reader listed,28,28,yes
+thirteenth-reader total records,48,48,yes
+thirteenth-reader Anthropic,28,28,yes
+thirteenth-reader OpenAI,20,20,yes
+thirteenth-reader pages,7,7,yes
+thirteenth-reader controls removed,10,10,yes
+thirteenth-reader aliases,5,5,yes
+pass reader a records incl controls,149,149,yes
+pass reader b records incl controls,200,200,yes
+pass reader c records incl controls,206,206,yes
+pass records,525,525,yes
+pass whole,21,21,yes
+pass in part,280,280,yes
+pass no row,224,224,yes
+pass cut kinds,85,85,yes
+pass security referrals,75,75,yes
+pass newly worded labels,31,31,yes
+planted controls,30,30,yes
+planted worded controls,15,15,yes
+worded controls found,15,15,yes
+reason controls outside cut,12,12,yes
+reason controls referred back,2,2,yes
+reason-control supplier financing,1,1,yes
+pass anthropic row reads more favourable to the company,33,33,yes
+pass anthropic row reads less favourable to the company,57,57,yes
+pass openai row reads more favourable to the company,23,23,yes
+pass openai row reads less favourable to the company,34,34,yes
+literal OWED decisions,201,201,yes
+OWED Anthropic,103,103,yes
+OWED OpenAI,98,98,yes
+OWEDM total,43,43,yes
+OWEDM Anthropic,25,25,yes
+OWEDM OpenAI,18,18,yes
+OWEDL total,84,84,yes
+OWEDL Anthropic,53,53,yes
+OWEDL OpenAI,31,31,yes
+OWEDK total,8,8,yes
+OWEDK Anthropic,7,7,yes
+OWEDK OpenAI,1,1,yes
+OWEDS total,34,34,yes
+OWEDS Anthropic,18,18,yes
+OWEDS OpenAI,16,16,yes
+OWEDI total,32,32,yes
+OWEDI Anthropic,0,0,yes
+OWEDI OpenAI,32,32,yes
+reader-written reasons,29,29,yes
+closed-page listed records,89,89,yes
+later eight readers listed,227,227,yes
+first-five original listed population,615,615,yes
+closed-page original pass population,90,90,yes
+paper-report pairs,142,142,yes
+paper-report pairs without own original,23,23,yes
+predecessor findings rows,4,4,yes
+predecessor figure_findings rows,1,1,yes
+predecessor dispositions_check rows,21,21,yes
+predecessor versions_check rows,26,26,yes
+predecessor counts_check rows,86,86,yes
+predecessor site_findings rows,4,4,yes
+predecessor gaps rows,0,0,yes
+predecessor agreeing recounts,78,78,yes
+predecessor disagreeing recounts,1,1,yes
+predecessor measurements/limits,7,7,yes
+predecessor dispositions,2,2,yes
+published predecessor report equals lane report,identical,identical,yes
+historical baseline corrected,16 before;15 builder subset,16 before;15 builder subset,yes
+first-four historical page count,84,82 represented pages; complete zero-record-page manifests not supplied,limit
+fifth reader represented pages,16,16,yes
+later folders,728,728,yes
+later company folders,85,85,log agrees
+later gap folders,160,160,log agrees
+later neither-company folders,482,482,log agrees
+owner post excluded,1,1,log agrees
+refused/failed fetch gaps,131,131,log agrees
+later population whole pages,72,72,log agrees
+later population windows,13,13,log agrees
+near-empty later folders,29,29,log agrees
+later population partition,728,728,yes
+direct company-hit census rows,not stated,78,measurement
+prior image bytes,101929196,101929196,yes
+current image bytes,not printed in prose,104333444,measurement
+host byte limit,104857600,104857600,yes
+remaining bytes below host limit,not stated,524156,measurement
+H panels,13,13,yes
+H displayed passage placements,measured,711,measurement
+H distinct URL/passage pairs,measured,678,measurement
+H added passage records,71,71,yes
+H title-limit headings,measured,13,measurement
+H title-limit placements,measured,18,measurement
+H undrawn people in known title limit,measured,7,measurement
+status thirteen readings immediately before fortieth with missing marks,13,13,yes
+status fortieth through forty-third without missing marks,4,4,yes
+status forty-seventh missing occasion/part marks,0,0,yes
