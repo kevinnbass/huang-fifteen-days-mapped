@@ -51,7 +51,8 @@ COPIES = {'art-fc-bs-nyt-1110-woman': T, 'art-fc-bs-nyt-1112-trump': T, 'sw-bost
           'art-fc-itiger-wsj-1030': J, 'art-fc-itiger-wsj-1030-v1': J, 'art-fc-mint-wsj-taiwan': J, 'art-fc-tovima-wsj-1108-board': J, 'art-fc-tovima-wsj-1109-woman': J,
           'art-fc-tovima-wsj-1110': J, 'art-fc-tovima-wsj-1111-oust': J, 'art-fc-tovima-wsj-1112-kangwei': J,
           'art-fc-tovima-ft-1109-admits': F,
-          'art-fc-itiger-2682389645': J}          # found by the forty-second reading: a plain Dow Jones credit, which the signs did not read
+          'art-fc-itiger-2682389645': J,          # found by the forty-second reading: a plain Dow Jones credit, which the signs did not read
+          'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002': T}          # batch s11k: The Philadelphia Inquirer's copy of the Times's report of Oct 2, 2026; a chip (OpenAI, Oct 30) quotes the Times's own sentence on its suit from it
 # a cited page that shows a strong sign and is not a copy
 NOT_COPIES = {'ms-ag-bworld-1114-wsj-gain': "an agency's relay of the Journal's report, carried by a third outlet: not a copy of the article"}
 ID_SIGN = {T: r'(?:^|-)nyt(?:-|$)', J: r'(?:^|-)wsj(?:-|$)', F: r'(?:^|-)ft(?:-|$)'}

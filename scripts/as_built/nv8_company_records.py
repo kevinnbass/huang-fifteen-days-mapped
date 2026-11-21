@@ -16,7 +16,11 @@ later readers that is still `listed, not drawn` (scripts/nv8_cut_decisions.py ho
 empty for the records of the first five readers: those were weighed in earlier rounds, without a written reason for each.
 
 Batch s11h (Nov 19, 2026): a twelfth reader (lane own_read_nv8_l) read the eight pages, among twenty folders another session saved after the builder's count of Nov 18, whose text names either company, and two control
-pages (research/reading_lanes/own_read_s11h.population.tsv and .controls.tsv; not published). Its records are taken in by the same rules, and each one left listed has a written reason."""
+pages (research/reading_lanes/own_read_s11h.population.tsv and .controls.tsv; not published). Its records are taken in by the same rules, and each one left listed has a written reason.
+Batch s11k (Nov 20, 2026): a thirteenth reader (lane own_read_nv8_m) read the five pages, among thirteen folders another session saved on Nov 19, 2026 after the builder's last count, whose text names either company,
+and two control pages (research/reading_lanes/own_read_s11k.population.tsv, .left_out.tsv and .controls.tsv; not published). One of the five, a list page of OpenAI's, was saved with five entries of its list as its text:
+the reader was given the whole visible text of its saved HTML. Its records are taken in by the same rules, and each one left listed has a written reason. The five pages stand in the table under the ids of the
+builder's own copies of the same addresses (see ALIAS below)."""
 import csv, re, shutil, sys
 from collections import Counter
 from pathlib import Path
@@ -24,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; RL = R / 'rea
 import rows_map
 import nv8_cut_decisions as CD
 csv.field_size_limit(10**9)
-LETTERS = 'abcdefghijkl'; SECOND = 'fghijkl'
+LETTERS = 'abcdefghijklm'; SECOND = 'fghijklm'
 for k in LETTERS:
     for n in ('records.csv', 'pages_read.csv', 'REPORT.md'):
         dst = RL / f'own_read_nv8_{k}.{n}'
@@ -118,12 +122,16 @@ BY_HAND = {
 }
 HAND_SEEN = set(); WHY_SEEN = set(); why_n = Counter()
 out = []; st = Counter()
-CTL = {(r['lane'][-1], r['page_id']) for n_ in ('own_read_s11f.controls.tsv', 'own_read_s11h.controls.tsv') for r in csv.DictReader(open(RL / n_, newline=''), delimiter='\t')}; FIRST = {}; twice = Counter()
+CTL = {(r['lane'][-1], r['page_id']) for n_ in ('own_read_s11f.controls.tsv', 'own_read_s11h.controls.tsv', 'own_read_s11k.controls.tsv') for r in csv.DictReader(open(RL / n_, newline=''), delimiter='\t')}; FIRST = {}; twice = Counter()
 def same(a, b):
     return bool(a and b) and (a in b or b in a or any(a[i:i + 40] in b for i in range(0, max(1, len(a) - 39), 8)))
+# batch s11k: the thirteenth reader read five pages in the copies another session of the project had saved; that session's folder names hold a string the release does not publish. The table gives each of the five
+# under the id of the builder's own copy of the same address (saved Nov 20 and 21, 2026; the saved texts are equal, character for character: research/reading_lanes/own_read_s11k.page_alias.tsv, not published).
+ALIAS = {r['page_as_the_reader_read_it']: r['page_in_the_table'] for r in csv.DictReader(open(RL / 'own_read_s11k.page_alias.tsv', newline=''), delimiter='\t')}; assert len(ALIAS) == 5
 for k in LETTERS:
-    pages = {r['page_id']: r for r in csv.DictReader(open(RL / f'own_read_nv8_{k}.pages_read.csv', newline=''))}
+    pages = {ALIAS.get(r['page_id'], r['page_id']): r for r in csv.DictReader(open(RL / f'own_read_nv8_{k}.pages_read.csv', newline=''))}
     for r in csv.DictReader(open(RL / f'own_read_nv8_{k}.records.csv', newline='')):
+        if k == 'm': r['page_id'] = ALIAS.get(r['page_id'], r['page_id'])
         if k not in SECOND: FIRST.setdefault(r['page_id'], []).append(key(r['exact_words']))
         elif (k, r['page_id']) in CTL:
             if any(same(key(r['exact_words']), x) for x in FIRST.get(r['page_id'], [])): twice[k] += 1; continue
@@ -135,9 +143,9 @@ for k in LETTERS:
             if (k_, p_) == (k, r['page_id']) and r['what'].startswith(s_): assert not w, ('the rule now sees it: take the hand mark away', s_); d = v_; HAND_SEEN.add((k_, p_, s_))
         st[(r['company'], d.split(' on ')[0].split(',')[0])] += 1
         what = re.sub(r'\s+', ' ', r['what']).strip(); ck = (k, r['page_id'], r['company'], what[:90]); why = ''
-        if k in SECOND and d == 'listed, not drawn':
-            assert ck in CD.DEC, ('a listed record of the six later readers has no written reason', ck); assert ck not in WHY_SEEN, ('two records share a reason key', ck); WHY_SEEN.add(ck); why = CD.WHY[CD.DEC[ck]]; why_n[(r['company'], CD.DEC[ck])] += 1
-        else: assert ck not in CD.DEC or k not in SECOND, ('a reason is written for a record that is no longer listed: take it away', ck)
+        if d == 'listed, not drawn':        # batch s11k: every reader's listed record needs a written decision (until then only the later readers' did)
+            assert ck in CD.DEC, ('a listed record has no written decision', ck); assert ck not in WHY_SEEN, ('two records share a reason key', ck); WHY_SEEN.add(ck); why = CD.why(ck); why_n[(r['company'], CD.code(ck))] += 1
+        else: assert ck not in CD.DEC, ('a reason is written for a record that is no longer listed: take it away', ck)
         out.append({'reader': k, 'page': r['page_id'], 'page_day_as_its_reader_read_it': pages.get(r['page_id'], {}).get('page_day', ''), 'company': r['company'], 'kind': r['kind'], 'act_inside_the_fifteen_days': r['in_the_fifteen_days'],
                     'what_in_its_reader_s_words': re.sub(r'\s+', ' ', r['what']).strip(), 'which_way_its_reader_says_it_cuts': r['cuts'], 'under_the_test_by_its_reader': r['under_the_test'], 'row_its_reader_named': '' if named == 'none' else named,
                     'the_builder_s_disposition': d, 'why_it_is_not_drawn': why})
@@ -148,5 +156,7 @@ assert WHY_SEEN == set(CD.DEC), ('a written reason matches no listed record', so
 c = Counter(o['company'] for o in out); cc = Counter((o['company'], o['which_way_its_reader_says_it_cuts']) for o in out if o['the_builder_s_disposition'] == 'listed, not drawn')
 print('control pages of lanes f to k: records that an earlier reader had listed, left out as listed twice', dict(twice), sum(twice.values()))
 print('records', len(out), dict(c), '| pages', len({o['page'] for o in out}), '| by disposition', dict(Counter(o['the_builder_s_disposition'].split(' on ')[0] for o in out)), '| listed, not drawn, by company and direction', dict(cc))
+owed = Counter((o['company'], CD.code((o['reader'], o['page'], o['company'], o['what_in_its_reader_s_words'][:90]))) for o in out if o['the_builder_s_disposition'] == 'listed, not drawn')
+print('every listed record has a written decision:', sum(owed.values()), '| OWED states by company', {k: v for k, v in sorted(owed.items()) if k[1].startswith('OWED')}, '| adopted sentences', sum(v for k, v in owed.items() if k[1] == 'NEW'))
 sl = [o for o in out if o['reader'] in SECOND and o['the_builder_s_disposition'] == 'listed, not drawn']
 print('the later readers (f to l): records', sum(1 for o in out if o['reader'] in SECOND), '| listed, each with a written reason', len(sl), dict(sorted(Counter((o['company'], o['which_way_its_reader_says_it_cuts']) for o in sl).items())), '| by company and reason', dict(sorted(why_n.items())))

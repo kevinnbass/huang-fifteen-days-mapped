@@ -1,0 +1,87 @@
+what,stated,recounted,agree
+current act rows,442,442,yes
+current drawn dated acts; README and status,439,439,yes
+current report-day acts; README and status,178,178,yes
+current drawn acts without a day; status none,0,0,yes
+current nonmember tie lines,88,88,yes
+current company records; README and status,1659,1659,yes
+current readers; README and status,12,12,yes
+current worded labels; README and status,337,337,yes
+current reader-found labels; README and status,508,508,yes
+current listed labels; README and status,814,814,yes
+current listed Anthropic; README and status,482,482,yes
+current listed OpenAI; README and status,332,332,yes
+current hand marks; README section and labels paragraph,31,31,yes
+later-version citations,70,70,yes
+tie lines with later-version citations,35,35,yes
+later-version citations warned on line,58,58,yes
+later-version standing-fact citations,12,12,yes
+register groups,1017,1017,yes
+register carried groups,121,121,yes
+register open groups,896,896,yes
+seven later readers with listed records,7,7,yes
+later listed records with reasons,199,199,yes
+later listed records lacking a reason; each has one,0,0,yes
+private later-reason table,199,199,yes
+first-five listed records,615,615,yes
+first-five reader population,5,5,yes
+first-five listed records with individual reasons; none,0,0,yes
+first-five listed records inside fifteen days,4,4,yes
+reasons taken away,2,2,yes
+remaining election-case reason records,7,7,yes
+prior finding lines,12,12,yes
+prior ok finding lines,10,10,yes
+prior qualification finding lines,2,2,yes
+prior row errors,0,0,yes
+prior delta rows,11,11,yes
+prior delta rows ok after all findings,9,9,yes
+prior delta rows qualified,2,2,yes
+prior text/table finding lines,4,4,yes
+prior disposition-check lines,33,33,yes
+prior disposition checks yes,27,27,yes
+prior disposition checks partial,5,5,yes
+prior disposition checks no,1,1,yes
+prior later-version pairs,15,15,yes
+prior later-version classifications right,15,15,yes
+prior recounts agree,98,98,yes
+prior recounts disagree,1,1,yes
+prior recounts measurements or limits,40,40,yes
+prior interactive-map checks,1,1,yes
+prior map checks ok,1,1,yes
+prior source gaps,0,0,yes
+prior non-ok lines requiring dispositions,13,13,yes
+builder disposition lines,13,13,yes
+builder applied disposition labels,12,12,yes
+builder partial repair with stated remainder,1,1,yes
+prior underlying dispositions checked,20,20,yes
+opposite-company-only labels before answer,15,16,no
+opposite-company-only labels after answer,13,13,yes
+remaining slowdown records placed on opposite company line,12,12,yes
+remaining general election charge on opposite company line,1,1,yes
+gaps repaired in other direction,2,2,yes
+corrected nine: adverse Anthropic records on ms-xpost-nyt-inquirer-ai-midterm-spending-20261002,5,5,yes
+corrected nine: adverse Anthropic records on ms-xpost-transformer-anthropic-philanthropy-20260312,4,4,yes
+corrected nine across two reports,9,9,yes
+corrected first-five NIST listed planned-feedback records,2,2,yes
+corrected first-five NIST agreement records originally reader-found,2,2,yes
+first-reader groups in file description,5,5,yes
+fifth-reader represented pages,16,16,yes
+four first readers pages read (historical script account),84,82 distinct pages represented by records; the complete historical page-reading manifests are not supplied,n/a
+twelfth-reader original records,72,72,yes
+twelfth-reader retained records,63,63,yes
+twelfth-reader control records left out,9,9,yes
+twelfth-reader main pages,8,8,yes
+twelfth-reader control pages,2,2,yes
+image previous release cf057a2 bytes,104301901,104301901,yes
+image prior audited release 5a1fd35 bytes,101354481,101354481,yes
+host refusal threshold bytes in saved log,104857600,104857600,yes
+unpublished trial bytes in saved log,104828906,104828906,yes
+image previous release within one percent of threshold,True,True,yes
+current frozen release 1140cc0 bytes; saved log only,not stated in requested current comparison,101929196,n/a
+published prior report byte-identical to original,True,True,yes
+prior closing line audit complete,True,True,yes
+H displayed passages; measured,measured,145,n/a
+H distinct URL/passage pairs; measured,measured,133,n/a
+H known title-limit distinct headings; measured,measured,3,n/a
+H known title-limit placements; measured,measured,3,n/a
+H known title-limit undrawn people; measured,measured,4,n/a
