@@ -1,0 +1,11 @@
+finding_id,grade,element_text,problem
+H-MT70,ok,MT70 panel text and 61 passage placements,Exact row words and every distinct same-row evidence URL/passage agree. Repeated identical date bindings in evidence are shown once in the panel; this loses no passage.
+H-MT29,ok,MT29 panel text and 56 passage placements,"Exact complete row words, source URLs and per-row evidence passages agree."
+H-MT68,ok,MT68 panel text and 61 passage placements,"Exact complete row words, source URLs and per-row evidence passages agree."
+H-MT57,ok,MT57 panel text and 53 passage placements,Exact row words and every distinct same-row evidence URL/passage agree. Repeated identical date bindings in evidence are shown once in the panel; this loses no passage.
+H-MT66,ok,MT66 panel text and 34 passage placements,"Exact complete row words, source URLs and per-row evidence passages agree."
+H-MT65,ok,MT65 panel text and 88 passage placements,"Exact complete row words, source URLs and per-row evidence passages agree."
+H-ST03,qualification,ST03 panel text and 5 passage placements,"[table or text] The row words and five web-source passages agree, including the shortened hiring fragment. Two bound FEC amount passages (evidence n=6 and n=7: 3500.00 and 2500.00) are absent from the source array. The panel links the contributions table but supplies an empty passage list. Display these two amount bindings with their committee/source context, or disclose that this class of panel evidence is link-only."
+H-cut-MT65,ok,MT65 shortened passage,The panel carries the current shortened contiguous passage and does not retain the dropped name-bearing beginning.
+H-cut-ST03,ok,ST03 shortened passage,The panel carries the current shortened contiguous passage and does not retain the dropped name-bearing beginning.
+H-control,ok,Passage comparator control,A deliberately altered MT65 passage fails the same exact per-row comparison. The rendering code shows these arrays as blockquotes and the text fields as panel paragraphs. Static data/code check only; no image or browser view opened.

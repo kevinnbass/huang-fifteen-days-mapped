@@ -31,7 +31,8 @@ guidance on how a model should behave, appointments from outside government, edu
 Batch s11n (Nov 21, 2026; the answer to the forty-ninth reading): a federal judge's statement about OpenAI's financial and technical position, made in the antitrust case against Google, had been set aside because OpenAI
 was no party to that case. The cut covers a public statement of a government about the company and names no such exception: the record is OWED (reason OWEDR), and the reason of the three other records of that case no longer
 speaks of the court's example. Two records of a wire report of 2024 (a client named in a cloud provider's posts; the posts' removal after the wire asked) left this module: the reading found that Anthropic's line read more
-favourably without them, and the line now gives them."""
+favourably without them, and the line now gives them.
+Batch s11o (Nov 21, 2026; the answer to the fiftieth reading): the reason OWEDR said that the image has no room for the record; no build had tested that. It now says what was measured and what is an estimate."""
 WHY = {
     'EST': 'an outside estimate, forecast, calculation or scenario of computing power, spending or value; not a record of an act (an exclusion stated with the batch of Nov 18)',
     'CALL': "a mention of the company as a customer or user on one of Nvidia's earnings calls, or a relay of one, with no delivery, agreement, sum or decision in it (an exclusion stated with the batch of Nov 18); the company's line with Nvidia gives their dealings from releases and filings",
@@ -59,7 +60,7 @@ WHY = {
     'TWIN': "a row quotes the same words from another saved copy of the same report or page; the table's rule links a record only to rows that cite the record's own page",
     'DETAILB': "a further particular of an act, an incident, a report or a filing that a row already gives; in the builder's own judgment the row reads no more and no less favourably to the company without it (no reader of the pass read this record)",
     'OWEDB': "OWED. In the builder's own judgment the record is of the cut's kinds, or a row that gives the act reads differently without this particular; it is still to be added (no reader of the pass read this record)",
-    'OWEDR': "OWED. The forty-ninth reading found the record to be of the cut's kinds (a public statement of a government body about the company: a federal judge's, in a case against another company) where the builder had set it aside because the company was no party. The builder accepts the reading's view and has not yet drawn the record: the image has no room for an addition of its length",
+    'OWEDR': "OWED. The forty-ninth reading found the record to be of the cut's kinds (a public statement of a government body about the company: a federal judge's, in a case against another company) where the builder had set it aside because the company was no party. The builder accepts the reading's view and has not yet drawn the record. That is a deferral, not a measured impossibility: after the corrections of that release the image had 35,231 bytes of room, by the builder's estimate about 125 characters of rows, and no build has tried a compact wording of this record (the fiftieth reading found the earlier words, that the image has no room for it, to say more than any build showed)",
 }
 DEC = {
     ('f', 'ms-geo-nvda-q3fy26-call-fool', 'anthropic', 'Nvidia’s finance chief describes the company as increasing its compute spending aggressive'): 'CALL',

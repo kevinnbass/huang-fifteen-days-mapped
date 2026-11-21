@@ -136,7 +136,10 @@ BY_HAND = {
 # batch s11n (the forty-ninth reading, T-worded-175 and -176): one interview page holds Huang's words about his stake in each company; a line for each company quotes its own sentence, and the rule, which compares
 # passages of a page and not companies, labelled each record as worded on both lines. A record listed here is labelled only with the rows named (each must be among those the rule finds).
 ONLY_ON = {('p', 'cn-clips-huang-dwarkesh', 'anthropic', 'Huang confirms Nvidia invests in Anthropic to help it scale'): ['MT65'],
-           ('p', 'cn-clips-huang-dwarkesh', 'openai', 'Huang confirms Nvidia invests in OpenAI to help it scale'): ['MT29']}
+           ('p', 'cn-clips-huang-dwarkesh', 'openai', 'Huang confirms Nvidia invests in OpenAI to help it scale'): ['MT29'],
+           # batch s11o (the fiftieth reading, T-multi-1635 and -1636): a report on election spending gives each company's general position on regulation; each line quotes the page, and each record belongs to its own company's line
+           ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'anthropic', 'The Times describes Anthropic as generally favouring stricter'): ['MT87'],
+           ('l', 'ms-xpost-nyt-inquirer-ai-midterm-spending-20261002', 'openai', 'The Times describes OpenAI as pushing for fewer guardrails'): ['MT88']}
 ONLY_SEEN = set()
 HAND_SEEN = set(); WHY_SEEN = set(); why_n = Counter()
 out = []; st = Counter()

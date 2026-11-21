@@ -1,0 +1,113 @@
+what,stated,recounted,agree
+current act rows,446,446,yes
+drawn dated acts,443,443,yes
+acts on report day,178,178,yes
+nonmember tie lines,88,88,yes
+"current row wording characters, pair prefixes omitted",402905,402905,yes
+preceding row wording characters,402310,402310,yes
+release row character increase,595,595,yes
+delta rows,7,7,yes
+reader records,1875,1875,yes
+readers,16,16,yes
+worded labels,436,436,yes
+reader-found labels,563,563,yes
+listed records,876,876,yes
+listed Anthropic,515,515,yes
+listed OpenAI,361,361,yes
+written decisions for listed records,876,876,yes
+OWED records,216,216,yes
+OWED Anthropic,118,118,yes
+OWED OpenAI,98,98,yes
+hand labels,34,34,yes
+hand-restricted labels,2,2,yes
+already carried WHOLE/TWIN code count,33,33,yes
+later-version citations,77,77,yes
+later-version tie lines,36,36,yes
+warnings on lines,65,65,yes
+standing facts,12,12,yes
+register groups,1017,1017,yes
+register carried,121,121,yes
+register open,896,896,yes
+removed status/register first-reported in these days,65,65,yes
+removed status/register first-reported before,267,267,yes
+removed status/register first-reported unclear,564,564,yes
+removed status/register kind statement,395,395,yes
+removed status/register kind event,249,249,yes
+removed status/register kind decision,158,158,yes
+STATUS characters,4508,4508,yes
+PREV_STATUS characters,5664,5664,yes
+STATUS_UNTIL_1121 characters,83902,83902,yes
+status characters removed from predecessor,1156,1156,yes
+AFTER_READING49 items,10,10,yes
+preceding findings.csv lines,16,16,yes
+preceding figure_findings.csv lines,7,7,yes
+preceding dispositions_check.csv lines,198,198,yes
+preceding versions_check.csv lines,27,27,yes
+preceding counts_check.csv lines,161,161,yes
+preceding site_findings.csv lines,17,17,yes
+preceding gaps.csv lines,4,4,yes
+preceding rows,15,15,yes
+preceding finding-line grade ok,12,12,yes
+preceding finding-line grade qualification,2,2,yes
+preceding finding-line grade error,2,2,yes
+preceding check result yes,188,188,yes
+preceding check result partial,6,6,yes
+preceding check result no,4,4,yes
+preceding recount yes,127,127,yes
+preceding recount no,3,3,yes
+preceding other recount categories,31,31,yes
+preceding panel checks ok,16,16,yes
+preceding panel checks error,1,1,yes
+builder dispositions,39,39,yes
+builder disposition applied,23,23,yes
+builder disposition applied in part; the rest stated as a limit,6,6,yes
+builder disposition stated as a limit,10,10,yes
+README dated corrections,3,3,yes
+raw reader n records,62,raw reader file not supplied; predecessor recount gives 62,limit
+raw reader o records,56,raw reader file not supplied; predecessor recount gives 56,limit
+raw reader p records,99,raw reader file not supplied; predecessor recount gives 99,limit
+pages with retained records from readers n/o/p,not a census of all 85 assigned pages,48,measured
+three-reader added records,178,178,yes
+later folders,728,underlying historical/raw population input not supplied,limit
+later company pages as a population count,85,underlying historical/raw population input not supplied,limit
+later gaps,160,underlying historical/raw population input not supplied,limit
+later neither-company folders,482,underlying historical/raw population input not supplied,limit
+later owner post,1,underlying historical/raw population input not supplied,limit
+keyword-search page inventory,6082,underlying historical/raw population input not supplied,limit
+first release wording characters,385297,underlying historical/raw population input not supplied,limit
+first release character increment,3038,underlying historical/raw population input not supplied,limit
+second release character increment,17013,underlying historical/raw population input not supplied,limit
+first shortened status characters,6232,underlying historical/raw population input not supplied,limit
+linked pages fetched for first five readers,102,underlying historical/raw population input not supplied,limit
+first four readers page placements,84,underlying historical/raw population input not supplied,limit
+fifth reader linked/later pages,16,underlying historical/raw population input not supplied,limit
+six later readers target pages,180,underlying historical/raw population input not supplied,limit
+twelfth reader target pages,8,underlying historical/raw population input not supplied,limit
+thirteenth reader target pages,5,underlying historical/raw population input not supplied,limit
+first five readers records,1138,1138,yes
+historical first-five not drawn,616,historical label snapshot not supplied; current labels have changed,limit
+historical first-five Anthropic not drawn,389,historical label snapshot not supplied; current labels have changed,limit
+historical first-five OpenAI not drawn,227,historical label snapshot not supplied; current labels have changed,limit
+previous image bytes,104749856,104749856,log-supported
+host byte limit,104857600,104857600,log-supported
+trial image bytes,104876703,104876703,log-supported
+trial over limit,19103,19103,log-supported
+released image bytes,104822369,104822369,log-supported
+released room bytes,35231,35231,log-supported
+trial status characters,5169,5169,log-supported
+estimated bytes per status character,about 82,82.199697,estimate
+estimated bytes per row character,about 280,281.572858,estimate
+published preceding report byte equality,same,same,yes
+historical directional lean judgments,6,6,yes
+historical toward-Anthropic judgments,4,4,yes
+historical against-Anthropic judgments,2,2,yes
+seven changed panel wordings matched,7,7,yes
+seven-panel passage placements,358,358,measured
+seven-panel unique URL/passage pairs,343,343,measured
+panels with all distinct evidence passages,7,6,no
+coalesced identical date bindings,3,3,measured
+missing ST03 amount passages,0,2,no
+executive-token source-title placements,not enumerated in brief,182,measured
+executive-token source-title distinct,not enumerated in brief,12,measured
+executive-token source-address placements,not enumerated in brief,91,measured
+executive-token source-address distinct,not enumerated in brief,7,measured
