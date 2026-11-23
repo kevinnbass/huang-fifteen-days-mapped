@@ -89,6 +89,50 @@ def save_png_bands(im, path, band=64):
     print('png written in bands', Path(path).name, Path(path).stat().st_size, 'bytes | bands without a filter', picks[0], '| with the filter Up', picks[1], '| decoded again: the same pixels')
 
 
+# Figures whose PNG is written with a palette of at most 256 colours (save_png_palette below). Take a name out of this set and its PNG is written in true colour again (the map's by save_png_bands).
+PALETTE_PNG = {'nv8-fifteen-days-mapped'}
+
+
+def save_png_palette(im, path, colours=256, band=2000):
+    """Write an RGB picture as a PNG of the same size with a palette of at most 256 colours (Nov 23, 2026).
+    The map figure's true-colour PNG had reached the largest size its host accepts for one file (100 MiB), and records that the builder owes could no longer be added to it. The figure is flat inks on flat
+    grounds: about 99 in 100 of its pixels have one of a few hundred colours, and the rest are the blended edges of letters and lines. Half of the palette is the most frequent colours, kept exactly. The other
+    half is chosen one colour at a time, by turns: the colour whose pixels are, taken together, furthest from the palette; and the colour of at least 16 pixels that is furthest from it, so that an ink used
+    for a few dots only keeps its own colour. Every other colour goes to the nearest palette colour. Nothing is dithered and no pixel moves. The written file is decoded again and compared with the mapped
+    picture before this returns; the share of pixels altered and the largest change are printed and returned, and the build stops if any pixel would change by more than 48 levels or more than 1 pixel in 50 would change. The builder chose this without the figure's owner; the set PALETTE_PNG above undoes it."""
+    import numpy as np
+    assert im.mode == 'RGB' and 2 <= colours <= 256; W, H = im.size
+    packed = lambda y: np.frombuffer(im.crop((0, y, W, min(H, y + band))).convert('RGBX').tobytes(), dtype='<u4') & 0xFFFFFF        # one number per pixel: red + 256 green + 65,536 blue
+    counts = np.zeros(1 << 24, np.int64)
+    for y in range(0, H, band): counts += np.bincount(packed(y), minlength=1 << 24)
+    total = int(counts.sum()); assert total == W * H
+    distinct = np.flatnonzero(counts); cn = counts[distinct]; C = np.stack([distinct & 255, (distinct >> 8) & 255, (distinct >> 16) & 255], axis=1).astype(np.int64)
+    order = np.lexsort((distinct, -cn)); d2 = np.full(len(distinct), 1 << 40, np.int64); near = np.zeros(len(distinct), np.int64); chosen = []
+    def take(j):                                                   # colour j joins the palette; every colour nearer to it than to its palette colour so far moves to it
+        dj = ((C - C[j]) ** 2).sum(axis=1); m = dj < d2; d2[m] = dj[m]; near[m] = len(chosen); chosen.append(int(j))
+    for j in order[:colours // 2]: take(j)
+    big = cn >= 16
+    while len(chosen) < colours and d2.max() > 0:
+        if len(chosen) % 2 and (d2[big] > 0).any(): take(int(np.argmax(np.where(big, d2, 0))))
+        else: take(int(np.argmax(d2 * cn)))
+    pal = C[chosen]; err = np.abs(C - pal[near]).max(axis=1); altered = int(cn[err > 0].sum()); over = int(cn[err > 16].sum())
+    lut = np.zeros(1 << 24, np.uint8); lut[distinct] = near; idx = np.empty((H, W), np.uint8)
+    for y in range(0, H, band): idx[y:y + band] = lut[packed(y)].reshape(-1, W)
+    flat = np.zeros(768, np.uint8); flat[:len(chosen) * 3] = pal.astype(np.uint8).ravel()
+    q = Image.fromarray(idx); q.putpalette(flat.tolist()); assert q.mode == 'P'; q.save(path, compress_level=9)
+    lim = Image.MAX_IMAGE_PIXELS; Image.MAX_IMAGE_PIXELS = None
+    try:
+        with Image.open(path) as chk:
+            chk.load(); assert chk.mode == 'P' and chk.size == im.size and bytes(chk.getpalette()[:len(chosen) * 3]) == pal.astype(np.uint8).tobytes(), (chk.mode, chk.size)
+            for y in range(0, H, band): assert (np.asarray(chk.crop((0, y, W, min(H, y + band)))) == idx[y:y + band]).all(), ('the PNG does not decode to the mapped picture', y)
+    finally: Image.MAX_IMAGE_PIXELS = lim
+    out = {'bytes': Path(path).stat().st_size, 'colours': len(chosen), 'colours_in_the_picture': int(len(distinct)), 'pixels': total, 'pixels_altered': altered, 'largest_change': int(err.max()), 'pixels_changed_by_more_than_16': over}
+    print('png written with a palette', Path(path).name, out['bytes'], 'bytes |', len(chosen), 'colours of', len(distinct), '| pixels altered', altered, f'({100 * altered / total:.3f}%) | largest change in one channel',
+          out['largest_change'], '| pixels changed by more than 16 levels', over, f'({100 * over / total:.4f}%) | decoded again: the same picture')
+    assert out['largest_change'] <= 48 and altered * 50 <= total, ('the palette would change the picture by more than its bound', out)
+    return out
+
+
 def render(stem, document, width):
     FIGURES.mkdir(parents=True, exist_ok=True)
     path = FIGURES / (stem + '.html'); path.write_text(document, encoding='utf-8')
@@ -110,9 +154,11 @@ def render(stem, document, width):
                 assert tile.size == (w_ * 2, h_ * 2), (stem, 'a tile of the picture has the wrong size', (x, y), tile.size)
                 im.paste(tile, (x * 2, y * 2))
         b.close()
-    # The map figure's PNG is written band by band (save_png_bands below: the same pixels, about 5% smaller than the library writes it, about three minutes more per render): its host refuses a file
-    # of 100 MiB or more, and the image stood at 99.5 MiB on Nov 19, 2026. A stopgap for that figure only; how the image is to be kept under the limit for good is the owner's decision.
-    if stem == 'nv8-fifteen-days-mapped': save_png_bands(im, FIGURES / (stem + '.png'))
+    # The map figure's host refuses a file of 100 MiB or more. From Nov 19 to Nov 22, 2026 its true-colour PNG was written band by band (save_png_bands above: the same pixels, about 5% smaller than the
+    # library writes it), a stopgap that was used up by Nov 21. Since Nov 23, 2026 it is written with a palette of 256 colours (save_png_palette above), about half the size; the builder chose that
+    # without the figure's owner, and the set PALETTE_PNG undoes it. The JPG below is made from the true-colour picture in either case.
+    if stem in PALETTE_PNG: save_png_palette(im, FIGURES / (stem + '.png'))
+    elif stem == 'nv8-fifteen-days-mapped': save_png_bands(im, FIGURES / (stem + '.png'))
     else: im.save(FIGURES / (stem + '.png'))
     # A JPEG can have no side over 65,500 pixels. The map passed that height on Nov 17, 2026 (83,628 pixels): its JPG is then the PNG scaled down to the limit, and the PNG stays the full image.
     if max(im.size) > 65500:
