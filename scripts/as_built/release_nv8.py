@@ -4,7 +4,7 @@ The copy holds the figure, the tables and row files it is drawn from, a link and
 official records it cites, the audit, and scripts that rebuild and check it. It holds no article text (a news page is a link
 and a sentence), no donor's or lobbyist's name, no local path. The script stops if any of those is found, if the figure
 rebuilt inside the copy differs from the project's, or if the copy's own checks fail."""
-import csv, json, re, shutil, subprocess, sys
+import csv, hashlib, json, re, shutil, subprocess, sys
 from collections import Counter
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]; R = ROOT / 'research'; PRIMARY = R / 'primary'
@@ -219,6 +219,15 @@ def main(target):
         if e['url'].startswith('file:'):   # an evidence-set row whose source is the builder's saved download of a public index
             assert 'openphil-grants-raw' in e['url'], e['row_id']
             e['url'] = 'https://coefficientgiving.org/grants/'; e['what'] += ' (read from a download of the funder\'s public grants index saved on Sep 11, 2026; the link is the index)'
+        if 'algolia.net' in e['url']:     # Nov 24, 2026: a saved reply of the search service the funder's grants page uses (rows_map.REREAD). The query's address is not published:
+            d_ = PRIMARY / raw; m_ = json.loads((d_ / 'meta.json').read_text())       # the link is the funder's index, with the saved reply's hash, as for the download of Sep 11
+            h_ = hashlib.sha256((d_ / 'body.json').read_bytes()).hexdigest(); assert raw.startswith('ea-ag-') and h_ == m_['sha256'] and m_['fetched_utc'].startswith('2026-11-24'), raw
+            y_ = re.search(r'award_year%3[AD](\d{4})', m_['url']); q_ = re.search(r'[?&]query=([^&]+)', m_['url'])
+            assert bool(y_) != bool(q_), raw
+            e['url'] = 'https://coefficientgiving.org/grants/'
+            e['what'] = ("The funder's public grants index: " + (f'every award of {y_.group(1)}' if y_ else f'the index searched for "{q_.group(1)}"') + ', as the search service of its grants page '
+                         f'returned it on Nov 24, 2026 (sha256 of the saved reply {h_}); the link is the index, and the passage is the award\'s record in that reply')
+    assert not any('algolia' in str(v).lower() for e in ev for v in e.values()), 'the address of the search service is in the evidence lines'
     table(Tg, 'research/evidence.tsv', ev, list(ev[0].keys()), '\t')
     # ---------------------------------------------------------------- the figure
     for e in ('html', 'png', 'jpg'):

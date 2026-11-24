@@ -1551,7 +1551,27 @@ GRANTS = [
  (OP, 'CNAS', '$14.6M in awards, 2017–25', ['FA045', 'FA046', 'FA047', 'FA048', 'FA049', 'FA050'], 14626356),
  (OP, TARBELL, '$5.3M in awards, 2024–25', ['FA196', 'FA197'], 5291930),
 ]
-TIES_MORE += [(a, b, 'grant', label, [LIN + 'flows_annual.csv#' + i for i in ids], ['Open Philanthropy / Coefficient Giving'] * len(ids)) for a, b, label, ids, _ in GRANTS]
+# ---- Nov 24, 2026: two of the totals above read again. The funder's grants index as the builder saved it on Nov 24, 2026 (the replies of the search service
+# that its grants page uses, in research/primary/ea-ag-*) holds more for two recipients than the copy of Sept 11 behind the lineage pack's rows: the award of
+# 2026 to the Institute for Progress, the same record, at $10,500,000 where that copy gave $1,000,000; and a fourth award to the Tarbell Center, published in
+# the index on Sept 16, 2026. The two lines keep their ids (MT09, MT11) and draw these words, citing each award's record in the saved replies and, for what the
+# line read before, the pack's rows. GRANTS above stays as the record of the Sept 11 reading; its rows are still published in research/grant_rows.csv.
+# recipient: (wording, total, [(saved reply, passage holding one award to it)], [(pack row, passage) for the earlier reading])
+REREAD = {
+ IFP: ("$21.5M in awards, 2021–26, by the funder's index as read Nov 24, 2026; its grants index lists three awards to the Institute: $1,615,000 in 2021, $9,341,660 in 2023 and $10,500,000 in 2026. The copy of the index saved Sept 11, 2026 gave the award of 2026, the same record, as $1,000,000, and this line read $12.0M until Nov 24: the index changed that award between the two readings", 21456660,
+  [('ea-ag-outlets-cg-year-2021', '"award_date": 1634601600, "objectID": "grants-8212-0", "title": "Policy Research (Predates Fund)", "grant_amount": 1615000, "organization_name": [ "Institute for Progress" ]'),
+   ('ea-ag-outlets-cg-year-2023', '"award_date": 1678838400, "post_type": "Grants", "url": "https://coefficientgiving.org/grants/institute-for-progress-general-support-2023/", "boost": 10, "grant_amount": 9341660, "organization_name": [ "Institute for Progress" ]'),
+   ('ea-ag-outlets-cg-year-2026', '"distinct_key": "grants#39794", "post_id": 39794, "boost": 10, "funding_type": [ "Grants" ], "title": "General Support", "url": "https://coefficientgiving.org/grants/general-support-84/", "grant_amount": 10500000, "award_date": 1783900800, "organization_name": [ "Institute for Progress" ]')],
+  [(LIN + 'flows_annual.csv#FA134', '1000000'), (LIN + 'flows_annual.csv#FA134', 'idx:grants-39794-0')]),
+ TARBELL: ("$22.1M in awards, 2024–26, by the funder's index as read Nov 24, 2026; its grants index lists four awards to the Center by name: $816,000 in 2024, $2,888,000 and $1,587,930 in 2025 and $16,810,000 in 2026. The fourth was published in the index on Sept 16, 2026, after the copy of Sept 11 from which this line read $5.3M, 2024–25", 22101930,
+  [('ea-ag-outlets-cg-q-tarbell', '"organization_name": [ "Tarbell Center for AI Journalism" ], "funding_type": [ "Grants" ], "post_type": "Grants", "content": "", "award_date": 1731801600, "title": "General Support", "boost": 10, "grant_amount": 816000'),
+   ('ea-ag-outlets-cg-q-tarbell', '"grant_amount": 2888000, "objectID": "grants-28351-0", "distinct_key": "grants#28351", "post_type": "Grants", "boost": 10, "publication_date": 1761686919, "award_date": 1741219200, "focus-area": [ "Navigating Transformative AI" ], "url": "https://coefficientgiving.org/grants/operating-costs/", "award_year": 2025, "organization_website": "https://www.tarbellcenter.org/", "funding_type": [ "Grants" ], "post_id": 28351, "title": "Operating Costs", "organization_name": [ "Tarbell Center for AI Journalism" ]'),
+   ('ea-ag-outlets-cg-q-tarbell', '"organization_name": [ "Tarbell Center for AI Journalism" ], "funding_type": [ "Grants" ], "title": "General Support", "post_type": "Grants", "publication_date": 1776157524, "post_id": 37845, "content": "", "grant_amount": 1587930, "award_year": 2025, "focus-area": [ "Global Catastrophic Risks Opportunities" ], "objectID": "grants-37845-0", "distinct_key": "grants#37845", "award_date": 1752537600'),
+   ('ea-ag-outlets-cg-q-tarbell', '"publication_date": 1789584407, "grant_amount": 16810000, "award_date": 1770768000, "title": "General Support", "content": "", "award_year": 2026, "organization_name": [ "Tarbell Center for AI Journalism" ]')],
+  [(LIN + 'flows_annual.csv#FA196', '816000'), (LIN + 'flows_annual.csv#FA197', '4475930')]),
+}
+TIES_MORE += [(a, b, 'grant', REREAD[b][0], [s for s, _ in REREAD[b][2] + REREAD[b][3]], [q for _, q in REREAD[b][2] + REREAD[b][3]]) if b in REREAD else
+              (a, b, 'grant', label, [LIN + 'flows_annual.csv#' + i for i in ids], ['Open Philanthropy / Coefficient Giving'] * len(ids)) for a, b, label, ids, _ in GRANTS]
 TIES_MORE += [
  (IAPS, 'Erich Grunewald', 'role', 'senior researcher', ['sw-aljazeeracom-06'], ['Erich Grunewald, a senior researcher at the Institute for AI Policy and Strategy']),
  (IFP, 'Alec Stapp', 'role', 'co-chief executive', ['sw-thedailyupsidecom-01'], ['Alec Stapp, the co-CEO of the Institute for Progress']),
@@ -1600,7 +1620,38 @@ def sums_ok():
     while lines[i].startswith('#'):
         i += 1
     amt = {r['row_id']: float(r['amount_usd']) for r in csv.DictReader(lines[i:])}
-    return all(abs(sum(amt[i] for i in ids) - total) < 1 for _, _, _, ids, total in GRANTS + GRANTS_V3 + GRANTS_NOTE)
+    return reread_ok() and all(abs(sum(amt[i] for i in ids) - total) < 1 for _, _, _, ids, total in GRANTS + GRANTS_V3 + GRANTS_NOTE)
+
+
+_REREAD_OK = []
+
+
+def reread_ok():
+    """True when each total read again (REREAD) is the sum of the awards its passages hold, every passage names the recipient, the wording opens with that
+    total and the awards' years, and the note's earlier total is the sum of the Sept 11 rows in GRANTS, among which are the rows it cites. In the builder's
+    project, where the saved replies are, also: each reply holds that award for that recipient, and the funder's index as saved that day (every year's awards,
+    2012 to 2026, each reply complete) holds no other award to it. Computed once a process."""
+    if _REREAD_OK:
+        return _REREAD_OK[0]
+    import json, re as re_
+    from datetime import datetime, timezone
+    old = {b: (ids, total) for _, b, _, ids, total in GRANTS}; prim = Path(__file__).resolve().parents[1] / 'research' / 'primary'; ok = True
+    for b, (words, total, awards, earlier) in REREAD.items():
+        got = [(int(re_.search(r'"grant_amount": (\d+)', q).group(1)), int(re_.search(r'"award_date": (\d+)', q).group(1))) for _, q in awards]
+        yrs = [datetime.fromtimestamp(d, timezone.utc).year for _, d in got]
+        ok &= sum(a for a, _ in got) == total and words.startswith(f'${total / 1e6:.1f}M in awards, {min(yrs)}–{max(yrs) % 100:02d}, ') and all(f'"{b}"' in q for _, q in awards)
+        ids, total0 = old[b]
+        ok &= f'this line read ${total0 / 1e6:.1f}M' in words and {s.split('#')[1] for s, _ in earlier} <= set(ids)
+        if prim.is_dir():
+            for s, q in awards:
+                ok &= any(h.get('organization_name') == [b] and f'"grant_amount": {h["grant_amount"]}' in q and f'"award_date": {h["award_date"]}' in q for h in json.loads((prim / s / 'body.json').read_text())['hits'])
+            every = []
+            for y in range(2012, 2027):
+                rep = json.loads((prim / f'ea-ag-outlets-cg-year-{y}' / 'body.json').read_text()); ok &= rep['nbHits'] == len(rep['hits'])
+                every += [(h['grant_amount'], h['award_date']) for h in rep['hits'] if h.get('organization_name') == [b]]
+            ok &= sorted(every) == sorted(got)
+    _REREAD_OK.append(bool(ok))
+    return _REREAD_OK[0]
 
 
 # Ties between two actors who both have rows, drawn as arcs beside the names. `at` is the row whose name cell words it.

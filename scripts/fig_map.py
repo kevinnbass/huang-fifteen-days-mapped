@@ -546,7 +546,8 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
     # The centres written here are the one-sheet layout's, placed by hand; with more than one panel each panel's copy is
     # placed by rule further down, and only the widths, heights and captions of this list are used.
     r0 = Y0S[0]
-    grant = {(g[0], g[1]): g[2] for g in rows_map.GRANTS + rows_map.GRANTS_V3}
+    # Nov 24, 2026: two totals read again in the funder's grants index (rows_map.REREAD); a box gives that wording up to its first semicolon
+    grant = {(g[0], g[1]): (rows_map.REREAD[g[1]][0].split('; ')[0] if g[1] in rows_map.REREAD else g[2]) for g in rows_map.GRANTS + rows_map.GRANTS_V3}
     ra = gift_rate['anthropic']; n_emp = sum(1 for t in mties if t['type'] == 'employee_gifts' and t['side'] == 'anthropic' and t['usd'])
     n_ari = sum(1 for t in mties if t['type'] == 'ari_pac')
     OP = 'Open Philanthropy'
@@ -982,7 +983,7 @@ def fig_web(KICKER, DRAFT, panels=2, stem='nv8-fifteen-days-mapped'):      # two
             'Looked for and not established: a witness from Nvidia before these members\' committees, advertising aimed at their districts, a seat on their advisory bodies. Those searches have gaps: the ad libraries could not be read, the search of the records held ended with 3,839 hits unread, and the web search left 491 targets unopened. '
             'The map still starts from Anthropic and Open Philanthropy at the left of each slice, so the number of lines says nothing about either company\'s influence. The Times\'s and the FT\'s reports are cited from their own articles, saved by hand; the Journal\'s own site turns away automated readers: its report of Oct 30 is cited from its own page, saved by hand, and from the copy a licensed partner carries (Tiger Brokers), its report of Nov 11 from a partner\'s copy (the Greek paper To Vima). An earlier report that a paper attributed to an Anthropic executive is drawn as a tie in that paper\'s row: one is on record, the FT\'s of Sep 2025, known here through another outlet\'s account of it, which does not say whether the FT alone had it. The papers\' earlier reporting was not searched for others, and reports attributed to Nvidia executives were not looked up. '
             + OWN_CHANNEL_WORDS() +
-            f'<b>Source:</b> {n_story:,} links from saved aggregator pages; saved reports, posts and releases; committee filings; rows held in the congress, lineage, toner and evaluators packs. Aggregator pages for Oct 29 to Nov 12 were retrieved on Nov 12 and Nov 14, 2026; other sources were saved Nov 12 to 15, 2026; rows of the packs carry their own earlier dates. {DRAFT}')
+            f'<b>Source:</b> {n_story:,} links from saved aggregator pages; saved reports, posts and releases; committee filings; rows held in the congress, lineage, toner and evaluators packs. Aggregator pages for Oct 29 to Nov 12 were retrieved on Nov 12 and Nov 14, 2026; other sources were saved Nov 12 to 15, 2026; rows of the packs carry their own earlier dates; two grant totals, the Institute for Progress\'s and the Tarbell Center\'s, are read from the funder\'s grants index as saved Nov 24, 2026. {DRAFT}')
     title = 'Fifteen days, mapped: the coverage, who acted, and the documented ties'
     sub = ('Top right, each dot is one piece on the story. Below it, each row is one actor and each chip one dated act. At left, each line is a documented tie '
            'between an actor and a company, a funder or a group: a contribution, a post held, a grant, an official act. ' + {2: 'Both', 3: 'The three', 4: 'The four'}[panels] + ' slices repeat the same companies, funders and people at their left; a dashed box names an actor whose own row is in another slice. '
